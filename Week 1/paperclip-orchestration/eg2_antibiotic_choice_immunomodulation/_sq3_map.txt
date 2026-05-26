@@ -1,0 +1,28 @@
+Map complete: 11/11 tasks succeeded in 9460ms
+Results ID: m_2ab4059b
+Full results: /.gxl/map_m_2ab4059b.txt
+
+  [success] Beneficial and Harmful Interactions of Antibiotics with Microbial Path  (PMC4034004)
+    {"type": "object", "properties": {"title": "Beneficial and Harmful Interactions of Antibiotics with Microbial Pathogens and the Host Innate Immune Sys
+  [success] TLR2 and TLR4 activity in monocytes and macrophages after exposure to   (PMC9616545)
+    {"type": "object", "properties": {"title": "TLR2 and TLR4 activity in monocytes and macrophages after exposure to amoxicillin, ciprofloxacin, doxycycl
+  [success] The Interplay between Antibiotics and the Host Immune Response in Seps  (PMC11117367)
+    {"type": "object", "properties": {"title": "The Interplay between Antibiotics and the Host Immune Response in Sepsis: From Basic Mechanisms to Clinica
+  [success] Antibiotics Trigger Host Innate Immune Response via Microbiota–Brain C  (PMC11354627)
+    {   "type": "object",   "properties": {     "title": "Antibiotics Trigger Host Innate Immune Response via Microbiota–Brain Communication in C. elegans
+  [success] Pathogen- and Host-Directed Anti-Inflammatory Activities of Macrolide   (PMC3388425)
+    {"type": "object", "properties": {"title": "Pathogen- and Host-Directed Anti-Inflammatory Activities of Macrolide Antibiotics", "doi_or_pmid": "Not fo
+  [success] Bactericidal antibiotic treatment induces damaging inflammation via TL  (PMC11605096)
+    {"type": "object", "properties": {"title": "Bactericidal antibiotic treatment induces damaging inflammation via TLR9 sensing of bacterial DNA", "doi_o
+  [success] Vancomycin and daptomycin modulate the innate immune response in a mur  (PMC8312155)
+    {"type": "object", "properties": {"title": "Vancomycin and daptomycin modulate the innate immune response in a murine model of LPS-induced sepsis", "d
+  [success] The antibiotic bedaquiline activates host macrophage innate immune res  (PMC7200153)
+    {"type": "object", "properties": {"title": "The antibiotic bedaquiline activates host macrophage innate immune resistance to bacterial infection", "do
+  [success] Host-dependent induction of disease tolerance to infection by tetracyc  (bio_558b70756bfd)
+    {   "type": "object",   "properties": {     "title": "Host-dependent induction of disease tolerance to infection by tetracycline antibiotics",     "do
+  [success] The immunomodulatory effects of macrolide antibiotics in respiratory d  (PMC8563091)
+    {"type": "object", "properties": {"title": "The immunomodulatory effects of macrolide antibiotics in respiratory disease", "doi_or_pmid": "Not found",
+  [success] Pernicious liaisons: antibiotic-depressed immune response of a livesto  (bio_8d758bca709d)
+    {"type": "object", "properties": {"title": "Pernicious liaisons: antibiotic-depressed immune response of a livestock micropredator, the common vampire
+
+Full results: /.gxl/map_m_2ab4059b.txt

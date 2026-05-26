@@ -1,0 +1,42 @@
+Map complete: 16/18 tasks succeeded in 12467ms
+Results ID: m_9c1eaceb
+Full results: /.gxl/map_m_9c1eaceb.txt
+
+  [success] Associations of endogenous and exogenous hormonal exposures and cardio  (med_f7beb2b18423)
+    {"type": "object", "properties": {"source_type": "observational", "population": "184,132 Finnish women aged 40 years or older without cardiovascular d
+  [success] Cardiovascular Risk Associated with Menopause and Menopause Hormone Th  (PMC12511246)
+    {"source_type": "Review", "population": "Postmenopausal women", "recommendation_or_finding": "MHT is not recommended for the primary or secondary prev
+  [success] Cardiovascular risk in menopausal women and our evolving understanding  (PMC8111523)
+    {"source_type": "Review", "population": "Menopausal women", "recommendation_or_finding": "Menopause hormone therapy (MHT) is not recommended for prima
+  [success] Hormone Replacement Therapy and Cardiovascular Health in Postmenopausa  (PMC12154064)
+    {"type": "object", "properties": {"source_type": "Review", "population": "Postmenopausal women (Post-MW)", "recommendation_or_finding": "Menopausal ho
+  [success] Impact of sex and menopausal hormonal therapy on cardiovascular diseas  (PMC12259954)
+    {"source_type": "observational", "population": "Female Koreans with diabetes or prediabetes from the National Health Insurance Service database", "rec
+  [timeout] /papers/PMC10804786/
+    error: Timed out after 11725ms (straggler cutoff)
+  [success] Cardiovascular Disease in Women and the Role of Hormone Replacement Th  (PMC11490310)
+    {"type": "object", "properties": {"source_type": "review", "population": "Postmenopausal women", "recommendation_or_finding": "HRT initiated early aft
+  [success] Effects of Hormone Therapy on survival, cancer, cardiovascular and dem  (med_31f9ce927325)
+    {"source_type": "observational", "population": "7 million female Medicare beneficiaries aged 65 or more", "recommendation_or_finding": "Overall, estro
+  [timeout] /papers/PMC11600536/
+    error: Timed out after 11725ms (straggler cutoff)
+  [success] Cardiovascular Disease Risk in Women with Menopause  (PMC12156203)
+    {"type": "object", "properties": {"source_type": "Review", "population": "Peri- and postmenopausal women", "recommendation_or_finding": "Menopause is 
+  [success] Advances in hormone replacement therapy: making the menopause manageab  (PMC2605606)
+    {"source_type": "Commentary", "population": "Menopausal women", "recommendation_or_finding": "HRT appears to decrease coronary disease in younger wome
+  [success] Prescribing menopausal hormone therapy: an evidence-based approach  (PMC3897322)
+    {"source_type": "Review", "population": "Menopausal women", "recommendation_or_finding": "Systemic MHT initiated early in menopause appears to slow th
+  [success] Hormone Replacement Therapy and Cardiovascular Outcomes by Race and Et  (PMC12860954)
+    {"source_type": "observational", "population": "2,427 postmenopausal women without cardiovascular disease at enrollment from the Multi-Ethnic Study of
+  [success] Menopausal vasomotor symptoms and subclinical atherosclerotic cardiova  (med_5409cc5b6c45)
+    {"source_type": "observational", "population": "2995 peri- and postmenopausal women, 50-65 years of age, from the Swedish CArdioPulmonary BioImage Stu
+  [success] Cardiovascular health and the menopausal woman: the role of estrogen a  (PMC6733383)
+    {"properties": {"source_type": "Review", "population": "Post-menopausal women, particularly those within 5 to 10 years of menopause", "recommendation_
+  [success] A systematic review and meta-analysis of effects of menopausal hormone  (PMC7691511)
+    {"type": "object", "properties": {"source_type": {"source_type": "Systematic review and meta-analysis"}, "population": {"population": "Postmenopausal 
+  [success] Menopausal Hormone Therapy Is Associated with Having High Blood Pressu  (PMC3394783)
+    {"type": "object", "properties": {"source_type": {"source_type": "observational"}, "population": {"population": "43,405 postmenopausal women from the 
+  [success] Evaluation of the Interaction of Sex Hormones and Cardiovascular Funct  (PMC9329157)
+    {"type": "object", "properties": {"source_type": "review", "population": "Patients with cardiovascular diseases (CVDs) and sex hormone-related conditi
+
+Full results: /.gxl/map_m_9c1eaceb.txt

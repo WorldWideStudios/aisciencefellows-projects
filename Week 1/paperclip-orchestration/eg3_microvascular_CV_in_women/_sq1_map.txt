@@ -1,0 +1,104 @@
+Map complete: 45/48 tasks succeeded in 17994ms
+Results ID: m_70714f0b
+Full results: /.gxl/map_m_70714f0b.txt
+
+  [success] Endothelial Autophagy in Coronary Microvascular Dysfunction and Cardio  (PMC9265562)
+    {"type": "object", "properties": {"pathway_or_mechanism": {"pathway_or_mechanism": "Not found"}, "specific_entity": {"specific_entity": "Not found"}, 
+  [success] Prevention and reversal of hypertension-induced coronary microvascular  (bio_01df886a70e8)
+    {"pathway_or_mechanism": "Coronary microvascular dysfunction (CMD) is driven by endothelial and vascular smooth muscle cell (VSMC) dysfunction, charac
+  [success] Endothelial ILK induces cardioprotection by preventing coronary microv  (PMC10348984)
+    {"type": "object", "properties": {"pathway_or_mechanism": {"pathway_or_mechanism": "Endothelial-to-mesenchymal transition (endMT)"}, "specific_entity"
+  [success] Research progress on the molecular mechanism of coronary microvascular  (PMC8065195)
+    {"type": "object", "properties": {"pathway_or_mechanism": {"pathway_or_mechanism": "Inflammation and endothelial cell activation"}, "specific_entity":
+  [timeout] /papers/PMC6616854/
+    error: Timed out after 16180ms (straggler cutoff)
+  [success] Coronary Microvascular Dysfunction is Associated with Augmented Lysoso  (bio_6f0b23947228)
+    {"type": "object", "properties": {"pathway_or_mechanism": {"pathway_or_mechanism": "Upregulation of lysosomal signaling pathways and NLRP3 inflammasom
+  [success] Coronary Microvascular Function Following Severe Preeclampsia  (med_161506e17846)
+    {"type": "object", "properties": {"pathway_or_mechanism": {"pathway_or_mechanism": "Angiogenic imbalance involving an excess of circulating anti-angio
+  [success] Coronary Microvascular Dysfunction  (PMC7563453)
+    {"type": "object", "properties": {"pathway_or_mechanism": {"pathway_or_mechanism": "Reduced estrogen levels in peri- or post-menopausal women play a r
+  [success] Coronary microvascular endothelial dysfunction is an independent predi  (PMC4155804)
+    {"type": "object", "properties": {"pathway_or_mechanism": {"pathway_or_mechanism": "Nitric oxide-mediated vascular regulation and the mobilization of 
+  [success] Coronary endothelial function testing may improve long-term quality of  (PMC6361373)
+    {"type": "object", "properties": {"pathway_or_mechanism": {"pathway_or_mechanism": "Not found"}, "specific_entity": {"specific_entity": "Not found"}, 
+  [success] Fast Optoacoustic Mesoscopy of Microvascular Endothelial Dysfunction i  (bio_f5c2916f6d00)
+    {"type": "object", "properties": {"pathway_or_mechanism": "Not found", "specific_entity": "Not found", "hormonal_or_autonomic_input": "Not found", "mo
+  [success] Investigating Electrocardiographic Abnormalities in Patients with Coro  (med_406135cc6d89)
+    {"type": "object", "properties": {"pathway_or_mechanism": "Not found", "specific_entity": "Not found", "hormonal_or_autonomic_input": "Not found", "mo
+  [success] Circulating Biomarkers in Coronary Microvascular Dysfunction  (PMC10356037)
+    {"type": "object", "properties": {"pathway_or_mechanism": {"pathway_or_mechanism": "Chronic inflammation resulting in reduced NO bioavailability and i
+  [success] Transient Coronary Microvascular Dysfunction in Septic Shock  (PMC12237708)
+    {"type": "object", "properties": {"pathway_or_mechanism": {"pathway_or_mechanism": "Not found"}, "specific_entity": {"specific_entity": "Not found"}, 
+  [success] Impact of Estrogen on Purinergic Signaling in Microvascular Disease  (PMC11900469)
+    {"type": "object", "properties": {"pathway_or_mechanism": {"pathway_or_mechanism": "Purinergic signaling, specifically the conversion of ATP to adenos
+  [success] Microvascular and Endothelial Dysfunction in Prediabetes  (PMC10057153)
+    {"type": "object", "properties": {"pathway_or_mechanism": {"pathway_or_mechanism": "Not found"}, "specific_entity": {"specific_entity": "Not found"}, 
+  [success] Coronary microvascular dysfunction in diabetes
+mellitus  (PMC5805190)
+    {"type": "object", "properties": {"pathway_or_mechanism": {"pathway_or_mechanism": "Estrogen deficiency", "specific_entity": "Estrogen", "hormonal_or_
+  [success] Chronic β3 adrenergic agonist treatment improves brain microvascular e  (bio_f79230817366)
+    {"type": "object", "properties": {"pathway_or_mechanism": "Not found", "specific_entity": "Not found", "hormonal_or_autonomic_input": "Not found", "mo
+  [success] P53 Acetylation Exerts Critical Roles In Pressure Overload Induced Cor  (bio_17bf3a3e6c47)
+    {"type": "object", "properties": {"pathway_or_mechanism": {"pathway_or_mechanism": "Not found"}, "specific_entity": {"specific_entity": "Not found"}, 
+  [success] Microvascular Coronary Artery Spasm Presents Distinctive Clinical Feat  (PMC3541613)
+    {"type": "object", "properties": {"pathway_or_mechanism": {"pathway_or_mechanism": "Coronary endothelial dysfunction and potential nitric oxide defici
+  [success] Coronary Microvascular Endothelial Dysfunction in Patients With Angina  (PMC7792413)
+    {"pathway_or_mechanism": "Homocysteine-induced reduction of nitric oxide activity and increased local oxidative stress", "specific_entity": "Homocyste
+  [success] From Chest Pain to Coronary Functional Testing: Clinical and Economic   (med_85c991707030)
+    {"type": "object", "properties": {"pathway_or_mechanism": {"pathway_or_mechanism": "Not found"}, "specific_entity": {"specific_entity": "Not found"}, 
+  [success] BuyangHuanwu Decoction alleviates Endothelial Cell Apoptosis and Coron  (PMC11492876)
+    {"type": "object", "properties": {"pathway_or_mechanism": {"pathway_or_mechanism": "MAPKK4/p38 signaling axis"}, "specific_entity": {"specific_entity"
+  [success] Pericardial fat volume is related to endothelial-mediated coronary blo  (PMC10994862)
+    {"type": "object", "properties": {"pathway_or_mechanism": {"pathway_or_mechanism": "Inflammatory effect mediated by pericardial adipose tissue produci
+  [success] Exosomally targeting microRNA23a ameliorates microvascular endothelial  (bio_7834e2096f4c)
+    {"type": "object", "properties": {"pathway_or_mechanism": {"pathway_or_mechanism": "Not found"}, "specific_entity": {"specific_entity": "Not found"}, 
+  [success] Association Between Coronary Microvascular Parameters and Periprocedur  (med_997d348a6c30)
+    {"type": "object", "properties": {"pathway_or_mechanism": "Not found", "specific_entity": "Not found", "hormonal_or_autonomic_input": "Not found", "mo
+  [success] A novel inducible von Willebrand Factor Cre Recombinase mouse strain t  (bio_47d1adc36cd2)
+    {"type": "object", "properties": {"pathway_or_mechanism": "Not found", "specific_entity": "Not found", "hormonal_or_autonomic_input": "Not found", "mo
+  [success] Reduced retinal microvascular density in women with coronary microvasc  (PMC11847120)
+    {"type": "object", "properties": {"pathway_or_mechanism": {"pathway_or_mechanism": "Systemic endothelial dysfunction leading to impaired vasodilatory 
+  [success] The effect of antiplatelet drug on coronary endothelial and microvascu  (PMC7969081)
+    {"type": "object", "properties": {"pathway_or_mechanism": {"pathway_or_mechanism": "Not found"}, "specific_entity": {"specific_entity": "Not found"}, 
+  [success] Impact of an endothelial progenitor cell capturing stent on coronary m  (PMC4293562)
+    {"type": "object", "properties": {"pathway_or_mechanism": {"pathway_or_mechanism": "Not found"}, "specific_entity": {"specific_entity": "Not found"}, 
+  [timeout] /papers/PMC11227038/
+    error: Timed out after 16180ms (straggler cutoff)
+  [success] Endothelium in Coronary Macrovascular and Microvascular Diseases  (PMC8647695)
+    {"type": "object", "properties": {"pathway_or_mechanism": {"pathway_or_mechanism": "MicroRNA-mediated regulation of endothelin-1 expression"}, "specif
+  [success] Endothelial Dysfunction in Sex-Specific Disparities in Cardiovascular   (PMC12681012)
+    {"type": "object", "properties": {"pathway_or_mechanism": {"pathway_or_mechanism": "Estrogen depletion and relative androgen elevation leading to endo
+  [success] Hypothyroidism Is Associated With Coronary Endothelial Dysfunction in   (PMC4599474)
+    {"type": "object", "properties": {"pathway_or_mechanism": {"pathway_or_mechanism": "The precise mechanisms remain unclear, though the paper suggests a
+  [success] Establishing Thrombolysis in Myocardial Infarction Frame Count as a Cl  (med_447a8ca06c32)
+    {"type": "object", "properties": {"pathway_or_mechanism": {"pathway_or_mechanism": "Not found"}, "specific_entity": {"specific_entity": "Not found"}, 
+  [success] Obesity Related Coronary Microvascular Dysfunction: From Basic to Clin  (PMC4820617)
+    {"type": "object", "properties": {"pathway_or_mechanism": {"pathway_or_mechanism": "Obesity-related impairment of myocardial blood flow in postmenopau
+  [timeout] /papers/PMC9902427/
+    error: Timed out after 16180ms (straggler cutoff)
+  [success] Coronary endothelial dysfunction appears to be a manifestation of a sy  (PMC8476029)
+    {"type": "object", "properties": {"pathway_or_mechanism": {"pathway_or_mechanism": "Systemic microvascular dysfunction state involving shared pathogen
+  [success] Circulating exosomal mir-16-2-3p is associated with coronary microvasc  (PMC10858495)
+    {"type": "object", "properties": {"pathway_or_mechanism": {"pathway_or_mechanism": "Fatty acid degradation pathway", "specific_entity": "miR-16-2-3p",
+  [success] Molecular Mechanisms of Microvascular Obstruction and Dysfunction in P  (PMC12295318)
+    {"type": "object", "properties": {"pathway_or_mechanism": {"pathway_or_mechanism": "Not found"}, "specific_entity": {"specific_entity": "Not found"}, 
+  [success] MiR-30 promotes fatty acid beta-oxidation and endothelial cell dysfunc  (PMC8876371)
+    {"type": "object", "properties": {"pathway_or_mechanism": {"pathway_or_mechanism": "Type 2 diabetes induces endothelial senescence and upregulation of
+  [success] Inflammation, non-endothelial dependent coronary microvascular functio  (PMC7365405)
+    {"type": "object", "properties": {"pathway_or_mechanism": {"pathway_or_mechanism": "A systemic pro-inflammatory state induces oxidative stress in the 
+  [success] Metabolic and Redox Pathway Dysregulation in HIV-Associated Coronary E  (bio_ef189dff76bb)
+    {"type": "object", "properties": {"pathway_or_mechanism": {"pathway_or_mechanism": "Not found"}, "specific_entity": {"specific_entity": "Not found"}, 
+  [success] Systemic microvascular dysfunction in microvascular and vasospastic an  (PMC6284165)
+    {"type": "object", "properties": {"pathway_or_mechanism": {"pathway_or_mechanism": "Systemic microvascular dysfunction involving endothelial dysfuncti
+  [success] Impact of invasive aortic pulse pressure on coronary microvascular end  (PMC8808452)
+    {"type": "object", "properties": {"pathway_or_mechanism": {"pathway_or_mechanism": "Not found"}, "specific_entity": {"specific_entity": "Not found"}, 
+  [success] Caspase-Driven Microvascular Inflammation and Hypoperfusion in Intrava  (bio_c0b2f579729f)
+    {"type": "object", "properties": {"pathway_or_mechanism": {"pathway_or_mechanism": "Not found"}, "specific_entity": {"specific_entity": "Not found"}, 
+  [success] Pathophysiology and diagnosis of coronary microvascular dysfunction in  (PMC7061278)
+    {"pathway_or_mechanism": "Not found", "specific_entity": "Not found", "hormonal_or_autonomic_input": "Not found", "molecular_target": "Not found", "do
+  [success] Comparison of biomarkers of endothelial dysfunction and microvascular
+  (PMC8164554)
+    {"type": "object", "properties": {"pathway_or_mechanism": {"pathway_or_mechanism": "Not found"}, "specific_entity": {"specific_entity": "Not found"}, 
+
+Full results: /.gxl/map_m_70714f0b.txt

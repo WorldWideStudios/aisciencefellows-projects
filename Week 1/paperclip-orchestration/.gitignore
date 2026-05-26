@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# User runs — keep folder, ignore contents
+runs/*
+!runs/.gitkeep

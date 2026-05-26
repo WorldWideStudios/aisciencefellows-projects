@@ -1,0 +1,8 @@
+Query                                       Results  File
+---------------------------------------------------------
+"macrophage innate immune response bact..."       19  /session_files/searches/s_243fe465.txt
+
+All results accumulated into: s_c34f480d  [tag: scoping_v2b]  (19 unique papers)
+  → 19 papers (ranked by relevance across 4 search terms)
+Cite search results as table: {{"artifact": {{"artifact_id": "s_c34f480d", "type": "table", "source_count": 19, "description": "YOUR_ONE_SENTENCE_SUMMARY"}}}}
+[1.8s, saved to s_243fe465]

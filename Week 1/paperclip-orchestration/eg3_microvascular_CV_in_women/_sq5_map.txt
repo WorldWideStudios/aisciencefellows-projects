@@ -1,0 +1,28 @@
+Map complete: 11/11 tasks succeeded in 4561ms
+Results ID: m_295b62c6
+Full results: /.gxl/map_m_295b62c6.txt
+
+  [success] Effect of ACE-inhibition on coronary microvascular function and sympto  (PMC5993253)
+    {"type": "object", "properties": {"design": {"design": "Randomized double-blinded, superiority trial with 1:1 allocation"}, "n": {"n": "63 participant
+  [success] Reduced retinal microvascular density in women with coronary microvasc  (PMC11847120)
+    {"type": "object", "properties": {"design": "Cross-sectional study", "n": "18 participants", "population": "Symptomatic women with ischemia with no ob
+  [success] Unveiling the Longitudinal Journey: Three-Year Follow-up of Women with  (med_661b0e77708e)
+    {"type": "object", "properties": {"design": {"design": "Prospective follow-up study"}, "n": {"n": "163 patients (51 MINOCA and 112 INOCA)"}, "populati
+  [success] Comprehensive treatment of microvascular angina in overweight women –   (PMC7644075)
+    {"type": "object", "properties": {"design": "Randomized controlled pilot trial (L0, L22)", "n": "62 women (L9, L22)", "population": "Women aged 40\u20
+  [success] Establishing Thrombolysis in Myocardial Infarction Frame Count as a Cl  (med_447a8ca06c32)
+    {"type": "object", "properties": {"design": {"design": "Single-center, retrospective study"}, "n": {"n": "123 patients"}, "population": {"population":
+  [success] Autoimmune rheumatic diseases in women with coronary microvascular dys  (PMC10266277)
+    {"type": "object", "properties": {"design": {"design": "Observational report/cross-sectional analysis from the WISE-CVD project (NCT00832702)"}, "n": 
+  [success] A randomized, placebo-controlled trial of late Na current inhibition (  (PMC4872284)
+    {"type": "object", "properties": {"design": "Randomized, double-blind, placebo-controlled, crossover, mechanistic trial", "n": "128 subjects", "popula
+  [success] Coronary Microvascular Dysfunction: Bridging the Diagnosis–Treatment D  (PMC12429603)
+    {"type": "object", "properties": {"design": {"design": "Randomized, placebo-controlled, crossover trial"}, "n": {"n": "118 participants"}, "population
+  [success] Efficacy of Ranolazine for Treatment of Coronary Microvascular Dysfunc  (PMC7801206)
+    {"type": "object", "properties": {"design": {"design": "Systematic review and meta-analysis of randomized studies (L6, L8, L39)."}, "n": {"n": "318 pa
+  [success] Renal Function and Coronary Microvascular Dysfunction in Women with Sy  (PMC4423851)
+    {"type": "object", "properties": {"design": {"design": "Prospective cohort study (L13, L25)"}, "n": {"n": "198 women (L13, L29)"}, "population": {"pop
+  [success] Coronary Microvascular Dysfunction  (PMC7563453)
+    {"type": "object", "properties": {"design": {"design": "Double-blind randomized study"}, "n": {"n": "Not found"}, "population": {"population": "Women 
+
+Full results: /.gxl/map_m_295b62c6.txt

@@ -1,0 +1,38 @@
+Map complete: 16/16 tasks succeeded in 11586ms
+Results ID: m_9fef0c39
+Full results: /.gxl/map_m_9fef0c39.txt
+
+  [success] Coronary Microvascular Function Following Severe Preeclampsia  (med_161506e17846)
+    {"type": "object", "properties": {"design": {"design": "Prospective exploratory cohort study (L18, L34)"}, "n": {"n": "19 women with severe preeclamps
+  [success] Cardiovascular and pregnancy outcomes in women with coronary microvasc  (PMC6601184)
+    {"type": "object", "properties": {"design": {"design": "Case series"}, "n": {"n": "5 women"}, "population": {"population": "Women of childbearing age 
+  [success] Traditional Cardiovascular Risk Factors and Coronary Microvascular Dys  (PMC11449192)
+    {"type": "object", "properties": {"design": {"design": "Single-center, prospective registry (retrospective analysis of prospectively collected data)"}
+  [success] Increased microvascular vasodilation and cardiovascular risk following  (PMC4255821)
+    {"type": "object", "properties": {"design": {"design": "Prospective study (L41)"}, "n": {"n": "23 normotensive pregnant controls, 25 pre-eclamptic sub
+  [success] Coronary Microvascular Function and Cardiovascular Risk Factors in Wom  (PMC4943278)
+    {"type": "object", "properties": {"design": "Observational study investigating prevalence and associations of coronary microvascular dysfunction (L10,
+  [success] The cardiovascular risk profile of middle‐aged women with polycystic o  (PMC7003818)
+    {"type": "object", "properties": {"design": {"design": "A cross-sectional study"}, "n": {"n": "200 women with PCOS and 200 age-matched controls"}, "po
+  [success] Update on sex specific risk factors in cardiovascular disease  (PMC10876862)
+    {"type": "object", "properties": {"design": {"design": "Meta-analysis"}, "n": {"n": "6.4 million women"}, "population": {"population": "Women with pre
+  [success] Risk factors associated with cardiovascular disease in Mexican people   (med_f956c818785e)
+    {"type": "object", "properties": {"design": "Cross-sectional study nested in a cohort", "n": "28 (Clinical cohort) and 2,914 (Registry cohort)", "popu
+  [success] CARDIOVASCULAR RISK IN WOMEN WITH PREECLAMPSIA  (PMC10588388)
+    {"type": "object", "properties": {"design": "prospective study", "n": "105 (55 in PE group, 50 in control group)", "population": "pregnant women", "ri
+  [success] Examining the Disproportionate Burden of Microvascular Disease in Wome  (PMC12162733)
+    {"type": "object", "properties": {"design": "Meta-analysis", "n": "nearly 20,000 women", "population": "women who gave birth", "risk_factor": "hyperte
+  [success] Women with Polycystic Ovary Syndrome and Risk of Cardiovascular Diseas  (PMC6287215)
+    {"type": "object", "properties": {"design": "Observational, analytical, case-control study", "n": "100 women", "population": "Young women (18 to 35 ye
+  [success] Risk factor profiles of young women with vasomotor non-obstructive ver  (med_c138673b6cee)
+    {"type": "object", "properties": {"design": "Univariate and multivariable regression models applied to investigate associations of risk factors with o
+  [success] Establishing Thrombolysis in Myocardial Infarction Frame Count as a Cl  (med_447a8ca06c32)
+    {"type": "object", "properties": {"design": {"design": "Retrospective study"}, "n": {"n": "123 patients"}, "population": {"population": "Patients with
+  [success] Cardiovascular Risk in Women With PCOS  (PMC3693634)
+    {"type": "object", "properties": {"design": {"design": "Review article"}, "n": {"n": "Not found"}, "population": {"population": "Women with polycystic
+  [success] Chronic rheumatologic disorders and cardiovascular disease risk in wom  (PMC10945906)
+    {"type": "object", "properties": {"design": {"design": "Review Article", "n": "Not found", "population": "Women with chronic rheumatologic disorders",
+  [success] Adverse pregnancy outcomes and subsequent risk of cardiovascular disea  (PMC4213826)
+    {"type": "object", "properties": {"design": {"design": "Exploratory study, longitudinal epidemiological (derived from the SOLVABLE parent study)"}, "n
+
+Full results: /.gxl/map_m_9fef0c39.txt
