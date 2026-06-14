@@ -1,0 +1,66 @@
+→ Saved as s_e79c04a3 (60 papers). Use: map --from s_e79c04a3 "your question"
+
+id          | doi                            | pmid     | authors                                                      | title                                                        | pub_date
+------------+--------------------------------+----------+--------------------------------------------------------------+--------------------------------------------------------------+---------
+PMC10264896 | 10.1177/22799036231181716      | 37333028 | Roberta Montisci, Maria Francesca Marchetti, Massimo Rusc... | Non-invasive coronary flow velocity reserve assessment pr... | 2023    
+PMC10266277 | 10.3389/fcvm.2023.1155914      | 37324629 | Melanie T. Chen, Joseph Chang, Ashley S. Manchanda, Galen... | Autoimmune rheumatic diseases in women with coronary micr... | 2023    
+PMC10412671 | 10.1007/s11883-023-01116-z     | 37338666 | Paul Marano, Janet Wei, C. Noel Bairey Merz                  | Coronary Microvascular Dysfunction: What Clinicians and I... | 2023    
+PMC10588388 | 10.20471/acc.2022.61.04.02     | 37868169 | Jasna Čerkez Habek, Mirna Vuković Bobić, Dubravko Habek, ... | CARDIOVASCULAR RISK IN WOMEN WITH PREECLAMPSIA               | 2022    
+PMC10787608 | 10.17305/bb.2023.9535          | 37650466 | Aakash Choradia, Karoona Bai, Suha Soni, Nhan Nguyen, Shi... | Beyond hot flashes: Exploring the role of estrogen therap... | 2024    
+PMC10856197 | 10.3390/jcm13030829            | 38337522 | Rebecca L. Kellner, Alon Harris, Lauren Ciulla, Giovanna ... | The Eye as the Window to the Heart: Optical Coherence Tom... | 2024    
+PMC10876862 | 10.3389/fcvm.2024.1352675      | 38380176 | Andrew H. Nguyen, Madelyn Hurwitz, Scott A. Sullivan, Ant... | Update on sex specific risk factors in cardiovascular dis... | 2024    
+PMC10945906 | 10.1016/j.ahjo.2023.100267     | 38511090 | Puja K. Mehta, Rebecca D. Levit, Malissa J. Wood, Niti Ag... | Chronic rheumatologic disorders and cardiovascular diseas... | 2023    
+PMC10994862 | 10.1016/j.ahjo.2024.100379     | 38586431 | Sofy Landes, Haider Aldiwani, Louise Thomson, Janet Wei, ... | Pericardial fat volume is related to endothelial-mediated... | 2024    
+PMC11198373 | 10.1016/j.jacadv.2023.100264   | 38938306 | Eva Prescott, Kira Bang Bove, Daria Frestad Bechsgaard, B... | Biomarkers and Coronary Microvascular Dysfunction in Wome... | 2023    
+PMC11371758 | 10.3389/fcvm.2024.1372703      | 39234606 | Annagrazia Cecere, Martina Perazzolo Marra, Elisabetta Za... | Coronary microvascular dysfunction in autoimmune rheumati... | 2024    
+PMC11449192 | 10.1159/000539102              | 38679011 | Lior Zornitzki, Aviel Shetrit, Ophir Freund, Shir Frydman... | Traditional Cardiovascular Risk Factors and Coronary Micr... | 2024    
+PMC11490310 | 10.7759/cureus.69752           | 39429315 | Jomar N Machuca, Claudia P Rosales-Alvarez                   | Cardiovascular Disease in Women and the Role of Hormone R... | 2024    
+PMC11681466 | 10.1161/JAHA.124.035852        | 39291500 | Natasha Cigarroa, Nida Latif, Marah Maayah, Arshjot Khokh... | Diagnostic Yield and Clinical Utility of Coronary Angiogr... | 2024    
+PMC11847120 | 10.1016/j.ahjo.2025.100502     | 39995513 | Sakshi Shiromani, Ahmed AlBadri, Aaron Lindeke-Myers, Ari... | Reduced retinal microvascular density in women with coron... | 2025    
+PMC11900469 | 10.3390/ijms26052105           | 40076726 | Jessica Cassavaugh, Maria Serena Longhi, Simon C. Robson     | Impact of Estrogen on Purinergic Signaling in Microvascul... | 2025    
+PMC12078779 | 10.17179/excli2025-8285        | 40376434 | Vincenzo Scarica, Riccardo Rinaldi, Francesco Maria Anima... | Coronary microvascular dysfunction: pathophysiology, diag... | 2025    
+PMC12088774 | 10.1016/j.ahjo.2025.100547     | 40391390 | Judy M. Luu, Janet Wei, Chrisandra Shufelt, Anum Asif, Be... | Refractory angina in women with ischemia and no obstructi... | 2025    
+PMC12154064 | 10.3390/ijms26115078           | 40507889 | Wenhan Xia, Raouf A. Khalil                                  | Hormone Replacement Therapy and Cardiovascular Health in ... | 2025    
+PMC12156203 | 10.3390/jcm14113663            | 40507425 | María Fasero, Pluvio J. Coronado                             | Cardiovascular Disease Risk in Women with Menopause          | 2025    
+PMC12162733 | 10.1007/s11883-025-01310-1     | 40504419 | Meaghan O’Hara, Rukmini Roy, Marie Altenburg, Jeremy Sliv... | Examining the Disproportionate Burden of Microvascular Di... | 2025    
+PMC12259954 | 10.1038/s41598-025-01768-8     | 40659706 | Do Kyeong Song, Yeon-Ah Sung, Young Sun Hong, Min-ho Kim,... | Impact of sex and menopausal hormonal therapy on cardiova... | 2025    
+PMC12378835 | 10.3389/fcell.2025.1654159     | 40874019 | Shijia Zhou, Qifeng Yan, Jiaqi Guo, Wenming He, Yitian Zhao  | Early diagnosis of coronary heart disease based on retina... | 2025    
+PMC12429603 | 10.3390/jcm14176054            | 40943815 | Alaukika Agarwal, Ronak Patel, Omar K. Khalique              | Coronary Microvascular Dysfunction: Bridging the Diagnosi... | 2025    
+PMC12444650 | 10.1001/jamacardio.2025.3036   | 40960791 | Jee Myung Yang, Dong Hyun Yang, Seung-Whan Lee, Jiehoon K... | Subclinical Coronary Atherosclerosis and Retinal Optical ... | 2025    
+PMC12511246 | 10.1007/s11883-025-01343-6     | 41066010 | Zoee D’Costa, Emily Spertus, Shipra Hingorany, Rajita Pat... | Cardiovascular Risk Associated with Menopause and Menopau... | 2025    
+PMC12681012 | 10.31083/RCM42766              | 41356324 | Canran Lv, Chu Chen, Cuiyuan Huang, Li Liu, Yunping Sun, ... | Endothelial Dysfunction in Sex-Specific Disparities in Ca... | 2025    
+PMC12860954 | 10.1016/j.jacadv.2025.102561   | 41579828 | Spencer Flynn, Amier Haidar, Icy Liang, Karol Watson, Tam... | Hormone Replacement Therapy and Cardiovascular Outcomes b... | 2026    
+PMC2515431  | NULL                           | 18827921 | Ioannis Kallikazaros, Costas Tsioufis, Panagiotis Zambara... | Estrogen-induced improvement in coronary flow responses d... | 2008    
+PMC2640113  | 10.1136/bmj.b219               | 19193613 | Judith Hsia, Joseph C Larson, Judith K Ockene, Gloria E S... | Resting heart rate as a low tech predictor of coronary ev... | 2009    
+PMC3368545  | 10.3389/fphys.2012.00165       | 22685434 | Susana Novella, Ana Paula Dantas, Gloria Segarra, Pascual... | Vascular Aging in Women: is Estrogen the Fountain of Youth?  | 2012    
+PMC3394783  | 10.1371/journal.pone.0040260   | 22808129 | Christine L. Chiu, Sanja Lujic, Charlene Thornton, Aiden ... | Menopausal Hormone Therapy Is Associated with Having High... | 2012    
+PMC3693634  | 10.5812/ijem.4020              | 23843832 | Pietro Scicchitano, Ilaria Dentamaro, Rosa Carbonara, Gab... | Cardiovascular Risk in Women With PCOS                       | 2012    
+PMC3725838  | 10.1155/2013/858921            | 23936672 | Nikhil Narayanaswamy, Shailaja Moodithaya, Harsha Halahal... | Assessment of Risk Factor for Cardiovascular Disease Usin... | 2013    
+PMC3897322  | 10.2147/IJWH.S38342            | 24474847 | Richa Sood, Stephanie S Faubion, Carol L Kuhle, Jacquelin... | Prescribing menopausal hormone therapy: an evidence-based... | 2014    
+PMC4213826  | 10.1136/lupus-2014-000024      | 25379191 | Pin Lin, Elisa Rhew, Roberta B Ness, Alan Peaceman, Alan ... | Adverse pregnancy outcomes and subsequent risk of cardiov... | 2014    
+PMC4255821  | 10.14814/phy2.12217            | 25428950 | Malia S. Q. Murphy, Meera Vignarajah, Graeme N. Smith        | Increased microvascular vasodilation and cardiovascular r... | 2014    
+PMC4351318  | 10.3904/kjim.2015.30.2.140     | 25750553 | Jin Joo Park, Sung-Ji Park, Dong-Ju Choi                     | Microvascular angina: angina that predominantly affects w... | 2015    
+PMC4423851  | 10.1371/journal.pone.0125374   | 25951606 | Rajesh Mohandas, Mark S. Segal, Tianyao Huo, Eileen M. Ha... | Renal Function and Coronary Microvascular Dysfunction in ... | 2015    
+PMC4872284  | 10.1093/eurheartj/ehv647       | 26614823 | C. Noel Bairey Merz, Eileen M. Handberg, Chrisandra L. Sh... | A randomized, placebo-controlled trial of late Na current... | 2016    
+PMC4943278  | 10.1161/JAHA.115.003064        | 27068634 | Naja Dam Mygind, Marie Mide Michelsen, Adam Pena, Daria F... | Coronary Microvascular Function and Cardiovascular Risk F... | 2016    
+PMC5993253  | 10.1371/journal.pone.0196962   | 29883497 | Marie Mide Michelsen, Anna Bay Rask, Elena Suhrs, Kristof... | Effect of ACE-inhibition on coronary microvascular functi... | 2018    
+PMC6132927  | 10.1093/ofid/ofy205            | 30214912 | Andreas Knudsen, Kristina Thorsteinsson, Thomas E Christe... | Cardiac Microvascular Dysfunction in Women Living With HI... | 2018    
+PMC6287215  | 10.1515/jomb-2017-0020         | 30568543 | Iva Perovic Blagojevic, Tatjana Eror, Jovana Pelivanovic,... | Women with Polycystic Ovary Syndrome and Risk of Cardiova... | 2017    
+PMC6601184  | 10.1093/ehjcr/ytz071           | 31449628 | Christine Pacheco, Janet Wei, Margo Minissian, Chrisandra... | Cardiovascular and pregnancy outcomes in women with coron... | 2019    
+PMC6616854  | 10.3389/fendo.2019.00442       | 31333587 | Ariane A. Sickinghe, Suzanne J. A. Korporaal, Hester M. d... | Estrogen Contributions to Microvascular Dysfunction Evolv... | 2019    
+PMC6733383  | 10.12688/f1000research.15548.1 | 31543950 | Frederick Naftolin, Jenna Friedenthal, Richard Nachtigall... | Cardiovascular health and the menopausal woman: the role ... | 2019    
+PMC7003818  | 10.1111/cen.14117              | 31638273 | Cindy Meun, Marlise N Gunning, Yvonne V Louwers, Henrike ... | The cardiovascular risk profile of middle‐aged women with... | 2019    
+PMC7563453  | 10.3390/jcm9092880             | 32899944 | Federico Vancheri, Giovanni Longo, Sergio Vancheri, Micha... | Coronary Microvascular Dysfunction                           | 2020    
+PMC7644075  | 10.1371/journal.pone.0240722   | 33151955 | Kira Bang Bove, Malin Nilsson, Lene Rørholm Pedersen, Nic... | Comprehensive treatment of microvascular angina in overwe... | 2020    
+PMC7691511  | 10.1038/s41598-020-77534-9     | 33244065 | Ji-Eun Kim, Jae-Hyuck Chang, Min-Ji Jeong, Jaesung Choi, ... | A systematic review and meta-analysis of effects of menop... | 2020    
+PMC7801206  | 10.1016/j.cjco.2020.09.005     | 33458636 | Thomas Kofler, Stefanie Hess, Federico Moccetti, Carl J. ... | Efficacy of Ranolazine for Treatment of Coronary Microvas... | 2020    
+PMC7816930  | 10.1136/openhrt-2020-001486    | 33462108 | Kira Bang Bove, Marie M Michelsen, Jakob Schroder, Hannah... | Impaired coronary flow velocity reserve is associated wit... | 2021    
+PMC8111523  | 10.1177/20420188211013917      | 34104397 | Sindhu Prabakaran, Arielle Schwartz, Gina Lundberg           | Cardiovascular risk in menopausal women and our evolving ... | 2021    
+PMC8541623  | 10.3390/jpm11100965            | 34683106 | Diana Gurzău, Adela Sitar-Tăut, Bogdan Caloian, Gabriel G... | The Role of IL-6 and ET-1 in the Diagnosis of Coronary Mi... | 2021    
+PMC8551605  | 10.3389/fcvm.2021.750071       | 34722680 | Tijn P. J. Jansen, Suzette E. Elias-Smale, Stijn van den ... | Sex Differences in Coronary Function Test Results in Pati... | 2021    
+PMC8585781  | 10.3389/fcvm.2021.723542       | 34778394 | Jakob Schroder, Eva Prescott                                 | Doppler Echocardiography Assessment of Coronary Microvasc... | 2021    
+PMC8606892  | 10.1167/tvst.10.13.24          | 34787666 | Julia Aschauer, Stefan Aschauer, Andreas Pollreisz, Felix... | Identification of Subclinical Microvascular Biomarkers in... | 2021    
+PMC9234594  | 10.1016/j.ajpc.2022.100362     | 35769201 | Jian H. Chu, Erin D. Michos, Pamela Ouyang, Dhananjay Vai... | Coronary artery calcium and atherosclerotic cardiovascula... | 2022    
+PMC9329157  | 10.1007/s11897-022-00555-0     | 35624387 | Myrthe M. A. Willemars, Miranda Nabben, Job A. J. Verdons... | Evaluation of the Interaction of Sex Hormones and Cardiov... | 2022    
+(60 rows, 17ms)
+[153ms, saved to s_e79c04a3]

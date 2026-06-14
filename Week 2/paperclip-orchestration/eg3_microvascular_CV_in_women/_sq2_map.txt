@@ -1,0 +1,82 @@
+Map complete: 38/38 tasks succeeded in 16162ms
+Results ID: m_cae42bdb
+Full results: /.gxl/map_m_cae42bdb.txt
+
+  [success] Establishing Thrombolysis in Myocardial Infarction Frame Count as a Cl  (med_447a8ca06c32)
+    {"type": "object", "properties": {"modality": "Thrombolysis in Myocardial Infarction (TIMI) frame count (TFC)", "invasiveness": "Invasive", "validatio
+  [success] Reduced retinal microvascular density in women with coronary microvasc  (PMC11847120)
+    {"type": "object", "properties": {"modality": "Retinal optical coherence tomography angiography (OCTA)", "invasiveness": "non-invasive", "validation_p
+  [success] Coronary Microvascular Function and Cardiovascular Risk Factors in Wom  (PMC4943278)
+    {"type": "object", "properties": {"modality": "Transthoracic Doppler echocardiography (TTDE) of the left anterior descending coronary artery (LAD) dur
+  [success] Traditional Cardiovascular Risk Factors and Coronary Microvascular Dys  (PMC11449192)
+    {"type": "object", "properties": {"modality": {"modality": "Invasive assessment using bolus thermodilution technique to measure fractional flow reserv
+  [success] Pericardial fat volume is related to endothelial-mediated coronary blo  (PMC10994862)
+    {"type": "object", "properties": {"modality": {"modality": "Cardiovascular magnetic resonance (CMR) imaging and invasive coronary reactivity testing"}
+  [success] Renal Function and Coronary Microvascular Dysfunction in Women with Sy  (PMC4423851)
+    {"type": "object", "properties": {"modality": {"modality": "Coronary flow reserve (CFR) measurement using a Doppler-tipped guidewire with intracoronar
+  [success] Coronary Microvascular Function Following Severe Preeclampsia  (med_161506e17846)
+    {"type": "object", "properties": {"modality": {"modality": "Cardiac positron emission tomography (PET)"}, "invasiveness": {"invasiveness": "non-invasi
+  [success] Prediction of a major adverse coronary event in Women through CORSWO  (med_2ae8aea16c14)
+    {"type": "object", "properties": {"modality": "Not found", "invasiveness": "Not found", "validation_population": "2,226 women referred for clinical gS
+  [success] Autoimmune rheumatic diseases in women with coronary microvascular dys  (PMC10266277)
+    {"type": "object", "properties": {"modality": {"modality": "Invasive coronary function testing and cardiac magnetic resonance (CMR) myocardial perfusi
+  [success] Coronary microvascular endothelial dysfunction is an independent predi  (PMC4155804)
+    {"type": "object", "properties": {"modality": "Intracoronary acetylcholine administration during diagnostic angiography", "invasiveness": "invasive", 
+  [success] Cardiovascular and pregnancy outcomes in women with coronary microvasc  (PMC6601184)
+    {"type": "object", "properties": {"modality": {"modality": "Invasive coronary reactivity testing"}, "invasiveness": {"invasiveness": "invasive"}, "val
+  [success] Risk factor profiles of young women with vasomotor non-obstructive ver  (med_c138673b6cee)
+    {"type": "object", "properties": {"modality": {"modality": "Coronary reactivity testing"}, "invasiveness": {"invasiveness": "invasive"}, "validation_p
+  [success] Impaired coronary flow velocity reserve is associated with cardiovascu  (PMC7816930)
+    {"type": "object", "properties": {"modality": {"modality": "Transthoracic Doppler stress echocardiography (TTDE) assessing coronary flow velocity rese
+  [success] Pro-inflammatory biomarkers in women with non-obstructive angina pecto  (PMC6545380)
+    {"type": "object", "properties": {"modality": {"modality": "transthoracic Doppler echocardiography"}, "invasiveness": {"invasiveness": "non-invasive"}
+  [success] Biomarkers and Coronary Microvascular Dysfunction in Women With Angina  (PMC11198373)
+    {"type": "object", "properties": {"modality": {"modality": "Transthoracic Doppler echocardiography measuring coronary flow velocity of the left anteri
+  [success] Non-invasive coronary flow velocity reserve assessment predicts advers  (PMC10264896)
+    {"type": "object", "properties": {"modality": "adenosine transthoracic echocardiography (TTE)", "invasiveness": "non-invasive", "validation_population
+  [success] Coronary microvascular function and myocardial fibrosis in women with   (PMC5096323)
+    {"type": "object", "properties": {"modality": {"modality": "Transthoracic Doppler echocardiography (TTDE) measuring coronary flow velocity reserve (CF
+  [success] Prevalence of Coronary Endothelial and Microvascular Dysfunction in Wo  (PMC6739787)
+    {"type": "object", "properties": {"modality": "Coronary reactivity testing (CRT) using a Doppler-tipped guidewire to measure coronary flow velocity an
+  [success] Coronary microvascular dysfunction in autoimmune rheumatic diseases: b  (PMC11371758)
+    {"type": "object", "properties": {"modality": {"modality": "Stress cardiac magnetic resonance (CMR), specifically using Myocardial Perfusion Reserve I
+  [success] Coronary endothelial dysfunction appears to be a manifestation of a sy  (PMC8476029)
+    {"type": "object", "properties": {"modality": {"modality": "Invasive coronary function testing (CFT) and urine albumin-creatinine ratio (UACR)"}, "inv
+  [success] Refractory angina in women with ischemia and no obstructive coronary a  (PMC12088774)
+    {"type": "object", "properties": {"modality": {"modality": "Cardiac magnetic resonance imaging (CMRI) and invasive coronary function testing (CFT)"}, 
+  [success] Coronary Microvascular Dysfunction  (PMC7563453)
+    {"type": "object", "properties": {"modality": "Positron emission tomography (PET)", "invasiveness": "non-invasive", "validation_population": "patients
+  [success] Cardiac tissue perfusion at rest correlates with systemic microvascula  (med_aeef5e6e6cbf)
+    {"type": "object", "properties": {"modality": {"modality": "Cutaneous maximal hyperaemic response (MHR) assessed by laser Doppler fluximetry"}, "invas
+  [success] Hypothyroidism Is Associated With Coronary Endothelial Dysfunction in   (PMC4599474)
+    {"type": "object", "properties": {"modality": "Invasive coronary endothelial-dependent microvascular function assessment via intracoronary acetylcholi
+  [success] Diagnostic Yield and Clinical Utility of Coronary Angiography Versus C  (PMC11681466)
+    {"type": "object", "properties": {"modality": "Invasive coronary function testing (CFT) using a pressure and temperature sensing coronary guidewire (g
+  [success] Coronary atheroma burden predicts flow reserve in women with ischemia   (PMC10976284)
+    {"type": "object", "properties": {"modality": "Coronary function testing (measuring CFR via Doppler flow wire)", "invasiveness": "invasive", "validati
+  [success] Investigating Electrocardiographic Abnormalities in Patients with Coro  (med_406135cc6d89)
+    {"type": "object", "properties": {"modality": {"modality": "CoroVentis CoroFlow System (Abbott) using bolus thermodilution"}, "invasiveness": {"invasi
+  [success] N-Terminal pro-B-type natriuretic peptide and coronary microvascular d  (PMC7714343)
+    {"modality": "Functional coronary angiography (FCA) using a Doppler wire and vasoactive agents (adenosine, acetylcholine, nitroglycerin)", "invasivene
+  [success] Examining the Disproportionate Burden of Microvascular Disease in Wome  (PMC12162733)
+    {"type": "object", "properties": {"modality": {"modality": "Invasive coronary physiology testing (CFR and provocative testing with adenosine and acety
+  [success] Cardiac Microvascular Dysfunction in Women Living With HIV Is Associat  (PMC6132927)
+    {"type": "object", "properties": {"modality": "82-Rubidium positron emission tomography/computed tomography (82 Rb PET/CT)", "invasiveness": "non-inva
+  [success] Coronary Microvascular Dysfunction is Associated with Augmented Lysoso  (bio_6f0b23947228)
+    {"type": "object", "properties": {"modality": "Transthoracic echocardiography", "invasiveness": "non-invasive", "validation_population": "Female wild-
+  [success] An animal model of coronary microvascular dysfunction (CMD) in the fem  (bio_7854c4546e7b)
+    {"modality": "Echocardiography (transthoracic coronary Doppler ultrasound)", "invasiveness": "non-invasive", "validation_population": "Female spontane
+  [success] Coronary Microvascular Dysfunction: Bridging the Diagnosis–Treatment D  (PMC12429603)
+    {"type": "object", "properties": {"modality": "Oxygenation-sensitive cardiac MRI (OS-CMR)", "invasiveness": "non-invasive", "validation_population": "
+  [success] Number and Function of Bone-Marrow Derived Angiogenic Cells and Corona  (PMC3846855)
+    {"type": "object", "properties": {"modality": {"modality": "CFR measurements in response to intracoronary adenosine using a Doppler-tipped guidewire"}
+  [success] Impact of Age and Sex on Coronary Flow Reserve and Microvascular Funct  (PMC12664592)
+    {"type": "object", "properties": {"modality": {"modality": "Invasive coronary function testing including bolus thermodilution and acetylcholine provoc
+  [success] P53 Acetylation Exerts Critical Roles In Pressure Overload Induced Cor  (bio_17bf3a3e6c47)
+    {"type": "object", "properties": {"modality": {"modality": "Pulsed-wave Doppler measurements of coronary flow velocity"}, "invasiveness": {"invasivene
+  [success] Doppler Echocardiography Assessment of Coronary Microvascular Function  (PMC8585781)
+    {"type": "object", "properties": {"modality": "Transthoracic Doppler echocardiography (TTDE) coronary flow velocity reserve (CFVR)", "invasiveness": "
+  [success] From Chest Pain to Coronary Functional Testing: Clinical and Economic   (med_85c991707030)
+    {"type": "object", "properties": {"modality": "Coroventis CoroFlow Cardiovascular System using physiologic pressure wire and thermodilution technology
+
+Full results: /.gxl/map_m_cae42bdb.txt

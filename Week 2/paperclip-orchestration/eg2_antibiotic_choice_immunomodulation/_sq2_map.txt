@@ -1,0 +1,32 @@
+Map complete: 12/12 tasks succeeded in 5304ms
+Results ID: m_6f047f3d
+Full results: /.gxl/map_m_6f047f3d.txt
+
+  [success] N4-Substituted
+Piperazinyl Norfloxacin Derivatives
+with Broad-Spectrum  (PMC10739246)
+    {"type": "object", "properties": {"title": "N4-Substituted Piperazinyl Norfloxacin Derivatives with Broad-Spectrum Activity and Multiple Mechanisms on
+  [success] A Review of the Resistance Mechanisms for  β -Lactams, Macrolides and   (PMC10672801)
+    {"type": "object", "properties": {"title": "A Review of the Resistance Mechanisms for \u03b2 -Lactams, Macrolides and Fluoroquinolones among Streptoco
+  [success] Mechanistic Insights into Clinically Relevant Ribosome-Targeting Antib  (PMC11505993)
+    {"type": "object", "properties": {"title": "Mechanistic Insights into Clinically Relevant Ribosome-Targeting Antibiotics", "doi_or_pmid": "Not found",
+  [success] Docking Studies in Target Proteins Involved in Antibacterial Action Me  (PMC6270753)
+    {"type": "object", "properties": {"title": "Docking Studies in Target Proteins Involved in Antibacterial Action Mechanisms: Extending the Knowledge on
+  [success] Structures of proline-rich peptides bound to the ribosome reveal a com  (PMC4797290)
+    {"type": "object", "properties": {"title": "Structures of proline-rich peptides bound to the ribosome reveal a common mechanism of protein synthesis i
+  [success] ADP-MoA: a platform for screening antibiotic activity and their mechan  (bio_c19574f06d7b)
+    {"type": "object", "properties": {"title": "ADP-MoA: a platform for screening antibiotic activity and their mechanism of action in Pseudomonas aerugin
+  [success] The Membrane Steps of Bacterial Cell Wall Synthesis as Antibiotic Targ  (PMC5039524)
+    {"type": "object", "properties": {"title": "The Membrane Steps of Bacterial Cell Wall Synthesis as Antibiotic Targets", "doi_or_pmid": "Not found", "m
+  [success] Mechanism of Tetracycline Resistance by Ribosomal Protection Protein T  (PMC3576927)
+    {"type": "object", "properties": {"title": "Mechanism of Tetracycline Resistance by Ribosomal Protection Protein Tet(O)", "doi_or_pmid": "Not found", 
+  [success] Structural mechanism of FusB-mediated rescue from fusidic acid inhibit  (bio_d59738bc7455)
+    {"type": "object", "properties": {"title": "Structural mechanism of FusB-mediated rescue from fusidic acid inhibition of protein synthesis", "doi_or_p
+  [success] Ribosomal protection as a linezolid resistance mechanism in  Mycobacte  (bio_f0f957197866)
+    {"type": "object", "properties": {"title": "Ribosomal protection as a linezolid resistance mechanism in Mycobacterium abscessus", "doi_or_pmid": "10.1
+  [success] The last resort antibiotic daptomycin exhibits two independent antibac  (bio_014d5af66cdb)
+    {"type": "object", "properties": {"title": "The last resort antibiotic daptomycin exhibits two independent antibacterial mechanisms of action", "doi_o
+  [success] Ribosome-inactivation by a class of widely distributed C-tail anchored  (bio_46a430447913)
+    {"type": "object", "properties": {"title": "Ribosome-inactivation by a class of widely distributed C-tail anchored membrane proteins", "doi_or_pmid": 
+
+Full results: /.gxl/map_m_6f047f3d.txt

@@ -1,0 +1,44 @@
+{
+  "mcpServers": {
+    "jarvis-indices": {
+      "command": "/home/ubuntu/venv/bin/python",
+      "args": ["-m", "prototype.mcp_servers.indices_server"],
+      "cwd": "/home/ubuntu/JARVIS_for_bio",
+      "env": {
+        "PYTHONPATH": "/home/ubuntu/JARVIS_for_bio"
+      }
+    },
+    "jarvis-workflow": {
+      "command": "/home/ubuntu/venv/bin/python",
+      "args": ["-m", "prototype.mcp_servers.workflow_server"],
+      "cwd": "/home/ubuntu/JARVIS_for_bio",
+      "env": {
+        "PYTHONPATH": "/home/ubuntu/JARVIS_for_bio"
+      }
+    },
+    "jarvis-ot": {
+      "command": "/home/ubuntu/venv/bin/python",
+      "args": ["-m", "prototype.mcp_servers.ot_server"],
+      "cwd": "/home/ubuntu/JARVIS_for_bio",
+      "env": {
+        "PYTHONPATH": "/home/ubuntu/JARVIS_for_bio"
+      }
+    },
+    "jarvis-esm3": {
+      "command": "/home/ubuntu/venv/bin/python",
+      "args": ["-m", "prototype.mcp_servers.esm3_server"],
+      "cwd": "/home/ubuntu/JARVIS_for_bio",
+      "env": {
+        "PYTHONPATH": "/home/ubuntu/JARVIS_for_bio"
+      }
+    },
+    "jarvis-paperclip": {
+      "command": "/home/ubuntu/venv/bin/python",
+      "args": ["-m", "prototype.mcp_servers.paperclip_server"],
+      "cwd": "/home/ubuntu/JARVIS_for_bio",
+      "env": {
+        "PYTHONPATH": "/home/ubuntu/JARVIS_for_bio"
+      }
+    }
+  }
+}

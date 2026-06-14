@@ -1,0 +1,294 @@
+Found 49 papers  [s_07990094]
+
+  1. Coronary Microvascular Dysfunction: Bridging the Diagnosis–Treatment Divide in Women with INOCA—A Review
+     Alaukika Agarwal, Ronak Patel, Omar K. Khalique
+     PMC12429603 · PMC · 2025-08-27
+     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12429603/
+     "This review synthesizes recent evidence on coronary microvascular dysfunction (CMD) in women with INOCA. Despite improved diagnosis, a significant gap exists between identifying CMD and achieving therapeutic benefits, necessitating urgent development of CMD-specific treatments."
+
+  2. Traditional Cardiovascular Risk Factors and Coronary Microvascular Dysfunction in Women and Men: A Single-Center Study
+     Lior Zornitzki, Aviel Shetrit, Ophir Freund, Shir Frydman, Ariel Banai, Reut Amar Shamir, Jeremy Ben...
+     PMC11449192 · PMC · 2024-04-26
+     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11449192/
+     "This study investigated traditional cardiovascular risk factors and coronary microvascular dysfunction in patients with nonobstructive coronary artery disease. No association was found between traditional risk factors and microvascular dysfunction in the overall population, but older age and prior ischemic heart disease were linked to dysfunction in women."
+
+  3. Examining the Disproportionate Burden of Microvascular Disease in Women
+     Meaghan O’Hara, Rukmini Roy, Marie Altenburg, Jeremy Slivnick, Hena Patel
+     PMC12162733 · PMC · 2025-06-12
+     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12162733/
+     "This review examines microvascular dysfunction's role in various diseases and highlights its disproportionate impact on women. Pregnancy-related complications are identified as significant risk factors and potential early markers for long-term microvascular issues in women."
+
+  4. Novel diagnostic approaches and management of coronary microvascular dysfunction
+     Graziella Pompei, Nandine Ganzorig, Christos P. Kotanidis, Mohammad Alkhalil, Carlos Collet, Aish Si...
+     PMC11332818 · PMC · 2024-07-22
+     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11332818/
+     "This review examines diagnostic approaches and management strategies for coronary microvascular dysfunction (CMD). CMD, prevalent in women with chronic coronary syndrome, is linked to increased adverse cardiovascular events and reduced quality of life."
+
+  5. Sex differences and determinants of coronary microvascular function in asymptomatic adults with type 2 diabetes
+     Jian L. Yeo, Abhishek Dattani, Joanna M. Bilak, Alice L. Wood, Lavanya Athithan, Aparna Deshpande, A...
+     PMC11761338 · PMC · 2024-12-06
+     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11761338/
+     "This study evaluated sex differences in coronary microvascular function in asymptomatic adults with type 2 diabetes. Women with type 2 diabetes showed a higher prevalence of coronary microvascular dysfunction, with BMI being a key determinant."
+
+  6. Impact of Age and Sex on Coronary Flow Reserve and Microvascular Function in Patients With Angina and Nonobstructive Coronary Arteries
+     Spyridon Kostantinis, Gabriel Garcia Castro, Nida Latif, Natasha Cigarroa, Steffne J. Kunnirickal, N...
+     PMC12664592 · PMC · 2025-08-29
+     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12664592/
+     "This study investigated age and sex impacts on coronary microvascular function in patients with angina and nonobstructive coronary arteries. Increasing age progressively worsened microvascular function, particularly in women, while women generally had better microvascular resistance than men."
+
+  7. Investigating Electrocardiographic Abnormalities in Patients with Coronary Microvascular Dysfunction
+     Ilan Merdler, Andrew P. Hill, Sevket Tolga Ozturk, Matteo Cellamare, Cheng Zhang, Avantika Banerjee,...
+     med_406135cc6d89 · medRxiv · 2024-04-21
+     https://doi.org/10.1101/2024.04.21.24306154
+     "This study investigated electrocardiographic abnormalities in patients with coronary microvascular dysfunction (CMD). A trend toward ischemic and hypertrophic ECG changes was observed in CMD-positive patients, but no differences in conduction disorders were found."
+
+  8. Assessing Coronary Microvascular Dysfunction using Angiography-based Data-driven Methods
+     Haizhou Yang, Jiyang Zhang, Brahmajee K. Nallamothu, Krishna Garikipati and C. Alberto Figueroa
+     arx_2512.20797 · arXiv · 2025-12-23
+     "This study developed data-driven models to assess coronary microvascular dysfunction from angiograms. The models accurately predict dysfunction indices using contrast intensity profiles, offering a less invasive diagnostic alternative."
+
+  9. Ischemia with Non-Obstructive Coronary Artery Disease: Sex-Based Differences in Pathophysiology, Clinical Presentation, and Prognosis
+     Filippo Luca Gurgoglione, Giorgio Benatti, Andrea Denegri, Emilia Solinas, Iacopo Tadonio, Mattia De...
+     PMC12386650 · biomedrxiv · 2025-08-14
+     https://doi.org/10.3390/jcm14165764
+     "This review examines sex-based differences in the pathophysiology, presentation, and prognosis of ischemia with non-obstructive coronary arteries (INOCA). Findings highlight distinct mechanisms and outcomes between sexes, suggesting a need for personalized treatment strategies."
+
+  10. From Chest Pain to Coronary Functional Testing: Clinical and Economic Impact of Coronary Microvascular Dysfunction
+     Ilan Merdler, Ryan Wallace, Andrew Hill, Giorgio A. Medranda, Pavan Reddy, Cheng Zhang, Sevket Tolga...
+     med_85c991707030 · medRxiv · 2024-01-09
+     https://doi.org/10.1101/2024.01.09.24301078
+     "This study analyzed the patient journey from chest pain to coronary microvascular dysfunction (CMD) diagnosis. Diagnosing CMD promptly can reduce cardiovascular events, hospitalizations, and healthcare costs."
+
+  11. Sex-Specific Aspects in the Pathophysiology and Imaging of Coronary Macro- and Microvascular Disease
+     Floor Groepenhoff, Sophie H. Bots, Elise L. Kessler, Ariane A. Sickinghe, Anouk L. M. Eikendal, Tim ...
+     PMC7010630 · biomedrxiv · 2019-08-30
+     https://doi.org/10.1007/s12265-019-09906-0
+     "This review examines sex differences in coronary artery disease pathophysiology and imaging. It highlights knowledge gaps, particularly in microvascular dysfunction, and suggests sex-specific diagnostic approaches are needed."
+
+  12. A Multi-physics Model of Flow from Coronary Angiography: Insights to Microvascular Function
+     Haizhou Yang, Jiyang Zhang, Ismael Z. Assi, Brahmajee K. Nallamothu, Krishna Garikipati and C. Alber...
+     arx_2412.04798 · arXiv · 2024-12-06
+     "This study developed a computational model to simulate coronary angiography and analyze microvascular function. The model found that resistance significantly impacts contrast flow dynamics, offering a new way to interpret angiographic data."
+
+  13. Microvascular angina: angina that predominantly affects women
+     Jin Joo Park, Sung-Ji Park, Dong-Ju Choi
+     PMC4351318 · PMC · 2015-03-01
+     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4351318/
+     "This review examines microvascular angina (MVA), a condition affecting women with chest pain and normal-appearing coronary arteries. MVA requires proper diagnosis and treatment for improved patient outcomes, as it is often overlooked."
+
+  14. Reduced retinal microvascular density in women with coronary microvascular dysfunction: A pilot study
+     Sakshi Shiromani, Ahmed AlBadri, Aaron Lindeke-Myers, Arielle Schwartz, Nishant Vatsa, Esha Dave, Fa...
+     PMC11847120 · PMC · 2025-01-30
+     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11847120/
+     "This pilot study compared retinal microvascular density in women with and without coronary microvascular dysfunction (CMD). Women with CMD exhibited reduced retinal microvascular and perfusion densities."
+
+  15. Microvascular Disease and Small-Vessel Disease: The Nexus of Multiple Diseases of Women
+     Hena Patel, Neelum T. Aggarwal, Anupama Rao, Elizabeth Bryant, Rupa M. Sanghani, Mary Byrnes, Dinesh...
+     PMC7307673 · biomedrxiv · 2020-06-01
+     https://doi.org/10.1089/jwh.2019.7826
+     "This paper explores the link between microvascular disease and various conditions predominantly affecting women. It suggests a common pathophysiology involving microvascular dysfunction may underlie these diseases, necessitating a multidisciplinary approach to management and research."
+
+  16. Coronary Microvascular Dysfunction is Associated with Augmented Lysosomal Signaling in Hypercholesterolemic Mice
+     Yun-Ting Wang, Alexandra K. Moura, Rui Zuo, Wei Zhou, Zhengchao Wang, Kiana Roudbari, Jenny Z. Hu, P...
+     bio_6f0b23947228 · bioRxiv · 2024-07-10
+     https://doi.org/10.1101/2024.07.10.603000
+     "Hypercholesterolemia causes coronary microvascular dysfunction in mice, linked to increased lysosomal signaling in endothelial cells. Cholesterol-lowering treatment improves this dysfunction by modulating lysosomal pathways."
+
+  17. Coronary Microvascular Dysfunction: What Clinicians and Investigators Should Know
+     Paul Marano, Janet Wei, C. Noel Bairey Merz
+     PMC10412671 · PMC · 2023-06-20
+     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10412671/
+     "This article reviews research on coronary microvascular dysfunction (CMD), a condition prevalent in patients with ischemia and no obstructive coronary artery disease. CMD is linked to adverse cardiovascular outcomes, but stratified medical therapy guided by invasive testing can improve symptoms."
+
+  18. The impact of the microvascular resistance on the measures of stenosis   severity
+     Tam Atkins, Navid Freidoonimehr, John Beltrame, Christopher Zeitz and Maziar Arjomandi
+     arx_2407.14005 · arXiv · 2024-07-19
+     "This study examined how microvascular resistance affects stenosis severity measurements like FFR and hSR. Elevated microvascular resistance can lead to falsely high FFR values, potentially misdiagnosing stenosis severity."
+
+  19. Sex Differences in Coronary Function Test Results in Patient With Angina and Nonobstructive Disease
+     Tijn P. J. Jansen, Suzette E. Elias-Smale, Stijn van den Oord, Helmut Gehlmann, Aukelien Dimitiriu-L...
+     PMC8551605 · biomedrxiv · 2021-10-14
+     https://doi.org/10.3389/fcvm.2021.750071
+     "Coronary function testing was performed on patients with angina and nonobstructive coronary artery disease. Men showed more epicardial spasm and less microvascular spasm, while women had a higher prevalence of impaired coronary flow reserve."
+
+  20. Coronary Microvascular Function Following Severe Preeclampsia
+     Michael C. Honigberg *, Katherine E. Economy, Maria A. Pabón, Xiaowen Wang, Claire Castro, Jenifer M...
+     med_161506e17846 · medRxiv · 2024-03-04
+     https://doi.org/10.1101/2024.03.04.24303728
+     "Severe preeclampsia was studied in women using cardiac PET scans postpartum. Reduced coronary microvascular function was observed early after preeclampsia, suggesting its involvement in the condition."
+
+  21. Coronary microvascular dysfunction: pathophysiology, diagnosis, and therapeutic strategies across cardiovascular diseases
+     Vincenzo Scarica, Riccardo Rinaldi, Francesco Maria Animati, Matteo Manzato, Rocco A. Montone
+     PMC12078779 · PMC · 2025-03-26
+     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12078779/
+     "This review examines coronary microvascular dysfunction (CMD) as a cause of myocardial ischemia, detailing its pathophysiology and diagnosis. Current therapeutic strategies for CMD are limited, but novel approaches are being explored."
+
+  22. PUNCH: Physics-informed Uncertainty-aware Network for Coronary Hemodynamics
+     Sukirt Thakur, Marcus Roper, Yang Zhou, Dmitry Yu. Isaev, Reza Akbarian Bafghi, Brahmajee K. Nallamo...
+     arx_2601.17192 · arXiv · 2026-01-23
+     "This study developed PUNCH, a physics-informed neural network, to estimate coronary blood flow from angiography. PUNCH accurately estimates coronary flow reserve and its uncertainty, enabling non-invasive diagnosis of coronary microvascular dysfunction."
+
+  23. Coronary Microvascular Dysfunction: Insights on Prognosis and Future Perspectives
+     Filippo Luca Gurgoglione, Giorgio Benatti, Andrea Denegri, Davide Donelli, Marco Covani, Mattia De G...
+     PMC11760542 · biomedrxiv · 2025-01-20
+     https://doi.org/10.31083/RCM25757
+     "This review examines coronary microvascular dysfunction (CMD), its pathogenesis, diagnosis, and prognostic impact. CMD is associated with significant morbidity, mortality, and adverse cardiovascular events."
+
+  24. Single Nucleotide Polymorphisms in Coronary Microvascular Dysfunction
+     Andrew P. Stein, Jonathan Harder, Henry R. Holmes, C. Noel Bairey Merz, Carl J. Pepine, Ellen C. Kee...
+     PMC11010085 · PMC · 2024-02-13
+     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11010085/
+     "This paper reviews single nucleotide polymorphisms (SNPs) associated with coronary microvascular dysfunction. Evidence suggests genetic factors may contribute to this condition."
+
+  25. Coronary Microvascular Disease
+     Ravi A. Thakker, Jorge Rodriguez Lozano, Patricia Rodriguez Lozano, Afaq Motiwala, Umamahesh Rangase...
+     PMC8933600 · biomedrxiv · 2022-01-07
+     https://doi.org/10.1007/s40119-021-00250-6
+     "This review examines coronary microvascular disease (CMVD), its diagnostic methods, and treatment approaches. CMVD is linked to poor cardiovascular outcomes, with inflammation as a key underlying mechanism."
+
+  26. Diffuse fibrosis, coronary microvascular dysfunction and systolic dysfunction in Wilson disease
+     Rebecka Steffen Johansson, Csenge Fogarasi, Peter Kellman, Andreas Kindmark, Jannike Nickander *
+     med_1b2de9146c39 · medRxiv · 2024-10-11
+     https://doi.org/10.1101/2024.10.11.24315326
+     "This study assessed cardiac function in Wilson disease patients using multiparametric CMR. Wilson disease patients show early signs of diffuse fibrosis, coronary microvascular dysfunction, and systolic dysfunction."
+
+  27. Refractory angina in women with ischemia and no obstructive coronary artery disease — A report from the Women’s Ischemia Syndrome Evaluation-Coronary Vascular Dysfunction (WISE-CVD) study
+     Judy M. Luu, Janet Wei, Chrisandra Shufelt, Anum Asif, Benita Tjoe, Galen Cook-Wiens, Eileen M. Hand...
+     PMC12088774 · American Heart Journal Plus: Cardiology Research and Practice · 2025-04-22
+     https://doi.org/10.1016/j.ahjo.2025.100547
+     "This study investigated refractory angina in women with ischemia and no obstructive coronary artery disease. Hypertension and endothelial dysfunction were independently associated with a higher likelihood of refractory angina."
+
+  28. A review on machine learning for arterial extraction and quantitative   assessment on invasive coronary angiograms
+     Pukar Baral, Chen Zhao, Michele Esposito, Weihua Zhou
+     arx_2405.08474 · arXiv · 2024-05-14
+     "This review explores machine learning's role in segmenting coronary arteries and quantitatively assessing stenosis and FFR from invasive angiograms. Machine learning is increasingly used for precise cardiovascular diagnostics, though clinical integration remains a challenge."
+
+  29. Sex Differences in Coronary Microvascular Function in Individuals With Type 2 Diabetes
+     Andrea V. Haas, Bernard A. Rosner, Raymond Y. Kwong, Ajay D. Rao, Rajesh Garg, Marcelo F. Di Carli, ...
+     PMC6385750 · biomedrxiv · 2019-03-01
+     https://doi.org/10.2337/db18-0650
+     "This study investigated sex differences in coronary microvascular function in individuals with type 2 diabetes. Women exhibited poorer myocardial perfusion and diastolic function than men, potentially due to greater aldosterone responsiveness."
+
+  30. Pericardial fat volume is related to endothelial-mediated coronary blood flow in women with suspected coronary microvascular dysfunction. A report from the Women's Ischemia Syndrome Evaluation-Coronary Vascular Dysfunction (WISE-CVD) study
+     Sofy Landes, Haider Aldiwani, Louise Thomson, Janet Wei, Ahmed Al-Badri, Puja K. Mehta, Michael Pedr...
+     PMC10994862 · PMC · 2024-03-07
+     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10994862/
+     "Pericardial fat volume and coronary blood flow were studied in women with suspected microvascular dysfunction. Higher pericardial fat volume was linked to reduced endothelial-mediated coronary blood flow."
+
+  31. Coronary Microvascular Dysfunction
+     Federico Vancheri, Giovanni Longo, Sergio Vancheri, Michael Henein
+     PMC7563453 · biomedrxiv · 2020-09-06
+     https://doi.org/10.3390/jcm9092880
+     "This paper reviews coronary microvascular dysfunction (CMD), a condition affecting patients with chest pain but no obstructive coronary lesions. CMD is a significant cause of myocardial ischemia and is linked to adverse cardiovascular outcomes and systemic diseases."
+
+  32. Prevention and reversal of hypertension-induced coronary microvascular dysfunction by a plant-based diet
+     Rami S. Najjar *, Nedumangalam Hekmatyar, Yanling Wang, Vu Ngo, Hannah L. Lail, Juan P. Tejada, Jess...
+     bio_01df886a70e8 · bioRxiv · 2025-04-19
+     https://doi.org/10.1101/2025.04.19.649660
+     "A plant-based diet was tested for its effect on hypertension-induced coronary microvascular dysfunction in rats. The diet prevented and reversed this dysfunction by improving endothelial and smooth muscle cell function, despite not lowering blood pressure."
+
+  33. Critical role of the coronary microvasculature in heart disease: From pathologic driving force to “innocent” bystander
+     Roshni O. Prakash, Teja S. Chakrala, Daniel S. Feuer, Carlos A. Valdes, Carl J. Pepine, Ellen C. Kee...
+     PMC10978433 · biomedrxiv · 2022-10-01
+     https://doi.org/10.1016/j.ahjo.2022.100215
+     "This review examines the coronary microvasculature's role in heart disease, from its function to its dysfunction. Coronary microvascular dysfunction is a key driver of ischemia and is linked to increased morbidity and mortality, regardless of its origin."
+
+  34. Unveiling sex dimorphism in the healthy cardiac anatomy: fundamental   differences between male and female heart shapes
+     Beatrice Moscoloni, Cameron Beeche, Julio A. Chirinos, Patrick Segers, Mathias Peirlinck
+     arx_2503.00197 · arXiv · 2025-02-28
+     "This study used statistical shape modeling to investigate sex differences in healthy heart anatomy. Men and women exhibit distinct cardiac shapes, particularly in chamber volumes and relative positioning, independent of other factors."
+
+  35. Coronary microvascular dysfunction: A review of recent progress and clinical implications
+     Rajan Rehan, Andy Yong, Martin Ng, James Weaver, Rajesh Puranik
+     PMC9908997 · biomedrxiv · 2023-01-26
+     https://doi.org/10.3389/fcvm.2023.1111721
+     "This review examines coronary microvascular dysfunction (CMD), its role in various heart conditions, and diagnostic/therapeutic challenges. CMD is an under-recognized factor in obstructive and non-obstructive coronary syndromes and heart failure, offering potential for new treatments."
+
+  36. Coronary Microvascular Dysfunction and the Role of Noninvasive Cardiovascular Imaging
+     Muhammad Talha Ayub, Dinesh Kalra
+     PMC7555249 · biomedrxiv · 2020-09-09
+     https://doi.org/10.3390/diagnostics10090679
+     "This review examines noninvasive cardiovascular imaging for coronary microvascular dysfunction (CMD). These techniques aid in diagnosing, understanding, and managing CMD, a condition linked to increased cardiovascular event rates."
+
+  37. Association Between Coronary Microvascular Parameters and Periprocedural Myocardial Injury in Uncomplicated Elective Percutaneous Coronary Intervention
+     Pedro Jallad, Danilo Ferraz de Oliveira Maksud, Hector M. Garcia-Garcia, Bruno Alves da Mota Rocha, ...
+     med_997d348a6c30 · medRxiv · 2025-07-02
+     https://doi.org/10.1101/2025.07.02.25330774
+     "This study assessed coronary microvascular resistance changes during elective PCI and their association with periprocedural myocardial injury. Increased microvascular resistance after PCI is linked to a higher risk of myocardial injury."
+
+  38. Managing Ischemic Heart Disease in Women: Role of a Women’s Heart Center
+     Abha Khandelwal, May Bakir, Meghan Bezaire, Briana Costello, Joanne Michelle D. Gomez, Valerie Hoove...
+     PMC8331213 · biomedrxiv · 2021-08-04
+     https://doi.org/10.1007/s11883-021-00956-x
+     "A review examined ischemic heart disease in women, focusing on risk factors, diagnosis, and treatment. Women's heart centers utilize multidisciplinary teams and are instrumental in improving care and research for IHD in women."
+
+  39. A machine learning approach for Premature Coronary Artery Disease   Diagnosis according to Different Ethnicities in Iran
+     Mohamad Roshanzamir, Roohallah Alizadehsani, Ehsan Zarepur, Noushin Mohammadifard, Fatemeh Nouri, Ma...
+     arx_2501.18893 · arXiv · 2025-01-31
+     "This study used machine learning to assess risk factors for premature coronary artery disease across Iranian ethnicities. Gender and age were the strongest predictors, but ethnicity also significantly improved diagnostic model accuracy."
+
+  40. Establishing Thrombolysis in Myocardial Infarction Frame Count as a Clinical Measure of Coronary Microvascular Disease in Women
+     Nicole Wayne, Qufei Wu, Stephen C. Moore, Victor A. Ferrari, Scott D. Metzler, Marie A. Guerraty *
+     med_447a8ca06c32 · medRxiv · 2022-09-24
+     https://doi.org/10.1101/2022.09.24.22280321
+     "This study investigated the Thrombolysis in Myocardial Infarction (TIMI) frame count as a measure of coronary microvascular disease. A tight sex-dependent correlation was found between TIMI frame count and myocardial blood flow reserve, suggesting its potential for diagnosing microvascular disease."
+
+  41. Transient Coronary Microvascular Dysfunction in Septic Shock
+     Samantha Lörstad, Sara Tehrani, Christina Ekenbäck, Kambiz Shahgaldi, Per Åstrand, Johannes Aspberg,...
+     PMC12237708 · PMC · 2025-06-11
+     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12237708/
+     "Coronary microvascular function was invasively assessed in a septic shock patient. Transient dysfunction was observed during the transition from acute to recovery phases, suggesting sepsis can impact cardiac microcirculation."
+
+  42. Coronary endothelial function is better in healthy premenopausal women than in healthy older postmenopausal women and men
+     Lena Mathews, Micaela Iantorno, Michael Schär, Gabriele Bonanno, Gary Gerstenblith, Robert G. Weiss,...
+     PMC5657991 · PMC · 2017-10-26
+     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5657991/
+     "Coronary endothelial function was measured in healthy premenopausal women, postmenopausal women, and men using MRI. Premenopausal women exhibited significantly better coronary endothelial function than postmenopausal women and age-matched men."
+
+  43. An animal model of coronary microvascular dysfunction (CMD) in the female spontaneously hypertensive rat: the role of diet
+     Rami S. Najjar *, Puja K. Mehta, Andrew T. Gewirtz
+     bio_7854c4546e7b · bioRxiv · 2025-01-14
+     https://doi.org/10.1101/2025.01.14.632950
+     "Female spontaneously hypertensive rats on a purified diet were studied to model coronary microvascular dysfunction. These rats exhibited impaired coronary flow reserve, establishing a model for hypertension-related CMD."
+
+  44. Sex differences in coronary microvascular resistance measured by a computational fluid dynamics model
+     Daniel J. Taylor, Louise Aubiniere-Robb, Rebecca Gosling, Tom Newman, D. Rodney Hose, Ian Halliday, ...
+     PMC10357508 · PMC · 2023-07-06
+     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10357508/
+     "A computational fluid dynamics model was used to measure coronary microvascular resistance in men and women. Women were found to have significantly higher coronary microvascular resistance than men."
+
+  45. A Systematic Review on Women's Participation in Agricultural Work and   Nutritional Outcomes
+     Pallavi Gupta
+     arx_2504.03202 · arXiv · 2025-04-04
+     "This review examined how women's agricultural work impacts nutrition by analyzing time use and income generation. Increased participation can improve nutrition through income and dietary diversity, but only if excessive workloads are mitigated."
+
+  46. Latest from the WISE: Contributions to the Understanding of Ischemia and Heart Failure among Women with No Obstructive Coronary Arteries
+     Breanna Hansen, Michael D. Nelson, Eileen M. Handberg, Carl J. Pepine, C. Noel Bairey Merz, Janet We...
+     PMC11264005 · biomedrxiv · 2023-03-15
+     https://doi.org/10.31083/j.rcm2403090
+     "The WISE study investigated ischemia and heart failure in women with no obstructive coronary arteries. Findings highlight elevated risk for heart failure with preserved ejection fraction in this group, influenced by both traditional and nontraditional risk factors."
+
+  47. Coronary Artery Disease in Women: A Comprehensive Appraisal
+     Nili Schamroth Pravda, Orith Karny-Rahkovich, Arthur Shiyovich, Miri Schamroth Pravda, Naomi Rapepor...
+     PMC8541551 · biomedrxiv · 2021-10-12
+     https://doi.org/10.3390/jcm10204664
+     "This review examines the unique pathophysiology, risk factors, and clinical presentation of coronary artery disease in women. It highlights that sex differences in CAD are often under-recognized, impacting diagnosis and outcomes."
+
+  48. Prevalence of Coronary Endothelial and Microvascular Dysfunction in Women with Symptoms of Ischemia and No Obstructive Coronary Artery Disease Is Confirmed by a New Cohort: The NHLBI-Sponsored Women's Ischemia Syndrome Evaluation–Coronary Vascular Dysfunction (WISE-CVD)
+     R. David Anderson, John W. Petersen, Puja K. Mehta, Janet Wei, B. Delia Johnson, Eileen M. Handberg,...
+     PMC6739787 · biomedrxiv · 2019-01-01
+     https://doi.org/10.1155/2019/7169275
+     "A contemporary cohort of women with ischemic symptoms and no obstructive coronary artery disease was studied to confirm prior findings. Coronary microvascular dysfunction was prevalent, similar to an earlier cohort, despite a lower risk factor burden."
+
+  49. Women upskilling or reskilling to an ICT career: A systematic review of drivers and barriers
+     Shondell Williams, Karen Blackmore, Regina Berretta, Michelle Mansfield
+     arx_2510.22508 · arXiv · 2025-10-26
+     "This review examined drivers and barriers for women upskilling or reskilling into ICT careers. Dissatisfaction with current jobs and positive computing experiences encourage interest, but negative beliefs and self-doubt must be overcome."
+
+[602ms, saved to s_07990094]
+
+💡 Extract data across these results with: map --from s_07990094 "your question"
+[602ms, saved to s_07990094]
+
+Tip: also search the abstract-only corpus (broader coverage, no full text):
+  paperclip search -s abstracts "coronary microvascular dysfunction women sex differences review"

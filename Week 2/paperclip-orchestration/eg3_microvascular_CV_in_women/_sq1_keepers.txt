@@ -1,0 +1,3 @@
+All results accumulated into: s_96906e70  [tag: sq1_m]  (48 unique papers)
+  → 48 papers (ranked by relevance across 6 search terms)
+Cite search results as table: {{"artifact": {{"artifact_id": "s_96906e70", "type": "table", "source_count": 48, "description": "YOUR_ONE_SENTENCE_SUMMARY"}}}}

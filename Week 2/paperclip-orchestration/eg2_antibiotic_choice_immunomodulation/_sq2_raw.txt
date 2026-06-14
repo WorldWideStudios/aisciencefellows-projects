@@ -1,0 +1,8 @@
+Query                                       Results  File
+---------------------------------------------------------
+"antibiotic mechanism of action review ..."       23  /session_files/searches/s_ecbfae22.txt
+
+All results accumulated into: s_4e336319  [tag: sq2v2]  (23 unique papers)
+  → 23 papers (ranked by relevance across 7 search terms)
+Cite search results as table: {{"artifact": {{"artifact_id": "s_4e336319", "type": "table", "source_count": 23, "description": "YOUR_ONE_SENTENCE_SUMMARY"}}}}
+[2.8s, saved to s_ecbfae22]

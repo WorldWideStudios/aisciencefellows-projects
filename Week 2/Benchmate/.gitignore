@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+*.egg-info/
+
+# Env / secrets
+.env
+.env.local
+
+# Run artifacts
+state.json
+run_output.log
+*.log
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+substack/
+
+# UI / generated artifacts
+notebooks/generated/
+check_geneformer.py
+
+# Local-only user data
+data/geneformer/*.csv
+*.pdf
