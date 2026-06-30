@@ -1,0 +1,19 @@
+date	time	sleep_score_oura	hrv	readiness_score	avg_reaction_time_ms	std_deviation	number_correct	platform	test_type	notes
+5/29/2026	23:45	65	89	65	323	86	19/20	Self Test - Hardware	Single - Visual Only	1 miss - sleep deprived 2am
+5/30/2026	9:43	78	97	78	335	124	20/20	Self Test - Hardware	Single - Visual Only	
+5/30/2026	10:20	78	97	78	568	294	20/20	Self Test - Hardware	Multi-modal - auditory and visual	First Multi-Modal Test using auditory
+5/31/2026	9:04	54	57	50	518	233	20/20	Self Test - Hardware	Multi-modal - auditory and visual	Drinking and sleep deprived
+6/2/2026	13:43	64	81	65	464	138	20/20	Self Test - Hardware	Multi-modal - auditory and visual	Woken up at 4am
+6/2/2026	21:58	64	81	65	498	196	20/20	Self Test - Hardware	Multi-modal - auditory and visual	Tired
+6/2/2026	10:07	83	103	84	449	148	20/20	Self Test - Hardware	Multi-modal - auditory and visual	Refreshed Wed Morning
+6/3/2026	8:28	83	103	74	581	120	19/20	Self Test - Software	Multi-modal - auditory and visual	First Software Test - Before Iceland Trip
+6/6/2026	16:40	89	97	74	585	115	19/20	Self Test - Software	Multi-modal - auditory and visual	In Iceland Software Test
+6/12/2026	23:00	76	88	80	604	109	19/20	Self Test - Software	Multi-modal - auditory and visual	Tired - going to sleep with jet lag
+6/13/2026	8:30	77	80	79	710	323	18/20	Self Test - Software	Multi-modal - auditory and visual	Tired - just woke up
+6/13/2026	8:57	77	80	79	447	152	20/20	Self Test - Hardware	Multi-modal - auditory and visual	A little better after waking up
+6/14/2026	11:27	72	101	79	435	193	20/20	Self Test - Hardware	Multi-modal - auditory and visual	Feeling ok a bit stressed
+6/14/2026	11:38	72	101	79	541	76	20/20	Self Test - Software	Multi-modal - auditory and visual	Feeling ok a bit stressed
+6/15/2026	11:53	79	60	72	679	115	20/20	Self Test - Software	Multi-modal - auditory and visual	Tired - late at night and stressed
+6/18/2026	0:33	68	99	73	555	123	20/20	Self Test - Software	Multi-modal - auditory and visual	Tired - late at night and stressed
+6/20/2026	0:12	77	67	72	433	211	20/20	Self Test - Hardware	Multi-modal - auditory and visual	Tired - late at night and stressed
+6/20/2026	1:20	77	67	72	575	131	19/20	Self Test - Software	Multi-modal - auditory and visual	Tired - late at night and stressed

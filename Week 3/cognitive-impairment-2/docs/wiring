@@ -1,0 +1,31 @@
+# Wiring guide
+
+## Pin assignments
+
+| Component | Arduino pin |
+|---|---|
+| Green LED (signal) | Pin 8 |
+| Red LED (signal) | Pin 4 |
+| Buzzer | Pin 9 |
+| Green button | Pin 7 |
+| Red button | Pin 6 |
+| FSR 402 (analog read) | A0 |
+| All grounds | GND via breadboard rail |
+
+## Grip strength sensor (FSR 402) — voltage divider
+
+The FSR's resistance drops as pressure increases. To read it as a voltage on an analog pin, build a voltage divider:
+
+1. One FSR leg → Arduino 5V
+2. Other FSR leg → same breadboard row as a jumper wire to A0
+3. From that same row, one leg of a 10kΩ resistor
+4. Other leg of the 10kΩ resistor → GND
+
+Note: FSR 402 legs are flat ribbon-style and can be unreliable in breadboards — ensure firm, direct contact, or use small clip leads if connections are intermittent.
+
+## LED + button wiring (per color)
+
+- Long leg (anode) of LED → signal pin, through a 220Ω resistor
+- Short leg (cathode) of LED → GND rail
+- One button terminal → digital pin (configured `INPUT_PULLUP`)
+- Other button terminal → GND rail
