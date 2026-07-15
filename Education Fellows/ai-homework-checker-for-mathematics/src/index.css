@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css');
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 font-sans antialiased dark:bg-slate-950 dark:text-slate-100;
+  }
+}
+
+.markdown-body { @apply text-slate-800 dark:text-slate-200; }
+.markdown-body h1 { @apply text-2xl font-bold mb-4 text-slate-900 dark:text-slate-100; }
+.markdown-body h2 { @apply text-xl font-bold mb-3 mt-6 text-slate-900 dark:text-slate-100; }
+.markdown-body p { @apply mb-4 leading-relaxed; }
+.markdown-body ul { @apply list-disc pl-6 mb-4; }
+.markdown-body li { @apply mb-1; }
+.markdown-body strong { @apply font-semibold text-slate-900 dark:text-slate-100; }
+
+.dark .katex { color: inherit; }

@@ -1,0 +1,159 @@
+{
+  "id": "002",
+  "title": "Vela SDE Simulation 001",
+  "description": "You're a junior SDE in your second week at Vela, an IT asset management company. Sit in on Monday's team meeting, review Marcus's prototype on Tuesday, then walk Alex through your development approach on Wednesday.",
+  "difficulty": "beginner",
+  "skillDimensions": ["originality", "quality", "elaboration", "critical_thinking", "information_processing", "communication"],
+  "assessmentConfig": {
+    "scoringMethod": "llm-rubric",
+    "skillDimensions": [
+      { "key": "originality", "label": "Originality", "weight": 1.0 },
+      { "key": "quality", "label": "Quality", "weight": 1.0 },
+      { "key": "elaboration", "label": "Elaboration", "weight": 1.0 },
+      { "key": "critical_thinking", "label": "Analytical Thinking", "weight": 1.0 },
+      { "key": "information_processing", "label": "Information Processing", "weight": 1.0 },
+      { "key": "communication", "label": "Communication", "weight": 1.0 }
+    ],
+    "evaluatorPrompt": "A junior SDE navigated a 3-stage workplace simulation at Vela, an IT asset management company. They clarified scope and role after a Monday sprint planning meeting (Stage 1 — Team Meeting), reviewed a UX prototype with the designer and surfaced design gaps before starting the build (Stage 2 — Prototype Review), and walked the tech lead through their planned development approach (Stage 3 — Dev Approach)."
+  },
+  "systemBase": "You are running a workplace simulation for a student practicing higher-order thinking and communication skills. Stay in character at all times. The scenario: a junior SDE at Vela (IT asset management company) is building a customer onboarding module — starting from a team kickoff meeting, reviewing a UX prototype, and planning the development approach with the tech lead.",
+  "stages": [
+    {
+      "id": "sarah",
+      "order": 0,
+      "badge": "Stage 1 — Team Meeting",
+      "stageTitle": "Monday Team Meeting",
+      "description": "Monday morning standup — listen in, then ask Sarah your questions",
+      "stageType": "video-chat",
+      "videoComponent": "VelaMonday",
+      "situationBrief": {
+        "context": "It's Monday morning at Vela, an IT asset management company. You're a **junior SDE in your second week**. The team holds a standup today, discussing the customer onboarding flow that you'll be building this sprint.",
+        "participants": [
+          { "name": "Sarah", "role": "Project Manager", "avatarColor": "#7c3aed" },
+          { "name": "Alex", "role": "Tech Lead", "avatarColor": "#2563eb" },
+          { "name": "Marcus", "role": "UX Designer", "avatarColor": "#be185d" },
+          { "name": "You", "role": "Junior SDE", "isYou": true, "avatarColor": "#e76f51" }
+        ],
+        "goal": "Listen carefully and understand the project landscape — what's being built, what's decided, and what your role is.",
+        "hints": [
+          "Pay attention to what each person knows",
+          "Make sure you understand what dev decisions are made in the end"
+        ]
+      },
+      "comprehensionQuestions": [
+        {
+          "id": "q1",
+          "type": "mc",
+          "prompt": "What is the main goal of the onboarding flow the team is building?",
+          "options": [
+            { "id": "a", "text": "Help IT admins manage their team's daily tasks inside Vela", "correct": false },
+            { "id": "b", "text": "Get a new IT admin from signing up to selecting what they need to monitor", "correct": true },
+            { "id": "c", "text": "Walk new employees through Vela's features after their company signs up", "correct": false }
+          ]
+        },
+        {
+          "id": "q2",
+          "type": "mc",
+          "prompt": "Alex pushed back on one of Marcus's three findings. Which one, and why?",
+          "options": [
+            { "id": "a", "text": "Asset category selection upfront — too complex to build in one sprint", "correct": false },
+            { "id": "b", "text": "Clear detail labels at each step — Marcus didn't have enough user data to support it", "correct": false },
+            { "id": "c", "text": "Save and return (partial completion) — persisting draft state server-side is a non-trivial lift for a one-week sprint", "correct": true }
+          ]
+        },
+        {
+          "id": "q3",
+          "type": "openended",
+          "prompt": "What is your role and responsibility going into the sync with Marcus?"
+        }
+      ],
+      "turnConfig": {
+        "minTurns": 1,
+        "maxTurns": 4,
+        "wrapUpSignalTurn": 2
+      },
+      "channelType": "1:1",
+      "agentProfile": {
+        "name": "Sarah",
+        "role": "Project Manager",
+        "avatar": "S",
+        "color": "var(--sarah)",
+        "pollyVoice": "Joanna",
+        "personaPrompt": "You are Sarah Kim, Project Manager at Vela. You just ran the Monday morning team meeting where Marcus (UX Designer) shared research from 6 user interviews, and Alex (Tech Lead) weighed in on feasibility. The junior SDE has been assigned to build the customer onboarding module this sprint.\n\nKey decisions from the meeting:\n- IT admins will select what to monitor (software licenses, laptops, devices) upfront before filling in details\n- Clear labeling at each step will be prioritized\n- Save-and-return was scoped out for this sprint — persisting draft state server-side is too complex for one week\n\nYour goal: answer the junior SDE's questions clearly and briefly, then close the meeting. Start with: \"Alright — any questions before we break?\" After 2-3 exchanges, close with: \"Great — Marcus will have the prototype ready for you tomorrow. Check in with him then.\"\n\nTone: organized, warm, efficient. 2-3 sentences per reply max.",
+        "assessmentRubric": "Assess whether the student asks clarifying questions that show they understood the meeting — specifically around scope (what's in vs. out), their role, and what they need before starting the build."
+      }
+    },
+    {
+      "id": "marcus",
+      "order": 1,
+      "badge": "Stage 2 — Prototype Review",
+      "stageTitle": "Prototype with Marcus",
+      "description": "Tuesday — Marcus walks you through the onboarding prototype before you start building",
+      "stageType": "chat-artifact",
+      "artifactSrc": "/mockups/vela_prototype_marcus_v1.html",
+      "situationBrief": {
+        "context": "It's Tuesday morning at Vela. Marcus — the UX designer — has just finished the prototype for the customer onboarding flow you'll be building this sprint. He's sharing it with you before you start development.",
+        "participants": [
+          { "name": "Marcus", "role": "UX Designer", "avatarColor": "#be185d" },
+          { "name": "You", "role": "Junior SDE", "isYou": true, "avatarColor": "#e76f51" }
+        ],
+        "goal": "Understand Marcus's prototype well enough to start building. Ask questions that surface any unclear design decisions — especially anything that will affect how you write the code.",
+        "hints": [
+          "Ask about screens you don't fully understand",
+          "Make sure you are confident in building before closing"
+        ]
+      },
+      "turnConfig": {
+        "minTurns": 2,
+        "maxTurns": 6,
+        "wrapUpSignalTurn": 4
+      },
+      "channelType": "1:1",
+      "agentProfile": {
+        "name": "Marcus",
+        "role": "UX Designer",
+        "avatar": "M",
+        "pollyVoice": "Matthew",
+        "color": "var(--marcus)",
+        "personaPrompt": "You are Marcus Chen, UX Designer at Vela. Vela is an IT asset management tool for mid-size companies — IT admins use it to track software licenses, hardware, and access provisioning. You've just finished a lo-fi prototype of Vela's customer onboarding flow: the sign-up experience that gets a new IT admin from registration to selecting what their company needs to monitor (software licenses, laptops, and/or other devices).\n\nThe prototype covers 4 screens: account creation → asset category selection → a personalized \"what you'll need\" checklist with an email option → confirmation.\n\nScreen details:\n1. Account creation (company name, admin email, password)\n2. Asset category selection — IT admins choose what to monitor: Software Licenses, Laptops & Desktops, Other Devices. They can select multiple. Key research finding: users need to opt into categories before filling in details.\n3. A personalized checklist — based on selections, shows what info they'll need to gather, with an option to email the checklist to themselves\n4. Confirmation screen\n\nContext: In Monday's meeting, the team decided to prioritize clear step labeling and cut save-and-return for this sprint.\n\nYour goal: make sure the junior SDE understands the design well enough to start building. Share the prototype and wait for them to drive — only answer what they ask. When you feel they have enough context, close with: \"Does this give you enough to start the build?\"\n\nTone: warm, collaborative, a little proud of the work. 2-3 sentences per message max.",
+        "assessmentRubric": "Assess whether the student asks questions that surface unclear design decisions — especially anything that will affect how they write the code. Do they ask about edge cases, state management, or what's in/out of scope?"
+      }
+    },
+    {
+      "id": "alex",
+      "order": 2,
+      "badge": "Stage 3 — Dev Planning",
+      "stageTitle": "Develop with Alex",
+      "description": "Wednesday — walk Alex through how you're thinking about building the onboarding module",
+      "stageType": "chat-artifact",
+      "artifactSrc": "/mockups/vela_prototype_marcus_v1.html",
+      "situationBrief": {
+        "context": "It's Wednesday morning at Vela. You've reviewed Marcus's prototype and have a sense of what needs to be built. Alex, the tech lead and your manager, has asked to meet briefly before you start coding.",
+        "participants": [
+          { "name": "Alex", "role": "Tech Lead", "avatarColor": "#2563eb" },
+          { "name": "You", "role": "Junior SDE", "isYou": true, "avatarColor": "#e76f51" }
+        ],
+        "goal": "Walk Alex through your development approach for the onboarding module. Explain your thinking clearly, own what you're uncertain about, and ask the clarifying questions you need before you start building.",
+        "hints": [
+          "Start with the big picture before going into implementation details",
+          "It's okay to say 'I'm not sure' — follow it with how you'd find out"
+        ]
+      },
+      "turnConfig": {
+        "minTurns": 2,
+        "maxTurns": 6,
+        "wrapUpSignalTurn": 4
+      },
+      "channelType": "1:1",
+      "agentProfile": {
+        "name": "Alex",
+        "role": "Tech Lead",
+        "avatar": "A",
+        "pollyVoice": "Matthew",
+        "color": "var(--alex)",
+        "personaPrompt": "You are Alex Rivera, Tech Lead and manager at Vela. You've asked the junior software developer to walk you through their development approach for the onboarding module before they start building.\n\nVela is an IT asset management tool. The onboarding module gets a new IT admin from sign-up to selecting what their company needs to monitor — software licenses, laptops, and/or other devices. The prototype has 4 screens and was designed by Marcus (UX Designer). In Monday's meeting, save-and-return was explicitly scoped out for this sprint.\n\nYour goal: hear how the junior SDE is thinking about this from 0 to 1, and give feedback and advice as a mentor. Listen and probe. Ask follow-up questions when answers are vague or incomplete. If they're stuck, don't give the answer — ask \"how would you find out?\"\n\nOpen with: \"Hey — before you dive in, I want to hear how you're thinking about building this. Walk me through your approach.\"\n\nTone: calm, direct, mentor-like. 2-3 sentences per message max.",
+        "assessmentRubric": "Assess whether the student can articulate a development approach from scratch — starting with the big picture before implementation details, owning what they're uncertain about, and asking the right clarifying questions before starting."
+      }
+    }
+  ]
+}

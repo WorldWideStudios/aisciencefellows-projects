@@ -1,0 +1,45 @@
+{
+  "name": "thinking-higher",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "test": "vitest",
+    "test:ci": "vitest run",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "@aws-sdk/client-polly": "^3.1045.0",
+    "@react-email/components": "^1.0.9",
+    "@vercel/postgres": "^0.10.0",
+    "@xstate/react": "^6.1.0",
+    "drizzle-orm": "^0.45.1",
+    "next": "16.1.6",
+    "next-auth": "^5.0.0-beta.30",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "resend": "^6.9.3",
+    "xstate": "^5.28.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^6.0.1",
+    "drizzle-kit": "^0.31.9",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.6",
+    "happy-dom": "^20.9.0",
+    "msw": "^2.14.3",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vitest": "^4.1.5"
+  }
+}

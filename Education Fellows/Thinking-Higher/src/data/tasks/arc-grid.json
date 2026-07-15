@@ -1,0 +1,14 @@
+{
+  "taskId": "arc-grid",
+  "taskType": "arc-grid",
+  "title": "ARC Pattern Puzzles",
+  "description": "Abstract visual pattern puzzles testing fluid intelligence.",
+  "numTrials": 10,
+  "parameters": {
+    "gridSize": 10,
+    "difficulty": 1
+  },
+  "modelType": "accuracy-rt",
+  "instructions": "You'll see a series of visual pattern puzzles. Each puzzle shows input-output pairs that follow a hidden rule.\n\nStudy the examples to figure out the transformation rule, then apply it to the test input to produce the correct output.\n\nClick cells in the output grid to paint them. Use the color palette to select different colors. Submit your answer when ready.\n\nThese puzzles come from the Abstraction and Reasoning Corpus (ARC), a benchmark designed to test general intelligence that most AI systems still struggle with.",
+  "debrief": "ARC puzzles measure fluid intelligence — your ability to identify novel abstract patterns without relying on learned knowledge. Unlike many cognitive tasks, ARC has no single \"trick\" to learn; each puzzle requires genuinely new reasoning.\n\nYour accuracy and solving time reveal how efficiently you extract abstract rules from examples. This is one of the few benchmarks where humans still dramatically outperform AI systems, highlighting the unique flexibility of human cognition."
+}

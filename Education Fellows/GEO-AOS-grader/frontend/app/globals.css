@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body { height: 100%; }
+html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.landing-surface {
+  background-image:
+    linear-gradient(rgba(23, 19, 15, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 19, 15, 0.035) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+
+/* --- Mistral-style landing utilities --- */
+
+/* Faint dotted grid overlay used inside the orange pixel hero */
+.pixel-grid-lines {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.14) 1px, transparent 1px);
+  background-size: 11.111% 11.111%;
+}
+
+/* Small black registration tick used at grid intersections */
+.corner-tick {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #0d0d0d;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes float-diamond {
+  0%, 100% { transform: rotate(45deg) translateY(0); }
+  50% { transform: rotate(45deg) translateY(-8px); }
+}
+
+.animate-diamond {
+  animation: float-diamond 6s ease-in-out infinite;
+}
+
+.animate-rise {
+  animation: rise-in 700ms ease-out both;
+}
+
+.animate-rise-delayed {
+  animation: rise-in 850ms ease-out 120ms both;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer components {
+  .input {
+    @apply w-full rounded-lg border border-neutral-300 bg-white px-3 py-2 text-sm outline-none transition focus:border-neutral-900;
+  }
+}
+
+@media print {
+  /* Print background colors (Hero, metrics, mention highlights) */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  @page {
+    size: A4;
+    margin: 14mm;
+  }
+
+  html, body {
+    background: white !important;
+  }
+
+  /* Hide CTA, expanded block scrollbars, and anything with print-hide */
+  .print-hide {
+    display: none !important;
+  }
+
+  /* Main report wrapper — remove screen-only padding */
+  main {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+
+  /* Hero should not break across pages */
+  section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Prompt table: prevent row breaks */
+  tr {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Expanded Perplexity response — remove max-height/overflow so everything fits in PDF */
+  .max-h-96 {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  /* Recharts: SVGs print fine on their own; force container to full width */
+  .recharts-wrapper {
+    page-break-inside: avoid;
+  }
+
+  /* Remove shadows and rounding slightly for clean print */
+  a {
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+}

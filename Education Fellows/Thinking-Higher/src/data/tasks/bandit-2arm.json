@@ -1,0 +1,14 @@
+{
+  "taskId": "bandit-2arm",
+  "taskType": "two-armed-bandit",
+  "title": "Two-Armed Bandit",
+  "description": "A classic decision-making task from cognitive science.",
+  "numTrials": 80,
+  "parameters": {
+    "rewardProb1": 0.7,
+    "rewardProb2": 0.3
+  },
+  "modelType": "rescorla-wagner",
+  "instructions": "You'll see two buttons (slot machine arms). Each one has a hidden probability of giving you a reward. Your goal is to earn as many points as possible over 80 trials.\n\nOn each trial, choose one arm by clicking it or pressing 1/2 (or arrow keys). After each choice, you'll see whether you won a point.\n\nThe key challenge: one arm pays out more often than the other, but you need to figure out which one through trial and error. How quickly can you learn?",
+  "debrief": "This task measures your exploration-exploitation trade-off — a fundamental concept in reinforcement learning. The Rescorla-Wagner model estimates two parameters from your choices:\n\n• Learning rate (alpha): How quickly you update your beliefs after each outcome. Higher = more responsive to recent outcomes.\n• Inverse temperature (tau): How consistently you choose the higher-valued option. Higher = more exploitative, lower = more exploratory.\n\nThese same models are used in computational psychiatry to study decision-making differences across clinical populations."
+}

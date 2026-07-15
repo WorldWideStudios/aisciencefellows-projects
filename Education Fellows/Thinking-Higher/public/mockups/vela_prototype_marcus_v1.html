@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vela Onboarding — Marcus Prototype v1</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Mono:wght@400;500&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #1a1a1a;
+  --canvas: #111;
+  --toolbar: #252525;
+  --sidebar: #202020;
+  --border: #333;
+  --border-light: #2a2a2a;
+  --text: #e8e8e8;
+  --text-dim: #888;
+  --text-muted: #555;
+  --figma-blue: #18a0fb;
+  --frame-label: #666;
+
+  /* Vela brand */
+  --vela-purple: #6366f1;
+  --vela-purple-dark: #4f46e5;
+  --vela-purple-light: #eef2ff;
+  --vela-purple-border: #c7d2fe;
+  --vela-gray: #f9fafb;
+  --vela-border: #e5e7eb;
+  --vela-text: #111827;
+  --vela-text-secondary: #6b7280;
+  --vela-text-muted: #9ca3af;
+
+  /* annotation */
+  --pin-marcus: #e879a0;
+  --pin-unresolved: #f59e0b;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ── TOOLBAR ── */
+.toolbar {
+  height: 44px;
+  background: var(--toolbar);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  gap: 12px;
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+.toolbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toolbar-filename {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+.toolbar-breadcrumb {
+  font-size: 12px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.toolbar-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toolbar-btn {
+  font-size: 11px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--text-dim);
+  padding: 4px 10px;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  transition: all 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.toolbar-btn:hover { background: rgba(255,255,255,0.12); color: var(--text); }
+.toolbar-btn.primary { background: var(--figma-blue); border-color: var(--figma-blue); color: white; }
+.toolbar-btn.primary:hover { background: #0d8de8; }
+
+.toolbar-dot { width: 8px; height: 8px; border-radius: 50%; }
+
+/* ── BODY ── */
+.app-body {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+/* ── LEFT PANEL — layers ── */
+.layers-panel {
+  width: 200px;
+  flex-shrink: 0;
+  background: var(--sidebar);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.panel-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+}
+
+.panel-tab {
+  flex: 1;
+  padding: 8px 0;
+  font-size: 11px;
+  text-align: center;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.15s;
+}
+
+.panel-tab.active {
+  color: var(--text);
+  border-bottom-color: var(--figma-blue);
+}
+
+.layers-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px 0;
+}
+
+.layers-body::-webkit-scrollbar { width: 3px; }
+.layers-body::-webkit-scrollbar-thumb { background: #444; border-radius: 2px; }
+
+.layer-group-label {
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 8px 12px 4px;
+}
+
+.layer-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  font-size: 11px;
+  color: var(--text-dim);
+  cursor: pointer;
+  border-left: 2px solid transparent;
+  transition: all 0.1s;
+}
+
+.layer-item:hover { background: rgba(255,255,255,0.04); color: var(--text); }
+.layer-item.active { color: var(--figma-blue); border-left-color: var(--figma-blue); background: rgba(24,160,251,0.07); }
+.layer-item.indent { padding-left: 22px; }
+.layer-item.indent2 { padding-left: 32px; }
+.layer-icon { font-size: 10px; opacity: 0.7; flex-shrink: 0; }
+
+.annotation-badge {
+  margin-left: auto;
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: var(--pin-marcus);
+  font-size: 8px;
+  font-weight: 700;
+  color: white;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.annotation-badge.unresolved { background: var(--pin-unresolved); }
+
+/* ── CANVAS ── */
+.canvas {
+  flex: 1;
+  background: var(--canvas);
+  overflow: auto;
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+.canvas::-webkit-scrollbar { width: 6px; height: 6px; }
+.canvas::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+
+.frame-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.frame-label-text {
+  font-size: 11px;
+  font-family: 'DM Mono', monospace;
+  color: var(--frame-label);
+  letter-spacing: 0.03em;
+}
+
+.frames-row {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+/* ── SCREEN FRAME ── */
+.screen {
+  width: 340px;
+  background: white;
+  border-radius: 16px;
+  overflow: visible;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.05);
+  position: relative;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.screen:hover {
+  box-shadow: 0 24px 70px rgba(0,0,0,0.7), 0 0 0 2px var(--figma-blue);
+  transform: translateY(-2px);
+}
+
+.screen.selected {
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6), 0 0 0 2px var(--figma-blue);
+}
+
+.screen-number {
+  position: absolute;
+  top: -22px;
+  left: 0;
+  font-size: 10px;
+  font-family: 'DM Mono', monospace;
+  color: var(--frame-label);
+}
+
+/* ── VELA UI COMPONENTS ── */
+
+/* Top brand strip */
+.vela-header {
+  background: linear-gradient(135deg, #6366f1 0%, #818cf8 100%);
+  padding: 22px 28px 18px;
+  border-radius: 16px 16px 0 0;
+}
+
+.vela-wordmark {
+  font-family: 'Sora', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: -0.02em;
+  margin-bottom: 3px;
+}
+
+.vela-subtitle {
+  font-size: 12px;
+  color: rgba(255,255,255,0.65);
+}
+
+/* Progress bar */
+.progress-bar-wrap {
+  padding: 16px 28px 0;
+  background: white;
+}
+
+.progress-bar-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--vela-text-muted);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.progress-bar-label .question-mark {
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  border: 1.5px solid var(--pin-unresolved);
+  color: var(--pin-unresolved);
+  font-size: 9px;
+  font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.progress-dots {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.p-dot {
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.p-dot.done {
+  background: var(--vela-purple);
+  color: white;
+}
+
+.p-dot.current {
+  background: white;
+  border: 2px solid var(--vela-purple);
+  color: var(--vela-purple);
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.15);
+}
+
+.p-dot.upcoming {
+  background: #f3f4f6;
+  color: var(--vela-text-muted);
+}
+
+.p-line {
+  flex: 1;
+  height: 2px;
+  background: #e5e7eb;
+  min-width: 20px;
+}
+
+.p-line.done { background: var(--vela-purple); }
+
+/* !! KEY GAP: dots have no labels, count is ambiguous !! */
+.progress-gap-note {
+  font-size: 9.5px;
+  color: var(--pin-unresolved);
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.progress-bar-wrap:hover .progress-gap-note { opacity: 1; }
+
+/* Form body */
+.vela-form-body {
+  padding: 18px 28px 24px;
+}
+
+.form-section-head {
+  font-family: 'Sora', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--vela-text);
+  margin-bottom: 4px;
+}
+
+.form-section-sub {
+  font-size: 12px;
+  color: var(--vela-text-secondary);
+  margin-bottom: 18px;
+  line-height: 1.5;
+}
+
+.field-wrap {
+  margin-bottom: 14px;
+}
+
+.field-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 5px;
+  letter-spacing: 0.02em;
+}
+
+.field-label .req { color: #ef4444; margin-left: 2px; }
+
+.field-input {
+  height: 38px;
+  border-radius: 8px;
+  border: 1.5px solid var(--vela-border);
+  background: var(--vela-gray);
+  padding: 0 12px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: var(--vela-text);
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.field-input.filled {
+  background: #f5f3ff;
+  border-color: var(--vela-purple-border);
+  color: var(--vela-text);
+}
+
+.field-input.placeholder { color: var(--vela-text-muted); }
+
+.field-row { display: flex; gap: 10px; }
+.field-row .field-wrap { flex: 1; }
+
+.field-hint {
+  font-size: 10.5px;
+  color: var(--vela-text-muted);
+  margin-top: 3px;
+}
+
+/* Asset category cards */
+.asset-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.asset-card {
+  border: 1.5px solid var(--vela-border);
+  border-radius: 10px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+  background: white;
+}
+
+.asset-card:hover { border-color: var(--vela-purple-border); background: var(--vela-purple-light); }
+.asset-card.selected { border-color: var(--vela-purple); background: var(--vela-purple-light); }
+
+.asset-checkbox {
+  width: 18px; height: 18px;
+  border-radius: 5px;
+  border: 1.5px solid #d1d5db;
+  background: white;
+  flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 10px;
+}
+
+.asset-card.selected .asset-checkbox {
+  background: var(--vela-purple);
+  border-color: var(--vela-purple);
+  color: white;
+}
+
+.asset-icon { font-size: 20px; flex-shrink: 0; }
+.asset-info { flex: 1; }
+.asset-name { font-size: 13px; font-weight: 600; color: var(--vela-text); }
+.asset-desc { font-size: 11px; color: var(--vela-text-secondary); margin-top: 1px; }
+
+/* No skip option — intentional gap */
+.no-skip-note {
+  font-size: 10px;
+  color: var(--vela-text-muted);
+  text-align: center;
+  margin-bottom: 14px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.asset-grid:hover ~ .no-skip-note { opacity: 1; }
+
+/* CTA button */
+.vela-btn {
+  width: 100%;
+  height: 42px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--vela-purple), #818cf8);
+  color: white;
+  border: none;
+  font-family: 'Sora', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.1s;
+  letter-spacing: 0.01em;
+}
+.vela-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+.vela-btn.secondary {
+  background: white;
+  color: var(--vela-purple);
+  border: 1.5px solid var(--vela-purple-border);
+}
+
+/* Confirmation screen */
+.confirmation-wrap {
+  padding: 28px 28px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.check-circle {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1, #818cf8);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px;
+  margin-bottom: 16px;
+  box-shadow: 0 8px 24px rgba(99,102,241,0.3);
+}
+
+.confirm-title {
+  font-family: 'Sora', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--vela-text);
+  margin-bottom: 8px;
+}
+
+.confirm-sub {
+  font-size: 12.5px;
+  color: var(--vela-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* "What happens next?" is intentionally vague — another gap */
+.next-steps-box {
+  width: 100%;
+  background: var(--vela-gray);
+  border: 1px solid var(--vela-border);
+  border-radius: 10px;
+  padding: 14px;
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.next-steps-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--vela-text-muted);
+  margin-bottom: 8px;
+}
+
+.next-step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--vela-text-secondary);
+  margin-bottom: 6px;
+  line-height: 1.45;
+}
+
+.step-bullet {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--vela-purple);
+  flex-shrink: 0;
+  margin-top: 5px;
+  opacity: 0.5;
+}
+
+/* ── ANNOTATION PINS ── */
+.pin {
+  position: absolute;
+  width: 22px; height: 22px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 9px; font-weight: 800;
+  color: white;
+  cursor: pointer;
+  z-index: 20;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.35);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.pin:hover {
+  transform: rotate(-45deg) scale(1.2);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.45);
+}
+.pin span { transform: rotate(45deg); display: block; }
+.pin.marcus { background: var(--pin-marcus); }
+.pin.unresolved { background: var(--pin-unresolved); }
+
+/* Comment tooltip */
+.pin-tooltip {
+  position: absolute;
+  background: #1e1e1e;
+  border: 1px solid #3a3a3a;
+  border-radius: 10px;
+  padding: 10px 13px;
+  width: 200px;
+  font-size: 11px;
+  color: #ddd;
+  line-height: 1.55;
+  z-index: 30;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.5);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s;
+  white-space: normal;
+}
+.pin:hover .pin-tooltip { opacity: 1; }
+.pin-author {
+  font-size: 10px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.pin-author.marcus { color: var(--pin-marcus); }
+.pin-author.unresolved { color: var(--pin-unresolved); }
+
+/* ── RIGHT PANEL — properties ── */
+.props-panel {
+  width: 220px;
+  flex-shrink: 0;
+  background: var(--sidebar);
+  border-left: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: 12px 0;
+}
+
+.props-panel::-webkit-scrollbar { width: 3px; }
+.props-panel::-webkit-scrollbar-thumb { background: #444; border-radius: 2px; }
+
+.props-section {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.props-label {
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.props-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+  font-size: 11px;
+}
+
+.props-key { color: var(--text-muted); }
+.props-val { color: var(--text-dim); font-family: 'DM Mono', monospace; font-size: 10px; }
+.props-val.highlight { color: var(--pin-unresolved); }
+
+.props-note {
+  font-size: 11px;
+  color: var(--text-dim);
+  line-height: 1.5;
+  margin-top: 6px;
+}
+
+.props-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  background: rgba(245,158,11,0.12);
+  border: 1px solid rgba(245,158,11,0.3);
+  color: var(--pin-unresolved);
+  padding: 2px 7px;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+/* ── SCREEN SELECTOR TABS ── */
+.screen-tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.screen-tab {
+  font-size: 11px;
+  padding: 4px 12px;
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  transition: all 0.15s;
+}
+
+.screen-tab:hover { background: rgba(255,255,255,0.06); color: var(--text-dim); }
+.screen-tab.active { background: var(--figma-blue); border-color: var(--figma-blue); color: white; }
+
+</style>
+</head>
+<body>
+
+<!-- TOOLBAR -->
+<div class="toolbar">
+  <div class="toolbar-logo">
+    <svg width="13" height="19" viewBox="0 0 38 57" fill="none">
+      <path d="M19 28.5C19 23.8 22.9 20 27.5 20C32.1 20 36 23.8 36 28.5C36 33.2 32.1 37 27.5 37C22.9 37 19 33.2 19 28.5Z" fill="#1ABCFE"/>
+      <path d="M2 47C2 42.3 5.9 38.5 10.5 38.5H19V47C19 51.7 15.1 55.5 10.5 55.5C5.9 55.5 2 51.7 2 47Z" fill="#0ACF83"/>
+      <path d="M19 1.5V20H27.5C32.1 20 36 16.2 36 11.5C36 6.8 32.1 3 27.5 3L19 1.5Z" fill="#FF7262"/>
+      <path d="M2 11.5C2 16.2 5.9 20 10.5 20H19V3H10.5C5.9 3 2 6.8 2 11.5Z" fill="#F24E1E"/>
+      <path d="M2 28.5C2 33.2 5.9 37 10.5 37H19V20H10.5C5.9 20 2 23.8 2 28.5Z" fill="#A259FF"/>
+    </svg>
+    <span class="toolbar-filename">Vela_Onboarding_prototype_v1.fig</span>
+  </div>
+  <div class="toolbar-breadcrumb">
+    <span style="color:var(--text-muted)">Pages</span>
+    <span style="color:var(--border)">›</span>
+    <span style="color:var(--text-dim)">Onboarding Flow</span>
+  </div>
+  <div class="toolbar-right">
+    <div class="toolbar-dot" style="background:#ff5f57"></div>
+    <div class="toolbar-dot" style="background:#ffbd2e"></div>
+    <div class="toolbar-dot" style="background:#28c840"></div>
+    <button class="toolbar-btn">💬 3 comments</button>
+    <button class="toolbar-btn primary">Share</button>
+  </div>
+</div>
+
+<!-- BODY -->
+<div class="app-body">
+
+  <!-- LAYERS -->
+  <div class="layers-panel">
+    <div class="panel-tabs">
+      <div class="panel-tab active">Layers</div>
+      <div class="panel-tab">Assets</div>
+    </div>
+    <div class="layers-body">
+      <div class="layer-group-label">Pages</div>
+      <div class="layer-item active"><span class="layer-icon">📄</span> Onboarding Flow</div>
+      <div class="layer-item"><span class="layer-icon">📄</span> Components</div>
+      <div class="layer-item"><span class="layer-icon">📄</span> Notes</div>
+
+      <div class="layer-group-label" style="margin-top:8px;">Frames</div>
+
+      <div class="layer-item active"><span class="layer-icon">▣</span> Screen 1 — Sign Up</div>
+      <div class="layer-item indent"><span class="layer-icon">▭</span> Vela header</div>
+      <div class="layer-item indent"><span class="layer-icon">▭</span> Progress bar <span class="annotation-badge unresolved">?</span></div>
+      <div class="layer-item indent"><span class="layer-icon">▭</span> Form fields</div>
+      <div class="layer-item indent"><span class="layer-icon">▭</span> CTA</div>
+
+      <div style="height:4px"></div>
+      <div class="layer-item"><span class="layer-icon">▣</span> Screen 2 — Asset Select</div>
+      <div class="layer-item indent"><span class="layer-icon">▭</span> Progress bar <span class="annotation-badge unresolved">?</span></div>
+      <div class="layer-item indent"><span class="layer-icon">▭</span> Asset cards</div>
+      <div class="layer-item indent"><span class="layer-icon">▭</span> CTA <span class="annotation-badge">M</span></div>
+
+      <div style="height:4px"></div>
+      <div class="layer-item"><span class="layer-icon">▣</span> Screen 4 — Confirm</div>
+      <div class="layer-item indent"><span class="layer-icon">▭</span> Success state</div>
+      <div class="layer-item indent"><span class="layer-icon">▭</span> Next steps <span class="annotation-badge">M</span></div>
+
+      <div class="layer-group-label" style="margin-top:8px;">Comments</div>
+      <div class="layer-item" style="color:var(--pin-marcus)"><span class="layer-icon">💬</span> Marcus (2)</div>
+      <div class="layer-item" style="color:var(--pin-unresolved)"><span class="layer-icon">⚠️</span> Unresolved (2)</div>
+    </div>
+  </div>
+
+  <!-- CANVAS -->
+  <div class="canvas" id="canvas">
+    <div class="frame-group">
+      <div class="screen-tabs">
+        <button class="screen-tab active" onclick="scrollTo('s1')">Screen 1 — Sign Up</button>
+        <button class="screen-tab" onclick="scrollTo('s2')">Screen 2 — Asset Selection</button>
+        <button class="screen-tab" onclick="scrollTo('s3')">Screen 3 — What You'll Need</button>
+        <button class="screen-tab" onclick="scrollTo('s4')">Screen 4 — Confirmation</button>
+      </div>
+
+      <div class="frames-row">
+
+        <!-- SCREEN 1: SIGN UP -->
+        <div class="screen selected" id="s1">
+          <div class="screen-number">Screen 1 / Sign Up</div>
+
+          <div class="vela-header">
+            <div class="vela-wordmark">Vela</div>
+            <div class="vela-subtitle">Let's get your workspace set up.</div>
+          </div>
+
+          <div class="progress-bar-wrap">
+            <div class="progress-bar-label">
+              Setup progress
+              <!-- KEY GAP PIN: no step count, no labels -->
+              <div class="question-mark" style="position:relative;">
+                ?
+                <div class="pin-tooltip" style="right:20px; top:-5px; width:190px;">
+                  <div class="pin-author unresolved">⚠ Unresolved</div>
+                  Progress bar shows dots but no step labels and no total count. How many steps are there? Does this change based on what categories the admin selects?
+                </div>
+              </div>
+            </div>
+            <div class="progress-dots">
+              <div class="p-dot current">1</div>
+              <div class="p-line"></div>
+              <div class="p-dot upcoming">2</div>
+              <div class="p-line"></div>
+              <div class="p-dot upcoming">3</div>
+            </div>
+            <div class="progress-gap-note">⚠ Step count not defined — hover to see issue</div>
+          </div>
+
+          <div class="vela-form-body">
+            <div class="form-section-head">Create your account</div>
+            <div class="form-section-sub">You'll use this to log in and manage your team's assets.</div>
+
+            <div class="field-row">
+              <div class="field-wrap">
+                <div class="field-label">First Name <span class="req">*</span></div>
+                <div class="field-input placeholder">Jane</div>
+              </div>
+              <div class="field-wrap">
+                <div class="field-label">Last Name <span class="req">*</span></div>
+                <div class="field-input placeholder">Smith</div>
+              </div>
+            </div>
+
+            <div class="field-wrap">
+              <div class="field-label">Work Email <span class="req">*</span></div>
+              <div class="field-input placeholder"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="87ede6e9e2c7e4e8eaf7e6e9fea9e4e8ea">[email&#160;protected]</a></div>
+              <div class="field-hint">Use your company email address.</div>
+            </div>
+
+            <div class="field-wrap">
+              <div class="field-label">Company Name <span class="req">*</span></div>
+              <div class="field-input placeholder">Acme Corp</div>
+            </div>
+
+            <div class="field-wrap">
+              <div class="field-label">Password <span class="req">*</span></div>
+              <div class="field-input placeholder">••••••••••</div>
+            </div>
+
+            <button class="vela-btn" style="margin-top:6px;">Continue →</button>
+          </div>
+
+          <!-- Annotation pin: no step labels -->
+          <div class="pin unresolved" style="top: 112px; right: -12px;">
+            <span>?</span>
+            <div class="pin-tooltip" style="right: 28px; top: -5px;">
+              <div class="pin-author unresolved">⚠ Unresolved</div>
+              Progress dots show 3 steps here — but Screen 2 selection may add or remove steps. Is step count fixed or dynamic? Not defined yet.
+            </div>
+          </div>
+        </div>
+
+        <!-- SCREEN 2: ASSET SELECTION -->
+        <div class="screen" id="s2">
+          <div class="screen-number">Screen 2 / Asset Selection</div>
+
+          <div class="vela-header">
+            <div class="vela-wordmark">Vela</div>
+            <div class="vela-subtitle">What do you need to monitor?</div>
+          </div>
+
+          <div class="progress-bar-wrap">
+            <div class="progress-bar-label">
+              Setup progress
+              <div class="question-mark" style="position:relative;">
+                ?
+                <div class="pin-tooltip" style="right:20px; top:-5px; width:190px;">
+                  <div class="pin-author unresolved">⚠ Unresolved</div>
+                  Still shows 3 dots — but what if the admin selects all three categories? Do they each get their own detail step, making the total steps dynamic?
+                </div>
+              </div>
+            </div>
+            <div class="progress-dots">
+              <div class="p-dot done">✓</div>
+              <div class="p-line done"></div>
+              <div class="p-dot current">2</div>
+              <div class="p-line"></div>
+              <div class="p-dot upcoming">3</div>
+            </div>
+          </div>
+
+          <div class="vela-form-body">
+            <div class="form-section-head">Select what to track</div>
+            <div class="form-section-sub">Choose the asset types you manage. You can always add more later.</div>
+
+            <div class="asset-grid">
+              <div class="asset-card selected">
+                <div class="asset-checkbox">✓</div>
+                <div class="asset-icon">📋</div>
+                <div class="asset-info">
+                  <div class="asset-name">Software Licenses</div>
+                  <div class="asset-desc">Track SaaS subscriptions, seats, and renewals</div>
+                </div>
+              </div>
+              <div class="asset-card selected">
+                <div class="asset-checkbox">✓</div>
+                <div class="asset-icon">💻</div>
+                <div class="asset-info">
+                  <div class="asset-name">Laptops & Computers</div>
+                  <div class="asset-desc">Manage device assignments and inventory</div>
+                </div>
+              </div>
+              <div class="asset-card">
+                <div class="asset-checkbox"></div>
+                <div class="asset-icon">🖨️</div>
+                <div class="asset-info">
+                  <div class="asset-name">Other Devices</div>
+                  <div class="asset-desc">Monitors, printers, phones, peripherals</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- No skip option — intentional gap -->
+            <div class="no-skip-note">No "skip for now" option — save-and-return unresolved</div>
+
+            <button class="vela-btn">Continue →</button>
+          </div>
+
+          <!-- Marcus annotation: no skip option -->
+          <div class="pin marcus" style="bottom: 68px; right: -12px;">
+            <span>M</span>
+            <div class="pin-tooltip" style="right: 28px; bottom: 0;">
+              <div class="pin-author marcus">Marcus Chen</div>
+              Two of three admins said they wouldn't have all asset info ready on day one. Should there be a "skip for now" option here? Flagged in standup but not resolved — leaving it out of v1 for now.
+            </div>
+          </div>
+
+          <!-- Unresolved: step count -->
+          <div class="pin unresolved" style="top: 112px; right: -12px;">
+            <span>?</span>
+            <div class="pin-tooltip" style="right: 28px; top: -5px;">
+              <div class="pin-author unresolved">⚠ Unresolved</div>
+              If admin selects all 3 categories, do they each get a dedicated detail step? That would make total steps 5, not 3. Progress bar doesn't account for this.
+            </div>
+          </div>
+        </div>
+
+        <!-- SCREEN 2.5: WHAT YOU'LL NEED -->
+        <div class="screen" id="s3">
+          <div class="screen-number">Screen 3 / Before You Continue</div>
+
+          <div class="vela-header">
+            <div class="vela-wordmark">Vela</div>
+            <div class="vela-subtitle">Here's what you'll need to get set up.</div>
+          </div>
+
+          <div class="progress-bar-wrap">
+            <div class="progress-bar-label">
+              Setup progress
+              <div class="question-mark" style="position:relative;">
+                ?
+                <div class="pin-tooltip" style="right:20px; top:-5px; width:190px;">
+                  <div class="pin-author unresolved">⚠ Unresolved</div>
+                  Now showing 4 dots — but this is still hardcoded. If admin only selected 1 category, should there still be 4 steps? Step count logic still undefined.
+                </div>
+              </div>
+            </div>
+            <div class="progress-dots">
+              <div class="p-dot done">✓</div>
+              <div class="p-line done"></div>
+              <div class="p-dot done">✓</div>
+              <div class="p-line done"></div>
+              <div class="p-dot current">3</div>
+              <div class="p-line"></div>
+              <div class="p-dot upcoming">4</div>
+            </div>
+          </div>
+
+          <div class="vela-form-body">
+            <div class="form-section-head">Before you continue</div>
+            <div class="form-section-sub">
+              Based on what you selected, here's the information you'll need
+              ready when you start adding assets to Vela.
+            </div>
+
+            <!-- SOFTWARE LICENSES block (shown because selected) -->
+            <div style="margin-bottom:14px;">
+              <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+                <span style="font-size:16px;">📋</span>
+                <span style="font-size:12px; font-weight:700; color:var(--vela-text); letter-spacing:0.02em;">Software Licenses</span>
+              </div>
+              <div style="display:flex; flex-direction:column; gap:5px; padding-left:4px;">
+                <div style="display:flex; align-items:flex-start; gap:8px; font-size:12px; color:var(--vela-text-secondary); line-height:1.45;">
+                  <div style="width:5px;height:5px;border-radius:50%;background:var(--vela-purple);flex-shrink:0;margin-top:5px;opacity:0.5;"></div>
+                  License keys or subscription IDs for each tool
+                </div>
+                <div style="display:flex; align-items:flex-start; gap:8px; font-size:12px; color:var(--vela-text-secondary); line-height:1.45;">
+                  <div style="width:5px;height:5px;border-radius:50%;background:var(--vela-purple);flex-shrink:0;margin-top:5px;opacity:0.5;"></div>
+                  Number of seats purchased per tool
+                </div>
+                <div style="display:flex; align-items:flex-start; gap:8px; font-size:12px; color:var(--vela-text-secondary); line-height:1.45;">
+                  <div style="width:5px;height:5px;border-radius:50%;background:var(--vela-purple);flex-shrink:0;margin-top:5px;opacity:0.5;"></div>
+                  Renewal dates
+                </div>
+                <div style="display:flex; align-items:flex-start; gap:8px; font-size:12px; color:var(--vela-text-secondary); line-height:1.45;">
+                  <div style="width:5px;height:5px;border-radius:50%;background:var(--vela-purple);flex-shrink:0;margin-top:5px;opacity:0.5;"></div>
+                  Which employees have access to each tool
+                </div>
+              </div>
+            </div>
+
+            <div style="height:1px; background:var(--vela-border); margin-bottom:14px;"></div>
+
+            <!-- LAPTOPS block (shown because selected) -->
+            <div style="margin-bottom:14px;">
+              <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+                <span style="font-size:16px;">💻</span>
+                <span style="font-size:12px; font-weight:700; color:var(--vela-text); letter-spacing:0.02em;">Laptops & Computers</span>
+              </div>
+              <div style="display:flex; flex-direction:column; gap:5px; padding-left:4px;">
+                <div style="display:flex; align-items:flex-start; gap:8px; font-size:12px; color:var(--vela-text-secondary); line-height:1.45;">
+                  <div style="width:5px;height:5px;border-radius:50%;background:var(--vela-purple);flex-shrink:0;margin-top:5px;opacity:0.5;"></div>
+                  Total number of devices
+                </div>
+                <div style="display:flex; align-items:flex-start; gap:8px; font-size:12px; color:var(--vela-text-secondary); line-height:1.45;">
+                  <div style="width:5px;height:5px;border-radius:50%;background:var(--vela-purple);flex-shrink:0;margin-top:5px;opacity:0.5;"></div>
+                  Serial numbers or asset tags for each device
+                </div>
+                <div style="display:flex; align-items:flex-start; gap:8px; font-size:12px; color:var(--vela-text-secondary); line-height:1.45;">
+                  <div style="width:5px;height:5px;border-radius:50%;background:var(--vela-purple);flex-shrink:0;margin-top:5px;opacity:0.5;"></div>
+                  Who each device is currently assigned to
+                </div>
+              </div>
+            </div>
+
+            <!-- Email yourself CTA -->
+            <div style="background:var(--vela-purple-light); border:1.5px solid var(--vela-purple-border); border-radius:10px; padding:12px 14px; margin-bottom:16px; display:flex; align-items:flex-start; gap:10px;">
+              <span style="font-size:16px; flex-shrink:0;">📧</span>
+              <div>
+                <div style="font-size:12px; font-weight:600; color:var(--vela-purple); margin-bottom:3px;">Not ready right now?</div>
+                <div style="font-size:11.5px; color:var(--vela-text-secondary); line-height:1.5; margin-bottom:8px;">Send this checklist to your inbox — you can finish setting up Vela when you have everything ready.</div>
+                <button style="height:30px; padding:0 14px; border-radius:7px; background:white; border:1.5px solid var(--vela-purple-border); font-family:'DM Sans',sans-serif; font-size:11.5px; font-weight:600; color:var(--vela-purple); cursor:pointer;">
+                  Email me this list
+                </button>
+              </div>
+            </div>
+
+            <button class="vela-btn">Continue →</button>
+          </div>
+
+          <!-- Marcus annotation: email option -->
+          <div class="pin marcus" style="bottom: 138px; right: -12px;">
+            <span>M</span>
+            <div class="pin-tooltip" style="right: 28px; bottom: 0; width:210px;">
+              <div class="pin-author marcus">Marcus Chen</div>
+              "Email me this list" is a workaround for the save-and-return problem. User gets the checklist, closes the tab, and comes back fresh when they're ready. But does "coming back" mean re-doing sign-up? Need to think through the re-entry flow.
+            </div>
+          </div>
+
+          <!-- Unresolved: step count now shows 4 -->
+          <div class="pin unresolved" style="top: 112px; right: -12px;">
+            <span>?</span>
+            <div class="pin-tooltip" style="right: 28px; top: -5px;">
+              <div class="pin-author unresolved">⚠ Unresolved</div>
+              Adding this screen means 4 steps minimum. But if admin only picks 1 category, do they still see 4 steps? Step count is still hardcoded — dynamic logic not defined.
+            </div>
+          </div>
+        </div>
+
+        <!-- SCREEN 4: CONFIRMATION -->
+        <div class="screen" id="s4">
+          <div class="screen-number">Screen 4 / Confirmation</div>
+
+          <div class="vela-header">
+            <div class="vela-wordmark">Vela</div>
+            <div class="vela-subtitle">You're all set.</div>
+          </div>
+
+          <div style="padding: 8px 28px 0; background:white;">
+            <div class="progress-dots">
+              <div class="p-dot done">✓</div>
+              <div class="p-line done"></div>
+              <div class="p-dot done">✓</div>
+              <div class="p-line done"></div>
+              <div class="p-dot done">✓</div>
+              <div class="p-line done"></div>
+              <div class="p-dot done">✓</div>
+            </div>
+          </div>
+
+          <div class="confirmation-wrap">
+            <div class="check-circle">✓</div>
+            <div class="confirm-title">Workspace created!</div>
+            <div class="confirm-sub">Your Vela environment is ready. Here's what happens next to get you fully set up.</div>
+
+            <!-- Vague "what's next" — intentional gap -->
+            <div class="next-steps-box">
+              <div class="next-steps-title">What's next</div>
+              <div class="next-step-item">
+                <div class="step-bullet"></div>
+                We'll send a confirmation email to your inbox
+              </div>
+              <div class="next-step-item">
+                <div class="step-bullet"></div>
+                Your account manager will reach out within 1 business day
+              </div>
+              <div class="next-step-item">
+                <div class="step-bullet"></div>
+                You can start adding assets from your dashboard
+              </div>
+            </div>
+
+            <button class="vela-btn" style="margin-bottom:10px;">Go to my dashboard →</button>
+            <button class="vela-btn secondary">Invite a teammate</button>
+          </div>
+
+          <!-- Marcus annotation: what happens after? -->
+          <div class="pin marcus" style="bottom: 100px; right: -12px;">
+            <span>M</span>
+            <div class="pin-tooltip" style="right: 28px; bottom: 0; width: 210px;">
+              <div class="pin-author marcus">Marcus Chen</div>
+              "Go to my dashboard" — but the dashboard doesn't exist yet in the build. Does this button go to a placeholder or is it blocked until the dashboard is ready? Need to confirm with dev.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT PROPERTIES PANEL -->
+  <div class="props-panel">
+    <div class="props-section">
+      <div class="props-label">Selection</div>
+      <div class="props-row">
+        <span class="props-key">Frame</span>
+        <span class="props-val">Screen 1</span>
+      </div>
+      <div class="props-row">
+        <span class="props-key">W</span>
+        <span class="props-val">340</span>
+      </div>
+      <div class="props-row">
+        <span class="props-key">H</span>
+        <span class="props-val">auto</span>
+      </div>
+    </div>
+
+    <div class="props-section">
+      <div class="props-label">⚠ Open Questions</div>
+      <div class="props-row">
+        <span class="props-key">Progress steps</span>
+        <span class="props-val highlight">undefined</span>
+      </div>
+      <div class="props-note">Step count shows 3 across all screens but may need to be dynamic based on asset selection.</div>
+      <div class="props-tag">⚠ Needs dev input</div>
+    </div>
+
+    <div class="props-section">
+      <div class="props-label">Marcus's Notes</div>
+      <div class="props-note">v1 prototype — covers sign-up → asset selection only. Save-and-return deliberately omitted pending sprint scoping.</div>
+    </div>
+
+    <div class="props-section">
+      <div class="props-label">Annotations</div>
+      <div class="props-row">
+        <span class="props-key" style="color:var(--pin-marcus)">● Marcus</span>
+        <span class="props-val">2</span>
+      </div>
+      <div class="props-row">
+        <span class="props-key" style="color:var(--pin-unresolved)">● Unresolved</span>
+        <span class="props-val">2</span>
+      </div>
+    </div>
+
+    <div class="props-section">
+      <div class="props-label">Sprint Scope</div>
+      <div class="props-note" style="color: #6ee7b7;">Sign-up → asset selection ✓</div>
+      <div class="props-note" style="color: #6ee7b7; margin-top:4px;">What you'll need checklist ✓</div>
+      <div class="props-note" style="color: var(--text-muted); margin-top:6px;">Save &amp; return — out of scope<br>Dashboard — out of scope</div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function scrollTo(id) {
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    document.querySelectorAll('.screen').forEach(s => s.classList.remove('selected'));
+    el.classList.add('selected');
+  }
+  document.querySelectorAll('.screen-tab').forEach((t, i) => {
+    t.classList.toggle('active', ['s1','s2','s3','s4'][i] === id);
+  });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ThinkWith — Junior SDE Simulation</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0d0d0f;
+    --surface: #16161a;
+    --surface2: #1e1e24;
+    --border: #2a2a32;
+    --text: #e8e6e0;
+    --muted: #6b6a72;
+    --accent: #f0c060;
+    --accent2: #60a8f0;
+    --danger: #f06060;
+    --success: #60c890;
+
+    --alex: #60a8f0;
+    --sarah: #c890f0;
+    --marcus: #f09060;
+    --group: #60c890;
+    --system: #f0c060;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'IBM Plex Mono', monospace;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  /* Top bar */
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 24px;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+    flex-shrink: 0;
+  }
+
+  .logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    color: var(--accent);
+  }
+
+  .logo span { color: var(--text); }
+
+  .scenario-title {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .stage-indicators {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .stage-dot {
+    width: 28px;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--border);
+    transition: background 0.3s;
+    cursor: default;
+  }
+
+  .stage-dot.active { background: var(--accent); }
+  .stage-dot.done { background: var(--success); }
+  .stage-dot[data-stage="0"] { background: var(--alex); opacity: 0.4; }
+  .stage-dot[data-stage="1"] { background: var(--sarah); opacity: 0.4; }
+  .stage-dot[data-stage="2"] { background: var(--marcus); opacity: 0.4; }
+  .stage-dot[data-stage="3"] { background: var(--group); opacity: 0.4; }
+  .stage-dot.active { opacity: 1 !important; }
+  .stage-dot.done { background: var(--success) !important; opacity: 1 !important; }
+
+  /* Main layout */
+  .main {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    width: 220px;
+    border-right: 1px solid var(--border);
+    background: var(--surface);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    overflow-y: auto;
+  }
+
+  .sidebar-section {
+    padding: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .sidebar-label {
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+
+  .stakeholder {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    margin-bottom: 4px;
+    cursor: default;
+    transition: background 0.2s;
+    opacity: 0.4;
+  }
+
+  .stakeholder.done-stakeholder {
+    cursor: pointer;
+  }
+
+  .stakeholder.done-stakeholder:hover {
+    background: var(--surface2);
+    opacity: 0.9;
+  }
+
+  .stakeholder.active-stakeholder { opacity: 1; background: var(--surface2); }
+  .stakeholder.done-stakeholder { opacity: 0.7; }
+
+  .stakeholder-avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 600;
+    font-family: 'Syne', sans-serif;
+    flex-shrink: 0;
+  }
+
+  .stakeholder-info { flex: 1; min-width: 0; }
+
+  .stakeholder-name {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text);
+    font-family: 'Syne', sans-serif;
+  }
+
+  .stakeholder-role {
+    font-size: 9px;
+    color: var(--muted);
+    margin-top: 1px;
+  }
+
+  .context-box {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 10px;
+    line-height: 1.7;
+    color: var(--muted);
+  }
+
+  .context-box strong {
+    color: var(--accent);
+    display: block;
+    margin-bottom: 6px;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* Chat area */
+  .chat-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .stage-header {
+    padding: 12px 20px;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface2);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+
+  .stage-badge {
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+  }
+
+  .stage-desc {
+    font-size: 11px;
+    color: var(--muted);
+  }
+
+  .messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    scroll-behavior: smooth;
+  }
+
+  .messages::-webkit-scrollbar { width: 4px; }
+  .messages::-webkit-scrollbar-track { background: transparent; }
+  .messages::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+  .message {
+    display: flex;
+    gap: 12px;
+    animation: fadeUp 0.3s ease forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .message.user-msg { flex-direction: row-reverse; }
+
+  .msg-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    font-family: 'Syne', sans-serif;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .msg-content { max-width: 72%; }
+
+  .msg-sender {
+    font-size: 10px;
+    color: var(--muted);
+    margin-bottom: 4px;
+    letter-spacing: 0.05em;
+  }
+
+  .user-msg .msg-sender { text-align: right; }
+
+  .msg-bubble {
+    padding: 12px 14px;
+    border-radius: 12px;
+    font-size: 12.5px;
+    line-height: 1.65;
+    border: 1px solid transparent;
+  }
+
+  .msg-bubble pre {
+    background: #0d0d0f;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 12px 14px;
+    margin: 10px 0;
+    overflow-x: auto;
+    font-size: 11.5px;
+    line-height: 1.6;
+    font-family: 'IBM Plex Mono', monospace;
+    color: #c9d1d9;
+    white-space: pre;
+  }
+
+  .msg-bubble code {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11.5px;
+    background: #0d0d0f;
+    padding: 2px 5px;
+    border-radius: 3px;
+    color: var(--accent);
+  }
+
+  .ai-bubble {
+    background: var(--surface2);
+    border-color: var(--border);
+    border-top-left-radius: 4px;
+  }
+
+  .user-bubble {
+    background: var(--surface);
+    border-color: var(--border);
+    border-top-right-radius: 4px;
+    text-align: left;
+  }
+
+  .system-bubble {
+    background: transparent;
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    color: var(--accent);
+    font-size: 11px;
+    padding: 10px 14px;
+    opacity: 0.8;
+  }
+
+  .typing-indicator {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    padding: 14px;
+  }
+
+  .typing-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--muted);
+    animation: typingBounce 1.2s infinite;
+  }
+
+  .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+  .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+  @keyframes typingBounce {
+    0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+    30% { transform: translateY(-4px); opacity: 1; }
+  }
+
+  /* Input area */
+  .input-area {
+    padding: 16px 20px;
+    border-top: 1px solid var(--border);
+    background: var(--surface);
+    flex-shrink: 0;
+  }
+
+  .input-row {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+  }
+
+  .input-box {
+    flex: 1;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 14px;
+    color: var(--text);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12.5px;
+    resize: none;
+    outline: none;
+    line-height: 1.5;
+    min-height: 44px;
+    max-height: 120px;
+    transition: border-color 0.2s;
+  }
+
+  .input-box:focus { border-color: var(--accent); }
+  .input-box::placeholder { color: var(--muted); }
+
+  .send-btn {
+    background: var(--accent);
+    color: var(--bg);
+    border: none;
+    border-radius: 10px;
+    padding: 12px 18px;
+    font-family: 'Syne', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.1s;
+    white-space: nowrap;
+    height: 44px;
+    letter-spacing: 0.05em;
+  }
+
+  .send-btn:hover { opacity: 0.85; }
+  .send-btn:active { transform: scale(0.97); }
+  .send-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+
+  .input-hint {
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 8px;
+    letter-spacing: 0.05em;
+  }
+
+  .next-stage-bar {
+    display: none;
+    padding: 10px 20px;
+    background: var(--surface2);
+    border-top: 1px solid var(--border);
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+
+  .next-stage-bar.visible { display: flex; }
+
+  .next-stage-hint {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+
+  .next-stage-hint em { color: var(--accent); font-style: normal; }
+
+  .next-stage-btn {
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-family: 'Syne', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 0.08em;
+    transition: background 0.2s, color 0.2s;
+    white-space: nowrap;
+  }
+
+  .next-stage-btn:hover { background: var(--accent); color: var(--bg); }
+
+  .finish-btn {
+    background: var(--success);
+    border: 1px solid var(--success);
+    color: var(--bg);
+  }
+
+  .finish-btn:hover { opacity: 0.85; background: var(--success); color: var(--bg); }
+
+  /* Feedback overlay */
+  .feedback-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(13,13,15,0.92);
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+
+  .feedback-overlay.visible { display: flex; }
+
+  .feedback-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+    max-width: 600px;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+    animation: fadeUp 0.4s ease forwards;
+  }
+
+  .feedback-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+
+  .feedback-subtitle {
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 24px;
+    letter-spacing: 0.05em;
+  }
+
+  .feedback-section {
+    margin-bottom: 20px;
+  }
+
+  .feedback-section-title {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+
+  .skill-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+
+  .skill-name {
+    font-size: 11px;
+    width: 160px;
+    flex-shrink: 0;
+    color: var(--text);
+  }
+
+  .skill-track {
+    flex: 1;
+    height: 6px;
+    background: var(--border);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .skill-fill {
+    height: 100%;
+    border-radius: 3px;
+    background: var(--accent);
+    width: 0%;
+    transition: width 1s ease 0.3s;
+  }
+
+  .skill-score {
+    font-size: 11px;
+    color: var(--accent);
+    width: 30px;
+    text-align: right;
+  }
+
+  .feedback-text {
+    font-size: 12px;
+    line-height: 1.75;
+    color: var(--muted);
+    background: var(--surface2);
+    border-radius: 8px;
+    padding: 14px;
+    border-left: 3px solid var(--accent);
+  }
+
+  .close-feedback {
+    margin-top: 24px;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    cursor: pointer;
+    transition: border-color 0.2s;
+    letter-spacing: 0.05em;
+  }
+
+  .close-feedback:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* Start screen */
+  .start-screen {
+    position: fixed;
+    inset: 0;
+    background: var(--bg);
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+
+  .start-card {
+    max-width: 560px;
+    width: 100%;
+  }
+
+  .start-tag {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+
+  .start-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    color: var(--text);
+  }
+
+  .start-title em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .start-desc {
+    font-size: 12.5px;
+    line-height: 1.75;
+    color: var(--muted);
+    margin-bottom: 28px;
+  }
+
+  .start-stages {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 28px;
+  }
+
+  .start-stage {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 11px;
+  }
+
+  .start-stage-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .start-stage-name { font-weight: 500; color: var(--text); width: 80px; }
+  .start-stage-desc { color: var(--muted); }
+
+  .start-btn {
+    background: var(--accent);
+    color: var(--bg);
+    border: none;
+    border-radius: 10px;
+    padding: 14px 28px;
+    font-family: 'Syne', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 0.05em;
+    transition: opacity 0.2s;
+  }
+
+  .start-btn:hover { opacity: 0.85; }
+</style>
+</head>
+<body>
+
+<!-- Start Screen -->
+<div class="start-screen" id="startScreen">
+  <div class="start-card">
+    <div class="start-tag">Junior SDE · Simulation #001</div>
+    <h1 class="start-title">From requirements<br>to a <em>real problem.</em></h1>
+    <p class="start-desc">You're a junior SDE starting a new feature. Walk through three realistic workplace conversations — gathering requirements, flagging a bug you found mid-build, and managing a timeline change with your project manager.</p>
+    <div class="start-stages">
+      <div class="start-stage">
+        <div class="start-stage-dot" style="background:var(--marcus)"></div>
+        <span class="start-stage-name">Marcus</span>
+        <span class="start-stage-desc">UX Designer — understand the design before you build</span>
+      </div>
+      <div class="start-stage">
+        <div class="start-stage-dot" style="background:var(--alex)"></div>
+        <span class="start-stage-name">Alex</span>
+        <span class="start-stage-desc">Tech Lead — flag a bug you found mid-sprint</span>
+      </div>
+      <div class="start-stage">
+        <div class="start-stage-dot" style="background:var(--sarah)"></div>
+        <span class="start-stage-name">Sarah</span>
+        <span class="start-stage-desc">Project Manager — explain the timeline change</span>
+      </div>
+    </div>
+    <button class="start-btn" onclick="startSimulation()">Begin Simulation →</button>
+  </div>
+</div>
+
+<!-- Top Bar -->
+<div class="topbar">
+  <div class="logo">Think<span>With</span></div>
+  <div class="scenario-title">Scenario 001 — "I Thought It Worked"</div>
+  <div class="stage-indicators">
+    <div class="stage-dot" data-stage="0" id="dot0"></div>
+    <div class="stage-dot" data-stage="1" id="dot1"></div>
+    <div class="stage-dot" data-stage="2" id="dot2"></div>
+  </div>
+</div>
+
+<!-- Main -->
+<div class="main">
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-label">Stakeholders</div>
+      <div class="stakeholder" id="sh-marcus" data-stage="0">
+        <div class="stakeholder-avatar" style="background:rgba(240,144,96,0.15);color:var(--marcus)">M</div>
+        <div class="stakeholder-info">
+          <div class="stakeholder-name">Marcus</div>
+          <div class="stakeholder-role">UX Designer</div>
+        </div>
+      </div>
+      <div class="stakeholder" id="sh-alex" data-stage="1">
+        <div class="stakeholder-avatar" style="background:rgba(96,168,240,0.15);color:var(--alex)">A</div>
+        <div class="stakeholder-info">
+          <div class="stakeholder-name">Alex</div>
+          <div class="stakeholder-role">Tech Lead</div>
+        </div>
+      </div>
+      <div class="stakeholder" id="sh-sarah" data-stage="2">
+        <div class="stakeholder-avatar" style="background:rgba(200,144,240,0.15);color:var(--sarah)">S</div>
+        <div class="stakeholder-info">
+          <div class="stakeholder-name">Sarah</div>
+          <div class="stakeholder-role">Project Manager</div>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-label">Your Context</div>
+      <div class="context-box">
+        <strong>Situation</strong>
+        You are a junior SDE, 3 months in. You've been assigned to build a new user onboarding form. Start by syncing with Marcus (UX) to understand the design, then work through what comes next.
+      </div>
+    </div>
+  </div>
+
+  <!-- Chat -->
+  <div class="chat-area">
+    <div class="stage-header" id="stageHeader">
+      <div class="stage-badge" id="stageBadge"></div>
+      <div class="stage-desc" id="stageDesc"></div>
+    </div>
+    <div class="messages" id="messages"></div>
+    <div class="next-stage-bar" id="nextStageBar">
+      <div class="next-stage-hint" id="nextStageHint"></div>
+      <button class="next-stage-btn" id="nextStageBtn" onclick="advanceStage()"></button>
+    </div>
+    <div class="input-area">
+      <div class="input-row">
+        <textarea class="input-box" id="inputBox" placeholder="Type your response..." rows="1" onkeydown="handleKey(event)" oninput="autoResize(this)"></textarea>
+        <button class="send-btn" id="sendBtn" onclick="sendMessage()">Send →</button>
+      </div>
+      <div class="input-hint">This is a simulation. Respond as you would in a real workplace.</div>
+    </div>
+  </div>
+</div>
+
+<!-- Feedback Overlay -->
+<div class="feedback-overlay" id="feedbackOverlay">
+  <div class="feedback-card">
+    <div class="feedback-title">Simulation Complete</div>
+    <div class="feedback-subtitle">Higher-order thinking assessment · Scenario 001</div>
+    <div class="feedback-section">
+      <div class="feedback-section-title">Skills Evaluated</div>
+      <div class="skill-bar">
+        <span class="skill-name">Analytical Thinking</span>
+        <div class="skill-track"><div class="skill-fill" id="bar0"></div></div>
+        <span class="skill-score" id="score0">—</span>
+      </div>
+      <div class="skill-bar">
+        <span class="skill-name">Communication</span>
+        <div class="skill-track"><div class="skill-fill" id="bar1"></div></div>
+        <span class="skill-score" id="score1">—</span>
+      </div>
+      <div class="skill-bar">
+        <span class="skill-name">Ownership & Judgment</span>
+        <div class="skill-track"><div class="skill-fill" id="bar2"></div></div>
+        <span class="skill-score" id="score2">—</span>
+      </div>
+      <div class="skill-bar">
+        <span class="skill-name">Adaptability</span>
+        <div class="skill-track"><div class="skill-fill" id="bar3"></div></div>
+        <span class="skill-score" id="score3">—</span>
+      </div>
+    </div>
+    <div class="feedback-section">
+      <div class="feedback-section-title">Overall Feedback</div>
+      <div class="feedback-text" id="feedbackText">Generating your feedback...</div>
+    </div>
+    <button class="close-feedback" onclick="closeFeedback()">Close & Review Conversation</button>
+  </div>
+</div>
+
+<script>
+const STAGES = [
+  {
+    id: 'marcus',
+    name: 'Marcus',
+    role: 'UX Designer',
+    color: 'var(--marcus)',
+    badge: 'Stage 1 — Requirements',
+    desc: 'Marcus is walking you through the onboarding form designs — ask the right questions',
+    avatar: 'M',
+    systemPrompt: `You are Marcus, a friendly and thoughtful UX designer at a mid-size tech company. You've just finished designing a new user onboarding form and you're meeting with a junior SDE (the user) to hand off the designs before they start building.
+
+Your tone is warm, collaborative, and a little excited about the design — you put real thought into it. You're not testing them, you're just sharing your work. But you do care deeply about inclusivity: the form needs to work for international users with names containing accented or non-Latin characters (like José, Müller, or 张伟), and you've noted this in your designs.
+
+Start the conversation naturally — something like "Hey! Glad we could sync before you dive in. I wanted to walk you through the onboarding form designs, there are a few things I want to make sure translate well into the build." 
+
+Keep messages conversational, 2-3 sentences. You're not grilling them — you're collaborating. If they ask good clarifying questions about edge cases (especially international names), respond warmly and with detail. If they seem to skim over important details, gently nudge them back without being condescending.
+
+After 3-4 exchanges, wrap up naturally — something like "This is super helpful, I feel good about this handoff. Ping me if anything comes up during the build!"
+
+Silently assess: Does the student ask thoughtful clarifying questions? Do they probe edge cases proactively? Do they show they understand the user intent behind the design decisions?`
+  },
+  {
+    id: 'alex',
+    name: 'Alex',
+    role: 'Tech Lead',
+    color: 'var(--alex)',
+    badge: 'Stage 2 — Bug Report',
+    desc: "You've spotted a potential bug mid-build — flag it to Alex before it becomes a problem",
+    avatar: 'A',
+    systemPrompt: `You are Alex, a calm and experienced tech lead at a mid-size tech company. You were doing a routine review of a junior SDE's (the user) pull request for the new user onboarding form. During the review, you noticed the form validation logic rejects non-ASCII characters — names like José, Müller, or 张伟 would fail validation and those users couldn't complete onboarding. You suspect the validation logic was AI-generated and wasn't fully checked for edge cases. The feature is due end of sprint in 3 days.
+
+You're not upset — bugs in early PRs are normal. Your tone is calm, collegial, and mentor-like. You're bringing this up so you can fix it together, not to make them feel bad. You want to understand: do they get why this is happening, do they have a sense of how to fix it, and are they thinking about the timeline implications?
+
+Open naturally as if pinging them on Slack. Start with something like "Hey, I was just going through your PR for the onboarding form — got a few minutes to chat? I spotted something." Then share the following code block as part of your message, exactly as written, and point out that this is the validation logic you flagged:
+
+---
+function validateName(name) {
+  const nameRegex = /^[a-zA-Z\s\-']+$/;
+  if (!nameRegex.test(name)) {
+    return { valid: false, error: "Name contains invalid characters." };
+  }
+  return { valid: true };
+}
+---
+
+After sharing the code, casually point out the issue — the regex only allows ASCII letters, spaces, hyphens, and apostrophes, which means names like José, Müller, or 张伟 would fail. Ask them if they can see where the problem is and what they think might be the fix.
+
+Keep messages 2-3 sentences, warm and conversational. Use phrases like "yeah totally", "makes sense", "good thinking". After 3-4 exchanges, wrap up with something like "Cool, sounds like you've got a plan — let me know if you need a hand, and flag me if it looks like it'll affect the timeline."
+
+Silently assess: Does the student understand the root cause? Do they take ownership rather than deflecting? Do they think proactively about the fix and timeline impact?`
+  },
+  {
+    id: 'sarah',
+    name: 'Sarah',
+    role: 'Project Manager',
+    color: 'var(--sarah)',
+    badge: 'Stage 3 — Timeline',
+    desc: "The fix will take extra time — Sarah needs to know what's changing and why",
+    avatar: 'S',
+    systemPrompt: `You are Sarah, a friendly but busy project manager at a mid-size tech company. A junior SDE (the user) is reaching out to let you know that a validation bug they found mid-sprint will need extra time to fix, which may push the delivery of the onboarding form feature by 1-2 days. Marketing is waiting on this feature to launch a campaign.
+
+Your tone is professional but warm — you're not angry, you understand things come up. But you do need clarity: what happened, how long will it take, and is there anything that can be done to minimize the delay? You don't want technical details — you want a clear, plain-language picture of the situation.
+
+Start with something low-key like "Hey! Alex mentioned you had an update on the onboarding feature?" or "Oh hey — I was actually about to ping you about the timeline, what's going on?"
+
+Keep messages 2-3 sentences. If they use technical jargon, ask them to explain in plain terms — not with frustration, more like "sorry, can you say that in non-code language? 😅". After 3-4 exchanges, wrap up warmly once you have a clear answer.
+
+Silently assess: Can the student explain a technical delay in plain, empathetic language? Do they take ownership without over-apologizing? Do they give Sarah what she needs to communicate upward — a clear timeline and a reason?`
+  }
+];
+
+let currentStage = 0;
+let conversationHistory = [];
+let allAssessments = [];
+let isLoading = false;
+let stageMessageCount = 0;
+let savedMessages = {};   // stores DOM innerHTML per stage
+let simulationComplete = false;
+
+const OPENAI_SYSTEM_BASE = `You are running a workplace simulation for a student practicing higher-order thinking and communication skills. Stay in character at all times. The scenario: a junior SDE is building a new user onboarding form — starting from a UX handoff, discovering a validation bug mid-sprint, and managing a timeline change with the project manager.`;
+
+// ── API Configuration ──────────────────────────────────────────────
+// All API calls go through the local server proxy (/api/chat).
+// The API key lives in .env on the server — never exposed to the browser.
+async function callLLM({ system, messages, maxTokens = 1000 }) {
+  const res = await fetch('/api/chat', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ system, messages, maxTokens })
+  });
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.error || 'Server error');
+  return data.text;
+}
+// ──────────────────────────────────────────────────────────────────
+
+function startSimulation() {
+  document.getElementById('startScreen').style.display = 'none';
+  loadStage(0);
+}
+
+function loadStage(stageIndex) {
+  currentStage = stageIndex;
+  stageMessageCount = 0;
+  conversationHistory = [];
+
+  // Update dots
+  for (let i = 0; i < 3; i++) {
+    const dot = document.getElementById(`dot${i}`);
+    dot.className = 'stage-dot';
+    dot.setAttribute('data-stage', i);
+    if (i < stageIndex) dot.classList.add('done');
+    else if (i === stageIndex) dot.classList.add('active');
+  }
+
+  // Update stakeholders
+  ['marcus','alex','sarah'].forEach((id, i) => {
+    const el = document.getElementById(`sh-${id}`);
+    el.className = 'stakeholder';
+    if (i < stageIndex) el.classList.add('done-stakeholder');
+    else if (i === stageIndex) el.classList.add('active-stakeholder');
+  });
+
+  const stage = STAGES[stageIndex];
+
+  // Update header
+  const badge = document.getElementById('stageBadge');
+  badge.textContent = stage.badge;
+  badge.style.background = `${stage.color}22`;
+  badge.style.color = stage.color;
+  badge.style.border = `1px solid ${stage.color}44`;
+  document.getElementById('stageDesc').textContent = stage.desc;
+
+  // Hide next stage bar
+  document.getElementById('nextStageBar').classList.remove('visible');
+
+  const messages = document.getElementById('messages');
+
+  // If simulation complete and revisiting a past stage, restore saved messages (read-only)
+  if (simulationComplete && savedMessages[stageIndex] !== undefined) {
+    messages.innerHTML = savedMessages[stageIndex];
+    messages.scrollTop = messages.scrollHeight;
+    setReadOnly(true);
+    addSystemMessage('📖 Reviewing past conversation — read only');
+    return;
+  }
+
+  // Clear messages for a fresh stage
+  messages.innerHTML = '';
+  setReadOnly(false);
+
+  // Add system context message
+  addSystemMessage(`Starting conversation with ${stage.name} (${stage.role})`);
+
+  // Get opening message from AI
+  getAIOpener(stage);
+}
+
+function addSystemMessage(text) {
+  const messages = document.getElementById('messages');
+  const div = document.createElement('div');
+  div.innerHTML = `<div style="display:flex;justify-content:center;margin:4px 0">
+    <div class="system-bubble">${text}</div>
+  </div>`;
+  messages.appendChild(div);
+  messages.scrollTop = messages.scrollHeight;
+}
+
+function addMessage(sender, text, color, avatarLetter, isUser = false) {
+  const messages = document.getElementById('messages');
+  const div = document.createElement('div');
+  div.className = `message ${isUser ? 'user-msg' : ''}`;
+
+  const avatarBg = isUser ? 'rgba(240,192,96,0.15)' : `${color}22`;
+  const avatarColor = isUser ? 'var(--accent)' : color;
+  const bubbleClass = isUser ? 'user-bubble' : 'ai-bubble';
+  const senderLabel = isUser ? 'You' : sender;
+
+  const rendered = text
+    .replace(/---\n([\s\S]*?)\n---/g, (_, code) => `<pre>${code.replace(/</g,'&lt;').replace(/>/g,'&gt;')}</pre>`)
+    .replace(/`([^`]+)`/g, '<code>$1</code>')
+    .replace(/\n/g, '<br>');
+
+  div.innerHTML = `
+    <div class="msg-avatar" style="background:${avatarBg};color:${avatarColor}">${isUser ? 'Y' : avatarLetter}</div>
+    <div class="msg-content">
+      <div class="msg-sender">${senderLabel}</div>
+      <div class="msg-bubble ${bubbleClass}">${rendered}</div>
+    </div>`;
+
+  messages.appendChild(div);
+  messages.scrollTop = messages.scrollHeight;
+}
+
+function showTyping(color) {
+  const messages = document.getElementById('messages');
+  const div = document.createElement('div');
+  div.className = 'message';
+  div.id = 'typingIndicator';
+  div.innerHTML = `
+    <div class="msg-avatar" style="background:${color}22;color:${color}">${STAGES[currentStage].avatar}</div>
+    <div class="msg-content">
+      <div class="msg-sender">${STAGES[currentStage].name}</div>
+      <div class="msg-bubble ai-bubble">
+        <div class="typing-indicator">
+          <div class="typing-dot"></div>
+          <div class="typing-dot"></div>
+          <div class="typing-dot"></div>
+        </div>
+      </div>
+    </div>`;
+  messages.appendChild(div);
+  messages.scrollTop = messages.scrollHeight;
+}
+
+function removeTyping() {
+  const t = document.getElementById('typingIndicator');
+  if (t) t.remove();
+}
+
+async function getAIOpener(stage) {
+  setLoading(true);
+  showTyping(stage.color);
+
+  try {
+    const text = await callLLM({
+      system: stage.systemPrompt,
+      messages: [{ role: 'user', content: '[Start the conversation with your opening message.]' }]
+    });
+
+    removeTyping();
+    addMessage(stage.name, text, stage.color, stage.avatar);
+    conversationHistory.push({ role: 'assistant', content: text });
+
+  } catch (e) {
+    removeTyping();
+    const fallbacks = [
+      "Hey, QA flagged the validation logic. Walk me through what happened — did you test for edge cases?",
+      "I just heard there's an issue with the onboarding feature. Marketing is asking me if we're still on track. What do I tell them?",
+      "So the validation breaks for international names? That's exactly what we were trying to avoid. Was this a handoff issue or implementation?",
+      "Alex asked for a sprint update in #sprint-updates. Go ahead and post your message — Alex, Sarah, and Marcus are all reading."
+    ];
+    const text = fallbacks[currentStage];
+    addMessage(stage.name, text, stage.color, stage.avatar);
+    conversationHistory.push({ role: 'assistant', content: text });
+  }
+
+  setLoading(false);
+}
+
+async function sendMessage() {
+  const input = document.getElementById('inputBox');
+  const text = input.value.trim();
+  if (!text || isLoading) return;
+
+  const stage = STAGES[currentStage];
+  input.value = '';
+  input.style.height = 'auto';
+  stageMessageCount++;
+
+  addMessage('You', text, 'var(--accent)', 'Y', true);
+  conversationHistory.push({ role: 'user', content: text });
+
+  setLoading(true);
+  showTyping(stage.color);
+
+  // Keep last 3 turns (6 messages)
+  const recentHistory = conversationHistory.slice(-6);
+
+  try {
+    const isLastExchange = stageMessageCount >= 3;
+    const systemPrompt = stage.systemPrompt + (isLastExchange ? ' After this message, naturally signal the conversation is wrapping up. Do not force-end abruptly.' : '');
+
+    const reply = await callLLM({ system: systemPrompt, messages: recentHistory });
+
+    removeTyping();
+    addMessage(stage.name, reply, stage.color, stage.avatar);
+    conversationHistory.push({ role: 'assistant', content: reply });
+
+    // Store silent assessment
+    allAssessments.push({ stage: stage.name, userMessage: text, aiReply: reply });
+
+    // After first exchange, show the next stage button
+    if (stageMessageCount >= 1) showNextStageBar();
+
+    // After 3 exchanges update hint text
+    if (stageMessageCount >= 3) {
+      const hint = document.getElementById('nextStageHint');
+      hint.innerHTML = '<em>Conversation is wrapping up.</em> Continue or move to the next stage when ready.';
+    }
+
+  } catch (e) {
+    removeTyping();
+    addMessage(stage.name, "Let's continue this after the review.", stage.color, stage.avatar);
+    if (stageMessageCount >= 1) showNextStageBar();
+  }
+
+  setLoading(false);
+}
+
+function showNextStageBar() {
+  const bar = document.getElementById('nextStageBar');
+  const btn = document.getElementById('nextStageBtn');
+  const hint = document.getElementById('nextStageHint');
+  bar.classList.add('visible');
+  if (currentStage < 2) {
+    btn.textContent = 'Next Stage →';
+    btn.className = 'next-stage-btn';
+    if (!hint.innerHTML.includes('wrapping')) hint.textContent = 'Feel free to keep the conversation going, or move on when ready.';
+  } else {
+    btn.textContent = 'Finish & See Feedback';
+    btn.className = 'next-stage-btn finish-btn';
+    hint.innerHTML = 'All stages reached. <em>Finish when you are ready.</em>';
+  }
+}
+
+function advanceStage() {
+  // Save current stage messages before leaving
+  savedMessages[currentStage] = document.getElementById('messages').innerHTML;
+  if (currentStage < 2) {
+    loadStage(currentStage + 1);
+  } else {
+    // Save last stage then show feedback
+    simulationComplete = true;
+    generateFeedback();
+  }
+}
+
+async function generateFeedback() {
+  simulationComplete = true;
+  // Save current stage messages if not already saved
+  if (savedMessages[currentStage] === undefined) {
+    savedMessages[currentStage] = document.getElementById('messages').innerHTML;
+  }
+  // Make all sidebar stakeholders clickable for review
+  ['marcus','alex','sarah'].forEach((id, i) => {
+    const el = document.getElementById(`sh-${id}`);
+    el.classList.add('done-stakeholder');
+    el.style.cursor = 'pointer';
+    el.onclick = () => reviewStage(i);
+  });
+  document.getElementById('feedbackOverlay').classList.add('visible');
+
+  const conversationSummary = allAssessments.map(a =>
+    `[${a.stage}] Student said: "${a.userMessage}"`
+  ).join('\n');
+
+  try {
+    const raw = await callLLM({
+      system: `You are an expert evaluator of higher-order thinking and communication skills, based on Bloom's Taxonomy. Evaluate a student's performance across a workplace simulation. Return ONLY a JSON object with this exact structure: {"analytical": 72, "communication": 68, "ownership": 80, "adaptability": 65, "feedback": "2-3 sentence overall feedback focusing on what was strong and one key area to improve"}. Scores are out of 100. Be honest and constructive.`,
+      messages: [{
+        role: 'user',
+        content: `Here are the student's responses across 4 stages of a workplace simulation:\n\n${conversationSummary}\n\nEvaluate their higher-order thinking and communication skills.`
+      }]
+    });
+    const clean = raw.replace(/```json|```/g, '').trim();
+    const scores = JSON.parse(clean);
+
+    const bars = ['analytical', 'communication', 'ownership', 'adaptability'];
+    bars.forEach((key, i) => {
+      const val = scores[key] || 70;
+      setTimeout(() => {
+        document.getElementById(`bar${i}`).style.width = val + '%';
+        document.getElementById(`score${i}`).textContent = val;
+      }, 200 * i);
+    });
+
+    document.getElementById('feedbackText').textContent = scores.feedback || 'You demonstrated solid communication across stakeholders. Focus on deepening your technical ownership narrative.';
+
+  } catch (e) {
+    document.getElementById('feedbackText').textContent = 'You navigated four distinct stakeholder conversations under pressure. Your ability to adapt your communication style across technical and non-technical audiences is a strong foundation to build on.';
+    [72, 68, 75, 70].forEach((v, i) => {
+      setTimeout(() => {
+        document.getElementById(`bar${i}`).style.width = v + '%';
+        document.getElementById(`score${i}`).textContent = v;
+      }, 200 * i);
+    });
+  }
+}
+
+function reviewStage(stageIndex) {
+  document.getElementById('feedbackOverlay').classList.remove('visible');
+  currentStage = stageIndex;
+
+  // Update dots and sidebar
+  for (let i = 0; i < 3; i++) {
+    const dot = document.getElementById(`dot${i}`);
+    dot.className = 'stage-dot done';
+    dot.setAttribute('data-stage', i);
+    if (i === stageIndex) dot.classList.add('active');
+  }
+
+  ['marcus','alex','sarah'].forEach((id, i) => {
+    const el = document.getElementById(`sh-${id}`);
+    el.className = 'stakeholder done-stakeholder';
+    el.style.cursor = 'pointer';
+    el.onclick = () => reviewStage(i);
+    if (i === stageIndex) el.classList.add('active-stakeholder');
+  });
+
+  const stage = STAGES[stageIndex];
+  const badge = document.getElementById('stageBadge');
+  badge.textContent = stage.badge + ' · Review';
+  badge.style.background = `${stage.color}22`;
+  badge.style.color = stage.color;
+  badge.style.border = `1px solid ${stage.color}44`;
+  document.getElementById('stageDesc').textContent = stage.desc;
+
+  const messages = document.getElementById('messages');
+  messages.innerHTML = savedMessages[stageIndex] || '';
+  messages.scrollTop = messages.scrollHeight;
+  setReadOnly(true);
+
+  // Show feedback button instead of next stage
+  const bar = document.getElementById('nextStageBar');
+  const btn = document.getElementById('nextStageBtn');
+  const hint = document.getElementById('nextStageHint');
+  bar.classList.add('visible');
+  btn.textContent = 'View Feedback';
+  btn.className = 'next-stage-btn finish-btn';
+  btn.onclick = () => document.getElementById('feedbackOverlay').classList.add('visible');
+  hint.innerHTML = '📖 <em>Read-only review mode.</em> Click any name in the sidebar to switch stages.';
+}
+
+function setReadOnly(val) {
+  document.getElementById('inputBox').disabled = val;
+  document.getElementById('sendBtn').disabled = val;
+  document.getElementById('inputBox').placeholder = val ? 'Read-only — simulation complete' : 'Type your response...';
+}
+
+function closeFeedback() {
+  document.getElementById('feedbackOverlay').classList.remove('visible');
+  // If simulation complete, enter review mode for last stage
+  if (simulationComplete) {
+    reviewStage(currentStage);
+  }
+}
+
+function setLoading(val) {
+  isLoading = val;
+  document.getElementById('sendBtn').disabled = val;
+  document.getElementById('inputBox').disabled = val;
+}
+
+function handleKey(e) {
+  if (e.key === 'Enter' && !e.shiftKey) {
+    e.preventDefault();
+    sendMessage();
+  }
+}
+
+function autoResize(el) {
+  el.style.height = 'auto';
+  el.style.height = Math.min(el.scrollHeight, 120) + 'px';
+}
+</script>
+</body>
+</html>

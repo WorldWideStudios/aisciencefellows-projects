@@ -1,0 +1,11 @@
+{
+  "taskId": "chat-simulation",
+  "taskType": "chat-simulation",
+  "title": "You are a Junior Software Engineer at Vela",
+  "description": "You will have three conversations with different team members to design a new customer onboarding form for Vela, an IT asset management company. You will practice different aspects of workplace communication and higher-order thinking in each conversation.\n\nRespond naturally, as you would in a real workplace.",
+  "numTrials": 3,
+  "parameters": {},
+  "modelType": "none",
+  "instructions": "You will have three conversations with different team members to design a new customer onboarding form for Vela, an IT asset management company. You will practice different aspects of workplace communication and higher-order thinking in each conversation.\n\nRespond naturally, as you would in a real workplace.",
+  "debrief": "This simulation assessed your higher-order thinking and communication skills across three workplace contexts: requirements gathering, bug discussion, and timeline management.\n\nThe assessment uses Bloom's Taxonomy to evaluate analytical thinking, communication clarity, ownership, and adaptability."
+}

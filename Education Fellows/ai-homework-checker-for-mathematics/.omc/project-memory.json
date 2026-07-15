@@ -1,0 +1,204 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1783443223005,
+  "projectRoot": "/Volumes/JJ 4TB SSD/Coding Projects/ai-homework-checker-for-mathematics",
+  "techStack": {
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "package.json"
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "tsconfig.json"
+        ]
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "express",
+        "version": "4.21.2",
+        "category": "backend"
+      },
+      {
+        "name": "react",
+        "version": "19.0.0",
+        "category": "frontend"
+      },
+      {
+        "name": "react-dom",
+        "version": "19.0.0",
+        "category": "frontend"
+      },
+      {
+        "name": "vite",
+        "version": "6.2.0",
+        "category": "build"
+      }
+    ],
+    "packageManager": "npm",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": "npm run build",
+    "testCommand": null,
+    "lintCommand": "npm run lint",
+    "devCommand": "npm run dev",
+    "scripts": {
+      "dev": "tsx server.ts",
+      "build": "vite build",
+      "preview": "vite preview",
+      "clean": "rm -rf dist",
+      "lint": "tsc --noEmit",
+      "start": "node server.ts"
+    }
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": "type-based"
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "src"
+    ],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "api": {
+      "path": "api",
+      "purpose": "API routes",
+      "fileCount": 4,
+      "lastAccessed": 1783443222908,
+      "keyFiles": [
+        "analyze.ts",
+        "health.ts",
+        "send-email.ts",
+        "translate-analysis.ts"
+      ]
+    },
+    "dist": {
+      "path": "dist",
+      "purpose": "Distribution/build output",
+      "fileCount": 1,
+      "lastAccessed": 1783443222909,
+      "keyFiles": [
+        "index.html"
+      ]
+    },
+    "src": {
+      "path": "src",
+      "purpose": "Source code",
+      "fileCount": 6,
+      "lastAccessed": 1783443222953,
+      "keyFiles": [
+        "App.tsx",
+        "ThemeContext.tsx",
+        "index.css",
+        "main.tsx",
+        "vite-env.d.ts"
+      ]
+    },
+    "dist/assets": {
+      "path": "dist/assets",
+      "purpose": "Static assets",
+      "fileCount": 3,
+      "lastAccessed": 1783443222957,
+      "keyFiles": [
+        "index-BC4Kcj6E.css",
+        "index-TVv8ue0r.js",
+        "pdf.worker.min-B_fnEKel.mjs"
+      ]
+    },
+    "src/components": {
+      "path": "src/components",
+      "purpose": "UI components",
+      "fileCount": 2,
+      "lastAccessed": 1783443222981,
+      "keyFiles": [
+        "FileUpload.tsx",
+        "ThemeToggle.tsx"
+      ]
+    },
+    "src/services": {
+      "path": "src/services",
+      "purpose": "Business logic services",
+      "fileCount": 1,
+      "lastAccessed": 1783443222989,
+      "keyFiles": [
+        "geminiService.ts"
+      ]
+    },
+    "src/types": {
+      "path": "src/types",
+      "purpose": "Type definitions",
+      "fileCount": 1,
+      "lastAccessed": 1783443222991,
+      "keyFiles": [
+        "analysis.ts"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "src/App.tsx",
+      "accessCount": 14,
+      "lastAccessed": 1783443636752,
+      "type": "file"
+    },
+    {
+      "path": "server.ts",
+      "accessCount": 7,
+      "lastAccessed": 1783443703726,
+      "type": "file"
+    },
+    {
+      "path": "api/analyze.ts",
+      "accessCount": 5,
+      "lastAccessed": 1783443532810,
+      "type": "file"
+    },
+    {
+      "path": "src/services/geminiService.ts",
+      "accessCount": 3,
+      "lastAccessed": 1783443549915,
+      "type": "file"
+    },
+    {
+      "path": "api/translate-analysis.ts",
+      "accessCount": 2,
+      "lastAccessed": 1783443520530,
+      "type": "file"
+    },
+    {
+      "path": "README.md",
+      "accessCount": 2,
+      "lastAccessed": 1783443743577,
+      "type": "file"
+    },
+    {
+      "path": "api/send-email.ts",
+      "accessCount": 1,
+      "lastAccessed": 1783443307236,
+      "type": "file"
+    },
+    {
+      "path": "vite.config.ts",
+      "accessCount": 1,
+      "lastAccessed": 1783443308423,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

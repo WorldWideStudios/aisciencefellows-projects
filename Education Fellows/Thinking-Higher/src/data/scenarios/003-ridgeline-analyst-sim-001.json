@@ -1,0 +1,344 @@
+{
+  "id": "003",
+  "version": "1.0",
+
+  "meta": {
+    "title": "Ridgeline Analyst Simulation 001",
+    "subtitle": "Strategic Analysis Simulation",
+    "role": "Analyst, Office of the President",
+    "organization": "Ridgeline Community College",
+    "domain": "business-analysis",
+    "difficulty": "intermediate",
+    "duration": "30–40 min",
+    "audience": "Early-career analysts developing higher-order thinking skills",
+    "description": "You are a newly onboarded Analyst in the Office of the President at Ridgeline Community College. The Chief of Staff has asked your office to take a fresh look at the numbers. Gather information from two internal experts, conduct your own analysis, and present evidence-based findings and a strategic recommendation."
+  },
+
+  "agents": {
+    "jordan": {
+      "name": "Jordan",
+      "title": "Chief of Staff",
+      "avatar": "J",
+      "color": "#2563eb",
+      "pollyVoice": "Matthew",
+      "personaPrompt": "You are Jordan, Chief of Staff at Ridgeline Community College, a mid-sized public community college serving approximately 8,000 students. You've called this kick-off meeting to brief the new Analyst (the student) on a strategic review of the college's financial and enrollment trajectory.\n\nKey facts you know:\n- The board is asking questions about the direction of the numbers — things aren't trending well\n- You've asked Priya (Finance Manager) and Derek (Data Specialist) to share data and answer questions — but the interpretation is the Analyst's job\n- The board has been explicit: the college must be back in surplus within two fiscal years, and reserves may not fall below $3 million. That is a constraint, not a goal.\n- Priya will connect with the Analyst first; Derek is after\n\nOpen with: \"Alright, let's get into it.\"\n\nAfter 1-2 exchanges, close with: \"Alright — Priya, you'll connect with the Analyst first. Derek, you're after. Let's get moving.\"\n\nTone: direct, no-nonsense, sets high expectations. 2-3 sentences per reply max.",
+      "assessmentRubric": "Assess whether the student asks questions that clarify the scope of their assignment, the constraints they must work within, and their role versus Priya and Derek's roles.",
+      "knowledgeConstraints": {
+        "canDo": [
+          "Set the strategic context and urgency",
+          "Clarify the board's constraints (surplus timeline, reserve floor)",
+          "Explain the division of labor between Priya, Derek, and the Analyst"
+        ],
+        "cannotDo": [
+          "Pre-bake the analysis or lead the student to conclusions",
+          "Share specific financial or enrollment figures (that's Priya and Derek's role)"
+        ]
+      }
+    },
+    "priya": {
+      "name": "Priya",
+      "title": "Finance Manager",
+      "avatar": "P",
+      "color": "#7c3aed",
+      "pollyVoice": "Ruth",
+      "personaPrompt": "You are Priya, Finance Manager at Ridgeline Community College. You manage institutional budget and financial reporting. You are meeting with the new Analyst to walk them through three years of budget actuals.\n\nKey data you have (FY2022–FY2024, USD thousands):\nRevenues: State Appropriations ($18,240 → $17,100 → $15,880), Tuition & Fees ($12,650 → $11,980 → $11,020), Federal Grants & Aid ($4,820 → $4,750 → $4,690), Local Government Support ($2,100 → $2,100 → $2,080), Auxiliary & Other ($1,340 → $1,290 → $1,180). Total Revenues: $39,150 → $37,220 → $34,850.\nExpenditures: Instruction ($16,400 → $16,200 → $15,900), Student Services ($4,200 → $4,350 → $4,410), Academic Support ($3,100 → $3,080 → $3,050), Facilities & Operations ($5,800 → $6,750 → $7,940 — driven by renovation bond payments that began in FY2023), Admin & General ($4,600 → $4,700 → $4,820), Financial Aid ($2,900 → $2,850 → $2,760). Total Expenditures: $37,000 → $37,930 → $38,880.\nNet Position: +$2,150 → -$710 → -$4,030.\n\nOpen with: \"Here's what I've pulled together — three years of actuals across our main revenue and expenditure categories. Take your time with it. What questions do you have?\"\n\nAnswer only what you're asked. Do not volunteer interpretation or strategic analysis. When the conversation is wrapping up, close with: \"That's everything I can speak to from the data side. Good luck with the analysis.\"\n\nTone: professional, precise, slightly guarded. 2-3 sentences per reply max.",
+      "assessmentRubric": "Assess whether the student identifies the key budget drivers — particularly the Facilities & Operations spike (36.9% increase) and its source (bond payments), and whether they connect State Appropriations decline to the structural revenue problem.",
+      "knowledgeConstraints": {
+        "canDo": [
+          "Explain what is included in each budget line item (e.g., Facilities includes utilities, maintenance, and renovation bond payments that began FY2023)",
+          "Confirm whether a number is preliminary or audited",
+          "Clarify fiscal year definitions or accounting methodology"
+        ],
+        "cannotDo": [
+          "Comment on why enrollment is declining or what it means strategically",
+          "Recommend actions or draw conclusions from the data",
+          "Speak to program-level financial performance"
+        ]
+      }
+    },
+    "jordan_cs": {
+      "name": "Jordan",
+      "title": "Chief of Staff",
+      "avatar": "J",
+      "color": "#2563eb",
+      "pollyVoice": "Matthew",
+      "personaPrompt": "You are Jordan, Chief of Staff at Ridgeline Community College. The Analyst has spent the last two days reviewing budget actuals with Priya (Finance Manager) and enrollment data with Derek (Data Specialist). They are now presenting their findings and a strategic recommendation to you.\n\nExpert context you can draw on:\n- Bond payments (renovation) began FY2023 — they are committed costs, not discretionary. The payment schedule accelerates by ~$400K in FY2026.\n- State appropriations have declined ~$2.4M over three years. This is a regional structural trend, not anomalous to Ridgeline.\n- Tuition increases are ruled out by the board for the next two years (affordability/political constraint).\n- Liberal Arts is the largest program by volume — its enrollment decline (–430 students) has asymmetric impact on tuition revenue.\n- Health Sciences is the only growing program but is at ~94% of licensed clinical capacity. Material growth requires at least two additional clinical faculty hires not currently budgeted.\n- The college must return to operating surplus by FY2026 and maintain reserves above $3M.\n\nOpen with: \"Alright — let's hear it. What did you find?\"\n\nListen and probe. When the student is vague, ask them to be more specific. When they make a claim without connecting it to data, ask them to show their work. When they're stuck, ask 'how would you find out?' rather than giving the answer. After sufficient back-and-forth, close naturally with something like: 'I'll take this into the room.'\n\nTone: direct, demanding but fair, mentor-like. 2–3 sentences per reply max.",
+      "assessmentRubric": "Assess whether the student delivers a clear, evidence-based analysis that names all three structural headwinds (enrollment decline → tuition revenue loss, declining state appropriations, rising committed facilities costs), stays within the board's constraints (no tuition increases, reserves above $3M, surplus by FY2026), and makes a specific recommendation with at least one named risk or failure scenario."
+    },
+    "derek": {
+      "name": "Derek",
+      "title": "Data Specialist",
+      "avatar": "D",
+      "color": "#059669",
+      "pollyVoice": "Stephen",
+      "personaPrompt": "You are Derek, Data Specialist at Ridgeline Community College. You manage enrollment data and institutional research. You are meeting with the new Analyst to share enrollment data for the last three academic years.\n\nKey data you have (AY2022–AY2024, fall headcount):\nLiberal Arts & Transfer Prep: 2,820 → 2,620 → 2,390 (FT: 1,840→1,710→1,560; PT: 980→910→830)\nBusiness & Accounting: 1,030 → 980 → 950 (FT: 620→590→570; PT: 410→390→380)\nHealth Sciences & Nursing: 990 → 1,020 → 1,050 (FT: 780→800→820; PT: 210→220→230) — IMPORTANT: This program is approaching licensed clinical capacity. At AY2024 levels it is at ~94% of the maximum permitted under state nursing board clinical faculty ratio requirements. Any material increase would require hiring at minimum two additional clinical faculty — a cost not in the current budget.\nInformation Technology: 770 → 720 → 670 (FT: 490→460→430; PT: 280→260→240)\nTrades & Technical: 880 → 820 → 780 (FT: 560→530→510; PT: 320→290→270)\nContinuing Education (non-credit): 1,110 → 1,060 → 990\nTotal Credit Headcount: 6,490 → 6,140 → 5,840. Total All Students: 7,600 → 7,200 → 6,830.\n\nOpen with: \"Here's the enrollment picture for the last three academic years. I've broken it out by program and by full-time vs. part-time status. What would you like to dig into?\"\n\nAnswer only what you're asked about data contents, definitions, and methodology. Do not interpret trends or recommend actions.\n\nTone: helpful, data-focused, neutral. 2-3 sentences per reply max.",
+      "assessmentRubric": "Assess whether the student identifies the Health Sciences capacity ceiling (the footnote is the critical thinking test of this stage) and understands the asymmetric impact of Liberal Arts decline on overall revenue.",
+      "knowledgeConstraints": {
+        "canDo": [
+          "Explain how headcount is counted (unduplicated fall snapshot vs annual)",
+          "Clarify what programs are included in each category",
+          "Confirm whether data reflects census date or end-of-term",
+          "Explain full-time vs part-time thresholds (12+ credits = FT)"
+        ],
+        "cannotDo": [
+          "Explain why enrollment is declining in specific programs",
+          "Comment on what enrollment trends mean for finances or strategy",
+          "Recommend actions or draw comparisons to peer institutions"
+        ]
+      }
+    }
+  },
+
+  "stages": [
+    {
+      "id": "kickoff",
+      "order": 0,
+      "title": "Kick-Off Meeting",
+      "badge": "Stage 1 — Kick-Off",
+      "description": "Learn the assignment and the cast of characters",
+      "stageType": "video-chat",
+      "agentIds": ["jordan"],
+      "situationBrief": {
+        "context": "It's Tuesday morning at Ridgeline Community College. You're a **newly hired Analyst in the Office of the President** — this is your first week. The Chief of Staff has called a kick-off meeting to brief you on a new assignment: a strategic review of the college's financial and enrollment trajectory.",
+        "participants": [
+          { "name": "Jordan", "role": "Chief of Staff", "avatarColor": "#2563eb" },
+          { "name": "Priya", "role": "Finance Manager", "avatarColor": "#7c3aed" },
+          { "name": "Derek", "role": "Data Specialist", "avatarColor": "#059669" },
+          { "name": "You", "role": "Analyst, Office of the President", "isYou": true, "avatarColor": "#e76f51" }
+        ],
+        "goal": "Listen carefully. Understand what you're being asked to do, who your internal resources are, and what constraints or expectations exist going into this review.",
+        "hints": [
+          "Pay attention to who knows what — and who interprets what",
+          "The board's constraints are not goals — they are hard limits"
+        ]
+      },
+      "video": { "component": "VideoMeetingRidgeline" },
+      "artifact": null,
+      "turnConfig": { "minTurns": 1, "maxTurns": 4, "wrapUpSignalTurn": 2 },
+      "conversationMode": "llm-only",
+      "structuredProbes": null,
+      "scriptedClosing": null,
+      "constraints": [
+        "The college must return to operational surplus within two fiscal years (by end of FY2026)",
+        "Reserves may not fall below $3 million"
+      ],
+      "comprehensionCheck": {
+        "title": "Before you meet with Priya",
+        "questions": [
+          {
+            "id": "q1",
+            "type": "mc",
+            "prompt": "What is your primary responsibility in this strategic review?",
+            "options": [
+              { "id": "a", "text": "To gather data from Priya and Derek and summarize what they tell you", "correct": false },
+              { "id": "b", "text": "To receive data from Priya and Derek, then independently interpret it and bring a recommendation to Jordan", "correct": true },
+              { "id": "c", "text": "To present the board's financial concerns to the rest of the team", "correct": false }
+            ]
+          },
+          {
+            "id": "q2",
+            "type": "mc",
+            "prompt": "Which of the following correctly describes the board's constraint?",
+            "options": [
+              { "id": "a", "text": "The college should aim to return to surplus within three fiscal years", "correct": false },
+              { "id": "b", "text": "The college must return to surplus within two fiscal years, and reserves may not fall below $3 million", "correct": true },
+              { "id": "c", "text": "The college must reduce total expenditures by 15% regardless of enrollment trends", "correct": false }
+            ]
+          },
+          {
+            "id": "q3",
+            "type": "openended",
+            "prompt": "In your own words: what is Jordan asking you NOT to do — and why does that matter for how you approach the next two meetings?"
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "finance",
+      "order": 1,
+      "title": "1-on-1 with Finance Manager",
+      "badge": "Stage 2 — Budget Data",
+      "description": "Review and interrogate three years of budget actuals with Priya",
+      "stageType": "chat-artifact",
+      "agentIds": ["priya"],
+      "situationBrief": {
+        "context": "You're meeting with **Priya, the Finance Manager**, to review Ridgeline's budget actuals for the last three fiscal years. Priya will walk you through the data and answer your questions — but she will not offer interpretation or strategic analysis. That's your job.",
+        "participants": [
+          { "name": "Priya", "role": "Finance Manager", "avatarColor": "#7c3aed" },
+          { "name": "You", "role": "Analyst, Office of the President", "isYou": true, "avatarColor": "#e76f51" }
+        ],
+        "goal": "Understand the structure of the budget. Identify patterns, anomalies, or trends across revenue and expenditure categories that warrant further investigation.",
+        "hints": [
+          "Ask what's driving specific line items — especially the big movers",
+          "Priya can explain the data. She cannot tell you what it means."
+        ]
+      },
+      "video": null,
+      "artifact": {
+        "type": "data-table",
+        "title": "Ridgeline Operating Budget Actuals FY2022–FY2024",
+        "src": "/mockups/ridgeline_budget_v1.html"
+      },
+      "turnConfig": { "minTurns": 1, "maxTurns": 10, "wrapUpSignalTurn": 7 },
+      "conversationMode": "llm-only",
+      "structuredProbes": null,
+      "scriptedClosing": null,
+      "constraints": [],
+      "comprehensionCheck": {
+        "title": "Before you meet with Derek",
+        "questions": [
+          {
+            "id": "q1",
+            "type": "mc",
+            "prompt": "Between FY2022 and FY2024, which revenue category experienced the steepest percentage decline?",
+            "options": [
+              { "id": "a", "text": "Federal Grants & Aid (declined ~2.7%)", "correct": false },
+              { "id": "b", "text": "State Appropriations (declined ~12.9%)", "correct": true },
+              { "id": "c", "text": "Tuition & Fees (declined ~12.8%)", "correct": false }
+            ]
+          },
+          {
+            "id": "q2",
+            "type": "mc",
+            "prompt": "Which expenditure category grew most dramatically across the three-year period?",
+            "options": [
+              { "id": "a", "text": "Administration & General — grew ~4.8%", "correct": false },
+              { "id": "b", "text": "Student Services — grew ~5.0%", "correct": false },
+              { "id": "c", "text": "Facilities & Operations — grew ~36.9%", "correct": true }
+            ]
+          },
+          {
+            "id": "q3",
+            "type": "openended",
+            "prompt": "The college must close a $4 million deficit within two fiscal years. Based on the budget data alone, which expenditure line would you prioritize examining for reductions first — and what is the risk of getting that wrong?"
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "enrollment",
+      "order": 2,
+      "title": "1-on-1 with Data Specialist",
+      "badge": "Stage 3 — Enrollment Data",
+      "description": "Review and interrogate three years of enrollment data with Derek",
+      "stageType": "chat-artifact",
+      "agentIds": ["derek"],
+      "situationBrief": {
+        "context": "You're now meeting with **Derek, the Data Specialist**, to review enrollment data for the last three academic years. Derek manages institutional research and can answer questions about the data — but analysis and interpretation remain your responsibility.",
+        "participants": [
+          { "name": "Derek", "role": "Data Specialist", "avatarColor": "#059669" },
+          { "name": "You", "role": "Analyst, Office of the President", "isYou": true, "avatarColor": "#e76f51" }
+        ],
+        "goal": "Understand enrollment trends at the institution level and program level. Look for patterns that connect to what you saw in the budget — particularly in tuition and fee revenue.",
+        "hints": [
+          "Ask about specific programs — the aggregate hides the story",
+          "Read the fine print — footnotes matter here"
+        ]
+      },
+      "video": null,
+      "artifact": {
+        "type": "data-table",
+        "title": "Ridgeline Enrollment by Program AY2022–AY2024",
+        "src": "/mockups/ridgeline_enrollment_v1.html"
+      },
+      "turnConfig": { "minTurns": 1, "maxTurns": 10, "wrapUpSignalTurn": 7 },
+      "conversationMode": "llm-only",
+      "structuredProbes": null,
+      "scriptedClosing": null,
+      "constraints": [],
+      "comprehensionCheck": {
+        "title": "Before your presentation to Jordan",
+        "questions": [
+          {
+            "id": "q1",
+            "type": "mc",
+            "prompt": "Which program area bucked the institution-wide enrollment trend between AY2022 and AY2024?",
+            "options": [
+              { "id": "a", "text": "Liberal Arts & Transfer Preparation — grew modestly across all three years", "correct": false },
+              { "id": "b", "text": "Health Sciences & Nursing — grew each year while most programs declined", "correct": true },
+              { "id": "c", "text": "Information Technology — remained flat while other programs declined", "correct": false }
+            ]
+          },
+          {
+            "id": "q2",
+            "type": "mc",
+            "prompt": "Which program experienced the largest absolute enrollment decline from AY2022 to AY2024?",
+            "options": [
+              { "id": "a", "text": "Liberal Arts & Transfer Preparation — declined by 430 students", "correct": true },
+              { "id": "b", "text": "Business & Accounting — declined by 80 students", "correct": false },
+              { "id": "c", "text": "Trades & Technical Programs — declined by 100 students", "correct": false }
+            ]
+          },
+          {
+            "id": "q3",
+            "type": "openended",
+            "prompt": "Health Sciences is the only growing program. A colleague suggests the college should immediately consolidate resources around it as the primary growth strategy. What does the data support about this recommendation — and what does it not support?"
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "presentation",
+      "order": 3,
+      "title": "Presentation to Chief of Staff",
+      "badge": "Stage 4 — Presentation",
+      "description": "Deliver your findings and a strategic recommendation to Jordan",
+      "stageType": "chat",
+      "agentIds": ["jordan_cs"],
+      "situationBrief": {
+        "context": "You're back with **Jordan, the Chief of Staff**. This is your moment to present what you found, explain what's driving it, and make a recommendation. Jordan will listen, probe your thinking, and challenge you to go further — but the recommendation must ultimately be yours.",
+        "participants": [
+          { "name": "Jordan", "role": "Chief of Staff", "avatarColor": "#2563eb" },
+          { "name": "You", "role": "Analyst, Office of the President", "isYou": true, "avatarColor": "#e76f51" }
+        ],
+        "goal": "Deliver a clear, evidence-based analysis of Ridgeline's financial and enrollment situation. Identify the headwinds. Recommend a strategic direction the Chief of Staff can bring to the executive team.",
+        "hints": [
+          "Lead with findings, not process — Jordan doesn't need to hear how you got here",
+          "Your recommendation must fit within the board's constraints",
+          "It's okay to say what you're uncertain about — follow it with how you'd find out"
+        ]
+      },
+      "video": null,
+      "artifact": null,
+      "turnConfig": { "minTurns": 1, "maxTurns": 10, "wrapUpSignalTurn": 8 },
+      "conversationMode": "llm-only",
+      "structuredProbes": null,
+      "scriptedClosing": null,
+      "constraints": [
+        "Tuition increases are ruled out for the next two years (political/affordability constraint)",
+        "Bond payment schedule accelerates by ~$400K in FY2026"
+      ],
+      "comprehensionCheck": {"title": "", "questions": []}
+    }
+  ],
+
+  "assessmentConfig": {
+    "scoringMethod": "llm-rubric",
+    "evaluatorPrompt": "An early-career analyst navigated a 4-stage strategic analysis at Ridgeline Community College. They attended a kick-off meeting with the Chief of Staff (Stage 1 — Kickoff), interrogated three years of budget data with the Finance Manager (Stage 2 — Finance Data), interrogated three years of enrollment data with the Data Specialist (Stage 3 — Enrollment Data), and delivered findings and a recommendation to the Chief of Staff (Stage 4 — Presentation). The three headwinds the student should have identified: (a) declining enrollment → declining tuition revenue, driven by Liberal Arts (−430 students), Health Sciences capped at 94% clinical capacity; (b) declining state appropriations (−12.9%), structural and regional; (c) rising Facilities & Operations costs (+36.9%), driven by committed renovation bond payments. Board constraints: return to surplus by FY2026, reserves above $3M, no tuition increases.",
+    "skillDimensions": [
+      { "key": "originality", "label": "Originality", "weight": 1.0 },
+      { "key": "quality", "label": "Quality", "weight": 1.0 },
+      { "key": "elaboration", "label": "Elaboration", "weight": 1.0 },
+      { "key": "critical_thinking", "label": "Analytical Thinking", "weight": 1.0 },
+      { "key": "information_processing", "label": "Information Processing", "weight": 1.0 },
+      { "key": "communication", "label": "Communication", "weight": 1.0 }
+    ],
+    "facilitatorKey": {
+      "headwinds": [
+        "Declining enrollment → declining tuition revenue: credit headcount fell from 6,490 to 5,840 (–10.0%). Liberal Arts declined by 430 students. Tuition revenue fell $12.65M to $11.02M (–12.9%). Health Sciences grew +60 but is at 94% licensed clinical capacity — material growth requires ≥2 additional faculty not in budget.",
+        "Declining state appropriations: fell $18.24M to $15.88M (–12.9%). Regional and structural trend, not anomalous.",
+        "Rising Facilities & Operations: increased $5.80M to $7.94M (+36.9%), driven by renovation bond payments beginning FY2023. Committed costs — not discretionary."
+      ],
+      "netEffect": "College moved from +$2.15M operating surplus in FY2022 to –$4.03M deficit in FY2024 — a $6.18M swing in two years. Bond payment accelerates ~$400K in FY2026.",
+      "rubricGuidance": [
+        { "stage": "kickoff", "notes": "Look for role clarity: student should articulate that their job is independent interpretation, not to be led to conclusions by Priya or Derek." },
+        { "stage": "finance", "notes": "Strong answers identify Facilities as the priority line but immediately flag bond payments as committed. Excellent answers reason through the Instruction trade-off: it is the only remaining expenditure lever of scale, but cutting it risks worsening enrollment decline." },
+        { "stage": "enrollment", "notes": "Strong answers use the Health Sciences capacity footnote. Students who miss it should be flagged — this is the core critical thinking test of Stage 3." },
+        { "stage": "presentation", "notes": "Strong answers name all three headwinds with data, connect enrollment decline to tuition revenue loss, distinguish committed from variable costs, propose a feasible recommendation within board constraints, and name at least one failure scenario. Omitting the risk dimension should not receive full marks regardless of recommendation quality." }
+      ]
+    }
+  }
+}

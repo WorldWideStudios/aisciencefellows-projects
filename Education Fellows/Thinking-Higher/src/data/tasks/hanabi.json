@@ -1,0 +1,15 @@
+{
+  "taskId": "hanabi",
+  "taskType": "hanabi",
+  "title": "Hanabi",
+  "description": "A cooperative card game that tests theory of mind — can you work with an AI partner when you can't see your own cards?",
+  "numTrials": 1,
+  "parameters": {
+    "handSize": 5,
+    "maxHints": 8,
+    "maxMistakes": 3
+  },
+  "modelType": "none",
+  "instructions": "Hanabi is a cooperative card game. You and an AI partner work together to build 5 firework displays (one per color, stacking 1→2→3→4→5).\n\nThe catch: you can see your partner's cards but NOT your own! You must use limited hint tokens to communicate.\n\nOn your turn, you can:\n• Play a card (if it fits a firework pile, great — if not, you lose a fuse!)\n• Discard a card (regains a hint token)\n• Give a hint to your partner (costs a hint token)\n\nYou have 8 hints and 3 fuses. Perfect score is 25. Good luck!",
+  "debrief": "Hanabi measures theory of mind — your ability to reason about what others know and what information they need.\n\nKey cognitive skills tested:\n• Perspective-taking: Understanding what your partner can see about YOUR cards\n• Information integration: Combining multiple hints to determine your cards\n• Strategic communication: Choosing the most informative hints to give\n\nIn human-AI studies, people often preferred playing with rule-based AI partners over more sophisticated RL agents, finding them more predictable and trustworthy."
+}

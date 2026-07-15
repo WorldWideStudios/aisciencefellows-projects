@@ -1,0 +1,19 @@
+{
+  "taskId": "reversal-learning",
+  "taskType": "reversal-learning",
+  "title": "Reversal Learning",
+  "description": "A 3-arm bandit task where the best option changes halfway through.",
+  "numTrials": 120,
+  "parameters": {
+    "reversalTrial": 60,
+    "preReversalProbs1": 0.7,
+    "preReversalProbs2": 0.2,
+    "preReversalProbs3": 0.1,
+    "postReversalProbs1": 0.1,
+    "postReversalProbs2": 0.2,
+    "postReversalProbs3": 0.7
+  },
+  "modelType": "rescorla-wagner-volatility",
+  "instructions": "You'll see three options (like fishing spots). Each one has a hidden chance of giving a reward. Your goal is to earn as many points as possible over 120 trials.\n\nHere's the catch: partway through the task, the reward rates will change. The best option might become the worst, and vice versa. Pay attention to your results and be ready to adapt!\n\nPress 1, 2, or 3 (or click) to choose.",
+  "debrief": "This task measures cognitive flexibility — your ability to detect and adapt to changing reward contingencies. Key measures:\n\n• Pre-reversal learning: How quickly you identified the best option initially\n• Adaptation speed: How fast you switched to the new best option after the reversal\n• Win-stay/Lose-shift: Your tendency to repeat rewarded choices and abandon unrewarded ones\n\nDifficulty adapting to reversals is associated with perseveration, a cognitive pattern studied in OCD, addiction, and autism research."
+}

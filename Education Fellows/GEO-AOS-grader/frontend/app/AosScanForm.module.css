@@ -1,0 +1,68 @@
+.form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: min(560px, 92vw);
+  padding: 8px 8px 8px 22px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(20px) saturate(135%);
+  -webkit-backdrop-filter: blur(20px) saturate(135%);
+  box-shadow: 0 12px 40px rgba(90, 55, 30, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form:focus-within {
+  border-color: rgba(255, 87, 34, 0.6);
+  box-shadow: 0 12px 40px rgba(90, 55, 30, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    0 0 0 3px rgba(255, 87, 34, 0.16);
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #15110d;
+  font-family: var(--font-space-mono), ui-monospace, "SF Mono", monospace;
+  font-size: 15px;
+  letter-spacing: -0.01em;
+}
+
+.input::placeholder {
+  color: rgba(21, 17, 13, 0.4);
+}
+
+.submit {
+  font-family: var(--font-space-grotesk), -apple-system, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  border-radius: 999px;
+  background: #ff5722;
+  color: #fff;
+  padding: 12px 26px;
+  white-space: nowrap;
+  transition: background 0.18s ease, transform 0.18s ease;
+}
+
+.submit:hover {
+  background: #f5491a;
+  transform: translateY(-1px);
+}
+
+.submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.error {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #dc2626;
+  text-align: center;
+}

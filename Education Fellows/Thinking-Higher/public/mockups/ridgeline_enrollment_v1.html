@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ridgeline Community College — Enrollment Data</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0f1f3d;
+    --navy-mid: #1a3260;
+    --blue: #2451a8;
+    --blue-light: #d6e4f7;
+    --teal: #0e6670;
+    --teal-light: #e0f4f5;
+    --gold: #c8922a;
+    --gold-light: #fdf3e0;
+    --green: #1e6e4a;
+    --green-light: #e6f4ec;
+    --red-light: #fdeaea;
+    --red: #b83232;
+    --cream: #f8f5ef;
+    --ink: #1a1a2e;
+    --muted: #6b7280;
+    --rule: #d1c9b8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+  }
+
+  /* Header */
+  .masthead {
+    background: var(--teal);
+    padding: 48px 64px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .masthead::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 300px; height: 300px;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 50%;
+  }
+
+  .masthead::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; right: 80px;
+    width: 200px; height: 200px;
+    border: 1px solid rgba(255,255,255,0.04);
+    border-radius: 50%;
+  }
+
+  .stage-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: #7ee8ef;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .stage-tag::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: #7ee8ef;
+  }
+
+  .masthead h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 42px;
+    color: #fff;
+    line-height: 1.15;
+    max-width: 560px;
+    margin-bottom: 12px;
+  }
+
+  .masthead h1 em {
+    font-style: italic;
+    color: rgba(255,255,255,0.6);
+  }
+
+  .masthead .subtitle {
+    font-size: 14px;
+    color: rgba(255,255,255,0.45);
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 0.05em;
+    margin-top: 20px;
+  }
+
+  /* Main layout */
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 56px 40px 80px;
+  }
+
+  /* Context box */
+  .context-bar {
+    background: var(--teal-light);
+    border-left: 3px solid var(--teal);
+    padding: 16px 24px;
+    margin-bottom: 52px;
+    font-size: 13.5px;
+    color: #0a3d42;
+    line-height: 1.65;
+  }
+
+  .context-bar strong {
+    font-weight: 500;
+    color: #072a2e;
+  }
+
+  /* Section label */
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+
+
+  /* Table wrapper */
+  .table-block {
+    margin-bottom: 44px;
+    animation: fadeUp 0.5s ease both;
+  }
+
+  .table-block:nth-child(2) { animation-delay: 0.05s; }
+  .table-block:nth-child(3) { animation-delay: 0.10s; }
+  .table-block:nth-child(4) { animation-delay: 0.15s; }
+  .table-block:nth-child(5) { animation-delay: 0.20s; }
+  .table-block:nth-child(6) { animation-delay: 0.25s; }
+  .table-block:nth-child(7) { animation-delay: 0.30s; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .table-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+
+  thead tr {
+    background: var(--teal);
+  }
+
+  thead th {
+    color: #fff;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 12px 20px;
+    text-align: left;
+    font-weight: 500;
+  }
+
+  thead th:not(:first-child) {
+    text-align: right;
+  }
+
+  tbody tr {
+    border-bottom: 1px solid var(--rule);
+    transition: background 0.15s;
+  }
+
+  tbody tr:hover {
+    background: rgba(14, 102, 112, 0.05);
+  }
+
+  tbody tr:nth-child(even) {
+    background: rgba(0,0,0,0.018);
+  }
+
+  tbody tr:nth-child(even):hover {
+    background: rgba(14, 102, 112, 0.05);
+  }
+
+  tbody td {
+    padding: 13px 20px;
+    color: var(--ink);
+  }
+
+  tbody td:not(:first-child) {
+    text-align: right;
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+  }
+
+  /* Subtotal rows */
+  tr.subtotal-row td {
+    font-weight: 500;
+    background: rgba(14, 102, 112, 0.08) !important;
+    color: var(--teal) !important;
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    border-top: 1px solid rgba(14, 102, 112, 0.2);
+  }
+
+  tr.subtotal-row td:first-child {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+  }
+
+  /* Total rows */
+  tr.total-row td {
+    background: var(--teal) !important;
+    color: #fff !important;
+    font-weight: 500;
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    padding: 14px 20px;
+  }
+
+  tr.total-row td:first-child {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  /* Grand total table */
+  .grand-table thead tr { background: var(--navy); }
+  .grand-table tr.total-row td { background: var(--navy) !important; }
+  .grand-table tr.subtotal-row td {
+    background: rgba(15, 31, 61, 0.07) !important;
+    color: var(--navy) !important;
+    border-top: 1px solid rgba(15,31,61,0.15);
+  }
+
+  hr.divider {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 52px 0;
+  }
+
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted);
+    font-family: 'DM Mono', monospace;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+  }
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <div class="stage-tag">Stage 3 — Data Specialist</div>
+  <h1>Enrollment<br><em>by Program</em></h1>
+  <div class="subtitle">Ridgeline Community College &nbsp;·&nbsp; AY2022 – AY2024 &nbsp;·&nbsp; Fall semester headcount</div>
+</div>
+
+<div class="container">
+
+  <div class="context-bar">
+    <strong>Derek's note:</strong> Here's the enrollment picture for the last three academic years, broken out by program and full-time vs. part-time status. FT = Full-Time (12+ credits). PT = Part-Time (&lt;12 credits). Headcount is unduplicated fall census date. What would you like to dig into?
+  </div>
+
+  <!-- Liberal Arts -->
+  <div class="section-label">Program Breakdown</div>
+
+  <div class="table-block">
+    <div class="table-title">Liberal Arts &amp; Transfer Preparation</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Enrollment Type</th>
+          <th>AY2022</th>
+          <th>AY2023</th>
+          <th>AY2024</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Full-Time</td>
+          <td>1,840</td>
+          <td>1,710</td>
+          <td>1,560</td>
+        </tr>
+        <tr>
+          <td>Part-Time</td>
+          <td>980</td>
+          <td>910</td>
+          <td>830</td>
+        </tr>
+        <tr class="subtotal-row">
+          <td>Subtotal</td>
+          <td>2,820</td>
+          <td>2,620</td>
+          <td>2,390</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Business -->
+  <div class="table-block">
+    <div class="table-title">Business &amp; Accounting</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Enrollment Type</th>
+          <th>AY2022</th>
+          <th>AY2023</th>
+          <th>AY2024</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Full-Time</td>
+          <td>620</td>
+          <td>590</td>
+          <td>570</td>
+        </tr>
+        <tr>
+          <td>Part-Time</td>
+          <td>410</td>
+          <td>390</td>
+          <td>380</td>
+        </tr>
+        <tr class="subtotal-row">
+          <td>Subtotal</td>
+          <td>1,030</td>
+          <td>980</td>
+          <td>950</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Health Sciences -->
+  <div class="table-block">
+    <div class="table-title">Health Sciences &amp; Nursing</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Enrollment Type</th>
+          <th>AY2022</th>
+          <th>AY2023</th>
+          <th>AY2024</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Full-Time</td>
+          <td>780</td>
+          <td>800</td>
+          <td>820</td>
+        </tr>
+        <tr>
+          <td>Part-Time</td>
+          <td>210</td>
+          <td>220</td>
+          <td>230</td>
+        </tr>
+        <tr class="subtotal-row">
+          <td>Subtotal</td>
+          <td>990</td>
+          <td>1,020</td>
+          <td>1,050</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- IT -->
+  <div class="table-block">
+    <div class="table-title">Information Technology</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Enrollment Type</th>
+          <th>AY2022</th>
+          <th>AY2023</th>
+          <th>AY2024</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Full-Time</td>
+          <td>490</td>
+          <td>460</td>
+          <td>430</td>
+        </tr>
+        <tr>
+          <td>Part-Time</td>
+          <td>280</td>
+          <td>260</td>
+          <td>240</td>
+        </tr>
+        <tr class="subtotal-row">
+          <td>Subtotal</td>
+          <td>770</td>
+          <td>720</td>
+          <td>670</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Trades -->
+  <div class="table-block">
+    <div class="table-title">Trades &amp; Technical Programs</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Enrollment Type</th>
+          <th>AY2022</th>
+          <th>AY2023</th>
+          <th>AY2024</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Full-Time</td>
+          <td>560</td>
+          <td>530</td>
+          <td>510</td>
+        </tr>
+        <tr>
+          <td>Part-Time</td>
+          <td>320</td>
+          <td>290</td>
+          <td>270</td>
+        </tr>
+        <tr class="subtotal-row">
+          <td>Subtotal</td>
+          <td>880</td>
+          <td>820</td>
+          <td>780</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Continuing Ed -->
+  <div class="table-block">
+    <div class="table-title">Continuing Education &amp; Non-Credit</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Enrollment Type</th>
+          <th>AY2022</th>
+          <th>AY2023</th>
+          <th>AY2024</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Headcount (unduplicated)</td>
+          <td>1,110</td>
+          <td>1,060</td>
+          <td>990</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr class="divider">
+
+  <!-- Institution Totals -->
+  <div class="table-block">
+    <div class="section-label">Institution-Wide Totals</div>
+    <table class="grand-table">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>AY2022</th>
+          <th>AY2023</th>
+          <th>AY2024</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="subtotal-row">
+          <td>Total Credit Headcount</td>
+          <td>6,490</td>
+          <td>6,140</td>
+          <td>5,840</td>
+        </tr>
+        <tr class="subtotal-row">
+          <td>Total Non-Credit Headcount</td>
+          <td>1,110</td>
+          <td>1,060</td>
+          <td>990</td>
+        </tr>
+        <tr class="total-row">
+          <td>Total — All Students</td>
+          <td>7,600</td>
+          <td>7,200</td>
+          <td>6,830</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="footer">
+    Ridgeline Community College &nbsp;·&nbsp; Confidential — Internal Use Only &nbsp;·&nbsp; Office of the President
+  </div>
+
+</div>
+</body>
+</html>

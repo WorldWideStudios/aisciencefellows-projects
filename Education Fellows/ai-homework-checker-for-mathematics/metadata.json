@@ -1,0 +1,5 @@
+{
+  "name": "AI Homework Checker for Mathematics",
+  "description": "AI-powered tool for university professors to automatically check math homework solutions against assignments.",
+  "requestFramePermissions": []
+}
