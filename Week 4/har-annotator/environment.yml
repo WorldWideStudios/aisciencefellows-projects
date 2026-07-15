@@ -1,0 +1,20 @@
+name: hars
+channels:
+  - bioconda
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pandas
+  - numpy
+  - scipy
+  - matplotlib
+  - seaborn
+  - requests
+  - pyranges=0.1.4
+  - pybigwig
+  - biopython
+  - pyarrow
+  - openpyxl
+  - pip
+  - pip:
+      - pyjaspar

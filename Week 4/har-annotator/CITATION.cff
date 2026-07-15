@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "HAR annotator: a glass-box pipeline for prioritizing Human Accelerated Regions"
+version: 1.0.0
+date-released: 2026-07-09
+license: MIT
+abstract: >-
+  A reproducible, fully transparent pipeline that filters the full set of
+  Human Accelerated Regions (HARs) to constrained, neurodevelopment-adjacent,
+  disease-overlapping elements and ranks the survivors with an additive,
+  per-axis-inspectable evidence score. Built to generate defensible,
+  hypothesis-level candidates for human-specific brain regulatory changes.
+keywords:
+  - human accelerated regions
+  - neurodevelopment
+  - regulatory genomics
+  - reproducibility
+references:
+  - type: article
+    authors:
+      - family-names: Cui
+        given-names: X.
+    title: "Human accelerated regions and their roles in cortical development"
+    journal: Nature
+    volume: 640
+    start: 991
+    end: 999
+    year: 2025
+    doi: 10.1038/s41586-025-08622-x

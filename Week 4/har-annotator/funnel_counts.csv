@@ -1,0 +1,5 @@
+step,n_hars
+"0. All HARs (Cui 2025, hg38)",3257
+A. Constrained (phyloP mean > 1.0),2757
+B. Near neurodev gene (<= 1000 kb TSS),1718
+C. Overlaps neuropsych GWAS (<= 25 kb),363

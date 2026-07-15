@@ -1,0 +1,19 @@
+# Data: keep only the provenance manifest; everything else is re-fetched by download.py
+data/*
+!data/manifest.csv
+
+# Reproducibility scratch
+_rerun_verify/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Env / OS
+.DS_Store
+*.egg-info/
+.venv/
+env/

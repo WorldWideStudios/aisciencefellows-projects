@@ -6,6 +6,8 @@ repos are vendored as plain files (their `.git` history is stripped), so they ar
 copies, not live submodules. For the latest version of any project, follow the fellow's GitHub
 link. The same project can appear in multiple weeks, showing how it evolved over time.
 
+> Looking for the Education track? See [Education Fellows](./Education%20Fellows) for their final demos.
+
 ## Weeks
 
 | Week | Projects |
@@ -13,19 +15,20 @@ link. The same project can appear in multiple weeks, showing how it evolved over
 | [Week 1](./Week%201) | CellScope · paperclip-orchestration · cryovision · LabLens · 2026AIScienceFellowship · JARVIS_for_bio |
 | [Week 2](./Week%202) | stapler-speedrun-to-paperclips- · 2026AIScienceFellowship · paperclip-orchestration · Benchmate · cognitive-impairment-2 · JARVIS_for_bio |
 | [Week 3](./Week%203) | 2026AIScienceFellowship · benchmate-rig · cognitive-impairment-2 · JARVIS_for_bio |
+| [Week 4](./Week%204) | 2026AIScienceFellowship · breath-cam · har-annotator · cognitive-impairment-2 |
 
 ## Fellows
 
 How each fellow's work progressed week over week.
 
-| Fellow | GitHub | Week 1 | Week 2 | Week 3 |
-|--------|--------|--------|--------|--------|
-| Akhil | [@DDH2004](https://github.com/DDH2004) | [CellScope](./Week%201/CellScope) — XR cell simulation viewer | [stapler-speedrun-to-paperclips-](./Week%202/stapler-speedrun-to-paperclips-) — local BioScience MCP server with PubMed-diffing RAG | — |
-| Julia | [@drjlgross](https://github.com/drjlgross) | [paperclip-orchestration](./Week%201/paperclip-orchestration) — research-question → evidence digest | [paperclip-orchestration](./Week%202/paperclip-orchestration) — + Pinakes Telegram bot wrapper | NA |
-| Natalie | [@nataliegits](https://github.com/nataliegits) | [cryovision](./Week%201/cryovision) — reads cryobox labels from a photo | [Benchmate](./Week%202/Benchmate) — open-source AI co-scientist for hypothesis generation | [benchmate-rig](./Week%203/benchmate-rig) — ~$60 DIY alamarBlue viability reader |
-| Vivek | [@dorkosaurus](https://github.com/dorkosaurus) | [JARVIS_for_bio](./Week%201/JARVIS_for_bio) — hypothesis-space expansion for bio research | [JARVIS_for_bio](./Week%202/JARVIS_for_bio) — + v0 inference-oriented architecture (AMD GWAS → biology) | [JARVIS_for_bio](./Week%203/JARVIS_for_bio) — v1 closed-loop AAV capsid optimization for AMD |
-| Dale | [@DaleHerzog](https://github.com/DaleHerzog) | [2026AIScienceFellowship](./Week%201/2026AIScienceFellowship) — automated tube decapper CAD | [2026AIScienceFellowship](./Week%202/2026AIScienceFellowship) — roadmap to a personal self-driving lab | [2026AIScienceFellowship](./Week%203/2026AIScienceFellowship) — 3D-printed shaker, AI materials co-scientist, FACS cytometer concept |
-| Mohamed | [@Moe-phantom](https://github.com/Moe-phantom) | [LabLens](./Week%201/LabLens) — local AI microbiology assistant | — | — |
-| Sameer | [@ss461](https://github.com/ss461) | — | [cognitive-impairment-2](./Week%202/cognitive-impairment-2) — app for cognitive impairment | [cognitive-impairment-2](./Week%203/cognitive-impairment-2) — + Grip Strength measure, 2nd hardware unit, stable CFF baseline |
+| Fellow | GitHub | Week 1 | Week 2 | Week 3 | Week 4 |
+|--------|--------|--------|--------|--------|--------|
+| Akhil | [@DDH2004](https://github.com/DDH2004) | [CellScope](./Week%201/CellScope) — XR cell simulation viewer | [stapler-speedrun-to-paperclips-](./Week%202/stapler-speedrun-to-paperclips-) — local BioScience MCP server with PubMed-diffing RAG | — | — |
+| Julia | [@drjlgross](https://github.com/drjlgross) | [paperclip-orchestration](./Week%201/paperclip-orchestration) — research-question → evidence digest | [paperclip-orchestration](./Week%202/paperclip-orchestration) — + Pinakes Telegram bot wrapper | NA | [breath-cam](./Week%204/breath-cam) — respiratory rate from an iPhone video |
+| Natalie | [@nataliegits](https://github.com/nataliegits) | [cryovision](./Week%201/cryovision) — reads cryobox labels from a photo | [Benchmate](./Week%202/Benchmate) — open-source AI co-scientist for hypothesis generation | [benchmate-rig](./Week%203/benchmate-rig) — ~$60 DIY alamarBlue viability reader | [har-annotator](./Week%204/har-annotator) — ranks Human Accelerated Regions by brain-development role |
+| Vivek | [@dorkosaurus](https://github.com/dorkosaurus) | [JARVIS_for_bio](./Week%201/JARVIS_for_bio) — hypothesis-space expansion for bio research | [JARVIS_for_bio](./Week%202/JARVIS_for_bio) — + v0 inference-oriented architecture (AMD GWAS → biology) | [JARVIS_for_bio](./Week%203/JARVIS_for_bio) — v1 closed-loop AAV capsid optimization for AMD | — |
+| Dale | [@DaleHerzog](https://github.com/DaleHerzog) | [2026AIScienceFellowship](./Week%201/2026AIScienceFellowship) — automated tube decapper CAD | [2026AIScienceFellowship](./Week%202/2026AIScienceFellowship) — roadmap to a personal self-driving lab | [2026AIScienceFellowship](./Week%203/2026AIScienceFellowship) — 3D-printed shaker, AI materials co-scientist, FACS cytometer concept | [2026AIScienceFellowship](./Week%204/2026AIScienceFellowship) — shaker assembly, firmware, touch-screen UI, and wiring complete |
+| Mohamed | [@Moe-phantom](https://github.com/Moe-phantom) | [LabLens](./Week%201/LabLens) — local AI microbiology assistant | — | — | — |
+| Sameer | [@ss461](https://github.com/ss461) | — | [cognitive-impairment-2](./Week%202/cognitive-impairment-2) — app for cognitive impairment | [cognitive-impairment-2](./Week%203/cognitive-impairment-2) — + Grip Strength measure, 2nd hardware unit, stable CFF baseline | [cognitive-impairment-2](./Week%204/cognitive-impairment-2) — pivot toward a coach-facing accountability layer from athlete feedback |
 
 See each week's README for full descriptions and links to blogs, demos, and social posts.

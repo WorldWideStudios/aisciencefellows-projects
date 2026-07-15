@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+
+# Large media — we do NOT commit raw footage
+*.mov
+*.mp4
+
+# macOS cruft
+.DS_Store

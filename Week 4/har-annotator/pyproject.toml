@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "har-annotator"
+version = "1.0.0"
+description = "A reproducible, glass-box pipeline that prioritizes Human Accelerated Regions by their evidence for a role in human neurodevelopment."
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+license = { file = "LICENSE" }
+authors = [{ name = "HAR Annotator contributors" }]
+keywords = ["genomics", "human-accelerated-regions", "neurodevelopment", "regulatory-genomics", "reproducibility"]
+classifiers = [
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = [
+    "pandas",
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "seaborn",
+    "requests",
+    "pyranges==0.1.4",
+    "pyBigWig",
+    "biopython",
+    "pyjaspar",
+    "pyarrow",
+    "openpyxl",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools]
+packages = ["har_annotator"]

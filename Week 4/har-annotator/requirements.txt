@@ -1,0 +1,18 @@
+# HAR annotator — Python dependencies
+# Python 3.11 required (pyranges 0.1.4 does not build on 3.13+)
+#
+# pyBigWig and pyranges install most reliably from conda-forge/bioconda;
+# see environment.yml for the recommended conda install. pip works on
+# most Linux/macOS setups.
+pandas
+numpy
+scipy
+matplotlib
+seaborn
+requests
+pyranges==0.1.4
+pyBigWig
+biopython
+pyjaspar
+pyarrow
+openpyxl
