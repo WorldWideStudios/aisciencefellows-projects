@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="thermoeppendorf">
+  <link name="world" />
+
+  <!-- Stationary base. body frame = mesh-native frame (matches the original
+       single-mesh URDF) so anchors transfer 1:1 from the source object_model. -->
+  <joint name="world_joint" type="fixed">
+    <parent link="world" />
+    <child link="body" />
+    <origin xyz="0 0 0" rpy="1.5708 0 0" />
+  </joint>
+  <link name="body">
+    <visual>
+      <geometry><mesh filename="body.obj" /></geometry>
+    </visual>
+    <collision>
+      <geometry><mesh filename="body.obj" /></geometry>
+    </collision>
+  </link>
+
+  <!-- Outer lid: revolves about Z (in lid local frame) when opening/closing.
+       Joint origin transformed by Rx(-90deg) from the phobos root frame
+       since body is rotated relative to phobos root. -->
+  <joint name="lid_joint" type="revolute">
+    <parent link="body" />
+    <child link="lid" />
+    <origin xyz="-0.37245 -0.26455 0.23991" rpy="-1.54828 -0.00099 -3.12489" />
+    <axis xyz="0 0 1" />
+    <limit lower="0.0" upper="1.22173" effort="0.0" velocity="0.0" />
+  </joint>
+  <link name="lid">
+    <visual>
+      <origin xyz="0.09061 0.43423 -0.26361" rpy="-1.54828 -0.01672 1.92048" />
+      <geometry><mesh filename="lid.obj" /></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.09061 0.43423 -0.26361" rpy="-1.54828 -0.01672 1.92048" />
+      <geometry><mesh filename="lid.obj" /></geometry>
+    </collision>
+  </link>
+
+  <!-- Inner lid mechanism (heated platen / plate cover): nested under the outer lid. -->
+  <joint name="lid_inner_joint" type="revolute">
+    <parent link="lid" />
+    <child link="lid_inner" />
+    <origin xyz="-0.09808 -0.03505 0.00292" rpy="-0.02237 0.00890 -1.21917" />
+    <axis xyz="0 0 1" />
+    <limit lower="-1.14319" upper="0.0" effort="0.0" velocity="0.0" />
+  </joint>
+  <link name="lid_inner">
+    <visual>
+      <origin xyz="-0.37319 0.34473 -0.26222" rpy="-1.57067 -0.00786 3.13982" />
+      <geometry><mesh filename="lid_inner.obj" /></geometry>
+    </visual>
+    <collision>
+      <origin xyz="-0.37319 0.34473 -0.26222" rpy="-1.57067 -0.00786 3.13982" />
+      <geometry><mesh filename="lid_inner.obj" /></geometry>
+    </collision>
+  </link>
+</robot>

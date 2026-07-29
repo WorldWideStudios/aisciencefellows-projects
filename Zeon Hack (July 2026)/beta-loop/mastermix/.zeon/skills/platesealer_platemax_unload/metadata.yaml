@@ -1,0 +1,12 @@
+skill_id: platesealer_platemax_unload
+version: "1.0.0"
+description: "Pick a plate back out of a plate sealer with the right arm. The inverse of platesealer_platemax_load: approach open along plate_preapproach_1 -> plate_preapproach_2, descend onto plate_load, close and attach the plate, then retreat along the same anchors in reverse."
+
+# parameters are derived from the platesealer_platemax_unload() signature in robotic_code.py
+
+tags:
+  - pipette_demo
+  - platesealer
+  - plate
+  - unload
+  - pick

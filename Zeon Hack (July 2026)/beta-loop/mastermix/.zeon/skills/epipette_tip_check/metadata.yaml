@@ -1,0 +1,10 @@
+skill_id: epipette_tip_check
+version: "1.0.0"
+description: "Moves left arm from current pipetting pose to a tip-check joint config, descends 3cm, reads the laser sensor, then retraces back to the original pose."
+
+# parameters are derived from the epipette_tip_check() signature in robotic_code.py
+
+tags:
+  - epipette
+  - laser
+  - tip_check

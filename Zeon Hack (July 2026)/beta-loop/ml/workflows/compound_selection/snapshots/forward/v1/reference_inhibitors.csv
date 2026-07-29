@@ -1,0 +1,6 @@
+name,smiles,ic50_uM,assay,source,pmid_or_chembl_id
+clavulanic acid,[H][C@@]12CC(=O)N1[C@@H](C(O)=O)\C(O2)=C\CO,,nitrocefin,manual_seed,
+sulbactam,[Na+].[H][C@@]12CC(=O)N1C(C([O-])=O)C(C)(C)S2(=O)=O,,nitrocefin,manual_seed,
+tazobactam,C([C@@]1(C)[C@H](C(O)=O)N2[C@](S1(=O)=O)(CC2=O)[H])N3C=CN=N3,,nitrocefin,manual_seed,
+enmetazobactam,[H][C@@]12CC(=O)N1[C@@H](C([O-])=O)[C@](C)(Cn1cc[n+](C)n1)S2(=O)=O,,nitrocefin,manual_seed,
+clavulanate lithium,,,nitrocefin,literature_summary,

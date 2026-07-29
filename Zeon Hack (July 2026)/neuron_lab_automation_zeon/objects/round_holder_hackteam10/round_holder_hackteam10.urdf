@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="round_holder_hackteam10">
+  <link name="world" />
+  <joint name="world_joint" type="fixed">
+    <parent link="world" />
+    <child link="body" />
+    <origin rpy="0 0 0" xyz="0 0 0" />
+  </joint>
+  <link name="body">
+    <visual>
+      <geometry><mesh filename="plate_holder_90diam_center.stl" scale="0.001 0.001 0.001" /></geometry>
+    </visual>
+    <collision>
+      <geometry><mesh filename="plate_holder_90diam_center.stl" scale="0.001 0.001 0.001" /></geometry>
+    </collision>
+  </link>
+</robot>

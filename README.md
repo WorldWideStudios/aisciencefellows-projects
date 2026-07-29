@@ -7,6 +7,8 @@ copies, not live submodules. For the latest version of any project, follow the f
 link. The same project can appear in multiple weeks, showing how it evolved over time.
 
 > Looking for the Education track? See [Education Fellows](./Education%20Fellows) for their final demos.
+>
+> Looking for hackathon projects? See [Zeon Hack (July 2026)](./Zeon%20Hack%20(July%202026)) for the team builds on the Zeon robotics platform.
 
 ## Weeks
 

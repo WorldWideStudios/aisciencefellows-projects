@@ -1,0 +1,36 @@
+urdf: wellplate_stand.urdf
+articulations:
+  default:
+    description: All joints at rest position
+    joints: {}
+anchors:
+  object:
+    parent_link: world
+    description: Table placement frame, origin at (+X, +Y, -Z) bbox corner
+    link_T_anchor:
+      xyz: [-0.133, 0.091, 0.0]
+      wxyz: [0.707107, 0.0, 0.0, 0.707107]
+  top_center:
+    parent_link: body
+    description: top center of stand, at height of 7.5cm, where a plate will sit.
+    link_T_anchor:
+      xyz: [-0.064375, 0.0435, 0.075]
+      wxyz: [0.707107, 0.0, 0.0, 0.707107]
+  plate_center_50mm_above:
+    parent_link: body
+    description: "World convention: centerline frame 50 mm above the wellplate support surface."
+    link_T_anchor:
+      xyz: [-0.064375, 0.0435, 0.125]
+      wxyz: [0.707107, 0.0, 0.0, 0.707107]
+  plate_center_100mm_above:
+    parent_link: body
+    description: "World convention: centerline frame 100 mm above the wellplate support surface."
+    link_T_anchor:
+      xyz: [-0.064375, 0.0435, 0.175]
+      wxyz: [0.707107, 0.0, 0.0, 0.707107]
+  plate_center_150mm_above:
+    parent_link: body
+    description: "World convention: centerline frame 150 mm above the wellplate support surface."
+    link_T_anchor:
+      xyz: [-0.064375, 0.0435, 0.225]
+      wxyz: [0.707107, 0.0, 0.0, 0.707107]

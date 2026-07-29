@@ -1,0 +1,185 @@
+{
+  "workflow_id": "cfps_inhibitor_kinetic_read",
+  "name": "CFPS Inhibitor Kinetic Read (Part 3b)",
+  "description": "Part 3b of the TEM-1 inhibitor screen: run after cfps_inhibitor_dose (Part 3a) has dosed compound, the compound has incubated with the enzyme off-robot, and the operator has added nitrocefin to every well by hand. Loads the plate into the reader and closes the lid; the operator starts the kinetic (A490) read in Gen5 by hand and retrieves the plate afterwards. platereader_measure is not called here \u2014 automated kinetic reads on Zeon's side don't yet work reliably (the same finding that dropped mixing from tem1_kinetics_characterization: this workflow follows that same human-triggered-read pattern).",
+  "version": "1.0.0",
+  "author": "pipeline",
+  "created_at": "2026-07-26T00:00:00.000Z",
+  "updated_at": "2026-07-26T00:00:00.000Z",
+  "simulation_validated": false,
+  "objects": [],
+  "inputs": [
+    {
+      "name": "reaction_plate",
+      "type": "object",
+      "is_array": false,
+      "description": "The Part-1/3a plate, now dosed with compound and (by hand) nitrocefin",
+      "defaultValue": "wellplate_96_flatbottom"
+    },
+    {
+      "name": "platereader",
+      "type": "object",
+      "is_array": false,
+      "description": "Plate reader",
+      "defaultValue": "plate_reader"
+    },
+    {
+      "name": "run_name",
+      "type": "string",
+      "is_array": false,
+      "description": "Name for this run's saved output folder",
+      "defaultValue": "cfps_inhibitor_kinetic_read_run"
+    }
+  ],
+  "nodes": [
+    {
+      "node_id": "start_0",
+      "type": "start",
+      "label": "Start"
+    },
+    {
+      "node_id": "grab_plate",
+      "type": "skill",
+      "label": "Grab Reaction Plate",
+      "skill_id": "wellplate_grab",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "grasp_anchor": "grasp_longside_platereader"
+      }
+    },
+    {
+      "node_id": "reader_open_pre",
+      "type": "skill",
+      "label": "Open Reader Lid",
+      "skill_id": "platereader_open",
+      "parameters": {
+        "platereader": {
+          "$input": "platereader"
+        }
+      }
+    },
+    {
+      "node_id": "reader_load",
+      "type": "skill",
+      "label": "Load Plate Into Reader",
+      "skill_id": "platereader_load",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "platereader": {
+          "$input": "platereader"
+        }
+      }
+    },
+    {
+      "node_id": "reader_closed",
+      "type": "skill",
+      "label": "Close Reader Lid (run ends here)",
+      "skill_id": "platereader_closed",
+      "parameters": {
+        "platereader": {
+          "$input": "platereader"
+        }
+      },
+      "description": "Final robot action. The plate is left loaded in the closed reader: the operator starts the kinetic read in Gen5 by hand and retrieves the plate afterwards. platereader_measure is not called \u2014 automated kinetic reads are still in progress on Zeon's side."
+    },
+    {
+      "node_id": "save_run",
+      "type": "skill",
+      "label": "Save Run Folder",
+      "skill_id": "save_run_folder",
+      "parameters": {
+        "run_name": {
+          "$input": "run_name"
+        },
+        "checkpoint": "end"
+      }
+    },
+    {
+      "node_id": "end_1",
+      "type": "end",
+      "label": "End"
+    },
+    {
+      "node_id": "save_run_start",
+      "type": "skill",
+      "label": "Checkpoint: run started",
+      "description": "Registers this execution in data/logs/ before any hardware moves, so a run that fails early is still visible to the tracker instead of leaving nothing behind. Its outgoing edge is deliberately 'default', not 'on_success': a checkpoint is bookkeeping, and a failure to record progress must never abort a run that is physically fine. The validator flags this as unconditional \u2014 that is the intent.",
+      "skill_id": "save_run_folder",
+      "parameters": {
+        "run_name": {
+          "$input": "run_name"
+        },
+        "checkpoint": "start"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e_start_0_save_run_start",
+      "from_node": "start_0",
+      "to_node": "save_run_start",
+      "condition": {
+        "type": "default"
+      }
+    },
+    {
+      "edge_id": "e_reader_open_pre_grab_plate",
+      "from_node": "reader_open_pre",
+      "to_node": "grab_plate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_grab_plate_reader_load",
+      "from_node": "grab_plate",
+      "to_node": "reader_load",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_reader_load_reader_closed",
+      "from_node": "reader_load",
+      "to_node": "reader_closed",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_reader_closed_save_run",
+      "from_node": "reader_closed",
+      "to_node": "save_run",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_save_run_end_1",
+      "from_node": "save_run",
+      "to_node": "end_1",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_save_run_start_reader_open_pre",
+      "from_node": "save_run_start",
+      "to_node": "reader_open_pre",
+      "condition": {
+        "type": "default"
+      }
+    }
+  ],
+  "canvas_ui": {
+    "kind": "react",
+    "source_ref": "canvas/cfps_inhibitor_kinetic_read_screen.tsx",
+    "enabled": true,
+    "version": 1,
+    "updated_at": "2026-07-26T00:00:00.000Z"
+  }
+}

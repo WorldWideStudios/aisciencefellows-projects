@@ -1,0 +1,174 @@
+{
+  "run": 2,
+  "round": 2,
+  "version": 5,
+  "label": "r2-discovery-v5",
+  "assay": "nitrocefin_tem1",
+  "plate_map": "data/screens/2/v5/plate_map.json",
+  "compound_list": "data/screens/2/v5/compound_list.json",
+  "workflow": "mastermix/workflows/tem1_activity_screen.json",
+  "selection_rationale": "pvjthomas/runs/2/v5/selection_rationale.md",
+  "temperature_c": 25.0,
+  "equilibration_s": 120.0,
+  "slope_window_start_s": 180.0,
+  "slope_window_end_s": 480.0,
+  "kinetic_duration_s": 600.0,
+  "total_plate_time_s": 720.0,
+  "read_points": [
+    {
+      "index": 0,
+      "time_s": 0.0,
+      "wait_s": 0.0,
+      "read_label": "initial",
+      "absolute_time_s": 120.0
+    },
+    {
+      "index": 1,
+      "time_s": 30.0,
+      "wait_s": 30.0,
+      "read_label": "t030s",
+      "absolute_time_s": 150.0
+    },
+    {
+      "index": 2,
+      "time_s": 60.0,
+      "wait_s": 30.0,
+      "read_label": "t060s",
+      "absolute_time_s": 180.0
+    },
+    {
+      "index": 3,
+      "time_s": 90.0,
+      "wait_s": 30.0,
+      "read_label": "t090s",
+      "absolute_time_s": 210.0
+    },
+    {
+      "index": 4,
+      "time_s": 120.0,
+      "wait_s": 30.0,
+      "read_label": "t120s",
+      "absolute_time_s": 240.0
+    },
+    {
+      "index": 5,
+      "time_s": 150.0,
+      "wait_s": 30.0,
+      "read_label": "t150s",
+      "absolute_time_s": 270.0
+    },
+    {
+      "index": 6,
+      "time_s": 180.0,
+      "wait_s": 30.0,
+      "read_label": "t180s",
+      "absolute_time_s": 300.0
+    },
+    {
+      "index": 7,
+      "time_s": 210.0,
+      "wait_s": 30.0,
+      "read_label": "t210s",
+      "absolute_time_s": 330.0
+    },
+    {
+      "index": 8,
+      "time_s": 240.0,
+      "wait_s": 30.0,
+      "read_label": "t240s",
+      "absolute_time_s": 360.0
+    },
+    {
+      "index": 9,
+      "time_s": 270.0,
+      "wait_s": 30.0,
+      "read_label": "t270s",
+      "absolute_time_s": 390.0
+    },
+    {
+      "index": 10,
+      "time_s": 300.0,
+      "wait_s": 30.0,
+      "read_label": "t300s",
+      "absolute_time_s": 420.0
+    },
+    {
+      "index": 11,
+      "time_s": 330.0,
+      "wait_s": 30.0,
+      "read_label": "t330s",
+      "absolute_time_s": 450.0
+    },
+    {
+      "index": 12,
+      "time_s": 360.0,
+      "wait_s": 30.0,
+      "read_label": "t360s",
+      "absolute_time_s": 480.0
+    },
+    {
+      "index": 13,
+      "time_s": 390.0,
+      "wait_s": 30.0,
+      "read_label": "t390s",
+      "absolute_time_s": 510.0
+    },
+    {
+      "index": 14,
+      "time_s": 420.0,
+      "wait_s": 30.0,
+      "read_label": "t420s",
+      "absolute_time_s": 540.0
+    },
+    {
+      "index": 15,
+      "time_s": 450.0,
+      "wait_s": 30.0,
+      "read_label": "t450s",
+      "absolute_time_s": 570.0
+    },
+    {
+      "index": 16,
+      "time_s": 480.0,
+      "wait_s": 30.0,
+      "read_label": "t480s",
+      "absolute_time_s": 600.0
+    },
+    {
+      "index": 17,
+      "time_s": 510.0,
+      "wait_s": 30.0,
+      "read_label": "t510s",
+      "absolute_time_s": 630.0
+    },
+    {
+      "index": 18,
+      "time_s": 540.0,
+      "wait_s": 30.0,
+      "read_label": "t540s",
+      "absolute_time_s": 660.0
+    },
+    {
+      "index": 19,
+      "time_s": 570.0,
+      "wait_s": 30.0,
+      "read_label": "t570s",
+      "absolute_time_s": 690.0
+    },
+    {
+      "index": 20,
+      "time_s": 600.0,
+      "wait_s": 30.0,
+      "read_label": "t600s",
+      "absolute_time_s": 720.0
+    }
+  ],
+  "gen5_protocol_notes": [
+    "Enable incubation at 25 \u00b0C; Gen5 waits for setpoint before the first read when the IU incubator is installed.",
+    "Set read mode to kinetic (not endpoint-only).",
+    "Schedule 21 reads: initial, then every 30s until 600s kinetic time.",
+    "Hold at 25 \u00b0C for 120s after lid close before the first kinetic read (cold-start warm-up).",
+    "Score slope on kinetic times 180\u2013480s (300\u2013600s from plate close).",
+    "Robot control: temperature is not set by platereader_measure today \u2014 bake these values into the saved Gen5 protocol or add AutoGUI steps."
+  ]
+}

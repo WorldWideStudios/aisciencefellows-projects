@@ -1,0 +1,108 @@
+{
+  "workflow_id": "media_refill_overall",
+  "name": "Media Refill Overall",
+  "description": "Overall media refill workflow skeleton: wait for POST /mediaRefill, retrieve and handle the plate, pipette media, close it, and store samples.",
+  "version": "0.1.0",
+  "author": "zeon",
+  "created_at": "2026-07-26T00:00:00.000Z",
+  "updated_at": "2026-07-26T00:00:00.000Z",
+  "simulation_validated": false,
+  "objects": [],
+  "inputs": [
+    {
+      "name": "endpoint_path",
+      "type": "string",
+      "description": "Endpoint path that triggers the media refill workflow.",
+      "defaultValue": "/mediaRefill"
+    }
+  ],
+  "nodes": [
+    {
+      "node_id": "start_0",
+      "type": "start",
+      "label": "Start"
+    },
+    {
+      "node_id": "wait_for_media_refill_request",
+      "type": "skill",
+      "label": "Wait for POST /mediaRefill",
+      "description": "Placeholder for hosting an endpoint and waiting until a client posts to it.",
+      "skill_id": "wait_for_media_refill_request",
+      "parameters": {
+        "endpoint_path": { "$input": "endpoint_path" }
+      }
+    },
+    {
+      "node_id": "get_plate_from_storage",
+      "type": "skill",
+      "label": "GetPlateFromStorage",
+      "description": "Placeholder for retrieving the plate from storage.",
+      "skill_id": "get_plate_from_storage",
+      "parameters": {}
+    },
+    {
+      "node_id": "grab_plate",
+      "type": "skill",
+      "label": "GrabPlate",
+      "description": "Placeholder for grabbing the plate.",
+      "skill_id": "grab_plate",
+      "parameters": {}
+    },
+    {
+      "node_id": "place_plate",
+      "type": "skill",
+      "label": "PlacePlate",
+      "description": "Placeholder for placing the plate at the work location.",
+      "skill_id": "place_plate",
+      "parameters": {}
+    },
+    {
+      "node_id": "take_off_top",
+      "type": "skill",
+      "label": "TakeOffTop",
+      "description": "Placeholder for removing the top.",
+      "skill_id": "take_off_top",
+      "parameters": {}
+    },
+    {
+      "node_id": "pipette_media",
+      "type": "skill",
+      "label": "PipetteMedia",
+      "description": "Placeholder for pipetting media.",
+      "skill_id": "pipette_media",
+      "parameters": {}
+    },
+    {
+      "node_id": "put_on_top",
+      "type": "skill",
+      "label": "PutOnTop",
+      "description": "Placeholder for putting the top back on.",
+      "skill_id": "put_on_top",
+      "parameters": {}
+    },
+    {
+      "node_id": "store_samples",
+      "type": "skill",
+      "label": "StoreSamples",
+      "description": "Placeholder for storing samples.",
+      "skill_id": "store_samples",
+      "parameters": {}
+    },
+    {
+      "node_id": "end_1",
+      "type": "end",
+      "label": "End"
+    }
+  ],
+  "edges": [
+    { "edge_id": "e0", "from_node": "start_0", "to_node": "wait_for_media_refill_request", "condition": { "type": "default" } },
+    { "edge_id": "e1", "from_node": "wait_for_media_refill_request", "to_node": "get_plate_from_storage", "condition": { "type": "on_success" } },
+    { "edge_id": "e2", "from_node": "get_plate_from_storage", "to_node": "grab_plate", "condition": { "type": "on_success" } },
+    { "edge_id": "e3", "from_node": "grab_plate", "to_node": "place_plate", "condition": { "type": "on_success" } },
+    { "edge_id": "e4", "from_node": "place_plate", "to_node": "take_off_top", "condition": { "type": "on_success" } },
+    { "edge_id": "e5", "from_node": "take_off_top", "to_node": "pipette_media", "condition": { "type": "on_success" } },
+    { "edge_id": "e6", "from_node": "pipette_media", "to_node": "put_on_top", "condition": { "type": "on_success" } },
+    { "edge_id": "e7", "from_node": "put_on_top", "to_node": "store_samples", "condition": { "type": "on_success" } },
+    { "edge_id": "e8", "from_node": "store_samples", "to_node": "end_1", "condition": { "type": "on_success" } }
+  ]
+}

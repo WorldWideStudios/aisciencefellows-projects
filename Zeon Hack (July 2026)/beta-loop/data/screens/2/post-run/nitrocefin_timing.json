@@ -1,0 +1,261 @@
+{
+  "run_id": "exec_tem1_activity_screen_hack_world_22_20260725_230432",
+  "source_log": "data/screens/2/post-run/run_log_exec_tem1_activity_screen_hack_world_22_20260725_230432.txt",
+  "generated_at_utc": "2026-07-26T15:59:10.343411Z",
+  "method": "run_log_hole_10_batch_interpolation",
+  "event_count": 36,
+  "events": [
+    {
+      "t0_utc": "2026-07-26T08:39:18.833333Z",
+      "condition": "no_tem1",
+      "well": "D3",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:39:40.500000Z",
+      "condition": "no_tem1",
+      "well": "D7",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:40:02.166667Z",
+      "condition": "no_tem1",
+      "well": "E11",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:40:43.666667Z",
+      "condition": "pos-ctrl-clavaculin",
+      "well": "F3",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:41:05Z",
+      "condition": "pos-ctrl-clavaculin",
+      "well": "F7",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:41:26.333333Z",
+      "condition": "pos-ctrl-clavaculin",
+      "well": "G11",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:42:07Z",
+      "condition": "T1262",
+      "well": "B2",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:42:29Z",
+      "condition": "T1262",
+      "well": "D2",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:42:51Z",
+      "condition": "T1262",
+      "well": "F2",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:43:32.833333Z",
+      "condition": "T6685",
+      "well": "B4",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:43:54.500000Z",
+      "condition": "T6685",
+      "well": "D4",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:44:16.166667Z",
+      "condition": "T6685",
+      "well": "F4",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:44:57.833333Z",
+      "condition": "T14081",
+      "well": "B6",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:45:19.500000Z",
+      "condition": "T14081",
+      "well": "D6",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:45:41.166667Z",
+      "condition": "T14081",
+      "well": "F6",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:46:21.666667Z",
+      "condition": "T1005",
+      "well": "B8",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:46:43Z",
+      "condition": "T1005",
+      "well": "D8",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:47:04.333333Z",
+      "condition": "T1005",
+      "well": "F8",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:47:45.666667Z",
+      "condition": "T1008",
+      "well": "B10",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:48:07Z",
+      "condition": "T1008",
+      "well": "D10",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:48:28.333333Z",
+      "condition": "T1008",
+      "well": "F10",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:49:09.833333Z",
+      "condition": "T0224",
+      "well": "C5",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:49:31.500000Z",
+      "condition": "T0224",
+      "well": "E5",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:49:53.166667Z",
+      "condition": "T0224",
+      "well": "G5",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:50:33.833333Z",
+      "condition": "T0985",
+      "well": "C9",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:50:55.500000Z",
+      "condition": "T0985",
+      "well": "E9",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:51:17.166667Z",
+      "condition": "T0985",
+      "well": "G9",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:51:58.833333Z",
+      "condition": "T0138",
+      "well": "C3",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:52:20.500000Z",
+      "condition": "T0138",
+      "well": "E3",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:52:42.166667Z",
+      "condition": "T0138",
+      "well": "G3",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:53:23.666667Z",
+      "condition": "T8390",
+      "well": "C7",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:53:45Z",
+      "condition": "T8390",
+      "well": "E7",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:54:06.333333Z",
+      "condition": "T8390",
+      "well": "G7",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:54:57.833333Z",
+      "condition": "vehicle",
+      "well": "B3",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:55:19.500000Z",
+      "condition": "vehicle",
+      "well": "B7",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:55:41.166667Z",
+      "condition": "vehicle",
+      "well": "C11",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    }
+  ]
+}

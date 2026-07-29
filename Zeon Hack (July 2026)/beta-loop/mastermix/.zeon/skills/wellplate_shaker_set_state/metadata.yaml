@@ -1,0 +1,10 @@
+skill_id: wellplate_shaker_set_state
+version: "1.0.0"
+description: "Record whether the shaker/incubator is currently running into its live_state 'running' flag. Presses nothing — this only corrects the tracked state that wellplate_shaker_run relies on to decide whether a button press is needed."
+
+# parameters are derived from the wellplate_shaker_set_state() signature in robotic_code.py
+
+tags:
+  - shaker
+  - incubator
+  - state

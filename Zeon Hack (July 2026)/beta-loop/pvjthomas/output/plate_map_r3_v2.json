@@ -1,0 +1,231 @@
+{
+  "run": 3,
+  "version": 2,
+  "round": 3,
+  "assay_type": "single_point",
+  "final_volume_ul": 50,
+  "compound_volume_ul": 5,
+  "replicates_per_compound": 3,
+  "exclude_compound_ids": [
+    "T19709"
+  ],
+  "compound_list": "data/screens/3/v2-deprecated/compound_list.json",
+  "rationale_doc": "pvjthomas/runs/3/v2/selection_rationale.md",
+  "layout_notes": "96-well flat bottom, column-strip layout: no edge wells (rows A/H, cols 1/12 empty). X-spaced sample columns only (no horizontally adjacent samples): B/D/F @ 2/4/6/8/10, then C/E/G @ 5/9, then C/E/G @ 3/7 for overflow. Controls (6): 3\u00d7 no-TEM-1 @ D3/D7/E11; 3\u00d7 clavulanic acid @ F3/F7/G11. No vehicle controls.",
+  "layout": "column_strip",
+  "layout_rules": {
+    "interior_only": true,
+    "max_x_separation": true,
+    "replicate_axis": "column",
+    "sample_cols_band1": "2,4,6,8,10 on B,D,F",
+    "sample_cols_band2": "5,9 on C,E,G",
+    "sample_cols_band3": "3,7 on C,E,G",
+    "control_rows": "B,D,F @ 3/7; C,E,G @ 11",
+    "control_cols": "3,7,11"
+  },
+  "compound_placement_rules": {
+    "positive_control_not_also_sample": {
+      "description": "If clavulanic acid (T19860) is used as the positive control, do not also include it in the discovery sample compound list.",
+      "positive_control_compound_id": "T19860",
+      "enforcement": "sample list excludes positive-control compound_id before layout"
+    }
+  },
+  "wells": {
+    "D3": {
+      "compound_id": null,
+      "concentration_uM": 0,
+      "role": "no_tem1",
+      "bucket": "control"
+    },
+    "D7": {
+      "compound_id": null,
+      "concentration_uM": 0,
+      "role": "no_tem1",
+      "bucket": "control"
+    },
+    "E11": {
+      "compound_id": null,
+      "concentration_uM": 0,
+      "role": "no_tem1",
+      "bucket": "control"
+    },
+    "F3": {
+      "compound_id": "T19860",
+      "concentration_uM": 50.0,
+      "role": "pos-ctrl-clavaculin",
+      "bucket": "control"
+    },
+    "F7": {
+      "compound_id": "T19860",
+      "concentration_uM": 50.0,
+      "role": "pos-ctrl-clavaculin",
+      "bucket": "control"
+    },
+    "G11": {
+      "compound_id": "T19860",
+      "concentration_uM": 50.0,
+      "role": "pos-ctrl-clavaculin",
+      "bucket": "control"
+    },
+    "B2": {
+      "compound_id": "T1008",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "substrate_control",
+      "replicate": 1,
+      "functional_class": "negative"
+    },
+    "D2": {
+      "compound_id": "T1008",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "substrate_control",
+      "replicate": 2,
+      "functional_class": "negative"
+    },
+    "F2": {
+      "compound_id": "T1008",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "substrate_control",
+      "replicate": 3,
+      "functional_class": "negative"
+    },
+    "B4": {
+      "compound_id": "T0224",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "substrate_control",
+      "replicate": 1,
+      "functional_class": "negative"
+    },
+    "D4": {
+      "compound_id": "T0224",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "substrate_control",
+      "replicate": 2,
+      "functional_class": "negative"
+    },
+    "F4": {
+      "compound_id": "T0224",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "substrate_control",
+      "replicate": 3,
+      "functional_class": "negative"
+    },
+    "B6": {
+      "compound_id": "T0138",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "diverse_pick",
+      "replicate": 1,
+      "functional_class": "unknown"
+    },
+    "D6": {
+      "compound_id": "T0138",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "diverse_pick",
+      "replicate": 2,
+      "functional_class": "unknown"
+    },
+    "F6": {
+      "compound_id": "T0138",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "diverse_pick",
+      "replicate": 3,
+      "functional_class": "unknown"
+    },
+    "B8": {
+      "compound_id": "T1005",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "substrate_control",
+      "replicate": 1,
+      "functional_class": "negative"
+    },
+    "D8": {
+      "compound_id": "T1005",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "substrate_control",
+      "replicate": 2,
+      "functional_class": "negative"
+    },
+    "F8": {
+      "compound_id": "T1005",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "substrate_control",
+      "replicate": 3,
+      "functional_class": "negative"
+    },
+    "B10": {
+      "compound_id": "T8390",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "diverse_pick",
+      "replicate": 1,
+      "functional_class": "unknown"
+    },
+    "D10": {
+      "compound_id": "T8390",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "diverse_pick",
+      "replicate": 2,
+      "functional_class": "unknown"
+    },
+    "F10": {
+      "compound_id": "T8390",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "diverse_pick",
+      "replicate": 3,
+      "functional_class": "unknown"
+    },
+    "C5": {
+      "compound_id": "T0198",
+      "concentration_uM": 50.0,
+      "role": "sample",
+      "bucket": "diverse_pick",
+      "replicate": 1,
+      "functional_class": "unknown"
+    },
+    "E5": {
+      "compound_id": "T0198",
+      "concentration_uM": 50.0,
+      "role": "sample",
+      "bucket": "diverse_pick",
+      "replicate": 2,
+      "functional_class": "unknown"
+    },
+    "G5": {
+      "compound_id": "T0198",
+      "concentration_uM": 50.0,
+      "role": "sample",
+      "bucket": "diverse_pick",
+      "replicate": 3,
+      "functional_class": "unknown"
+    }
+  },
+  "versioned_path": "data/screens/3/v2-deprecated/plate_map.json",
+  "rationale_doc_active": "pvjthomas/selection_rationale.md",
+  "version_label": "r3-discovery-v2",
+  "control_summary": {
+    "vehicle": 0,
+    "no_tem1": 3,
+    "positive_clavulanic_T19860": 3,
+    "total": 6
+  },
+  "sample_summary": {
+    "compounds": 6,
+    "wells": 18
+  },
+  "compound_concentration_uM": 50,
+  "working_solution_uM": 500,
+  "description": "Round 3 discovery v2 \u2014 6 compounds in triplicate @ 50 \u00b5M (reduced from 24 in v1); column-strip layout (x-spaced columns, triplicates on B/D/F and C/E/G); no vehicle controls"
+}

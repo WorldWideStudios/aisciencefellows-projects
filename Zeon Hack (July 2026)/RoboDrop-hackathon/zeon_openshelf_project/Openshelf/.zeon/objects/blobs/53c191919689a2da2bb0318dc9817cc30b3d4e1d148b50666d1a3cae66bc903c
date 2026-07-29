@@ -1,0 +1,12 @@
+skill_id: openshelf_retrieve
+version: "1.0.0"
+description: "Bring a slot to the access position and poll until the shelf reports settled. Returns safe_to_enter, which is what arm motion must be gated on."
+
+preconditions: {}   # parsed but NOT enforced by the executor - never gate on these
+postconditions: {}
+safety_rules: []
+tags:
+  - openshelf
+  - bridge
+  - http
+world_state_prime: null

@@ -1,0 +1,11 @@
+skill_id: save_run_folder
+version: "1.0.0"
+description: "Finalize a run: bundle the structured run log (jsonl + a readable txt), any captured images, and the run metadata/inputs into a named, timestamped folder (<run_name>_<timestamp>) inside the per-run artifact store that syncs to the project data/ directory. Intended as the last node of a workflow; the operator supplies run_name from the run-setup canvas."
+
+# parameters are derived from the save_run_folder() signature in robotic_code.py
+
+tags:
+  - meta
+  - report
+  - run
+  - artifacts

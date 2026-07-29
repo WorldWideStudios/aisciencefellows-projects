@@ -1,0 +1,10 @@
+skill_id: epipette_aspirate
+version: "1.0.0"
+description: "Aspirate from a named well/tube anchor, with approach and dip heights expressed relative to the anchor (well top)."
+
+# parameters are derived from the epipette_aspirate() signature in robotic_code.py
+
+tags:
+  - pipette_demo
+  - epipette
+  - liquid_handling

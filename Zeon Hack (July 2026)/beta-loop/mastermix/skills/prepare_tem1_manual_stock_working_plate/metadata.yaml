@@ -1,0 +1,26 @@
+skill_id: prepare_tem1_manual_stock_working_plate
+version: "1.0.0"
+description: >-
+  Prepare the TEM-1 manual-nitro screen working-solution plate from manually
+  prepared source stocks: positive control, nine TBD test compounds, and matched
+  vehicle. TEM-1 and nitrocefin stocks are not prepared here.
+
+parameter_descriptions:
+  pipette: "Starting pipette. The skill swaps between 10 uL and 120 uL pipettes as needed."
+  tipbox: "Starting tip rack; same-type racks are selected automatically by the pipette helpers."
+  blb_source: "Source object containing BLB diluent."
+  blb_anchor: "Anchor/hole containing BLB for positive/test-compound working-solution dilutions."
+  vehicle_blb_anchor: "Anchor/hole containing BLB for the matched vehicle working solution and no-enzyme controls."
+  dmso_source: "Source object containing 100% DMSO for vehicle working solution."
+  dmso_anchor: "Anchor/hole containing 100% DMSO."
+  working_plate: "PCR plate where positive, vehicle, and test-compound working solutions are prepared."
+
+preconditions: {}
+postconditions: {}
+
+tags:
+  - dilution
+  - liquid_handling
+  - tem1
+  - assay
+  - manual_nitrocefin

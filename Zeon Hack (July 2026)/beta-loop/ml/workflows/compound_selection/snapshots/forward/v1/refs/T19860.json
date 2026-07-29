@@ -1,0 +1,118 @@
+{
+  "compound_id": "T19860",
+  "name": "Clavulanic Acid",
+  "match": "yes",
+  "support": "strong",
+  "mechanism": "Class A \u03b2-lactamase suicide inhibitor (irreversible acylation of active-site serine); TEM-1 is the canonical target.",
+  "assay_recommendations": {
+    "tem1_nitrocefin": {
+      "screen_conc_uM": 50,
+      "screen_rationale": "Project positive-control concentration; ~60\u00d7 above literature Ki (0.85 \u00b5M) \u2014 expect strong inhibition.",
+      "dose_response_uM": [
+        3,
+        6,
+        12,
+        25,
+        50,
+        100,
+        200,
+        400
+      ],
+      "ki_determination_uM": [
+        0.25,
+        0.5,
+        1,
+        2,
+        5
+      ],
+      "nitrocefin_uM": 200,
+      "enzyme_nM": 0.25,
+      "buffer": "100 mM NaPi, pH 6.4",
+      "temperature_C": 25,
+      "read_nm": 486,
+      "read_duration_min": 10,
+      "bsa_uM": 10,
+      "pre_incubation_min": 10,
+      "metric": "relative nitrocefin hydrolysis vs no-inhibitor control (initial slope or 10 min endpoint)"
+    }
+  },
+  "entries": [
+    {
+      "source": "paperclip",
+      "paperclip_search_id": "s_9543561a",
+      "paperclip_map_id": "m_219af5c4",
+      "pmid": "40484381",
+      "pmcid": "PMC12274840",
+      "doi": "10.1016/j.jbc.2025.110347",
+      "title": "A glycine at position 105 leads to clavulanic acid and avibactam resistance in class A \u03b2-lactamases",
+      "authors": "Radojkovi\u0107 et al.",
+      "journal": "Journal of Biological Chemistry",
+      "year": 2025,
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "ki_uM": 0.85,
+      "ki_uM_mutant_Y105G": 5.15,
+      "ic50_uM": null,
+      "note": "Primary evidence: TEM-1 WT Ki = 0.85 \u00b5M for clavulanic acid in nitrocefin inhibition assay (Table 4). TEM-1 Y105G Ki = 5.15 \u00b5M. Methods: 0.25\u20130.25 nM TEM-1, clavulanic acid 0.25\u20135 \u00b5M, 200 \u00b5M nitrocefin, 10 \u00b5M BSA, 100 mM NaPi pH 6.4, 25 \u00b0C, A486 for 10 min."
+    },
+    {
+      "source": "paperclip",
+      "paperclip_search_id": "s_9543561a",
+      "pmid": null,
+      "pmcid": "PMC9100253",
+      "doi": "10.3390/ijms23095229",
+      "title": "Characterization of Interactions between CTX-M-15 and Clavulanic Acid, Desfuroylceftiofur, Ceftiofur, Ampicillin, and Nitrocefin",
+      "authors": "Ahmadvand et al.",
+      "journal": "International Journal of Molecular Sciences",
+      "year": 2022,
+      "target": "CTX-M-15 (class A; not TEM-1)",
+      "assay": "ceftiofur hydrolysis (nitrocefin used for general kinetics)",
+      "ki_uM": 0.022,
+      "ic50_uM": null,
+      "note": "Supporting class-A precedent: clavulanic acid Ki = 0.022 \u00b5M vs CTX-M-15; clavulanic acid 0\u201350 \u00b5M, 10 nM enzyme, PBS pH 7.4, 37 \u00b0C."
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Clavulanic Acid. Map complete: 30/30 tasks succeeded in 5867ms\nResults ID: m_7a173e41\nFull results: /.gxl/map_m_7a173e41.txt\n\n  [success] Saturation Mutagenesis and Molecular Modeling: The Impact of Methionin  (PMC11276661)\n    Based on the provided text, the paper does not contain data regarding Clavulanic Acid, IC50/Ki values, nitrocefin substrate concentrations, or assays \n  [success] A glycine at position 105 leads to clavulanic acid and avibactam resis  (PMC12274840)\n    Based on the provided paper, here are the details for Clavulanic Acid against TEM-1 $\\beta$-lactamase in the nitrocefin assay:  * **Inhibitor paramete\n  [success] A drug-resistant \u03b2-lactamase variant changes the conformation of its a  (PMC11843585)\n    Based on the provided paper, the requested information for Clavulanic Acid against TEM-1 beta-lactamase in a nitrocefin colorimetric assay is **not av\n  [success] In Silico Study of the Potential of Brazilein Sappan Wood as a Beta-La  (PMC11229569)\n    Based on the provided paper content, there is no mention of a nitrocefin colorimetric assay, IC50 values, Ki values, inhibitor concentrations, substra\n  [success] Kinetic and Structural Requirements for Carbapenemase\nActivity in GES-  (PMC4303295)\n    Based on the provided paper, there is no mention of Clavulanic Acid, TEM-1 beta-lactamase, or their use in a nitrocefin colorimetric assay. The text f\n  [success] In Vitro Activity of Cefaclor/Beta-Lactamases Inhibitors (Clavulanic A  (PMC12189933)\n    Based on the provided pap",
+      "paperclip_search_id": "s_90cbaf3c",
+      "paperclip_map_id": "m_7a173e41",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "pmcid": "PMC11276661",
+      "paperclip_source": "pmc"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Clavulanic Acid. Map complete: 23/23 tasks succeeded in 4145ms\nResults ID: m_ea99dda0\nFull results: /.gxl/map_m_ea99dda0.txt\n\n  [success] Distant Site Mutations in Clinical TEM Beta-Lactamase Variants Enhance  (bio_33da24cd7504)\n    Based on the provided paper content, there is no mention of a nitrocefin colorimetric assay, IC50, Ki values, or testing involving Clavulanic Acid aga\n  [success] Mechanistic Basis for Inhibition of the Extended Spectrum Class A \u03b2-La  (bio_d7ea2f4d7462)\n    The provided paper does not contain information about Clavulanic Acid against TEM-1 beta-lactamase, nor does it provide kinetic values ($K_i$ or $IC_{\n  [success] Structure and dynamics of  Burkholderia pseudomallei  OXA-57, a distin  (bio_1861cd3a6f3d)\n    Based on the provided paper content, there is no information regarding the testing of Clavulanic Acid against TEM-1 beta-lactamase or any nitrocefin c\n  [success] Single-Domain Antibodies as Potent Inhibitors of Clinically Relevant \u03b2  (bio_dc341c396cb5)\n    Based on the provided paper content, there is no mention of Clavulanic Acid tested against TEM-1 beta-lactamase in a nitrocefin colorimetric assay, no\n  [success] Sulbactam-mediated inhibition of TEM-1 \u03b2-lactamase increases specific   (bio_e76fe1d274e9)\n    Based on the provided paper content, the exact values for $K_i$, $\\text{IC}_{50}$ (in $\\mu\\text{M}$), nitrocefin substrate concentration, TEM-1 enzyme\n  [success] Substitution of a valine to glutamic acid in the omega-like loop of MS  (bio_71f2617c6f35",
+      "paperclip_search_id": "s_a80bdb38",
+      "paperclip_map_id": "m_ea99dda0",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "paperclip_source": "biorxiv"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Clavulanic Acid. Map complete: 10/10 tasks succeeded in 2850ms\nResults ID: m_92c010c4\nFull results: /.gxl/map_m_92c010c4.txt\n\n  [success] bla - Beta-lactamase TEM  (P62593)\n    Based on the provided paper content, there is no information regarding Clavulanic Acid, its $K_i$ or $\\text{IC}_{50}$ values, nitrocefin colorimetric \n  [success] bla - Beta-lactamase TEM  (P62594)\n    Based on the provided paper content, there is no mention of Clavulanic Acid, Ki, IC50 values, nitrocefin colorimetric assays, or related assay concent\n  [success] blaT-12b - Beta-lactamase TEM-12  (Q48406)\n    Based on the provided paper content, there is no information regarding Clavulanic Acid, its $K_i$ or $\\text{IC}_{50}$ values, nitrocefin assays, inhib\n  [success] penPC - Beta-lactamase 1  (P10424)\n    Based on the provided paper content, there is no mention of Clavulanic Acid, TEM-1 beta-lactamase, nitrocefin colorimetric assays, Ki, IC50, or relate\n  [success] blaY - Beta-lactamase 1  (P00809)\n    Based on the provided paper content, there is no information regarding Clavulanic Acid, TEM-1 beta-lactamase, nitrocefin colorimetric assays, $K_i$, $\n  [success] blaCI - Beta-lactamase 1  (P28018)\n    Based on the provided paper content, there is no mention of Clavulanic Acid, TEM-1 beta-lactamase, nitrocefin colorimetric assays, or associated Ki/IC\n  [success] blaL - Beta-lactamase 1  (Q03680)\n    Based on the provided paper content, there is no mention of Clavulanic Acid, TEM-1 beta-lactamase, nitrocefin colorimetric",
+      "paperclip_search_id": "s_71a7844a",
+      "paperclip_map_id": "m_92c010c4",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "paperclip_source": "proteins"
+    }
+  ],
+  "downloads": [
+    {
+      "pmcid": "PMC12274840",
+      "file": "pvjthomas/local/literature/T19860/downloads/PMC12274840_bioc.xml",
+      "format": "BioC-XML (PMC OA full text)",
+      "license": "CC BY 4.0"
+    }
+  ],
+  "raw_local": "pvjthomas/local/literature/T19860/"
+}

@@ -1,0 +1,69 @@
+{
+  "compound_id": "T19860",
+  "name": "Clavulanic Acid",
+  "match": "yes",
+  "support": "strong",
+  "mechanism": "Class A β-lactamase suicide inhibitor (irreversible acylation of active-site serine); TEM-1 is the canonical target.",
+  "assay_recommendations": {
+    "tem1_nitrocefin": {
+      "screen_conc_uM": 50,
+      "screen_rationale": "Project positive-control concentration; ~60× above literature Ki (0.85 µM) — expect strong inhibition.",
+      "dose_response_uM": [3, 6, 12, 25, 50, 100, 200, 400],
+      "ki_determination_uM": [0.25, 0.5, 1, 2, 5],
+      "nitrocefin_uM": 200,
+      "enzyme_nM": 0.25,
+      "buffer": "100 mM NaPi, pH 6.4",
+      "temperature_C": 25,
+      "read_nm": 486,
+      "read_duration_min": 10,
+      "bsa_uM": 10,
+      "pre_incubation_min": 10,
+      "metric": "relative nitrocefin hydrolysis vs no-inhibitor control (initial slope or 10 min endpoint)"
+    }
+  },
+  "entries": [
+    {
+      "source": "paperclip",
+      "paperclip_search_id": "s_9543561a",
+      "paperclip_map_id": "m_219af5c4",
+      "pmid": "40484381",
+      "pmcid": "PMC12274840",
+      "doi": "10.1016/j.jbc.2025.110347",
+      "title": "A glycine at position 105 leads to clavulanic acid and avibactam resistance in class A β-lactamases",
+      "authors": "Radojković et al.",
+      "journal": "Journal of Biological Chemistry",
+      "year": 2025,
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "ki_uM": 0.85,
+      "ki_uM_mutant_Y105G": 5.15,
+      "ic50_uM": null,
+      "note": "Primary evidence: TEM-1 WT Ki = 0.85 µM for clavulanic acid in nitrocefin inhibition assay (Table 4)."
+    },
+    {
+      "source": "paperclip",
+      "paperclip_search_id": "s_9543561a",
+      "pmid": null,
+      "pmcid": "PMC9100253",
+      "doi": "10.3390/ijms23095229",
+      "title": "Characterization of Interactions between CTX-M-15 and Clavulanic Acid",
+      "authors": "Ahmadvand et al.",
+      "journal": "International Journal of Molecular Sciences",
+      "year": 2022,
+      "target": "CTX-M-15 (class A; not TEM-1)",
+      "assay": "ceftiofur hydrolysis",
+      "ki_uM": 0.022,
+      "ic50_uM": null,
+      "note": "Supporting class-A precedent."
+    }
+  ],
+  "downloads": [
+    {
+      "pmcid": "PMC12274840",
+      "file": "pvjthomas/local/literature/T19860/downloads/PMC12274840_bioc.xml",
+      "format": "BioC-XML (PMC OA full text)",
+      "license": "CC BY 4.0"
+    }
+  ],
+  "raw_local": "pvjthomas/local/literature/T19860/"
+}

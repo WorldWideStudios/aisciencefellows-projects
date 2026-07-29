@@ -1,0 +1,257 @@
+{
+  "run_id": "exec_tem1_activity_screen_hack_world_22_20260725_230432",
+  "events": [
+    {
+      "t0_utc": "2026-07-26T08:39:38.486148+00:00",
+      "condition": "no_tem1_control",
+      "well": "D3",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:39:52.372560+00:00",
+      "condition": "no_tem1_control",
+      "well": "D7",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:40:05.859963+00:00",
+      "condition": "no_tem1_control",
+      "well": "E11",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:41:02.726533+00:00",
+      "condition": "positive_control",
+      "well": "F3",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:41:16.389986+00:00",
+      "condition": "positive_control",
+      "well": "F7",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:41:30.027097+00:00",
+      "condition": "positive_control",
+      "well": "G11",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:42:26.971133+00:00",
+      "condition": "compound_1",
+      "well": "B2",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:42:40.959140+00:00",
+      "condition": "compound_1",
+      "well": "D2",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:42:54.831718+00:00",
+      "condition": "compound_1",
+      "well": "F2",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:43:51.858156+00:00",
+      "condition": "compound_2",
+      "well": "B4",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:44:05.771294+00:00",
+      "condition": "compound_2",
+      "well": "D4",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:44:19.880244+00:00",
+      "condition": "compound_2",
+      "well": "F4",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:45:16.940643+00:00",
+      "condition": "compound_3",
+      "well": "B6",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:45:30.561337+00:00",
+      "condition": "compound_3",
+      "well": "D6",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:45:44.452308+00:00",
+      "condition": "compound_3",
+      "well": "F6",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:46:41.098530+00:00",
+      "condition": "compound_4",
+      "well": "B8",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:46:54.874147+00:00",
+      "condition": "compound_4",
+      "well": "D8",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:47:08.394494+00:00",
+      "condition": "compound_4",
+      "well": "F8",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:48:04.937980+00:00",
+      "condition": "compound_5",
+      "well": "B10",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:48:18.246991+00:00",
+      "condition": "compound_5",
+      "well": "D10",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:48:31.613394+00:00",
+      "condition": "compound_5",
+      "well": "F10",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:49:28.853898+00:00",
+      "condition": "compound_6",
+      "well": "C5",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:49:42.680015+00:00",
+      "condition": "compound_6",
+      "well": "E5",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:49:56.472772+00:00",
+      "condition": "compound_6",
+      "well": "G5",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:50:53.711371+00:00",
+      "condition": "compound_7",
+      "well": "C9",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:51:07.256103+00:00",
+      "condition": "compound_7",
+      "well": "E9",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:51:20.820546+00:00",
+      "condition": "compound_7",
+      "well": "G9",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:52:17.747230+00:00",
+      "condition": "compound_8",
+      "well": "C3",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:52:31.724294+00:00",
+      "condition": "compound_8",
+      "well": "E3",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:52:45.892814+00:00",
+      "condition": "compound_8",
+      "well": "G3",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:53:42.963532+00:00",
+      "condition": "compound_9",
+      "well": "C7",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:53:56.568480+00:00",
+      "condition": "compound_9",
+      "well": "E7",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:54:10.135913+00:00",
+      "condition": "compound_9",
+      "well": "G7",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:55:17.455366+00:00",
+      "condition": "vehicle_tem1_control",
+      "well": "B3",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:55:31.215991+00:00",
+      "condition": "vehicle_tem1_control",
+      "well": "B7",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T08:55:44.827938+00:00",
+      "condition": "vehicle_tem1_control",
+      "well": "C11",
+      "source_anchor": "hole_10",
+      "volume_ul": 25.0
+    }
+  ]
+}

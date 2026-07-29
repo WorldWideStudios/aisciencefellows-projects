@@ -1,0 +1,12 @@
+skill_id: openshelf_store_item
+version: "1.0.0"
+description: "Store an item by NAME via the OpenShelf robot API. Embeds openshelf_read_storage to resolve the name to its real UPCA, then store_item (robot auto-assigns the cell). Sim mode returns canned success."
+
+# parameters are derived from the openshelf_store_item() signature in robotic_code.py
+
+tags:
+  - openshelf
+  - api
+  - robot
+  - store
+  - meta

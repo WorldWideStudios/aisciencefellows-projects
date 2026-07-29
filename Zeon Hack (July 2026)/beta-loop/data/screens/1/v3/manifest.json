@@ -1,0 +1,18 @@
+{
+  "run": 1,
+  "round": 1,
+  "version": 3,
+  "label": "r1-discovery-v3",
+  "created_at": "2026-07-25T15:15:00-07:00",
+  "author": "pvjthomas",
+  "status": "pending_signoff",
+  "supersedes": "data/screens/1/v1/manifest.json",
+  "note": "v2 validation plate remains active on robot until discovery v3 is signed off",
+  "description": "Round 1 discovery \u2014 72 sample wells (23 unique compounds \u00d7 triplicate) + 12 controls on 96-well plate @ 50 \u00b5M",
+  "files": {
+    "plate_map": "data/screens/1/v3/plate_map.json",
+    "selection_rationale": "pvjthomas/runs/1/v3/selection_rationale.md",
+    "active_plate_map": "data/plate_map_r1.json",
+    "active_selection_rationale": "pvjthomas/selection_rationale.md"
+  }
+}

@@ -1,0 +1,37 @@
+# beaker object model — populated later
+urdf: beaker.urdf
+
+parts: {}
+
+articulations:
+  default:
+    description: "Empty default articulation"
+    joints: {}
+
+anchors:
+  object:
+    parent_link: world
+    description: "World convention: beaker placement frame at its modeled center."
+    link_T_anchor:
+      xyz: [0.0, 0.0, 0.0]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  side_grasp:
+    parent_link: body
+    description: "TCP convention: right-arm top-down approach with the fingers closing around the beaker sides."
+    link_T_anchor:
+      xyz: [0.0, 0.0, 0.0]
+      wxyz: [0.0, 0.70710678, 0.70710678, 0.0]
+    grasp:
+      width: 0.04
+      standoff: 0.12
+      gripper_variant: "stock"
+  side_grasp_left:
+    parent_link: body
+    description: "TCP convention: left-arm top-down approach with the fingers closing around the beaker sides."
+    link_T_anchor:
+      xyz: [0.0, 0.0, 0.0]
+      wxyz: [0.0, 0.70710678, -0.70710678, 0.0]
+    grasp:
+      width: 0.04
+      standoff: 0.12
+      gripper_variant: "stock"

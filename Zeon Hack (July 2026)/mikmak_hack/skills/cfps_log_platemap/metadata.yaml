@@ -1,0 +1,14 @@
+skill_id: cfps_log_platemap
+version: "1.0.0"
+description: >-
+  Super-skill (logging only): print the destination plate layout to the run log as
+  a text grid, marking Positive (P), Negative (N), and Sample (S) wells so the
+  operator can see the planned map at a glance. No arm motion.
+
+# parameters are derived from the cfps_log_platemap() signature in robotic_code.py
+
+tags:
+  - meta
+  - cfps
+  - report
+  - platemap

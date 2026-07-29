@@ -1,0 +1,63 @@
+{
+  "compound_id": "T1005",
+  "name": "Amoxicillin",
+  "match": "yes",
+  "support": "weak",
+  "entries": [
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Amoxicillin. Map complete: 5/5 tasks succeeded in 2054ms\nResults ID: m_0bbb5712\nFull results: /.gxl/map_m_0bbb5712.txt\n\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided paper content, there is no mention of a nitrocefin colorimetric assay, $K_i$ or $\\mathrm{IC}_{50}$ values for amoxicillin agains\n  [success] Reversible inactivation of a peptidoglycan transpeptidase by a \u03b2-lacta  (PMC5567249)\n    Based on the provided research paper content, there is no information regarding Amoxicillin against TEM-1 beta-lactamase, Ki, IC50 values, or assays i\n  [success] In Silico Study of the Potential of Brazilein Sappan Wood as a Beta-La  (PMC11229569)\n    Based on the provided paper content, there is no mention of Amoxicillin, nitrocefin colorimetric assays, Ki, IC50 values, inhibitor concentrations, ni\n  [success] Effect of Lactamase Inhibitors on the Biosensor Penp during the Measur  (PMC6427286)\n    Based on the provided paper content, there is no information regarding a nitrocefin colorimetric assay, IC50, Ki, enzyme concentrations, or substrate \n  [success] Classification and applicability of new beta-lactamase inhibitors  (PMC12584905)\n    Based on the provided paper, there is no mention of Amoxicillin, TEM-1 beta-lactamase, nitrocefin colorimetric assays, Ki, IC50 values, enzyme concent\n\nFull results: /.gxl/map_m_0bbb5712.txt",
+      "paperclip_search_id": "s_20332041",
+      "paperclip_map_id": "m_0bbb5712",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "pmcid": "PMC12484619"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Amoxicillin. Map complete: 30/30 tasks succeeded in 5252ms\nResults ID: m_89350662\nFull results: /.gxl/map_m_89350662.txt\n\n  [success] Saturation Mutagenesis and Molecular Modeling: The Impact of Methionin  (PMC11276661)\n    Based on the provided paper, information regarding Amoxicillin as a substrate or inhibitor, its $K_i$ or $\\text{IC}_{50}$ values, nitrocefin substrate\n  [success] A drug-resistant \u03b2-lactamase variant changes the conformation of its a  (PMC11843585)\n    Based on the provided paper, the information regarding Amoxicillin against TEM-1 beta-lactamase in a nitrocefin colorimetric assay is not mentioned. T\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided paper content, there is no mention of a nitrocefin colorimetric assay, Amoxicillin testing with nitrocefin, $K_i$ or $IC_{50}$ v\n  [success] Kinetic and Structural Requirements for Carbapenemase\nActivity in GES-  (PMC4303295)\n    Based on the provided paper content, there is no information regarding Amoxicillin, TEM-1 beta-lactamase, or their kinetic/inhibition parameters in a \n  [success] The Role of the \u03a9-Loop in Regulation of the Catalytic Activity of TEM-  (PMC6995641)\n    Based on the provided paper, there is no mention of Amoxicillin being tested against TEM-1 beta-lactamase in a nitrocefin colorimetric assay, nor are \n  [success] In Silico Study of the Potential of Brazilein Sappan Wood as a Beta-La  (PMC11229569)\n    Based on the provided pape",
+      "paperclip_search_id": "s_fca2cc68",
+      "paperclip_map_id": "m_89350662",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "pmcid": "PMC11276661",
+      "paperclip_source": "pmc"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Amoxicillin. Map complete: 25/25 tasks succeeded in 4378ms\nResults ID: m_829dac13\nFull results: /.gxl/map_m_829dac13.txt\n\n  [success] Distant Site Mutations in Clinical TEM Beta-Lactamase Variants Enhance  (bio_33da24cd7504)\n    Based on the provided paper content, there is no information regarding Amoxicillin, nitrocefin colorimetric assays, $K_i$ or $\\text{IC}_{50}$ values, \n  [success] Binding mode of isoxazolyl penicillins to a Class-A  \u03b2 -lactamase at a  (bio_a7f99ac77b0d)\n    Based on the provided paper content, there is no information regarding Amoxicillin against TEM-1 beta-lactamase, nitrocefin colorimetric assays, inhib\n  [success] A new type of AmpC \u03b2-lactamases defined by PIB-1, a metal-dependent ca  (bio_9fef02c2845c)\n    Based on the provided paper, there is no mention of Amoxicillin, TEM-1 beta-lactamase, or its IC50/Ki values, as the paper focuses on the structural a\n  [success] Cefdinir binding to a class-A  \u03b2 -lactamase revealed by serial cryo-cr  (bio_01a5a87c8117)\n    Based on the provided paper content, there is no mention of Amoxicillin, TEM-1 beta-lactamase, nitrocefin colorimetric assays, $K_i$, $IC_{50}$ values\n  [success] Opening of a Cryptic Pocket in \u03b2-lactamase Increases Penicillinase Act  (bio_73f8ce316cab)\n    Based on the provided paper, there is no mention of Amoxicillin, nitrocefin colorimetric assays, $K_i$ or $IC_{50}$ values for Amoxicillin, or related\n  [success] Sulbactam-mediated inhibition of TEM-1 \u03b2-lactamase increases specific   (bio_e76fe1d274e9",
+      "paperclip_search_id": "s_af8ada65",
+      "paperclip_map_id": "m_829dac13",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "paperclip_source": "biorxiv"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Amoxicillin. Map complete: 10/10 tasks succeeded in 2854ms\nResults ID: m_37c16ffd\nFull results: /.gxl/map_m_37c16ffd.txt\n\n  [success] bla - Beta-lactamase TEM  (P62593)\n    Based on the provided paper content, there is no mention of Amoxicillin, its activity as a substrate or inhibitor against TEM-1 beta-lactamase, nitroc\n  [success] bla - Beta-lactamase TEM  (P62594)\n    Based on the provided paper content, there is no mention of Amoxicillin, nitrocefin colorimetric assays, $K_i$ or $IC_50$ values, nitrocefin substrate\n  [success] blaT-12b - Beta-lactamase TEM-12  (Q48406)\n    Based on the provided paper content, there is no information regarding the compound Amoxicillin, its interaction with TEM-1 beta-lactamase, nitrocefin\n  [success] penPC - Beta-lactamase 1  (P10424)\n    Based on the provided paper content, there is no information regarding Amoxicillin, TEM-1 beta-lactamase, nitrocefin colorimetric assays, $K_i$, $IC_{\n  [success] blaY - Beta-lactamase 1  (P00809)\n    Based on the provided paper content, there is no mention of Amoxicillin, TEM-1 beta-lactamase, nitrocefin colorimetric assays, $K_i$, $IC_{50}$, enzym\n  [success] blaCI - Beta-lactamase 1  (P28018)\n    Based on the provided paper content, there is no information regarding Amoxicillin, TEM-1 beta-lactamase, nitrocefin colorimetric assays, $K_i$, $IC_{\n  [success] blaL - Beta-lactamase 1  (Q03680)\n    Based on the provided paper content, there is no mention of Amoxicillin, TEM-1 beta-lactamase, nitrocefin colorimetric ass",
+      "paperclip_search_id": "s_c868f409",
+      "paperclip_map_id": "m_37c16ffd",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "paperclip_source": "proteins"
+    }
+  ],
+  "raw_local": "/Users/fio/zeon_hack/pvjthomas/local/literature/T1005",
+  "assay_recommendations": {
+    "tem1_nitrocefin": {
+      "screen_conc_uM": 50,
+      "screen_rationale": "Project default screen concentration; no literature inhibitor concentration or IC50/Ki extracted.",
+      "screen_conc_source": "project_default",
+      "max_assay_conc_uM": 1000.0,
+      "metric": "relative nitrocefin hydrolysis vs no-inhibitor control"
+    }
+  }
+}

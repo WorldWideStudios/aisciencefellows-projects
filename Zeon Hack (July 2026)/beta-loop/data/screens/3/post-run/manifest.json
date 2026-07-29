@@ -1,0 +1,40 @@
+{
+  "run": 3,
+  "round": 3,
+  "phase": "post-run",
+  "plate_version": 1,
+  "label": "r3-discovery-v1-exec",
+  "workflow": "tem1_activity_screen_manual_nitro_r3_v1",
+  "status": "complete",
+  "plate_design": "data/screens/3/v1/manifest.json",
+  "active_analysis_version": "v1",
+  "sign_off_date": "2026-07-26",
+  "notes": {
+    "nitrocefin_dosing": "Operator sync hand-add: 12-channel pipette, 6 dispenses, ~2 min total span",
+    "missing_inputs": [
+      "run_log_exec_*.txt",
+      "r3_gen5_export.pdf",
+      "per-well nitrocefin timing log"
+    ],
+    "synthetic_inputs": [
+      "nitrocefin_timing.json",
+      "reader_lid_close_utc.txt"
+    ],
+    "deprecated_design": "data/screens/3/v2-deprecated/ — not used"
+  },
+  "files": {
+    "kinetics_csv": "data/screens/3/post-run/kinetics_r3.csv",
+    "gen5_pdf": "data/screens/3/post-run/r3_gen5_export.pdf",
+    "gen5_pdf_source": "data/screens/3/post-run/Team_3_FINAL_SUNDAY.pdf",
+    "nitrocefin_timing_json": "data/screens/3/post-run/nitrocefin_timing.json",
+    "reader_lid_close_utc": "data/screens/3/post-run/reader_lid_close_utc.txt",
+    "run_log": null,
+    "gen5_pdf": null,
+    "plate_map_active": "data/plate_map_r3.json",
+    "plate_map_snapshot": "data/screens/3/v1/plate_map.json",
+    "assay_summary": "data/assay/run_3_summary.json",
+    "promoted_kinetics_csv": "data/kinetics_r3.csv",
+    "decision_report": "data/screens/3/post-run/v1/run3_decision_report.md",
+    "analysis_v1": "data/screens/3/post-run/v1/"
+  }
+}

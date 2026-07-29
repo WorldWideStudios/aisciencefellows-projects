@@ -1,0 +1,33 @@
+{
+  "run": 3,
+  "round": 3,
+  "version": 1,
+  "label": "r3-discovery-v1",
+  "created_at": "2026-07-26T11:43:06-0700",
+  "author": "pvjthomas",
+  "status": "active",
+  "sign_off_date": "2026-07-26",
+  "sign_off_note": "r3-discovery-v1 chosen for execution; v2 deprecated",
+  "supersedes": "data/screens/2/v5/manifest.json",
+  "note": "Run 3 v1 (active) \u2014 8 compounds \u00d7 triplicate + 6 QC controls (no vehicle vs v5); column-strip bands skip col 8; v2 deprecated",
+  "description": "Round 3 discovery v1 \u2014 8 compounds in triplicate with literature-backed per-compound concentrations (see compound_list.json); column-strip layout (x-spaced columns, triplicates on B/D/F and C/E/G); no vehicle controls",
+  "layout": "column_strip",
+  "control_policy": {
+    "vehicle": 0,
+    "no_tem1": 3,
+    "positive_T19860": 3,
+    "change_from_v5": "vehicle controls removed"
+  },
+  "files": {
+    "compound_list": "data/screens/3/v1/compound_list.json",
+    "compound_list_csv": "data/screens/3/v1/compound_list.csv",
+    "plate_map": "data/screens/3/v1/plate_map.json",
+    "plate_map_png": "data/screens/3/v1/plate_map.png",
+    "plate_map_by_compound_png": "data/screens/3/v1/plate_map_by_compound.png",
+    "plate_map_concentrations_png": "data/screens/3/v1/plate_map_concentrations.png",
+    "selection_rationale": "pvjthomas/runs/3/v1/selection_rationale.md",
+    "active_plate_map": "data/plate_map_r3.json",
+    "active_selection_rationale": "pvjthomas/selection_rationale.md",
+    "compound_table": "data/screens/3/v1/compound_table.md"
+  }
+}

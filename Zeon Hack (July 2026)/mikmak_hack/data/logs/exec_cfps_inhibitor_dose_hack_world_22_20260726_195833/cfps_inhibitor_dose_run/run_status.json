@@ -1,0 +1,27 @@
+{
+  "execution_id": "exec_cfps_inhibitor_dose_hack_world_22_20260726_195833",
+  "run_name": "cfps_inhibitor_dose_run",
+  "checkpoints": [
+    {
+      "checkpoint": "start",
+      "at": "2026-07-26T19:58:35.289437+00:00",
+      "log_events": 0,
+      "images": 0
+    },
+    {
+      "checkpoint": "mid",
+      "at": "2026-07-26T20:18:16.042182+00:00",
+      "log_events": 80,
+      "images": 0
+    },
+    {
+      "checkpoint": "end",
+      "at": "2026-07-26T20:18:36.647117+00:00",
+      "log_events": 84,
+      "images": 0
+    }
+  ],
+  "last_checkpoint": "end",
+  "complete": true,
+  "source": "workflow"
+}

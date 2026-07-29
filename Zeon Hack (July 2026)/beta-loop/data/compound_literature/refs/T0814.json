@@ -1,0 +1,63 @@
+{
+  "compound_id": "T0814",
+  "name": "Ampicillin Trihydrate",
+  "match": "yes",
+  "support": "weak",
+  "entries": [
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Ampicillin Trihydrate. Map complete: 5/5 tasks succeeded in 5461ms\nResults ID: m_e8cb01f4\nFull results: /.gxl/map_m_e8cb01f4.txt\n\n  [success] Beta-lactamase dependent and independent evolutionary paths to high-le  (PMC11199616)\n    Based on the provided research paper content, there is no mention of Ampicillin Trihydrate, TEM-1 beta-lactamase, nitrocefin colorimetric assays, $K_i\n  [success] Effect of Lactamase Inhibitors on the Biosensor Penp during the Measur  (PMC6427286)\n    Based on the provided research paper, the information regarding Ampicillin Trihydrate against TEM-1 beta-lactamase in a nitrocefin colorimetric assay \n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided paper content, there is no information regarding Ampicillin Trihydrate, nitrocefin colorimetric assays, $K_i$, $IC_{50}$, inhibi\n  [success] Characterization of Interactions between CTX-M-15 and Clavulanic Acid,  (PMC9100253)\n    Based on the provided paper, the information regarding **Ampicillin Trihydrate against TEM-1 beta-lactamase** is not mentioned. The paper focuses excl\n  [success] In Silico Study of the Potential of Brazilein Sappan Wood as a Beta-La  (PMC11229569)\n    Based on the provided paper content, there is no information regarding Ampicillin Trihydrate against TEM-1 beta-lactamase in a nitrocefin colorimetric\n\nFull results: /.gxl/map_m_e8cb01f4.txt",
+      "paperclip_search_id": "s_bda1cf3e",
+      "paperclip_map_id": "m_e8cb01f4",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "pmcid": "PMC11199616"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Ampicillin Trihydrate. Map complete: 30/30 tasks succeeded in 5290ms\nResults ID: m_b9c55634\nFull results: /.gxl/map_m_b9c55634.txt\n\n  [success] Saturation Mutagenesis and Molecular Modeling: The Impact of Methionin  (PMC11276661)\n    Based on the provided paper, information specifically regarding Ampicillin Trihydrate evaluated in a nitrocefin colorimetric assay (including its $K_i\n  [success] Beta-lactamase dependent and independent evolutionary paths to high-le  (PMC11199616)\n    Based on the provided research paper, there is no mention of Ampicillin Trihydrate, TEM-1 beta-lactamase, nitrocefin colorimetric assays, Ki or IC50 v\n  [success] Effect of Lactamase Inhibitors on the Biosensor Penp during the Measur  (PMC6427286)\n    Based on the provided paper content, there is no information regarding \"Ampicillin Trihydrate against TEM-1 beta-lactamase in a nitrocefin colorimetri\n  [success] Mechanism of Ampicillin Hydrolysis by New Delhi Metallo\u2010\u03b2\u2010Lactamase 1:  (PMC11619567)\n    Based on the provided research paper content, there is no information about Ampicillin Trihydrate against TEM-1 beta-lactamase in a nitrocefin colorim\n  [success] Characterization of Interactions between CTX-M-15 and Clavulanic Acid,  (PMC9100253)\n    Based on the provided paper, the information regarding Ampicillin Trihydrate against TEM-1 beta-lactamase in a nitrocefin colorimetric assay is not pr\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided pape",
+      "paperclip_search_id": "s_15f29602",
+      "paperclip_map_id": "m_b9c55634",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "pmcid": "PMC11276661",
+      "paperclip_source": "pmc"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Ampicillin Trihydrate. Map complete: 26/26 tasks succeeded in 10089ms\nResults ID: m_a1a9980e\nFull results: /.gxl/map_m_a1a9980e.txt\n\n  [success] Distant Site Mutations in Clinical TEM Beta-Lactamase Variants Enhance  (bio_33da24cd7504)\n    Based on the provided paper content, there is no mention of Ampicillin Trihydrate, nitrocefin colorimetric assays, $K_i$ or $IC_{50}$ values, enzyme o\n  [success] A new type of AmpC \u03b2-lactamases defined by PIB-1, a metal-dependent ca  (bio_9fef02c2845c)\n    Based on the provided paper, there is no mention of Ampicillin Trihydrate, TEM-1 beta-lactamase, or their kinetic/inhibition values in a nitrocefin co\n  [success] Binding mode of isoxazolyl penicillins to a Class-A  \u03b2 -lactamase at a  (bio_a7f99ac77b0d)\n    Based on the provided paper content, there is no mention of Ampicillin Trihydrate, TEM-1 beta-lactamase, nitrocefin colorimetric assays, IC50 values, \n  [success] Cefdinir binding to a class-A  \u03b2 -lactamase revealed by serial cryo-cr  (bio_01a5a87c8117)\n    Based on the provided paper, there is no information about Ampicillin Trihydrate, TEM-1 beta-lactamase, nitrocefin colorimetric assays, $K_i$, $IC_{50\n  [success] Mutations in  ampD  cause hyperproduction of AmpC and CphA beta-lactam  (bio_b205dd536f3c)\n    Based on the provided research paper content, there is no mention of \"Ampicillin Trihydrate\", \"TEM-1 beta-lactamase\", a \"nitrocefin colorimetric assay\n  [success] Contributions of \u03b2-lactamase substrate specificity and outer membrane   (bio_ca645f447dc",
+      "paperclip_search_id": "s_4369c44b",
+      "paperclip_map_id": "m_a1a9980e",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "paperclip_source": "biorxiv"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Ampicillin Trihydrate. Map complete: 10/10 tasks succeeded in 2913ms\nResults ID: m_116da5d0\nFull results: /.gxl/map_m_116da5d0.txt\n\n  [success] bla - Beta-lactamase TEM  (P62593)\n    Based on the provided text, there is no mention of Ampicillin Trihydrate, a nitrocefin colorimetric assay, Ki, IC50 values, nitrocefin substrate conce\n  [success] bla - Beta-lactamase TEM  (P62594)\n    Based on the provided paper content, there is no information regarding Ampicillin Trihydrate, a nitrocefin colorimetric assay, Ki, IC50, substrate/enz\n  [success] blaT-12b - Beta-lactamase TEM-12  (Q48406)\n    Based on the provided paper content, there is no information regarding Ampicillin Trihydrate, TEM-1 beta-lactamase, nitrocefin colorimetric assays, $K\n  [success] penPC - Beta-lactamase 1  (P10424)\n    Based on the provided paper content, there is no mention of Ampicillin Trihydrate, TEM-1 beta-lactamase, nitrocefin colorimetric assays, $K_i$, $\\text\n  [success] blaY - Beta-lactamase 1  (P00809)\n    Based on the provided paper content, there is no information regarding Ampicillin Trihydrate, TEM-1 beta-lactamase, nitrocefin colorimetric assays, $K\n  [success] blaCI - Beta-lactamase 1  (P28018)\n    Based on the provided paper content, there is no information regarding Ampicillin Trihydrate, TEM-1 beta-lactamase, nitrocefin colorimetric assays, $K\n  [success] blaL - Beta-lactamase 1  (Q03680)\n    Based on the provided paper content, there is no information regarding Ampicillin Trihydrate, TEM-1 beta-lactamase, nitroc",
+      "paperclip_search_id": "s_e56151fe",
+      "paperclip_map_id": "m_116da5d0",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "paperclip_source": "proteins"
+    }
+  ],
+  "raw_local": "/Users/fio/zeon_hack/pvjthomas/local/literature/T0814",
+  "assay_recommendations": {
+    "tem1_nitrocefin": {
+      "screen_conc_uM": 50,
+      "screen_rationale": "Project default screen concentration; no literature inhibitor concentration or IC50/Ki extracted.",
+      "screen_conc_source": "project_default",
+      "max_assay_conc_uM": 1000.0,
+      "metric": "relative nitrocefin hydrolysis vs no-inhibitor control"
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "compound_id": "T0366",
+  "name": "Cefadroxil",
+  "match": "yes",
+  "support": "weak",
+  "entries": [
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Cefadroxil. Map complete: 5/5 tasks succeeded in 1710ms\nResults ID: m_7e06e050\nFull results: /.gxl/map_m_7e06e050.txt\n\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided paper content, there is no mention of Cefadroxil, nitrocefin colorimetric assays, Ki, IC50 values, inhibitor concentrations, nit\n  [success] Effect of Lactamase Inhibitors on the Biosensor Penp during the Measur  (PMC6427286)\n    Based on the provided paper content, there is no information regarding \"Cefadroxil,\" \"TEM-1 beta-lactamase,\" \"nitrocefin colorimetric assay,\" $K_i$, $\n  [success] In Silico Study of the Potential of Brazilein Sappan Wood as a Beta-La  (PMC11229569)\n    Based on the provided paper, there is no mention of Cefadroxil, nitrocefin colorimetric assays, Ki, IC50 values, inhibitor concentrations, substrate c\n  [success] Characterization of Interactions between CTX-M-15 and Clavulanic Acid,  (PMC9100253)\n    Based on the provided paper, the information regarding Cefadroxil against TEM-1 beta-lactamase is not mentioned. The paper focuses exclusively on the \n  [success] Classification and applicability of new beta-lactamase inhibitors  (PMC12584905)\n    The provided paper does not contain information about Cefadroxil, TEM-1 beta-lactamase, or nitrocefin colorimetric assays.\n\nFull results: /.gxl/map_m_7e06e050.txt",
+      "paperclip_search_id": "s_ecfea547",
+      "paperclip_map_id": "m_7e06e050",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "pmcid": "PMC12484619"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Cefadroxil. Map complete: 30/30 tasks succeeded in 5561ms\nResults ID: m_f3072d5d\nFull results: /.gxl/map_m_f3072d5d.txt\n\n  [success] Saturation Mutagenesis and Molecular Modeling: The Impact of Methionin  (PMC11276661)\n    Based on the provided research paper, there is no mention of Cefadroxil, its hydrolysis, or its inhibition kinetics against TEM-1 beta-lactamase (the \n  [success] A drug-resistant \u03b2-lactamase variant changes the conformation of its a  (PMC11843585)\n    The provided paper does not contain information about Cefadroxil against TEM-1 beta-lactamase or its testing in a nitrocefin colorimetric assay.\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided paper content, there is no mention of Cefadroxil, nitrocefin colorimetric assays, $K_i$ or $IC_{50}$ values, nitrocefin or TEM-1\n  [success] Kinetic and Structural Requirements for Carbapenemase\nActivity in GES-  (PMC4303295)\n    Based on the provided paper content, there is no mention of Cefadroxil, TEM-1 beta-lactamase, or nitrocefin colorimetric assays involving TEM-1. The p\n  [success] Molecular Basis for the Catalytic Specificity of the\nCTX-M Extended-Sp  (PMC4303298)\n    Based on the provided paper content, there is no mention of Cefadroxil, TEM-1 beta-lactamase assays with Cefadroxil, or its $K_i$, $IC_{50}$, enzyme c\n  [success] In Silico Study of the Potential of Brazilein Sappan Wood as a Beta-La  (PMC11229569)\n    Based on the provided paper cont",
+      "paperclip_search_id": "s_42d3781f",
+      "paperclip_map_id": "m_f3072d5d",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "pmcid": "PMC11276661",
+      "paperclip_source": "pmc"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Cefadroxil. Map complete: 23/23 tasks succeeded in 5442ms\nResults ID: m_5e1b0985\nFull results: /.gxl/map_m_5e1b0985.txt\n\n  [success] Distant Site Mutations in Clinical TEM Beta-Lactamase Variants Enhance  (bio_33da24cd7504)\n    Based on the provided research paper, there is no mention of Cefadroxil, nitrocefin colorimetric assays, $K_i$ or $IC_{50}$ values, or related enzyme/\n  [success] Binding mode of isoxazolyl penicillins to a Class-A  \u03b2 -lactamase at a  (bio_a7f99ac77b0d)\n    Based on the provided paper content, there is no information regarding Cefadroxil, TEM-1 beta-lactamase, nitrocefin colorimetric assays, $K_i$, $IC_{5\n  [success] A new type of AmpC \u03b2-lactamases defined by PIB-1, a metal-dependent ca  (bio_9fef02c2845c)\n    Based on the provided paper, there is no mention of Cefadroxil, TEM-1 beta-lactamase, or their kinetic/inhibition measurements in a nitrocefin colorim\n  [success] Cefdinir binding to a class-A  \u03b2 -lactamase revealed by serial cryo-cr  (bio_01a5a87c8117)\n    Based on the provided paper content, there is no mention of Cefadroxil, TEM-1 beta-lactamase, nitrocefin colorimetric assays, $K_i$, $IC_{50}$ values,\n  [success] Contributions of \u03b2-lactamase substrate specificity and outer membrane   (bio_ca645f447dca)\n    Based on the provided paper, there is no mention of Cefadroxil, TEM-1 beta-lactamase in a nitrocefin colorimetric assay, or any associated $K_i$, $IC_\n  [success] Sulbactam-mediated inhibition of TEM-1 \u03b2-lactamase increases specific   (bio_e76fe1d274e9",
+      "paperclip_search_id": "s_eafda6a5",
+      "paperclip_map_id": "m_5e1b0985",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "paperclip_source": "biorxiv"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Cefadroxil. Map complete: 10/10 tasks succeeded in 2853ms\nResults ID: m_85b1f08a\nFull results: /.gxl/map_m_85b1f08a.txt\n\n  [success] bla - Beta-lactamase TEM  (P62593)\n    Based on the provided paper content, there is no information regarding Cefadroxil, its interaction with TEM-1 beta-lactamase, nitrocefin colorimetric \n  [success] bla - Beta-lactamase TEM  (P62594)\n    Based on the provided paper content, there is no information regarding Cefadroxil, its status as a substrate or inhibitor, Ki or IC50 values, nitrocef\n  [success] blaT-12b - Beta-lactamase TEM-12  (Q48406)\n    Based on the provided paper content, there is no mention of Cefadroxil, TEM-1 beta-lactamase (the paper describes TEM-12 from *Klebsiella oxytoca*), n\n  [success] penPC - Beta-lactamase 1  (P10424)\n    Based on the provided paper content, there is no information regarding Cefadroxil, TEM-1 beta-lactamase, nitrocefin colorimetric assays, $K_i$, $IC_{5\n  [success] blaY - Beta-lactamase 1  (P00809)\n    Based on the provided paper content, there is no information regarding Cefadroxil, TEM-1 beta-lactamase, nitrocefin colorimetric assays, inhibition co\n  [success] blaCI - Beta-lactamase 1  (P28018)\n    Based on the provided paper content, there is no information regarding Cefadroxil, TEM-1 beta-lactamase, nitrocefin colorimetric assays, $K_i$, $IC_{5\n  [success] blaL - Beta-lactamase 1  (Q03680)\n    Based on the provided paper content, there is no mention of Cefadroxil, TEM-1 beta-lactamase, nitrocefin colorimetric assa",
+      "paperclip_search_id": "s_3e3b83d3",
+      "paperclip_map_id": "m_85b1f08a",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "paperclip_source": "proteins"
+    }
+  ],
+  "raw_local": "/Users/fio/zeon_hack/pvjthomas/local/literature/T0366",
+  "assay_recommendations": {
+    "tem1_nitrocefin": {
+      "screen_conc_uM": 50,
+      "screen_rationale": "Project default screen concentration; no literature inhibitor concentration or IC50/Ki extracted.",
+      "screen_conc_source": "project_default",
+      "max_assay_conc_uM": 1000.0,
+      "metric": "relative nitrocefin hydrolysis vs no-inhibitor control"
+    }
+  }
+}

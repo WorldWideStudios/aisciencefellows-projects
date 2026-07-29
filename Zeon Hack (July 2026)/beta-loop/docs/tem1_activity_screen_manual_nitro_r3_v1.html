@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TEM-1 Activity Screen — Manual Nitro R3 v1</title>
+<style>
+  :root {
+    --bg: #f7f6f2;
+    --surface: #ffffff;
+    --surface-dim: #eeece5;
+    --text: #1e2422;
+    --text-muted: #5b655f;
+    --line: rgba(30,36,34,0.14);
+    --line-strong: rgba(30,36,34,0.28);
+    --amber: #a86a16;
+    --amber-soft: #f1e0bf;
+    --red: #a63b2a;
+    --red-soft: #f3ddd6;
+    --teal: #2f6b64;
+    --teal-soft: #d9ebe7;
+    --slate: #5b655f;
+    --slate-soft: #e3e2dc;
+    --violet: #6b5aa8;
+    --violet-soft: #e4dff2;
+    --green: #2d6a3f;
+    --green-soft: #d6ead9;
+    --shadow: 0 1px 2px rgba(30,36,34,0.06), 0 8px 24px -16px rgba(30,36,34,0.25);
+    --font-display: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+    --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", ui-sans-serif, sans-serif;
+    --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #15191a; --surface: #1c2122; --surface-dim: #22282a;
+      --text: #e7ebe7; --text-muted: #9aa6a0;
+      --line: rgba(231,235,231,0.12); --line-strong: rgba(231,235,231,0.24);
+      --amber: #d9a24d; --amber-soft: rgba(217,162,77,0.16);
+      --red: #d97e6a; --red-soft: rgba(217,126,106,0.16);
+      --teal: #6bb0a6; --teal-soft: rgba(107,176,166,0.15);
+      --slate: #9aa6a0; --slate-soft: rgba(154,166,160,0.14);
+      --violet: #b3a4e0; --violet-soft: rgba(179,164,224,0.16);
+      --green: #5fa872; --green-soft: rgba(95,168,114,0.16);
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 12px 28px -18px rgba(0,0,0,0.6);
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 56px 24px 96px; }
+
+  /* ── Header ── */
+  .eyebrow { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 12px; }
+  .eyebrow .path { color: var(--amber); }
+  h1 { font-family: var(--font-display); font-size: clamp(26px, 4vw, 38px); font-weight: 600; line-height: 1.08; letter-spacing: -0.01em; margin: 0 0 14px; }
+  .lede { font-size: 15px; line-height: 1.65; color: var(--text-muted); max-width: 72ch; margin: 0 0 20px; }
+  .lede strong { color: var(--text); font-weight: 600; }
+  .meta-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+  .metabadge { font-family: var(--font-mono); font-size: 10.5px; padding: 3px 9px; border-radius: 999px; border: 1px solid var(--line-strong); color: var(--text-muted); background: var(--surface); }
+  .metabadge.warn { color: var(--amber); border-color: var(--amber); background: var(--amber-soft); }
+
+  /* ── Section ── */
+  section { margin-top: 52px; }
+  .section-head { display: flex; align-items: baseline; gap: 10px; border-top: 1px solid var(--line-strong); padding-top: 14px; margin-bottom: 18px; }
+  .section-num { font-family: var(--font-mono); font-size: 11px; color: var(--amber); }
+  .section-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); }
+  h2.sh { font-family: var(--font-display); font-size: 20px; font-weight: 600; margin: 0 0 14px; }
+  p.bp { font-size: 14px; line-height: 1.7; color: var(--text-muted); max-width: 68ch; margin: 0 0 16px; }
+
+  /* ── Phase bar ── */
+  .phases { display: grid; grid-template-columns: repeat(5, 1fr); border: 1px solid var(--line); border-radius: 14px; background: var(--surface); box-shadow: var(--shadow); overflow: hidden; }
+  .phase { padding: 16px 14px; display: flex; flex-direction: column; gap: 5px; }
+  .phase + .phase { border-left: 1px dashed var(--line-strong); }
+  .phase-num { font-family: var(--font-mono); font-size: 10px; color: var(--amber); }
+  .phase-title { font-weight: 600; font-size: 13px; line-height: 1.25; }
+  .phase-meta { font-family: var(--font-mono); font-size: 10px; color: var(--text-muted); }
+  @media (max-width: 780px) {
+    .phases { grid-template-columns: 1fr 1fr; }
+    .phase + .phase { border-left: none; border-top: 1px dashed var(--line-strong); }
+  }
+
+  /* ── Timeline ── */
+  .timeline { display: flex; flex-direction: column; }
+  .phase-group { margin-bottom: 28px; }
+  .phase-group-label { font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-muted); padding: 4px 10px; background: var(--surface-dim); border-radius: 6px; display: inline-block; margin-bottom: 10px; }
+  .tstep { display: grid; grid-template-columns: 32px 1fr; gap: 12px; position: relative; padding-bottom: 18px; }
+  .tstep:last-child { padding-bottom: 0; }
+  .rail { display: flex; flex-direction: column; align-items: center; }
+  .dot { width: 26px; height: 26px; border-radius: 50%; background: var(--surface); border: 1.5px solid var(--line-strong); display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 10px; font-weight: 600; color: var(--text-muted); flex: 0 0 auto; }
+  .tstep.prep .dot  { border-color: var(--violet); color: var(--violet); }
+  .tstep.disp .dot  { border-color: var(--teal);   color: var(--teal);   }
+  .tstep.mech .dot  { border-color: var(--amber);   color: var(--amber);  }
+  .tstep.wait .dot  { border-color: var(--red);     color: var(--red);    }
+  .tstep.save .dot  { border-color: var(--slate);   color: var(--slate);  }
+  .vline { flex: 1; width: 1px; background: var(--line-strong); margin-top: 3px; }
+  .tstep:last-child .vline { display: none; }
+  .tcontent { padding-top: 2px; }
+  .ttitle { font-weight: 600; font-size: 14px; margin-bottom: 3px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .tbadge { font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; padding: 2px 7px; border-radius: 999px; border: 1px solid var(--line-strong); color: var(--text-muted); }
+  .tstep.prep  .tbadge { color: var(--violet); border-color: var(--violet); background: var(--violet-soft); }
+  .tstep.disp  .tbadge { color: var(--teal);   border-color: var(--teal);   background: var(--teal-soft);   }
+  .tstep.mech  .tbadge { color: var(--amber);   border-color: var(--amber);   background: var(--amber-soft);  }
+  .tstep.wait  .tbadge { color: var(--red);     border-color: var(--red);     background: var(--red-soft);    }
+  .tstep.save  .tbadge { color: var(--slate);   border-color: var(--slate);   background: var(--slate-soft);  }
+  .tdesc { font-size: 13px; color: var(--text-muted); line-height: 1.55; }
+  .pillrow { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 7px; }
+  .pill { font-family: var(--font-mono); font-size: 10.5px; padding: 3px 8px; border-radius: 6px; background: var(--surface-dim); border: 1px solid var(--line); color: var(--text); white-space: nowrap; }
+  .pill.v { border-color: var(--violet); color: var(--violet); background: var(--violet-soft); }
+  .pill.t { border-color: var(--teal);   color: var(--teal);   background: var(--teal-soft);   }
+  .pill.a { border-color: var(--amber);  color: var(--amber);  background: var(--amber-soft);  }
+  .pill.r { border-color: var(--red);    color: var(--red);    background: var(--red-soft);    }
+  .sep { color: var(--text-muted); font-size: 11px; }
+
+  /* ── 96-well plate ── */
+  .plate-card { border: 1px solid var(--line); background: var(--surface); border-radius: 14px; padding: 22px; box-shadow: var(--shadow); overflow-x: auto; }
+  .plate-grid { display: grid; grid-template-columns: 20px repeat(12, 34px); gap: 4px; align-items: center; width: max-content; }
+  .col-label { font-family: var(--font-mono); font-size: 10px; color: var(--text-muted); text-align: center; }
+  .row-label { font-family: var(--font-mono); font-size: 10px; color: var(--text-muted); text-align: right; padding-right: 4px; }
+  .well { width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 8px; font-weight: 600; cursor: default; transition: opacity 0.1s; border: 1.5px solid transparent; }
+  .well:hover { opacity: 0.82; }
+  .well.empty  { background: var(--surface-dim); border-color: var(--line); color: var(--text-muted); }
+  .well.pos    { background: var(--amber-soft);   border-color: var(--amber); color: var(--amber); }
+  .well.neg    { background: var(--slate-soft);   border-color: var(--slate); color: var(--slate); }
+  .well.c1     { background: #dbeafe; border-color: #3b82f6; color: #1d4ed8; }
+  .well.c2     { background: #ede9fe; border-color: #8b5cf6; color: #6d28d9; }
+  .well.c3     { background: #cffafe; border-color: #22d3ee; color: #0e7490; }
+  .well.c4     { background: #dcfce7; border-color: #4ade80; color: #15803d; }
+  .well.c5     { background: #fee2e2; border-color: #f87171; color: #b91c1c; }
+  .well.c6     { background: #fef3c7; border-color: #fbbf24; color: #92400e; }
+  .well.c7     { background: #f3e8ff; border-color: #c084fc; color: #7c3aed; }
+  .well.c8     { background: var(--teal-soft); border-color: var(--teal); color: var(--teal); }
+
+  /* ── Legend ── */
+  .legend { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+  .leg-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--text-muted); }
+  .leg-dot { width: 13px; height: 13px; border-radius: 50%; border: 1.5px solid transparent; flex: 0 0 auto; }
+  .leg-dot.pos  { background: var(--amber-soft);   border-color: var(--amber); }
+  .leg-dot.neg  { background: var(--slate-soft);   border-color: var(--slate); }
+  .leg-dot.c1   { background: #dbeafe; border-color: #3b82f6; }
+  .leg-dot.c2   { background: #ede9fe; border-color: #8b5cf6; }
+  .leg-dot.c3   { background: #cffafe; border-color: #22d3ee; }
+  .leg-dot.c4   { background: #dcfce7; border-color: #4ade80; }
+  .leg-dot.c5   { background: #fee2e2; border-color: #f87171; }
+  .leg-dot.c6   { background: #fef3c7; border-color: #fbbf24; }
+  .leg-dot.c7   { background: #f3e8ff; border-color: #c084fc; }
+  .leg-dot.c8   { background: var(--teal-soft); border-color: var(--teal); }
+  .leg-dot.empty { background: var(--surface-dim); border-color: var(--line); }
+
+  /* ── Sub-steps ── */
+  .substep { margin-top: 14px; background: var(--surface-dim); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+  .substep-head { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .substep-num { font-family: var(--font-mono); font-size: 10px; font-weight: 700; background: var(--violet); color: #fff; border-radius: 999px; padding: 2px 7px; }
+  .substep-title { font-size: 12.5px; font-weight: 600; color: var(--text); }
+
+  /* Transfer diagram */
+  .transfer-grid { display: flex; flex-direction: column; gap: 6px; }
+  .transfer-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .transfer-src { display: flex; flex-direction: column; gap: 3px; }
+  .tsrc-label { font-family: var(--font-mono); font-size: 9px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); }
+  .tsrc-box { font-family: var(--font-mono); font-size: 11px; font-weight: 600; padding: 6px 10px; border-radius: 7px; min-width: 100px; text-align: center; border: 1.5px solid; }
+  .tsrc-box span { font-size: 9px; font-weight: 400; color: var(--text-muted); display: block; }
+  .tsrc-box.blb  { background: var(--teal-soft); border-color: var(--teal); color: var(--teal); }
+  .tsrc-box.dmso { background: var(--amber-soft); border-color: var(--amber); color: var(--amber); }
+  .transfer-arrow { font-size: 18px; color: var(--text-muted); flex: 0 0 auto; }
+  .transfer-dests { display: flex; flex-direction: column; gap: 4px; }
+  .tdest-label { font-family: var(--font-mono); font-size: 9px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); }
+  .dest-chips { display: flex; flex-wrap: wrap; gap: 4px; }
+  .dchip { font-family: var(--font-mono); font-size: 11px; padding: 3px 8px; border-radius: 5px; background: var(--surface); border: 1px solid var(--line-strong); color: var(--text); }
+  .dchip.v { background: var(--violet-soft); border-color: var(--violet); color: var(--violet); }
+
+  /* Stock transfer rows */
+  .stock-transfers { display: flex; flex-direction: column; gap: 4px; margin-top: 2px; }
+  .strow { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 12.5px; padding: 5px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--line); }
+  .strow:hover { border-color: var(--line-strong); }
+  .stidx { font-family: var(--font-mono); font-size: 12px; color: var(--text-muted); flex: 0 0 18px; }
+  .stsrc { font-family: var(--font-mono); font-size: 11px; background: var(--amber-soft); border: 1px solid var(--amber); color: var(--amber); padding: 2px 7px; border-radius: 5px; white-space: nowrap; }
+  .stname { font-size: 12px; color: var(--text); flex: 1; min-width: 120px; }
+  .starrow { color: var(--text-muted); font-size: 13px; }
+  .stdest { font-family: var(--font-mono); font-size: 11px; padding: 2px 7px; border-radius: 5px; border: 1.5px solid; white-space: nowrap; font-weight: 600; }
+  .stdest.v  { background: var(--violet-soft); border-color: var(--violet); color: var(--violet); }
+  .stdest.c1 { background: #dbeafe; border-color: #3b82f6; color: #1d4ed8; }
+  .stdest.c2 { background: #ede9fe; border-color: #8b5cf6; color: #6d28d9; }
+  .stdest.c3 { background: #cffafe; border-color: #22d3ee; color: #0e7490; }
+  .stdest.c4 { background: #dcfce7; border-color: #4ade80; color: #15803d; }
+  .stdest.c5 { background: #fee2e2; border-color: #f87171; color: #b91c1c; }
+  .stdest.c6 { background: #fef3c7; border-color: #fbbf24; color: #92400e; }
+  .stdest.c7 { background: #f3e8ff; border-color: #c084fc; color: #7c3aed; }
+  .stdest.c8 { background: var(--teal-soft); border-color: var(--teal); color: var(--teal); }
+
+  /* ── Params table ── */
+  .params-card { border: 1px solid var(--line); background: var(--surface); border-radius: 14px; overflow: hidden; box-shadow: var(--shadow); }
+  .params-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .params-table th { font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); padding: 10px 16px; text-align: left; background: var(--surface-dim); border-bottom: 1px solid var(--line-strong); }
+  .params-table td { padding: 9px 16px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .params-table tr:last-child td { border-bottom: none; }
+  .params-table code { font-family: var(--font-mono); font-size: 0.9em; background: var(--surface-dim); padding: 1px 5px; border-radius: 4px; }
+  .params-table .val { font-family: var(--font-mono); font-size: 12px; color: var(--amber); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- Header -->
+  <header>
+    <p class="eyebrow"><span class="path">workflows /</span> tem1_activity_screen_manual_nitro_r3_v1</p>
+    <h1>TEM-1 Activity Screen<br>Manual Nitro R3 v1</h1>
+    <p class="lede">
+      Robot prepares <strong>positive, vehicle, and 8 compound working solutions</strong>, loads the assay plate,
+      seals before shaking, incubates sealed for <strong>10 min</strong>, then stops for
+      <strong>manual nitrocefin addition</strong> by the operator.
+    </p>
+    <div class="meta-row">
+      <span class="metabadge">v1.0.0</span>
+      <span class="metabadge">2026-07-26</span>
+      <span class="metabadge">8 compounds · 3 replicates</span>
+      <span class="metabadge">30 active wells / 96</span>
+      <span class="metabadge warn">⚠ simulation not validated</span>
+    </div>
+  </header>
+
+  <!-- Phase overview -->
+  <section>
+    <div class="section-head">
+      <span class="section-num">01</span>
+      <span class="section-label">Workflow Phases</span>
+    </div>
+    <div class="phases">
+      <div class="phase">
+        <div class="phase-num">Phase 1</div>
+        <div class="phase-title">Working Solution Prep</div>
+        <div class="phase-meta">Positive · vehicle · 8 cpds</div>
+      </div>
+      <div class="phase">
+        <div class="phase-num">Phase 2</div>
+        <div class="phase-title">Assay Loading</div>
+        <div class="phase-meta">TEM-1 · no-enzyme · cpds</div>
+      </div>
+      <div class="phase">
+        <div class="phase-num">Phase 3</div>
+        <div class="phase-title">Seal &amp; Shake</div>
+        <div class="phase-meta">PlateMax → shaker → home</div>
+      </div>
+      <div class="phase">
+        <div class="phase-num">Phase 4</div>
+        <div class="phase-title">Sealed Incubation</div>
+        <div class="phase-meta">10 min RT pre-incubation</div>
+      </div>
+      <div class="phase">
+        <div class="phase-num">Phase 5</div>
+        <div class="phase-title">Teardown</div>
+        <div class="phase-meta">Save run · manual nitrocefin</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 96-well plate map -->
+  <section>
+    <div class="section-head">
+      <span class="section-num">02</span>
+      <span class="section-label">Assay Plate Map</span>
+    </div>
+    <h2 class="sh">96-Well Layout</h2>
+    <p class="bp">Well assignments for <code>wellplate_96_flatbottom</code>. Each condition is run in triplicate. Nitrocefin (50 µL) is added manually after robot teardown.</p>
+    <div class="plate-card">
+      <div class="plate-grid" id="plate"></div>
+      <div class="legend">
+        <div class="leg-item"><div class="leg-dot pos"></div>Positive ctrl (T1262)</div>
+        <div class="leg-item"><div class="leg-dot neg"></div>Negative ctrl (no enzyme)</div>
+        <div class="leg-item"><div class="leg-dot c1"></div>C1 T1262 Tazobactam</div>
+        <div class="leg-item"><div class="leg-dot c2"></div>C2 T6685 Sulbactam</div>
+        <div class="leg-item"><div class="leg-dot c3"></div>C3 T14081 Enmetazobactam</div>
+        <div class="leg-item"><div class="leg-dot c4"></div>C4 T1008 Cephalexin</div>
+        <div class="leg-item"><div class="leg-dot c5"></div>C5 T0224 Meropenem</div>
+        <div class="leg-item"><div class="leg-dot c6"></div>C6 T0985 Oxacillin</div>
+        <div class="leg-item"><div class="leg-dot c7"></div>C7 T0138 Cefpiramide</div>
+        <div class="leg-item"><div class="leg-dot c8"></div>C8 T8390 Cefazolin</div>
+        <div class="leg-item"><div class="leg-dot empty"></div>Empty</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Workflow timeline -->
+  <section>
+    <div class="section-head">
+      <span class="section-num">03</span>
+      <span class="section-label">Step-by-Step Timeline</span>
+    </div>
+    <h2 class="sh">Workflow Steps</h2>
+
+    <!-- Phase 1 -->
+    <div class="phase-group">
+      <div class="phase-group-label">Phase 1 — Working Solution Prep</div>
+      <div class="timeline">
+
+        <div class="tstep prep">
+          <div class="rail"><div class="dot">1</div><div class="vline"></div></div>
+          <div class="tcontent">
+            <div class="ttitle">Pick Up Pipette <span class="tbadge">setup</span></div>
+            <div class="tdesc">Grab the starting pipette (<code>epipette_10ul</code>). Transfer helpers auto-swap to the correct pipette by volume throughout the run.</div>
+          </div>
+        </div>
+
+        <div class="tstep prep">
+          <div class="rail"><div class="dot">2</div><div class="vline"></div></div>
+          <div class="tcontent">
+            <div class="ttitle">Prepare Working Solutions <span class="tbadge">prep</span></div>
+            <div class="tdesc">Two sub-passes into <code>wellplate_pcr_parts_4</code>: first BLB to all wells, then stock additions, then mix. Vehicle gets DMSO instead of compound stock.</div>
+
+            <!-- Sub-step 2a: BLB fill -->
+            <div class="substep">
+              <div class="substep-head">
+                <span class="substep-num">2a</span>
+                <span class="substep-title">BLB fill — 47.5 µL → A1, A3–A10 &nbsp;|&nbsp; 95 µL → A2</span>
+              </div>
+              <div class="transfer-grid">
+                <div class="transfer-row">
+                  <div class="transfer-src">
+                    <div class="tsrc-label">Source</div>
+                    <div class="tsrc-box blb">hole_5<br><span>BLB</span></div>
+                  </div>
+                  <div class="transfer-arrow">→</div>
+                  <div class="transfer-dests">
+                    <div class="tdest-label">Dest (47.5 µL each)</div>
+                    <div class="dest-chips">
+                      <span class="dchip v">A1</span>
+                      <span class="dchip v">A3</span>
+                      <span class="dchip v">A4</span>
+                      <span class="dchip v">A5</span>
+                      <span class="dchip v">A6</span>
+                      <span class="dchip v">A7</span>
+                      <span class="dchip v">A8</span>
+                      <span class="dchip v">A9</span>
+                      <span class="dchip v">A10</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="transfer-row" style="margin-top:8px">
+                  <div class="transfer-src">
+                    <div class="tsrc-label">Source</div>
+                    <div class="tsrc-box blb">hole_6<br><span>BLB (vehicle)</span></div>
+                  </div>
+                  <div class="transfer-arrow">→</div>
+                  <div class="transfer-dests">
+                    <div class="tdest-label">Dest (95 µL)</div>
+                    <div class="dest-chips">
+                      <span class="dchip">A2</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sub-step 2b: DMSO for vehicle -->
+            <div class="substep">
+              <div class="substep-head">
+                <span class="substep-num">2b</span>
+                <span class="substep-title">Vehicle DMSO — 5 µL → A2</span>
+              </div>
+              <div class="transfer-grid">
+                <div class="transfer-row">
+                  <div class="transfer-src">
+                    <div class="tsrc-label">Source</div>
+                    <div class="tsrc-box dmso">hole_9<br><span>100% DMSO</span></div>
+                  </div>
+                  <div class="transfer-arrow">→</div>
+                  <div class="transfer-dests">
+                    <div class="tdest-label">Dest (5 µL)</div>
+                    <div class="dest-chips">
+                      <span class="dchip">A2</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sub-step 2c: Stock additions -->
+            <div class="substep">
+              <div class="substep-head">
+                <span class="substep-num">2c</span>
+                <span class="substep-title">Stock additions — 2.5 µL each, sequentially</span>
+              </div>
+              <div class="stock-transfers">
+                <div class="strow">
+                  <span class="stidx">①</span>
+                  <span class="stsrc">plate1 / H7</span>
+                  <span class="stname">Positive ctrl (T1262)</span>
+                  <span class="starrow">→</span>
+                  <span class="stdest v">plate4 / A1</span>
+                </div>
+                <div class="strow">
+                  <span class="stidx">②</span>
+                  <span class="stsrc">plate1 / B10</span>
+                  <span class="stname">C1 T1262 Tazobactam</span>
+                  <span class="starrow">→</span>
+                  <span class="stdest c1">plate4 / A3</span>
+                </div>
+                <div class="strow">
+                  <span class="stidx">③</span>
+                  <span class="stsrc">plate1 / F2</span>
+                  <span class="stname">C2 T6685 Sulbactam</span>
+                  <span class="starrow">→</span>
+                  <span class="stdest c2">plate4 / A4</span>
+                </div>
+                <div class="strow">
+                  <span class="stidx">④</span>
+                  <span class="stsrc">plate1 / F7</span>
+                  <span class="stname">C3 T14081 Enmetazobactam</span>
+                  <span class="starrow">→</span>
+                  <span class="stdest c3">plate4 / A5</span>
+                </div>
+                <div class="strow">
+                  <span class="stidx">⑤</span>
+                  <span class="stsrc">plate1 / A9</span>
+                  <span class="stname">C4 T1008 Cephalexin</span>
+                  <span class="starrow">→</span>
+                  <span class="stdest c4">plate4 / A6</span>
+                </div>
+                <div class="strow">
+                  <span class="stidx">⑥</span>
+                  <span class="stsrc">plate2 / A3</span>
+                  <span class="stname">C5 T0224 Meropenem</span>
+                  <span class="starrow">→</span>
+                  <span class="stdest c5">plate4 / A7</span>
+                </div>
+                <div class="strow">
+                  <span class="stidx">⑦</span>
+                  <span class="stsrc">plate2 / A4</span>
+                  <span class="stname">C6 T0985 Oxacillin</span>
+                  <span class="starrow">→</span>
+                  <span class="stdest c6">plate4 / A8</span>
+                </div>
+                <div class="strow">
+                  <span class="stidx">⑧</span>
+                  <span class="stsrc">plate1 / A2</span>
+                  <span class="stname">C7 T0138 Cefpiramide</span>
+                  <span class="starrow">→</span>
+                  <span class="stdest c7">plate4 / A9</span>
+                </div>
+                <div class="strow">
+                  <span class="stidx">⑨</span>
+                  <span class="stsrc">plate1 / F3</span>
+                  <span class="stname">C8 T8390 Cefazolin</span>
+                  <span class="starrow">→</span>
+                  <span class="stdest c8">plate4 / A10</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sub-step 2d: Mix -->
+            <div class="substep">
+              <div class="substep-head">
+                <span class="substep-num">2d</span>
+                <span class="substep-title">Pipette-mix each well — 10 µL × 5 cycles</span>
+              </div>
+              <div class="pillrow">
+                <span class="pill a">A1 mix</span>
+                <span class="pill a">A2 mix</span>
+                <span class="pill a">A3 mix</span>
+                <span class="pill a">A4 mix</span>
+                <span class="pill a">A5 mix</span>
+                <span class="pill a">A6 mix</span>
+                <span class="pill a">A7 mix</span>
+                <span class="pill a">A8 mix</span>
+                <span class="pill a">A9 mix</span>
+                <span class="pill a">A10 mix</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Phase 2 -->
+    <div class="phase-group">
+      <div class="phase-group-label">Phase 2 — Assay Loading</div>
+      <div class="timeline">
+
+        <div class="tstep disp">
+          <div class="rail"><div class="dot">3</div><div class="vline"></div></div>
+          <div class="tcontent">
+            <div class="ttitle">Dispense TEM-1 Working Solution <span class="tbadge">dispense</span></div>
+            <div class="tdesc">Add <strong>40 µL</strong> manually prepared TEM-1 working solution (hole_8) to all 27 positive-control and test-compound wells in batches.</div>
+            <div class="pillrow">
+              <span class="pill t">27 wells</span>
+              <span class="pill t">40 µL / well</span>
+              <span class="pill t">0.04 ng/µL final</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tstep disp">
+          <div class="rail"><div class="dot">4</div><div class="vline"></div></div>
+          <div class="tcontent">
+            <div class="ttitle">Dispense No-Enzyme Prep <span class="tbadge">dispense</span></div>
+            <div class="tdesc">Add <strong>40 µL</strong> BLB/no-enzyme prep (hole_6) to the 3 negative-control wells: <code>D3, D7, E11</code>.</div>
+            <div class="pillrow">
+              <span class="pill t">3 wells</span>
+              <span class="pill t">40 µL / well</span>
+              <span class="pill t">No TEM-1</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tstep disp">
+          <div class="rail"><div class="dot">5</div><div class="vline"></div></div>
+          <div class="tcontent">
+            <div class="ttitle">Dispense Vehicle <span class="tbadge">dispense</span></div>
+            <div class="tdesc">Add <strong>10 µL</strong> matched vehicle (working plate A2) to no-enzyme control wells <code>D3, D7, E11</code>.</div>
+            <div class="pillrow">
+              <span class="pill t">3 wells</span>
+              <span class="pill t">10 µL / well</span>
+              <span class="pill t">0.75% total DMSO</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tstep disp">
+          <div class="rail"><div class="dot">6</div><div class="vline"></div></div>
+          <div class="tcontent">
+            <div class="ttitle">Dispense Positive Control <span class="tbadge">dispense</span></div>
+            <div class="tdesc">Add <strong>10 µL</strong> positive-control working solution (T1262 Tazobactam, A1) to wells <code>F3, F7, G11</code>.</div>
+            <div class="pillrow">
+              <span class="pill t">3 wells</span>
+              <span class="pill t">10 µL / well</span>
+              <span class="pill t">50 µM final</span>
+              <span class="pill t">≥50% inhibition expected</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tstep disp">
+          <div class="rail"><div class="dot">7</div><div class="vline"></div></div>
+          <div class="tcontent">
+            <div class="ttitle">Dispense Test Compounds 1–8 <span class="tbadge">dispense</span></div>
+            <div class="tdesc">Add <strong>10 µL</strong> per compound working solution to its three replicate wells. Each compound is dispensed in sequence from the working plate.</div>
+            <div class="pillrow">
+              <span class="pill t">C1 T1262 → B2, D2, F2</span>
+              <span class="pill t">C2 T6685 → B4, D4, F4</span>
+              <span class="pill t">C3 T14081 → B6, D6, F6</span>
+              <span class="pill t">C4 T1008 → B10, D10, F10</span>
+            </div>
+            <div class="pillrow" style="margin-top:4px">
+              <span class="pill t">C5 T0224 → C5, E5, G5</span>
+              <span class="pill t">C6 T0985 → C9, E9, G9</span>
+              <span class="pill t">C7 T0138 → C3, E3, G3</span>
+              <span class="pill t">C8 T8390 → C7, E7, G7</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Phase 3 -->
+    <div class="phase-group">
+      <div class="phase-group-label">Phase 3 — Seal &amp; Shake</div>
+      <div class="timeline">
+
+        <div class="tstep mech">
+          <div class="rail"><div class="dot">8</div><div class="vline"></div></div>
+          <div class="tcontent">
+            <div class="ttitle">Place Pipette Back <span class="tbadge">mechanical</span></div>
+            <div class="tdesc">Return current pipette to stand before sealing operations begin.</div>
+          </div>
+        </div>
+
+        <div class="tstep mech">
+          <div class="rail"><div class="dot">9</div><div class="vline"></div></div>
+          <div class="tcontent">
+            <div class="ttitle">Seal Plate <span class="tbadge">mechanical</span></div>
+            <div class="tdesc">Seal the assay plate on PlateMax, return to home fixture (<code>wellplate_holder_tags</code>). Peels seal index 1 from stacked holder.</div>
+            <div class="pillrow">
+              <span class="pill a">PlateMax sealer</span>
+              <span class="pill a">Grasp short-side</span>
+              <span class="pill a">Return to home</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tstep mech">
+          <div class="rail"><div class="dot">10</div><div class="vline"></div></div>
+          <div class="tcontent">
+            <div class="ttitle">Load Sealed Plate into Shaker <span class="tbadge">mechanical</span></div>
+            <div class="tdesc">Ensure shaker off → open lid → grab sealed plate → load into slot_1 → close lid.</div>
+            <div class="pillrow">
+              <span class="pill a">Ensure shaker off</span>
+              <span class="sep">→</span>
+              <span class="pill a">Open lid</span>
+              <span class="sep">→</span>
+              <span class="pill a">Grab short-side</span>
+              <span class="sep">→</span>
+              <span class="pill a">Load slot_1</span>
+              <span class="sep">→</span>
+              <span class="pill a">Close lid</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tstep wait">
+          <div class="rail"><div class="dot">11</div><div class="vline"></div></div>
+          <div class="tcontent">
+            <div class="ttitle">Shaker Mix <span class="tbadge">wait · 1 min</span></div>
+            <div class="tdesc">Run shaker for <strong>1 minute</strong> for whole-plate compound mixing.</div>
+          </div>
+        </div>
+
+        <div class="tstep mech">
+          <div class="rail"><div class="dot">12</div><div class="vline"></div></div>
+          <div class="tcontent">
+            <div class="ttitle">Unload &amp; Return Sealed Plate <span class="tbadge">mechanical</span></div>
+            <div class="tdesc">Stop shaker → open lid → unload plate → close lid → return sealed plate to home fixture.</div>
+            <div class="pillrow">
+              <span class="pill a">Stop shaker</span>
+              <span class="sep">→</span>
+              <span class="pill a">Open lid</span>
+              <span class="sep">→</span>
+              <span class="pill a">Unload plate</span>
+              <span class="sep">→</span>
+              <span class="pill a">Close lid</span>
+              <span class="sep">→</span>
+              <span class="pill a">Return to home</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Phase 4 -->
+    <div class="phase-group">
+      <div class="phase-group-label">Phase 4 — Sealed Incubation</div>
+      <div class="timeline">
+        <div class="tstep wait">
+          <div class="rail"><div class="dot">13</div><div class="vline"></div></div>
+          <div class="tcontent">
+            <div class="ttitle">Sealed Pre-Incubation <span class="tbadge">wait · 10 min</span></div>
+            <div class="tdesc">Incubate the sealed assay plate at room temperature for <strong>10 minutes</strong>. Workflow halts here. Operator manually unseals and adds nitrocefin outside the workflow.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 5 -->
+    <div class="phase-group">
+      <div class="phase-group-label">Phase 5 — Teardown</div>
+      <div class="timeline">
+        <div class="tstep save">
+          <div class="rail"><div class="dot">14</div></div>
+          <div class="tcontent">
+            <div class="ttitle">Save Run Folder <span class="tbadge">teardown</span></div>
+            <div class="tdesc">Bundle run log and timing artifacts into <code>tem1_activity_screen_manual_nitro_r3_v1/</code>. Protocol ends — proceed to manual nitrocefin addition.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Key parameters -->
+  <section>
+    <div class="section-head">
+      <span class="section-num">04</span>
+      <span class="section-label">Key Parameters</span>
+    </div>
+    <h2 class="sh">Run Defaults</h2>
+    <div class="params-card">
+      <table class="params-table">
+        <thead>
+          <tr><th>Parameter</th><th>Default</th><th>Description</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>enzyme_volume_ul</code></td><td class="val">40 µL</td><td>TEM-1 or no-enzyme prep per well</td></tr>
+          <tr><td><code>compound_volume_ul</code></td><td class="val">10 µL</td><td>Compound / control addition per well</td></tr>
+          <tr><td><code>stock_volume_ul</code></td><td class="val">2.5 µL</td><td>Source stock per working solution</td></tr>
+          <tr><td><code>compound_blb_volume_ul</code></td><td class="val">47.5 µL</td><td>BLB per compound working solution</td></tr>
+          <tr><td><code>vehicle_dmso_volume_ul</code></td><td class="val">5 µL</td><td>DMSO for matched vehicle</td></tr>
+          <tr><td><code>vehicle_blb_volume_ul</code></td><td class="val">95 µL</td><td>BLB for matched vehicle</td></tr>
+          <tr><td><code>mix_volume_ul</code></td><td class="val">10 µL</td><td>Pipette-mix volume per working solution</td></tr>
+          <tr><td><code>mix_cycles</code></td><td class="val">5×</td><td>Pipette-mix cycles per solution</td></tr>
+          <tr><td><code>plate_mix_minutes</code></td><td class="val">1 min</td><td>Whole-plate shaker mixing duration</td></tr>
+          <tr><td><code>preincubation_minutes</code></td><td class="val">10 min</td><td>Sealed RT incubation before manual nitrocefin</td></tr>
+          <tr><td><code>tem1_well_count</code></td><td class="val">27</td><td>Wells receiving TEM-1 working solution</td></tr>
+          <tr><td><code>negative_well_count</code></td><td class="val">3</td><td>No-TEM-1 negative-control wells</td></tr>
+          <tr><td><code>replicate_count</code></td><td class="val">3</td><td>Replicates per condition</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+</div>
+
+<script>
+// Build 96-well plate
+const rows = ['A','B','C','D','E','F','G','H'];
+const cols = Array.from({length:12}, (_,i) => i+1);
+
+// Well class assignments
+const wellMap = {};
+const assign = (cls, wells) => wells.forEach(w => wellMap[w] = cls);
+assign('pos', ['F3','F7','G11']);
+assign('neg', ['D3','D7','E11']);
+assign('c1',  ['B2','D2','F2']);
+assign('c2',  ['B4','D4','F4']);
+assign('c3',  ['B6','D6','F6']);
+assign('c4',  ['B10','D10','F10']);
+assign('c5',  ['C5','E5','G5']);
+assign('c6',  ['C9','E9','G9']);
+assign('c7',  ['C3','E3','G3']);
+assign('c8',  ['C7','E7','G7']);
+
+const labels = {
+  pos: 'POS', neg: 'NEG',
+  c1:'C1', c2:'C2', c3:'C3', c4:'C4',
+  c5:'C5', c6:'C6', c7:'C7', c8:'C8'
+};
+
+const grid = document.getElementById('plate');
+
+// Top-left spacer
+grid.insertAdjacentHTML('beforeend', '<div></div>');
+// Column labels
+cols.forEach(c => grid.insertAdjacentHTML('beforeend', `<div class="col-label">${c}</div>`));
+
+rows.forEach(r => {
+  grid.insertAdjacentHTML('beforeend', `<div class="row-label">${r}</div>`);
+  cols.forEach(c => {
+    const key = `${r}${c}`;
+    const cls = wellMap[key] || 'empty';
+    const label = labels[cls] || '';
+    grid.insertAdjacentHTML('beforeend',
+      `<div class="well ${cls}" title="${key}${label ? ' · '+label : ''}">${label}</div>`);
+  });
+});
+</script>
+</body>
+</html>

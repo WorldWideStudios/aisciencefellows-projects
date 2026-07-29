@@ -1,0 +1,12 @@
+skill_id: wellplate_shaker_unload
+version: "1.0.0"
+description: "Pick a plate out of a wellplate shaker slot with the right arm. Grabs at <slot>_unload (slot_1..slot_4) — the settled pose ~4mm below the slot where wellplate_shaker_load leaves the plate — then asserts the canonical grip (snaps grasp_shortside onto the gripper + attaches) so it's held identically to every other pick. Lifts out. Works for any slot."
+
+# parameters are derived from the wellplate_shaker_unload() signature in robotic_code.py
+
+tags:
+  - pipette_demo
+  - wellplate_shaker
+  - plate
+  - unload
+  - pick

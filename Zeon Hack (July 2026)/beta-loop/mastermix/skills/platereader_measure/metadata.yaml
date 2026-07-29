@@ -1,0 +1,19 @@
+skill_id: platereader_measure
+version: "2.0.0"
+description: "Run a read on the plate reader by replaying saved AutoGUI press actions against its Windows GUI, then pull the exported report into <project_root>/data/platereader/<execution_id>/. The run's execution_id names the export file and folder, so runs never collide and no name has to be passed in. Intended to run with a plate loaded and the lid closed, between platereader close and re-open. The click/type sequence lives in the STEPS table at the top of robotic_code.py."
+
+# parameters are derived from the platereader_measure() signature in robotic_code.py
+
+preconditions:
+  plate_loaded: true
+  platereader_lid_closed: true
+
+postconditions:
+  measurement_saved: true
+
+tags:
+  - plate_reader
+  - measure
+  - read
+  - autogui
+  - external_api

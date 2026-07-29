@@ -1,0 +1,17 @@
+# Structured knowledge extracted from 10-transcript.md.
+# Schema and rules: ../../schema.md
+# EVERY parameter needs a `source:` citing a question id. No source = a guess.
+
+task: <task_id>
+object: <object_model>
+expert: <name>
+captured: YYYY-MM-DD
+
+geometry: {}
+force: {}
+timing: []
+verification: []
+failure_modes: []
+variation: []
+unknowns:
+  - "<what we asked about and could not pin down>"

@@ -1,0 +1,212 @@
+{
+  "run": 3,
+  "round": 3,
+  "version": 2,
+  "version_label": "r3-discovery-v2",
+  "assay_type": "single_point",
+  "default_screen_conc_uM": 50,
+  "working_solution_multiplier": 10,
+  "compound_volume_ul": 5,
+  "final_volume_ul": 50,
+  "replicates_per_compound": 3,
+  "compound_count": 6,
+  "exclude_compound_ids": [
+    "T19709"
+  ],
+  "supersedes": "data/screens/3/v1/compound_list.json",
+  "concentration_rules_doc": "pvjthomas/COMPOUND_SELECTION.md Step F5",
+  "literature_search_at": "2026-07-26T01:35:51Z",
+  "layout": "column_strip",
+  "rationale_doc": "pvjthomas/runs/3/v2/selection_rationale.md",
+  "control_row": {
+    "vehicle": 0,
+    "no_tem1": 3,
+    "positive": {
+      "compound_id": "T19860",
+      "count": 3,
+      "concentration_uM": 50
+    }
+  },
+  "note": "Round 3 v2 \u2014 cut expected tier-1 hits and expected substrates; retest surprise/novel/borderline compounds in triplicate; add T1005 (R2 surprise) + T0198 (new tier-3 unknown). 6 QC controls, no vehicle.",
+  "compounds": [
+    {
+      "slot": 1,
+      "compound_id": "T1008",
+      "name": "Cephalexin",
+      "bucket": "substrate_control",
+      "functional_class": "negative",
+      "screen_conc_uM": 50,
+      "working_solution_uM": 500,
+      "screen_conc_source": "project_default",
+      "expected_at_screen_conc": "uncertain",
+      "source_plate": "PHD215176",
+      "source_well": "a9",
+      "refs_file": "data/compound_literature/refs/T1008.json",
+      "concentration_rule": 3,
+      "screen_rationale": "Project default screen concentration; no literature inhibitor concentration or IC50/Ki extracted.",
+      "concentration_reference": {
+        "concentration_rule": 3,
+        "screen_conc_source": "project_default",
+        "refs_file": "data/compound_literature/refs/T1008.json",
+        "literature_search_at": "2026-07-26T01:35:51Z",
+        "evidence_type": "project_default",
+        "note": "No TEM-1 nitrocefin Ki/IC50 or assay inhibitor concentration extracted from open repositories + ChEMBL (2026-07-26). Project HTS default 50 \u00b5M."
+      },
+      "run2_label": "surprise_hit",
+      "selection_reason": "substrate \u2192 inhibition retest"
+    },
+    {
+      "slot": 2,
+      "compound_id": "T0224",
+      "name": "Meropenem",
+      "bucket": "substrate_control",
+      "functional_class": "negative",
+      "screen_conc_uM": 50,
+      "working_solution_uM": 500,
+      "screen_conc_source": "project_default",
+      "expected_at_screen_conc": "uncertain",
+      "source_plate": "PHD215177",
+      "source_well": "a3",
+      "refs_file": "data/compound_literature/refs/T0224.json",
+      "concentration_rule": 3,
+      "screen_rationale": null,
+      "concentration_reference": {
+        "concentration_rule": 3,
+        "screen_conc_source": "project_default",
+        "refs_file": "data/compound_literature/refs/T0224.json",
+        "literature_search_at": "2026-07-26T01:35:51Z",
+        "evidence_type": "project_default",
+        "note": "No TEM-1 nitrocefin Ki/IC50 or assay inhibitor concentration extracted from open repositories + ChEMBL (2026-07-26). Project HTS default 50 \u00b5M."
+      },
+      "run2_label": "surprise_hit",
+      "selection_reason": "substrate \u2192 inhibition retest"
+    },
+    {
+      "slot": 3,
+      "compound_id": "T0138",
+      "name": "Cefpiramide acid",
+      "bucket": "diverse_pick",
+      "functional_class": "unknown",
+      "screen_conc_uM": 50,
+      "working_solution_uM": 500,
+      "screen_conc_source": "project_default",
+      "expected_at_screen_conc": "uncertain",
+      "source_plate": "PHD215176",
+      "source_well": "a2",
+      "refs_file": "data/compound_literature/refs/T0138.json",
+      "concentration_rule": 3,
+      "screen_rationale": "Project default screen concentration; no literature inhibitor concentration or IC50/Ki extracted.",
+      "concentration_reference": {
+        "concentration_rule": 3,
+        "screen_conc_source": "project_default",
+        "refs_file": "data/compound_literature/refs/T0138.json",
+        "literature_search_at": "2026-07-26T01:35:51Z",
+        "evidence_type": "project_default",
+        "note": "No TEM-1 nitrocefin Ki/IC50 or assay inhibitor concentration extracted from open repositories + ChEMBL (2026-07-26). Project HTS default 50 \u00b5M."
+      },
+      "run2_label": "novel_hit",
+      "selection_reason": "diverse unknown with signal"
+    },
+    {
+      "slot": 4,
+      "compound_id": "T1005",
+      "name": "Amoxicillin",
+      "bucket": "substrate_control",
+      "functional_class": "negative",
+      "screen_conc_uM": 50,
+      "working_solution_uM": 500,
+      "screen_conc_source": "project_default",
+      "expected_at_screen_conc": "uncertain",
+      "source_plate": "PHD215176",
+      "source_well": "a8",
+      "refs_file": "data/compound_literature/refs/T1005.json",
+      "concentration_rule": 3,
+      "screen_rationale": "Project default screen concentration; no literature inhibitor concentration or IC50/Ki extracted.",
+      "concentration_reference": {
+        "concentration_rule": 3,
+        "screen_conc_source": "project_default",
+        "refs_file": "data/compound_literature/refs/T1005.json",
+        "literature_search_at": "2026-07-26T01:35:51Z",
+        "evidence_type": "project_default",
+        "note": "No TEM-1 nitrocefin Ki/IC50 or assay inhibitor concentration extracted from open repositories + ChEMBL (2026-07-26). Project HTS default 50 \u00b5M."
+      },
+      "run2_label": "surprise_hit",
+      "selection_reason": "substrate prior, inhib signal in R2"
+    },
+    {
+      "slot": 5,
+      "compound_id": "T8390",
+      "name": "Cefazolin",
+      "bucket": "diverse_pick",
+      "functional_class": "unknown",
+      "screen_conc_uM": 50,
+      "working_solution_uM": 500,
+      "screen_conc_source": "project_default",
+      "expected_at_screen_conc": "<20% inhibition",
+      "source_plate": "PHD215176",
+      "source_well": "f3",
+      "refs_file": "data/compound_literature/refs/T8390.json",
+      "concentration_rule": 3,
+      "screen_rationale": "Project default screen concentration; no literature inhibitor concentration or IC50/Ki extracted.",
+      "concentration_reference": {
+        "concentration_rule": 3,
+        "screen_conc_source": "project_default",
+        "refs_file": "data/compound_literature/refs/T8390.json",
+        "literature_search_at": "2026-07-26T01:35:51Z",
+        "evidence_type": "project_default",
+        "note": "No TEM-1 nitrocefin Ki/IC50 or assay inhibitor concentration extracted from open repositories + ChEMBL (2026-07-26). Project HTS default 50 \u00b5M."
+      },
+      "run2_label": "borderline",
+      "selection_reason": "diverse unknown, weak signal"
+    },
+    {
+      "compound_id": "T0198",
+      "name": "Ceftiofur sodium",
+      "bucket": "diverse_pick",
+      "functional_class": "unknown",
+      "screen_conc_uM": 50.0,
+      "working_solution_uM": 500.0,
+      "screen_conc_source": "project_default",
+      "expected_at_screen_conc": "uncertain",
+      "source_plate": "PHD215176",
+      "source_well": "a3",
+      "refs_file": "data/compound_literature/refs/T0198.json",
+      "concentration_rule": 3,
+      "screen_rationale": "Project default screen concentration; no literature inhibitor concentration or IC50/Ki extracted.",
+      "concentration_reference": {
+        "concentration_rule": 3,
+        "screen_conc_source": "project_default",
+        "refs_file": "data/compound_literature/refs/T0198.json",
+        "literature_search_at": "2026-07-26T01:35:51Z",
+        "evidence_type": "project_default",
+        "note": "Tier-3 docking/diverse candidate; not on Run 2 plate."
+      },
+      "slot": 6,
+      "run2_label": "new",
+      "selection_reason": "tier-3 diverse, not screened in R2"
+    }
+  ],
+  "selection_policy": {
+    "cut_expected_positive": [
+      "T1262",
+      "T6685",
+      "T14081"
+    ],
+    "cut_expected_negative": [
+      "T0985"
+    ],
+    "keep": [
+      "T1008",
+      "T0224",
+      "T0138",
+      "T8390"
+    ],
+    "add_r2_surprise": [
+      "T1005"
+    ],
+    "add_new_unknown": [
+      "T0198"
+    ],
+    "replicates_per_compound": 3
+  }
+}

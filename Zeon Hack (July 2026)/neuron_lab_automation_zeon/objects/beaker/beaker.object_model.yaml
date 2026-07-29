@@ -1,0 +1,17 @@
+# beaker object model — populated later
+urdf: beaker.urdf
+
+parts: {}
+
+articulations:
+  default:
+    description: "Empty default articulation"
+    joints: {}
+
+anchors:
+  object:
+    parent_link: world
+    description: "Object reference frame"
+    link_T_anchor:
+      xyz: [0.0, 0.0, 0.0]
+      wxyz: [1.0, 0.0, 0.0, 0.0]

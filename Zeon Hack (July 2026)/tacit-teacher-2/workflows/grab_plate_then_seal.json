@@ -1,0 +1,100 @@
+{
+  "workflow_id": "grab_plate_then_seal",
+  "name": "Grab Plate Then Seal",
+  "description": "Grip a wellplate with the right arm at hold_plate and hold it in place, then pinch the exposed mat corner with the left arm at seal_approach_1 and advance through seal_approach_2/3/4/5 along the diagonal peel path. No lift, no retract, no full peel yet.",
+  "version": "1.0.0",
+  "author": "zeon",
+  "created_at": "2026-07-26T00:00:00.000Z",
+  "updated_at": "2026-07-26T00:00:00.000Z",
+  "simulation_validated": false,
+  "objects": [],
+  "inputs": [
+    { "name": "plate", "type": "object", "is_array": false, "description": "Plate to pick up", "defaultValue": "wellplate_96_deep" }
+  ],
+  "nodes": [
+    {
+      "node_id": "start_0",
+      "type": "start",
+      "label": "Start"
+    },
+    {
+      "node_id": "grab_plate",
+      "type": "skill",
+      "label": "Hold Plate Down",
+      "description": "Grip the plate at its 'hold_plate' anchor with the right arm and hold it in place — no lift, no retract.",
+      "skill_id": "wellplate_hold",
+      "parameters": {
+        "plate": { "$input": "plate" }
+      }
+    },
+    {
+      "node_id": "seal_grab",
+      "type": "skill",
+      "label": "Approach Seal",
+      "description": "Approach the plate's seal_approach_1 anchor with the left arm and pinch the exposed mat corner.",
+      "skill_id": "seal_grab",
+      "parameters": {
+        "plate": { "$input": "plate" },
+        "grasp_anchor": "seal_approach_1"
+      }
+    },
+    {
+      "node_id": "seal_advance_2",
+      "type": "skill",
+      "label": "Advance Seal (2)",
+      "description": "Move the left arm to seal_approach_2, continuing the pinch already established.",
+      "skill_id": "seal_advance",
+      "parameters": {
+        "plate": { "$input": "plate" },
+        "grasp_anchor": "seal_approach_2"
+      }
+    },
+    {
+      "node_id": "seal_advance_3",
+      "type": "skill",
+      "label": "Advance Seal (3)",
+      "description": "Move the left arm to seal_approach_3, continuing the pinch already established.",
+      "skill_id": "seal_advance",
+      "parameters": {
+        "plate": { "$input": "plate" },
+        "grasp_anchor": "seal_approach_3"
+      }
+    },
+    {
+      "node_id": "seal_advance_4",
+      "type": "skill",
+      "label": "Advance Seal (4)",
+      "description": "Move the left arm to seal_approach_4, continuing the pinch already established.",
+      "skill_id": "seal_advance",
+      "parameters": {
+        "plate": { "$input": "plate" },
+        "grasp_anchor": "seal_approach_4"
+      }
+    },
+    {
+      "node_id": "seal_advance_5",
+      "type": "skill",
+      "label": "Advance Seal (5)",
+      "description": "Move the left arm to seal_approach_5, continuing the pinch already established.",
+      "skill_id": "seal_advance",
+      "parameters": {
+        "plate": { "$input": "plate" },
+        "grasp_anchor": "seal_approach_5"
+      }
+    },
+    {
+      "node_id": "end_1",
+      "type": "end",
+      "label": "End"
+    }
+  ],
+  "edges": [
+    { "edge_id": "e0", "from_node": "start_0",       "to_node": "grab_plate",      "condition": { "type": "default" } },
+    { "edge_id": "e1", "from_node": "grab_plate",     "to_node": "seal_grab",      "condition": { "type": "on_success" } },
+    { "edge_id": "e2", "from_node": "seal_grab",      "to_node": "seal_advance_2", "condition": { "type": "on_success" } },
+    { "edge_id": "e3", "from_node": "seal_advance_2", "to_node": "seal_advance_3", "condition": { "type": "on_success" } },
+    { "edge_id": "e4", "from_node": "seal_advance_3", "to_node": "seal_advance_4", "condition": { "type": "on_success" } },
+    { "edge_id": "e5", "from_node": "seal_advance_4", "to_node": "seal_advance_5", "condition": { "type": "on_success" } },
+    { "edge_id": "e6", "from_node": "seal_advance_5", "to_node": "end_1",          "condition": { "type": "on_success" } }
+  ]
+}

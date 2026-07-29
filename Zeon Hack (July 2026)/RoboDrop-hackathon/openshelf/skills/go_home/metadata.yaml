@@ -1,0 +1,10 @@
+skill_id: go_home
+version: "1.0.0"
+description: "Return an arm to its stow / home rest pose (default: right arm)."
+
+# parameters are derived from the go_home() signature in robotic_code.py
+
+tags:
+  - openshelf
+  - motion
+  - home

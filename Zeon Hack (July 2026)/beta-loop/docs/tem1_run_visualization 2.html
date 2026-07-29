@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TEM-1 Activity Screen — Run Log Analysis</title>
+<style>
+  :root {
+    --bg: #fff7ed;
+    --surface: #ffffff;
+    --border: #e5e7eb;
+    --ink: #1f2933;
+    --muted: #62707f;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    --sans: system-ui, -apple-system, Segoe UI, sans-serif;
+
+    /* categorical hues — fixed order */
+    --c-positive:   #b45309;
+    --c-negative:   #475569;
+    --c-vehicle:    #0f766e;
+    --c-cpd1:       #1d4ed8;
+    --c-cpd2:       #6d28d9;
+    --c-cpd3:       #0e7490;
+    --c-cpd4:       #15803d;
+    --c-cpd5:       #b91c1c;
+    --c-cpd6:       #92400e;
+    --c-cpd7:       #7c3aed;
+    --c-cpd8:       #065f46;
+    --c-cpd9:       #9d174d;
+    --c-empty:      #f3f4f6;
+    --c-warn:       #dc2626;
+    --c-warn-bg:    #fef2f2;
+    --c-ok:         #059669;
+    --c-note:       #2563eb;
+    --c-note-bg:    #eff6ff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--sans); color: var(--ink); background: var(--bg); padding: 32px 24px 64px; }
+  .page { max-width: 1080px; margin: 0 auto; }
+  h1 { font-size: 26px; letter-spacing: -0.5px; margin-bottom: 4px; }
+  .meta { font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 6px; }
+  .run-info { font-size: 13px; color: var(--muted); margin-bottom: 28px; line-height: 1.6; }
+  h2 { font-family: var(--mono); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--muted);
+       border-top: 1px solid var(--border); padding-top: 18px; margin: 32px 0 14px; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 20px; margin-bottom: 16px; }
+  .warn-box { background: var(--c-warn-bg); border: 1px solid #fecaca; border-radius: 8px; padding: 12px 16px; margin-bottom: 12px; font-size: 13px; }
+  .warn-box strong { color: var(--c-warn); }
+  .note-box { background: var(--c-note-bg); border: 1px solid #bfdbfe; border-radius: 8px; padding: 12px 16px; margin-bottom: 12px; font-size: 13px; }
+  .note-box strong { color: var(--c-note); }
+
+  /* ── COMPOUND MISMATCH TABLE ──────────────────────────────── */
+  .mismatch-table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  .mismatch-table th { font-family: var(--mono); font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px;
+                       border-bottom: 2px solid var(--border); padding: 8px 10px; text-align: left; }
+  .mismatch-table td { padding: 8px 10px; border-bottom: 1px solid #f3f4f6; vertical-align: middle; }
+  .mismatch-table tr:hover td { background: #fafafa; }
+  .mismatch-row-ok td:first-child { border-left: 3px solid #059669; }
+  .mismatch-row-bad td:first-child { border-left: 3px solid #dc2626; }
+  .mismatch-row-warn td:first-child { border-left: 3px solid #f59e0b; }
+  .badge { display: inline-block; font-family: var(--mono); font-size: 10px; font-weight: 700; border-radius: 4px; padding: 2px 7px; }
+  .badge-ok   { background: #dcfce7; color: #166534; }
+  .badge-bad  { background: #fee2e2; color: #991b1b; }
+  .badge-warn { background: #fef3c7; color: #92400e; }
+  .source-well-box { font-family: var(--mono); font-size: 11px; padding: 2px 6px; border-radius: 4px; display: inline-block; }
+  .sw-intended { background: #dbeafe; color: #1e40af; }
+  .sw-actual   { background: #fee2e2; color: #991b1b; }
+  .sw-ok       { background: #dcfce7; color: #166534; }
+  .root-cause-box { background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px; padding: 14px 18px; font-size: 12.5px; line-height: 1.7; margin-bottom: 14px; }
+  .root-cause-box strong { color: #92400e; }
+
+  /* ── GANTT ─────────────────────────────────────────────── */
+  .gantt-wrap { overflow-x: auto; }
+  .gantt { position: relative; min-width: 900px; }
+  .gantt-axis { display: flex; align-items: flex-end; height: 28px; margin-left: 220px; border-bottom: 1px solid var(--border); }
+  .gantt-tick { position: absolute; border-left: 1px dashed #d1d5db; font-family: var(--mono); font-size: 9.5px; color: var(--muted); padding-top: 2px; }
+  .gantt-rows { margin-left: 220px; position: relative; }
+  .gantt-row { display: flex; align-items: center; height: 30px; border-bottom: 1px solid #f3f4f6; position: relative; }
+  .gantt-label { position: absolute; right: calc(100% + 8px); white-space: nowrap; font-size: 12px; color: var(--ink); text-align: right; width: 210px; }
+  .gantt-bar { position: absolute; height: 18px; border-radius: 3px; top: 6px; display: flex; align-items: center; padding: 0 6px; }
+  .gantt-bar span { font-family: var(--mono); font-size: 9px; color: rgba(255,255,255,0.92); white-space: nowrap; overflow: hidden; }
+  .gantt-bar:hover { filter: brightness(1.1); }
+
+  /* ── 96-WELL PLATE ──────────────────────────────────────── */
+  .plate-grid { display: grid; grid-template-columns: 28px repeat(12, 1fr); gap: 3px; }
+  .plate-header { font-family: var(--mono); font-size: 10px; color: var(--muted); text-align: center; padding: 2px 0; }
+  .plate-row-label { font-family: var(--mono); font-size: 10px; color: var(--muted); text-align: right; padding-right: 4px; line-height: 32px; }
+  .well { width: 100%; aspect-ratio: 1; border-radius: 50%; border: 1.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center;
+          font-family: var(--mono); font-size: 8px; color: #fff; font-weight: 700; cursor: default; transition: transform 0.1s; }
+  .well:hover { transform: scale(1.15); z-index: 10; }
+  .well.empty { background: var(--c-empty); color: var(--muted); font-weight: 400; }
+  .well.positive { background: var(--c-positive); }
+  .well.negative { background: var(--c-negative); }
+  .well.vehicle  { background: var(--c-vehicle); }
+  .well.cpd1  { background: var(--c-cpd1); }
+  .well.cpd2  { background: var(--c-cpd2); }
+  .well.cpd3  { background: var(--c-cpd3); }
+  .well.cpd4  { background: var(--c-cpd4); }
+  .well.cpd5  { background: var(--c-cpd5); }
+  .well.cpd6  { background: var(--c-cpd6); }
+  .well.cpd7  { background: var(--c-cpd7); }
+  .well.cpd8  { background: var(--c-cpd8); }
+  .well.cpd9  { background: var(--c-cpd9); }
+
+  /* ── LEGEND ─────────────────────────────────────────────── */
+  .legend { display: flex; flex-wrap: wrap; gap: 8px 14px; margin-top: 14px; }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; }
+  .legend-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+
+  /* ── COLD BLOCK ─────────────────────────────────────────── */
+  .coldblock-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+  .hole-card { border: 1.5px solid var(--border); border-radius: 8px; padding: 10px; text-align: center; }
+  .hole-label { font-family: var(--mono); font-size: 10px; color: var(--muted); margin-bottom: 4px; }
+  .hole-name { font-size: 12px; font-weight: 700; color: var(--ink); margin-bottom: 2px; }
+  .hole-conc { font-family: var(--mono); font-size: 10px; color: var(--muted); }
+  .hole-circle { width: 36px; height: 36px; border-radius: 50%; margin: 6px auto; border: 2px solid currentColor; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; }
+
+  /* ── PCR WORKING PLATE ──────────────────────────────────── */
+  .pcr-row { display: flex; gap: 6px; align-items: center; }
+  .pcr-well { width: 64px; border-radius: 6px; border: 1.5px solid var(--border); padding: 6px 4px; text-align: center; font-size: 10px; }
+  .pcr-well .well-id { font-family: var(--mono); font-weight: 700; font-size: 11px; margin-bottom: 2px; }
+  .pcr-well .well-name { font-size: 9.5px; color: var(--muted); line-height: 1.3; }
+  .pcr-well .well-vol  { font-family: var(--mono); font-size: 9px; color: var(--c-note); margin-top: 2px; }
+
+  /* ── NITROCEFIN TIMELINE ────────────────────────────────── */
+  .nitro-timeline { display: flex; flex-direction: column; gap: 4px; }
+  .nitro-row { display: flex; align-items: center; gap: 10px; font-size: 12px; }
+  .nitro-bar-wrap { flex: 1; height: 18px; background: #f3f4f6; border-radius: 3px; position: relative; overflow: visible; }
+  .nitro-bar { height: 100%; border-radius: 3px; position: absolute; left: 0; display: flex; align-items: center; padding-left: 6px; }
+  .nitro-bar span { font-family: var(--mono); font-size: 9px; color: #fff; white-space: nowrap; }
+  .nitro-label { width: 220px; font-size: 11.5px; text-align: right; flex-shrink: 0; color: var(--ink); }
+  .nitro-time { width: 50px; font-family: var(--mono); font-size: 10px; color: var(--muted); flex-shrink: 0; }
+
+  /* ── STATS ROW ──────────────────────────────────────────── */
+  .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 4px; }
+  .stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; }
+  .stat-val { font-size: 28px; font-weight: 800; letter-spacing: -1px; }
+  .stat-label { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+  /* ── TIP USAGE ──────────────────────────────────────────── */
+  .tip-section { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .tip-col h3 { font-family: var(--mono); font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 8px; }
+  .tip-row { display: flex; align-items: center; gap: 8px; font-size: 11.5px; margin-bottom: 4px; }
+  .tip-num { font-family: var(--mono); width: 28px; color: var(--muted); }
+  .tip-bar-bg { flex: 1; height: 8px; background: #f3f4f6; border-radius: 2px; }
+  .tip-bar { height: 100%; border-radius: 2px; }
+  .tip-desc { font-size: 10.5px; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="meta">Zeon Systems · exec_tem1_activity_screen_hack_world_22_20260725_230432</div>
+  <h1>TEM-1 Activity Screen — Run Analysis</h1>
+  <div class="run-info">
+    Workflow: <strong>tem1_activity_screen_hack_world_22</strong> &nbsp;·&nbsp;
+    Started: <strong>2026-07-25 23:04:32 PDT</strong> &nbsp;·&nbsp;
+    Completed: <strong>2026-07-26 01:55:53 PDT</strong> &nbsp;·&nbsp;
+    Duration: <strong>171 min 20 s</strong>
+  </div>
+
+  <!-- ── ANOMALY FLAGS ─────────────────────────────────────── -->
+  <div class="warn-box">
+    <strong>⚠ Pre-incubation: 2 min actual vs 10 min workflow default.</strong>
+    The log records <code>waiting 2 minute(s)</code> at [01:17:45–01:19:45].
+    The workflow default for <code>preincubation_minutes</code> is 10.0. If this was intentional (canvas override), confirm it. If not, pre-incubation was cut 5× short — TEM-1 / compound equilibration may be incomplete.
+  </div>
+  <div class="note-box">
+    <strong>ℹ Nitrocefin addition order is stagger-aware and correct:</strong>
+    No-enzyme controls → positive control → compounds 1–9 → vehicle+TEM-1 (max-activity) last.
+    Each batch = one aspirate + 3 dispenses; gap between first and last well ≈ 17 min total.
+    t₀ for each condition is the batch completion timestamp.
+  </div>
+  <div class="note-box">
+    <strong>ℹ Compound 1 (T1262 Tazobactam) received a dedicated serial dilution</strong>
+    (1 µL stock → 50 µL BLB intermediate → 10 µM final), vs all other compounds at 500 µM.
+    This matches the workflow spec for a 1 µM assay concentration. Confirm this is the intended final concentration.
+  </div>
+
+  <!-- ── COMPOUND IDENTITY MISMATCH ───────────────────────────── -->
+  <h2>⚠ Compound Identity Mismatch — Intended vs Actually Tested</h2>
+
+  <div class="root-cause-box">
+    <strong>Root cause (log evidence):</strong> The workflow canvas defaults use scattered source wells
+    (<code>B10, F2, F7, A8, A9, A3, A4, A2, F3</code> across <code>wellplate_pcr_parts_1/2</code>),
+    but the run log shows compound 1 stock drawn from <code>A2</code> and compounds 2–9 drawn sequentially
+    from <code>A3→A4→A5→…→A10</code> — a contiguous block from a single plate (PHD215176).
+    This matches the <em>actual</em> compound layout of the physical plate on the deck, which was
+    <strong>not the plate the canvas was parameterized for</strong>.
+    The canvas <code>DEFAULT_SOURCE_WELLS</code> / <code>DEFAULT_SOURCE_PLATES</code> arrays were never
+    overridden to match the physical plate loaded during this run, so the robot aspirated from the wells
+    that were passed in — which happened to be the sequential layout of PHD215176, not the intended R2 v5 library positions.
+  </div>
+  <div class="warn-box">
+    <strong>⚠ 9 of 9 test compounds are wrong.</strong>
+    Every compound slot is a mismatch. The positive control (H7 → clavulanic acid) is the only correct identity.
+    Assay results from this run cannot be attributed to the intended R2 v5 compound set.
+  </div>
+
+  <div class="card" style="overflow-x:auto">
+    <table class="mismatch-table" id="mismatch-table"></table>
+  </div>
+
+  <!-- ── STAT TILES ─────────────────────────────────────────── -->
+  <h2>Run Summary</h2>
+  <div class="stats-row">
+    <div class="stat-card"><div class="stat-val">171<span style="font-size:18px;font-weight:400"> min</span></div><div class="stat-label">Total run time</div></div>
+    <div class="stat-card"><div class="stat-val">36</div><div class="stat-label">Assay wells filled</div></div>
+    <div class="stat-card"><div class="stat-val" id="tip-count">52+</div><div class="stat-label">Tips consumed (both pipettes)</div></div>
+    <div class="stat-card"><div class="stat-val">50 <span style="font-size:16px;font-weight:400">µL</span></div><div class="stat-label">Final volume per well</div></div>
+  </div>
+
+  <!-- ── GANTT ──────────────────────────────────────────────── -->
+  <h2>E2E Operation Timeline</h2>
+  <div class="card gantt-wrap">
+    <div class="gantt" id="gantt"></div>
+  </div>
+
+  <!-- ── 96-WELL PLATE ──────────────────────────────────────── -->
+  <h2>Final Assay Plate Layout (96-well flat-bottom)</h2>
+  <div class="card">
+    <div class="plate-grid" id="plate96"></div>
+    <div class="legend" id="legend"></div>
+    <p style="font-size:11.5px;color:var(--muted);margin-top:12px;line-height:1.6">
+      Per well: 20 µL enzyme prep + 5 µL compound/control + 25 µL 2× nitrocefin = 50 µL.
+      Edge wells (row A, row H, columns 1 &amp; 12) left empty. 36 active wells in R2 v5 column-strip layout.
+      Hover over a well to see its identifier.
+    </p>
+  </div>
+
+  <!-- ── COLD BLOCK ─────────────────────────────────────────── -->
+  <h2>Cold Block Reagent Map</h2>
+  <div class="card">
+    <div class="coldblock-grid" id="coldblock"></div>
+  </div>
+
+  <!-- ── PCR WORKING PLATE ──────────────────────────────────── -->
+  <h2>Working Plate (wellplate_pcr_parts_4) — Compound Pre-dilutions</h2>
+  <div class="card">
+    <div class="pcr-row" id="pcr-row"></div>
+    <p style="font-size:11.5px;color:var(--muted);margin-top:12px;line-height:1.6">
+      Row A only. 47.5 µL BLB dispensed first (batch, 2 wells/aspiration), then 2.5 µL compound stock added per well (serial tip changes).
+      T1262 (A3) used a 200 µM intermediate from hole_3 before adding to the working plate.
+      Final working concentrations: 500 µM for compounds 2–9 &amp; positive control; 10 µM for T1262; 5% DMSO for vehicle.
+    </p>
+  </div>
+
+  <!-- ── NITROCEFIN STAGGER ─────────────────────────────────── -->
+  <h2>Nitrocefin Addition — Per-Condition t₀ Stagger</h2>
+  <div class="card">
+    <p style="font-size:12px;color:var(--muted);margin-bottom:14px;line-height:1.6">
+      Nitrocefin working solution prepared just-in-time (01:19:45–01:38:49, 19 min). Addition started 01:38:50.
+      Each row = one dispensing batch (1 aspiration → 3 dispenses to replicate wells).
+    </p>
+    <div class="nitro-timeline" id="nitro-timeline"></div>
+    <p style="font-size:11px;color:var(--muted);margin-top:10px">
+      Total stagger window: ~17 min (01:38:50 → 01:55:52). Vehicle+TEM-1 wells last = highest expected signal, added last to maximize pre-incubation equivalence.
+    </p>
+  </div>
+
+  <!-- ── PREPARE DILUTIONS DETAIL ──────────────────────────── -->
+  <h2>Prepare Dilutions Phase — Sub-operation Breakdown</h2>
+  <div class="card">
+    <p style="font-size:12px;color:var(--muted);margin-bottom:14px">
+      This phase ran 23:05:00 → 00:20:59 (≈ 95.5 min), 56% of total run time.
+      The many <code>STARTING</code> entries without detail are robotics transitions (arm moves, tip attach/eject, mix cycles).
+    </p>
+    <table style="width:100%;border-collapse:collapse;font-size:12px;">
+      <thead>
+        <tr>
+          <th style="text-align:left;padding:7px 8px;border-bottom:1px solid var(--border);font-family:var(--mono);font-size:10px;color:var(--muted);text-transform:uppercase">Time</th>
+          <th style="text-align:left;padding:7px 8px;border-bottom:1px solid var(--border);font-family:var(--mono);font-size:10px;color:var(--muted);text-transform:uppercase">Operation</th>
+          <th style="text-align:left;padding:7px 8px;border-bottom:1px solid var(--border);font-family:var(--mono);font-size:10px;color:var(--muted);text-transform:uppercase">Volume</th>
+          <th style="text-align:left;padding:7px 8px;border-bottom:1px solid var(--border);font-family:var(--mono);font-size:10px;color:var(--muted);text-transform:uppercase">Tip</th>
+        </tr>
+      </thead>
+      <tbody id="dilution-ops"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<script>
+// ── DATA ────────────────────────────────────────────────────────
+
+const START_MIN = 0; // 23:04:32 = t=0
+const TOTAL_MIN = 171.33;
+
+function toMin(ts) {
+  // ts = "HH:MM:SS" relative to 23:04:32 start, possibly crossing midnight
+  const [h, m, s] = ts.split(':').map(Number);
+  let totalSec = h * 3600 + m * 60 + s;
+  const startSec = 23 * 3600 + 4 * 60 + 32;
+  let diff = totalSec - startSec;
+  if (diff < 0) diff += 86400; // midnight wrap
+  return diff / 60;
+}
+
+const PHASES = [
+  { label: "Pick Up Pipette",          start: "23:04:32", end: "23:05:00", color: "#94a3b8",  group: "Setup" },
+  { label: "Prepare Dilutions",        start: "23:05:00", end: "00:20:59", color: "#6d28d9",  group: "Dilutions" },
+  { label: "Dispense TEM-1 Prep",      start: "00:20:59", end: "00:34:14", color: "#0f766e",  group: "Assay Setup" },
+  { label: "Dispense No-Enzyme Prep",  start: "00:34:15", end: "00:35:39", color: "#475569",  group: "Assay Setup" },
+  { label: "Dispense Vehicle",         start: "00:35:39", end: "00:40:09", color: "#0e7490",  group: "Assay Setup" },
+  { label: "Dispense Positive Control",start: "00:40:10", end: "00:42:17", color: "#b45309",  group: "Assay Setup" },
+  { label: "Dispense Cpd 1 (T1262)",   start: "00:42:18", end: "00:46:16", color: "#1d4ed8",  group: "Assay Setup" },
+  { label: "Dispense Cpd 2–9",         start: "00:46:16", end: "01:04:12", color: "#2563eb",  group: "Assay Setup" },
+  { label: "Place Pipette / Setup Mix",start: "01:04:13", end: "01:06:41", color: "#94a3b8",  group: "Shaker" },
+  { label: "Grab Plate",               start: "01:06:41", end: "01:07:05", color: "#64748b",  group: "Shaker" },
+  { label: "Open Shaker",              start: "01:07:05", end: "01:08:17", color: "#64748b",  group: "Shaker" },
+  { label: "Load Plate → Shaker",      start: "01:08:17", end: "01:08:52", color: "#64748b",  group: "Shaker" },
+  { label: "Close Shaker",             start: "01:08:52", end: "01:10:17", color: "#64748b",  group: "Shaker" },
+  { label: "Mix Wait (1 min)",         start: "01:10:17", end: "01:11:17", color: "#f59e0b",  group: "Shaker" },
+  { label: "Open / Unload Shaker",     start: "01:11:20", end: "01:13:02", color: "#64748b",  group: "Shaker" },
+  { label: "Close / Return Plate",     start: "01:13:02", end: "01:16:10", color: "#64748b",  group: "Shaker" },
+  { label: "Pick Pipette After Mix",   start: "01:16:10", end: "01:17:45", color: "#94a3b8",  group: "Shaker" },
+  { label: "Pre-Incubate (2 min ⚠)",   start: "01:17:45", end: "01:19:45", color: "#dc2626",  group: "Pre-Incubate" },
+  { label: "Prepare Nitrocefin",       start: "01:19:45", end: "01:38:49", color: "#d97706",  group: "Nitrocefin" },
+  { label: "Nitro: No-Enzyme Ctrl",    start: "01:38:49", end: "01:40:13", color: "#475569",  group: "Nitrocefin" },
+  { label: "Nitro: Positive Ctrl",     start: "01:40:13", end: "01:41:37", color: "#b45309",  group: "Nitrocefin" },
+  { label: "Nitro: Cpd 1–9",          start: "01:41:37", end: "01:54:17", color: "#1d4ed8",  group: "Nitrocefin" },
+  { label: "Nitro: Vehicle Ctrl",      start: "01:54:17", end: "01:55:52", color: "#0f766e",  group: "Nitrocefin" },
+  { label: "Place Pipette Back",       start: "01:55:52", end: "01:55:53", color: "#94a3b8",  group: "Done" },
+];
+
+// ── COMPOUND MISMATCH TABLE ──────────────────────────────────────
+(function buildMismatch() {
+  const el = document.getElementById('mismatch-table');
+
+  // Intended: from workflow JSON defaults + canvas DEFAULT_SOURCE_WELLS/PLATES
+  // Actual: from run log (what wells were actually aspirated)
+  // PHD215176 actual well contents: user-supplied mapping
+  const rows = [
+    {
+      slot: 'Positive control',
+      intendedId:   'T19860',
+      intendedName: 'Clavulanic Acid',
+      intendedPlate: 'wellplate_pcr_parts_1',
+      intendedWell: 'H7',
+      actualWell:   'H7',            // log: "Positive control: 2.5 uL H7 -> A1"
+      actualId:     'T19860',
+      actualName:   'Clavulanic Acid',
+      match: 'ok',
+      note: 'Correct — same plate, same well',
+    },
+    {
+      slot: 'Compound 1',
+      intendedId:   'T1262',
+      intendedName: 'Tazobactam',
+      intendedPlate: 'wellplate_pcr_parts_1',
+      intendedWell: 'B10',
+      actualWell:   'A2',            // log: "T1262 stock to intermediate: 1.0 uL A2 -> hole_3"
+      actualId:     'T0138',
+      actualName:   'Cefpiramide acid',
+      match: 'bad',
+      note: 'Log pulled from A2 (not B10). PHD215176 A2 = T0138 Cefpiramide acid.',
+    },
+    {
+      slot: 'Compound 2',
+      intendedId:   'T6685',
+      intendedName: 'Sulbactam sodium',
+      intendedPlate: 'wellplate_pcr_parts_1',
+      intendedWell: 'F2',
+      actualWell:   'A3',            // log: "Compound 2: 2.5 uL A3 -> A4"
+      actualId:     'T0198',
+      actualName:   'Ceftiofur sodium',
+      match: 'bad',
+      note: 'Log pulled from A3 (not F2). PHD215176 A3 = T0198.',
+    },
+    {
+      slot: 'Compound 3',
+      intendedId:   'T14081',
+      intendedName: 'Enmetazobactam',
+      intendedPlate: 'wellplate_pcr_parts_1',
+      intendedWell: 'F7',
+      actualWell:   'A4',            // log: "Compound 3: 2.5 uL A4 -> A5"
+      actualId:     'T0199',
+      actualName:   'Cephradine',
+      match: 'bad',
+      note: 'Log pulled from A4 (not F7). PHD215176 A4 = T0199.',
+    },
+    {
+      slot: 'Compound 4',
+      intendedId:   'T1005',
+      intendedName: 'Amoxicillin',
+      intendedPlate: 'wellplate_pcr_parts_1',
+      intendedWell: 'A8',
+      actualWell:   'A5',            // log: "Compound 4: 2.5 uL A5 -> A6"
+      actualId:     'T0234',
+      actualName:   'Methicillin sodium salt',
+      match: 'bad',
+      note: 'Log pulled from A5 (not A8). PHD215176 A5 = T0234.',
+    },
+    {
+      slot: 'Compound 5',
+      intendedId:   'T1008',
+      intendedName: 'Cephalexin',
+      intendedPlate: 'wellplate_pcr_parts_1',
+      intendedWell: 'A9',
+      actualWell:   'A6',            // log: "Compound 5: 2.5 uL A6 -> A7"
+      actualId:     'T0366',
+      actualName:   'Cefadroxil',
+      match: 'bad',
+      note: 'Log pulled from A6 (not A9). PHD215176 A6 = T0366.',
+    },
+    {
+      slot: 'Compound 6',
+      intendedId:   'T0224',
+      intendedName: 'Meropenem',
+      intendedPlate: 'wellplate_pcr_parts_2',
+      intendedWell: 'A3',
+      actualWell:   'A7',            // log: "Compound 6: 2.5 uL A7 -> A8"
+      actualId:     'T1001',
+      actualName:   'Dicloxacillin sodium hydrate',
+      match: 'bad',
+      note: 'Log pulled from A7 (not parts_2 / A3). PHD215176 A7 = T1001.',
+    },
+    {
+      slot: 'Compound 7',
+      intendedId:   'T0985',
+      intendedName: 'Oxacillin sodium salt',
+      intendedPlate: 'wellplate_pcr_parts_2',
+      intendedWell: 'A4',
+      actualWell:   'A8',            // log: "Compound 7: 2.5 uL A8 -> A9"
+      actualId:     'T1005',
+      actualName:   'Amoxicillin',
+      match: 'bad',
+      note: 'Log pulled from A8 (not parts_2 / A4). PHD215176 A8 = T1005.',
+    },
+    {
+      slot: 'Compound 8',
+      intendedId:   'T0138',
+      intendedName: 'Cefpiramide acid',
+      intendedPlate: 'wellplate_pcr_parts_1',
+      intendedWell: 'A2',
+      actualWell:   'A9',            // log: "Compound 8: 2.5 uL A9 -> A10"
+      actualId:     'T1008',
+      actualName:   'Cephalexin',
+      match: 'bad',
+      note: 'Log pulled from A9 (not A2). PHD215176 A9 = T1008.',
+    },
+    {
+      slot: 'Compound 9',
+      intendedId:   'T8390',
+      intendedName: 'Cefazolin',
+      intendedPlate: 'wellplate_pcr_parts_1',
+      intendedWell: 'F3',
+      actualWell:   'A10',           // log: "Compound 9: 2.5 uL A10 -> A11"
+      actualId:     'T1031',
+      actualName:   'Cloxacillin sodium monohydrate',
+      match: 'bad',
+      note: 'Log pulled from A10 (not F3). PHD215176 A10 = T1031.',
+    },
+  ];
+
+  // header
+  const thead = document.createElement('thead');
+  thead.innerHTML = `<tr>
+    <th>Slot</th>
+    <th>Intended ID / compound</th>
+    <th>Intended source well</th>
+    <th>Actual well aspirated (log)</th>
+    <th>Actual compound (PHD215176)</th>
+    <th>Status</th>
+    <th>Note</th>
+  </tr>`;
+  el.appendChild(thead);
+
+  const tbody = document.createElement('tbody');
+  rows.forEach(r => {
+    const tr = document.createElement('tr');
+    tr.className = r.match === 'ok' ? 'mismatch-row-ok' : 'mismatch-row-bad';
+    tr.innerHTML = `
+      <td style="font-weight:700;white-space:nowrap">${r.slot}</td>
+      <td>
+        <span style="font-family:var(--mono);font-size:11px;font-weight:700">${r.intendedId}</span><br>
+        <span style="font-size:11.5px;color:var(--muted)">${r.intendedName}</span>
+      </td>
+      <td>
+        <span class="source-well-box ${r.match === 'ok' ? 'sw-ok' : 'sw-intended'}">${r.intendedPlate.replace('wellplate_pcr_parts_','P')} / ${r.intendedWell}</span>
+      </td>
+      <td>
+        <span class="source-well-box ${r.match === 'ok' ? 'sw-ok' : 'sw-actual'}">${r.actualWell}</span>
+      </td>
+      <td>
+        <span style="font-family:var(--mono);font-size:11px;font-weight:700;color:${r.match==='ok'?'#166534':'#991b1b'}">${r.actualId}</span><br>
+        <span style="font-size:11.5px;color:var(--muted)">${r.actualName}</span>
+      </td>
+      <td style="white-space:nowrap">
+        <span class="badge ${r.match === 'ok' ? 'badge-ok' : 'badge-bad'}">
+          ${r.match === 'ok' ? '✓ Match' : '✗ Mismatch'}
+        </span>
+      </td>
+      <td style="font-size:11.5px;color:var(--muted);max-width:220px">${r.note}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+  el.appendChild(tbody);
+})();
+
+// ── GANTT ────────────────────────────────────────────────────────
+(function buildGantt() {
+  const el = document.getElementById('gantt');
+  const W = 820; // px for 171 min
+  const scale = W / TOTAL_MIN;
+
+  // ticks every 15 min
+  const axisDiv = document.createElement('div');
+  axisDiv.className = 'gantt-axis';
+  axisDiv.style.cssText = `position:relative;height:28px;margin-left:220px;width:${W}px;border-bottom:1px solid var(--border)`;
+  for (let m = 0; m <= 180; m += 15) {
+    const pct = m / TOTAL_MIN;
+    if (pct > 1.02) break;
+    const tick = document.createElement('div');
+    tick.className = 'gantt-tick';
+    tick.style.cssText = `left:${m * scale}px;bottom:0;padding-bottom:2px`;
+    // convert back to clock time
+    const abs = 23 * 60 + 4.53 + m;
+    const hh = Math.floor(abs / 60) % 24;
+    const mm = Math.round(abs % 60);
+    tick.textContent = `${String(hh).padStart(2,'0')}:${String(mm).padStart(2,'0')}`;
+    axisDiv.appendChild(tick);
+  }
+  el.appendChild(axisDiv);
+
+  const rowsDiv = document.createElement('div');
+  rowsDiv.className = 'gantt-rows';
+  rowsDiv.style.cssText = `margin-left:220px;width:${W}px;position:relative`;
+
+  PHASES.forEach(p => {
+    const s = toMin(p.start);
+    const e = toMin(p.end);
+    const dur = Math.max(e - s, 0.3);
+    const row = document.createElement('div');
+    row.className = 'gantt-row';
+    row.style.cssText = `width:${W}px;height:30px;border-bottom:1px solid #f3f4f6;position:relative`;
+
+    const lbl = document.createElement('div');
+    lbl.className = 'gantt-label';
+    lbl.style.cssText = `position:absolute;right:calc(${W}px + 8px);width:210px;font-size:11.5px;color:var(--ink);text-align:right;line-height:30px;white-space:nowrap`;
+    lbl.textContent = p.label;
+
+    const bar = document.createElement('div');
+    bar.className = 'gantt-bar';
+    bar.style.cssText = `left:${s * scale}px;width:${dur * scale}px;background:${p.color};height:18px;top:6px;border-radius:3px;display:flex;align-items:center;padding:0 5px;position:absolute;min-width:3px`;
+    bar.title = `${p.label}: ${p.start} → ${p.end} (${dur.toFixed(1)} min)`;
+    if (dur > 4) {
+      const sp = document.createElement('span');
+      sp.style.cssText = 'font-family:var(--mono);font-size:9px;color:rgba(255,255,255,0.9);white-space:nowrap;overflow:hidden';
+      sp.textContent = dur >= 1 ? `${dur.toFixed(0)}m` : `<1m`;
+      bar.appendChild(sp);
+    }
+
+    row.appendChild(lbl);
+    row.appendChild(bar);
+    rowsDiv.appendChild(row);
+  });
+  el.appendChild(rowsDiv);
+})();
+
+// ── 96-WELL PLATE ────────────────────────────────────────────────
+(function buildPlate() {
+  const el = document.getElementById('plate96');
+  const ROWS = ['A','B','C','D','E','F','G','H'];
+  const COLS = [1,2,3,4,5,6,7,8,9,10,11,12];
+
+  const WELL_MAP = {};
+  const assign = (wells, cls, abbr) => wells.forEach(w => WELL_MAP[w] = { cls, abbr });
+  assign(['F3','F7','G11'],           'positive', 'POS');
+  assign(['D3','D7','E11'],           'negative', 'NEG');
+  assign(['B3','B7','C11'],           'vehicle',  'VEH');
+  assign(['B2','D2','F2'],            'cpd1', 'C1');
+  assign(['B4','D4','F4'],            'cpd2', 'C2');
+  assign(['B6','D6','F6'],            'cpd3', 'C3');
+  assign(['B8','D8','F8'],            'cpd4', 'C4');
+  assign(['B10','D10','F10'],         'cpd5', 'C5');
+  assign(['C5','E5','G5'],            'cpd6', 'C6');
+  assign(['C9','E9','G9'],            'cpd7', 'C7');
+  assign(['C3','E3','G3'],            'cpd8', 'C8');
+  assign(['C7','E7','G7'],            'cpd9', 'C9');
+
+  // header row
+  const spacer = document.createElement('div');
+  el.appendChild(spacer);
+  COLS.forEach(c => {
+    const h = document.createElement('div');
+    h.className = 'plate-header';
+    h.textContent = c;
+    el.appendChild(h);
+  });
+
+  ROWS.forEach(r => {
+    const rl = document.createElement('div');
+    rl.className = 'plate-row-label';
+    rl.textContent = r;
+    el.appendChild(rl);
+    COLS.forEach(c => {
+      const id = `${r}${c}`;
+      const info = WELL_MAP[id];
+      const w = document.createElement('div');
+      w.className = 'well ' + (info ? info.cls : 'empty');
+      w.title = id + (info ? ` — ${info.cls.toUpperCase()}` : ' — empty');
+      w.textContent = info ? info.abbr : '';
+      el.appendChild(w);
+    });
+  });
+
+  // legend
+  const legEl = document.getElementById('legend');
+  const items = [
+    { cls: 'positive', label: 'Positive ctrl — Clavulanic acid (F3,F7,G11)' },
+    { cls: 'negative', label: 'No-enzyme ctrl — BLB only (D3,D7,E11)' },
+    { cls: 'vehicle',  label: 'Vehicle + TEM-1 ctrl (B3,B7,C11)' },
+    { cls: 'cpd1', label: 'C1 T1262 Tazobactam 1 µM' },
+    { cls: 'cpd2', label: 'C2 T6685 Sulbactam' },
+    { cls: 'cpd3', label: 'C3 T14081 Enmetazobactam' },
+    { cls: 'cpd4', label: 'C4 T1005 Amoxicillin' },
+    { cls: 'cpd5', label: 'C5 T1008 Cephalexin' },
+    { cls: 'cpd6', label: 'C6 T0224 Meropenem' },
+    { cls: 'cpd7', label: 'C7 T0985 Oxacillin' },
+    { cls: 'cpd8', label: 'C8 T0138 Cefpiramide acid' },
+    { cls: 'cpd9', label: 'C9 T8390 Cefazolin' },
+  ];
+  const COLOR_MAP = {
+    positive:'#b45309', negative:'#475569', vehicle:'#0f766e',
+    cpd1:'#1d4ed8', cpd2:'#6d28d9', cpd3:'#0e7490', cpd4:'#15803d',
+    cpd5:'#b91c1c', cpd6:'#92400e', cpd7:'#7c3aed', cpd8:'#065f46', cpd9:'#9d174d'
+  };
+  items.forEach(it => {
+    const div = document.createElement('div');
+    div.className = 'legend-item';
+    div.innerHTML = `<div class="legend-dot" style="background:${COLOR_MAP[it.cls]}"></div><span>${it.label}</span>`;
+    legEl.appendChild(div);
+  });
+})();
+
+// ── COLD BLOCK ───────────────────────────────────────────────────
+(function buildColdBlock() {
+  const el = document.getElementById('coldblock');
+  const holes = [
+    { id: 'hole_1',  name: 'TEM-1 stock',         conc: '100 ng/µL',    color: '#0f766e', used: '2 µL → hole_2' },
+    { id: 'hole_2',  name: 'TEM-1 intermediate',  conc: '1 ng/µL',      color: '#0f766e', used: '100 µL → hole_8' },
+    { id: 'hole_3',  name: 'T1262 intermediate',  conc: '200 µM',       color: '#1d4ed8', used: '2.5 µL → PCR A3' },
+    { id: 'hole_4',  name: 'Nitrocefin stock',     conc: '20 mM',        color: '#d97706', used: '6.25 µL → hole_10' },
+    { id: 'hole_5',  name: 'BLB tube 1',           conc: 'Buffer',       color: '#475569', used: 'Compound working solutions' },
+    { id: 'hole_6',  name: 'BLB tube 2',           conc: 'Buffer',       color: '#475569', used: 'TEM-1 dilution + no-enzyme' },
+    { id: 'hole_7',  name: 'BLB for nitrocefin',   conc: 'Buffer',       color: '#475569', used: '1243.75 µL → hole_10' },
+    { id: 'hole_8',  name: 'TEM-1 working',        conc: '0.1 ng/µL',   color: '#059669', used: '20 µL × 33 wells' },
+    { id: 'hole_9',  name: 'DMSO',                 conc: '100%',         color: '#92400e', used: '5 µL → PCR A2' },
+    { id: 'hole_10', name: '2× Nitrocefin',         conc: '100 µM',       color: '#d97706', used: '25 µL × 36 wells' },
+  ];
+  holes.forEach(h => {
+    const card = document.createElement('div');
+    card.className = 'hole-card';
+    card.innerHTML = `
+      <div class="hole-label">${h.id}</div>
+      <div class="hole-circle" style="color:${h.color};border-color:${h.color};background:${h.color}1a">
+        <span style="color:${h.color}">${h.id.replace('hole_','')}</span>
+      </div>
+      <div class="hole-name">${h.name}</div>
+      <div class="hole-conc">${h.conc}</div>
+      <div style="font-size:9.5px;color:#94a3b8;margin-top:4px;line-height:1.3">${h.used}</div>
+    `;
+    el.appendChild(card);
+  });
+})();
+
+// ── PCR WORKING PLATE ────────────────────────────────────────────
+(function buildPCR() {
+  const el = document.getElementById('pcr-row');
+  const wells = [
+    { id: 'A1', name: 'Positive control', sub: 'Clavulanic acid', conc: '500 µM', color: '#b45309' },
+    { id: 'A2', name: 'Vehicle', sub: '5% DMSO', conc: '95 µL BLB + 5 µL DMSO', color: '#0f766e' },
+    { id: 'A3', name: 'Cpd 1', sub: 'T1262 Tazobactam', conc: '10 µM', color: '#1d4ed8' },
+    { id: 'A4', name: 'Cpd 2', sub: 'T6685 Sulbactam', conc: '500 µM', color: '#6d28d9' },
+    { id: 'A5', name: 'Cpd 3', sub: 'T14081 Enmetazobactam', conc: '500 µM', color: '#0e7490' },
+    { id: 'A6', name: 'Cpd 4', sub: 'T1005 Amoxicillin', conc: '500 µM', color: '#15803d' },
+    { id: 'A7', name: 'Cpd 5', sub: 'T1008 Cephalexin', conc: '500 µM', color: '#b91c1c' },
+    { id: 'A8', name: 'Cpd 6', sub: 'T0224 Meropenem', conc: '500 µM', color: '#92400e' },
+    { id: 'A9', name: 'Cpd 7', sub: 'T0985 Oxacillin', conc: '500 µM', color: '#7c3aed' },
+    { id: 'A10', name: 'Cpd 8', sub: 'T0138 Cefpiramide', conc: '500 µM', color: '#065f46' },
+    { id: 'A11', name: 'Cpd 9', sub: 'T8390 Cefazolin', conc: '500 µM', color: '#9d174d' },
+  ];
+  wells.forEach(w => {
+    const div = document.createElement('div');
+    div.className = 'pcr-well';
+    div.style.borderColor = w.color;
+    div.style.borderTopWidth = '3px';
+    div.innerHTML = `
+      <div class="well-id" style="color:${w.color}">${w.id}</div>
+      <div class="well-name">${w.name}<br>${w.sub}</div>
+      <div class="well-vol">${w.conc}</div>
+    `;
+    el.appendChild(div);
+  });
+})();
+
+// ── NITROCEFIN STAGGER ───────────────────────────────────────────
+(function buildNitroTimeline() {
+  const el = document.getElementById('nitro-timeline');
+  const nitroStart = toMin('01:38:49');
+  const nitroEnd   = toMin('01:55:52');
+  const span = nitroEnd - nitroStart;
+
+  const batches = [
+    { label: 'No-Enzyme Ctrl',     wells: 'D3, D7, E11',     start: '01:38:49', end: '01:40:13', color: '#475569' },
+    { label: 'Positive Ctrl',      wells: 'F3, F7, G11',     start: '01:40:13', end: '01:41:37', color: '#b45309' },
+    { label: 'Cpd 1 (T1262)',      wells: 'B2, D2, F2',      start: '01:41:37', end: '01:43:02', color: '#1d4ed8' },
+    { label: 'Cpd 2 (T6685)',      wells: 'B4, D4, F4',      start: '01:43:02', end: '01:44:27', color: '#6d28d9' },
+    { label: 'Cpd 3 (T14081)',     wells: 'B6, D6, F6',      start: '01:44:27', end: '01:45:52', color: '#0e7490' },
+    { label: 'Cpd 4 (T1005)',      wells: 'B8, D8, F8',      start: '01:45:52', end: '01:47:15', color: '#15803d' },
+    { label: 'Cpd 5 (T1008)',      wells: 'B10, D10, F10',   start: '01:47:16', end: '01:48:39', color: '#b91c1c' },
+    { label: 'Cpd 6 (T0224)',      wells: 'C5, E5, G5',      start: '01:48:39', end: '01:50:04', color: '#92400e' },
+    { label: 'Cpd 7 (T0985)',      wells: 'C9, E9, G9',      start: '01:50:04', end: '01:51:28', color: '#7c3aed' },
+    { label: 'Cpd 8 (T0138)',      wells: 'C3, E3, G3',      start: '01:51:28', end: '01:52:53', color: '#065f46' },
+    { label: 'Cpd 9 (T8390)',      wells: 'C7, E7, G7',      start: '01:52:53', end: '01:54:17', color: '#9d174d' },
+    { label: 'Vehicle + TEM-1',    wells: 'B3, B7, C11',     start: '01:54:17', end: '01:55:52', color: '#0f766e' },
+  ];
+
+  batches.forEach((b, i) => {
+    const s = toMin(b.start) - nitroStart;
+    const e = toMin(b.end)   - nitroStart;
+    const row = document.createElement('div');
+    row.className = 'nitro-row';
+
+    const lag = (toMin(b.start) - nitroStart).toFixed(1);
+    row.innerHTML = `
+      <div class="nitro-label">${b.label}<br><span style="font-size:9.5px;color:var(--muted);font-family:var(--mono)">${b.wells}</span></div>
+      <div class="nitro-bar-wrap" style="position:relative;flex:1;height:22px;background:#f3f4f6;border-radius:3px">
+        <div style="position:absolute;left:${s/span*100}%;width:${(e-s)/span*100}%;height:100%;background:${b.color};border-radius:3px;display:flex;align-items:center;padding-left:6px">
+          <span style="font-family:var(--mono);font-size:9px;color:rgba(255,255,255,0.9)">${(e - s).toFixed(1)}m</span>
+        </div>
+      </div>
+      <div class="nitro-time">+${lag}m</div>
+    `;
+    el.appendChild(row);
+  });
+})();
+
+// ── DILUTION OPS TABLE ───────────────────────────────────────────
+(function buildDilutionOps() {
+  const tbody = document.getElementById('dilution-ops');
+  const ops = [
+    { time: '23:05:01', op: 'TEM-1 stock → intermediate', detail: 'hole_1 → hole_2', vol: '2.0 µL', tip: '10ul #1' },
+    { time: '23:06:06', op: 'Pipette swap', detail: 'epipette_10ul → epipette_120ul', vol: '—', tip: '—' },
+    { time: '23:07:22', op: 'BLB → TEM-1 intermediate (chunk 1)', detail: 'hole_6 → hole_2', vol: '120.0 µL', tip: '120ul #1' },
+    { time: '23:08:25', op: 'BLB → TEM-1 intermediate (chunk 2)', detail: 'hole_6 → hole_2', vol: '78.0 µL', tip: '120ul #2' },
+    { time: '23:12:58', op: 'TEM-1 intermediate → working (chunk 1)', detail: 'hole_2 → hole_8', vol: '100.0 µL', tip: '120ul #4' },
+    { time: '23:14:00', op: 'BLB → TEM-1 working (chunk 1)', detail: 'hole_6 → hole_8', vol: '120.0 µL', tip: '120ul #5' },
+    { time: '23:15:02', op: 'BLB → TEM-1 working (chunk 2)', detail: 'hole_6 → hole_8', vol: '120.0 µL', tip: '120ul #6' },
+    { time: '23:16:04', op: 'BLB → TEM-1 working (chunk 3)', detail: 'hole_6 → hole_8', vol: '120.0 µL', tip: '120ul #7' },
+    { time: '23:17:05', op: 'BLB → TEM-1 working (chunk 4)', detail: 'hole_6 → hole_8', vol: '120.0 µL', tip: '120ul #8' },
+    { time: '23:18:07', op: 'BLB → TEM-1 working (chunk 5)', detail: 'hole_6 → hole_8', vol: '120.0 µL', tip: '120ul #9' },
+    { time: '23:19:08', op: 'BLB → TEM-1 working (chunk 6)', detail: 'hole_6 → hole_8', vol: '120.0 µL', tip: '120ul #10' },
+    { time: '23:20:10', op: 'BLB → TEM-1 working (chunk 7)', detail: 'hole_6 → hole_8', vol: '120.0 µL', tip: '120ul #11' },
+    { time: '23:21:12', op: 'BLB → TEM-1 working (chunk 8)', detail: 'hole_6 → hole_8', vol: '60.0 µL', tip: '120ul #12' },
+    { time: '23:25:11', op: 'T1262 serial dilution start', detail: 'Preparing 200 µM intermediate for 1 µM assay', vol: '—', tip: '—' },
+    { time: '23:25:30', op: 'BLB → T1262 intermediate (chunk 1)', detail: 'hole_5 → hole_3', vol: '49.0 µL', tip: '120ul #14' },
+    { time: '23:26:13', op: 'Pipette swap', detail: 'epipette_120ul → epipette_10ul', vol: '—', tip: '—' },
+    { time: '23:27:31', op: 'T1262 stock → intermediate', detail: 'A2 → hole_3', vol: '1.0 µL', tip: '10ul #2' },
+    { time: '23:28:10', op: 'Pipette swap', detail: 'epipette_10ul → epipette_120ul', vol: '—', tip: '—' },
+    { time: '23:32:25', op: 'BLB batch → PCR plate (compound working solutions)', detail: 'hole_5 → A1,A3–A11 (10 wells × 47.5 µL)', vol: '475 µL total', tip: '120ul #16–20' },
+    { time: '23:38:15', op: 'BLB batch → PCR A2 (vehicle BLB)', detail: 'hole_6 → A2', vol: '95.0 µL', tip: '120ul #21' },
+    { time: '23:39:12', op: 'Pipette swap', detail: 'epipette_120ul → epipette_10ul', vol: '—', tip: '—' },
+    { time: '23:40:28', op: 'Positive control stock → A1', detail: 'H7 → A1', vol: '2.5 µL', tip: '10ul #3' },
+    { time: '23:41:22', op: 'T1262 intermediate → A3', detail: 'hole_3 → A3', vol: '2.5 µL', tip: '10ul #4' },
+    { time: '23:42:21', op: 'Compound 2 (Sulbactam) → A4', detail: 'A3 → A4', vol: '2.5 µL', tip: '10ul #5' },
+    { time: '23:43:15', op: 'Compound 3 (Enmetazobactam) → A5', detail: 'A4 → A5', vol: '2.5 µL', tip: '10ul #6' },
+    { time: '23:44:10', op: 'Compound 4 (Amoxicillin) → A6', detail: 'A5 → A6', vol: '2.5 µL', tip: '10ul #7' },
+    { time: '23:45:04', op: 'Compound 5 (Cephalexin) → A7', detail: 'A6 → A7', vol: '2.5 µL', tip: '10ul #8' },
+    { time: '23:45:59', op: 'Compound 6 (Meropenem) → A8', detail: 'A7 → A8', vol: '2.5 µL', tip: '10ul #9' },
+    { time: '23:46:53', op: 'Compound 7 (Oxacillin) → A9', detail: 'A8 → A9', vol: '2.5 µL', tip: '10ul #10' },
+    { time: '23:47:48', op: 'Compound 8 (Cefpiramide) → A10', detail: 'A9 → A10', vol: '2.5 µL', tip: '10ul #11' },
+    { time: '23:48:43', op: 'Compound 9 (Cefazolin) → A11', detail: 'A10 → A11', vol: '2.5 µL', tip: '10ul #12' },
+    { time: '23:49:38', op: 'DMSO → vehicle well A2', detail: 'hole_9 → A2', vol: '5.0 µL', tip: '10ul #13' },
+    { time: '00:20:59', op: '✓ Dilution plate complete', detail: 'TEM-1 0.1 ng/µL · T1262 10 µM · others 500 µM · vehicle 5% DMSO', vol: '—', tip: '—' },
+  ];
+  ops.forEach((op, i) => {
+    const tr = document.createElement('tr');
+    const isSpecial = op.op.startsWith('✓') || op.op.includes('swap') || op.op.includes('start');
+    tr.style.background = i % 2 === 0 ? 'transparent' : '#fafafa';
+    tr.innerHTML = `
+      <td style="padding:5px 8px;font-family:var(--mono);font-size:10.5px;color:var(--muted);white-space:nowrap;border-bottom:1px solid var(--border)">${op.time}</td>
+      <td style="padding:5px 8px;font-size:12px;border-bottom:1px solid var(--border);color:${isSpecial ? 'var(--muted)' : 'var(--ink)'};font-style:${op.op.includes('swap') ? 'italic' : 'normal'}">${op.op}</td>
+      <td style="padding:5px 8px;font-size:11.5px;color:var(--muted);border-bottom:1px solid var(--border)">${op.detail}</td>
+      <td style="padding:5px 8px;font-family:var(--mono);font-size:11px;border-bottom:1px solid var(--border);color:${op.vol === '—' ? 'var(--muted)' : 'var(--ink)'}">${op.vol}</td>
+      <td style="padding:5px 8px;font-family:var(--mono);font-size:10.5px;color:var(--muted);border-bottom:1px solid var(--border)">${op.tip}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+})();
+</script>
+</body>
+</html>

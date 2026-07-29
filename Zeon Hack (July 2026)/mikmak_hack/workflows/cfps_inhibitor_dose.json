@@ -1,0 +1,2950 @@
+{
+  "workflow_id": "cfps_inhibitor_dose",
+  "name": "CFPS Inhibitor Dose (Part 3a)",
+  "description": "Part 3a of the TEM-1 inhibitor screen, sized to the purified-enzyme dose-response design in exp2_100ul_report.md: 5 compound rows (A-E, 4 concentrations x 2 duplicate wells each, compound preplated by hand before this run) plus a vehicle-control row (F1-F4, 2 duplicate pairs) -- 44 wells total, one robot run. Compound, vehicle, and (later) nitrocefin are all manual, off-robot; the robot's only job here is enzyme, dispensed from a fresh per-row aliquot tube in reagent_block. Each row keeps one tip for its whole span (source and volume are constant across a row's wells), and each duplicate pair shares a single aspirate: one draw of enzyme_total_vol_ul (2x enzyme_vol_ul) split into two equal dispenses, so the aliquot tube is only touched once per pair. The F5-F8 no-enzyme-blank wells get buffer by hand instead and have no nodes here. After the last row's enzyme is dispensed, the robot seals the plate and loads it into the shaker/incubator (lid closed) -- from there, starting and monitoring the incubation, adding nitrocefin by hand, and running cfps_inhibitor_kinetic_read (Part 3b) to load the reader are all manual.",
+  "version": "3.1.0",
+  "author": "pipeline",
+  "created_at": "2026-07-26T00:00:00.000Z",
+  "updated_at": "2026-07-26T00:00:00.000Z",
+  "simulation_validated": false,
+  "objects": [],
+  "inputs": [
+    {
+      "name": "pipette",
+      "type": "object",
+      "is_array": false,
+      "description": "P200-range pipette (a P20-range one can't hold 40 uL in one stroke)",
+      "defaultValue": "epipette_120ul"
+    },
+    {
+      "name": "tipbox",
+      "type": "object",
+      "is_array": false,
+      "description": "Tip rack matching the pipette above",
+      "defaultValue": "tipbox_120ul_1"
+    },
+    {
+      "name": "reaction_plate",
+      "type": "object",
+      "is_array": false,
+      "description": "The single 96-well plate holding this run's compound (rows A-E, preplated by hand) and vehicle (row F1-F4, preplated by hand) -- the robot only adds enzyme, into every well below except the F5-F8 no-enzyme-blanks",
+      "defaultValue": "wellplate_96_flatbottom"
+    },
+    {
+      "name": "reagent_block",
+      "type": "object",
+      "is_array": false,
+      "description": "Cold block holding one fresh enzyme working-stock aliquot tube per row (hole_1..hole_6)",
+      "defaultValue": "coldblock_wellplate"
+    },
+    {
+      "name": "enzyme_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Enzyme working-stock volume (uL) dispensed into EACH well (same for every row -- concentration varies by compound/vehicle, not by enzyme)",
+      "defaultValue": 40.0
+    },
+    {
+      "name": "enzyme_total_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Combined aspirate volume (uL) for one duplicate pair = 2 x enzyme_vol_ul; must fit the pipette's capacity in a single draw",
+      "defaultValue": 80.0
+    },
+    {
+      "name": "run_name",
+      "type": "string",
+      "is_array": false,
+      "description": "Name for this run's saved output folder",
+      "defaultValue": "cfps_inhibitor_dose_run"
+    },
+    {
+      "name": "row1_label",
+      "type": "string",
+      "is_array": false,
+      "description": "Compound (or 'vehicle_control') identifier for row1 (row A) -- logged only, not bound to any motion",
+      "defaultValue": ""
+    },
+    {
+      "name": "row1_src_hole",
+      "type": "string",
+      "is_array": false,
+      "description": "reagent_block hole holding row1's fresh enzyme aliquot tube",
+      "defaultValue": "hole_1"
+    },
+    {
+      "name": "row1_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for row1 -- one tip covers the whole row (attach once, eject once)",
+      "defaultValue": 1
+    },
+    {
+      "name": "row1_p1_well_a",
+      "type": "string",
+      "is_array": false,
+      "description": "row1 duplicate pair 1, well A",
+      "defaultValue": "A1"
+    },
+    {
+      "name": "row1_p1_well_b",
+      "type": "string",
+      "is_array": false,
+      "description": "row1 duplicate pair 1, well B (duplicate of A)",
+      "defaultValue": "A2"
+    },
+    {
+      "name": "row1_p2_well_a",
+      "type": "string",
+      "is_array": false,
+      "description": "row1 duplicate pair 2, well A",
+      "defaultValue": "A3"
+    },
+    {
+      "name": "row1_p2_well_b",
+      "type": "string",
+      "is_array": false,
+      "description": "row1 duplicate pair 2, well B (duplicate of A)",
+      "defaultValue": "A4"
+    },
+    {
+      "name": "row1_p3_well_a",
+      "type": "string",
+      "is_array": false,
+      "description": "row1 duplicate pair 3, well A",
+      "defaultValue": "A5"
+    },
+    {
+      "name": "row1_p3_well_b",
+      "type": "string",
+      "is_array": false,
+      "description": "row1 duplicate pair 3, well B (duplicate of A)",
+      "defaultValue": "A6"
+    },
+    {
+      "name": "row1_p4_well_a",
+      "type": "string",
+      "is_array": false,
+      "description": "row1 duplicate pair 4, well A",
+      "defaultValue": "A7"
+    },
+    {
+      "name": "row1_p4_well_b",
+      "type": "string",
+      "is_array": false,
+      "description": "row1 duplicate pair 4, well B (duplicate of A)",
+      "defaultValue": "A8"
+    },
+    {
+      "name": "row2_label",
+      "type": "string",
+      "is_array": false,
+      "description": "Compound (or 'vehicle_control') identifier for row2 (row B) -- logged only, not bound to any motion",
+      "defaultValue": ""
+    },
+    {
+      "name": "row2_src_hole",
+      "type": "string",
+      "is_array": false,
+      "description": "reagent_block hole holding row2's fresh enzyme aliquot tube",
+      "defaultValue": "hole_2"
+    },
+    {
+      "name": "row2_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for row2 -- one tip covers the whole row (attach once, eject once)",
+      "defaultValue": 2
+    },
+    {
+      "name": "row2_p1_well_a",
+      "type": "string",
+      "is_array": false,
+      "description": "row2 duplicate pair 1, well A",
+      "defaultValue": "B1"
+    },
+    {
+      "name": "row2_p1_well_b",
+      "type": "string",
+      "is_array": false,
+      "description": "row2 duplicate pair 1, well B (duplicate of A)",
+      "defaultValue": "B2"
+    },
+    {
+      "name": "row2_p2_well_a",
+      "type": "string",
+      "is_array": false,
+      "description": "row2 duplicate pair 2, well A",
+      "defaultValue": "B3"
+    },
+    {
+      "name": "row2_p2_well_b",
+      "type": "string",
+      "is_array": false,
+      "description": "row2 duplicate pair 2, well B (duplicate of A)",
+      "defaultValue": "B4"
+    },
+    {
+      "name": "row2_p3_well_a",
+      "type": "string",
+      "is_array": false,
+      "description": "row2 duplicate pair 3, well A",
+      "defaultValue": "B5"
+    },
+    {
+      "name": "row2_p3_well_b",
+      "type": "string",
+      "is_array": false,
+      "description": "row2 duplicate pair 3, well B (duplicate of A)",
+      "defaultValue": "B6"
+    },
+    {
+      "name": "row2_p4_well_a",
+      "type": "string",
+      "is_array": false,
+      "description": "row2 duplicate pair 4, well A",
+      "defaultValue": "B7"
+    },
+    {
+      "name": "row2_p4_well_b",
+      "type": "string",
+      "is_array": false,
+      "description": "row2 duplicate pair 4, well B (duplicate of A)",
+      "defaultValue": "B8"
+    },
+    {
+      "name": "row3_label",
+      "type": "string",
+      "is_array": false,
+      "description": "Compound (or 'vehicle_control') identifier for row3 (row C) -- logged only, not bound to any motion",
+      "defaultValue": ""
+    },
+    {
+      "name": "row3_src_hole",
+      "type": "string",
+      "is_array": false,
+      "description": "reagent_block hole holding row3's fresh enzyme aliquot tube",
+      "defaultValue": "hole_3"
+    },
+    {
+      "name": "row3_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for row3 -- one tip covers the whole row (attach once, eject once)",
+      "defaultValue": 3
+    },
+    {
+      "name": "row3_p1_well_a",
+      "type": "string",
+      "is_array": false,
+      "description": "row3 duplicate pair 1, well A",
+      "defaultValue": "C1"
+    },
+    {
+      "name": "row3_p1_well_b",
+      "type": "string",
+      "is_array": false,
+      "description": "row3 duplicate pair 1, well B (duplicate of A)",
+      "defaultValue": "C2"
+    },
+    {
+      "name": "row3_p2_well_a",
+      "type": "string",
+      "is_array": false,
+      "description": "row3 duplicate pair 2, well A",
+      "defaultValue": "C3"
+    },
+    {
+      "name": "row3_p2_well_b",
+      "type": "string",
+      "is_array": false,
+      "description": "row3 duplicate pair 2, well B (duplicate of A)",
+      "defaultValue": "C4"
+    },
+    {
+      "name": "row3_p3_well_a",
+      "type": "string",
+      "is_array": false,
+      "description": "row3 duplicate pair 3, well A",
+      "defaultValue": "C5"
+    },
+    {
+      "name": "row3_p3_well_b",
+      "type": "string",
+      "is_array": false,
+      "description": "row3 duplicate pair 3, well B (duplicate of A)",
+      "defaultValue": "C6"
+    },
+    {
+      "name": "row3_p4_well_a",
+      "type": "string",
+      "is_array": false,
+      "description": "row3 duplicate pair 4, well A",
+      "defaultValue": "C7"
+    },
+    {
+      "name": "row3_p4_well_b",
+      "type": "string",
+      "is_array": false,
+      "description": "row3 duplicate pair 4, well B (duplicate of A)",
+      "defaultValue": "C8"
+    },
+    {
+      "name": "row4_label",
+      "type": "string",
+      "is_array": false,
+      "description": "Compound (or 'vehicle_control') identifier for row4 (row D) -- logged only, not bound to any motion",
+      "defaultValue": ""
+    },
+    {
+      "name": "row4_src_hole",
+      "type": "string",
+      "is_array": false,
+      "description": "reagent_block hole holding row4's fresh enzyme aliquot tube",
+      "defaultValue": "hole_4"
+    },
+    {
+      "name": "row4_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for row4 -- one tip covers the whole row (attach once, eject once)",
+      "defaultValue": 4
+    },
+    {
+      "name": "row4_p1_well_a",
+      "type": "string",
+      "is_array": false,
+      "description": "row4 duplicate pair 1, well A",
+      "defaultValue": "D1"
+    },
+    {
+      "name": "row4_p1_well_b",
+      "type": "string",
+      "is_array": false,
+      "description": "row4 duplicate pair 1, well B (duplicate of A)",
+      "defaultValue": "D2"
+    },
+    {
+      "name": "row4_p2_well_a",
+      "type": "string",
+      "is_array": false,
+      "description": "row4 duplicate pair 2, well A",
+      "defaultValue": "D3"
+    },
+    {
+      "name": "row4_p2_well_b",
+      "type": "string",
+      "is_array": false,
+      "description": "row4 duplicate pair 2, well B (duplicate of A)",
+      "defaultValue": "D4"
+    },
+    {
+      "name": "row4_p3_well_a",
+      "type": "string",
+      "is_array": false,
+      "description": "row4 duplicate pair 3, well A",
+      "defaultValue": "D5"
+    },
+    {
+      "name": "row4_p3_well_b",
+      "type": "string",
+      "is_array": false,
+      "description": "row4 duplicate pair 3, well B (duplicate of A)",
+      "defaultValue": "D6"
+    },
+    {
+      "name": "row4_p4_well_a",
+      "type": "string",
+      "is_array": false,
+      "description": "row4 duplicate pair 4, well A",
+      "defaultValue": "D7"
+    },
+    {
+      "name": "row4_p4_well_b",
+      "type": "string",
+      "is_array": false,
+      "description": "row4 duplicate pair 4, well B (duplicate of A)",
+      "defaultValue": "D8"
+    },
+    {
+      "name": "row5_label",
+      "type": "string",
+      "is_array": false,
+      "description": "Compound (or 'vehicle_control') identifier for row5 (row E) -- logged only, not bound to any motion",
+      "defaultValue": ""
+    },
+    {
+      "name": "row5_src_hole",
+      "type": "string",
+      "is_array": false,
+      "description": "reagent_block hole holding row5's fresh enzyme aliquot tube",
+      "defaultValue": "hole_5"
+    },
+    {
+      "name": "row5_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for row5 -- one tip covers the whole row (attach once, eject once)",
+      "defaultValue": 5
+    },
+    {
+      "name": "row5_p1_well_a",
+      "type": "string",
+      "is_array": false,
+      "description": "row5 duplicate pair 1, well A",
+      "defaultValue": "E1"
+    },
+    {
+      "name": "row5_p1_well_b",
+      "type": "string",
+      "is_array": false,
+      "description": "row5 duplicate pair 1, well B (duplicate of A)",
+      "defaultValue": "E2"
+    },
+    {
+      "name": "row5_p2_well_a",
+      "type": "string",
+      "is_array": false,
+      "description": "row5 duplicate pair 2, well A",
+      "defaultValue": "E3"
+    },
+    {
+      "name": "row5_p2_well_b",
+      "type": "string",
+      "is_array": false,
+      "description": "row5 duplicate pair 2, well B (duplicate of A)",
+      "defaultValue": "E4"
+    },
+    {
+      "name": "row5_p3_well_a",
+      "type": "string",
+      "is_array": false,
+      "description": "row5 duplicate pair 3, well A",
+      "defaultValue": "E5"
+    },
+    {
+      "name": "row5_p3_well_b",
+      "type": "string",
+      "is_array": false,
+      "description": "row5 duplicate pair 3, well B (duplicate of A)",
+      "defaultValue": "E6"
+    },
+    {
+      "name": "row5_p4_well_a",
+      "type": "string",
+      "is_array": false,
+      "description": "row5 duplicate pair 4, well A",
+      "defaultValue": "E7"
+    },
+    {
+      "name": "row5_p4_well_b",
+      "type": "string",
+      "is_array": false,
+      "description": "row5 duplicate pair 4, well B (duplicate of A)",
+      "defaultValue": "E8"
+    },
+    {
+      "name": "row6_label",
+      "type": "string",
+      "is_array": false,
+      "description": "Compound (or 'vehicle_control') identifier for row6 (row F) -- logged only, not bound to any motion",
+      "defaultValue": "vehicle_control"
+    },
+    {
+      "name": "row6_src_hole",
+      "type": "string",
+      "is_array": false,
+      "description": "reagent_block hole holding row6's fresh enzyme aliquot tube",
+      "defaultValue": "hole_6"
+    },
+    {
+      "name": "row6_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for row6 -- one tip covers the whole row (attach once, eject once)",
+      "defaultValue": 6
+    },
+    {
+      "name": "row6_p1_well_a",
+      "type": "string",
+      "is_array": false,
+      "description": "row6 duplicate pair 1, well A",
+      "defaultValue": "F1"
+    },
+    {
+      "name": "row6_p1_well_b",
+      "type": "string",
+      "is_array": false,
+      "description": "row6 duplicate pair 1, well B (duplicate of A)",
+      "defaultValue": "F2"
+    },
+    {
+      "name": "row6_p2_well_a",
+      "type": "string",
+      "is_array": false,
+      "description": "row6 duplicate pair 2, well A",
+      "defaultValue": "F3"
+    },
+    {
+      "name": "row6_p2_well_b",
+      "type": "string",
+      "is_array": false,
+      "description": "row6 duplicate pair 2, well B (duplicate of A)",
+      "defaultValue": "F4"
+    },
+    {
+      "name": "platesealer",
+      "type": "object",
+      "is_array": false,
+      "description": "PlateMax plate sealer",
+      "defaultValue": "platesealer_platemax_1"
+    },
+    {
+      "name": "seal_holder",
+      "type": "object",
+      "is_array": false,
+      "description": "Stacked seal holder to peel a seal from",
+      "defaultValue": "seal_holder_stacked_reinforced_1"
+    },
+    {
+      "name": "plate_home",
+      "type": "object",
+      "is_array": false,
+      "description": "Object carrying the plate's home anchor (where the sealed plate is set back down before being re-grabbed for the incubator)",
+      "defaultValue": "wellplate_holder_tags"
+    },
+    {
+      "name": "seal_index",
+      "type": "int",
+      "is_array": false,
+      "description": "1-based seal position in the holder to pick",
+      "defaultValue": 1
+    },
+    {
+      "name": "shaker",
+      "type": "object",
+      "is_array": false,
+      "description": "Wellplate shaker/incubator",
+      "defaultValue": "wellplate_shaker_1"
+    },
+    {
+      "name": "shaker_slot",
+      "type": "string",
+      "is_array": false,
+      "description": "Shaker slot anchor to load the plate into",
+      "defaultValue": "slot_1"
+    }
+  ],
+  "nodes": [
+    {
+      "node_id": "start_0",
+      "type": "start",
+      "label": "Start"
+    },
+    {
+      "node_id": "grab_pipette",
+      "type": "skill",
+      "label": "Pick Up Pipette",
+      "skill_id": "epipette_grab",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "row1_attach",
+      "type": "skill",
+      "label": "Attach tip (row1)",
+      "description": "One tip for the whole row -- row1's enzyme source (hole and aliquot tube) is constant across all of its wells, so the tip is only re-attached between rows, not between duplicate pairs.",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "row1_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "row1_p1_aspirate",
+      "type": "skill",
+      "label": "Aspirate (row1 pair 1, combined for duplicates)",
+      "description": "One draw covers both duplicate wells below -- enzyme_total_vol_ul is 2x the equal dispense that follows, so the aliquot tube is only touched once per pair.",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "row1_src_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_total_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row1_p1_dispense_a",
+      "type": "skill",
+      "label": "Dispense (row1 pair 1, well A)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row1_p1_well_a"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row1_p1_dispense_b",
+      "type": "skill",
+      "label": "Dispense (row1 pair 1, duplicate well B)",
+      "description": "Same tip as well A above -- no re-attach between the duplicate pair, since both wells get the identical enzyme volume from the identical aliquot tube.",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row1_p1_well_b"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row1_p2_aspirate",
+      "type": "skill",
+      "label": "Aspirate (row1 pair 2, combined for duplicates)",
+      "description": "One draw covers both duplicate wells below -- enzyme_total_vol_ul is 2x the equal dispense that follows, so the aliquot tube is only touched once per pair.",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "row1_src_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_total_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row1_p2_dispense_a",
+      "type": "skill",
+      "label": "Dispense (row1 pair 2, well A)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row1_p2_well_a"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row1_p2_dispense_b",
+      "type": "skill",
+      "label": "Dispense (row1 pair 2, duplicate well B)",
+      "description": "Same tip as well A above -- no re-attach between the duplicate pair, since both wells get the identical enzyme volume from the identical aliquot tube.",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row1_p2_well_b"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row1_p3_aspirate",
+      "type": "skill",
+      "label": "Aspirate (row1 pair 3, combined for duplicates)",
+      "description": "One draw covers both duplicate wells below -- enzyme_total_vol_ul is 2x the equal dispense that follows, so the aliquot tube is only touched once per pair.",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "row1_src_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_total_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row1_p3_dispense_a",
+      "type": "skill",
+      "label": "Dispense (row1 pair 3, well A)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row1_p3_well_a"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row1_p3_dispense_b",
+      "type": "skill",
+      "label": "Dispense (row1 pair 3, duplicate well B)",
+      "description": "Same tip as well A above -- no re-attach between the duplicate pair, since both wells get the identical enzyme volume from the identical aliquot tube.",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row1_p3_well_b"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row1_p4_aspirate",
+      "type": "skill",
+      "label": "Aspirate (row1 pair 4, combined for duplicates)",
+      "description": "One draw covers both duplicate wells below -- enzyme_total_vol_ul is 2x the equal dispense that follows, so the aliquot tube is only touched once per pair.",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "row1_src_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_total_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row1_p4_dispense_a",
+      "type": "skill",
+      "label": "Dispense (row1 pair 4, well A)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row1_p4_well_a"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row1_p4_dispense_b",
+      "type": "skill",
+      "label": "Dispense (row1 pair 4, duplicate well B)",
+      "description": "Same tip as well A above -- no re-attach between the duplicate pair, since both wells get the identical enzyme volume from the identical aliquot tube.",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row1_p4_well_b"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row1_eject",
+      "type": "skill",
+      "label": "Eject tip (row1)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "row2_attach",
+      "type": "skill",
+      "label": "Attach tip (row2)",
+      "description": "One tip for the whole row -- row2's enzyme source (hole and aliquot tube) is constant across all of its wells, so the tip is only re-attached between rows, not between duplicate pairs.",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "row2_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "row2_p1_aspirate",
+      "type": "skill",
+      "label": "Aspirate (row2 pair 1, combined for duplicates)",
+      "description": "One draw covers both duplicate wells below -- enzyme_total_vol_ul is 2x the equal dispense that follows, so the aliquot tube is only touched once per pair.",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "row2_src_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_total_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row2_p1_dispense_a",
+      "type": "skill",
+      "label": "Dispense (row2 pair 1, well A)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row2_p1_well_a"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row2_p1_dispense_b",
+      "type": "skill",
+      "label": "Dispense (row2 pair 1, duplicate well B)",
+      "description": "Same tip as well A above -- no re-attach between the duplicate pair, since both wells get the identical enzyme volume from the identical aliquot tube.",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row2_p1_well_b"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row2_p2_aspirate",
+      "type": "skill",
+      "label": "Aspirate (row2 pair 2, combined for duplicates)",
+      "description": "One draw covers both duplicate wells below -- enzyme_total_vol_ul is 2x the equal dispense that follows, so the aliquot tube is only touched once per pair.",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "row2_src_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_total_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row2_p2_dispense_a",
+      "type": "skill",
+      "label": "Dispense (row2 pair 2, well A)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row2_p2_well_a"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row2_p2_dispense_b",
+      "type": "skill",
+      "label": "Dispense (row2 pair 2, duplicate well B)",
+      "description": "Same tip as well A above -- no re-attach between the duplicate pair, since both wells get the identical enzyme volume from the identical aliquot tube.",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row2_p2_well_b"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row2_p3_aspirate",
+      "type": "skill",
+      "label": "Aspirate (row2 pair 3, combined for duplicates)",
+      "description": "One draw covers both duplicate wells below -- enzyme_total_vol_ul is 2x the equal dispense that follows, so the aliquot tube is only touched once per pair.",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "row2_src_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_total_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row2_p3_dispense_a",
+      "type": "skill",
+      "label": "Dispense (row2 pair 3, well A)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row2_p3_well_a"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row2_p3_dispense_b",
+      "type": "skill",
+      "label": "Dispense (row2 pair 3, duplicate well B)",
+      "description": "Same tip as well A above -- no re-attach between the duplicate pair, since both wells get the identical enzyme volume from the identical aliquot tube.",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row2_p3_well_b"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row2_p4_aspirate",
+      "type": "skill",
+      "label": "Aspirate (row2 pair 4, combined for duplicates)",
+      "description": "One draw covers both duplicate wells below -- enzyme_total_vol_ul is 2x the equal dispense that follows, so the aliquot tube is only touched once per pair.",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "row2_src_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_total_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row2_p4_dispense_a",
+      "type": "skill",
+      "label": "Dispense (row2 pair 4, well A)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row2_p4_well_a"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row2_p4_dispense_b",
+      "type": "skill",
+      "label": "Dispense (row2 pair 4, duplicate well B)",
+      "description": "Same tip as well A above -- no re-attach between the duplicate pair, since both wells get the identical enzyme volume from the identical aliquot tube.",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row2_p4_well_b"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row2_eject",
+      "type": "skill",
+      "label": "Eject tip (row2)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "row3_attach",
+      "type": "skill",
+      "label": "Attach tip (row3)",
+      "description": "One tip for the whole row -- row3's enzyme source (hole and aliquot tube) is constant across all of its wells, so the tip is only re-attached between rows, not between duplicate pairs.",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "row3_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "row3_p1_aspirate",
+      "type": "skill",
+      "label": "Aspirate (row3 pair 1, combined for duplicates)",
+      "description": "One draw covers both duplicate wells below -- enzyme_total_vol_ul is 2x the equal dispense that follows, so the aliquot tube is only touched once per pair.",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "row3_src_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_total_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row3_p1_dispense_a",
+      "type": "skill",
+      "label": "Dispense (row3 pair 1, well A)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row3_p1_well_a"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row3_p1_dispense_b",
+      "type": "skill",
+      "label": "Dispense (row3 pair 1, duplicate well B)",
+      "description": "Same tip as well A above -- no re-attach between the duplicate pair, since both wells get the identical enzyme volume from the identical aliquot tube.",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row3_p1_well_b"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row3_p2_aspirate",
+      "type": "skill",
+      "label": "Aspirate (row3 pair 2, combined for duplicates)",
+      "description": "One draw covers both duplicate wells below -- enzyme_total_vol_ul is 2x the equal dispense that follows, so the aliquot tube is only touched once per pair.",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "row3_src_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_total_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row3_p2_dispense_a",
+      "type": "skill",
+      "label": "Dispense (row3 pair 2, well A)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row3_p2_well_a"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row3_p2_dispense_b",
+      "type": "skill",
+      "label": "Dispense (row3 pair 2, duplicate well B)",
+      "description": "Same tip as well A above -- no re-attach between the duplicate pair, since both wells get the identical enzyme volume from the identical aliquot tube.",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row3_p2_well_b"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row3_p3_aspirate",
+      "type": "skill",
+      "label": "Aspirate (row3 pair 3, combined for duplicates)",
+      "description": "One draw covers both duplicate wells below -- enzyme_total_vol_ul is 2x the equal dispense that follows, so the aliquot tube is only touched once per pair.",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "row3_src_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_total_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row3_p3_dispense_a",
+      "type": "skill",
+      "label": "Dispense (row3 pair 3, well A)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row3_p3_well_a"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row3_p3_dispense_b",
+      "type": "skill",
+      "label": "Dispense (row3 pair 3, duplicate well B)",
+      "description": "Same tip as well A above -- no re-attach between the duplicate pair, since both wells get the identical enzyme volume from the identical aliquot tube.",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row3_p3_well_b"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row3_p4_aspirate",
+      "type": "skill",
+      "label": "Aspirate (row3 pair 4, combined for duplicates)",
+      "description": "One draw covers both duplicate wells below -- enzyme_total_vol_ul is 2x the equal dispense that follows, so the aliquot tube is only touched once per pair.",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "row3_src_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_total_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row3_p4_dispense_a",
+      "type": "skill",
+      "label": "Dispense (row3 pair 4, well A)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row3_p4_well_a"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row3_p4_dispense_b",
+      "type": "skill",
+      "label": "Dispense (row3 pair 4, duplicate well B)",
+      "description": "Same tip as well A above -- no re-attach between the duplicate pair, since both wells get the identical enzyme volume from the identical aliquot tube.",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row3_p4_well_b"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row3_eject",
+      "type": "skill",
+      "label": "Eject tip (row3)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "row4_attach",
+      "type": "skill",
+      "label": "Attach tip (row4)",
+      "description": "One tip for the whole row -- row4's enzyme source (hole and aliquot tube) is constant across all of its wells, so the tip is only re-attached between rows, not between duplicate pairs.",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "row4_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "row4_p1_aspirate",
+      "type": "skill",
+      "label": "Aspirate (row4 pair 1, combined for duplicates)",
+      "description": "One draw covers both duplicate wells below -- enzyme_total_vol_ul is 2x the equal dispense that follows, so the aliquot tube is only touched once per pair.",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "row4_src_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_total_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row4_p1_dispense_a",
+      "type": "skill",
+      "label": "Dispense (row4 pair 1, well A)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row4_p1_well_a"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row4_p1_dispense_b",
+      "type": "skill",
+      "label": "Dispense (row4 pair 1, duplicate well B)",
+      "description": "Same tip as well A above -- no re-attach between the duplicate pair, since both wells get the identical enzyme volume from the identical aliquot tube.",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row4_p1_well_b"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row4_p2_aspirate",
+      "type": "skill",
+      "label": "Aspirate (row4 pair 2, combined for duplicates)",
+      "description": "One draw covers both duplicate wells below -- enzyme_total_vol_ul is 2x the equal dispense that follows, so the aliquot tube is only touched once per pair.",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "row4_src_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_total_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row4_p2_dispense_a",
+      "type": "skill",
+      "label": "Dispense (row4 pair 2, well A)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row4_p2_well_a"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row4_p2_dispense_b",
+      "type": "skill",
+      "label": "Dispense (row4 pair 2, duplicate well B)",
+      "description": "Same tip as well A above -- no re-attach between the duplicate pair, since both wells get the identical enzyme volume from the identical aliquot tube.",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row4_p2_well_b"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row4_p3_aspirate",
+      "type": "skill",
+      "label": "Aspirate (row4 pair 3, combined for duplicates)",
+      "description": "One draw covers both duplicate wells below -- enzyme_total_vol_ul is 2x the equal dispense that follows, so the aliquot tube is only touched once per pair.",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "row4_src_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_total_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row4_p3_dispense_a",
+      "type": "skill",
+      "label": "Dispense (row4 pair 3, well A)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row4_p3_well_a"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row4_p3_dispense_b",
+      "type": "skill",
+      "label": "Dispense (row4 pair 3, duplicate well B)",
+      "description": "Same tip as well A above -- no re-attach between the duplicate pair, since both wells get the identical enzyme volume from the identical aliquot tube.",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row4_p3_well_b"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row4_p4_aspirate",
+      "type": "skill",
+      "label": "Aspirate (row4 pair 4, combined for duplicates)",
+      "description": "One draw covers both duplicate wells below -- enzyme_total_vol_ul is 2x the equal dispense that follows, so the aliquot tube is only touched once per pair.",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "row4_src_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_total_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row4_p4_dispense_a",
+      "type": "skill",
+      "label": "Dispense (row4 pair 4, well A)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row4_p4_well_a"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row4_p4_dispense_b",
+      "type": "skill",
+      "label": "Dispense (row4 pair 4, duplicate well B)",
+      "description": "Same tip as well A above -- no re-attach between the duplicate pair, since both wells get the identical enzyme volume from the identical aliquot tube.",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row4_p4_well_b"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row4_eject",
+      "type": "skill",
+      "label": "Eject tip (row4)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "row5_attach",
+      "type": "skill",
+      "label": "Attach tip (row5)",
+      "description": "One tip for the whole row -- row5's enzyme source (hole and aliquot tube) is constant across all of its wells, so the tip is only re-attached between rows, not between duplicate pairs.",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "row5_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "row5_p1_aspirate",
+      "type": "skill",
+      "label": "Aspirate (row5 pair 1, combined for duplicates)",
+      "description": "One draw covers both duplicate wells below -- enzyme_total_vol_ul is 2x the equal dispense that follows, so the aliquot tube is only touched once per pair.",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "row5_src_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_total_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row5_p1_dispense_a",
+      "type": "skill",
+      "label": "Dispense (row5 pair 1, well A)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row5_p1_well_a"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row5_p1_dispense_b",
+      "type": "skill",
+      "label": "Dispense (row5 pair 1, duplicate well B)",
+      "description": "Same tip as well A above -- no re-attach between the duplicate pair, since both wells get the identical enzyme volume from the identical aliquot tube.",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row5_p1_well_b"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row5_p2_aspirate",
+      "type": "skill",
+      "label": "Aspirate (row5 pair 2, combined for duplicates)",
+      "description": "One draw covers both duplicate wells below -- enzyme_total_vol_ul is 2x the equal dispense that follows, so the aliquot tube is only touched once per pair.",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "row5_src_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_total_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row5_p2_dispense_a",
+      "type": "skill",
+      "label": "Dispense (row5 pair 2, well A)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row5_p2_well_a"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row5_p2_dispense_b",
+      "type": "skill",
+      "label": "Dispense (row5 pair 2, duplicate well B)",
+      "description": "Same tip as well A above -- no re-attach between the duplicate pair, since both wells get the identical enzyme volume from the identical aliquot tube.",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row5_p2_well_b"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row5_p3_aspirate",
+      "type": "skill",
+      "label": "Aspirate (row5 pair 3, combined for duplicates)",
+      "description": "One draw covers both duplicate wells below -- enzyme_total_vol_ul is 2x the equal dispense that follows, so the aliquot tube is only touched once per pair.",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "row5_src_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_total_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row5_p3_dispense_a",
+      "type": "skill",
+      "label": "Dispense (row5 pair 3, well A)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row5_p3_well_a"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row5_p3_dispense_b",
+      "type": "skill",
+      "label": "Dispense (row5 pair 3, duplicate well B)",
+      "description": "Same tip as well A above -- no re-attach between the duplicate pair, since both wells get the identical enzyme volume from the identical aliquot tube.",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row5_p3_well_b"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row5_p4_aspirate",
+      "type": "skill",
+      "label": "Aspirate (row5 pair 4, combined for duplicates)",
+      "description": "One draw covers both duplicate wells below -- enzyme_total_vol_ul is 2x the equal dispense that follows, so the aliquot tube is only touched once per pair.",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "row5_src_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_total_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row5_p4_dispense_a",
+      "type": "skill",
+      "label": "Dispense (row5 pair 4, well A)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row5_p4_well_a"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row5_p4_dispense_b",
+      "type": "skill",
+      "label": "Dispense (row5 pair 4, duplicate well B)",
+      "description": "Same tip as well A above -- no re-attach between the duplicate pair, since both wells get the identical enzyme volume from the identical aliquot tube.",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row5_p4_well_b"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row5_eject",
+      "type": "skill",
+      "label": "Eject tip (row5)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "row6_attach",
+      "type": "skill",
+      "label": "Attach tip (row6)",
+      "description": "One tip for the whole row -- row6's enzyme source (hole and aliquot tube) is constant across all of its wells, so the tip is only re-attached between rows, not between duplicate pairs.",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "row6_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "row6_p1_aspirate",
+      "type": "skill",
+      "label": "Aspirate (row6 pair 1, combined for duplicates)",
+      "description": "One draw covers both duplicate wells below -- enzyme_total_vol_ul is 2x the equal dispense that follows, so the aliquot tube is only touched once per pair.",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "row6_src_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_total_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row6_p1_dispense_a",
+      "type": "skill",
+      "label": "Dispense (row6 pair 1, well A)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row6_p1_well_a"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row6_p1_dispense_b",
+      "type": "skill",
+      "label": "Dispense (row6 pair 1, duplicate well B)",
+      "description": "Same tip as well A above -- no re-attach between the duplicate pair, since both wells get the identical enzyme volume from the identical aliquot tube.",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row6_p1_well_b"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row6_p2_aspirate",
+      "type": "skill",
+      "label": "Aspirate (row6 pair 2, combined for duplicates)",
+      "description": "One draw covers both duplicate wells below -- enzyme_total_vol_ul is 2x the equal dispense that follows, so the aliquot tube is only touched once per pair.",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "row6_src_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_total_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row6_p2_dispense_a",
+      "type": "skill",
+      "label": "Dispense (row6 pair 2, well A)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row6_p2_well_a"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row6_p2_dispense_b",
+      "type": "skill",
+      "label": "Dispense (row6 pair 2, duplicate well B)",
+      "description": "Same tip as well A above -- no re-attach between the duplicate pair, since both wells get the identical enzyme volume from the identical aliquot tube.",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "row6_p2_well_b"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "row6_eject",
+      "type": "skill",
+      "label": "Eject tip (row6)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "place_pipette",
+      "type": "skill",
+      "label": "Place Pipette Back",
+      "skill_id": "place_current_pipette",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "seal",
+      "type": "skill",
+      "label": "Seal Plate",
+      "description": "Grab the reaction plate short-side, seal it on the PlateMax (open door, load, pick + place seal, close door, press seal), unload it, and drop it back home.",
+      "skill_id": "seal_plate",
+      "parameters": {
+        "plate": {
+          "$input": "reaction_plate"
+        },
+        "platesealer": {
+          "$input": "platesealer"
+        },
+        "seal_holder": {
+          "$input": "seal_holder"
+        },
+        "home_destination": {
+          "$input": "plate_home"
+        },
+        "home_anchor": "home",
+        "grasp_anchor": "grasp_shortside",
+        "seal_index": {
+          "$input": "seal_index"
+        }
+      }
+    },
+    {
+      "node_id": "shaker_open",
+      "type": "skill",
+      "label": "Open Incubator Lid",
+      "description": "Open the shaker/incubator lid before the arm reaches in -- never grab toward a machine that's still closed.",
+      "skill_id": "wellplate_shaker_open",
+      "parameters": {
+        "shaker": {
+          "$input": "shaker"
+        }
+      }
+    },
+    {
+      "node_id": "regrab_plate",
+      "type": "skill",
+      "label": "Re-grab Sealed Plate",
+      "description": "Pick the sealed plate back up (short-side) to carry it to the incubator.",
+      "skill_id": "wellplate_grab",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "grasp_anchor": "grasp_shortside"
+      }
+    },
+    {
+      "node_id": "shaker_load",
+      "type": "skill",
+      "label": "Load Plate Into Incubator",
+      "description": "Place the sealed plate into the incubator slot and release it.",
+      "skill_id": "wellplate_shaker_load",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "wellplate_shaker": {
+          "$input": "shaker"
+        },
+        "slot_anchor": {
+          "$input": "shaker_slot"
+        }
+      }
+    },
+    {
+      "node_id": "shaker_close",
+      "type": "skill",
+      "label": "Close Incubator Lid (run ends here)",
+      "description": "Final robot action. The sealed plate is left in the closed incubator -- starting/monitoring the incubation and retrieving the plate afterward (to add nitrocefin by hand) are manual from here.",
+      "skill_id": "wellplate_shaker_close",
+      "parameters": {
+        "shaker": {
+          "$input": "shaker"
+        }
+      }
+    },
+    {
+      "node_id": "save_run",
+      "type": "skill",
+      "label": "Save Run Folder",
+      "skill_id": "save_run_folder",
+      "parameters": {
+        "run_name": {
+          "$input": "run_name"
+        },
+        "checkpoint": "end"
+      }
+    },
+    {
+      "node_id": "end_1",
+      "type": "end",
+      "label": "End"
+    },
+    {
+      "node_id": "save_run_start",
+      "type": "skill",
+      "label": "Checkpoint: run started",
+      "description": "Registers this execution in data/logs/ before any hardware moves, so a run that fails early is still visible to the tracker instead of leaving nothing behind. Its outgoing edge is deliberately 'default', not 'on_success': a checkpoint is bookkeeping, and a failure to record progress must never abort a run that is physically fine. The validator flags this as unconditional -- that is the intent.",
+      "skill_id": "save_run_folder",
+      "parameters": {
+        "run_name": {
+          "$input": "run_name"
+        },
+        "checkpoint": "start"
+      }
+    },
+    {
+      "node_id": "save_run_mid",
+      "type": "skill",
+      "label": "Checkpoint: enzyme dispensing done",
+      "description": "Refreshes the run folder once every row's enzyme dispensing is complete, before pipette stowing -- so a failure there still has every dispensed leg on record. Its outgoing edge is deliberately 'default', not 'on_success': a checkpoint is bookkeeping, and a failure to record progress must never abort a run that is physically fine. The validator flags this as unconditional -- that is the intent.",
+      "skill_id": "save_run_folder",
+      "parameters": {
+        "run_name": {
+          "$input": "run_name"
+        },
+        "checkpoint": "mid"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e_start_0_save_run_start",
+      "from_node": "start_0",
+      "to_node": "save_run_start",
+      "condition": {
+        "type": "default"
+      }
+    },
+    {
+      "edge_id": "e_save_run_start_grab_pipette",
+      "from_node": "save_run_start",
+      "to_node": "grab_pipette",
+      "condition": {
+        "type": "default"
+      }
+    },
+    {
+      "edge_id": "e_grab_pipette_row1_attach",
+      "from_node": "grab_pipette",
+      "to_node": "row1_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row1_attach_row1_p1_aspirate",
+      "from_node": "row1_attach",
+      "to_node": "row1_p1_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row1_p1_aspirate_row1_p1_dispense_a",
+      "from_node": "row1_p1_aspirate",
+      "to_node": "row1_p1_dispense_a",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row1_p1_dispense_a_row1_p1_dispense_b",
+      "from_node": "row1_p1_dispense_a",
+      "to_node": "row1_p1_dispense_b",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row1_p1_dispense_b_row1_p2_aspirate",
+      "from_node": "row1_p1_dispense_b",
+      "to_node": "row1_p2_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row1_p2_aspirate_row1_p2_dispense_a",
+      "from_node": "row1_p2_aspirate",
+      "to_node": "row1_p2_dispense_a",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row1_p2_dispense_a_row1_p2_dispense_b",
+      "from_node": "row1_p2_dispense_a",
+      "to_node": "row1_p2_dispense_b",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row1_p2_dispense_b_row1_p3_aspirate",
+      "from_node": "row1_p2_dispense_b",
+      "to_node": "row1_p3_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row1_p3_aspirate_row1_p3_dispense_a",
+      "from_node": "row1_p3_aspirate",
+      "to_node": "row1_p3_dispense_a",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row1_p3_dispense_a_row1_p3_dispense_b",
+      "from_node": "row1_p3_dispense_a",
+      "to_node": "row1_p3_dispense_b",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row1_p3_dispense_b_row1_p4_aspirate",
+      "from_node": "row1_p3_dispense_b",
+      "to_node": "row1_p4_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row1_p4_aspirate_row1_p4_dispense_a",
+      "from_node": "row1_p4_aspirate",
+      "to_node": "row1_p4_dispense_a",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row1_p4_dispense_a_row1_p4_dispense_b",
+      "from_node": "row1_p4_dispense_a",
+      "to_node": "row1_p4_dispense_b",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row1_p4_dispense_b_row1_eject",
+      "from_node": "row1_p4_dispense_b",
+      "to_node": "row1_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row1_eject_row2_attach",
+      "from_node": "row1_eject",
+      "to_node": "row2_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row2_attach_row2_p1_aspirate",
+      "from_node": "row2_attach",
+      "to_node": "row2_p1_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row2_p1_aspirate_row2_p1_dispense_a",
+      "from_node": "row2_p1_aspirate",
+      "to_node": "row2_p1_dispense_a",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row2_p1_dispense_a_row2_p1_dispense_b",
+      "from_node": "row2_p1_dispense_a",
+      "to_node": "row2_p1_dispense_b",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row2_p1_dispense_b_row2_p2_aspirate",
+      "from_node": "row2_p1_dispense_b",
+      "to_node": "row2_p2_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row2_p2_aspirate_row2_p2_dispense_a",
+      "from_node": "row2_p2_aspirate",
+      "to_node": "row2_p2_dispense_a",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row2_p2_dispense_a_row2_p2_dispense_b",
+      "from_node": "row2_p2_dispense_a",
+      "to_node": "row2_p2_dispense_b",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row2_p2_dispense_b_row2_p3_aspirate",
+      "from_node": "row2_p2_dispense_b",
+      "to_node": "row2_p3_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row2_p3_aspirate_row2_p3_dispense_a",
+      "from_node": "row2_p3_aspirate",
+      "to_node": "row2_p3_dispense_a",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row2_p3_dispense_a_row2_p3_dispense_b",
+      "from_node": "row2_p3_dispense_a",
+      "to_node": "row2_p3_dispense_b",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row2_p3_dispense_b_row2_p4_aspirate",
+      "from_node": "row2_p3_dispense_b",
+      "to_node": "row2_p4_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row2_p4_aspirate_row2_p4_dispense_a",
+      "from_node": "row2_p4_aspirate",
+      "to_node": "row2_p4_dispense_a",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row2_p4_dispense_a_row2_p4_dispense_b",
+      "from_node": "row2_p4_dispense_a",
+      "to_node": "row2_p4_dispense_b",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row2_p4_dispense_b_row2_eject",
+      "from_node": "row2_p4_dispense_b",
+      "to_node": "row2_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row2_eject_row3_attach",
+      "from_node": "row2_eject",
+      "to_node": "row3_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row3_attach_row3_p1_aspirate",
+      "from_node": "row3_attach",
+      "to_node": "row3_p1_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row3_p1_aspirate_row3_p1_dispense_a",
+      "from_node": "row3_p1_aspirate",
+      "to_node": "row3_p1_dispense_a",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row3_p1_dispense_a_row3_p1_dispense_b",
+      "from_node": "row3_p1_dispense_a",
+      "to_node": "row3_p1_dispense_b",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row3_p1_dispense_b_row3_p2_aspirate",
+      "from_node": "row3_p1_dispense_b",
+      "to_node": "row3_p2_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row3_p2_aspirate_row3_p2_dispense_a",
+      "from_node": "row3_p2_aspirate",
+      "to_node": "row3_p2_dispense_a",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row3_p2_dispense_a_row3_p2_dispense_b",
+      "from_node": "row3_p2_dispense_a",
+      "to_node": "row3_p2_dispense_b",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row3_p2_dispense_b_row3_p3_aspirate",
+      "from_node": "row3_p2_dispense_b",
+      "to_node": "row3_p3_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row3_p3_aspirate_row3_p3_dispense_a",
+      "from_node": "row3_p3_aspirate",
+      "to_node": "row3_p3_dispense_a",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row3_p3_dispense_a_row3_p3_dispense_b",
+      "from_node": "row3_p3_dispense_a",
+      "to_node": "row3_p3_dispense_b",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row3_p3_dispense_b_row3_p4_aspirate",
+      "from_node": "row3_p3_dispense_b",
+      "to_node": "row3_p4_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row3_p4_aspirate_row3_p4_dispense_a",
+      "from_node": "row3_p4_aspirate",
+      "to_node": "row3_p4_dispense_a",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row3_p4_dispense_a_row3_p4_dispense_b",
+      "from_node": "row3_p4_dispense_a",
+      "to_node": "row3_p4_dispense_b",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row3_p4_dispense_b_row3_eject",
+      "from_node": "row3_p4_dispense_b",
+      "to_node": "row3_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row3_eject_row4_attach",
+      "from_node": "row3_eject",
+      "to_node": "row4_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row4_attach_row4_p1_aspirate",
+      "from_node": "row4_attach",
+      "to_node": "row4_p1_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row4_p1_aspirate_row4_p1_dispense_a",
+      "from_node": "row4_p1_aspirate",
+      "to_node": "row4_p1_dispense_a",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row4_p1_dispense_a_row4_p1_dispense_b",
+      "from_node": "row4_p1_dispense_a",
+      "to_node": "row4_p1_dispense_b",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row4_p1_dispense_b_row4_p2_aspirate",
+      "from_node": "row4_p1_dispense_b",
+      "to_node": "row4_p2_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row4_p2_aspirate_row4_p2_dispense_a",
+      "from_node": "row4_p2_aspirate",
+      "to_node": "row4_p2_dispense_a",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row4_p2_dispense_a_row4_p2_dispense_b",
+      "from_node": "row4_p2_dispense_a",
+      "to_node": "row4_p2_dispense_b",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row4_p2_dispense_b_row4_p3_aspirate",
+      "from_node": "row4_p2_dispense_b",
+      "to_node": "row4_p3_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row4_p3_aspirate_row4_p3_dispense_a",
+      "from_node": "row4_p3_aspirate",
+      "to_node": "row4_p3_dispense_a",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row4_p3_dispense_a_row4_p3_dispense_b",
+      "from_node": "row4_p3_dispense_a",
+      "to_node": "row4_p3_dispense_b",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row4_p3_dispense_b_row4_p4_aspirate",
+      "from_node": "row4_p3_dispense_b",
+      "to_node": "row4_p4_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row4_p4_aspirate_row4_p4_dispense_a",
+      "from_node": "row4_p4_aspirate",
+      "to_node": "row4_p4_dispense_a",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row4_p4_dispense_a_row4_p4_dispense_b",
+      "from_node": "row4_p4_dispense_a",
+      "to_node": "row4_p4_dispense_b",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row4_p4_dispense_b_row4_eject",
+      "from_node": "row4_p4_dispense_b",
+      "to_node": "row4_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row4_eject_row5_attach",
+      "from_node": "row4_eject",
+      "to_node": "row5_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row5_attach_row5_p1_aspirate",
+      "from_node": "row5_attach",
+      "to_node": "row5_p1_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row5_p1_aspirate_row5_p1_dispense_a",
+      "from_node": "row5_p1_aspirate",
+      "to_node": "row5_p1_dispense_a",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row5_p1_dispense_a_row5_p1_dispense_b",
+      "from_node": "row5_p1_dispense_a",
+      "to_node": "row5_p1_dispense_b",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row5_p1_dispense_b_row5_p2_aspirate",
+      "from_node": "row5_p1_dispense_b",
+      "to_node": "row5_p2_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row5_p2_aspirate_row5_p2_dispense_a",
+      "from_node": "row5_p2_aspirate",
+      "to_node": "row5_p2_dispense_a",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row5_p2_dispense_a_row5_p2_dispense_b",
+      "from_node": "row5_p2_dispense_a",
+      "to_node": "row5_p2_dispense_b",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row5_p2_dispense_b_row5_p3_aspirate",
+      "from_node": "row5_p2_dispense_b",
+      "to_node": "row5_p3_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row5_p3_aspirate_row5_p3_dispense_a",
+      "from_node": "row5_p3_aspirate",
+      "to_node": "row5_p3_dispense_a",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row5_p3_dispense_a_row5_p3_dispense_b",
+      "from_node": "row5_p3_dispense_a",
+      "to_node": "row5_p3_dispense_b",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row5_p3_dispense_b_row5_p4_aspirate",
+      "from_node": "row5_p3_dispense_b",
+      "to_node": "row5_p4_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row5_p4_aspirate_row5_p4_dispense_a",
+      "from_node": "row5_p4_aspirate",
+      "to_node": "row5_p4_dispense_a",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row5_p4_dispense_a_row5_p4_dispense_b",
+      "from_node": "row5_p4_dispense_a",
+      "to_node": "row5_p4_dispense_b",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row5_p4_dispense_b_row5_eject",
+      "from_node": "row5_p4_dispense_b",
+      "to_node": "row5_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row5_eject_row6_attach",
+      "from_node": "row5_eject",
+      "to_node": "row6_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row6_attach_row6_p1_aspirate",
+      "from_node": "row6_attach",
+      "to_node": "row6_p1_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row6_p1_aspirate_row6_p1_dispense_a",
+      "from_node": "row6_p1_aspirate",
+      "to_node": "row6_p1_dispense_a",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row6_p1_dispense_a_row6_p1_dispense_b",
+      "from_node": "row6_p1_dispense_a",
+      "to_node": "row6_p1_dispense_b",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row6_p1_dispense_b_row6_p2_aspirate",
+      "from_node": "row6_p1_dispense_b",
+      "to_node": "row6_p2_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row6_p2_aspirate_row6_p2_dispense_a",
+      "from_node": "row6_p2_aspirate",
+      "to_node": "row6_p2_dispense_a",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row6_p2_dispense_a_row6_p2_dispense_b",
+      "from_node": "row6_p2_dispense_a",
+      "to_node": "row6_p2_dispense_b",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row6_p2_dispense_b_row6_eject",
+      "from_node": "row6_p2_dispense_b",
+      "to_node": "row6_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_row6_eject_save_run_mid",
+      "from_node": "row6_eject",
+      "to_node": "save_run_mid",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_save_run_mid_place_pipette",
+      "from_node": "save_run_mid",
+      "to_node": "place_pipette",
+      "condition": {
+        "type": "default"
+      }
+    },
+    {
+      "edge_id": "e_save_run_end_1",
+      "from_node": "save_run",
+      "to_node": "end_1",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_place_pipette_seal",
+      "from_node": "place_pipette",
+      "to_node": "seal",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_seal_shaker_open",
+      "from_node": "seal",
+      "to_node": "shaker_open",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_shaker_open_regrab_plate",
+      "from_node": "shaker_open",
+      "to_node": "regrab_plate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_regrab_plate_shaker_load",
+      "from_node": "regrab_plate",
+      "to_node": "shaker_load",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_shaker_load_shaker_close",
+      "from_node": "shaker_load",
+      "to_node": "shaker_close",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_shaker_close_save_run",
+      "from_node": "shaker_close",
+      "to_node": "save_run",
+      "condition": {
+        "type": "on_success"
+      }
+    }
+  ],
+  "canvas_ui": {
+    "kind": "react",
+    "source_ref": "canvas/cfps_inhibitor_dose_screen.tsx",
+    "enabled": true,
+    "version": 4,
+    "updated_at": "2026-07-26T00:00:00.000Z"
+  }
+}

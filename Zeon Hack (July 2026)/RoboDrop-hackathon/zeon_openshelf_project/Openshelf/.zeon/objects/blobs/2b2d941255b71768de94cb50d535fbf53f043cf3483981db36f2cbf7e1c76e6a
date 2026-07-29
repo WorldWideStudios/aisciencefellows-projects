@@ -1,0 +1,265 @@
+{
+  "workflow_id": "arm_and_shelf",
+  "name": "Arm work with OpenShelf actuation steps",
+  "description": "Interleaves arm motion and OpenShelf network calls in one graph. The shelf steps are ordinary skill nodes. Every arm step sits behind an on_success edge from a shelf step that only succeeds once the shelf reports settled - that is the interlock, because Zeon's collision world treats the shelf as a static mesh and cannot see it move.",
+  "version": "1.0.0",
+  "author": "team-4",
+  "created_at": "2026-07-26T00:00:00.000Z",
+  "updated_at": "2026-07-26T00:00:00.000Z",
+  "simulation_validated": false,
+  "objects": [],
+  "inputs": [
+    {
+      "name": "shelf_url",
+      "type": "string",
+      "is_array": false,
+      "description": "OpenShelf base URL, no trailing slash. Reachable only from a real-hardware run on the local rig unless the shelf is internet-routable.",
+      "defaultValue": "http://192.168.1.50:8080"
+    },
+    {
+      "name": "shelf_key",
+      "type": "string",
+      "is_array": false,
+      "description": "Bearer token if required. Sent as a header - never in the URL, because urls are saved into the synced project and headers are not.",
+      "defaultValue": ""
+    },
+    {
+      "name": "slot",
+      "type": "string",
+      "is_array": false,
+      "description": "Shelf slot to present",
+      "defaultValue": "1"
+    },
+    {
+      "name": "action_path",
+      "type": "string",
+      "is_array": false,
+      "description": "Endpoint path for step 4, e.g. /api/close or /api/index",
+      "defaultValue": "/api/store"
+    },
+    {
+      "name": "action_body",
+      "type": "string",
+      "is_array": false,
+      "description": "JSON body for step 4 as a string (workflow inputs have no dict type)",
+      "defaultValue": "{\"slot\": \"1\"}"
+    },
+    {
+      "name": "plate",
+      "type": "object",
+      "is_array": false,
+      "description": "Plate to move",
+      "defaultValue": "wellplate_96_deep"
+    },
+    {
+      "name": "shelf_object",
+      "type": "object",
+      "is_array": false,
+      "description": "OpenShelf world object providing the slot anchors",
+      "defaultValue": "openshelf"
+    },
+    {
+      "name": "stand",
+      "type": "object",
+      "is_array": false,
+      "description": "Tagged stand",
+      "defaultValue": "wellplate_holder_tags"
+    }
+  ],
+  "nodes": [
+    {
+      "node_id": "start_0",
+      "type": "start",
+      "label": "Start"
+    },
+    {
+      "node_id": "shelf_present",
+      "type": "skill",
+      "label": "1. SHELF: present slot",
+      "description": "Network only. POSTs the retrieve request then polls until the shelf reports settled. Returns success False on settle timeout, which is what makes the on_success edge below a real interlock rather than just sequencing.",
+      "skill_id": "openshelf_retrieve",
+      "parameters": {
+        "base_url": {
+          "$input": "shelf_url"
+        },
+        "slot": {
+          "$input": "slot"
+        },
+        "api_key": {
+          "$input": "shelf_key"
+        },
+        "max_wait_s": 120.0
+      }
+    },
+    {
+      "node_id": "arm_pick",
+      "type": "skill",
+      "label": "2. ARM: pick plate from shelf",
+      "description": "Only reached if the shelf reported settled. Zeon models the shelf as a static mesh, so the planner cannot see it moving -- the gate above is the only thing preventing an arm from entering a shelf mid-motion.",
+      "skill_id": "take_from_shelf",
+      "parameters": {
+        "item": {
+          "$input": "plate"
+        },
+        "shelf": {
+          "$input": "shelf_object"
+        },
+        "shelf_anchor": "wellplate_slot_1",
+        "item_anchor": "grasp_top",
+        "arm": "right_arm"
+      }
+    },
+    {
+      "node_id": "arm_place",
+      "type": "skill",
+      "label": "3. ARM: seat plate on tagged stand",
+      "description": "Arm work. The shelf is idle throughout.",
+      "skill_id": "place_on_stand",
+      "parameters": {
+        "plate": {
+          "$input": "plate"
+        },
+        "stand": {
+          "$input": "stand"
+        },
+        "stand_anchor": "plate_nest",
+        "plate_anchor": "nest_base",
+        "arm": "right_arm"
+      }
+    },
+    {
+      "node_id": "shelf_actuate",
+      "type": "skill",
+      "label": "4. SHELF: run an operation",
+      "description": "Network only. The general-purpose caller: any path, any method, any JSON body. This is where you activate whatever the shelf does next - close the bay, index to another slot, start a cycle. Does NOT wait for a settle, so follow it with a status check if it moves.",
+      "skill_id": "openshelf_command",
+      "parameters": {
+        "base_url": {
+          "$input": "shelf_url"
+        },
+        "path": {
+          "$input": "action_path"
+        },
+        "method": "POST",
+        "body_json": {
+          "$input": "action_body"
+        },
+        "api_key": {
+          "$input": "shelf_key"
+        },
+        "save_name": "shelf_action"
+      }
+    },
+    {
+      "node_id": "shelf_settle",
+      "type": "skill",
+      "label": "5. SHELF: confirm settled",
+      "description": "Reads the state back and decodes a settled flag. Gate anything downstream on this, not on the previous step's success - a shelf mid-move answers HTTP 200 perfectly well.",
+      "skill_id": "openshelf_status",
+      "parameters": {
+        "base_url": {
+          "$input": "shelf_url"
+        },
+        "api_key": {
+          "$input": "shelf_key"
+        },
+        "status_path": "/api/status"
+      }
+    },
+    {
+      "node_id": "end_1",
+      "type": "end",
+      "label": "End"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e0",
+      "from_node": "start_0",
+      "to_node": "shelf_present",
+      "condition": {
+        "type": "default"
+      }
+    },
+    {
+      "edge_id": "e1",
+      "from_node": "shelf_present",
+      "to_node": "arm_pick",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e2",
+      "from_node": "arm_pick",
+      "to_node": "arm_place",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e3",
+      "from_node": "arm_place",
+      "to_node": "shelf_actuate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e4",
+      "from_node": "shelf_actuate",
+      "to_node": "shelf_settle",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e5",
+      "from_node": "shelf_settle",
+      "to_node": "end_1",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e6",
+      "from_node": "shelf_present",
+      "to_node": "end_1",
+      "condition": {
+        "type": "on_failure"
+      }
+    },
+    {
+      "edge_id": "e7",
+      "from_node": "arm_pick",
+      "to_node": "end_1",
+      "condition": {
+        "type": "on_failure"
+      }
+    },
+    {
+      "edge_id": "e8",
+      "from_node": "arm_place",
+      "to_node": "end_1",
+      "condition": {
+        "type": "on_failure"
+      }
+    },
+    {
+      "edge_id": "e9",
+      "from_node": "shelf_actuate",
+      "to_node": "end_1",
+      "condition": {
+        "type": "on_failure"
+      }
+    },
+    {
+      "edge_id": "e10",
+      "from_node": "shelf_settle",
+      "to_node": "end_1",
+      "condition": {
+        "type": "on_failure"
+      }
+    }
+  ]
+}

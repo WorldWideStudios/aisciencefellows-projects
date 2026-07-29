@@ -1,0 +1,12 @@
+{
+  "analysis_version": "v1",
+  "generated_at_utc": "2026-07-26T22:05:44.060278Z",
+  "figures": {
+    "r3_endpoint_inhibition_bars.png": "data/screens/3/post-run/v1/figures/r3_endpoint_inhibition_bars.png",
+    "r3_nitrocefin_sync_timeline.png": "data/screens/3/post-run/v1/figures/r3_nitrocefin_sync_timeline.png",
+    "r3_decision_tree_multichannel_nitrocefin.png": "data/screens/3/post-run/v1/figures/r3_decision_tree_multichannel_nitrocefin.png",
+    "r3_tsne_over_library.png": "data/screens/3/post-run/v1/figures/r3_tsne_over_library.png"
+  },
+  "conclusions": "data/screens/3/post-run/v1/conclusions.md",
+  "decision_report": "data/screens/3/post-run/v1/run3_decision_report.md"
+}

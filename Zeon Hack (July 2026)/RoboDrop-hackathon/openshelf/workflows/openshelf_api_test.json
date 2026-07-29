@@ -1,0 +1,38 @@
+{
+  "workflow_id": "openshelf_api_test",
+  "name": "OpenShelf API Test",
+  "description": "Verification harness for OpenShelf API skills. Runs openshelf_store_item.",
+  "version": "1.0.0",
+  "author": "zeon",
+  "created_at": "2026-07-10T00:00:00.000Z",
+  "updated_at": "2026-07-10T00:00:00.000Z",
+  "simulation_validated": false,
+  "objects": [],
+  "inputs": [
+    { "name": "name", "type": "string", "description": "Item name to store (resolved to its UPCA; robot auto-assigns the cell)", "defaultValue": "" }
+  ],
+  "nodes": [
+    {
+      "node_id": "start_0",
+      "type": "start",
+      "label": "Start"
+    },
+    {
+      "node_id": "store_item",
+      "type": "skill",
+      "label": "Store Item",
+      "description": "Store an item by name (resolved to UPCA; robot auto-assigns the cell).",
+      "skill_id": "openshelf_store_item",
+      "parameters": { "name": { "$input": "name" } }
+    },
+    {
+      "node_id": "end_1",
+      "type": "end",
+      "label": "End"
+    }
+  ],
+  "edges": [
+    { "edge_id": "e0", "from_node": "start_0",   "to_node": "store_item", "condition": { "type": "default" } },
+    { "edge_id": "e1", "from_node": "store_item", "to_node": "end_1",      "condition": { "type": "on_success" } }
+  ]
+}

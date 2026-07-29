@@ -1,0 +1,40 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+.DS_Store
+
+# world captures: binary voxel/TSDF data — media, not code, keep out of git
+worlds/**/blox_tsdf.npz
+worlds/**/blox_voxels.npz
+
+# agent output: drafted skills, transcripts, handoff files
+out/
+
+# zeon credentials + local working-tree state
+.env
+.zeon/
+
+# ---------------------------------------------------------------------------
+# Zeon's seeded scaffold — present locally and synced to the robot via
+# `zeon sync`, but deliberately NOT in the public git repo: it is the vendor's
+# material, not ours, and keeping it out means this repo is 100% our work.
+#
+# Teammates get the full tree from `zeon clone tacit-teacher` (or the Drive
+# copy). Anything WE author in skills/ or workflows/ is still tracked — only the
+# seeded items are listed here.
+# ---------------------------------------------------------------------------
+CLAUDE.md
+project.json
+objects/
+canvas/
+skills/epipette_aspirate/
+skills/epipette_attach/
+skills/epipette_dispense/
+skills/epipette_eject/
+skills/epipette_grab/
+skills/epipette_place/
+skills/utils.py
+workflows/pipette_demo.json
+worlds/pipette_demo_world/

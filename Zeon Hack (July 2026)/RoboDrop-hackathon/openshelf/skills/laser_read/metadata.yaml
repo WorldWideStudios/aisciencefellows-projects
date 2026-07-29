@@ -1,0 +1,9 @@
+skill_id: laser_read
+version: "1.0.0"
+description: "Reads the current ADC value and detection state from the ESP32-laser sensor."
+
+# parameters are derived from the laser_read() signature in robotic_code.py
+
+tags:
+  - laser
+  - sensor

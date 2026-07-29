@@ -1,0 +1,71 @@
+{
+  "workflow_id": "round_holder_lift_replace",
+  "name": "Round Holder Lift and Replace",
+  "description": "Initial robot checkout: lift the round mock plate straight off the tagged wellplate holder, pause briefly, and replace it on the same calibrated seat.",
+  "version": "1.0.0",
+  "author": "hackerteam10",
+  "created_at": "2026-07-26T00:00:00.000Z",
+  "updated_at": "2026-07-26T00:00:00.000Z",
+  "simulation_validated": false,
+  "objects": [],
+  "inputs": [
+    {
+      "name": "round_holder",
+      "type": "object",
+      "is_array": false,
+      "description": "Round mock plate currently seated on the tagged holder",
+      "defaultValue": "round_holder_hackteam10"
+    },
+    {
+      "name": "holder",
+      "type": "object",
+      "is_array": false,
+      "description": "Tagged wellplate holder carrying the calibrated round_holder_seat",
+      "defaultValue": "wellplate_holder_tags"
+    }
+  ],
+  "nodes": [
+    {
+      "node_id": "start_0",
+      "type": "start",
+      "label": "Start"
+    },
+    {
+      "node_id": "lift_and_replace",
+      "type": "skill",
+      "label": "Lift Off and Replace",
+      "description": "Use the right arm to lift the round holder vertically, pause, and return it to the same calibrated seat.",
+      "skill_id": "round_holder_lift_replace",
+      "parameters": {
+        "round_holder": { "$input": "round_holder" },
+        "holder": { "$input": "holder" },
+        "arm": "right_arm",
+        "grasp_anchor": "grasp_shortside",
+        "seat_anchor": "round_holder_seat",
+        "placement_anchor": "bottom_center",
+        "lift_height_m": 0.05,
+        "hold_seconds": 1.0,
+        "speed": 20
+      }
+    },
+    {
+      "node_id": "end_1",
+      "type": "end",
+      "label": "End"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e0",
+      "from_node": "start_0",
+      "to_node": "lift_and_replace",
+      "condition": { "type": "default" }
+    },
+    {
+      "edge_id": "e1",
+      "from_node": "lift_and_replace",
+      "to_node": "end_1",
+      "condition": { "type": "on_success" }
+    }
+  ]
+}

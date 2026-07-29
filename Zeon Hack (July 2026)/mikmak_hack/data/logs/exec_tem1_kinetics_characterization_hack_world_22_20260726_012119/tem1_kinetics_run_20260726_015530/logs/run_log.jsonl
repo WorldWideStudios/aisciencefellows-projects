@@ -1,0 +1,170 @@
+{"t": "2026-07-26T01:21:21.577276+00:00", "type": "step_start", "node_id": "grab_pipette", "label": "Pick Up Pipette"}
+{"t": "2026-07-26T01:21:42.967198+00:00", "type": "step_start", "node_id": "pt_e1s1_enz_attach", "label": "Attach tip (pt_e1s1_enz)"}
+{"t": "2026-07-26T01:22:12.767333+00:00", "type": "aspirate", "msg": "aspirate 3 uL from coldblock_wellplate / well hole_1 (pipette epipette_10ul, speed 5.0, cal (-0.004,0.005))", "node_id": "pt_e1s1_enz_aspirate", "label": "Aspirate (pt_e1s1_enz)"}
+{"t": "2026-07-26T01:22:25.412013+00:00", "type": "dispense", "msg": "dispense 3 uL into wellplate_96_flatbottom / well A1 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))", "node_id": "pt_e1s1_enz_dispense", "label": "Dispense (pt_e1s1_enz)"}
+{"t": "2026-07-26T01:22:31.787073+00:00", "type": "step_start", "node_id": "pt_e1s1_enz_eject", "label": "Eject tip (pt_e1s1_enz)"}
+{"t": "2026-07-26T01:22:39.055440+00:00", "type": "step_start", "node_id": "pt_e1s1_sub_attach", "label": "Attach tip (pt_e1s1_sub)"}
+{"t": "2026-07-26T01:23:08.314336+00:00", "type": "aspirate", "msg": "aspirate 3 uL from coldblock_wellplate / well hole_2 (pipette epipette_10ul, speed 5.0, cal (-0.004,0.005))", "node_id": "pt_e1s1_sub_aspirate", "label": "Aspirate (pt_e1s1_sub)"}
+{"t": "2026-07-26T01:23:20.584213+00:00", "type": "dispense", "msg": "dispense 3 uL into wellplate_96_flatbottom / well A1 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))", "node_id": "pt_e1s1_sub_dispense", "label": "Dispense (pt_e1s1_sub)"}
+{"t": "2026-07-26T01:23:26.814834+00:00", "type": "step_start", "node_id": "pt_e1s1_sub_eject", "label": "Eject tip (pt_e1s1_sub)"}
+{"t": "2026-07-26T01:23:34.142974+00:00", "type": "step_start", "node_id": "pt_e1s1_buf_attach", "label": "Attach tip (pt_e1s1_buf)"}
+{"t": "2026-07-26T01:24:03.660000+00:00", "type": "aspirate", "msg": "aspirate 3 uL from coldblock_wellplate / well hole_3 (pipette epipette_10ul, speed 5.0, cal (-0.005,0.005))", "node_id": "pt_e1s1_buf_aspirate", "label": "Aspirate (pt_e1s1_buf)"}
+{"t": "2026-07-26T01:24:15.854569+00:00", "type": "dispense", "msg": "dispense 3 uL into wellplate_96_flatbottom / well A1 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))", "node_id": "pt_e1s1_buf_dispense", "label": "Dispense (pt_e1s1_buf)"}
+{"t": "2026-07-26T01:24:22.104759+00:00", "type": "step_start", "node_id": "pt_e1s1_buf_eject", "label": "Eject tip (pt_e1s1_buf)"}
+{"t": "2026-07-26T01:24:29.375414+00:00", "type": "step_start", "node_id": "pt_e1s1_mix", "label": "Mix in place (pt_e1s1)"}
+{"t": "2026-07-26T01:24:29.383482+00:00", "type": "event", "msg": "\u21bb Mixing epipette_10ul in place: 5 cycles of 3.0 uL (contents 20.0 uL) \u2014 no arm motion", "node_id": "pt_e1s1_mix", "label": "Mix in place (pt_e1s1)"}
+{"t": "2026-07-26T01:24:34.406377+00:00", "type": "event", "msg": "\u2713 epipette_mix complete: 5 cycles of 3.0 uL", "node_id": "pt_e1s1_mix", "label": "Mix in place (pt_e1s1)"}
+{"t": "2026-07-26T01:24:35.228777+00:00", "type": "step_start", "node_id": "pt_e1s2_enz_attach", "label": "Attach tip (pt_e1s2_enz)"}
+{"t": "2026-07-26T01:25:04.582394+00:00", "type": "aspirate", "msg": "aspirate 3 uL from coldblock_wellplate / well hole_1 (pipette epipette_10ul, speed 5.0, cal (-0.004,0.005))", "node_id": "pt_e1s2_enz_aspirate", "label": "Aspirate (pt_e1s2_enz)"}
+{"t": "2026-07-26T01:25:17.185721+00:00", "type": "dispense", "msg": "dispense 3 uL into wellplate_96_flatbottom / well A2 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))", "node_id": "pt_e1s2_enz_dispense", "label": "Dispense (pt_e1s2_enz)"}
+{"t": "2026-07-26T01:25:23.568662+00:00", "type": "step_start", "node_id": "pt_e1s2_enz_eject", "label": "Eject tip (pt_e1s2_enz)"}
+{"t": "2026-07-26T01:25:30.875979+00:00", "type": "step_start", "node_id": "pt_e1s2_sub_attach", "label": "Attach tip (pt_e1s2_sub)"}
+{"t": "2026-07-26T01:26:00.379873+00:00", "type": "aspirate", "msg": "aspirate 3 uL from coldblock_wellplate / well hole_2 (pipette epipette_10ul, speed 5.0, cal (-0.004,0.005))", "node_id": "pt_e1s2_sub_aspirate", "label": "Aspirate (pt_e1s2_sub)"}
+{"t": "2026-07-26T01:26:12.806635+00:00", "type": "dispense", "msg": "dispense 3 uL into wellplate_96_flatbottom / well A2 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))", "node_id": "pt_e1s2_sub_dispense", "label": "Dispense (pt_e1s2_sub)"}
+{"t": "2026-07-26T01:26:19.126978+00:00", "type": "step_start", "node_id": "pt_e1s2_sub_eject", "label": "Eject tip (pt_e1s2_sub)"}
+{"t": "2026-07-26T01:26:26.435676+00:00", "type": "step_start", "node_id": "pt_e1s2_buf_attach", "label": "Attach tip (pt_e1s2_buf)"}
+{"t": "2026-07-26T01:26:55.988147+00:00", "type": "aspirate", "msg": "aspirate 3 uL from coldblock_wellplate / well hole_3 (pipette epipette_10ul, speed 5.0, cal (-0.005,0.005))", "node_id": "pt_e1s2_buf_aspirate", "label": "Aspirate (pt_e1s2_buf)"}
+{"t": "2026-07-26T01:27:08.186152+00:00", "type": "dispense", "msg": "dispense 3 uL into wellplate_96_flatbottom / well A2 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))", "node_id": "pt_e1s2_buf_dispense", "label": "Dispense (pt_e1s2_buf)"}
+{"t": "2026-07-26T01:27:14.525107+00:00", "type": "step_start", "node_id": "pt_e1s2_buf_eject", "label": "Eject tip (pt_e1s2_buf)"}
+{"t": "2026-07-26T01:27:21.760472+00:00", "type": "step_start", "node_id": "pt_e1s2_mix", "label": "Mix in place (pt_e1s2)"}
+{"t": "2026-07-26T01:27:21.768193+00:00", "type": "event", "msg": "\u21bb Mixing epipette_10ul in place: 5 cycles of 3.0 uL (contents 20.0 uL) \u2014 no arm motion", "node_id": "pt_e1s2_mix", "label": "Mix in place (pt_e1s2)"}
+{"t": "2026-07-26T01:27:26.806608+00:00", "type": "event", "msg": "\u2713 epipette_mix complete: 5 cycles of 3.0 uL", "node_id": "pt_e1s2_mix", "label": "Mix in place (pt_e1s2)"}
+{"t": "2026-07-26T01:27:27.817770+00:00", "type": "step_start", "node_id": "pt_e1s3_enz_attach", "label": "Attach tip (pt_e1s3_enz)"}
+{"t": "2026-07-26T01:27:57.805811+00:00", "type": "aspirate", "msg": "aspirate 3 uL from coldblock_wellplate / well hole_1 (pipette epipette_10ul, speed 5.0, cal (-0.004,0.005))", "node_id": "pt_e1s3_enz_aspirate", "label": "Aspirate (pt_e1s3_enz)"}
+{"t": "2026-07-26T01:28:10.083513+00:00", "type": "dispense", "msg": "dispense 3 uL into wellplate_96_flatbottom / well A3 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))", "node_id": "pt_e1s3_enz_dispense", "label": "Dispense (pt_e1s3_enz)"}
+{"t": "2026-07-26T01:28:16.476732+00:00", "type": "step_start", "node_id": "pt_e1s3_enz_eject", "label": "Eject tip (pt_e1s3_enz)"}
+{"t": "2026-07-26T01:28:23.770824+00:00", "type": "step_start", "node_id": "pt_e1s3_sub_attach", "label": "Attach tip (pt_e1s3_sub)"}
+{"t": "2026-07-26T01:28:53.677128+00:00", "type": "aspirate", "msg": "aspirate 3 uL from coldblock_wellplate / well hole_2 (pipette epipette_10ul, speed 5.0, cal (-0.004,0.005))", "node_id": "pt_e1s3_sub_aspirate", "label": "Aspirate (pt_e1s3_sub)"}
+{"t": "2026-07-26T01:29:05.791704+00:00", "type": "dispense", "msg": "dispense 3 uL into wellplate_96_flatbottom / well A3 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))", "node_id": "pt_e1s3_sub_dispense", "label": "Dispense (pt_e1s3_sub)"}
+{"t": "2026-07-26T01:29:12.164497+00:00", "type": "step_start", "node_id": "pt_e1s3_sub_eject", "label": "Eject tip (pt_e1s3_sub)"}
+{"t": "2026-07-26T01:29:19.510632+00:00", "type": "step_start", "node_id": "pt_e1s3_buf_attach", "label": "Attach tip (pt_e1s3_buf)"}
+{"t": "2026-07-26T01:29:49.058473+00:00", "type": "aspirate", "msg": "aspirate 3 uL from coldblock_wellplate / well hole_3 (pipette epipette_10ul, speed 5.0, cal (-0.005,0.005))", "node_id": "pt_e1s3_buf_aspirate", "label": "Aspirate (pt_e1s3_buf)"}
+{"t": "2026-07-26T01:30:01.640890+00:00", "type": "dispense", "msg": "dispense 3 uL into wellplate_96_flatbottom / well A3 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))", "node_id": "pt_e1s3_buf_dispense", "label": "Dispense (pt_e1s3_buf)"}
+{"t": "2026-07-26T01:30:08.028210+00:00", "type": "step_start", "node_id": "pt_e1s3_buf_eject", "label": "Eject tip (pt_e1s3_buf)"}
+{"t": "2026-07-26T01:30:15.274222+00:00", "type": "step_start", "node_id": "pt_e1s3_mix", "label": "Mix in place (pt_e1s3)"}
+{"t": "2026-07-26T01:30:15.282202+00:00", "type": "event", "msg": "\u21bb Mixing epipette_10ul in place: 5 cycles of 3.0 uL (contents 20.0 uL) \u2014 no arm motion", "node_id": "pt_e1s3_mix", "label": "Mix in place (pt_e1s3)"}
+{"t": "2026-07-26T01:30:20.327050+00:00", "type": "event", "msg": "\u2713 epipette_mix complete: 5 cycles of 3.0 uL", "node_id": "pt_e1s3_mix", "label": "Mix in place (pt_e1s3)"}
+{"t": "2026-07-26T01:30:21.229988+00:00", "type": "step_start", "node_id": "pt_e2s1_enz_attach", "label": "Attach tip (pt_e2s1_enz)"}
+{"t": "2026-07-26T01:30:51.053170+00:00", "type": "aspirate", "msg": "aspirate 3 uL from coldblock_wellplate / well hole_1 (pipette epipette_10ul, speed 5.0, cal (-0.004,0.005))", "node_id": "pt_e2s1_enz_aspirate", "label": "Aspirate (pt_e2s1_enz)"}
+{"t": "2026-07-26T01:31:03.343578+00:00", "type": "dispense", "msg": "dispense 3 uL into wellplate_96_flatbottom / well A4 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))", "node_id": "pt_e2s1_enz_dispense", "label": "Dispense (pt_e2s1_enz)"}
+{"t": "2026-07-26T01:31:09.664458+00:00", "type": "step_start", "node_id": "pt_e2s1_enz_eject", "label": "Eject tip (pt_e2s1_enz)"}
+{"t": "2026-07-26T01:31:16.889271+00:00", "type": "step_start", "node_id": "pt_e2s1_sub_attach", "label": "Attach tip (pt_e2s1_sub)"}
+{"t": "2026-07-26T01:31:46.978124+00:00", "type": "aspirate", "msg": "aspirate 3 uL from coldblock_wellplate / well hole_2 (pipette epipette_10ul, speed 5.0, cal (-0.004,0.005))", "node_id": "pt_e2s1_sub_aspirate", "label": "Aspirate (pt_e2s1_sub)"}
+{"t": "2026-07-26T01:31:59.150198+00:00", "type": "dispense", "msg": "dispense 3 uL into wellplate_96_flatbottom / well A4 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))", "node_id": "pt_e2s1_sub_dispense", "label": "Dispense (pt_e2s1_sub)"}
+{"t": "2026-07-26T01:32:05.484158+00:00", "type": "step_start", "node_id": "pt_e2s1_sub_eject", "label": "Eject tip (pt_e2s1_sub)"}
+{"t": "2026-07-26T01:32:12.689874+00:00", "type": "step_start", "node_id": "pt_e2s1_buf_attach", "label": "Attach tip (pt_e2s1_buf)"}
+{"t": "2026-07-26T01:32:42.802075+00:00", "type": "aspirate", "msg": "aspirate 3 uL from coldblock_wellplate / well hole_3 (pipette epipette_10ul, speed 5.0, cal (-0.005,0.005))", "node_id": "pt_e2s1_buf_aspirate", "label": "Aspirate (pt_e2s1_buf)"}
+{"t": "2026-07-26T01:32:54.928154+00:00", "type": "dispense", "msg": "dispense 3 uL into wellplate_96_flatbottom / well A4 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))", "node_id": "pt_e2s1_buf_dispense", "label": "Dispense (pt_e2s1_buf)"}
+{"t": "2026-07-26T01:33:01.261765+00:00", "type": "step_start", "node_id": "pt_e2s1_buf_eject", "label": "Eject tip (pt_e2s1_buf)"}
+{"t": "2026-07-26T01:33:08.469316+00:00", "type": "step_start", "node_id": "pt_e2s1_mix", "label": "Mix in place (pt_e2s1)"}
+{"t": "2026-07-26T01:33:08.479674+00:00", "type": "event", "msg": "\u21bb Mixing epipette_10ul in place: 5 cycles of 3.0 uL (contents 20.0 uL) \u2014 no arm motion", "node_id": "pt_e2s1_mix", "label": "Mix in place (pt_e2s1)"}
+{"t": "2026-07-26T01:33:13.508215+00:00", "type": "event", "msg": "\u2713 epipette_mix complete: 5 cycles of 3.0 uL", "node_id": "pt_e2s1_mix", "label": "Mix in place (pt_e2s1)"}
+{"t": "2026-07-26T01:33:14.386113+00:00", "type": "step_start", "node_id": "pt_e2s2_enz_attach", "label": "Attach tip (pt_e2s2_enz)"}
+{"t": "2026-07-26T01:33:44.043429+00:00", "type": "aspirate", "msg": "aspirate 3 uL from coldblock_wellplate / well hole_1 (pipette epipette_10ul, speed 5.0, cal (-0.004,0.005))", "node_id": "pt_e2s2_enz_aspirate", "label": "Aspirate (pt_e2s2_enz)"}
+{"t": "2026-07-26T01:33:56.472764+00:00", "type": "dispense", "msg": "dispense 3 uL into wellplate_96_flatbottom / well A5 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))", "node_id": "pt_e2s2_enz_dispense", "label": "Dispense (pt_e2s2_enz)"}
+{"t": "2026-07-26T01:34:02.733508+00:00", "type": "step_start", "node_id": "pt_e2s2_enz_eject", "label": "Eject tip (pt_e2s2_enz)"}
+{"t": "2026-07-26T01:34:09.949235+00:00", "type": "step_start", "node_id": "pt_e2s2_sub_attach", "label": "Attach tip (pt_e2s2_sub)"}
+{"t": "2026-07-26T01:34:39.507979+00:00", "type": "aspirate", "msg": "aspirate 3 uL from coldblock_wellplate / well hole_2 (pipette epipette_10ul, speed 5.0, cal (-0.004,0.005))", "node_id": "pt_e2s2_sub_aspirate", "label": "Aspirate (pt_e2s2_sub)"}
+{"t": "2026-07-26T01:34:51.856461+00:00", "type": "dispense", "msg": "dispense 3 uL into wellplate_96_flatbottom / well A5 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))", "node_id": "pt_e2s2_sub_dispense", "label": "Dispense (pt_e2s2_sub)"}
+{"t": "2026-07-26T01:34:58.187585+00:00", "type": "step_start", "node_id": "pt_e2s2_sub_eject", "label": "Eject tip (pt_e2s2_sub)"}
+{"t": "2026-07-26T01:35:05.386620+00:00", "type": "step_start", "node_id": "pt_e2s2_buf_attach", "label": "Attach tip (pt_e2s2_buf)"}
+{"t": "2026-07-26T01:35:34.762035+00:00", "type": "aspirate", "msg": "aspirate 3 uL from coldblock_wellplate / well hole_3 (pipette epipette_10ul, speed 5.0, cal (-0.005,0.005))", "node_id": "pt_e2s2_buf_aspirate", "label": "Aspirate (pt_e2s2_buf)"}
+{"t": "2026-07-26T01:35:46.729149+00:00", "type": "dispense", "msg": "dispense 3 uL into wellplate_96_flatbottom / well A5 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))", "node_id": "pt_e2s2_buf_dispense", "label": "Dispense (pt_e2s2_buf)"}
+{"t": "2026-07-26T01:35:52.986763+00:00", "type": "step_start", "node_id": "pt_e2s2_buf_eject", "label": "Eject tip (pt_e2s2_buf)"}
+{"t": "2026-07-26T01:36:00.114033+00:00", "type": "step_start", "node_id": "pt_e2s2_mix", "label": "Mix in place (pt_e2s2)"}
+{"t": "2026-07-26T01:36:00.123371+00:00", "type": "event", "msg": "\u21bb Mixing epipette_10ul in place: 5 cycles of 3.0 uL (contents 20.0 uL) \u2014 no arm motion", "node_id": "pt_e2s2_mix", "label": "Mix in place (pt_e2s2)"}
+{"t": "2026-07-26T01:36:05.155084+00:00", "type": "event", "msg": "\u2713 epipette_mix complete: 5 cycles of 3.0 uL", "node_id": "pt_e2s2_mix", "label": "Mix in place (pt_e2s2)"}
+{"t": "2026-07-26T01:36:06.093283+00:00", "type": "step_start", "node_id": "pt_e2s3_enz_attach", "label": "Attach tip (pt_e2s3_enz)"}
+{"t": "2026-07-26T01:36:35.982878+00:00", "type": "aspirate", "msg": "aspirate 3 uL from coldblock_wellplate / well hole_1 (pipette epipette_10ul, speed 5.0, cal (-0.004,0.005))", "node_id": "pt_e2s3_enz_aspirate", "label": "Aspirate (pt_e2s3_enz)"}
+{"t": "2026-07-26T01:36:48.055461+00:00", "type": "dispense", "msg": "dispense 3 uL into wellplate_96_flatbottom / well A6 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))", "node_id": "pt_e2s3_enz_dispense", "label": "Dispense (pt_e2s3_enz)"}
+{"t": "2026-07-26T01:36:54.319204+00:00", "type": "step_start", "node_id": "pt_e2s3_enz_eject", "label": "Eject tip (pt_e2s3_enz)"}
+{"t": "2026-07-26T01:37:01.427993+00:00", "type": "step_start", "node_id": "pt_e2s3_sub_attach", "label": "Attach tip (pt_e2s3_sub)"}
+{"t": "2026-07-26T01:37:31.274308+00:00", "type": "aspirate", "msg": "aspirate 3 uL from coldblock_wellplate / well hole_2 (pipette epipette_10ul, speed 5.0, cal (-0.004,0.005))", "node_id": "pt_e2s3_sub_aspirate", "label": "Aspirate (pt_e2s3_sub)"}
+{"t": "2026-07-26T01:37:43.404411+00:00", "type": "dispense", "msg": "dispense 3 uL into wellplate_96_flatbottom / well A6 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))", "node_id": "pt_e2s3_sub_dispense", "label": "Dispense (pt_e2s3_sub)"}
+{"t": "2026-07-26T01:37:49.643189+00:00", "type": "step_start", "node_id": "pt_e2s3_sub_eject", "label": "Eject tip (pt_e2s3_sub)"}
+{"t": "2026-07-26T01:37:56.750004+00:00", "type": "step_start", "node_id": "pt_e2s3_buf_attach", "label": "Attach tip (pt_e2s3_buf)"}
+{"t": "2026-07-26T01:38:26.332481+00:00", "type": "aspirate", "msg": "aspirate 3 uL from coldblock_wellplate / well hole_3 (pipette epipette_10ul, speed 5.0, cal (-0.005,0.005))", "node_id": "pt_e2s3_buf_aspirate", "label": "Aspirate (pt_e2s3_buf)"}
+{"t": "2026-07-26T01:38:38.560490+00:00", "type": "dispense", "msg": "dispense 3 uL into wellplate_96_flatbottom / well A6 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))", "node_id": "pt_e2s3_buf_dispense", "label": "Dispense (pt_e2s3_buf)"}
+{"t": "2026-07-26T01:38:44.861642+00:00", "type": "step_start", "node_id": "pt_e2s3_buf_eject", "label": "Eject tip (pt_e2s3_buf)"}
+{"t": "2026-07-26T01:38:51.918791+00:00", "type": "step_start", "node_id": "pt_e2s3_mix", "label": "Mix in place (pt_e2s3)"}
+{"t": "2026-07-26T01:38:51.926741+00:00", "type": "event", "msg": "\u21bb Mixing epipette_10ul in place: 5 cycles of 3.0 uL (contents 20.0 uL) \u2014 no arm motion", "node_id": "pt_e2s3_mix", "label": "Mix in place (pt_e2s3)"}
+{"t": "2026-07-26T01:38:56.939499+00:00", "type": "event", "msg": "\u2713 epipette_mix complete: 5 cycles of 3.0 uL", "node_id": "pt_e2s3_mix", "label": "Mix in place (pt_e2s3)"}
+{"t": "2026-07-26T01:38:57.831020+00:00", "type": "step_start", "node_id": "pt_e3s1_enz_attach", "label": "Attach tip (pt_e3s1_enz)"}
+{"t": "2026-07-26T01:39:27.587752+00:00", "type": "aspirate", "msg": "aspirate 3 uL from coldblock_wellplate / well hole_1 (pipette epipette_10ul, speed 5.0, cal (-0.004,0.005))", "node_id": "pt_e3s1_enz_aspirate", "label": "Aspirate (pt_e3s1_enz)"}
+{"t": "2026-07-26T01:39:39.881816+00:00", "type": "dispense", "msg": "dispense 3 uL into wellplate_96_flatbottom / well A7 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))", "node_id": "pt_e3s1_enz_dispense", "label": "Dispense (pt_e3s1_enz)"}
+{"t": "2026-07-26T01:39:46.245412+00:00", "type": "step_start", "node_id": "pt_e3s1_enz_eject", "label": "Eject tip (pt_e3s1_enz)"}
+{"t": "2026-07-26T01:39:53.237148+00:00", "type": "step_start", "node_id": "pt_e3s1_sub_attach", "label": "Attach tip (pt_e3s1_sub)"}
+{"t": "2026-07-26T01:40:23.055694+00:00", "type": "aspirate", "msg": "aspirate 3 uL from coldblock_wellplate / well hole_2 (pipette epipette_10ul, speed 5.0, cal (-0.004,0.005))", "node_id": "pt_e3s1_sub_aspirate", "label": "Aspirate (pt_e3s1_sub)"}
+{"t": "2026-07-26T01:40:34.981757+00:00", "type": "dispense", "msg": "dispense 3 uL into wellplate_96_flatbottom / well A7 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))", "node_id": "pt_e3s1_sub_dispense", "label": "Dispense (pt_e3s1_sub)"}
+{"t": "2026-07-26T01:40:41.258888+00:00", "type": "step_start", "node_id": "pt_e3s1_sub_eject", "label": "Eject tip (pt_e3s1_sub)"}
+{"t": "2026-07-26T01:40:48.377586+00:00", "type": "step_start", "node_id": "pt_e3s1_buf_attach", "label": "Attach tip (pt_e3s1_buf)"}
+{"t": "2026-07-26T01:41:18.341677+00:00", "type": "aspirate", "msg": "aspirate 3 uL from coldblock_wellplate / well hole_3 (pipette epipette_10ul, speed 5.0, cal (-0.005,0.005))", "node_id": "pt_e3s1_buf_aspirate", "label": "Aspirate (pt_e3s1_buf)"}
+{"t": "2026-07-26T01:41:30.309836+00:00", "type": "dispense", "msg": "dispense 3 uL into wellplate_96_flatbottom / well A7 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))", "node_id": "pt_e3s1_buf_dispense", "label": "Dispense (pt_e3s1_buf)"}
+{"t": "2026-07-26T01:41:36.618131+00:00", "type": "step_start", "node_id": "pt_e3s1_buf_eject", "label": "Eject tip (pt_e3s1_buf)"}
+{"t": "2026-07-26T01:41:43.605668+00:00", "type": "step_start", "node_id": "pt_e3s1_mix", "label": "Mix in place (pt_e3s1)"}
+{"t": "2026-07-26T01:41:43.620184+00:00", "type": "event", "msg": "\u21bb Mixing epipette_10ul in place: 5 cycles of 3.0 uL (contents 20.0 uL) \u2014 no arm motion", "node_id": "pt_e3s1_mix", "label": "Mix in place (pt_e3s1)"}
+{"t": "2026-07-26T01:41:48.639095+00:00", "type": "event", "msg": "\u2713 epipette_mix complete: 5 cycles of 3.0 uL", "node_id": "pt_e3s1_mix", "label": "Mix in place (pt_e3s1)"}
+{"t": "2026-07-26T01:41:49.517950+00:00", "type": "step_start", "node_id": "pt_e3s2_enz_attach", "label": "Attach tip (pt_e3s2_enz)"}
+{"t": "2026-07-26T01:42:19.395065+00:00", "type": "aspirate", "msg": "aspirate 3 uL from coldblock_wellplate / well hole_1 (pipette epipette_10ul, speed 5.0, cal (-0.004,0.005))", "node_id": "pt_e3s2_enz_aspirate", "label": "Aspirate (pt_e3s2_enz)"}
+{"t": "2026-07-26T01:42:31.786127+00:00", "type": "dispense", "msg": "dispense 3 uL into wellplate_96_flatbottom / well A8 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))", "node_id": "pt_e3s2_enz_dispense", "label": "Dispense (pt_e3s2_enz)"}
+{"t": "2026-07-26T01:42:38.105983+00:00", "type": "step_start", "node_id": "pt_e3s2_enz_eject", "label": "Eject tip (pt_e3s2_enz)"}
+{"t": "2026-07-26T01:42:45.107295+00:00", "type": "step_start", "node_id": "pt_e3s2_sub_attach", "label": "Attach tip (pt_e3s2_sub)"}
+{"t": "2026-07-26T01:43:15.023138+00:00", "type": "aspirate", "msg": "aspirate 3 uL from coldblock_wellplate / well hole_2 (pipette epipette_10ul, speed 5.0, cal (-0.004,0.005))", "node_id": "pt_e3s2_sub_aspirate", "label": "Aspirate (pt_e3s2_sub)"}
+{"t": "2026-07-26T01:43:27.009176+00:00", "type": "dispense", "msg": "dispense 3 uL into wellplate_96_flatbottom / well A8 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))", "node_id": "pt_e3s2_sub_dispense", "label": "Dispense (pt_e3s2_sub)"}
+{"t": "2026-07-26T01:43:33.334156+00:00", "type": "step_start", "node_id": "pt_e3s2_sub_eject", "label": "Eject tip (pt_e3s2_sub)"}
+{"t": "2026-07-26T01:43:40.403613+00:00", "type": "step_start", "node_id": "pt_e3s2_buf_attach", "label": "Attach tip (pt_e3s2_buf)"}
+{"t": "2026-07-26T01:44:10.459701+00:00", "type": "aspirate", "msg": "aspirate 3 uL from coldblock_wellplate / well hole_3 (pipette epipette_10ul, speed 5.0, cal (-0.005,0.005))", "node_id": "pt_e3s2_buf_aspirate", "label": "Aspirate (pt_e3s2_buf)"}
+{"t": "2026-07-26T01:44:22.307914+00:00", "type": "dispense", "msg": "dispense 3 uL into wellplate_96_flatbottom / well A8 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))", "node_id": "pt_e3s2_buf_dispense", "label": "Dispense (pt_e3s2_buf)"}
+{"t": "2026-07-26T01:44:28.643949+00:00", "type": "step_start", "node_id": "pt_e3s2_buf_eject", "label": "Eject tip (pt_e3s2_buf)"}
+{"t": "2026-07-26T01:44:35.753411+00:00", "type": "step_start", "node_id": "pt_e3s2_mix", "label": "Mix in place (pt_e3s2)"}
+{"t": "2026-07-26T01:44:35.759729+00:00", "type": "event", "msg": "\u21bb Mixing epipette_10ul in place: 5 cycles of 3.0 uL (contents 20.0 uL) \u2014 no arm motion", "node_id": "pt_e3s2_mix", "label": "Mix in place (pt_e3s2)"}
+{"t": "2026-07-26T01:44:40.773348+00:00", "type": "event", "msg": "\u2713 epipette_mix complete: 5 cycles of 3.0 uL", "node_id": "pt_e3s2_mix", "label": "Mix in place (pt_e3s2)"}
+{"t": "2026-07-26T01:44:41.716567+00:00", "type": "step_start", "node_id": "pt_e3s3_enz_attach", "label": "Attach tip (pt_e3s3_enz)"}
+{"t": "2026-07-26T01:45:11.597555+00:00", "type": "aspirate", "msg": "aspirate 3 uL from coldblock_wellplate / well hole_1 (pipette epipette_10ul, speed 5.0, cal (-0.004,0.005))", "node_id": "pt_e3s3_enz_aspirate", "label": "Aspirate (pt_e3s3_enz)"}
+{"t": "2026-07-26T01:45:23.929137+00:00", "type": "dispense", "msg": "dispense 3 uL into wellplate_96_flatbottom / well B1 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))", "node_id": "pt_e3s3_enz_dispense", "label": "Dispense (pt_e3s3_enz)"}
+{"t": "2026-07-26T01:45:30.236577+00:00", "type": "step_start", "node_id": "pt_e3s3_enz_eject", "label": "Eject tip (pt_e3s3_enz)"}
+{"t": "2026-07-26T01:45:37.558331+00:00", "type": "step_start", "node_id": "pt_e3s3_sub_attach", "label": "Attach tip (pt_e3s3_sub)"}
+{"t": "2026-07-26T01:46:07.511531+00:00", "type": "aspirate", "msg": "aspirate 3 uL from coldblock_wellplate / well hole_2 (pipette epipette_10ul, speed 5.0, cal (-0.004,0.005))", "node_id": "pt_e3s3_sub_aspirate", "label": "Aspirate (pt_e3s3_sub)"}
+{"t": "2026-07-26T01:46:19.651292+00:00", "type": "dispense", "msg": "dispense 3 uL into wellplate_96_flatbottom / well B1 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))", "node_id": "pt_e3s3_sub_dispense", "label": "Dispense (pt_e3s3_sub)"}
+{"t": "2026-07-26T01:46:25.936875+00:00", "type": "step_start", "node_id": "pt_e3s3_sub_eject", "label": "Eject tip (pt_e3s3_sub)"}
+{"t": "2026-07-26T01:46:33.287647+00:00", "type": "step_start", "node_id": "pt_e3s3_buf_attach", "label": "Attach tip (pt_e3s3_buf)"}
+{"t": "2026-07-26T01:47:02.920913+00:00", "type": "aspirate", "msg": "aspirate 3 uL from coldblock_wellplate / well hole_3 (pipette epipette_10ul, speed 5.0, cal (-0.005,0.005))", "node_id": "pt_e3s3_buf_aspirate", "label": "Aspirate (pt_e3s3_buf)"}
+{"t": "2026-07-26T01:47:15.254882+00:00", "type": "dispense", "msg": "dispense 3 uL into wellplate_96_flatbottom / well B1 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))", "node_id": "pt_e3s3_buf_dispense", "label": "Dispense (pt_e3s3_buf)"}
+{"t": "2026-07-26T01:47:21.567804+00:00", "type": "step_start", "node_id": "pt_e3s3_buf_eject", "label": "Eject tip (pt_e3s3_buf)"}
+{"t": "2026-07-26T01:47:28.884638+00:00", "type": "step_start", "node_id": "pt_e3s3_mix", "label": "Mix in place (pt_e3s3)"}
+{"t": "2026-07-26T01:47:28.892125+00:00", "type": "event", "msg": "\u21bb Mixing epipette_10ul in place: 5 cycles of 3.0 uL (contents 20.0 uL) \u2014 no arm motion", "node_id": "pt_e3s3_mix", "label": "Mix in place (pt_e3s3)"}
+{"t": "2026-07-26T01:47:33.904409+00:00", "type": "event", "msg": "\u2713 epipette_mix complete: 5 cycles of 3.0 uL", "node_id": "pt_e3s3_mix", "label": "Mix in place (pt_e3s3)"}
+{"t": "2026-07-26T01:47:34.826411+00:00", "type": "step_start", "node_id": "blank_e_enz_attach", "label": "Attach tip (blank_e_enz)"}
+{"t": "2026-07-26T01:48:04.613051+00:00", "type": "aspirate", "msg": "aspirate 3 uL from coldblock_wellplate / well hole_1 (pipette epipette_10ul, speed 5.0, cal (-0.004,0.005))", "node_id": "blank_e_enz_aspirate", "label": "Aspirate (blank_e_enz)"}
+{"t": "2026-07-26T01:48:16.890663+00:00", "type": "dispense", "msg": "dispense 3 uL into wellplate_96_flatbottom / well B2 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))", "node_id": "blank_e_enz_dispense", "label": "Dispense (blank_e_enz)"}
+{"t": "2026-07-26T01:48:23.246754+00:00", "type": "step_start", "node_id": "blank_e_enz_eject", "label": "Eject tip (blank_e_enz)"}
+{"t": "2026-07-26T01:48:30.571112+00:00", "type": "step_start", "node_id": "blank_e_buf_attach", "label": "Attach tip (blank_e_buf)"}
+{"t": "2026-07-26T01:49:00.514491+00:00", "type": "aspirate", "msg": "aspirate 3 uL from coldblock_wellplate / well hole_3 (pipette epipette_10ul, speed 5.0, cal (-0.005,0.005))", "node_id": "blank_e_buf_aspirate", "label": "Aspirate (blank_e_buf)"}
+{"t": "2026-07-26T01:49:12.678555+00:00", "type": "dispense", "msg": "dispense 3 uL into wellplate_96_flatbottom / well B2 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))", "node_id": "blank_e_buf_dispense", "label": "Dispense (blank_e_buf)"}
+{"t": "2026-07-26T01:49:19.043683+00:00", "type": "step_start", "node_id": "blank_e_buf_eject", "label": "Eject tip (blank_e_buf)"}
+{"t": "2026-07-26T01:49:26.366216+00:00", "type": "step_start", "node_id": "blank_e_mix", "label": "Mix in place (blank_e)"}
+{"t": "2026-07-26T01:49:26.372213+00:00", "type": "event", "msg": "\u21bb Mixing epipette_10ul in place: 5 cycles of 3.0 uL (contents 20.0 uL) \u2014 no arm motion", "node_id": "blank_e_mix", "label": "Mix in place (blank_e)"}
+{"t": "2026-07-26T01:49:31.387917+00:00", "type": "event", "msg": "\u2713 epipette_mix complete: 5 cycles of 3.0 uL", "node_id": "blank_e_mix", "label": "Mix in place (blank_e)"}
+{"t": "2026-07-26T01:49:32.300372+00:00", "type": "step_start", "node_id": "blank_s_sub_attach", "label": "Attach tip (blank_s_sub)"}
+{"t": "2026-07-26T01:50:02.424730+00:00", "type": "aspirate", "msg": "aspirate 3 uL from coldblock_wellplate / well hole_2 (pipette epipette_10ul, speed 5.0, cal (-0.004,0.005))", "node_id": "blank_s_sub_aspirate", "label": "Aspirate (blank_s_sub)"}
+{"t": "2026-07-26T01:50:14.504158+00:00", "type": "dispense", "msg": "dispense 3 uL into wellplate_96_flatbottom / well B3 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))", "node_id": "blank_s_sub_dispense", "label": "Dispense (blank_s_sub)"}
+{"t": "2026-07-26T01:50:20.956975+00:00", "type": "step_start", "node_id": "blank_s_sub_eject", "label": "Eject tip (blank_s_sub)"}
+{"t": "2026-07-26T01:50:28.227293+00:00", "type": "step_start", "node_id": "blank_s_buf_attach", "label": "Attach tip (blank_s_buf)"}
+{"t": "2026-07-26T01:50:58.240214+00:00", "type": "aspirate", "msg": "aspirate 3 uL from coldblock_wellplate / well hole_3 (pipette epipette_10ul, speed 5.0, cal (-0.005,0.005))", "node_id": "blank_s_buf_aspirate", "label": "Aspirate (blank_s_buf)"}
+{"t": "2026-07-26T01:51:10.583458+00:00", "type": "dispense", "msg": "dispense 3 uL into wellplate_96_flatbottom / well B3 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))", "node_id": "blank_s_buf_dispense", "label": "Dispense (blank_s_buf)"}
+{"t": "2026-07-26T01:51:16.963061+00:00", "type": "step_start", "node_id": "blank_s_buf_eject", "label": "Eject tip (blank_s_buf)"}
+{"t": "2026-07-26T01:51:24.175580+00:00", "type": "step_start", "node_id": "blank_s_mix", "label": "Mix in place (blank_s)"}
+{"t": "2026-07-26T01:51:24.182519+00:00", "type": "event", "msg": "\u21bb Mixing epipette_10ul in place: 5 cycles of 3.0 uL (contents 20.0 uL) \u2014 no arm motion", "node_id": "blank_s_mix", "label": "Mix in place (blank_s)"}
+{"t": "2026-07-26T01:51:29.215076+00:00", "type": "event", "msg": "\u2713 epipette_mix complete: 5 cycles of 3.0 uL", "node_id": "blank_s_mix", "label": "Mix in place (blank_s)"}
+{"t": "2026-07-26T01:51:30.171340+00:00", "type": "step_start", "node_id": "place_pipette", "label": "Place Pipette Back"}
+{"t": "2026-07-26T01:51:31.420222+00:00", "type": "event", "msg": "\u25b6 Returning epipette_10ul to its stand", "node_id": "place_pipette", "label": "Place Pipette Back"}
+{"t": "2026-07-26T01:51:31.431217+00:00", "type": "step_start", "node_id": "place_pipette", "label": "Place Pipette Back"}
+{"t": "2026-07-26T01:51:59.118348+00:00", "type": "step_start", "node_id": "grab_plate", "label": "Grab Assay Plate"}
+{"t": "2026-07-26T01:52:18.103884+00:00", "type": "step_start", "node_id": "reader_open_pre", "label": "Open Reader Lid"}
+{"t": "2026-07-26T01:52:56.875476+00:00", "type": "step_start", "node_id": "reader_load", "label": "Load Plate Into Reader"}
+{"t": "2026-07-26T01:53:26.306700+00:00", "type": "step_start", "node_id": "reader_closed", "label": "Close Reader Lid"}
+{"t": "2026-07-26T01:54:13.733305+00:00", "type": "step_start", "node_id": "reader_measure", "label": "Kinetic Read"}
+{"t": "2026-07-26T01:54:13.761928+00:00", "type": "transfer", "msg": "Starting platereader_measure -> exec_tem1_kinetics_characterization_hack_world_22_20260726_012119.pdf", "node_id": "reader_measure", "label": "Kinetic Read"}
+{"t": "2026-07-26T01:54:16.629946+00:00", "type": "step_start", "node_id": "reader_open_post", "label": "Open Reader Lid (retrieve)"}
+{"t": "2026-07-26T01:54:51.590565+00:00", "type": "step_start", "node_id": "reader_unload", "label": "Unload Plate From Reader"}
+{"t": "2026-07-26T01:55:15.915287+00:00", "type": "step_start", "node_id": "drop_plate", "label": "Return Plate Home"}

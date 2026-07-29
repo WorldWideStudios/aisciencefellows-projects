@@ -1,0 +1,12 @@
+skill_id: actuate_module
+version: "1.0.0"
+description: "Actuate an instrument, dispatching on transport. http goes over api_request; panel presses the button with an arm and reads the display back; serial is refused because a skill cannot open a serial port."
+
+preconditions: {}   # parsed but NOT enforced by the executor - never gate on these
+postconditions: {}
+safety_rules: []
+tags:
+  - openshelf
+  - instrument
+  - actuate
+world_state_prime: null

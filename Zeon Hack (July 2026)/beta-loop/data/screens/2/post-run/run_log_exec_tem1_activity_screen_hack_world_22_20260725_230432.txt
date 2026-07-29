@@ -1,0 +1,693 @@
+Run Log
+Execution ID: exec_tem1_activity_screen_hack_world_22_20260725_230432
+Workflow:     tem1_activity_screen_hack_world_22
+Started:      2026-07-25 23:04:32 PDT
+Completed:    2026-07-26 01:55:53 PDT
+Duration:     171m 20s
+────────────────────────────────────────────────────────────
+
+[23:04:32] ▶ Pick Up Pipette  STARTING
+
+[23:05:00] ▶ Prepare Dilutions  STARTING
+           [23:05:01] ▶ Preparing purified TEM-1 working solution: 100 ng/uL stock -> 1 ng/uL intermediate -> 0.1 ng/uL working solution
+
+[23:05:01] ▶ Prepare Dilutions  STARTING
+           [23:05:22]   TEM-1 stock to intermediate: 2.0 uL hole_1 -> hole_2 (epipette_10ul, tip #1)
+
+[23:05:58] ▶ Prepare Dilutions  STARTING
+           [23:06:06] ⇄ Swapping epipette_10ul → epipette_120ul
+
+[23:06:06] ▶ Prepare Dilutions  STARTING
+
+[23:06:37] ▶ Prepare Dilutions  STARTING
+
+[23:07:02] ▶ Prepare Dilutions  STARTING
+           [23:07:22]   BLB to TEM-1 intermediate: chunk 1 aspirate/dispense 120.0 uL hole_6 -> hole_2 (epipette_120ul, tip #1)
+
+[23:07:57] ▶ Prepare Dilutions  STARTING
+
+[23:08:06] ▶ Prepare Dilutions  STARTING
+           [23:08:25]   BLB to TEM-1 intermediate: chunk 2 aspirate/dispense 78.0 uL hole_6 -> hole_2 (epipette_120ul, tip #2)
+
+[23:09:00] ▶ Prepare Dilutions  STARTING
+
+[23:09:09] ▶ Prepare Dilutions  STARTING
+
+[23:12:30] ▶ Prepare Dilutions  STARTING
+
+[23:12:39] ▶ Prepare Dilutions  STARTING
+           [23:12:58]   TEM-1 intermediate to working: chunk 1 aspirate/dispense 100.0 uL hole_2 -> hole_8 (epipette_120ul, tip #4)
+
+[23:13:34] ▶ Prepare Dilutions  STARTING
+
+[23:13:41] ▶ Prepare Dilutions  STARTING
+           [23:14:00]   BLB to TEM-1 working: chunk 1 aspirate/dispense 120.0 uL hole_6 -> hole_8 (epipette_120ul, tip #5)
+
+[23:14:35] ▶ Prepare Dilutions  STARTING
+
+[23:14:43] ▶ Prepare Dilutions  STARTING
+           [23:15:02]   BLB to TEM-1 working: chunk 2 aspirate/dispense 120.0 uL hole_6 -> hole_8 (epipette_120ul, tip #6)
+
+[23:15:37] ▶ Prepare Dilutions  STARTING
+
+[23:15:45] ▶ Prepare Dilutions  STARTING
+           [23:16:04]   BLB to TEM-1 working: chunk 3 aspirate/dispense 120.0 uL hole_6 -> hole_8 (epipette_120ul, tip #7)
+
+[23:16:39] ▶ Prepare Dilutions  STARTING
+
+[23:16:47] ▶ Prepare Dilutions  STARTING
+           [23:17:05]   BLB to TEM-1 working: chunk 4 aspirate/dispense 120.0 uL hole_6 -> hole_8 (epipette_120ul, tip #8)
+
+[23:17:40] ▶ Prepare Dilutions  STARTING
+
+[23:17:48] ▶ Prepare Dilutions  STARTING
+           [23:18:07]   BLB to TEM-1 working: chunk 5 aspirate/dispense 120.0 uL hole_6 -> hole_8 (epipette_120ul, tip #9)
+
+[23:18:42] ▶ Prepare Dilutions  STARTING
+
+[23:18:50] ▶ Prepare Dilutions  STARTING
+           [23:19:08]   BLB to TEM-1 working: chunk 6 aspirate/dispense 120.0 uL hole_6 -> hole_8 (epipette_120ul, tip #10)
+
+[23:19:43] ▶ Prepare Dilutions  STARTING
+
+[23:19:52] ▶ Prepare Dilutions  STARTING
+           [23:20:10]   BLB to TEM-1 working: chunk 7 aspirate/dispense 120.0 uL hole_6 -> hole_8 (epipette_120ul, tip #11)
+
+[23:20:45] ▶ Prepare Dilutions  STARTING
+
+[23:20:53] ▶ Prepare Dilutions  STARTING
+           [23:21:12]   BLB to TEM-1 working: chunk 8 aspirate/dispense 60.0 uL hole_6 -> hole_8 (epipette_120ul, tip #12)
+
+[23:21:46] ▶ Prepare Dilutions  STARTING
+
+[23:21:53] ▶ Prepare Dilutions  STARTING
+
+[23:25:03] ▶ Prepare Dilutions  STARTING
+           [23:25:11] ▶ Preparing T1262 tazobactam 200 uM intermediate for 1 uM assay condition
+
+[23:25:11] ▶ Prepare Dilutions  STARTING
+           [23:25:30]   BLB to T1262 intermediate: chunk 1 aspirate/dispense 49.0 uL hole_5 -> hole_3 (epipette_120ul, tip #14)
+
+[23:26:05] ▶ Prepare Dilutions  STARTING
+           [23:26:13] ⇄ Swapping epipette_120ul → epipette_10ul
+
+[23:26:13] ▶ Prepare Dilutions  STARTING
+
+[23:26:44] ▶ Prepare Dilutions  STARTING
+
+[23:27:10] ▶ Prepare Dilutions  STARTING
+           [23:27:31]   T1262 stock to intermediate: 1.0 uL A2 -> hole_3 (epipette_10ul, tip #2)
+
+[23:28:01] ▶ Prepare Dilutions  STARTING
+           [23:28:10] ⇄ Swapping epipette_10ul → epipette_120ul
+
+[23:28:10] ▶ Prepare Dilutions  STARTING
+
+[23:28:40] ▶ Prepare Dilutions  STARTING
+
+[23:29:06] ▶ Prepare Dilutions  STARTING
+
+[23:32:16] ▶ Prepare Dilutions  STARTING
+           [23:32:25] ▶ Preparing 10 compound/control working solutions and one vehicle well
+
+[23:32:25] ▶ Prepare Dilutions  STARTING
+           [23:32:25] ▶ Batched dispense hole_5 (coldblock_wellplate) → wellplate_pcr_parts_4: 10 wells @ 47.5 uL using epipette_120ul (2 well(s) per aspiration)
+
+[23:32:25] ▶ Prepare Dilutions  STARTING
+           [23:32:44]   Batch 1: aspirate 95.0 uL from hole_5; dispense 47.5 uL to ['A1', 'A3'] (tip #16)
+
+[23:33:26] ▶ Prepare Dilutions  STARTING
+
+[23:33:34] ▶ Prepare Dilutions  STARTING
+           [23:33:53]   Batch 2: aspirate 95.0 uL from hole_5; dispense 47.5 uL to ['A4', 'A5'] (tip #17)
+
+[23:34:35] ▶ Prepare Dilutions  STARTING
+
+[23:34:44] ▶ Prepare Dilutions  STARTING
+           [23:35:02]   Batch 3: aspirate 95.0 uL from hole_5; dispense 47.5 uL to ['A6', 'A7'] (tip #18)
+
+[23:35:45] ▶ Prepare Dilutions  STARTING
+
+[23:35:54] ▶ Prepare Dilutions  STARTING
+           [23:36:12]   Batch 4: aspirate 95.0 uL from hole_5; dispense 47.5 uL to ['A8', 'A9'] (tip #19)
+
+[23:36:55] ▶ Prepare Dilutions  STARTING
+
+[23:37:04] ▶ Prepare Dilutions  STARTING
+           [23:37:23]   Batch 5: aspirate 95.0 uL from hole_5; dispense 47.5 uL to ['A10', 'A11'] (tip #20)
+
+[23:38:05] ▶ Prepare Dilutions  STARTING
+           [23:38:14] ✓ Batched dispense from hole_5 complete: 10 wells, 5 aspirate batch(es), 10 dispense(s), 5 tip(s)
+
+[23:38:14] ▶ Prepare Dilutions  STARTING
+           [23:38:15] ▶ Batched dispense hole_6 (coldblock_wellplate) → wellplate_pcr_parts_4: 1 wells @ 95.0 uL using epipette_120ul (1 well(s) per aspiration)
+
+[23:38:15] ▶ Prepare Dilutions  STARTING
+           [23:38:34]   Batch 1: aspirate 95.0 uL from hole_6; dispense 95.0 uL to ['A2'] (tip #21)
+
+[23:39:03] ▶ Prepare Dilutions  STARTING
+           [23:39:11] ✓ Batched dispense from hole_6 complete: 1 wells, 1 aspirate batch(es), 1 dispense(s), 1 tip(s)
+           [23:39:12] ⇄ Swapping epipette_120ul → epipette_10ul
+
+[23:39:12] ▶ Prepare Dilutions  STARTING
+
+[23:39:42] ▶ Prepare Dilutions  STARTING
+
+[23:40:08] ▶ Prepare Dilutions  STARTING
+           [23:40:28]   Positive control: 2.5 uL H7 -> A1 (epipette_10ul, tip #3)
+
+[23:40:54] ▶ Prepare Dilutions  STARTING
+
+[23:41:02] ▶ Prepare Dilutions  STARTING
+           [23:41:22]   Compound 1 T1262 intermediate: 2.5 uL hole_3 -> A3 (epipette_10ul, tip #4)
+
+[23:41:52] ▶ Prepare Dilutions  STARTING
+
+[23:42:01] ▶ Prepare Dilutions  STARTING
+           [23:42:21]   Compound 2: 2.5 uL A3 -> A4 (epipette_10ul, tip #5)
+
+[23:42:47] ▶ Prepare Dilutions  STARTING
+
+[23:42:55] ▶ Prepare Dilutions  STARTING
+           [23:43:15]   Compound 3: 2.5 uL A4 -> A5 (epipette_10ul, tip #6)
+
+[23:43:41] ▶ Prepare Dilutions  STARTING
+
+[23:43:49] ▶ Prepare Dilutions  STARTING
+           [23:44:10]   Compound 4: 2.5 uL A5 -> A6 (epipette_10ul, tip #7)
+
+[23:44:35] ▶ Prepare Dilutions  STARTING
+
+[23:44:43] ▶ Prepare Dilutions  STARTING
+           [23:45:04]   Compound 5: 2.5 uL A6 -> A7 (epipette_10ul, tip #8)
+
+[23:45:30] ▶ Prepare Dilutions  STARTING
+
+[23:45:38] ▶ Prepare Dilutions  STARTING
+           [23:45:59]   Compound 6: 2.5 uL A7 -> A8 (epipette_10ul, tip #9)
+
+[23:46:24] ▶ Prepare Dilutions  STARTING
+
+[23:46:33] ▶ Prepare Dilutions  STARTING
+           [23:46:53]   Compound 7: 2.5 uL A8 -> A9 (epipette_10ul, tip #10)
+
+[23:47:19] ▶ Prepare Dilutions  STARTING
+
+[23:47:28] ▶ Prepare Dilutions  STARTING
+           [23:47:48]   Compound 8: 2.5 uL A9 -> A10 (epipette_10ul, tip #11)
+
+[23:48:14] ▶ Prepare Dilutions  STARTING
+
+[23:48:23] ▶ Prepare Dilutions  STARTING
+           [23:48:43]   Compound 9: 2.5 uL A10 -> A11 (epipette_10ul, tip #12)
+
+[23:49:10] ▶ Prepare Dilutions  STARTING
+
+[23:49:18] ▶ Prepare Dilutions  STARTING
+           [23:49:38]   Vehicle DMSO: 5.0 uL hole_9 -> A2 (epipette_10ul, tip #13)
+
+[23:50:08] ▶ Prepare Dilutions  STARTING
+
+[23:50:16] ▶ Prepare Dilutions  STARTING
+
+[23:52:52] ▶ Prepare Dilutions  STARTING
+
+[23:53:00] ▶ Prepare Dilutions  STARTING
+
+[23:55:36] ▶ Prepare Dilutions  STARTING
+
+[23:55:45] ▶ Prepare Dilutions  STARTING
+
+[23:58:22] ▶ Prepare Dilutions  STARTING
+
+[23:58:30] ▶ Prepare Dilutions  STARTING
+
+[00:01:08] ▶ Prepare Dilutions  STARTING
+
+[00:01:16] ▶ Prepare Dilutions  STARTING
+
+[00:03:55] ▶ Prepare Dilutions  STARTING
+
+[00:04:04] ▶ Prepare Dilutions  STARTING
+
+[00:06:43] ▶ Prepare Dilutions  STARTING
+
+[00:06:52] ▶ Prepare Dilutions  STARTING
+
+[00:09:32] ▶ Prepare Dilutions  STARTING
+
+[00:09:41] ▶ Prepare Dilutions  STARTING
+
+[00:12:22] ▶ Prepare Dilutions  STARTING
+
+[00:12:31] ▶ Prepare Dilutions  STARTING
+
+[00:15:13] ▶ Prepare Dilutions  STARTING
+
+[00:15:22] ▶ Prepare Dilutions  STARTING
+
+[00:18:06] ▶ Prepare Dilutions  STARTING
+
+[00:18:14] ▶ Prepare Dilutions  STARTING
+
+[00:20:51] ▶ Prepare Dilutions  STARTING
+           [00:20:59] ✓ Dilution plate complete: TEM-1 working solution is 0.1 ng/uL; T1262 well is 10 uM; other compound/control wells are 500 uM; vehicle well is 5% DMSO
+
+[00:20:59] ▶ Dispense TEM-1 Prep  STARTING
+           [00:21:00] ▶ Batched dispense hole_8 (coldblock_wellplate) → wellplate_96_flatbottom: 33 wells @ 20.0 uL using epipette_120ul (6 well(s) per aspiration)
+           [00:21:00] ⇄ Swapping epipette_10ul → epipette_120ul
+
+[00:21:00] ▶ Dispense TEM-1 Prep  STARTING
+
+[00:21:51] ▶ Dispense TEM-1 Prep  STARTING
+
+[00:22:16] ▶ Dispense TEM-1 Prep  STARTING
+           [00:22:35]   Batch 1: aspirate 120.0 uL from hole_8; dispense 20.0 uL to ['F3', 'F7', 'G11', 'B3', 'B7', 'C11'] (tip #22)
+
+[00:24:14] ▶ Dispense TEM-1 Prep  STARTING
+
+[00:24:21] ▶ Dispense TEM-1 Prep  STARTING
+           [00:24:40]   Batch 2: aspirate 120.0 uL from hole_8; dispense 20.0 uL to ['B2', 'D2', 'F2', 'B4', 'D4', 'F4'] (tip #23)
+
+[00:26:20] ▶ Dispense TEM-1 Prep  STARTING
+
+[00:26:28] ▶ Dispense TEM-1 Prep  STARTING
+           [00:26:47]   Batch 3: aspirate 120.0 uL from hole_8; dispense 20.0 uL to ['B6', 'D6', 'F6', 'B8', 'D8', 'F8'] (tip #24)
+
+[00:28:25] ▶ Dispense TEM-1 Prep  STARTING
+
+[00:28:33] ▶ Dispense TEM-1 Prep  STARTING
+           [00:28:51]   Batch 4: aspirate 120.0 uL from hole_8; dispense 20.0 uL to ['B10', 'D10', 'F10', 'C5', 'E5', 'G5'] (tip #25)
+
+[00:30:38] ▶ Dispense TEM-1 Prep  STARTING
+
+[00:30:46] ▶ Dispense TEM-1 Prep  STARTING
+           [00:31:05]   Batch 5: aspirate 120.0 uL from hole_8; dispense 20.0 uL to ['C9', 'E9', 'G9', 'C3', 'E3', 'G3'] (tip #26)
+
+[00:32:44] ▶ Dispense TEM-1 Prep  STARTING
+
+[00:32:52] ▶ Dispense TEM-1 Prep  STARTING
+           [00:33:10]   Batch 6: aspirate 60.0 uL from hole_8; dispense 20.0 uL to ['C7', 'E7', 'G7'] (tip #27)
+
+[00:34:07] ▶ Dispense TEM-1 Prep  STARTING
+           [00:34:14] ✓ Batched dispense from hole_8 complete: 33 wells, 6 aspirate batch(es), 33 dispense(s), 6 tip(s)
+
+[00:34:15] ▶ Dispense No-Enzyme Prep  STARTING
+           [00:34:15] ▶ Batched dispense hole_6 (coldblock_wellplate) → wellplate_96_flatbottom: 3 wells @ 20.0 uL using epipette_120ul (6 well(s) per aspiration)
+
+[00:34:16] ▶ Dispense No-Enzyme Prep  STARTING
+           [00:34:34]   Batch 1: aspirate 60.0 uL from hole_6; dispense 20.0 uL to ['D3', 'D7', 'E11'] (tip #28)
+
+[00:35:31] ▶ Dispense No-Enzyme Prep  STARTING
+           [00:35:39] ✓ Batched dispense from hole_6 complete: 3 wells, 1 aspirate batch(es), 3 dispense(s), 1 tip(s)
+
+[00:35:39] ▶ Dispense Vehicle  STARTING
+           [00:35:39] ▶ Batched dispense A2 (wellplate_pcr_parts_4) → wellplate_96_flatbottom: 6 wells @ 5.0 uL using epipette_10ul (2 well(s) per aspiration)
+           [00:35:40] ⇄ Swapping epipette_120ul → epipette_10ul
+
+[00:35:40] ▶ Dispense Vehicle  STARTING
+
+[00:36:10] ▶ Dispense Vehicle  STARTING
+
+[00:36:36] ▶ Dispense Vehicle  STARTING
+           [00:36:56]   Batch 1: aspirate 10.0 uL from A2; dispense 5.0 uL to ['D3', 'D7'] (tip #25)
+
+[00:37:40] ▶ Dispense Vehicle  STARTING
+
+[00:37:47] ▶ Dispense Vehicle  STARTING
+           [00:38:08]   Batch 2: aspirate 10.0 uL from A2; dispense 5.0 uL to ['E11', 'B3'] (tip #26)
+
+[00:38:51] ▶ Dispense Vehicle  STARTING
+
+[00:38:59] ▶ Dispense Vehicle  STARTING
+           [00:39:19]   Batch 3: aspirate 10.0 uL from A2; dispense 5.0 uL to ['B7', 'C11'] (tip #27)
+
+[00:40:02] ▶ Dispense Vehicle  STARTING
+           [00:40:09] ✓ Batched dispense from A2 complete: 6 wells, 3 aspirate batch(es), 6 dispense(s), 3 tip(s)
+
+[00:40:10] ▶ Dispense Positive Control  STARTING
+           [00:40:10] ▶ Batched dispense A1 (wellplate_pcr_parts_4) → wellplate_96_flatbottom: 3 wells @ 5.0 uL using epipette_10ul (2 well(s) per aspiration)
+
+[00:40:11] ▶ Dispense Positive Control  STARTING
+           [00:40:31]   Batch 1: aspirate 10.0 uL from A1; dispense 5.0 uL to ['F3', 'F7'] (tip #28)
+
+[00:41:14] ▶ Dispense Positive Control  STARTING
+
+[00:41:22] ▶ Dispense Positive Control  STARTING
+           [00:41:42]   Batch 2: aspirate 5.0 uL from A1; dispense 5.0 uL to ['G11'] (tip #29)
+
+[00:42:10] ▶ Dispense Positive Control  STARTING
+           [00:42:17] ✓ Batched dispense from A1 complete: 3 wells, 2 aspirate batch(es), 3 dispense(s), 2 tip(s)
+
+[00:42:18] ▶ Dispense Test Compound 1  STARTING
+           [00:42:18] ▶ Batched dispense A3 (wellplate_pcr_parts_4) → wellplate_96_flatbottom: 3 wells @ 5.0 uL using epipette_10ul (2 well(s) per aspiration)
+
+[00:42:18] ▶ Dispense Test Compound 1  STARTING
+           [00:42:39]   Batch 1: aspirate 10.0 uL from A3; dispense 5.0 uL to ['B2', 'D2'] (tip #30)
+
+[00:44:49] ▶ Dispense Test Compound 1  STARTING
+
+[00:45:19] ▶ Dispense Test Compound 1  STARTING
+           [00:45:40]   Batch 2: aspirate 5.0 uL from A3; dispense 5.0 uL to ['F2'] (tip #31)
+
+[00:46:08] ▶ Dispense Test Compound 1  STARTING
+           [00:46:16] ✓ Batched dispense from A3 complete: 3 wells, 2 aspirate batch(es), 3 dispense(s), 2 tip(s)
+
+[00:46:16] ▶ Dispense Test Compound 2  STARTING
+           [00:46:16] ▶ Batched dispense A4 (wellplate_pcr_parts_4) → wellplate_96_flatbottom: 3 wells @ 5.0 uL using epipette_10ul (2 well(s) per aspiration)
+
+[00:46:17] ▶ Dispense Test Compound 2  STARTING
+           [00:46:37]   Batch 1: aspirate 10.0 uL from A4; dispense 5.0 uL to ['B4', 'D4'] (tip #32)
+
+[00:48:03] ▶ Dispense Test Compound 2  STARTING
+
+[00:48:11] ▶ Dispense Test Compound 2  STARTING
+           [00:48:31]   Batch 2: aspirate 5.0 uL from A4; dispense 5.0 uL to ['F4'] (tip #33)
+
+[00:49:00] ▶ Dispense Test Compound 2  STARTING
+           [00:49:08] ✓ Batched dispense from A4 complete: 3 wells, 2 aspirate batch(es), 3 dispense(s), 2 tip(s)
+
+[00:49:08] ▶ Dispense Test Compound 3  STARTING
+           [00:49:08] ▶ Batched dispense A5 (wellplate_pcr_parts_4) → wellplate_96_flatbottom: 3 wells @ 5.0 uL using epipette_10ul (2 well(s) per aspiration)
+
+[00:49:09] ▶ Dispense Test Compound 3  STARTING
+           [00:49:29]   Batch 1: aspirate 10.0 uL from A5; dispense 5.0 uL to ['B6', 'D6'] (tip #34)
+
+[00:50:13] ▶ Dispense Test Compound 3  STARTING
+
+[00:50:21] ▶ Dispense Test Compound 3  STARTING
+           [00:50:41]   Batch 2: aspirate 5.0 uL from A5; dispense 5.0 uL to ['F6'] (tip #35)
+
+[00:51:10] ▶ Dispense Test Compound 3  STARTING
+           [00:51:17] ✓ Batched dispense from A5 complete: 3 wells, 2 aspirate batch(es), 3 dispense(s), 2 tip(s)
+
+[00:51:17] ▶ Dispense Test Compound 4  STARTING
+           [00:51:17] ▶ Batched dispense A6 (wellplate_pcr_parts_4) → wellplate_96_flatbottom: 3 wells @ 5.0 uL using epipette_10ul (2 well(s) per aspiration)
+
+[00:51:18] ▶ Dispense Test Compound 4  STARTING
+           [00:51:39]   Batch 1: aspirate 10.0 uL from A6; dispense 5.0 uL to ['B8', 'D8'] (tip #36)
+
+[00:52:22] ▶ Dispense Test Compound 4  STARTING
+
+[00:52:30] ▶ Dispense Test Compound 4  STARTING
+           [00:52:50]   Batch 2: aspirate 5.0 uL from A6; dispense 5.0 uL to ['F8'] (tip #37)
+
+[00:53:18] ▶ Dispense Test Compound 4  STARTING
+           [00:53:25] ✓ Batched dispense from A6 complete: 3 wells, 2 aspirate batch(es), 3 dispense(s), 2 tip(s)
+
+[00:53:26] ▶ Dispense Test Compound 5  STARTING
+           [00:53:26] ▶ Batched dispense A7 (wellplate_pcr_parts_4) → wellplate_96_flatbottom: 3 wells @ 5.0 uL using epipette_10ul (2 well(s) per aspiration)
+
+[00:53:27] ▶ Dispense Test Compound 5  STARTING
+           [00:53:47]   Batch 1: aspirate 10.0 uL from A7; dispense 5.0 uL to ['B10', 'D10'] (tip #38)
+
+[00:54:30] ▶ Dispense Test Compound 5  STARTING
+
+[00:54:38] ▶ Dispense Test Compound 5  STARTING
+           [00:54:58]   Batch 2: aspirate 5.0 uL from A7; dispense 5.0 uL to ['F10'] (tip #39)
+
+[00:55:27] ▶ Dispense Test Compound 5  STARTING
+           [00:55:34] ✓ Batched dispense from A7 complete: 3 wells, 2 aspirate batch(es), 3 dispense(s), 2 tip(s)
+
+[00:55:34] ▶ Dispense Test Compound 6  STARTING
+           [00:55:34] ▶ Batched dispense A8 (wellplate_pcr_parts_4) → wellplate_96_flatbottom: 3 wells @ 5.0 uL using epipette_10ul (2 well(s) per aspiration)
+
+[00:55:35] ▶ Dispense Test Compound 6  STARTING
+           [00:55:55]   Batch 1: aspirate 10.0 uL from A8; dispense 5.0 uL to ['C5', 'E5'] (tip #40)
+
+[00:56:39] ▶ Dispense Test Compound 6  STARTING
+
+[00:56:47] ▶ Dispense Test Compound 6  STARTING
+           [00:57:07]   Batch 2: aspirate 5.0 uL from A8; dispense 5.0 uL to ['G5'] (tip #41)
+
+[00:57:36] ▶ Dispense Test Compound 6  STARTING
+           [00:57:43] ✓ Batched dispense from A8 complete: 3 wells, 2 aspirate batch(es), 3 dispense(s), 2 tip(s)
+
+[00:57:43] ▶ Dispense Test Compound 7  STARTING
+           [00:57:44] ▶ Batched dispense A9 (wellplate_pcr_parts_4) → wellplate_96_flatbottom: 3 wells @ 5.0 uL using epipette_10ul (2 well(s) per aspiration)
+
+[00:57:44] ▶ Dispense Test Compound 7  STARTING
+           [00:58:05]   Batch 1: aspirate 10.0 uL from A9; dispense 5.0 uL to ['C9', 'E9'] (tip #42)
+
+[00:58:48] ▶ Dispense Test Compound 7  STARTING
+
+[00:58:56] ▶ Dispense Test Compound 7  STARTING
+           [00:59:16]   Batch 2: aspirate 5.0 uL from A9; dispense 5.0 uL to ['G9'] (tip #43)
+
+[00:59:45] ▶ Dispense Test Compound 7  STARTING
+           [00:59:52] ✓ Batched dispense from A9 complete: 3 wells, 2 aspirate batch(es), 3 dispense(s), 2 tip(s)
+
+[00:59:52] ▶ Dispense Test Compound 8  STARTING
+           [00:59:53] ▶ Batched dispense A10 (wellplate_pcr_parts_4) → wellplate_96_flatbottom: 3 wells @ 5.0 uL using epipette_10ul (2 well(s) per aspiration)
+
+[00:59:53] ▶ Dispense Test Compound 8  STARTING
+           [01:00:14]   Batch 1: aspirate 10.0 uL from A10; dispense 5.0 uL to ['C3', 'E3'] (tip #44)
+
+[01:00:58] ▶ Dispense Test Compound 8  STARTING
+
+[01:01:06] ▶ Dispense Test Compound 8  STARTING
+           [01:01:26]   Batch 2: aspirate 5.0 uL from A10; dispense 5.0 uL to ['G3'] (tip #45)
+
+[01:01:55] ▶ Dispense Test Compound 8  STARTING
+           [01:02:03] ✓ Batched dispense from A10 complete: 3 wells, 2 aspirate batch(es), 3 dispense(s), 2 tip(s)
+
+[01:02:03] ▶ Dispense Test Compound 9  STARTING
+           [01:02:03] ▶ Batched dispense A11 (wellplate_pcr_parts_4) → wellplate_96_flatbottom: 3 wells @ 5.0 uL using epipette_10ul (2 well(s) per aspiration)
+
+[01:02:04] ▶ Dispense Test Compound 9  STARTING
+           [01:02:24]   Batch 1: aspirate 10.0 uL from A11; dispense 5.0 uL to ['C7', 'E7'] (tip #46)
+
+[01:03:08] ▶ Dispense Test Compound 9  STARTING
+
+[01:03:16] ▶ Dispense Test Compound 9  STARTING
+           [01:03:36]   Batch 2: aspirate 5.0 uL from A11; dispense 5.0 uL to ['G7'] (tip #47)
+
+[01:04:05] ▶ Dispense Test Compound 9  STARTING
+           [01:04:12] ✓ Batched dispense from A11 complete: 3 wells, 2 aspirate batch(es), 3 dispense(s), 2 tip(s)
+
+[01:04:13] ▶ Place Pipette for Plate Mix  STARTING
+           [01:04:13] ▶ Returning epipette_10ul to its stand
+
+[01:04:13] ▶ Place Pipette for Plate Mix  STARTING
+
+[01:06:41] ▶ Grab Plate for Mixing  STARTING
+
+[01:07:05] ▶ Open Shaker for Mixing  STARTING
+
+[01:08:17] ▶ Load Plate into Shaker  STARTING
+
+[01:08:52] ▶ Close Shaker for Mixing  STARTING
+
+[01:10:17] ▶ Wait for Plate Mix  STARTING
+           [01:10:17] Whole-plate compound mixing: waiting 1 minute(s)
+           [01:11:17] Whole-plate compound mixing: wait complete
+
+[01:11:20] ▶ Open Shaker After Mix  STARTING
+
+[01:12:30] ▶ Unload Mixed Plate  STARTING
+
+[01:13:02] ▶ Close Shaker After Mix  STARTING
+
+[01:15:51] ▶ Return Mixed Plate  STARTING
+
+[01:16:10] ▶ Pick Pipette After Mix  STARTING
+
+[01:17:45] ▶ Pre-Incubate  STARTING
+           [01:17:45] TEM-1 compound pre-incubation: waiting 2 minute(s)
+           [01:19:45] TEM-1 compound pre-incubation: wait complete
+
+[01:19:45] ▶ Prepare Nitrocefin  STARTING
+           [01:19:46] ▶ Preparing nitrocefin working solution in hole_10: 6.25 uL 20 mM stock + 1243.75 uL BLB = 1250.0 uL at 100 uM
+           [01:19:46] ⇄ Swapping epipette_10ul → epipette_120ul
+
+[01:19:46] ▶ Prepare Nitrocefin  STARTING
+
+[01:20:16] ▶ Prepare Nitrocefin  STARTING
+
+[01:20:41] ▶ Prepare Nitrocefin  STARTING
+           [01:21:00]   BLB to nitrocefin: chunk 1 120.0 uL hole_7 -> hole_10 (epipette_120ul, tip #29)
+
+[01:22:03] ▶ Prepare Nitrocefin  STARTING
+
+[01:22:11] ▶ Prepare Nitrocefin  STARTING
+           [01:22:29]   BLB to nitrocefin: chunk 2 120.0 uL hole_7 -> hole_10 (epipette_120ul, tip #30)
+
+[01:23:04] ▶ Prepare Nitrocefin  STARTING
+
+[01:23:12] ▶ Prepare Nitrocefin  STARTING
+           [01:23:31]   BLB to nitrocefin: chunk 3 120.0 uL hole_7 -> hole_10 (epipette_120ul, tip #31)
+
+[01:24:05] ▶ Prepare Nitrocefin  STARTING
+
+[01:24:13] ▶ Prepare Nitrocefin  STARTING
+           [01:24:32]   BLB to nitrocefin: chunk 4 120.0 uL hole_7 -> hole_10 (epipette_120ul, tip #32)
+
+[01:25:07] ▶ Prepare Nitrocefin  STARTING
+
+[01:25:14] ▶ Prepare Nitrocefin  STARTING
+           [01:25:33]   BLB to nitrocefin: chunk 5 120.0 uL hole_7 -> hole_10 (epipette_120ul, tip #33)
+
+[01:26:08] ▶ Prepare Nitrocefin  STARTING
+
+[01:26:16] ▶ Prepare Nitrocefin  STARTING
+           [01:26:35]   BLB to nitrocefin: chunk 6 120.0 uL hole_7 -> hole_10 (epipette_120ul, tip #34)
+
+[01:27:09] ▶ Prepare Nitrocefin  STARTING
+
+[01:27:17] ▶ Prepare Nitrocefin  STARTING
+           [01:27:35]   BLB to nitrocefin: chunk 7 120.0 uL hole_7 -> hole_10 (epipette_120ul, tip #35)
+
+[01:28:11] ▶ Prepare Nitrocefin  STARTING
+
+[01:28:18] ▶ Prepare Nitrocefin  STARTING
+           [01:28:37]   BLB to nitrocefin: chunk 8 120.0 uL hole_7 -> hole_10 (epipette_120ul, tip #36)
+
+[01:29:12] ▶ Prepare Nitrocefin  STARTING
+
+[01:29:20] ▶ Prepare Nitrocefin  STARTING
+           [01:29:39]   BLB to nitrocefin: chunk 9 120.0 uL hole_7 -> hole_10 (epipette_120ul, tip #37)
+
+[01:30:28] ▶ Prepare Nitrocefin  STARTING
+
+[01:30:36] ▶ Prepare Nitrocefin  STARTING
+           [01:30:54]   BLB to nitrocefin: chunk 10 120.0 uL hole_7 -> hole_10 (epipette_120ul, tip #38)
+
+[01:31:29] ▶ Prepare Nitrocefin  STARTING
+
+[01:31:37] ▶ Prepare Nitrocefin  STARTING
+           [01:31:56]   BLB to nitrocefin: chunk 11 43.75 uL hole_7 -> hole_10 (epipette_120ul, tip #39)
+
+[01:32:29] ▶ Prepare Nitrocefin  STARTING
+           [01:32:36] ⇄ Swapping epipette_120ul → epipette_10ul
+
+[01:32:36] ▶ Prepare Nitrocefin  STARTING
+
+[01:33:07] ▶ Prepare Nitrocefin  STARTING
+
+[01:33:33] ▶ Prepare Nitrocefin  STARTING
+           [01:33:54]   Nitrocefin stock: chunk 1 6.25 uL hole_4 -> hole_10 (epipette_10ul, tip #48)
+
+[01:34:30] ▶ Prepare Nitrocefin  STARTING
+           [01:34:37] ⇄ Swapping epipette_10ul → epipette_120ul
+
+[01:34:37] ▶ Prepare Nitrocefin  STARTING
+
+[01:35:07] ▶ Prepare Nitrocefin  STARTING
+
+[01:35:33] ▶ Prepare Nitrocefin  STARTING
+
+[01:38:41] ▶ Prepare Nitrocefin  STARTING
+           [01:38:49] ✓ Nitrocefin working solution ready; proceed immediately to assay wells
+
+[01:38:49] ▶ Nitrocefin: No-Enzyme Control  STARTING
+           [01:38:49] ▶ Batched dispense hole_10 (coldblock_wellplate) → wellplate_96_flatbottom: 3 wells @ 25.0 uL using epipette_120ul (4 well(s) per aspiration)
+
+[01:38:50] ▶ Nitrocefin: No-Enzyme Control  STARTING
+           [01:39:08]   Batch 1: aspirate 75.0 uL from hole_10; dispense 25.0 uL to ['D3', 'D7', 'E11'] (tip #41)
+
+[01:40:05] ▶ Nitrocefin: No-Enzyme Control  STARTING
+           [01:40:13] ✓ Batched dispense from hole_10 complete: 3 wells, 1 aspirate batch(es), 3 dispense(s), 1 tip(s)
+
+[01:40:13] ▶ Nitrocefin: Positive Control  STARTING
+           [01:40:13] ▶ Batched dispense hole_10 (coldblock_wellplate) → wellplate_96_flatbottom: 3 wells @ 25.0 uL using epipette_120ul (4 well(s) per aspiration)
+
+[01:40:14] ▶ Nitrocefin: Positive Control  STARTING
+           [01:40:33]   Batch 1: aspirate 75.0 uL from hole_10; dispense 25.0 uL to ['F3', 'F7', 'G11'] (tip #42)
+
+[01:41:30] ▶ Nitrocefin: Positive Control  STARTING
+           [01:41:37] ✓ Batched dispense from hole_10 complete: 3 wells, 1 aspirate batch(es), 3 dispense(s), 1 tip(s)
+
+[01:41:37] ▶ Nitrocefin: Compound 1  STARTING
+           [01:41:38] ▶ Batched dispense hole_10 (coldblock_wellplate) → wellplate_96_flatbottom: 3 wells @ 25.0 uL using epipette_120ul (4 well(s) per aspiration)
+
+[01:41:38] ▶ Nitrocefin: Compound 1  STARTING
+           [01:41:56]   Batch 1: aspirate 75.0 uL from hole_10; dispense 25.0 uL to ['B2', 'D2', 'F2'] (tip #43)
+
+[01:42:54] ▶ Nitrocefin: Compound 1  STARTING
+           [01:43:02] ✓ Batched dispense from hole_10 complete: 3 wells, 1 aspirate batch(es), 3 dispense(s), 1 tip(s)
+
+[01:43:02] ▶ Nitrocefin: Compound 2  STARTING
+           [01:43:03] ▶ Batched dispense hole_10 (coldblock_wellplate) → wellplate_96_flatbottom: 3 wells @ 25.0 uL using epipette_120ul (4 well(s) per aspiration)
+
+[01:43:03] ▶ Nitrocefin: Compound 2  STARTING
+           [01:43:22]   Batch 1: aspirate 75.0 uL from hole_10; dispense 25.0 uL to ['B4', 'D4', 'F4'] (tip #44)
+
+[01:44:19] ▶ Nitrocefin: Compound 2  STARTING
+           [01:44:27] ✓ Batched dispense from hole_10 complete: 3 wells, 1 aspirate batch(es), 3 dispense(s), 1 tip(s)
+
+[01:44:27] ▶ Nitrocefin: Compound 3  STARTING
+           [01:44:28] ▶ Batched dispense hole_10 (coldblock_wellplate) → wellplate_96_flatbottom: 3 wells @ 25.0 uL using epipette_120ul (4 well(s) per aspiration)
+
+[01:44:28] ▶ Nitrocefin: Compound 3  STARTING
+           [01:44:47]   Batch 1: aspirate 75.0 uL from hole_10; dispense 25.0 uL to ['B6', 'D6', 'F6'] (tip #45)
+
+[01:45:44] ▶ Nitrocefin: Compound 3  STARTING
+           [01:45:52] ✓ Batched dispense from hole_10 complete: 3 wells, 1 aspirate batch(es), 3 dispense(s), 1 tip(s)
+
+[01:45:52] ▶ Nitrocefin: Compound 4  STARTING
+           [01:45:53] ▶ Batched dispense hole_10 (coldblock_wellplate) → wellplate_96_flatbottom: 3 wells @ 25.0 uL using epipette_120ul (4 well(s) per aspiration)
+
+[01:45:53] ▶ Nitrocefin: Compound 4  STARTING
+           [01:46:11]   Batch 1: aspirate 75.0 uL from hole_10; dispense 25.0 uL to ['B8', 'D8', 'F8'] (tip #46)
+
+[01:47:08] ▶ Nitrocefin: Compound 4  STARTING
+           [01:47:15] ✓ Batched dispense from hole_10 complete: 3 wells, 1 aspirate batch(es), 3 dispense(s), 1 tip(s)
+
+[01:47:16] ▶ Nitrocefin: Compound 5  STARTING
+           [01:47:16] ▶ Batched dispense hole_10 (coldblock_wellplate) → wellplate_96_flatbottom: 3 wells @ 25.0 uL using epipette_120ul (4 well(s) per aspiration)
+
+[01:47:17] ▶ Nitrocefin: Compound 5  STARTING
+           [01:47:35]   Batch 1: aspirate 75.0 uL from hole_10; dispense 25.0 uL to ['B10', 'D10', 'F10'] (tip #47)
+
+[01:48:31] ▶ Nitrocefin: Compound 5  STARTING
+           [01:48:39] ✓ Batched dispense from hole_10 complete: 3 wells, 1 aspirate batch(es), 3 dispense(s), 1 tip(s)
+
+[01:48:39] ▶ Nitrocefin: Compound 6  STARTING
+           [01:48:40] ▶ Batched dispense hole_10 (coldblock_wellplate) → wellplate_96_flatbottom: 3 wells @ 25.0 uL using epipette_120ul (4 well(s) per aspiration)
+
+[01:48:40] ▶ Nitrocefin: Compound 6  STARTING
+           [01:48:59]   Batch 1: aspirate 75.0 uL from hole_10; dispense 25.0 uL to ['C5', 'E5', 'G5'] (tip #48)
+
+[01:49:56] ▶ Nitrocefin: Compound 6  STARTING
+           [01:50:04] ✓ Batched dispense from hole_10 complete: 3 wells, 1 aspirate batch(es), 3 dispense(s), 1 tip(s)
+
+[01:50:04] ▶ Nitrocefin: Compound 7  STARTING
+           [01:50:05] ▶ Batched dispense hole_10 (coldblock_wellplate) → wellplate_96_flatbottom: 3 wells @ 25.0 uL using epipette_120ul (4 well(s) per aspiration)
+
+[01:50:05] ▶ Nitrocefin: Compound 7  STARTING
+           [01:50:23]   Batch 1: aspirate 75.0 uL from hole_10; dispense 25.0 uL to ['C9', 'E9', 'G9'] (tip #49)
+
+[01:51:20] ▶ Nitrocefin: Compound 7  STARTING
+           [01:51:28] ✓ Batched dispense from hole_10 complete: 3 wells, 1 aspirate batch(es), 3 dispense(s), 1 tip(s)
+
+[01:51:28] ▶ Nitrocefin: Compound 8  STARTING
+           [01:51:29] ▶ Batched dispense hole_10 (coldblock_wellplate) → wellplate_96_flatbottom: 3 wells @ 25.0 uL using epipette_120ul (4 well(s) per aspiration)
+
+[01:51:29] ▶ Nitrocefin: Compound 8  STARTING
+           [01:51:48]   Batch 1: aspirate 75.0 uL from hole_10; dispense 25.0 uL to ['C3', 'E3', 'G3'] (tip #50)
+
+[01:52:45] ▶ Nitrocefin: Compound 8  STARTING
+           [01:52:53] ✓ Batched dispense from hole_10 complete: 3 wells, 1 aspirate batch(es), 3 dispense(s), 1 tip(s)
+
+[01:52:53] ▶ Nitrocefin: Compound 9  STARTING
+           [01:52:54] ▶ Batched dispense hole_10 (coldblock_wellplate) → wellplate_96_flatbottom: 3 wells @ 25.0 uL using epipette_120ul (4 well(s) per aspiration)
+
+[01:52:54] ▶ Nitrocefin: Compound 9  STARTING
+           [01:53:13]   Batch 1: aspirate 75.0 uL from hole_10; dispense 25.0 uL to ['C7', 'E7', 'G7'] (tip #51)
+
+[01:54:10] ▶ Nitrocefin: Compound 9  STARTING
+           [01:54:17] ✓ Batched dispense from hole_10 complete: 3 wells, 1 aspirate batch(es), 3 dispense(s), 1 tip(s)
+
+[01:54:17] ▶ Nitrocefin: Vehicle Control  STARTING
+           [01:54:18] ▶ Batched dispense hole_10 (coldblock_wellplate) → wellplate_96_flatbottom: 3 wells @ 25.0 uL using epipette_120ul (4 well(s) per aspiration)
+
+[01:54:19] ▶ Nitrocefin: Vehicle Control  STARTING
+           [01:54:47]   Batch 1: aspirate 75.0 uL from hole_10; dispense 25.0 uL to ['B3', 'B7', 'C11'] (tip #52)
+
+[01:55:44] ▶ Nitrocefin: Vehicle Control  STARTING
+           [01:55:52] ✓ Batched dispense from hole_10 complete: 3 wells, 1 aspirate batch(es), 3 dispense(s), 1 tip(s)
+
+[01:55:52] ▶ Place Pipette Back  STARTING
+           [01:55:53] ▶ Returning epipette_120ul to its stand
+
+[01:55:53] ▶ Place Pipette Back  STARTING

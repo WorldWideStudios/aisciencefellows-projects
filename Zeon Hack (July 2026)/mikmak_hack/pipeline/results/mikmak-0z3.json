@@ -1,0 +1,77 @@
+{
+  "round_id": "mikmak-0z3",
+  "execution_id": "exec_tem1_kinetics_characterization_hack_world_22_20260725_213328",
+  "points": [
+    {
+      "well": "A1",
+      "e_level": 1,
+      "s_level": 1,
+      "initial_rate": -0.0012000000000000142
+    },
+    {
+      "well": "A2",
+      "e_level": 1,
+      "s_level": 2,
+      "initial_rate": 0.00019999999999997702
+    },
+    {
+      "well": "A3",
+      "e_level": 1,
+      "s_level": 3,
+      "initial_rate": 0.0003999999999999837
+    },
+    {
+      "well": "A4",
+      "e_level": 2,
+      "s_level": 1,
+      "initial_rate": 0.0013999999999999913
+    },
+    {
+      "well": "A5",
+      "e_level": 2,
+      "s_level": 2,
+      "initial_rate": 0.000999999999999978
+    },
+    {
+      "well": "A6",
+      "e_level": 2,
+      "s_level": 3,
+      "initial_rate": 0.0003999999999999837
+    },
+    {
+      "well": "A7",
+      "e_level": 3,
+      "s_level": 1,
+      "initial_rate": -0.0002000000000000104
+    },
+    {
+      "well": "A8",
+      "e_level": 3,
+      "s_level": 2,
+      "initial_rate": -0.0020000000000000187
+    },
+    {
+      "well": "A9",
+      "e_level": 3,
+      "s_level": 3,
+      "initial_rate": -0.000400000000000006
+    }
+  ],
+  "fits": {
+    "enzyme_level_1": {
+      "vmax": 128.43680410151717,
+      "km": 4495295.802347127
+    },
+    "enzyme_level_2": {
+      "vmax": 0.0005110981166601392,
+      "km": -0.639428602944117
+    },
+    "enzyme_level_3": {
+      "vmax": -0.0013942614886453789,
+      "km": 1.03369955249738
+    }
+  },
+  "recommended_nitrocefin_level": 3,
+  "recommended_endpoint_minutes": 120,
+  "best_fit": "enzyme_level_1"
+}

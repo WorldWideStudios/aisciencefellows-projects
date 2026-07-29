@@ -1,0 +1,1283 @@
+{
+  "meta": {
+    "source": "OpenShelf GET /api/storage/grid -> cell.calibration_point",
+    "device_id": "59908e24",
+    "device_ip": "http://192.168.1.16:8000",
+    "frame": "openshelf_gantry",
+    "units": "millimeters",
+    "world_converted": false,
+    "refreshed": "2026-07-15 (right module reactivated by OpenShelf)",
+    "axes": "x = horizontal along shelf; y = VERTICAL/up; z_offset = depth into cell",
+    "s": "0 = left_module, 1 = right_module",
+    "status_counts": {
+      "available": 79
+    },
+    "cell_count": 79
+  },
+  "cells": [
+    {
+      "key": "left_module/0/0",
+      "side": "left_module",
+      "shelf_idx": 0,
+      "cell_idx": 0,
+      "x": 357.0,
+      "y": 42.0,
+      "s": 0,
+      "z_offset": 8.0,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 155.0,
+        "height": 275.0
+      }
+    },
+    {
+      "key": "left_module/0/1",
+      "side": "left_module",
+      "shelf_idx": 0,
+      "cell_idx": 1,
+      "x": 522.5,
+      "y": 44.0,
+      "s": 0,
+      "z_offset": 8.079000473022461,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 155.0,
+        "height": 275.0
+      }
+    },
+    {
+      "key": "left_module/0/2",
+      "side": "left_module",
+      "shelf_idx": 0,
+      "cell_idx": 2,
+      "x": 687.0,
+      "y": 43.25,
+      "s": 0,
+      "z_offset": 8.080500602722168,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 155.0,
+        "height": 275.0
+      }
+    },
+    {
+      "key": "left_module/0/3",
+      "side": "left_module",
+      "shelf_idx": 0,
+      "cell_idx": 3,
+      "x": 852.0,
+      "y": 45.25,
+      "s": 0,
+      "z_offset": 8.062000274658203,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 155.0,
+        "height": 275.0
+      }
+    },
+    {
+      "key": "left_module/1/0",
+      "side": "left_module",
+      "shelf_idx": 1,
+      "cell_idx": 0,
+      "x": 342.5,
+      "y": 544.25,
+      "s": 0,
+      "z_offset": 8.067500114440918,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 125.0,
+        "height": 175.0
+      }
+    },
+    {
+      "key": "left_module/1/1",
+      "side": "left_module",
+      "shelf_idx": 1,
+      "cell_idx": 1,
+      "x": 477.0,
+      "y": 544.25,
+      "s": 0,
+      "z_offset": 8.09250020980835,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 125.0,
+        "height": 175.0
+      }
+    },
+    {
+      "key": "left_module/2/0",
+      "side": "left_module",
+      "shelf_idx": 2,
+      "cell_idx": 0,
+      "x": 326.0,
+      "y": 742.25,
+      "s": 0,
+      "z_offset": 8.094500541687012,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "left_module/2/1",
+      "side": "left_module",
+      "shelf_idx": 2,
+      "cell_idx": 1,
+      "x": 432.5,
+      "y": 741.25,
+      "s": 0,
+      "z_offset": 8.133000373840332,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "left_module/2/2",
+      "side": "left_module",
+      "shelf_idx": 2,
+      "cell_idx": 2,
+      "x": 537.0,
+      "y": 742.25,
+      "s": 0,
+      "z_offset": 8.095499992370605,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "left_module/2/3",
+      "side": "left_module",
+      "shelf_idx": 2,
+      "cell_idx": 3,
+      "x": 641.0,
+      "y": 742.25,
+      "s": 0,
+      "z_offset": 8.125500679016113,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "left_module/2/4",
+      "side": "left_module",
+      "shelf_idx": 2,
+      "cell_idx": 4,
+      "x": 745.5,
+      "y": 742.25,
+      "s": 0,
+      "z_offset": 8.160000324249268,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "left_module/2/5",
+      "side": "left_module",
+      "shelf_idx": 2,
+      "cell_idx": 5,
+      "x": 850.5,
+      "y": 742.25,
+      "s": 0,
+      "z_offset": 8.125500202178955,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "left_module/3/1",
+      "side": "left_module",
+      "shelf_idx": 3,
+      "cell_idx": 1,
+      "x": 432.0,
+      "y": 888.75,
+      "s": 0,
+      "z_offset": 8.168000221252441,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "left_module/3/2",
+      "side": "left_module",
+      "shelf_idx": 3,
+      "cell_idx": 2,
+      "x": 537.5,
+      "y": 889.75,
+      "s": 0,
+      "z_offset": 8.169500350952148,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "left_module/3/3",
+      "side": "left_module",
+      "shelf_idx": 3,
+      "cell_idx": 3,
+      "x": 641.5,
+      "y": 890.25,
+      "s": 0,
+      "z_offset": 8.181000709533691,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "left_module/3/4",
+      "side": "left_module",
+      "shelf_idx": 3,
+      "cell_idx": 4,
+      "x": 746.5,
+      "y": 891.25,
+      "s": 0,
+      "z_offset": 8.203500270843506,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "left_module/3/5",
+      "side": "left_module",
+      "shelf_idx": 3,
+      "cell_idx": 5,
+      "x": 851.5,
+      "y": 891.75,
+      "s": 0,
+      "z_offset": 8.173500061035156,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "left_module/4/0",
+      "side": "left_module",
+      "shelf_idx": 4,
+      "cell_idx": 0,
+      "x": 326.5,
+      "y": 1142.25,
+      "s": 0,
+      "z_offset": 8.259999999999991,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "left_module/4/1",
+      "side": "left_module",
+      "shelf_idx": 4,
+      "cell_idx": 1,
+      "x": 431.5,
+      "y": 1142.25,
+      "s": 0,
+      "z_offset": 8.255500316619873,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "left_module/4/2",
+      "side": "left_module",
+      "shelf_idx": 4,
+      "cell_idx": 2,
+      "x": 537.0,
+      "y": 1141.25,
+      "s": 0,
+      "z_offset": 8.304000854492188,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "left_module/4/3",
+      "side": "left_module",
+      "shelf_idx": 4,
+      "cell_idx": 3,
+      "x": 641.0,
+      "y": 1142.25,
+      "s": 0,
+      "z_offset": 8.264500617980957,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "left_module/4/4",
+      "side": "left_module",
+      "shelf_idx": 4,
+      "cell_idx": 4,
+      "x": 746.5,
+      "y": 1142.25,
+      "s": 0,
+      "z_offset": 8.25100040435791,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "left_module/4/5",
+      "side": "left_module",
+      "shelf_idx": 4,
+      "cell_idx": 5,
+      "x": 851.0,
+      "y": 1144.25,
+      "s": 0,
+      "z_offset": 8.255500316619873,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "right_module/0/0",
+      "side": "right_module",
+      "shelf_idx": 0,
+      "cell_idx": 0,
+      "x": 35.5,
+      "y": 64.25,
+      "s": 1,
+      "z_offset": 10.118499786376958,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 155.0,
+        "height": 275.0
+      }
+    },
+    {
+      "key": "right_module/0/1",
+      "side": "right_module",
+      "shelf_idx": 0,
+      "cell_idx": 1,
+      "x": 200.0,
+      "y": 63.25,
+      "s": 1,
+      "z_offset": 10.338500053405767,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 155.0,
+        "height": 275.0
+      }
+    },
+    {
+      "key": "right_module/0/2",
+      "side": "right_module",
+      "shelf_idx": 0,
+      "cell_idx": 2,
+      "x": 364.0,
+      "y": 62.25,
+      "s": 1,
+      "z_offset": 10.331500083923345,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 155.0,
+        "height": 275.0
+      }
+    },
+    {
+      "key": "right_module/0/3",
+      "side": "right_module",
+      "shelf_idx": 0,
+      "cell_idx": 3,
+      "x": 528.5,
+      "y": 61.25,
+      "s": 1,
+      "z_offset": 10.494500190734868,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 155.0,
+        "height": 275.0
+      }
+    },
+    {
+      "key": "right_module/0/4",
+      "side": "right_module",
+      "shelf_idx": 0,
+      "cell_idx": 4,
+      "x": 693.5,
+      "y": 62.25,
+      "s": 1,
+      "z_offset": 10.48600009155274,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 155.0,
+        "height": 275.0
+      }
+    },
+    {
+      "key": "right_module/0/5",
+      "side": "right_module",
+      "shelf_idx": 0,
+      "cell_idx": 5,
+      "x": 858.5,
+      "y": 63.25,
+      "s": 1,
+      "z_offset": 10.513999969482427,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 155.0,
+        "height": 275.0
+      }
+    },
+    {
+      "key": "right_module/1/0",
+      "side": "right_module",
+      "shelf_idx": 1,
+      "cell_idx": 0,
+      "x": 20.0,
+      "y": 363.25,
+      "s": 1,
+      "z_offset": 10.295000106811528,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 125.0,
+        "height": 175.0
+      }
+    },
+    {
+      "key": "right_module/1/1",
+      "side": "right_module",
+      "shelf_idx": 1,
+      "cell_idx": 1,
+      "x": 155.0,
+      "y": 363.25,
+      "s": 1,
+      "z_offset": 10.329500228881841,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 125.0,
+        "height": 175.0
+      }
+    },
+    {
+      "key": "right_module/1/2",
+      "side": "right_module",
+      "shelf_idx": 1,
+      "cell_idx": 2,
+      "x": 290.5,
+      "y": 362.25,
+      "s": 1,
+      "z_offset": 10.427500755310064,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 125.0,
+        "height": 175.0
+      }
+    },
+    {
+      "key": "right_module/1/3",
+      "side": "right_module",
+      "shelf_idx": 1,
+      "cell_idx": 3,
+      "x": 425.0,
+      "y": 361.25,
+      "s": 1,
+      "z_offset": 10.449000389099126,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 125.0,
+        "height": 175.0
+      }
+    },
+    {
+      "key": "right_module/1/4",
+      "side": "right_module",
+      "shelf_idx": 1,
+      "cell_idx": 4,
+      "x": 560.0,
+      "y": 361.25,
+      "s": 1,
+      "z_offset": 10.491499931335454,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 125.0,
+        "height": 175.0
+      }
+    },
+    {
+      "key": "right_module/1/5",
+      "side": "right_module",
+      "shelf_idx": 1,
+      "cell_idx": 5,
+      "x": 695.0,
+      "y": 361.25,
+      "s": 1,
+      "z_offset": 10.48700049591065,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 125.0,
+        "height": 175.0
+      }
+    },
+    {
+      "key": "right_module/1/6",
+      "side": "right_module",
+      "shelf_idx": 1,
+      "cell_idx": 6,
+      "x": 829.0,
+      "y": 362.25,
+      "s": 1,
+      "z_offset": 10.538000137329107,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 125.0,
+        "height": 175.0
+      }
+    },
+    {
+      "key": "right_module/2/0",
+      "side": "right_module",
+      "shelf_idx": 2,
+      "cell_idx": 0,
+      "x": 21.0,
+      "y": 565.25,
+      "s": 1,
+      "z_offset": 10.39099982452393,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 125.0,
+        "height": 175.0
+      }
+    },
+    {
+      "key": "right_module/2/1",
+      "side": "right_module",
+      "shelf_idx": 2,
+      "cell_idx": 1,
+      "x": 155.5,
+      "y": 564.25,
+      "s": 1,
+      "z_offset": 10.348500282287603,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 125.0,
+        "height": 175.0
+      }
+    },
+    {
+      "key": "right_module/2/2",
+      "side": "right_module",
+      "shelf_idx": 2,
+      "cell_idx": 2,
+      "x": 290.0,
+      "y": 563.25,
+      "s": 1,
+      "z_offset": 10.459500343322759,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 125.0,
+        "height": 175.0
+      }
+    },
+    {
+      "key": "right_module/2/3",
+      "side": "right_module",
+      "shelf_idx": 2,
+      "cell_idx": 3,
+      "x": 424.5,
+      "y": 563.25,
+      "s": 1,
+      "z_offset": 10.435000450134282,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 125.0,
+        "height": 175.0
+      }
+    },
+    {
+      "key": "right_module/2/4",
+      "side": "right_module",
+      "shelf_idx": 2,
+      "cell_idx": 4,
+      "x": 560.5,
+      "y": 563.25,
+      "s": 1,
+      "z_offset": 10.502499610900884,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 125.0,
+        "height": 175.0
+      }
+    },
+    {
+      "key": "right_module/2/5",
+      "side": "right_module",
+      "shelf_idx": 2,
+      "cell_idx": 5,
+      "x": 695.0,
+      "y": 563.25,
+      "s": 1,
+      "z_offset": 10.496500045776372,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 125.0,
+        "height": 175.0
+      }
+    },
+    {
+      "key": "right_module/2/6",
+      "side": "right_module",
+      "shelf_idx": 2,
+      "cell_idx": 6,
+      "x": 829.5,
+      "y": 563.25,
+      "s": 1,
+      "z_offset": 10.504000694274907,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 125.0,
+        "height": 175.0
+      }
+    },
+    {
+      "key": "right_module/3/0",
+      "side": "right_module",
+      "shelf_idx": 3,
+      "cell_idx": 0,
+      "x": 5.0,
+      "y": 763.25,
+      "s": 1,
+      "z_offset": 10.309999973297124,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "right_module/3/1",
+      "side": "right_module",
+      "shelf_idx": 3,
+      "cell_idx": 1,
+      "x": 111.0,
+      "y": 763.25,
+      "s": 1,
+      "z_offset": 10.309000045776372,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "right_module/3/2",
+      "side": "right_module",
+      "shelf_idx": 3,
+      "cell_idx": 2,
+      "x": 216.0,
+      "y": 762.25,
+      "s": 1,
+      "z_offset": 10.321000129699712,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "right_module/3/3",
+      "side": "right_module",
+      "shelf_idx": 3,
+      "cell_idx": 3,
+      "x": 321.0,
+      "y": 763.25,
+      "s": 1,
+      "z_offset": 10.407000572204595,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "right_module/3/4",
+      "side": "right_module",
+      "shelf_idx": 3,
+      "cell_idx": 4,
+      "x": 425.0,
+      "y": 763.25,
+      "s": 1,
+      "z_offset": 10.405499488830571,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "right_module/3/5",
+      "side": "right_module",
+      "shelf_idx": 3,
+      "cell_idx": 5,
+      "x": 530.0,
+      "y": 763.25,
+      "s": 1,
+      "z_offset": 10.39949992370606,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "right_module/3/6",
+      "side": "right_module",
+      "shelf_idx": 3,
+      "cell_idx": 6,
+      "x": 635.0,
+      "y": 763.25,
+      "s": 1,
+      "z_offset": 10.487999946594243,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "right_module/3/7",
+      "side": "right_module",
+      "shelf_idx": 3,
+      "cell_idx": 7,
+      "x": 740.0,
+      "y": 763.25,
+      "s": 1,
+      "z_offset": 10.508500129699712,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "right_module/3/8",
+      "side": "right_module",
+      "shelf_idx": 3,
+      "cell_idx": 8,
+      "x": 845.0,
+      "y": 763.25,
+      "s": 1,
+      "z_offset": 10.539000541687017,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "right_module/4/0",
+      "side": "right_module",
+      "shelf_idx": 4,
+      "cell_idx": 0,
+      "x": 5.5,
+      "y": 913.25,
+      "s": 1,
+      "z_offset": 10.319000274658208,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "right_module/4/1",
+      "side": "right_module",
+      "shelf_idx": 4,
+      "cell_idx": 1,
+      "x": 110.5,
+      "y": 912.25,
+      "s": 1,
+      "z_offset": 10.327000171661382,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "right_module/4/2",
+      "side": "right_module",
+      "shelf_idx": 4,
+      "cell_idx": 2,
+      "x": 215.0,
+      "y": 911.25,
+      "s": 1,
+      "z_offset": 10.366499931335454,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "right_module/4/3",
+      "side": "right_module",
+      "shelf_idx": 4,
+      "cell_idx": 3,
+      "x": 321.0,
+      "y": 911.25,
+      "s": 1,
+      "z_offset": 10.438500434875493,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "right_module/4/4",
+      "side": "right_module",
+      "shelf_idx": 4,
+      "cell_idx": 4,
+      "x": 425.0,
+      "y": 911.25,
+      "s": 1,
+      "z_offset": 10.428500205993657,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "right_module/4/5",
+      "side": "right_module",
+      "shelf_idx": 4,
+      "cell_idx": 5,
+      "x": 530.5,
+      "y": 911.25,
+      "s": 1,
+      "z_offset": 10.444500000000005,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "right_module/4/6",
+      "side": "right_module",
+      "shelf_idx": 4,
+      "cell_idx": 6,
+      "x": 635.5,
+      "y": 911.25,
+      "s": 1,
+      "z_offset": 10.470000297546392,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "right_module/4/7",
+      "side": "right_module",
+      "shelf_idx": 4,
+      "cell_idx": 7,
+      "x": 740.5,
+      "y": 911.25,
+      "s": 1,
+      "z_offset": 10.505000144958501,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "right_module/4/8",
+      "side": "right_module",
+      "shelf_idx": 4,
+      "cell_idx": 8,
+      "x": 844.0,
+      "y": 911.25,
+      "s": 1,
+      "z_offset": 10.52449992370606,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "right_module/5/0",
+      "side": "right_module",
+      "shelf_idx": 5,
+      "cell_idx": 0,
+      "x": 5.5,
+      "y": 1062.25,
+      "s": 1,
+      "z_offset": 13.0,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 75.0
+      }
+    },
+    {
+      "key": "right_module/5/1",
+      "side": "right_module",
+      "shelf_idx": 5,
+      "cell_idx": 1,
+      "x": 109.5,
+      "y": 1061.25,
+      "s": 1,
+      "z_offset": 10.221000225067144,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 75.0
+      }
+    },
+    {
+      "key": "right_module/5/2",
+      "side": "right_module",
+      "shelf_idx": 5,
+      "cell_idx": 2,
+      "x": 216.0,
+      "y": 1061.25,
+      "s": 1,
+      "z_offset": 10.307499916076665,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 75.0
+      }
+    },
+    {
+      "key": "right_module/5/3",
+      "side": "right_module",
+      "shelf_idx": 5,
+      "cell_idx": 3,
+      "x": 320.5,
+      "y": 1060.25,
+      "s": 1,
+      "z_offset": 10.28049996566773,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 75.0
+      }
+    },
+    {
+      "key": "right_module/5/4",
+      "side": "right_module",
+      "shelf_idx": 5,
+      "cell_idx": 4,
+      "x": 424.5,
+      "y": 1061.25,
+      "s": 1,
+      "z_offset": 10.296999961853032,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 75.0
+      }
+    },
+    {
+      "key": "right_module/5/5",
+      "side": "right_module",
+      "shelf_idx": 5,
+      "cell_idx": 5,
+      "x": 530.5,
+      "y": 1061.25,
+      "s": 1,
+      "z_offset": 10.346500427246099,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 75.0
+      }
+    },
+    {
+      "key": "right_module/5/6",
+      "side": "right_module",
+      "shelf_idx": 5,
+      "cell_idx": 6,
+      "x": 635.0,
+      "y": 1061.25,
+      "s": 1,
+      "z_offset": 10.354499847412114,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 75.0
+      }
+    },
+    {
+      "key": "right_module/5/7",
+      "side": "right_module",
+      "shelf_idx": 5,
+      "cell_idx": 7,
+      "x": 740.0,
+      "y": 1061.25,
+      "s": 1,
+      "z_offset": 10.413000137329107,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 75.0
+      }
+    },
+    {
+      "key": "right_module/5/8",
+      "side": "right_module",
+      "shelf_idx": 5,
+      "cell_idx": 8,
+      "x": 845.5,
+      "y": 1064.25,
+      "s": 1,
+      "z_offset": 13.0,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 75.0
+      }
+    },
+    {
+      "key": "right_module/6/0",
+      "side": "right_module",
+      "shelf_idx": 6,
+      "cell_idx": 0,
+      "x": 6.0,
+      "y": 1162.25,
+      "s": 1,
+      "z_offset": 13.0,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "right_module/6/1",
+      "side": "right_module",
+      "shelf_idx": 6,
+      "cell_idx": 1,
+      "x": 110.5,
+      "y": 1161.25,
+      "s": 1,
+      "z_offset": 13.0,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "right_module/6/2",
+      "side": "right_module",
+      "shelf_idx": 6,
+      "cell_idx": 2,
+      "x": 215.5,
+      "y": 1161.25,
+      "s": 1,
+      "z_offset": 13.0,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "right_module/6/3",
+      "side": "right_module",
+      "shelf_idx": 6,
+      "cell_idx": 3,
+      "x": 320.5,
+      "y": 1159.25,
+      "s": 1,
+      "z_offset": 13.0,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "right_module/6/4",
+      "side": "right_module",
+      "shelf_idx": 6,
+      "cell_idx": 4,
+      "x": 425.5,
+      "y": 1159.25,
+      "s": 1,
+      "z_offset": 13.0,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "right_module/6/5",
+      "side": "right_module",
+      "shelf_idx": 6,
+      "cell_idx": 5,
+      "x": 530.5,
+      "y": 1159.25,
+      "s": 1,
+      "z_offset": 13.0,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "right_module/6/6",
+      "side": "right_module",
+      "shelf_idx": 6,
+      "cell_idx": 6,
+      "x": 635.0,
+      "y": 1161.25,
+      "s": 1,
+      "z_offset": 13.0,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "right_module/6/7",
+      "side": "right_module",
+      "shelf_idx": 6,
+      "cell_idx": 7,
+      "x": 739.5,
+      "y": 1162.75,
+      "s": 1,
+      "z_offset": 13.0,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    },
+    {
+      "key": "right_module/6/8",
+      "side": "right_module",
+      "shelf_idx": 6,
+      "cell_idx": 8,
+      "x": 844.5,
+      "y": 1160.25,
+      "s": 1,
+      "z_offset": 13.0,
+      "status": "available",
+      "dimensions": {
+        "length": 155.0,
+        "width": 95.0,
+        "height": 125.0
+      }
+    }
+  ]
+}

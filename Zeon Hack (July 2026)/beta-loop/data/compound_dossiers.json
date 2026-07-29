@@ -1,0 +1,4396 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-07-25T21:19:11Z",
+  "storage_policy": "data/STORAGE.md",
+  "index_file": "data/compounds.csv",
+  "compound_count": 105,
+  "compounds": {
+    "T0138": {
+      "compound_id": "T0138",
+      "name": "Cefpiramide acid",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "a2",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T0138.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T0138/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T0138/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T0198": {
+      "compound_id": "T0198",
+      "name": "Ceftiofur sodium",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "a3",
+        "storage": "git"
+      },
+      "selection": {
+        "on_plate": [
+          {
+            "run": 1,
+            "version": 1,
+            "well": "D8",
+            "bucket": "substrate_control",
+            "functional_class": "negative",
+            "concentration_uM": 50
+          }
+        ],
+        "storage": "git"
+      },
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T0198.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T0198/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T0198/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T0199": {
+      "compound_id": "T0199",
+      "name": "Cephradine",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "a4",
+        "storage": "git"
+      },
+      "selection": {
+        "on_plate": [
+          {
+            "run": 1,
+            "version": 1,
+            "well": "D7",
+            "bucket": "substrate_control",
+            "functional_class": "negative",
+            "concentration_uM": 50
+          }
+        ],
+        "storage": "git"
+      },
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T0199.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T0199/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T0199/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T0234": {
+      "compound_id": "T0234",
+      "name": "Methicillin sodium salt",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "a5",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T0234.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T0234/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T0234/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T0366": {
+      "compound_id": "T0366",
+      "name": "Cefadroxil",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "a6",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T0366.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T0366/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T0366/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T1001": {
+      "compound_id": "T1001",
+      "name": "Dicloxacillin Sodium hydrate",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "a7",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T1001.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T1001/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T1001/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T1005": {
+      "compound_id": "T1005",
+      "name": "Amoxicillin",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "a8",
+        "storage": "git"
+      },
+      "selection": {
+        "on_plate": [
+          {
+            "run": 1,
+            "version": 1,
+            "well": "D1",
+            "bucket": "substrate_control",
+            "functional_class": "negative",
+            "concentration_uM": 50
+          }
+        ],
+        "storage": "git"
+      },
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T1005.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T1005/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T1005/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T1008": {
+      "compound_id": "T1008",
+      "name": "Cephalexin",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "a9",
+        "storage": "git"
+      },
+      "selection": {
+        "on_plate": [
+          {
+            "run": 1,
+            "version": 1,
+            "well": "D2",
+            "bucket": "substrate_control",
+            "functional_class": "negative",
+            "concentration_uM": 50
+          }
+        ],
+        "storage": "git"
+      },
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T1008.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T1008/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T1008/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T1031": {
+      "compound_id": "T1031",
+      "name": "Cloxacillin sodium monohydrate",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "a10",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T1031.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T1031/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T1031/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T1063": {
+      "compound_id": "T1063",
+      "name": "Ticarcillin disodium",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "a11",
+        "storage": "git"
+      },
+      "selection": {
+        "on_plate": [
+          {
+            "run": 1,
+            "version": 1,
+            "well": "D6",
+            "bucket": "substrate_control",
+            "functional_class": "negative",
+            "concentration_uM": 50
+          }
+        ],
+        "storage": "git"
+      },
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T1063.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T1063/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T1063/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T1122": {
+      "compound_id": "T1122",
+      "name": "Cephalothin sodium",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "b2",
+        "storage": "git"
+      },
+      "selection": {
+        "on_plate": [
+          {
+            "run": 1,
+            "version": 1,
+            "well": "D5",
+            "bucket": "substrate_control",
+            "functional_class": "negative",
+            "concentration_uM": 50
+          }
+        ],
+        "storage": "git"
+      },
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T1122.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T1122/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T1122/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T1305": {
+      "compound_id": "T1305",
+      "name": "Ceftazidime",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "b3",
+        "storage": "git"
+      },
+      "selection": {
+        "on_plate": [
+          {
+            "run": 1,
+            "version": 1,
+            "well": "D3",
+            "bucket": "substrate_control",
+            "functional_class": "negative",
+            "concentration_uM": 50
+          }
+        ],
+        "storage": "git"
+      },
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T1305.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T1305/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T1305/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T0814L": {
+      "compound_id": "T0814L",
+      "name": "Ampicillin",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "b4",
+        "storage": "git"
+      },
+      "selection": {
+        "on_plate": [
+          {
+            "run": 1,
+            "version": 1,
+            "well": "D4",
+            "bucket": "substrate_control",
+            "functional_class": "negative",
+            "concentration_uM": 50
+          }
+        ],
+        "storage": "git"
+      },
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T0814L.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T0814L/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T0814L/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T1005L": {
+      "compound_id": "T1005L",
+      "name": "Amoxicillin trihydrate",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "b5",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T1005L.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T1005L/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T1005L/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T1218": {
+      "compound_id": "T1218",
+      "name": "Cefoperazone sodium salt",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "b6",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T1218.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T1218/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T1218/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T1213": {
+      "compound_id": "T1213",
+      "name": "Piperacillin sodium",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "b7",
+        "storage": "git"
+      },
+      "selection": {
+        "on_plate": [
+          {
+            "run": 1,
+            "version": 1,
+            "well": "C4",
+            "bucket": "inhibitor_analog",
+            "functional_class": "unknown",
+            "concentration_uM": 50
+          }
+        ],
+        "storage": "git"
+      },
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T1213.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T1213/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T1213/"
+      },
+      "assay": {
+        "expected_at_50uM": "uncertain",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T1224": {
+      "compound_id": "T1224",
+      "name": "Cefuroxime sodium",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "b8",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T1224.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T1224/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T1224/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T1227": {
+      "compound_id": "T1227",
+      "name": "Cefuroxime axetil",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "b9",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T1227.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T1227/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T1227/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T1262": {
+      "compound_id": "T1262",
+      "name": "Tazobactam",
+      "classification": {
+        "scaffold_class": "inhibitor",
+        "functional_class": "positive",
+        "tier": 1,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "b10",
+        "storage": "git"
+      },
+      "selection": {
+        "on_plate": [
+          {
+            "run": 1,
+            "version": 1,
+            "well": "B2",
+            "bucket": "tier1_inhibitor",
+            "functional_class": "positive",
+            "concentration_uM": 50
+          }
+        ],
+        "storage": "git"
+      },
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T1262.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T1262/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T1262/"
+      },
+      "assay": {
+        "expected_at_50uM": ">=50% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T0911": {
+      "compound_id": "T0911",
+      "name": "Cefotaxime sodium",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "b11",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T0911.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T0911/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T0911/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T0814": {
+      "compound_id": "T0814",
+      "name": "Ampicillin Trihydrate",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "c2",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T0814.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T0814/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T0814/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T0827": {
+      "compound_id": "T0827",
+      "name": "Cefsulodin sodium",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "c3",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T0827.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T0827/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T0827/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T0868": {
+      "compound_id": "T0868",
+      "name": "Cefepime Dihydrochloride Monohydrate",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "c4",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T0868.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T0868/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T0868/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T0953": {
+      "compound_id": "T0953",
+      "name": "Cefazolin sodium",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "c5",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T0953.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T0953/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T0953/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T0932": {
+      "compound_id": "T0932",
+      "name": "Cefixime",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "c6",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T0932.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T0932/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T0932/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T1495": {
+      "compound_id": "T1495",
+      "name": "Cefaclor monohydrate",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "c7",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T1495.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T1495/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T1495/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T1037": {
+      "compound_id": "T1037",
+      "name": "Doripenem monohydrate",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "c8",
+        "storage": "git"
+      },
+      "selection": {
+        "on_plate": [
+          {
+            "run": 1,
+            "version": 1,
+            "well": "E4",
+            "bucket": "diverse_pick",
+            "functional_class": "unknown",
+            "concentration_uM": 50
+          }
+        ],
+        "storage": "git"
+      },
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T1037.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T1037/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T1037/"
+      },
+      "assay": {
+        "expected_at_50uM": "uncertain",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T1023": {
+      "compound_id": "T1023",
+      "name": "Cefoxitin sodium",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "c9",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T1023.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T1023/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T1023/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T3263": {
+      "compound_id": "T3263",
+      "name": "(6R,7S)-Cefminox sodium heptahydrate",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "c10",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T3263.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T3263/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T3263/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T0049": {
+      "compound_id": "T0049",
+      "name": "Azlocillin sodium salt",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "c11",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T0049.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T0049/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T0049/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T6386": {
+      "compound_id": "T6386",
+      "name": "Ampicillin sodium",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "d2",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T6386.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T6386/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T6386/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T6437": {
+      "compound_id": "T6437",
+      "name": "Cefoperazone",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "d3",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T6437.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T6437/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T6437/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T4553": {
+      "compound_id": "T4553",
+      "name": "Procaine penicillin G",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "d4",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T4553.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T4553/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T4553/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T4270": {
+      "compound_id": "T4270",
+      "name": "Cefquinome sulfate",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "d5",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T4270.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T4270/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T4270/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T7043": {
+      "compound_id": "T7043",
+      "name": "Cefotetan",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "d6",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T7043.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T7043/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T7043/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T5038": {
+      "compound_id": "T5038",
+      "name": "Cephapirin Sodium",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "d7",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T5038.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T5038/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T5038/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T5022": {
+      "compound_id": "T5022",
+      "name": "Ceforanide",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "d8",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T5022.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T5022/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T5022/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T4998": {
+      "compound_id": "T4998",
+      "name": "Cefpodoxime proxetil",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "d9",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T4998.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T4998/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T4998/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T5006": {
+      "compound_id": "T5006",
+      "name": "Flucloxacillin sodium",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "d10",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T5006.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T5006/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T5006/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T6438": {
+      "compound_id": "T6438",
+      "name": "Cefoselis Sulfate",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "d11",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T6438.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T6438/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T6438/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T7560": {
+      "compound_id": "T7560",
+      "name": "Pivmecillinam hydrochloride",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "e2",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T7560.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T7560/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T7560/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T7120": {
+      "compound_id": "T7120",
+      "name": "Cefetamet pivoxil hydrochloride",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "e3",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T7120.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T7120/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T7120/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T5570": {
+      "compound_id": "T5570",
+      "name": "Cephalothin",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "e4",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T5570.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T5570/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T5570/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T7733": {
+      "compound_id": "T7733",
+      "name": "Cefotaxime",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "e5",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T7733.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T7733/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T7733/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T8126": {
+      "compound_id": "T8126",
+      "name": "Cefodizime Sodium",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "e6",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T8126.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T8126/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T8126/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T8134": {
+      "compound_id": "T8134",
+      "name": "Cefathiamidine",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "e7",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T8134.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T8134/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T8134/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T6385": {
+      "compound_id": "T6385",
+      "name": "Amoxicillin Sodium",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "e8",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T6385.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T6385/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T6385/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T8062": {
+      "compound_id": "T8062",
+      "name": "Cefazedone",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "e9",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T8062.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T8062/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T8062/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T8063": {
+      "compound_id": "T8063",
+      "name": "Cephapirin Benzathine",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "e10",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T8063.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T8063/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T8063/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T5041": {
+      "compound_id": "T5041",
+      "name": "Faropenem sodium",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "e11",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T5041.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T5041/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T5041/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T6685": {
+      "compound_id": "T6685",
+      "name": "Sulbactam sodium",
+      "classification": {
+        "scaffold_class": "inhibitor",
+        "functional_class": "positive",
+        "tier": 1,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "f2",
+        "storage": "git"
+      },
+      "selection": {
+        "on_plate": [
+          {
+            "run": 1,
+            "version": 1,
+            "well": "B3",
+            "bucket": "tier1_inhibitor",
+            "functional_class": "positive",
+            "concentration_uM": 50
+          }
+        ],
+        "storage": "git"
+      },
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T6685.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T6685/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T6685/"
+      },
+      "assay": {
+        "expected_at_50uM": ">=50% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T8390": {
+      "compound_id": "T8390",
+      "name": "Cefazolin",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "f3",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T8390.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T8390/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T8390/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T4405": {
+      "compound_id": "T4405",
+      "name": "Ceftibuten dihydrate",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "f4",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T4405.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T4405/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T4405/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T8620": {
+      "compound_id": "T8620",
+      "name": "piperacillin",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "f5",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T8620.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T8620/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T8620/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T6582": {
+      "compound_id": "T6582",
+      "name": "Mezlocillin Sodium",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "f6",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T6582.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T6582/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T6582/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T14081": {
+      "compound_id": "T14081",
+      "name": "Enmetazobactam",
+      "classification": {
+        "scaffold_class": "inhibitor",
+        "functional_class": "positive",
+        "tier": 1,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "f7",
+        "storage": "git"
+      },
+      "selection": {
+        "on_plate": [
+          {
+            "run": 1,
+            "version": 1,
+            "well": "B4",
+            "bucket": "tier1_inhibitor",
+            "functional_class": "positive",
+            "concentration_uM": 50
+          }
+        ],
+        "storage": "git"
+      },
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T14081.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T14081/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T14081/"
+      },
+      "assay": {
+        "expected_at_50uM": ">=50% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T0141L": {
+      "compound_id": "T0141L",
+      "name": "Cefalonium Dihydrate(5575-21-3 free base)",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "f8",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T0141L.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T0141L/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T0141L/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T12004": {
+      "compound_id": "T12004",
+      "name": "Meropenem trihydrate",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "f9",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T12004.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T12004/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T12004/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T11265": {
+      "compound_id": "T11265",
+      "name": "Faropenem daloxate",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "f10",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T11265.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T11265/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T11265/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T7858": {
+      "compound_id": "T7858",
+      "name": "Ceftezole sodium",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "f11",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T7858.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T7858/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T7858/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "TQ0056": {
+      "compound_id": "TQ0056",
+      "name": "Cefuracetime",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "g2",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/TQ0056.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/TQ0056/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/TQ0056/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T19709": {
+      "compound_id": "T19709",
+      "name": "Nitrocefin",
+      "classification": {
+        "scaffold_class": "exclude",
+        "functional_class": "exclude",
+        "tier": null,
+        "exclude": true
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "g3",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T19709.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T19709/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T19709/"
+      },
+      "assay": {
+        "expected_at_50uM": "do not plate",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T8302": {
+      "compound_id": "T8302",
+      "name": "Ceftiofur",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "g4",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T8302.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T8302/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T8302/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T10392": {
+      "compound_id": "T10392",
+      "name": "Aspoxicillin",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "g5",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T10392.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T10392/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T10392/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T14979": {
+      "compound_id": "T14979",
+      "name": "Clavulanate lithium",
+      "classification": {
+        "scaffold_class": "inhibitor",
+        "functional_class": "positive",
+        "tier": 1,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "g6",
+        "storage": "git"
+      },
+      "selection": {
+        "on_plate": [
+          {
+            "run": 1,
+            "version": 1,
+            "well": "C1",
+            "bucket": "inhibitor_analog",
+            "functional_class": "positive",
+            "concentration_uM": 50
+          }
+        ],
+        "storage": "git"
+      },
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T14979.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T14979/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T14979/"
+      },
+      "assay": {
+        "expected_at_50uM": ">=50% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T17021": {
+      "compound_id": "T17021",
+      "name": "Tebipenem",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "g7",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T17021.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T17021/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T17021/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T6622": {
+      "compound_id": "T6622",
+      "name": "Oxacillin sodium monohydrate",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "g8",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T6622.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T6622/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T6622/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T4984": {
+      "compound_id": "T4984",
+      "name": "Cefozopran hydrochloride",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "g9",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T4984.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T4984/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T4984/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T8261": {
+      "compound_id": "T8261",
+      "name": "Ceftazidime Pentahydrate",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "g10",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T8261.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T8261/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T8261/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T0989": {
+      "compound_id": "T0989",
+      "name": "7-Aminocephalosporanic acid",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "g11",
+        "storage": "git"
+      },
+      "selection": {
+        "on_plate": [
+          {
+            "run": 1,
+            "version": 1,
+            "well": "E6",
+            "bucket": "diverse_pick",
+            "functional_class": "unknown",
+            "concentration_uM": 50
+          }
+        ],
+        "storage": "git"
+      },
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T0989.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T0989/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T0989/"
+      },
+      "assay": {
+        "expected_at_50uM": "uncertain",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T0141": {
+      "compound_id": "T0141",
+      "name": "Cephalonium",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "h2",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T0141.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T0141/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T0141/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T13926": {
+      "compound_id": "T13926",
+      "name": "Tigemonam",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "h3",
+        "storage": "git"
+      },
+      "selection": {
+        "on_plate": [
+          {
+            "run": 1,
+            "version": 1,
+            "well": "E5",
+            "bucket": "diverse_pick",
+            "functional_class": "unknown",
+            "concentration_uM": 50
+          }
+        ],
+        "storage": "git"
+      },
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T13926.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T13926/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T13926/"
+      },
+      "assay": {
+        "expected_at_50uM": "uncertain",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T14922": {
+      "compound_id": "T14922",
+      "name": "Cefodizime",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "h4",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T14922.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T14922/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T14922/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T67977": {
+      "compound_id": "T67977",
+      "name": "Cefazaflur",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "h5",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T67977.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T67977/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T67977/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T124492": {
+      "compound_id": "T124492",
+      "name": "Imipenem",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "h6",
+        "storage": "git"
+      },
+      "selection": {
+        "on_plate": [
+          {
+            "run": 1,
+            "version": 1,
+            "well": "E8",
+            "bucket": "diverse_pick",
+            "functional_class": "unknown",
+            "concentration_uM": 50
+          }
+        ],
+        "storage": "git"
+      },
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T124492.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T124492/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T124492/"
+      },
+      "assay": {
+        "expected_at_50uM": "uncertain",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T19860": {
+      "compound_id": "T19860",
+      "name": "Clavulanic Acid",
+      "classification": {
+        "scaffold_class": "inhibitor",
+        "functional_class": "positive",
+        "tier": 1,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "h7",
+        "storage": "git"
+      },
+      "selection": {
+        "on_plate": [
+          {
+            "run": 1,
+            "version": 1,
+            "well": "B1",
+            "bucket": "tier1_inhibitor",
+            "functional_class": "positive",
+            "concentration_uM": 50
+          }
+        ],
+        "storage": "git"
+      },
+      "literature": {
+        "match": "yes",
+        "support": "strong",
+        "ki_uM_prior_tem1": 0.85,
+        "ic50_uM_prior": null,
+        "recommended_screen_uM": 50,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T19860.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T19860/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T19860/"
+      },
+      "assay": {
+        "recommended_screen_uM": 50,
+        "literature_ki_uM_tem1": 0.85,
+        "expected_at_50uM": ">=50% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T20022": {
+      "compound_id": "T20022",
+      "name": "Cephalexin monohydrate",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "h8",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T20022.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T20022/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T20022/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T67978": {
+      "compound_id": "T67978",
+      "name": "Cefuzonam",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "h9",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T67978.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T67978/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T67978/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T30787": {
+      "compound_id": "T30787",
+      "name": "Cefetamet sodium",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "h10",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T30787.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T30787/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T30787/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T0868L": {
+      "compound_id": "T0868L",
+      "name": "Cefepime",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215176",
+        "well": "h11",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T0868L.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T0868L/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T0868L/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T75295": {
+      "compound_id": "T75295",
+      "name": "Ceftriaxone",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215177",
+        "well": "a2",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T75295.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T75295/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T75295/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T0224": {
+      "compound_id": "T0224",
+      "name": "Meropenem",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215177",
+        "well": "a3",
+        "storage": "git"
+      },
+      "selection": {
+        "on_plate": [
+          {
+            "run": 1,
+            "version": 1,
+            "well": "E1",
+            "bucket": "diverse_pick",
+            "functional_class": "unknown",
+            "concentration_uM": 50
+          }
+        ],
+        "storage": "git"
+      },
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T0224.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T0224/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T0224/"
+      },
+      "assay": {
+        "expected_at_50uM": "uncertain",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T0985": {
+      "compound_id": "T0985",
+      "name": "Oxacillin sodium salt",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215177",
+        "well": "a4",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T0985.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T0985/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T0985/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T1029": {
+      "compound_id": "T1029",
+      "name": "Aztreonam",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215177",
+        "well": "a5",
+        "storage": "git"
+      },
+      "selection": {
+        "on_plate": [
+          {
+            "run": 1,
+            "version": 1,
+            "well": "E2",
+            "bucket": "diverse_pick",
+            "functional_class": "unknown",
+            "concentration_uM": 50
+          }
+        ],
+        "storage": "git"
+      },
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T1029.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T1029/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T1029/"
+      },
+      "assay": {
+        "expected_at_50uM": "uncertain",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T1070": {
+      "compound_id": "T1070",
+      "name": "Cefmetazole sodium",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215177",
+        "well": "a6",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T1070.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T1070/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T1070/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T1118": {
+      "compound_id": "T1118",
+      "name": "Cefprozil monohydrate",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215177",
+        "well": "a7",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T1118.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T1118/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T1118/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T1312": {
+      "compound_id": "T1312",
+      "name": "Nafcillin sodium monohydrate",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215177",
+        "well": "a8",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T1312.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T1312/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T1312/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T1190": {
+      "compound_id": "T1190",
+      "name": "Cefmenoxime hydrochloride",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215177",
+        "well": "a9",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T1190.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T1190/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T1190/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T1631": {
+      "compound_id": "T1631",
+      "name": "Sulbactam",
+      "classification": {
+        "scaffold_class": "inhibitor",
+        "functional_class": "positive",
+        "tier": 1,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215177",
+        "well": "a10",
+        "storage": "git"
+      },
+      "selection": {
+        "on_plate": [
+          {
+            "run": 1,
+            "version": 1,
+            "well": "C2",
+            "bucket": "inhibitor_analog",
+            "functional_class": "positive",
+            "concentration_uM": 50
+          }
+        ],
+        "storage": "git"
+      },
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T1631.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T1631/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T1631/"
+      },
+      "assay": {
+        "expected_at_50uM": ">=50% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T6231": {
+      "compound_id": "T6231",
+      "name": "Tebipenem Pivoxil",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215177",
+        "well": "a11",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T6231.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T6231/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T6231/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T4501": {
+      "compound_id": "T4501",
+      "name": "Ceftizoxime",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215177",
+        "well": "b2",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T4501.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T4501/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T4501/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T5024": {
+      "compound_id": "T5024",
+      "name": "Cefotiam Hexetil Hydrochloride",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215177",
+        "well": "b3",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T5024.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T5024/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T5024/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T7387": {
+      "compound_id": "T7387",
+      "name": "Ceftaroline fosamil",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215177",
+        "well": "b4",
+        "storage": "git"
+      },
+      "selection": {
+        "on_plate": [
+          {
+            "run": 1,
+            "version": 1,
+            "well": "E3",
+            "bucket": "diverse_pick",
+            "functional_class": "unknown",
+            "concentration_uM": 50
+          }
+        ],
+        "storage": "git"
+      },
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T7387.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T7387/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T7387/"
+      },
+      "assay": {
+        "expected_at_50uM": "uncertain",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T22314": {
+      "compound_id": "T22314",
+      "name": "Doripenem",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215177",
+        "well": "b5",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T22314.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T22314/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T22314/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T21369": {
+      "compound_id": "T21369",
+      "name": "Mecillinam",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215177",
+        "well": "b6",
+        "storage": "git"
+      },
+      "selection": {
+        "on_plate": [
+          {
+            "run": 1,
+            "version": 1,
+            "well": "E7",
+            "bucket": "diverse_pick",
+            "functional_class": "unknown",
+            "concentration_uM": 50
+          }
+        ],
+        "storage": "git"
+      },
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T21369.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T21369/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T21369/"
+      },
+      "assay": {
+        "expected_at_50uM": "uncertain",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T40475": {
+      "compound_id": "T40475",
+      "name": "Ceftobiprole medocaril",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215177",
+        "well": "b7",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T40475.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T40475/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T40475/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T20643": {
+      "compound_id": "T20643",
+      "name": "Cefoxitin",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215177",
+        "well": "b8",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T20643.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T20643/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T20643/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T1118L": {
+      "compound_id": "T1118L",
+      "name": "Cefprozil",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215177",
+        "well": "b9",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T1118L.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T1118L/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T1118L/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T13038": {
+      "compound_id": "T13038",
+      "name": "Sultamicillin",
+      "classification": {
+        "scaffold_class": "inhibitor",
+        "functional_class": "positive",
+        "tier": 1,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215177",
+        "well": "b10",
+        "storage": "git"
+      },
+      "selection": {
+        "on_plate": [
+          {
+            "run": 1,
+            "version": 1,
+            "well": "C3",
+            "bucket": "inhibitor_analog",
+            "functional_class": "positive",
+            "concentration_uM": 50
+          }
+        ],
+        "storage": "git"
+      },
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T13038.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T13038/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T13038/"
+      },
+      "assay": {
+        "expected_at_50uM": ">=50% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T0133": {
+      "compound_id": "T0133",
+      "name": "Cefdinir",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215177",
+        "well": "b11",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T0133.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T0133/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T0133/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T1223": {
+      "compound_id": "T1223",
+      "name": "Ceftriaxone sodium hydrate",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215177",
+        "well": "c2",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T1223.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T1223/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T1223/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T7142": {
+      "compound_id": "T7142",
+      "name": "Cephalosporin C zinc salt",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215177",
+        "well": "c3",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T7142.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T7142/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T7142/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T1364": {
+      "compound_id": "T1364",
+      "name": "7-Aminodeacetoxycephalosporanic acid",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215178",
+        "well": "a2",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T1364.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T1364/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T1364/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T6411": {
+      "compound_id": "T6411",
+      "name": "Biapenem",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215178",
+        "well": "a3",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T6411.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T6411/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T6411/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    },
+    "T1126": {
+      "compound_id": "T1126",
+      "name": "Penicillin V Potassium",
+      "classification": {
+        "scaffold_class": "antibiotic_substrate",
+        "functional_class": "negative",
+        "tier": 3,
+        "exclude": false
+      },
+      "source": {
+        "plate": "PHD215178",
+        "well": "a4",
+        "storage": "git"
+      },
+      "selection": null,
+      "literature": {
+        "match": null,
+        "support": null,
+        "ic50_uM_prior": null,
+        "refs_summary_storage": "git",
+        "refs_summary_file": "data/compound_literature/refs/T1126.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/literature/T1126/"
+      },
+      "docking": {
+        "receptor": "1JQL",
+        "gnina_cnn_affinity": null,
+        "summary_storage": "git",
+        "poses_storage": "local",
+        "poses_local": "pvjthomas/local/docking/T1126/"
+      },
+      "assay": {
+        "expected_at_50uM": "<20% inhibition",
+        "summary_storage": "git",
+        "summary_file": "data/assay/run_1_summary.json",
+        "raw_storage": "local",
+        "raw_local": "pvjthomas/local/kinetics/"
+      }
+    }
+  }
+}

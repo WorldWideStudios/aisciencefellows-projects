@@ -1,0 +1,18 @@
+skill_id: platereader_load
+version: "1.0.0"
+description: "Right arm places a held well plate into the plate reader load position (load_plate anchor): models the lid open, descends onto the load grasp pose, releases, and snaps the plate onto the unload_plate settled pose (where platereader_unload grabs it) so sim shows it seated in the reader. Mirror of wellplate_shaker_load."
+
+# parameters are derived from the platereader_load() signature in robotic_code.py
+
+preconditions:
+  platereader_lid_open: true
+
+postconditions:
+  plate_loaded: true
+
+tags:
+  - plate_reader
+  - load
+  - plate
+  - place
+  - right_arm

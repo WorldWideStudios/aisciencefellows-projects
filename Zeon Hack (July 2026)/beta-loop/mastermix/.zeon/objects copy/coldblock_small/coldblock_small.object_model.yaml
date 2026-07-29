@@ -1,0 +1,102 @@
+urdf: coldblock_small.urdf
+articulations:
+  default:
+    description: All joints at rest position
+    joints: {}
+anchors:
+  object:
+    parent_link: world
+    description: Table placement frame, origin at (+X, +Y, -Z) bbox corner
+    link_T_anchor:
+      xyz: [-0.058306, 0.0174318, -0.0198808]
+      wxyz: [0.587185, 2.00645e-32, 2.71876e-32, 0.809453]
+  hole_1:
+    parent_link: body
+    description: hole 1 xyz location
+    link_T_anchor:
+      xyz: [-0.0397037, 0.00730662, 0.020485]
+      wxyz: [0.986324, -5.82899e-33, -3.07483e-34, 0.164815]
+  hole_2:
+    parent_link: body
+    description: hole 2 xyz location
+    link_T_anchor:
+      xyz: [-0.0221931, 0.0124721, 0.020485]
+      wxyz: [0.986324, -5.82899e-33, -3.07483e-34, 0.164815]
+  hole_3:
+    parent_link: body
+    description: hole 3 xyz location
+    link_T_anchor:
+      xyz: [-0.0046825, 0.0176376, 0.020485]
+      wxyz: [0.986324, -5.82899e-33, -3.07483e-34, 0.164815]
+  hole_4:
+    parent_link: body
+    description: hole 4 xyz location
+    link_T_anchor:
+      xyz: [0.0128281, 0.0228031, 0.020485]
+      wxyz: [0.986324, -5.82899e-33, -3.07483e-34, 0.164815]
+  hole_5:
+    parent_link: body
+    description: hole 5 xyz location
+    link_T_anchor:
+      xyz: [0.0303387, 0.0279685, 0.020485]
+      wxyz: [0.986324, -5.82899e-33, -3.07483e-34, 0.164815]
+  hole_6:
+    parent_link: body
+    description: hole 6 xyz location
+    link_T_anchor:
+      xyz: [-0.0347005, -0.0091428, 0.020485]
+      wxyz: [0.986324, -5.82899e-33, -3.07483e-34, 0.164815]
+  hole_7:
+    parent_link: body
+    description: hole 7 xyz location
+    link_T_anchor:
+      xyz: [-0.0171898, -0.0039773, 0.020485]
+      wxyz: [0.986324, -5.82899e-33, -3.07483e-34, 0.164815]
+  hole_8:
+    parent_link: body
+    description: hole 8 xyz location
+    link_T_anchor:
+      xyz: [0.0004543, 0.0009114, 0.020485]
+      wxyz: [0.986324, -5.82899e-33, -3.07483e-34, 0.164815]
+  hole_9:
+    parent_link: body
+    description: hole 9 xyz location
+    link_T_anchor:
+      xyz: [0.0178314, 0.0063537, 0.020485]
+      wxyz: [0.986324, -5.82899e-33, -3.07483e-34, 0.164815]
+  hole_10:
+    parent_link: body
+    description: hole 10 xyz location
+    link_T_anchor:
+      xyz: [0.035342, 0.0115191, 0.020485]
+      wxyz: [0.986324, -5.82899e-33, -3.07483e-34, 0.164815]
+  hole_11:
+    parent_link: body
+    description: hole 11 xyz location
+    link_T_anchor:
+      xyz: [-0.0296972, -0.0255922, 0.020485]
+      wxyz: [0.986324, -5.82899e-33, -3.07483e-34, 0.164815]
+  hole_12:
+    parent_link: body
+    description: hole 12 xyz location
+    link_T_anchor:
+      xyz: [-0.0121866, -0.0204267, 0.020485]
+      wxyz: [0.986324, -5.82899e-33, -3.07483e-34, 0.164815]
+  hole_13:
+    parent_link: body
+    description: hole 13 xyz location
+    link_T_anchor:
+      xyz: [0.005324, -0.0152612, 0.020485]
+      wxyz: [0.986324, -5.82899e-33, -3.07483e-34, 0.164815]
+  hole_14:
+    parent_link: body
+    description: hole 14 xyz location
+    link_T_anchor:
+      xyz: [0.0228346, -0.0100957, 0.020485]
+      wxyz: [0.986324, -5.82899e-33, -3.07483e-34, 0.164815]
+  hole_15:
+    parent_link: body
+    description: hole 15 xyz location
+    link_T_anchor:
+      xyz: [0.0403452, -0.0049303, 0.020485]
+      wxyz: [0.986324, -5.82899e-33, -3.07483e-34, 0.164815]

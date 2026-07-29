@@ -1,0 +1,39 @@
+# Plate map layout rules (well placement)
+
+Layout generation lives in `pvjthomas/plates.py`. PNG coloring/rendering lives in `ml/analysis/plate_viz.py` — **never change well positions in the viz layer**.
+
+Theory, distance metrics, optimization algorithms, and case analysis: [`pvjthomas/wellplate_design_guide.md`](../../pvjthomas/wellplate_design_guide.md).
+
+## Interior-only layouts (`spaced_interior`, `column_strip`)
+
+These modes share mandatory constraints (enforced by `validate_interior_layout`):
+
+1. **No edge wells** — rows A and H, columns 1 and 12 must stay empty.
+2. **Interior block only** — all assigned wells must be in B–G × 2–11.
+3. **Spaced triplicate controls** — 3× vehicle, 3× no-TEM1, 3× positive at columns **3, 7, 11** (max horizontal separation within the interior).
+4. **X-maximal sample separation** — sample wells on the same row must not occupy horizontally adjacent columns (enforced by `validate_sample_x_separation`).
+
+## Mode-specific sample geometry
+
+| Mode | Sample pattern | Control rows |
+|------|----------------|--------------|
+| `spaced_interior` | Checkerboard on interior (no sample–sample edge contact) | B, D, F |
+| `column_strip` | B/D/F @ 2/4/6/8/10, then C/E/G @ **5/9**, then C/E/G @ 3/7/11 | B, D, F |
+
+`compact` is the legacy packed layout (row A controls); it does **not** follow interior-only rules.
+
+## Compound vs control placement (independent of layout mode)
+
+Enforced in `pvjthomas/plates.py` via `COMPOUND_PLACEMENT_RULES` and `sample_compounds_excluding_positive_control()`:
+
+- **Clavulanic acid (T19860)** is the default positive control (`DEFAULT_CONTROL_ROW.positive`).
+- If T19860 is plated as positive control, it **must not** also appear in the discovery sample compound list.
+- Layout generation automatically excludes the positive-control `compound_id` from sample wells; fix `compound_list.json` so the list matches (do not rely on silent exclusion alone).
+
+This rule is separate from well geometry and from PNG coloring in `plate_viz.py`.
+
+## When adding a new layout mode
+
+- Add rules to `LAYOUT_RULES` in `plates.py`.
+- Call `validate_interior_layout` if the mode is interior-only.
+- Update build scripts and `selection_rationale.md` — do not change concentrations when only changing layout.

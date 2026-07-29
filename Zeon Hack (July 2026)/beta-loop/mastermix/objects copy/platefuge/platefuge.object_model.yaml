@@ -1,0 +1,277 @@
+urdf: platefuge.urdf
+parts:
+  body:
+    links: [body]
+    description: Centrifuge base
+  lid:
+    links: [lid]
+    description: Hinged lid
+  rotor:
+    links: [rotor]
+    description: Spinning rotor that carries the microplate
+articulations:
+  default:
+    description: Lid closed, rotor at home
+    joints:
+      lid_joint: 0.0
+      rotor_joint: 0.0
+  open:
+    description: Lid fully open, rotor at home
+    joints:
+      lid_joint: 1.69
+      rotor_joint: 0.0
+anchors:
+  object:
+    parent_link: world
+    description: Object placement frame (origin on table surface)
+    link_T_anchor:
+      xyz: [0.0313651, 0.222913, -0.129224]
+      wxyz: [0.563157, 0.518666, 0.46902, -0.440295]
+  rotor_center:
+    parent_link: body
+    description: Center of rotor disk top surface (body-frame projection of spin axis
+      @ disk top). Z axis up in world after `object` placement; X axis toward plate_slot_1
+      at rotor_joint=0. CALIBRATE during bring-up.
+    link_T_anchor:
+      xyz: [-0.0982, -0.022, -0.0357]
+      wxyz: [0.707107, -0.707107, 0.0, 0.0]
+  view_rotor:
+    parent_link: body
+    description: Camera view (OpenCV convention) looking down at the rotor disk, ~25
+      cm above. Used for AprilTag rotor angle localization. CALIBRATE during bring-up.
+    link_T_anchor:
+      xyz: [0.0742512, -0.147128, 0.112854]
+      wxyz: [-0.297336, 0.469342, 0.830927, 0.0294927]
+    grasp:
+      width: 0.08
+  plate_slot_1:
+    parent_link: rotor
+    description: Final seated pose of plate in rotor slot 1 (logical 0 deg) at disk
+      top surface (link_z=+0.066). Plate center origin; plate frame aligned with link
+      frame. CALIBRATE during bring-up.
+    link_T_anchor:
+      xyz: [0.0329254, -0.0554818, -0.0107243]
+      wxyz: [-0.0874233, -0.579397, -0.0405864, 0.809326]
+    grasp:
+      width: 0.08
+  plate_slot_2:
+    parent_link: rotor
+    description: Final seated pose of plate in rotor slot 2 (logical 180 deg). Same
+      as plate_slot_1 rotated 180 deg around link Z. CALIBRATE during bring-up.
+    link_T_anchor:
+      xyz: [-0.0330121, 0.0598623, -0.0145402]
+      wxyz: [0.820334, -0.0517507, 0.564552, 0.0751974]
+    grasp:
+      width: 0.08
+  slot_1_load:
+    parent_link: rotor
+    description: TCP placement pose for loading plate into slot 1. TCP Z axis points
+      into the slot (-link_z), 12 mm above plate-seated height for release clearance.
+      CALIBRATE during bring-up.
+    link_T_anchor:
+      xyz: [0.0361718, 0.00640621, 0.078]
+      wxyz: [-1.4617e-17, 0.763668, -0.64561, 1.9372e-17]
+    grasp:
+      width: 0.012
+  slot_2_load:
+    parent_link: rotor
+    description: TCP placement pose for loading plate into slot 2 (rotated 180 deg
+      around link Z from slot_1_load). CALIBRATE during bring-up.
+    link_T_anchor:
+      xyz: [-0.0419445, -0.000338919, 0.078]
+      wxyz: [2.04231e-17, 0.677876, 0.735176, 1.68366e-17]
+    grasp:
+      width: 0.012
+  slot_1_unload:
+    parent_link: rotor
+    description: TCP grasp pose for unloading plate from slot 1. Jaws around plate
+      sides at plate-center height (7 mm above disk top). CALIBRATE during bring-up.
+    link_T_anchor:
+      xyz: [0.0455216, 0.0125209, 0.0628691]
+      wxyz: [-1.54762e-17, 0.752449, -0.65865, 1.9795e-17]
+    grasp:
+      width: 0.05
+  slot_2_unload:
+    parent_link: rotor
+    description: TCP grasp pose for unloading plate from slot 2 (rotated 180 deg around
+      link Z from slot_1_unload). CALIBRATE during bring-up.
+    link_T_anchor:
+      xyz: [-0.0444965, -0.0055926, 0.0559181]
+      wxyz: [1.93992e-17, 0.646416, 0.762985, 1.46678e-17]
+    grasp:
+      width: 0.05
+  pre_insert:
+    parent_link: world
+    description: Pre insert pose for loading plates into the platefuge
+    link_T_anchor:
+      xyz: [-0.0860464, -0.137604, -0.0737092]
+      wxyz: [0.714752, -0.697832, -0.0443929, -0.0137501]
+    grasp:
+      width: 0.08
+  lid_close:
+    parent_link: lid
+    description: Lid closing anchor. Starts with lid close at angle -0.75 and stops
+      at angle 1.69
+    link_T_anchor:
+      xyz: [0.0528211, -0.171994, -0.0109483]
+      wxyz: [0.0329577, 0.995802, -0.0752001, -0.0404505]
+    grasp:
+      width: 0.0
+  lid_open_end:
+    parent_link: world
+    description: End of the lid opening sequence
+    link_T_anchor:
+      xyz: [-0.0612407, -0.172615, 0.082592]
+      wxyz: [-0.615158, -0.039716, 0.78663, -0.0348649]
+    grasp:
+      width: 0.0
+  lid_open_start:
+    parent_link: body
+    description: Start of the lid opening action
+    link_T_anchor:
+      xyz: [-0.0311825, -0.101358, 0.00234513]
+      wxyz: [0.723323, 0.0758476, -0.682306, 0.0742298]
+    grasp:
+      width: 0.0
+  lid_close_tap:
+    parent_link: body
+    description: tap to finally shit the lid
+    link_T_anchor:
+      xyz: [-0.101722, -0.023124, 0.0281526]
+      wxyz: [-0.0236957, 0.998963, -0.000742025, -0.0388691]
+    grasp:
+      width: 0.0
+  rotor_tag_22_bad:
+    parent_link: rotor
+    description: AprilTag 22 on platefuge 'bad' rotor disk top (auto-calibrated by
+      scratch/calibrate_rotor_tags.py).
+    link_T_anchor:
+      xyz: [0.069382, 0.0352, 0.029216]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  rotor_tag_23_bad:
+    parent_link: rotor
+    description: AprilTag 23 on platefuge 'bad' rotor disk top (auto-calibrated by
+      scratch/calibrate_rotor_tags.py).
+    link_T_anchor:
+      xyz: [0.073211, -0.001356, 0.030425]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  rotor_tag_25_bad:
+    parent_link: rotor
+    description: AprilTag 25 on platefuge 'bad' rotor disk top (auto-calibrated by
+      scratch/calibrate_rotor_tags.py).
+    link_T_anchor:
+      xyz: [0.010597, -0.072289, 0.036897]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  rotor_tag_26_bad:
+    parent_link: rotor
+    description: AprilTag 26 on platefuge 'bad' rotor disk top (auto-calibrated by
+      scratch/calibrate_rotor_tags.py).
+    link_T_anchor:
+      xyz: [-0.070816, -0.019583, 0.036088]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  rotor_tag_28_bad:
+    parent_link: rotor
+    description: AprilTag 28 on platefuge 'bad' rotor disk top (auto-calibrated by
+      scratch/calibrate_rotor_tags.py).
+    link_T_anchor:
+      xyz: [-0.07485, 0.014353, 0.036325]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  rotor_tag_29_bad:
+    parent_link: rotor
+    description: AprilTag 29 on platefuge 'bad' rotor disk top (auto-calibrated by
+      scratch/calibrate_rotor_tags.py).
+    link_T_anchor:
+      xyz: [-0.010643, 0.08535, 0.034488]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  rotor_tag_9_mid:
+    parent_link: rotor
+    description: AprilTag 9 on platefuge 'mid' rotor disk top (auto-calibrated by
+      scratch/calibrate_rotor_tags.py).
+    link_T_anchor:
+      xyz: [0.06619, 0.033829, 0.041445]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  rotor_tag_10_mid:
+    parent_link: rotor
+    description: AprilTag 10 on platefuge 'mid' rotor disk top (auto-calibrated by
+      scratch/calibrate_rotor_tags.py).
+    link_T_anchor:
+      xyz: [0.072298, -0.004731, 0.040188]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  rotor_tag_11_mid:
+    parent_link: rotor
+    description: AprilTag 11 on platefuge 'mid' rotor disk top (auto-calibrated by
+      scratch/calibrate_rotor_tags.py).
+    link_T_anchor:
+      xyz: [0.010376, -0.07721, 0.038368]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  rotor_tag_12_mid:
+    parent_link: rotor
+    description: AprilTag 12 on platefuge 'mid' rotor disk top (auto-calibrated by
+      scratch/calibrate_rotor_tags.py).
+    link_T_anchor:
+      xyz: [-0.072729, -0.030337, 0.038105]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  rotor_tag_13_mid:
+    parent_link: rotor
+    description: AprilTag 13 on platefuge 'mid' rotor disk top (auto-calibrated by
+      scratch/calibrate_rotor_tags.py).
+    link_T_anchor:
+      xyz: [-0.079308, 0.008753, 0.038275]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  rotor_tag_14_mid:
+    parent_link: rotor
+    description: AprilTag 14 on platefuge 'mid' rotor disk top (auto-calibrated by
+      scratch/calibrate_rotor_tags.py).
+    link_T_anchor:
+      xyz: [-0.014082, 0.081578, 0.04032]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  rotor_tag_16_great:
+    parent_link: rotor
+    description: AprilTag 16 on platefuge 'great' rotor disk top (auto-calibrated
+      by scratch/calibrate_rotor_tags.py).
+    link_T_anchor:
+      xyz: [-0.068496, -0.034279, 0.037255]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  rotor_tag_17_great:
+    parent_link: rotor
+    description: AprilTag 17 on platefuge 'great' rotor disk top (auto-calibrated
+      by scratch/calibrate_rotor_tags.py).
+    link_T_anchor:
+      xyz: [-0.076901, 0.001548, 0.037544]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  rotor_tag_18_great:
+    parent_link: rotor
+    description: AprilTag 18 on platefuge 'great' rotor disk top (auto-calibrated
+      by scratch/calibrate_rotor_tags.py).
+    link_T_anchor:
+      xyz: [-0.022968, 0.07792, 0.041786]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  rotor_tag_19_great:
+    parent_link: rotor
+    description: AprilTag 19 on platefuge 'great' rotor disk top (auto-calibrated
+      by scratch/calibrate_rotor_tags.py).
+    link_T_anchor:
+      xyz: [0.066265, 0.037095, 0.035642]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  rotor_tag_20_great:
+    parent_link: rotor
+    description: AprilTag 20 on platefuge 'great' rotor disk top (auto-calibrated
+      by scratch/calibrate_rotor_tags.py).
+    link_T_anchor:
+      xyz: [0.072297, 0.003893, 0.040342]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  rotor_tag_21_great:
+    parent_link: rotor
+    description: AprilTag 21 on platefuge 'great' rotor disk top (auto-calibrated
+      by scratch/calibrate_rotor_tags.py).
+    link_T_anchor:
+      xyz: [0.017511, -0.077191, 0.036823]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  open_button:
+    parent_link: world
+    description: press button for centrifuge
+    link_T_anchor:
+      xyz: [-0.0657, 0.0513, -0.1758]
+      wxyz: [-0.469128, 0.428423, 0.592915, 0.494797]
+    grasp:
+      width: 0.0

@@ -1,0 +1,10 @@
+skill_id: left_arm_pose_sequence_2
+version: "1.0.0"
+description: "Move the left arm through a captured 22-waypoint joint-space sequence (v2, jog-and-record), setting the gripper at the waypoints an explicit width was given for, and capturing a still from the right arm's (stationary) wrist camera after every waypoint. Never touches the right arm."
+
+# parameters are derived from the left_arm_pose_sequence_2() signature in robotic_code.py
+
+tags:
+  - generated
+  - pose_capture
+  - left_arm

@@ -1,0 +1,63 @@
+{
+  "compound_id": "T0199",
+  "name": "Cephradine",
+  "match": "yes",
+  "support": "weak",
+  "entries": [
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Cephradine. Map complete: 5/5 tasks succeeded in 2010ms\nResults ID: m_821e5e6e\nFull results: /.gxl/map_m_821e5e6e.txt\n\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided paper content, there is no mention of Cephradine, nitrocefin colorimetric assays, $K_i$, $IC_{50}$, or enzyme/substrate concentr\n  [success] Novel Cephalosporin\nConjugates Display Potent and\nSelective Inhibition  (PMC8273888)\n    Based on the provided paper content, there is no mention of Cephradine, TEM-1 beta-lactamase, or their associated assay parameters ($K_i$, $IC_{50}$, \n  [success] In Silico Study of the Potential of Brazilein Sappan Wood as a Beta-La  (PMC11229569)\n    Based on the provided paper content, there is no mention of Cephradine, nitrocefin colorimetric assays, Ki or IC50 values, inhibitor concentrations, s\n  [success] Effect of Lactamase Inhibitors on the Biosensor Penp during the Measur  (PMC6427286)\n    Based on the provided paper content, there is no information regarding Cephradine, TEM-1 beta-lactamase, nitrocefin colorimetric assays, Ki, IC50 valu\n  [success] Classification and applicability of new beta-lactamase inhibitors  (PMC12584905)\n    Based on the provided paper, there is no mention of Cephradine, TEM-1 beta-lactamase, nitrocefin colorimetric assays, Ki, IC50 values, or related bioc\n\nFull results: /.gxl/map_m_821e5e6e.txt",
+      "paperclip_search_id": "s_58443de5",
+      "paperclip_map_id": "m_821e5e6e",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "pmcid": "PMC12484619"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Cephradine. Map complete: 30/30 tasks succeeded in 8586ms\nResults ID: m_2575442a\nFull results: /.gxl/map_m_2575442a.txt\n\n  [success] Saturation Mutagenesis and Molecular Modeling: The Impact of Methionin  (PMC11276661)\n    Based on the provided paper, there is no mention of Cephradine, nitrocefin colorimetric assays, inhibition constants ($K_i$ or $\\mathrm{IC}_{50}$), or\n  [success] A drug-resistant \u03b2-lactamase variant changes the conformation of its a  (PMC11843585)\n    Based on the provided paper content, there is no information regarding Cephradine, TEM-1 beta-lactamase, or a nitrocefin colorimetric assay involving \n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided paper content, there is no mention of Cephradine, nitrocefin colorimetric assays, $K_i$ or $IC_{50}$ values, enzyme concentratio\n  [success] Kinetic and Structural Requirements for Carbapenemase\nActivity in GES-  (PMC4303295)\n    Based on the provided paper, there is no mention of Cephradine, TEM-1 beta-lactamase, or their kinetic/inhibition values in a nitrocefin colorimetric \n  [success] Molecular Basis for the Catalytic Specificity of the\nCTX-M Extended-Sp  (PMC4303298)\n    Based on the provided research paper content, there is no mention of Cephradine, TEM-1 beta-lactamase assays with Cephradine, $K_i$, $IC_{50}$ values,\n  [success] In Silico Study of the Potential of Brazilein Sappan Wood as a Beta-La  (PMC11229569)\n    Based on the provided pape",
+      "paperclip_search_id": "s_1353b475",
+      "paperclip_map_id": "m_2575442a",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "pmcid": "PMC11276661",
+      "paperclip_source": "pmc"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Cephradine. Map complete: 25/25 tasks succeeded in 4751ms\nResults ID: m_3a0ef673\nFull results: /.gxl/map_m_3a0ef673.txt\n\n  [success] Distant Site Mutations in Clinical TEM Beta-Lactamase Variants Enhance  (bio_33da24cd7504)\n    Based on the provided paper content, there is no mention of Cephradine, nitrocefin colorimetric assays, $K_i$ or $IC_{50}$ values for Cephradine, nitr\n  [success] Binding mode of isoxazolyl penicillins to a Class-A  \u03b2 -lactamase at a  (bio_a7f99ac77b0d)\n    Based on the provided paper content, there is no information regarding Cephradine, TEM-1 beta-lactamase, nitrocefin colorimetric assays, or associated\n  [success] A new type of AmpC \u03b2-lactamases defined by PIB-1, a metal-dependent ca  (bio_9fef02c2845c)\n    Based on the provided paper, there is no mention of Cephradine, TEM-1 beta-lactamase, or their interactions in a nitrocefin colorimetric assay. The pa\n  [success] Cefdinir binding to a class-A  \u03b2 -lactamase revealed by serial cryo-cr  (bio_01a5a87c8117)\n    Based on the provided paper content, there is no mention of Cephradine, TEM-1 beta-lactamase, nitrocefin colorimetric assays, IC50 values, Ki values, \n  [success] Contributions of \u03b2-lactamase substrate specificity and outer membrane   (bio_ca645f447dca)\n    Based on the provided paper content, there is no mention of Cephradine, TEM-1 in a nitrocefin colorimetric assay, Ki, IC50 values, enzyme concentratio\n  [success] Sulbactam-mediated inhibition of TEM-1 \u03b2-lactamase increases specific   (bio_e76fe1d274e9",
+      "paperclip_search_id": "s_ebb716ad",
+      "paperclip_map_id": "m_3a0ef673",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "paperclip_source": "biorxiv"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Cephradine. Map complete: 10/10 tasks succeeded in 2842ms\nResults ID: m_ddc3f864\nFull results: /.gxl/map_m_ddc3f864.txt\n\n  [success] bla - Beta-lactamase TEM  (P62593)\n    Based on the provided paper content, there is no mention of Cephradine, nitrocefin colorimetric assays, inhibition constants ($K_i$ or $IC_{50}$), enz\n  [success] bla - Beta-lactamase TEM  (P62594)\n    Based on the provided paper content, there is no mention of a nitrocefin colorimetric assay, Cephradine, inhibition values ($K_i$ or $IC_{50}$), enzym\n  [success] blaT-12b - Beta-lactamase TEM-12  (Q48406)\n    Based on the provided paper content, there is no mention of Cephradine, TEM-1 beta-lactamase, a nitrocefin colorimetric assay, Ki, IC50, enzyme/substr\n  [success] penPC - Beta-lactamase 1  (P10424)\n    Based on the provided paper content, there is no mention of Cephradine, TEM-1 beta-lactamase, nitrocefin colorimetric assays, $K_i$, $IC_{50}$, or rel\n  [success] blaY - Beta-lactamase 1  (P00809)\n    Based on the provided paper content, there is no information regarding Cephradine, TEM-1 beta-lactamase, nitrocefin colorimetric assays, $K_i$, $\\math\n  [success] blaCI - Beta-lactamase 1  (P28018)\n    Based on the provided paper content, there is no information regarding Cephradine, TEM-1 beta-lactamase, nitrocefin colorimetric assays, IC50/Ki value\n  [success] blaL - Beta-lactamase 1  (Q03680)\n    Based on the provided paper content, there is no mention of Cephradine, TEM-1 beta-lactamase, nitrocefin colorimetric assa",
+      "paperclip_search_id": "s_fea190cc",
+      "paperclip_map_id": "m_ddc3f864",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "paperclip_source": "proteins"
+    }
+  ],
+  "raw_local": "/Users/fio/zeon_hack/pvjthomas/local/literature/T0199",
+  "assay_recommendations": {
+    "tem1_nitrocefin": {
+      "screen_conc_uM": 50,
+      "screen_rationale": "Project default screen concentration; no literature inhibitor concentration or IC50/Ki extracted.",
+      "screen_conc_source": "project_default",
+      "max_assay_conc_uM": 1000.0,
+      "metric": "relative nitrocefin hydrolysis vs no-inhibitor control"
+    }
+  }
+}

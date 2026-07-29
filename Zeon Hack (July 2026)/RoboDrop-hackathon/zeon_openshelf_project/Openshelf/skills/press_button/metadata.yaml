@@ -1,0 +1,12 @@
+skill_id: press_button
+version: "1.0.0"
+description: "Press a physical button on a front-panel-only instrument with a closed gripper, then photograph the display as evidence. Returns verifiable separately from success: the motion can complete with no camera evidence, and that must not read as a confirmed press."
+
+preconditions: {}   # parsed but NOT enforced by the executor - never gate on these
+postconditions: {}
+safety_rules: []
+tags:
+  - openshelf
+  - instrument
+  - actuate
+world_state_prime: null

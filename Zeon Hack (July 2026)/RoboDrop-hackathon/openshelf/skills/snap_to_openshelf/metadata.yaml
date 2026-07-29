@@ -1,0 +1,10 @@
+skill_id: snap_to_openshelf
+version: "1.0.0"
+description: "Snap the pre-placed dispensed object (tipbox_grey) upright onto the OpenShelf plate anchor so it visually reads as dispensed."
+
+# parameters are derived from the snap_to_openshelf() signature in robotic_code.py
+
+tags:
+  - openshelf
+  - snap
+  - placement

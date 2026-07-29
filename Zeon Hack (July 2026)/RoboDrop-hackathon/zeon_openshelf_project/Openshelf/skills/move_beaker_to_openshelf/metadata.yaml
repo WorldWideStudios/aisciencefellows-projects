@@ -1,0 +1,21 @@
+# Skill: move_beaker_to_openshelf
+skill_id: move_beaker_to_openshelf
+version: "1.0.0"
+description: "Snap a beaker anchor onto a named OpenShelf anchor in the world model."
+
+# parameters are derived from the move_beaker_to_openshelf() signature in robotic_code.py
+
+preconditions: {}
+postconditions:
+  beaker_on_openshelf: true
+
+safety_rules:
+  - "This skill only updates the Zeon world model; it does not command arm motion."
+  - "Verify the selected OpenShelf anchor in the simulator before using it as a hardware target."
+
+tags:
+  - setup
+  - beaker
+  - openshelf
+  - anchor
+  - snap

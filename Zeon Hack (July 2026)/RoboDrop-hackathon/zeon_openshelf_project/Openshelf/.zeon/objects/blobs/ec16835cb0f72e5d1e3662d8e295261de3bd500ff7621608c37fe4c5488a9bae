@@ -1,0 +1,623 @@
+urdf: openshelf.urdf
+parts:
+  body:
+    links: [body]
+    description: Open shelf unit (~1.49 x 1.78 x 0.78 m). Scan mesh from Downloads/Blerim Callibration.obj,
+      converted mm to m and decimated to 100k faces; source frame kept (y-up, floor at y=0). Not watertight.
+articulations:
+  default:
+    description: Static object, no actuated joints
+    joints: {}
+anchors:
+  object:
+    parent_link: world
+    description: Floor placement frame, origin at the (max_x, max_y, min_z) bbox corner (base on z=0,
+      open front faces +Y). Y-up source rotated to Z-up; verified to match the finalized scratch/openshelf_old
+      placement within ~2 cm (decimation difference).
+    link_T_anchor:
+      xyz: [0.737806, -0.00357212, 0.392149]
+      wxyz: [0.507135, -0.504851, -0.492817, -0.495046]
+  tag_240:
+    parent_link: body
+    description: Calibrated AprilTag 240 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.67855, 1.07618, 0.407474]
+      wxyz: [0.707758, -0.00180003, 0.00412514, -0.70644]
+  tag_241:
+    parent_link: body
+    description: Calibrated AprilTag 241 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.678231, 1.03744, 0.407688]
+      wxyz: [0.708183, -0.000967551, 0.00334207, -0.70602]
+  tag_242:
+    parent_link: body
+    description: Calibrated AprilTag 242 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.55483, 0.941024, 0.303693]
+      wxyz: [0.699356, 0.000373937, 0.71472, -0.00869165]
+  tag_243:
+    parent_link: body
+    description: Calibrated AprilTag 243 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.554934, 0.940868, 0.265896]
+      wxyz: [0.69652, 0.00111675, 0.717462, -0.0103349]
+  tag_244:
+    parent_link: body
+    description: Calibrated AprilTag 244 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.59729, 0.977532, 0.407133]
+      wxyz: [0.00310951, -0.00312144, -0.000199641, 0.99999]
+  tag_245:
+    parent_link: body
+    description: Calibrated AprilTag 245 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.636161, 0.977715, 0.407683]
+      wxyz: [0.00300788, -0.000512756, -0.000932688, 0.999995]
+  tag_246:
+    parent_link: body
+    description: Calibrated AprilTag 246 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.673739, 1.35708, 0.407834]
+      wxyz: [0.721274, 0.0072303, 0.00545662, 0.69259]
+  tag_247:
+    parent_link: body
+    description: Calibrated AprilTag 247 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.6722, 1.39517, 0.406594]
+      wxyz: [0.720721, 0.0127114, 0.0137121, 0.692973]
+  tag_248:
+    parent_link: body
+    description: Calibrated AprilTag 248 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.535474, 0.802569, 0.318848]
+      wxyz: [-0.699077, 0.715015, -0.00371455, -0.00569273]
+  tag_249:
+    parent_link: body
+    description: Calibrated AprilTag 249 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.496913, 0.802234, 0.318385]
+      wxyz: [-0.698857, 0.715258, -0.00106767, 0.0016677]
+  tag_250:
+    parent_link: body
+    description: Calibrated AprilTag 250 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.596325, 0.850502, 0.407532]
+      wxyz: [-0.00814212, 0.00247525, -0.0150402, 0.999851]
+  tag_251:
+    parent_link: body
+    description: Calibrated AprilTag 251 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.635218, 0.849539, 0.407365]
+      wxyz: [-0.00823563, 0.00565549, -0.00932507, 0.999907]
+  tag_252:
+    parent_link: body
+    description: Calibrated AprilTag 252 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.638973, 1.41895, 0.391932]
+      wxyz: [-0.687447, 0.726167, -0.00679193, 0.00718625]
+  tag_253:
+    parent_link: body
+    description: Calibrated AprilTag 253 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.602555, 1.41568, 0.387238]
+      wxyz: [-0.686835, 0.726706, -0.0124648, -0.000651722]
+  tag_254:
+    parent_link: body
+    description: Calibrated AprilTag 254 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.402831, 0.801148, 0.246572]
+      wxyz: [-0.471715, 0.489282, 0.520556, 0.516826]
+  tag_255:
+    parent_link: body
+    description: Calibrated AprilTag 255 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.405491, 0.801528, 0.285432]
+      wxyz: [-0.472295, 0.488924, 0.519755, 0.517441]
+  tag_256:
+    parent_link: body
+    description: Calibrated AprilTag 256 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.553887, 0.846273, 0.392715]
+      wxyz: [0.513067, 0.492665, 0.519905, 0.473014]
+  tag_257:
+    parent_link: body
+    description: Calibrated AprilTag 257 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.55316, 0.884893, 0.390477]
+      wxyz: [0.514688, 0.492782, 0.515982, 0.475421]
+  tag_258:
+    parent_link: body
+    description: Calibrated AprilTag 258 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.430888, 1.41613, 0.391484]
+      wxyz: [0.0145371, 0.00889014, 0.715455, 0.69845]
+  tag_259:
+    parent_link: body
+    description: Calibrated AprilTag 259 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.46205, 1.41393, 0.386814]
+      wxyz: [0.0136185, -0.00199195, 0.713402, 0.70062]
+  tag_260:
+    parent_link: body
+    description: Calibrated AprilTag 260 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.555231, 0.857497, 0.3471]
+      wxyz: [0.699141, -0.00251683, 0.714861, -0.0130108]
+  tag_261:
+    parent_link: body
+    description: Calibrated AprilTag 261 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.555701, 0.856835, 0.308832]
+      wxyz: [0.696444, -0.00440916, 0.717463, -0.0138972]
+  tag_262:
+    parent_link: body
+    description: Calibrated AprilTag 262 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.383391, 0.967156, 0.390252]
+      wxyz: [-0.50117, 0.504172, 0.501509, -0.49308]
+  tag_263:
+    parent_link: body
+    description: Calibrated AprilTag 263 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.383416, 1.00575, 0.390592]
+      wxyz: [-0.50228, 0.503869, 0.5006, -0.493184]
+  tag_264:
+    parent_link: body
+    description: Calibrated AprilTag 264 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.362247, 0.879267, 0.404602]
+      wxyz: [0.697676, 0.00256347, -0.00266397, 0.716404]
+  tag_265:
+    parent_link: body
+    description: Calibrated AprilTag 265 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.363285, 0.918086, 0.404691]
+      wxyz: [0.698867, 0.00460496, -0.00279015, 0.715231]
+  tag_266:
+    parent_link: body
+    description: Calibrated AprilTag 266 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.695249, 1.2139, 0.388072]
+      wxyz: [-0.486878, 0.52035, 0.489122, -0.502936]
+  tag_267:
+    parent_link: body
+    description: Calibrated AprilTag 267 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.695022, 1.25303, 0.386994]
+      wxyz: [-0.484138, 0.520966, 0.492011, -0.502125]
+  tag_268:
+    parent_link: body
+    description: Calibrated AprilTag 268 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.384661, 0.841365, 0.388568]
+      wxyz: [0.490488, -0.510572, -0.487171, 0.511276]
+  tag_269:
+    parent_link: body
+    description: Calibrated AprilTag 269 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.384061, 0.87986, 0.387471]
+      wxyz: [-0.493747, 0.509433, 0.488157, -0.508324]
+  tag_270:
+    parent_link: body
+    description: Calibrated AprilTag 270 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.342944, 1.28001, 0.406816]
+      wxyz: [-0.702262, -0.00848712, 0.00223131, 0.711864]
+  tag_271:
+    parent_link: body
+    description: Calibrated AprilTag 271 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.34343, 1.24143, 0.406476]
+      wxyz: [-0.702223, -0.0141669, 0.00513085, 0.711798]
+  tag_272:
+    parent_link: body
+    description: Calibrated AprilTag 272 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.323933, 1.26277, 0.386331]
+      wxyz: [0.506567, 0.499862, 0.511321, 0.481745]
+  tag_273:
+    parent_link: body
+    description: Calibrated AprilTag 273 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.324322, 1.30084, 0.383278]
+      wxyz: [0.505833, 0.504874, 0.511383, 0.477202]
+  tag_274:
+    parent_link: body
+    description: Calibrated AprilTag 274 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.552797, 0.931614, 0.392596]
+      wxyz: [0.505624, 0.499245, 0.504437, 0.490552]
+  tag_275:
+    parent_link: body
+    description: Calibrated AprilTag 275 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.552395, 0.970106, 0.392053]
+      wxyz: [0.504282, 0.499696, 0.504364, 0.491549]
+  tag_276:
+    parent_link: body
+    description: Calibrated AprilTag 276 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.36764, 1.33063, 0.404551]
+      wxyz: [0.722583, -0.00255319, -0.0181772, 0.69104]
+  tag_277:
+    parent_link: body
+    description: Calibrated AprilTag 277 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.366099, 1.36927, 0.404532]
+      wxyz: [0.723793, 0.00204624, -0.00920298, 0.689952]
+  tag_278:
+    parent_link: body
+    description: Calibrated AprilTag 278 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.699614, 0.901884, 0.387251]
+      wxyz: [-0.512528, -0.482862, 0.526928, 0.475926]
+  tag_279:
+    parent_link: body
+    description: Calibrated AprilTag 279 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.700607, 0.863392, 0.390547]
+      wxyz: [-0.513431, -0.480847, 0.526505, 0.47746]
+  tag_280:
+    parent_link: body
+    description: Calibrated AprilTag 280 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.693614, 1.35909, 0.386282]
+      wxyz: [-0.491154, 0.512711, 0.503737, -0.492082]
+  tag_281:
+    parent_link: body
+    description: Calibrated AprilTag 281 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.693991, 1.39846, 0.388202]
+      wxyz: [-0.493672, 0.514112, 0.503153, -0.488685]
+  tag_282:
+    parent_link: body
+    description: Calibrated AprilTag 282 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.609821, 0.788095, 0.407439]
+      wxyz: [0.999563, 0.00191723, 0.0050638, -0.0290573]
+  tag_283:
+    parent_link: body
+    description: Calibrated AprilTag 283 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.570803, 0.786228, 0.4077]
+      wxyz: [0.999603, 0.00328545, 0.000488113, -0.0279834]
+  tag_284:
+    parent_link: body
+    description: Calibrated AprilTag 284 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.353932, 1.08514, 0.403846]
+      wxyz: [0.708667, 0.00224056, -0.00528831, -0.70552]
+  tag_285:
+    parent_link: body
+    description: Calibrated AprilTag 285 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.353746, 1.04668, 0.40384]
+      wxyz: [0.70815, -0.00779177, 0.00595098, -0.705994]
+  tag_286:
+    parent_link: body
+    description: Calibrated AprilTag 286 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.698999, 1.04503, 0.391061]
+      wxyz: [-0.484135, 0.517359, 0.489283, -0.508483]
+  tag_287:
+    parent_link: body
+    description: Calibrated AprilTag 287 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.698832, 1.08434, 0.389455]
+      wxyz: [-0.484975, 0.517199, 0.487303, -0.509745]
+  tag_288:
+    parent_link: body
+    description: Calibrated AprilTag 288 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.427178, 0.773367, 0.405953]
+      wxyz: [0.0347595, 0.0100394, 4.11464e-05, 0.999345]
+  tag_289:
+    parent_link: body
+    description: Calibrated AprilTag 289 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.465987, 0.775956, 0.406572]
+      wxyz: [0.0343756, 0.00730995, -0.00330204, 0.999377]
+  tag_290:
+    parent_link: body
+    description: Calibrated AprilTag 290 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.328554, 0.942387, 0.386278]
+      wxyz: [0.492727, -0.503018, 0.508749, -0.495345]
+  tag_291:
+    parent_link: body
+    description: Calibrated AprilTag 291 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.328919, 0.903194, 0.38633]
+      wxyz: [0.491484, -0.505653, 0.508349, -0.494308]
+  tag_292:
+    parent_link: body
+    description: Calibrated AprilTag 292 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.384148, 0.860252, 0.263414]
+      wxyz: [-0.00537661, 0.707624, -0.00498298, -0.706551]
+  tag_293:
+    parent_link: body
+    description: Calibrated AprilTag 293 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.38482, 0.860712, 0.225715]
+      wxyz: [-0.0039388, 0.711628, -0.005573, -0.702524]
+  tag_294:
+    parent_link: body
+    description: Calibrated AprilTag 294 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.382094, 0.939739, 0.295973]
+      wxyz: [-0.703898, -0.0556083, 0.704741, 0.0691032]
+  tag_295:
+    parent_link: body
+    description: Calibrated AprilTag 295 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.382407, 0.93278, 0.33501]
+      wxyz: [-0.699216, -0.0573262, 0.709299, 0.0686059]
+  tag_296:
+    parent_link: body
+    description: Calibrated AprilTag 296 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.331759, 0.745095, 0.388584]
+      wxyz: [0.50076, 0.500223, 0.515053, 0.483464]
+  tag_297:
+    parent_link: body
+    description: Calibrated AprilTag 297 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.331479, 0.784551, 0.387105]
+      wxyz: [0.502058, 0.500351, 0.514828, 0.482222]
+  tag_298:
+    parent_link: body
+    description: Calibrated AprilTag 298 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.325987, 1.14124, 0.383586]
+      wxyz: [-0.471774, 0.520866, -0.489001, 0.516726]
+  tag_299:
+    parent_link: body
+    description: Calibrated AprilTag 299 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.326895, 1.10231, 0.386053]
+      wxyz: [-0.469879, 0.521886, -0.48929, 0.51715]
+  testest:
+    parent_link: world
+    description: ''
+    link_T_anchor:
+      xyz: [-0.166287, 0.561942, 0.712633]
+      wxyz: [0.165418, 0.683261, 0.687526, -0.181934]
+    grasp: {width: 0.08}
+  testphyw:
+    parent_link: world
+    description: ''
+    link_T_anchor:
+      xyz: [-0.474471, 0.894748, 0.383342]
+      wxyz: [-0.0324506, 0.674208, 0.737825, 0.00222332]
+    grasp: {width: 0.0}
+  beaker_slot_1:
+    parent_link: world
+    description: 'World convention: seated beaker pose in the OpenShelf, semantically named from the simulator-verified
+      testphyw frame.'
+    link_T_anchor:
+      xyz: [-0.474471, 0.894748, 0.383342]
+      wxyz: [-0.0324506, 0.674208, 0.737825, 0.00222332]
+  beaker_slot_1_pre_tcp:
+    parent_link: world
+    description: 'TCP convention: taught free-space prepose for approaching beaker_slot_1, semantically
+      named from testest.'
+    link_T_anchor:
+      xyz: [-0.166287, 0.561942, 0.712633]
+      wxyz: [0.165418, 0.683261, 0.687526, -0.181934]
+    grasp: {width: 0.08, standoff: 0.0}
+  beaker_slot_1_tcp:
+    parent_link: world
+    description: 'TCP convention: taught release target for beaker_slot_1, semantically named from testphyw.'
+    link_T_anchor:
+      xyz: [-0.474471, 0.894748, 0.383342]
+      wxyz: [-0.0324506, 0.674208, 0.737825, 0.00222332]
+    grasp: {width: 0.08, standoff: 0.0}
+  wellplate_slot_1:
+    parent_link: body
+    description: 'World convention: horizontal PCR plate seat in the OpenShelf, calibrated in the shelf
+      body frame for snap_example. Align wellplate_pcr.nest_base to this frame.'
+    link_T_anchor:
+      xyz: [0.360486, 1.08976, 2.50183]
+      wxyz: [0.495017, -0.502023, 0.506221, 0.49666]
+  wellplate_slot_1_holder_clear_tcp:
+    parent_link: world
+    description: 'TCP convention: short left-arm lateral move that clears the tagged source holder after
+      the vertical plate lift.'
+    link_T_anchor:
+      xyz: [0.1, -0.643, 0.16]
+      wxyz: [0.0, 0.0, 1.0, 0.0]
+  wellplate_slot_1_pickup_exit_tcp:
+    parent_link: world
+    description: 'TCP convention: left-arm waypoint that carries a grasped plate up and away from its
+      source holder.'
+    link_T_anchor:
+      xyz: [0.1, -0.4, 0.25]
+      wxyz: [0.0, 0.0, 1.0, 0.0]
+  wellplate_slot_1_transit_tcp:
+    parent_link: world
+    description: 'TCP convention: high center-table waypoint between plate pickup and the OpenShelf approach.'
+    link_T_anchor:
+      xyz: [0.15, 0.0, 0.45]
+      wxyz: [0.0, 0.0, 1.0, 0.0]
+  wellplate_slot_1_pre_tcp:
+    parent_link: world
+    description: 'TCP convention: collision-clear left-arm prepose for approaching wellplate_slot_1 with
+      wellplate_pcr.grasp_short_clearance_flipped.'
+    link_T_anchor:
+      xyz: [-0.166287, 0.561942, 0.712633]
+      wxyz: [0.0, 0.707107, 0.707107, 0.0]
+    grasp: {width: 0.08, standoff: 0.0, gripper_variant: wellplate}
+  wellplate_slot_1_tcp:
+    parent_link: world
+    description: 'TCP convention: release pose paired with wellplate_pcr.grasp_short_clearance_flipped
+      when nest_base is seated at wellplate_slot_1.'
+    link_T_anchor:
+      xyz: [-0.474451, 0.894748, 0.383342]
+      wxyz: [0.0, 0.707107, 0.707107, 0.0]
+    grasp: {width: 0.08, standoff: 0.0, gripper_variant: wellplate}
+  wellplate_slot_1_side_transit_tcp:
+    parent_link: world
+    description: 'TCP convention: high left-arm transit pose that keeps a plate held by side_grab_handoff_flipped
+      horizontal.'
+    link_T_anchor:
+      xyz: [0.15, 0.0, 0.45]
+      wxyz: [0.707103, -0.707103, 0.00220656, 0.00220656]
+  wellplate_slot_1_side_high_tcp:
+    parent_link: world
+    description: 'TCP convention: high front-of-shelf pose for a plate held by side_grab_handoff_flipped.'
+    link_T_anchor:
+      xyz: [-0.166287, 0.561942, 0.712633]
+      wxyz: [0.707103, -0.707103, 0.00220656, 0.00220656]
+  wellplate_slot_1_side_tcp:
+    parent_link: world
+    description: 'TCP convention: front-entry release pose paired with wellplate_pcr.side_grab_handoff_flipped
+      when nest_base is seated at wellplate_slot_1.'
+    link_T_anchor:
+      xyz: [-0.474471, 0.852008, 0.391019]
+      wxyz: [0.707103, -0.707103, 0.00220656, 0.00220656]
+    grasp: {width: 0.08, standoff: 0.1, gripper_variant: wellplate}
+  wellplate_slot_1_right_transit_tcp:
+    parent_link: body
+    description: 'TCP convention: level right-arm top-grasp transit pose, calibrated in the shelf body
+      frame for direct placement in snap_example.'
+    link_T_anchor:
+      xyz: [-0.269268, 1.14602, 1.61007]
+      wxyz: [0.712936, 0.701222, 0.00116182, -0.00296864]
+  wellplate_slot_1_right_high_tcp:
+    parent_link: body
+    description: 'TCP convention: level right-arm top-grasp high pose in front of OpenShelf, calibrated
+      in the shelf body frame for snap_example.'
+    link_T_anchor:
+      xyz: [0.0524693, 1.41567, 2.16556]
+      wxyz: [0.712936, 0.701222, 0.00116182, -0.00296864]
+  wellplate_slot_1_right_entry_tcp:
+    parent_link: body
+    description: 'TCP convention: level right-arm top-grasp pose immediately in front of slot 1, calibrated
+      in the shelf body frame for collision-aware insertion in snap_example.'
+    link_T_anchor:
+      xyz: [0.359228, 1.08653, 2.30711]
+      wxyz: [0.712936, 0.701222, 0.00116182, -0.00296864]
+  wellplate_slot_1_right_tcp:
+    parent_link: body
+    description: 'TCP convention: level right-arm release TCP calibrated in the shelf body frame and paired
+      with wellplate_pcr.grasp_short_clearance when nest_base is seated at wellplate_slot_1.'
+    link_T_anchor:
+      xyz: [0.360485, 1.08976, 2.50181]
+      wxyz: [0.712936, 0.701222, 0.00116182, -0.00296864]
+    grasp: {width: 0.08, standoff: 0.1, gripper_variant: wellplate}
+  wellplate_slot_1_right_side_transit_tcp:
+    parent_link: body
+    description: 'TCP convention: collision-clear transit pose for a level PCR plate held at wellplate_pcr.right_side_grasp
+      by the right arm.'
+    link_T_anchor:
+      xyz: [-0.269268, 1.14602, 1.61007]
+      wxyz: [0.709125, -0.00896021, -0.704989, 0.00716629]
+  wellplate_slot_1_right_side_high_tcp:
+    parent_link: body
+    description: 'TCP convention: high front-of-shelf pose for a level PCR plate held at wellplate_pcr.right_side_grasp
+      by the right arm.'
+    link_T_anchor:
+      xyz: [0.0524693, 1.41567, 2.16556]
+      wxyz: [0.709125, -0.00896021, -0.704989, 0.00716629]
+  wellplate_slot_1_right_side_entry_tcp:
+    parent_link: body
+    description: 'TCP convention: front-entry pose for collision-aware horizontal insertion of a level
+      PCR plate held at wellplate_pcr.right_side_grasp.'
+    link_T_anchor:
+      xyz: [0.388681, 1.09413, 2.3068]
+      wxyz: [0.709125, -0.00896021, -0.704989, 0.00716629]
+  wellplate_slot_1_right_side_tcp:
+    parent_link: body
+    description: 'TCP convention: right-arm horizontal side-grip release pose solved from wellplate_pcr.right_side_grasp
+      when nest_base is seated at wellplate_slot_1.'
+    link_T_anchor:
+      xyz: [0.389938, 1.09736, 2.50153]
+      wxyz: [0.709125, -0.00896021, -0.704989, 0.00716629]
+    grasp: {width: 0.08, standoff: 0.1, gripper_variant: wellplate}
+  wellplate_slot_1_right_side_flipped_transit_tcp:
+    parent_link: body
+    description: 'TCP convention: collision-clear transit pose for a level PCR plate held at wellplate_pcr.right_side_grasp_flipped
+      by the right arm.'
+    link_T_anchor:
+      xyz: [-0.269268, 1.14602, 1.61007]
+      wxyz: [-0.00716629, -0.704989, 0.00896021, 0.709125]
+  wellplate_slot_1_right_side_flipped_high_tcp:
+    parent_link: body
+    description: 'TCP convention: high front-of-shelf pose for a level PCR plate held at wellplate_pcr.right_side_grasp_flipped
+      by the right arm.'
+    link_T_anchor:
+      xyz: [0.0524693, 1.41567, 2.16556]
+      wxyz: [-0.00716629, -0.704989, 0.00896021, 0.709125]
+  wellplate_slot_1_right_side_flipped_entry_tcp:
+    parent_link: body
+    description: 'TCP convention: front-entry pose for collision-aware horizontal insertion with the validated
+      roll-flipped right-arm side grasp.'
+    link_T_anchor:
+      xyz: [0.401986, 1.0941, 2.30671]
+      wxyz: [-0.00716629, -0.704989, 0.00896021, 0.709125]
+  wellplate_slot_1_right_side_flipped_tcp:
+    parent_link: body
+    description: 'TCP convention: roll-flipped right-arm side-grip release pose solved from wellplate_pcr.right_side_grasp_flipped
+      when nest_base is seated at wellplate_slot_1.'
+    link_T_anchor:
+      xyz: [0.403244, 1.09732, 2.50145]
+      wxyz: [-0.00716629, -0.704989, 0.00896021, 0.709125]
+    grasp: {width: 0.08, standoff: 0.1, gripper_variant: wellplate}
+  wellplate_slot_1_horizontal_grip_entry_tcp:
+    parent_link: body
+    description: 'TCP convention: front entry for a right-arm-held plate using wellplate_pcr.horizontal_grip,
+      150 mm before the paired release pose with unchanged orientation.'
+    link_T_anchor:
+      xyz: [0.359162, 1.09396, 2.28785]
+      wxyz: [0.707982, -0.00379157, 0.00792203, 0.706176]
+  wellplate_slot_1_horizontal_grip_tcp:
+    parent_link: body
+    description: 'TCP convention: exact right-arm release pose paired with wellplate_pcr.horizontal_grip
+      when nest_base is seated at wellplate_slot_1.'
+    link_T_anchor:
+      xyz: [0.360131, 1.09644, 2.43783]
+      wxyz: [0.707982, -0.00379157, 0.00792203, 0.706176]
+    grasp: {width: 0.08, standoff: 0.15, gripper_variant: wellplate}
+  wellplate_slot_1_horizontal_grip_flipped_entry_tcp:
+    parent_link: body
+    description: 'TCP convention: front entry for the 180-degree wrist-roll horizontal grip, 150 mm before
+      release with unchanged orientation.'
+    link_T_anchor:
+      xyz: [0.359162, 1.09396, 2.28785]
+      wxyz: [-0.706176, 0.00792203, 0.00379157, 0.707982]
+  wellplate_slot_1_horizontal_grip_flipped_tcp:
+    parent_link: body
+    description: 'TCP convention: exact right-arm release pose paired with wellplate_pcr.horizontal_grip_flipped
+      when nest_base is seated at wellplate_slot_1.'
+    link_T_anchor:
+      xyz: [0.360131, 1.09644, 2.43783]
+      wxyz: [-0.706176, 0.00792203, 0.00379157, 0.707982]
+    grasp: {width: 0.08, standoff: 0.15, gripper_variant: wellplate}
+  openshelfsbs:
+    parent_link: world
+    description: ''
+    link_T_anchor:
+      xyz: [-0.472773, 0.842294, 0.395929]
+      wxyz: [0.0102662, 0.710573, 0.703159, -0.0234116]
+    grasp: {width: 0.0233, gripper_variant: wellplate}
+  cap_shelf_pick_tcp:
+    parent_link: world
+    description: 'Captured from right_arm on the real rig (log entry 2, grasp). right gripper 678->319
+      without the TCP moving: the grasp. Deepest -y of the whole log, consistent with reaching into the
+      shelf. TCP was [0.364, -1.292, 0.170, 0.831, -1.518, 0.752] (m, rad, intrinsic rpy); gripper_raw=319
+      -- raw units, NOT metres, so no grasp.width is set here. Scope: about openshelf. Parented to world
+      PROVISIONALLY -- re-parent to the object once localize_object_tags has put its true pose in the
+      world, or this anchor will not follow it.'
+    link_T_anchor:
+      xyz: [0.364, -1.292, 0.17]
+      wxyz: [0.719426, 0.041192, -0.693192, -0.014636]
+  cap_shelf_exit_tcp:
+    parent_link: world
+    description: 'Captured from right_arm on the real rig (log entry 3, carry). first pose after the grasp;
+      clears the shelf before the long move TCP was [0.276, -0.308, 0.177, 2.095, -1.536, 2.643] (m, rad,
+      intrinsic rpy); gripper_raw=319 -- raw units, NOT metres, so no grasp.width is set here. Scope:
+      cell-fixed waypoint. Parented to world: correct for a fixed waypoint.'
+    link_T_anchor:
+      xyz: [0.276, -0.308, 0.177]
+      wxyz: [0.671817, -0.182717, -0.689435, 0.19989]

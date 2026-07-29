@@ -1,0 +1,10 @@
+skill_id: reach_openshelf
+version: "1.0.0"
+description: "Move the right arm to the OpenShelf plate anchor (pure motion; pair with a gripper close to receive or open to load). Object + anchor fixed in the skill."
+
+# parameters are derived from the reach_openshelf() signature in robotic_code.py
+
+tags:
+  - openshelf
+  - motion
+  - anchor

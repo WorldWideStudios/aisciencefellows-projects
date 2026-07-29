@@ -1,0 +1,9 @@
+{
+  "name": "mikmak-hack",
+  "description": "",
+  "created_at": "2026-07-25T20:04:50.573Z",
+  "updated_at": "2026-07-25T20:04:50.573Z",
+  "archived": false,
+  "active_workflow": "tem1_kinetics_characterization",
+  "active_world": "pipette_demo_world"
+}

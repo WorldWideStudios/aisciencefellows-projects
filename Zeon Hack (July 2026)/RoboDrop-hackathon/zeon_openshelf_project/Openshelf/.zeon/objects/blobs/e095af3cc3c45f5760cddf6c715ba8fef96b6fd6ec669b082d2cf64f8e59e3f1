@@ -1,0 +1,68 @@
+urdf: fixture_plate.urdf
+articulations:
+  default:
+    description: All joints at rest position
+    joints: {}
+anchors:
+  object:
+    parent_link: world
+    description: Table placement frame, origin at (+X, +Y, -Z) bbox corner
+    link_T_anchor:
+      xyz: [0.225, 0.225, -0.0065]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  mount_a1:
+    parent_link: body
+    description: Wellplate-holder mount position, derived from the four holders actually seated on this
+      fixture plate in pipette_demo_world (2x2 grid, 151 mm pitch in both axes, all at z=0.013). Identity
+      orientation, +Z up - a placement frame, not a TCP approach frame. Snap a holder's `object` anchor
+      here.
+    link_T_anchor:
+      xyz: [-0.308, -0.2899, 0.013]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  mount_a2:
+    parent_link: body
+    description: Wellplate-holder mount position, derived from the four holders actually seated on this
+      fixture plate in pipette_demo_world (2x2 grid, 151 mm pitch in both axes, all at z=0.013). Identity
+      orientation, +Z up - a placement frame, not a TCP approach frame. Snap a holder's `object` anchor
+      here.
+    link_T_anchor:
+      xyz: [-0.3083, -0.1392, 0.013]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  mount_b1:
+    parent_link: body
+    description: Wellplate-holder mount position, derived from the four holders actually seated on this
+      fixture plate in pipette_demo_world (2x2 grid, 151 mm pitch in both axes, all at z=0.013). Identity
+      orientation, +Z up - a placement frame, not a TCP approach frame. Snap a holder's `object` anchor
+      here.
+    link_T_anchor:
+      xyz: [-0.1575, -0.2902, 0.013]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  mount_b2:
+    parent_link: body
+    description: Wellplate-holder mount position, derived from the four holders actually seated on this
+      fixture plate in pipette_demo_world (2x2 grid, 151 mm pitch in both axes, all at z=0.013). Identity
+      orientation, +Z up - a placement frame, not a TCP approach frame. Snap a holder's `object` anchor
+      here.
+    link_T_anchor:
+      xyz: [-0.1573, -0.1392, 0.013]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  cap_fixture_place_tcp:
+    parent_link: world
+    description: 'Captured from left_arm on the real rig (log entry 10, release). left gripper 76->81
+      without the TCP moving: the release onto the fixture plate TCP was [-0.438, -0.021, 0.128, -2.090,
+      1.495, 1.051] (m, rad, intrinsic rpy); gripper_raw=81 -- raw units, NOT metres, so no grasp.width
+      is set here. Scope: about fixture_plate. Parented to world PROVISIONALLY -- re-parent to the object
+      once localize_object_tags has put its true pose in the world, or this anchor will not follow it.'
+    link_T_anchor:
+      xyz: [-0.438, -0.021, 0.128]
+      wxyz: [0.613384, -0.37758, 0.613368, -0.323997]
+  cap_left_retreat_tcp:
+    parent_link: world
+    description: 'Captured from left_arm on the real rig (log entry 11, retreat). straight up 286 mm from
+      the fixture placement, orientation changed, so this is a retreat rather than part of the placement
+      TCP was [-0.470, -0.026, 0.414, 0.033, 1.541, -3.094] (m, rad, intrinsic rpy); gripper_raw=81 --
+      raw units, NOT metres, so no grasp.width is set here. Scope: cell-fixed waypoint. Parented to world:
+      correct for a fixed waypoint.'
+    link_T_anchor:
+      xyz: [-0.47, -0.026, 0.414]
+      wxyz: [0.02856, -0.69592, 0.028406, -0.716988]

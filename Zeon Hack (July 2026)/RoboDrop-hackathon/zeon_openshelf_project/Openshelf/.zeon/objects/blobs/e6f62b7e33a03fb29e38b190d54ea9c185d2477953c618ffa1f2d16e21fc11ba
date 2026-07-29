@@ -1,0 +1,11 @@
+skill_id: place_on_stand
+version: "1.0.0"
+description: "Seat a plate on the tagged stand and release it, so the other arm can take it. The regrasp point of the shelf-to-fixture chain. Releases before snapping."
+
+preconditions: {}   # parsed but NOT enforced by the executor - never gate on these
+postconditions: {}
+safety_rules: []
+tags:
+  - plate
+  - handoff
+world_state_prime: null

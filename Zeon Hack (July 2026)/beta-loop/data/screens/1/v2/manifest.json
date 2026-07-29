@@ -1,0 +1,18 @@
+{
+  "run": 1,
+  "round": 1,
+  "version": 2,
+  "label": "r1-validation-v2",
+  "created_at": "2026-07-25T14:35:00-07:00",
+  "author": "pvjthomas",
+  "status": "active",
+  "supersedes": "data/screens/1/v1/manifest.json",
+  "description": "Round 1 validation — clavulanic acid (positive) + DMSO vehicle (negative) @ 50 µM, 4+4 replicates",
+  "files": {
+    "plate_map": "data/screens/1/v2/plate_map.json",
+    "selection_rationale": "pvjthomas/runs/1/v2/selection_rationale.md",
+    "active_plate_map": "data/plate_map_r1.json",
+    "active_selection_rationale": "pvjthomas/selection_rationale.md",
+    "literature_ref": "data/compound_literature/refs/T19860.json"
+  }
+}

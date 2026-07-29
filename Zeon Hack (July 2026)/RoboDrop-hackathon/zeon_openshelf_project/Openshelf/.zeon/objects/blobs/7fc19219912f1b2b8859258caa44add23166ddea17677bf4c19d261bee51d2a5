@@ -1,0 +1,12 @@
+skill_id: go_to_waypoints
+version: "1.0.0"
+description: "Replay eleven captured arm poses (right then left) via joint moves + gripper."
+parameters:
+  - name: speed
+    type: float
+    default: 0.15
+preconditions: {}
+postconditions: {}
+safety_rules: []
+tags: ["waypoints", "replay"]
+world_state_prime: null

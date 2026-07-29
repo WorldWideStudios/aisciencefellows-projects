@@ -1,0 +1,14 @@
+skill_id: epipette_dispense_test
+version: "1.0.0"
+description: "Calibration sweep: loop over every well running the epipette_dispense motion, but skip the slow descent into the well. Does hover, descend to the rim, and retract for each well so you can eyeball XY alignment without dispensing. Reads calibration_<pipette_name>. No world state is advanced."
+
+# parameters are derived from the epipette_dispense_test() signature in robotic_code.py
+
+preconditions:
+  epipette_connected: true
+
+tags:
+  - pipette_demo
+  - epipette
+  - dispense
+  - test

@@ -1,0 +1,22 @@
+{
+  "run": 2,
+  "round": 2,
+  "version": 5,
+  "label": "r2-discovery-v5",
+  "created_at": "2026-07-25T20:02:17-0700",
+  "author": "pvjthomas",
+  "status": "pending_signoff",
+  "supersedes": "data/screens/2/v4/manifest.json",
+  "note": "v5 keeps v4 concentrations; column-strip layout (one compound per column, B/D/F triplicates)",
+  "description": "Round 2 discovery v5 \u2014 same compounds/concentrations as v4, column-strip layout",
+  "layout": "column_strip",
+  "files": {
+    "compound_list": "data/screens/2/v5/compound_list.json",
+    "compound_list_csv": "data/screens/2/v5/compound_list.csv",
+    "plate_map": "data/screens/2/v5/plate_map.json",
+    "kinetic_schedule": "data/screens/2/v5/kinetic_schedule.json",
+    "selection_rationale": "pvjthomas/runs/2/v5/selection_rationale.md",
+    "active_plate_map": "data/plate_map_r2.json",
+    "active_selection_rationale": "pvjthomas/selection_rationale.md"
+  }
+}

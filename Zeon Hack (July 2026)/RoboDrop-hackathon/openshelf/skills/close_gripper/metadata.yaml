@@ -1,0 +1,9 @@
+skill_id: close_gripper
+version: "1.0.0"
+description: "Close the gripper on the given arm (default: right arm, fully closed)."
+
+# parameters are derived from the close_gripper() signature in robotic_code.py
+
+tags:
+  - openshelf
+  - gripper

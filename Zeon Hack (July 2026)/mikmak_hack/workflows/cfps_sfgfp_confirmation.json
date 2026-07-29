@@ -1,0 +1,370 @@
+{
+  "workflow_id": "cfps_sfgfp_confirmation",
+  "name": "CFPS sfGFP Confirmation (Part 2)",
+  "description": "Part 2 of the TEM-1 inhibitor screen: a go/no-go gate run partway through cfps_mastermix's (Part 1) incubation. Pulls the plate from the shaker, reads sfGFP fluorescence to confirm TEM1 actually expressed (green signal can appear as early as ~30 min), then returns the plate to the shaker to keep incubating. Does not unseal \u2014 reads fluorescence through the gas-permeable seal. Composition only, every skill_id already exists under skills/.",
+  "version": "1.0.0",
+  "author": "pipeline",
+  "created_at": "2026-07-25T00:00:00.000Z",
+  "updated_at": "2026-07-25T00:00:00.000Z",
+  "simulation_validated": false,
+  "objects": [],
+  "inputs": [
+    {
+      "name": "reaction_plate",
+      "type": "object",
+      "is_array": false,
+      "description": "The sealed Part-1 plate currently in the shaker",
+      "defaultValue": "wellplate_96_flatbottom"
+    },
+    {
+      "name": "shaker",
+      "type": "object",
+      "is_array": false,
+      "description": "Wellplate shaker",
+      "defaultValue": "wellplate_shaker_1"
+    },
+    {
+      "name": "platereader",
+      "type": "object",
+      "is_array": false,
+      "description": "Plate reader",
+      "defaultValue": "plate_reader"
+    },
+    {
+      "name": "shaker_slot",
+      "type": "string",
+      "description": "Shaker slot anchor to load the plate back into",
+      "defaultValue": "slot_1"
+    },
+    {
+      "name": "run_name",
+      "type": "string",
+      "description": "Name for this run's saved output folder",
+      "defaultValue": "cfps_sfgfp_confirmation_run"
+    }
+  ],
+  "nodes": [
+    {
+      "node_id": "start_0",
+      "type": "start",
+      "label": "Start"
+    },
+    {
+      "node_id": "shaker_off",
+      "type": "skill",
+      "label": "Pause Shaker",
+      "skill_id": "wellplate_shaker_run",
+      "parameters": {
+        "shaker": {
+          "$input": "shaker"
+        },
+        "ensure_state": "off"
+      }
+    },
+    {
+      "node_id": "shaker_open",
+      "type": "skill",
+      "label": "Open Shaker Lid",
+      "skill_id": "wellplate_shaker_open",
+      "parameters": {
+        "shaker": {
+          "$input": "shaker"
+        }
+      }
+    },
+    {
+      "node_id": "grab_plate",
+      "type": "skill",
+      "label": "Grab Plate From Shaker",
+      "skill_id": "wellplate_grab",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "grasp_anchor": "grasp_longside_platereader"
+      }
+    },
+    {
+      "node_id": "reader_open_pre",
+      "type": "skill",
+      "label": "Open Reader Lid",
+      "skill_id": "platereader_open",
+      "parameters": {
+        "platereader": {
+          "$input": "platereader"
+        }
+      }
+    },
+    {
+      "node_id": "reader_load",
+      "type": "skill",
+      "label": "Load Plate Into Reader",
+      "skill_id": "platereader_load",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "platereader": {
+          "$input": "platereader"
+        }
+      }
+    },
+    {
+      "node_id": "reader_closed",
+      "type": "skill",
+      "label": "Close Reader Lid",
+      "skill_id": "platereader_closed",
+      "parameters": {
+        "platereader": {
+          "$input": "platereader"
+        }
+      }
+    },
+    {
+      "node_id": "reader_measure",
+      "type": "skill",
+      "label": "sfGFP Fluorescence Read",
+      "description": "Assumes the operator has selected the sfGFP fluorescence protocol (485/528 nm) in Gen5 before this run \u2014 a single endpoint read, not kinetic.",
+      "skill_id": "platereader_measure",
+      "parameters": {}
+    },
+    {
+      "node_id": "reader_open_post",
+      "type": "skill",
+      "label": "Open Reader Lid (retrieve)",
+      "skill_id": "platereader_open",
+      "parameters": {
+        "platereader": {
+          "$input": "platereader"
+        }
+      }
+    },
+    {
+      "node_id": "reader_unload",
+      "type": "skill",
+      "label": "Unload Plate From Reader",
+      "skill_id": "platereader_unload",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "platereader": {
+          "$input": "platereader"
+        }
+      }
+    },
+    {
+      "node_id": "shaker_load",
+      "type": "skill",
+      "label": "Return Plate To Shaker",
+      "skill_id": "wellplate_shaker_load",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "wellplate_shaker": {
+          "$input": "shaker"
+        },
+        "slot_anchor": {
+          "$input": "shaker_slot"
+        }
+      }
+    },
+    {
+      "node_id": "shaker_close",
+      "type": "skill",
+      "label": "Close Shaker Lid",
+      "skill_id": "wellplate_shaker_close",
+      "parameters": {
+        "shaker": {
+          "$input": "shaker"
+        }
+      }
+    },
+    {
+      "node_id": "shaker_on",
+      "type": "skill",
+      "label": "Resume Shaker",
+      "skill_id": "wellplate_shaker_run",
+      "parameters": {
+        "shaker": {
+          "$input": "shaker"
+        },
+        "ensure_state": "on"
+      }
+    },
+    {
+      "node_id": "save_run",
+      "type": "skill",
+      "label": "Save Run Folder",
+      "skill_id": "save_run_folder",
+      "parameters": {
+        "run_name": {
+          "$input": "run_name"
+        },
+        "checkpoint": "end"
+      }
+    },
+    {
+      "node_id": "end_1",
+      "type": "end",
+      "label": "End"
+    },
+    {
+      "node_id": "save_run_start",
+      "type": "skill",
+      "label": "Checkpoint: run started",
+      "description": "Registers this execution in data/logs/ before any hardware moves, so a run that fails early is still visible to the tracker instead of leaving nothing behind. Its outgoing edge is deliberately 'default', not 'on_success': a checkpoint is bookkeeping, and a failure to record progress must never abort a run that is physically fine. The validator flags this as unconditional \u2014 that is the intent.",
+      "skill_id": "save_run_folder",
+      "parameters": {
+        "run_name": {
+          "$input": "run_name"
+        },
+        "checkpoint": "start"
+      }
+    },
+    {
+      "node_id": "save_run_mid",
+      "type": "skill",
+      "label": "Checkpoint: pipetting done",
+      "description": "Refreshes the run folder once all pipetting is complete, before labware handling \u2014 so a failure during plate/reader moves still has every dispensed leg on record. Its outgoing edge is deliberately 'default', not 'on_success': a checkpoint is bookkeeping, and a failure to record progress must never abort a run that is physically fine. The validator flags this as unconditional \u2014 that is the intent.",
+      "skill_id": "save_run_folder",
+      "parameters": {
+        "run_name": {
+          "$input": "run_name"
+        },
+        "checkpoint": "mid"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e_start_0_save_run_start",
+      "from_node": "start_0",
+      "to_node": "save_run_start",
+      "condition": {
+        "type": "default"
+      }
+    },
+    {
+      "edge_id": "e1",
+      "from_node": "shaker_off",
+      "to_node": "shaker_open",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_shaker_open_save_run_mid",
+      "from_node": "shaker_open",
+      "to_node": "save_run_mid",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e3",
+      "from_node": "grab_plate",
+      "to_node": "reader_open_pre",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e4",
+      "from_node": "reader_open_pre",
+      "to_node": "reader_load",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e5",
+      "from_node": "reader_load",
+      "to_node": "reader_closed",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e6",
+      "from_node": "reader_closed",
+      "to_node": "reader_measure",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e7",
+      "from_node": "reader_measure",
+      "to_node": "reader_open_post",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e8",
+      "from_node": "reader_open_post",
+      "to_node": "reader_unload",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e9",
+      "from_node": "reader_unload",
+      "to_node": "shaker_load",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e10",
+      "from_node": "shaker_load",
+      "to_node": "shaker_close",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e11",
+      "from_node": "shaker_close",
+      "to_node": "shaker_on",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e12",
+      "from_node": "shaker_on",
+      "to_node": "save_run",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e13",
+      "from_node": "save_run",
+      "to_node": "end_1",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_save_run_start_shaker_off",
+      "from_node": "save_run_start",
+      "to_node": "shaker_off",
+      "condition": {
+        "type": "default"
+      }
+    },
+    {
+      "edge_id": "e_save_run_mid_grab_plate",
+      "from_node": "save_run_mid",
+      "to_node": "grab_plate",
+      "condition": {
+        "type": "default"
+      }
+    }
+  ]
+}

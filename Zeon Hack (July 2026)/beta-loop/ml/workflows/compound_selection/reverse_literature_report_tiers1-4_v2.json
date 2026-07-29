@@ -1,0 +1,615 @@
+{
+  "search_version": 2,
+  "compound_count": 23,
+  "summary": {
+    "checked": 23,
+    "map_count": 69,
+    "search_cache_hits": 0,
+    "map_cache_hits": 0,
+    "refs_written": [
+      "T0138",
+      "T0198",
+      "T0199",
+      "T0234",
+      "T0366",
+      "T1001",
+      "T1005",
+      "T1008",
+      "T1213",
+      "T1262",
+      "T0814",
+      "T6385",
+      "T6685",
+      "T8390",
+      "T14081",
+      "TQ0056",
+      "T14979",
+      "T19860",
+      "T67978",
+      "T30787",
+      "T0985",
+      "T1631",
+      "T13038"
+    ],
+    "refs_skipped_curated": [],
+    "cache_path": "/Users/fio/zeon_hack/ml/workflows/compound_selection/literature_search_cache.json"
+  },
+  "nitrocefin_extractions": [],
+  "ki_ic50_extractions": [
+    "T19860"
+  ],
+  "compounds": [
+    {
+      "compound_id": "T0138",
+      "name": "Cefpiramide acid",
+      "tiers": [
+        "Tier 3"
+      ],
+      "scaffold_class": "antibiotic_substrate",
+      "query": "TEM-1 Cefpiramide acid beta-lactamase nitrocefin hydrolysis substrate",
+      "sources_searched": [
+        "pmc",
+        "biorxiv",
+        "proteins"
+      ],
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "ref_status": "written",
+      "entries_appended": 3,
+      "entries_skipped_duplicate": 0,
+      "ki_uM": null,
+      "ic50_uM": null,
+      "nitrocefin_uM": null,
+      "enzyme_nM": null,
+      "activity_entries": []
+    },
+    {
+      "compound_id": "T0198",
+      "name": "Ceftiofur sodium",
+      "tiers": [
+        "Tier 3"
+      ],
+      "scaffold_class": "antibiotic_substrate",
+      "query": "TEM-1 Ceftiofur sodium beta-lactamase nitrocefin hydrolysis substrate",
+      "sources_searched": [
+        "pmc",
+        "biorxiv",
+        "proteins"
+      ],
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "ref_status": "written",
+      "entries_appended": 3,
+      "entries_skipped_duplicate": 0,
+      "ki_uM": null,
+      "ic50_uM": null,
+      "nitrocefin_uM": null,
+      "enzyme_nM": null,
+      "activity_entries": []
+    },
+    {
+      "compound_id": "T0199",
+      "name": "Cephradine",
+      "tiers": [
+        "Tier 3"
+      ],
+      "scaffold_class": "antibiotic_substrate",
+      "query": "TEM-1 Cephradine beta-lactamase nitrocefin hydrolysis substrate",
+      "sources_searched": [
+        "pmc",
+        "biorxiv",
+        "proteins"
+      ],
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "ref_status": "written",
+      "entries_appended": 3,
+      "entries_skipped_duplicate": 0,
+      "ki_uM": null,
+      "ic50_uM": null,
+      "nitrocefin_uM": null,
+      "enzyme_nM": null,
+      "activity_entries": []
+    },
+    {
+      "compound_id": "T0234",
+      "name": "Methicillin sodium salt",
+      "tiers": [
+        "Tier 3"
+      ],
+      "scaffold_class": "antibiotic_substrate",
+      "query": "TEM-1 Methicillin sodium salt beta-lactamase nitrocefin hydrolysis substrate",
+      "sources_searched": [
+        "pmc",
+        "biorxiv",
+        "proteins"
+      ],
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "ref_status": "written",
+      "entries_appended": 3,
+      "entries_skipped_duplicate": 0,
+      "ki_uM": null,
+      "ic50_uM": null,
+      "nitrocefin_uM": null,
+      "enzyme_nM": null,
+      "activity_entries": []
+    },
+    {
+      "compound_id": "T0366",
+      "name": "Cefadroxil",
+      "tiers": [
+        "Tier 3",
+        "Tier 4"
+      ],
+      "scaffold_class": "antibiotic_substrate",
+      "query": "TEM-1 Cefadroxil beta-lactamase nitrocefin hydrolysis substrate",
+      "sources_searched": [
+        "pmc",
+        "biorxiv",
+        "proteins"
+      ],
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "ref_status": "written",
+      "entries_appended": 3,
+      "entries_skipped_duplicate": 0,
+      "ki_uM": null,
+      "ic50_uM": null,
+      "nitrocefin_uM": null,
+      "enzyme_nM": null,
+      "activity_entries": []
+    },
+    {
+      "compound_id": "T1001",
+      "name": "Dicloxacillin Sodium hydrate",
+      "tiers": [
+        "Tier 3"
+      ],
+      "scaffold_class": "antibiotic_substrate",
+      "query": "TEM-1 Dicloxacillin Sodium hydrate beta-lactamase nitrocefin hydrolysis substrate",
+      "sources_searched": [
+        "pmc",
+        "biorxiv",
+        "proteins"
+      ],
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "ref_status": "written",
+      "entries_appended": 3,
+      "entries_skipped_duplicate": 0,
+      "ki_uM": null,
+      "ic50_uM": null,
+      "nitrocefin_uM": null,
+      "enzyme_nM": null,
+      "activity_entries": []
+    },
+    {
+      "compound_id": "T1005",
+      "name": "Amoxicillin",
+      "tiers": [
+        "Tier 3"
+      ],
+      "scaffold_class": "antibiotic_substrate",
+      "query": "TEM-1 Amoxicillin beta-lactamase nitrocefin hydrolysis substrate",
+      "sources_searched": [
+        "pmc",
+        "biorxiv",
+        "proteins"
+      ],
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "ref_status": "written",
+      "entries_appended": 3,
+      "entries_skipped_duplicate": 0,
+      "ki_uM": null,
+      "ic50_uM": null,
+      "nitrocefin_uM": null,
+      "enzyme_nM": null,
+      "activity_entries": []
+    },
+    {
+      "compound_id": "T1008",
+      "name": "Cephalexin",
+      "tiers": [
+        "Tier 3"
+      ],
+      "scaffold_class": "antibiotic_substrate",
+      "query": "TEM-1 Cephalexin beta-lactamase nitrocefin hydrolysis substrate",
+      "sources_searched": [
+        "pmc",
+        "biorxiv",
+        "proteins"
+      ],
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "ref_status": "written",
+      "entries_appended": 3,
+      "entries_skipped_duplicate": 0,
+      "ki_uM": null,
+      "ic50_uM": null,
+      "nitrocefin_uM": null,
+      "enzyme_nM": null,
+      "activity_entries": []
+    },
+    {
+      "compound_id": "T1213",
+      "name": "Piperacillin sodium",
+      "tiers": [
+        "Tier 2"
+      ],
+      "scaffold_class": "antibiotic_substrate",
+      "query": "TEM-1 Piperacillin sodium beta-lactamase nitrocefin hydrolysis substrate",
+      "sources_searched": [
+        "pmc",
+        "biorxiv",
+        "proteins"
+      ],
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "ref_status": "written",
+      "entries_appended": 3,
+      "entries_skipped_duplicate": 0,
+      "ki_uM": null,
+      "ic50_uM": null,
+      "nitrocefin_uM": null,
+      "enzyme_nM": null,
+      "activity_entries": []
+    },
+    {
+      "compound_id": "T1262",
+      "name": "Tazobactam",
+      "tiers": [
+        "Tier 1"
+      ],
+      "scaffold_class": "inhibitor",
+      "query": "TEM-1 Tazobactam beta-lactamase inhibitor nitrocefin Ki IC50",
+      "sources_searched": [
+        "pmc",
+        "biorxiv",
+        "proteins"
+      ],
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "ref_status": "written",
+      "entries_appended": 3,
+      "entries_skipped_duplicate": 0,
+      "ki_uM": null,
+      "ic50_uM": null,
+      "nitrocefin_uM": null,
+      "enzyme_nM": null,
+      "activity_entries": []
+    },
+    {
+      "compound_id": "T0814",
+      "name": "Ampicillin Trihydrate",
+      "tiers": [
+        "Tier 4"
+      ],
+      "scaffold_class": "antibiotic_substrate",
+      "query": "TEM-1 Ampicillin Trihydrate beta-lactamase nitrocefin hydrolysis substrate",
+      "sources_searched": [
+        "pmc",
+        "biorxiv",
+        "proteins"
+      ],
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "ref_status": "written",
+      "entries_appended": 3,
+      "entries_skipped_duplicate": 0,
+      "ki_uM": null,
+      "ic50_uM": null,
+      "nitrocefin_uM": null,
+      "enzyme_nM": null,
+      "activity_entries": []
+    },
+    {
+      "compound_id": "T6385",
+      "name": "Amoxicillin Sodium",
+      "tiers": [
+        "Tier 4"
+      ],
+      "scaffold_class": "antibiotic_substrate",
+      "query": "TEM-1 Amoxicillin Sodium beta-lactamase nitrocefin hydrolysis substrate",
+      "sources_searched": [
+        "pmc",
+        "biorxiv",
+        "proteins"
+      ],
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "ref_status": "written",
+      "entries_appended": 3,
+      "entries_skipped_duplicate": 0,
+      "ki_uM": null,
+      "ic50_uM": null,
+      "nitrocefin_uM": null,
+      "enzyme_nM": null,
+      "activity_entries": []
+    },
+    {
+      "compound_id": "T6685",
+      "name": "Sulbactam sodium",
+      "tiers": [
+        "Tier 1"
+      ],
+      "scaffold_class": "inhibitor",
+      "query": "TEM-1 Sulbactam sodium beta-lactamase inhibitor nitrocefin Ki IC50",
+      "sources_searched": [
+        "pmc",
+        "biorxiv",
+        "proteins"
+      ],
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "ref_status": "written",
+      "entries_appended": 3,
+      "entries_skipped_duplicate": 0,
+      "ki_uM": null,
+      "ic50_uM": null,
+      "nitrocefin_uM": null,
+      "enzyme_nM": null,
+      "activity_entries": []
+    },
+    {
+      "compound_id": "T8390",
+      "name": "Cefazolin",
+      "tiers": [
+        "Tier 4"
+      ],
+      "scaffold_class": "antibiotic_substrate",
+      "query": "TEM-1 Cefazolin beta-lactamase nitrocefin hydrolysis substrate",
+      "sources_searched": [
+        "pmc",
+        "biorxiv",
+        "proteins"
+      ],
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "ref_status": "written",
+      "entries_appended": 3,
+      "entries_skipped_duplicate": 0,
+      "ki_uM": null,
+      "ic50_uM": null,
+      "nitrocefin_uM": null,
+      "enzyme_nM": null,
+      "activity_entries": []
+    },
+    {
+      "compound_id": "T14081",
+      "name": "Enmetazobactam",
+      "tiers": [
+        "Tier 1"
+      ],
+      "scaffold_class": "inhibitor",
+      "query": "TEM-1 Enmetazobactam beta-lactamase inhibitor nitrocefin Ki IC50",
+      "sources_searched": [
+        "pmc",
+        "biorxiv",
+        "proteins"
+      ],
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "ref_status": "written",
+      "entries_appended": 3,
+      "entries_skipped_duplicate": 0,
+      "ki_uM": null,
+      "ic50_uM": null,
+      "nitrocefin_uM": null,
+      "enzyme_nM": null,
+      "activity_entries": []
+    },
+    {
+      "compound_id": "TQ0056",
+      "name": "Cefuracetime",
+      "tiers": [
+        "Tier 4"
+      ],
+      "scaffold_class": "antibiotic_substrate",
+      "query": "TEM-1 Cefuracetime beta-lactamase nitrocefin hydrolysis substrate",
+      "sources_searched": [
+        "pmc",
+        "biorxiv",
+        "proteins"
+      ],
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "ref_status": "written",
+      "entries_appended": 3,
+      "entries_skipped_duplicate": 0,
+      "ki_uM": null,
+      "ic50_uM": null,
+      "nitrocefin_uM": null,
+      "enzyme_nM": null,
+      "activity_entries": []
+    },
+    {
+      "compound_id": "T14979",
+      "name": "Clavulanate lithium",
+      "tiers": [
+        "Tier 2"
+      ],
+      "scaffold_class": "inhibitor",
+      "query": "TEM-1 Clavulanate lithium beta-lactamase inhibitor nitrocefin Ki IC50",
+      "sources_searched": [
+        "pmc",
+        "biorxiv",
+        "proteins"
+      ],
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "ref_status": "written",
+      "entries_appended": 3,
+      "entries_skipped_duplicate": 0,
+      "ki_uM": null,
+      "ic50_uM": null,
+      "nitrocefin_uM": null,
+      "enzyme_nM": null,
+      "activity_entries": []
+    },
+    {
+      "compound_id": "T19860",
+      "name": "Clavulanic Acid",
+      "tiers": [
+        "Tier 1"
+      ],
+      "scaffold_class": "inhibitor",
+      "query": "TEM-1 Clavulanic Acid beta-lactamase inhibitor nitrocefin Ki IC50",
+      "sources_searched": [
+        "pmc",
+        "biorxiv",
+        "proteins"
+      ],
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "ref_status": "written",
+      "entries_appended": 3,
+      "entries_skipped_duplicate": 0,
+      "ki_uM": 0.022,
+      "ic50_uM": null,
+      "nitrocefin_uM": null,
+      "enzyme_nM": null,
+      "activity_entries": [
+        {
+          "paperclip_source": null,
+          "ki_uM": 0.85,
+          "ic50_uM": null,
+          "nitrocefin_uM": null,
+          "enzyme_nM": null,
+          "pmid": "40484381",
+          "pmcid": "PMC12274840"
+        },
+        {
+          "paperclip_source": null,
+          "ki_uM": 0.022,
+          "ic50_uM": null,
+          "nitrocefin_uM": null,
+          "enzyme_nM": null,
+          "pmid": null,
+          "pmcid": "PMC9100253"
+        }
+      ]
+    },
+    {
+      "compound_id": "T67978",
+      "name": "Cefuzonam",
+      "tiers": [
+        "Tier 4"
+      ],
+      "scaffold_class": "antibiotic_substrate",
+      "query": "TEM-1 Cefuzonam beta-lactamase nitrocefin hydrolysis substrate",
+      "sources_searched": [
+        "pmc",
+        "biorxiv",
+        "proteins"
+      ],
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "ref_status": "written",
+      "entries_appended": 3,
+      "entries_skipped_duplicate": 0,
+      "ki_uM": null,
+      "ic50_uM": null,
+      "nitrocefin_uM": null,
+      "enzyme_nM": null,
+      "activity_entries": []
+    },
+    {
+      "compound_id": "T30787",
+      "name": "Cefetamet sodium",
+      "tiers": [
+        "Tier 4"
+      ],
+      "scaffold_class": "antibiotic_substrate",
+      "query": "TEM-1 Cefetamet sodium beta-lactamase nitrocefin hydrolysis substrate",
+      "sources_searched": [
+        "pmc",
+        "biorxiv",
+        "proteins"
+      ],
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "ref_status": "written",
+      "entries_appended": 3,
+      "entries_skipped_duplicate": 0,
+      "ki_uM": null,
+      "ic50_uM": null,
+      "nitrocefin_uM": null,
+      "enzyme_nM": null,
+      "activity_entries": []
+    },
+    {
+      "compound_id": "T0985",
+      "name": "Oxacillin sodium salt",
+      "tiers": [
+        "Tier 4"
+      ],
+      "scaffold_class": "antibiotic_substrate",
+      "query": "TEM-1 Oxacillin sodium salt beta-lactamase nitrocefin hydrolysis substrate",
+      "sources_searched": [
+        "pmc",
+        "biorxiv",
+        "proteins"
+      ],
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "ref_status": "written",
+      "entries_appended": 3,
+      "entries_skipped_duplicate": 0,
+      "ki_uM": null,
+      "ic50_uM": null,
+      "nitrocefin_uM": null,
+      "enzyme_nM": null,
+      "activity_entries": []
+    },
+    {
+      "compound_id": "T1631",
+      "name": "Sulbactam",
+      "tiers": [
+        "Tier 2"
+      ],
+      "scaffold_class": "inhibitor",
+      "query": "TEM-1 Sulbactam beta-lactamase inhibitor nitrocefin Ki IC50",
+      "sources_searched": [
+        "pmc",
+        "biorxiv",
+        "proteins"
+      ],
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "ref_status": "written",
+      "entries_appended": 3,
+      "entries_skipped_duplicate": 0,
+      "ki_uM": null,
+      "ic50_uM": null,
+      "nitrocefin_uM": null,
+      "enzyme_nM": null,
+      "activity_entries": []
+    },
+    {
+      "compound_id": "T13038",
+      "name": "Sultamicillin",
+      "tiers": [
+        "Tier 2"
+      ],
+      "scaffold_class": "inhibitor",
+      "query": "TEM-1 Sultamicillin beta-lactamase inhibitor nitrocefin Ki IC50",
+      "sources_searched": [
+        "pmc",
+        "biorxiv",
+        "proteins"
+      ],
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "ref_status": "written",
+      "entries_appended": 3,
+      "entries_skipped_duplicate": 0,
+      "ki_uM": null,
+      "ic50_uM": null,
+      "nitrocefin_uM": null,
+      "enzyme_nM": null,
+      "activity_entries": []
+    }
+  ]
+}

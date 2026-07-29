@@ -1,0 +1,11 @@
+skill_id: place_on_shelf
+version: "1.0.0"
+description: "Place a held item into a slot, releasing before recording the pose."
+
+preconditions: {}   # parsed but NOT enforced by the executor - never gate on these
+postconditions: {}
+safety_rules: []
+tags:
+  - plate
+  - handoff
+world_state_prime: null

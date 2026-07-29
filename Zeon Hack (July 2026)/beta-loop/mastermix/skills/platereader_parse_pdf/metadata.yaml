@@ -1,0 +1,16 @@
+skill_id: platereader_parse_pdf
+version: "1.0.0"
+description: >-
+  Parse a Gen5 PDF exported by platereader_measure into structured JSON
+  and optional CSV. Supports endpoint absorbance tables and kinetic time courses
+  (mode=auto|endpoint|kinetic). Writes artifacts beside the source PDF under
+  data/platereader/<execution_id>/.
+
+# parameters are derived from the platereader_parse_pdf() signature in robotic_code.py
+
+tags:
+  - plate_reader
+  - analysis
+  - pdf
+  - gen5
+  - measure

@@ -1,0 +1,18 @@
+skill_id: epipette_grey_eject
+version: "1.0.0"
+description: "Eject tip from grey Picus pipette"
+
+# parameters are derived from the epipette_grey_eject() signature in robotic_code.py
+
+preconditions:
+  epipette_connected: true
+  tip_attached: true
+
+postconditions:
+  tip_ejected: true
+
+tags:
+  - epipette
+  - epipette_grey
+  - pipette
+  - tip

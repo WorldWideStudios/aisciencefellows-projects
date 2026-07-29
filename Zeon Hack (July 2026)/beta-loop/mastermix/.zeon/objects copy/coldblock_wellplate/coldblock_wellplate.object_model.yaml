@@ -1,0 +1,120 @@
+urdf: coldblock_wellplate.urdf
+parts:
+  body:
+    links: [body]
+    description: Cold block for a wellplate (~164.6 x 90.5 x 37.0 mm). PLY with per-vertex
+      colours baked from the source texture (no .obj/.png needed).
+articulations:
+  default:
+    description: Static object, no actuated joints
+    joints: {}
+anchors:
+  object:
+    parent_link: world
+    description: Table placement frame, origin at the (max_x, max_y, min_z) bbox corner.
+      Mesh is authored in millimetres and scaled 0.001 (mm->m) in the URDF; it is
+      already Z-up with the base on z=0, so the anchor uses identity rotation.
+    link_T_anchor:
+      xyz: [0.0823213, -0.0452658, -1.25066e-14]
+      wxyz: [-0.707107, 0.0, 0.0, 0.707107]
+  A1:
+    parent_link: body
+    description: A1 alignment
+    link_T_anchor:
+      xyz: [-0.0505211, 0.0315172, 0.0323771]
+      wxyz: [0.707107, -1.93529e-47, 1.3547e-47, -0.707107]
+  H12:
+    parent_link: body
+    description: H12 alignment
+    link_T_anchor:
+      xyz: [0.0499472, -0.0320938, 0.0323771]
+      wxyz: [0.707107, -6.77351e-48, 1.93529e-48, -0.707107]
+  hole_1:
+    parent_link: body
+    description: hole_1 top of hole
+    link_T_anchor:
+      xyz: [-0.0733067, 0.034302, 0.035788]
+      wxyz: [0.707107, 2.39492e-47, -5.80587e-48, -0.707107]
+  hole_2:
+    parent_link: body
+    description: hole_2 top of hole (interpolated hole_1->hole_5)
+    link_T_anchor:
+      xyz: [-0.0733067, 0.01693243, 0.035788]
+      wxyz: [0.707107, 0.0, 0.0, -0.707107]
+  hole_3:
+    parent_link: body
+    description: hole_3 top of hole (interpolated hole_1->hole_5)
+    link_T_anchor:
+      xyz: [-0.0733067, -0.00043715, 0.035788]
+      wxyz: [0.707107, 0.0, 0.0, -0.707107]
+  hole_4:
+    parent_link: body
+    description: hole_4 top of hole (interpolated hole_1->hole_5)
+    link_T_anchor:
+      xyz: [-0.0733067, -0.01780672, 0.035788]
+      wxyz: [0.707107, 0.0, 0.0, -0.707107]
+  hole_5:
+    parent_link: body
+    description: hole_5 top of hole
+    link_T_anchor:
+      xyz: [-0.0733067, -0.0351763, 0.035788]
+      wxyz: [0.707107, 6.71303e-47, 1.93529e-47, -0.707107]
+  hole_10:
+    parent_link: body
+    description: hole_10 top of hole
+    link_T_anchor:
+      xyz: [0.0728991, -0.0351763, 0.035788]
+      wxyz: [0.707107, 1.10977e-46, 5.03175e-47, -0.707107]
+  hole_6:
+    parent_link: body
+    description: hole_6 top of hole
+    link_T_anchor:
+      xyz: [0.07281, 0.034302, 0.035788]
+      wxyz: [0.707107, 6.71303e-47, -9.67644e-48, -0.707107]
+  hole_7:
+    parent_link: body
+    description: hole_7 top of hole (interpolated hole_6->hole_10)
+    link_T_anchor:
+      xyz: [0.07283228, 0.01693243, 0.035788]
+      wxyz: [0.707107, 0.0, 0.0, -0.707107]
+  hole_8:
+    parent_link: body
+    description: hole_8 top of hole (interpolated hole_6->hole_10)
+    link_T_anchor:
+      xyz: [0.07285455, -0.00043715, 0.035788]
+      wxyz: [0.707107, 0.0, 0.0, -0.707107]
+  hole_9:
+    parent_link: body
+    description: hole_9 top of hole (interpolated hole_6->hole_10)
+    link_T_anchor:
+      xyz: [0.07287682, -0.01780672, 0.035788]
+      wxyz: [0.707107, 0.0, 0.0, -0.707107]
+  bottom_center:
+    parent_link: body
+    description: bottom center coordinate of the mesh
+    link_T_anchor:
+      xyz: [-0.000376688, -0.000492797, -0.000110344]
+      wxyz: [0.707107, 5.08013e-47, 7.74115e-48, -0.707107]
+  top_center:
+    parent_link: body
+    description: Top-center of the mesh - on the top surface, centered in the hole
+      array (directly above bottom_center). z is the top-surface height at the block
+      centre (~34.3 mm); XY matches bottom_center.
+    link_T_anchor:
+      xyz: [-0.000376688, -0.000492797, 0.034279]
+      wxyz: [0.707107, 9.70063e-47, -1.93529e-48, -0.707107]
+  depth_top:
+    parent_link: body
+    description: Depth reference — at the hole top (hole_1 z=0.035788). Colinear (same XY)
+      with depth_bottom; the epipette skills use the 3D distance between the two as the
+      descent depth, which is exact at any object orientation.
+    link_T_anchor:
+      xyz: [-0.000376688, -0.000492797, 0.035788]
+      wxyz: [0.707107, 0.0, 0.0, -0.707107]
+  depth_bottom:
+    parent_link: body
+    description: Depth reference — 2.81 cm below the hole top. distance(depth_top, depth_bottom)
+      = 2.81 cm = how far the tip descends below the hole top when aspirating/dispensing.
+    link_T_anchor:
+      xyz: [-0.000376688, -0.000492797, 0.007688]
+      wxyz: [0.707107, 0.0, 0.0, -0.707107]

@@ -1,0 +1,49 @@
+{
+  "workflow_id": "grab_plate_then_pose_sequence",
+  "name": "Grab Plate Then Pose Sequence",
+  "description": "Grip a wellplate with the right arm at hold_plate and hold it in place, then run the left arm through the captured left_arm_pose_sequence_1 trajectory. Right arm is never touched by the sequence step.",
+  "version": "1.0.0",
+  "author": "zeon",
+  "created_at": "2026-07-26T00:00:00.000Z",
+  "updated_at": "2026-07-26T00:00:00.000Z",
+  "simulation_validated": false,
+  "objects": [],
+  "inputs": [
+    { "name": "plate", "type": "object", "is_array": false, "description": "Plate to pick up", "defaultValue": "wellplate_96_deep" }
+  ],
+  "nodes": [
+    {
+      "node_id": "start_0",
+      "type": "start",
+      "label": "Start"
+    },
+    {
+      "node_id": "grab_plate",
+      "type": "skill",
+      "label": "Hold Plate Down",
+      "description": "Grip the plate at its 'hold_plate' anchor with the right arm and hold it in place — no lift, no retract.",
+      "skill_id": "wellplate_hold",
+      "parameters": {
+        "plate": { "$input": "plate" }
+      }
+    },
+    {
+      "node_id": "pose_sequence",
+      "type": "skill",
+      "label": "Left Arm Pose Sequence 1",
+      "description": "Run the left arm through the captured 10-waypoint trajectory. Never touches the right arm, so the plate hold is undisturbed.",
+      "skill_id": "left_arm_pose_sequence_1",
+      "parameters": {}
+    },
+    {
+      "node_id": "end_1",
+      "type": "end",
+      "label": "End"
+    }
+  ],
+  "edges": [
+    { "edge_id": "e0", "from_node": "start_0",   "to_node": "grab_plate",     "condition": { "type": "default" } },
+    { "edge_id": "e1", "from_node": "grab_plate", "to_node": "pose_sequence", "condition": { "type": "on_success" } },
+    { "edge_id": "e2", "from_node": "pose_sequence", "to_node": "end_1",     "condition": { "type": "on_success" } }
+  ]
+}

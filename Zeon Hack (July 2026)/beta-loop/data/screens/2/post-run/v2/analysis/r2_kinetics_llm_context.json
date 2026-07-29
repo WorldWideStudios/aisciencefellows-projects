@@ -1,0 +1,802 @@
+{
+  "feed_to_llm": true,
+  "context_marker": "LLM_INTERPRETATION_INPUT",
+  "context_type": "kinetics_interpretation",
+  "context_version": "1.0",
+  "interpretation_tasks": [
+    "Summarize QC gate pass/fail and plausible root causes (controls, timing, slope window).",
+    "Interpret notable pattern buckets (flat rows, high A0, rising, peak-decline, wavelength divergence).",
+    "Reconcile compound hit calls with tier/substrate priors; flag surprises and timing suspects.",
+    "Recommend follow-up (adjust slope window, re-run controls, dose-response picks) if warranted."
+  ],
+  "deterministic_input_sources": {
+    "round_summary": "analysis.kinetics.analyze_kinetics_file",
+    "pattern_report": "analysis.kinetics_eda.summarize_kinetics_patterns",
+    "plate_map": "data/screens/.../plate_map.json",
+    "parsed_metadata": "gen5_pdf.parse_gen5_kinetic_pdf (optional)"
+  },
+  "deterministic_inputs": {
+    "run_metadata": {
+      "round": 2,
+      "run": 2,
+      "version": 5,
+      "assay_type": "single_point",
+      "layout_notes": "96-well flat bottom, column-strip layout: no edge wells (rows A/H, cols 1/12 empty). X-spaced sample columns only (no horizontally adjacent samples): B/D/F @ 2/4/6/8/10, then C/E/G @ 5/9, then C/E/G @ 3/7 for overflow. Controls (9) on B/D/F @ 3/7 and C/E/G @ 11. T1262 @ 1.0 \u00b5M (rule 2); all others @ 50 \u00b5M unless noted in compound_list.json.",
+      "slope_window_start_s": 180.0,
+      "slope_window_end_s": 480.0,
+      "reader_type": "ELx808",
+      "setpoint_temperature_c": 37.0,
+      "kinetic_runtime_s": 900.0,
+      "kinetic_interval_s": 30.0,
+      "kinetic_reads": 31,
+      "experiment_path": "DB:\\Experiments\\FINAL_TEAM3.xpt",
+      "protocol_path": "DB:\\Protocols\\hackathon_mikmak_kinetic_FINAL.prt"
+    },
+    "qc_gates": {
+      "q1_pass": true,
+      "q1t_timing_unknown": false,
+      "q1t_timing_stagger": true,
+      "q2_pass": false,
+      "q2_endpoint_pass": true,
+      "q3_pass": true,
+      "pos_ctrl_median_pct": 83.3
+    },
+    "control_stats": {
+      "median_vehicle_slope": 2e-05,
+      "median_no_tem1_slope": 7e-06,
+      "median_vehicle_a490_endpoint": 0.123,
+      "median_no_tem1_a490_endpoint": 0.057,
+      "endpoint_dynamic_range": 0.066
+    },
+    "hits": [
+      {
+        "well": "C5",
+        "compound_id": "T0224",
+        "pct_inhibition": 97.0,
+        "concentration_uM": 50
+      },
+      {
+        "well": "B8",
+        "compound_id": "T1005",
+        "pct_inhibition": 68.2,
+        "concentration_uM": 50
+      }
+    ],
+    "compounds": [
+      {
+        "compound_id": "T0224",
+        "median_pct_inhibition": 97.0,
+        "label": "surprise_hit",
+        "timing_suspect_reps": 0,
+        "wells": [
+          {
+            "well": "C5",
+            "pct_inhibition": 97.0,
+            "timing_suspect": false,
+            "concentration_uM": 50,
+            "a490_endpoint": 0.059
+          }
+        ]
+      },
+      {
+        "compound_id": "T1005",
+        "median_pct_inhibition": 68.2,
+        "label": "surprise_hit",
+        "timing_suspect_reps": 0,
+        "wells": [
+          {
+            "well": "B8",
+            "pct_inhibition": 68.2,
+            "timing_suspect": false,
+            "concentration_uM": 50,
+            "a490_endpoint": 0.078
+          },
+          {
+            "well": "D8",
+            "pct_inhibition": 31.8,
+            "timing_suspect": false,
+            "concentration_uM": 50,
+            "a490_endpoint": 0.102
+          },
+          {
+            "well": "F8",
+            "pct_inhibition": 78.8,
+            "timing_suspect": false,
+            "concentration_uM": 50,
+            "a490_endpoint": 0.071
+          }
+        ]
+      },
+      {
+        "compound_id": "T6685",
+        "median_pct_inhibition": 27.3,
+        "label": "surprise_miss",
+        "timing_suspect_reps": 0,
+        "wells": [
+          {
+            "well": "F4",
+            "pct_inhibition": 27.3,
+            "timing_suspect": false,
+            "concentration_uM": 50,
+            "a490_endpoint": 0.105
+          }
+        ]
+      }
+    ],
+    "failed_wells": [
+      "B10",
+      "B2",
+      "B4",
+      "B6",
+      "C3",
+      "C7",
+      "C9",
+      "D10",
+      "D2",
+      "D4",
+      "D6",
+      "E3",
+      "E5",
+      "E7",
+      "E9",
+      "F10",
+      "F2",
+      "F6",
+      "G3",
+      "G5",
+      "G7",
+      "G9"
+    ],
+    "wells_timing_suspect": [],
+    "pre_read_overage_wells": [],
+    "timing_stagger_min": 16.01,
+    "pattern_buckets": {
+      "primary_wavelength_nm": 490,
+      "wavelengths": [
+        490,
+        405
+      ],
+      "early_window_s": [
+        30.0,
+        210.0
+      ],
+      "flat_rows": {
+        "A": [
+          "A1",
+          "A2",
+          "A3",
+          "A5",
+          "A7",
+          "A8"
+        ],
+        "H": [
+          "H1",
+          "H2",
+          "H3",
+          "H4",
+          "H5",
+          "H6",
+          "H7",
+          "H8",
+          "H9",
+          "H10",
+          "H11",
+          "H12"
+        ]
+      },
+      "flat_baseline_wells": [
+        "A1",
+        "A2",
+        "A3",
+        "A5",
+        "A7",
+        "A8",
+        "B1",
+        "B5",
+        "B9",
+        "B11",
+        "B12",
+        "D1",
+        "D5",
+        "D9",
+        "D11",
+        "D12",
+        "E1",
+        "E2",
+        "E4",
+        "E6",
+        "E8",
+        "E10",
+        "E12",
+        "F4",
+        "F9",
+        "G1",
+        "G2",
+        "G4",
+        "G6",
+        "G8",
+        "G10",
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H6",
+        "H7",
+        "H8",
+        "H9",
+        "H10",
+        "H11",
+        "H12"
+      ],
+      "high_initial": [
+        {
+          "well": "F6",
+          "A0": 0.325,
+          "compound_id": "T14081",
+          "role": "sample"
+        },
+        {
+          "well": "D6",
+          "A0": 0.298,
+          "compound_id": "T14081",
+          "role": "sample"
+        },
+        {
+          "well": "G5",
+          "A0": 0.28,
+          "compound_id": "T0224",
+          "role": "sample"
+        },
+        {
+          "well": "B6",
+          "A0": 0.278,
+          "compound_id": "T14081",
+          "role": "sample"
+        },
+        {
+          "well": "D4",
+          "A0": 0.266,
+          "compound_id": "T6685",
+          "role": "sample"
+        },
+        {
+          "well": "B4",
+          "A0": 0.257,
+          "compound_id": "T6685",
+          "role": "sample"
+        },
+        {
+          "well": "D2",
+          "A0": 0.243,
+          "compound_id": "T1262",
+          "role": "sample"
+        },
+        {
+          "well": "C3",
+          "A0": 0.22,
+          "compound_id": "T0138",
+          "role": "sample"
+        },
+        {
+          "well": "F10",
+          "A0": 0.219,
+          "compound_id": "T1008",
+          "role": "sample"
+        },
+        {
+          "well": "F2",
+          "A0": 0.215,
+          "compound_id": "T1262",
+          "role": "sample"
+        }
+      ],
+      "rising": [
+        {
+          "well": "D10",
+          "A0": 0.2,
+          "A_end": 0.278,
+          "slope_early": 0.00041111,
+          "compound_id": "T1008",
+          "role": "sample"
+        },
+        {
+          "well": "E9",
+          "A0": 0.068,
+          "A_end": 0.179,
+          "slope_early": 0.00039444,
+          "compound_id": "T0985",
+          "role": "sample"
+        },
+        {
+          "well": "G3",
+          "A0": 0.071,
+          "A_end": 0.126,
+          "slope_early": 0.00020556,
+          "compound_id": "T0138",
+          "role": "sample"
+        },
+        {
+          "well": "E5",
+          "A0": 0.195,
+          "A_end": 0.233,
+          "slope_early": 0.00017222,
+          "compound_id": "T0224",
+          "role": "sample"
+        },
+        {
+          "well": "B7",
+          "A0": 0.095,
+          "A_end": 0.135,
+          "slope_early": 0.00016667,
+          "compound_id": null,
+          "role": "vehicle"
+        },
+        {
+          "well": "C7",
+          "A0": 0.114,
+          "A_end": 0.139,
+          "slope_early": 0.00013333,
+          "compound_id": "T8390",
+          "role": "sample"
+        },
+        {
+          "well": "B10",
+          "A0": 0.197,
+          "A_end": 0.209,
+          "slope_early": 0.00010556,
+          "compound_id": "T1008",
+          "role": "sample"
+        },
+        {
+          "well": "E7",
+          "A0": 0.139,
+          "A_end": 0.158,
+          "slope_early": 8.889e-05,
+          "compound_id": "T8390",
+          "role": "sample"
+        },
+        {
+          "well": "B3",
+          "A0": 0.095,
+          "A_end": 0.12,
+          "slope_early": 8.333e-05,
+          "compound_id": null,
+          "role": "vehicle"
+        },
+        {
+          "well": "E3",
+          "A0": 0.139,
+          "A_end": 0.158,
+          "slope_early": 6.667e-05,
+          "compound_id": "T0138",
+          "role": "sample"
+        },
+        {
+          "well": "C9",
+          "A0": 0.144,
+          "A_end": 0.151,
+          "slope_early": 6.111e-05,
+          "compound_id": "T0985",
+          "role": "sample"
+        },
+        {
+          "well": "G7",
+          "A0": 0.164,
+          "A_end": 0.183,
+          "slope_early": 6.111e-05,
+          "compound_id": "T8390",
+          "role": "sample"
+        },
+        {
+          "well": "B8",
+          "A0": 0.078,
+          "A_end": 0.131,
+          "slope_early": 5.556e-05,
+          "compound_id": "T1005",
+          "role": "sample"
+        },
+        {
+          "well": "D2",
+          "A0": 0.243,
+          "A_end": 0.254,
+          "slope_early": 4.444e-05,
+          "compound_id": "T1262",
+          "role": "sample"
+        }
+      ],
+      "peak_decline": [
+        {
+          "well": "G5",
+          "A0": 0.28,
+          "Amax": 0.28,
+          "A_end": 0.218,
+          "t_peak_s": 0.0,
+          "t_peak": "0:00:00",
+          "compound_id": "T0224",
+          "role": "sample"
+        },
+        {
+          "well": "D10",
+          "A0": 0.2,
+          "Amax": 0.309,
+          "A_end": 0.278,
+          "t_peak_s": 330.0,
+          "t_peak": "0:05:30",
+          "compound_id": "T1008",
+          "role": "sample"
+        },
+        {
+          "well": "G9",
+          "A0": 0.157,
+          "Amax": 0.182,
+          "A_end": 0.154,
+          "t_peak_s": 330.0,
+          "t_peak": "0:05:30",
+          "compound_id": "T0985",
+          "role": "sample"
+        },
+        {
+          "well": "C7",
+          "A0": 0.114,
+          "Amax": 0.159,
+          "A_end": 0.139,
+          "t_peak_s": 420.0,
+          "t_peak": "0:07:00",
+          "compound_id": "T8390",
+          "role": "sample"
+        },
+        {
+          "well": "E5",
+          "A0": 0.195,
+          "Amax": 0.248,
+          "A_end": 0.233,
+          "t_peak_s": 390.0,
+          "t_peak": "0:06:30",
+          "compound_id": "T0224",
+          "role": "sample"
+        },
+        {
+          "well": "B10",
+          "A0": 0.197,
+          "Amax": 0.223,
+          "A_end": 0.209,
+          "t_peak_s": 300.0,
+          "t_peak": "0:05:00",
+          "compound_id": "T1008",
+          "role": "sample"
+        },
+        {
+          "well": "C3",
+          "A0": 0.22,
+          "Amax": 0.226,
+          "A_end": 0.213,
+          "t_peak_s": 480.0,
+          "t_peak": "0:08:00",
+          "compound_id": "T0138",
+          "role": "sample"
+        },
+        {
+          "well": "C9",
+          "A0": 0.144,
+          "Amax": 0.164,
+          "A_end": 0.151,
+          "t_peak_s": 330.0,
+          "t_peak": "0:05:30",
+          "compound_id": "T0985",
+          "role": "sample"
+        },
+        {
+          "well": "E9",
+          "A0": 0.068,
+          "Amax": 0.192,
+          "A_end": 0.179,
+          "t_peak_s": 480.0,
+          "t_peak": "0:08:00",
+          "compound_id": "T0985",
+          "role": "sample"
+        },
+        {
+          "well": "G7",
+          "A0": 0.164,
+          "Amax": 0.196,
+          "A_end": 0.183,
+          "t_peak_s": 480.0,
+          "t_peak": "0:08:00",
+          "compound_id": "T8390",
+          "role": "sample"
+        },
+        {
+          "well": "B6",
+          "A0": 0.278,
+          "Amax": 0.29,
+          "A_end": 0.277,
+          "t_peak_s": 240.0,
+          "t_peak": "0:04:00",
+          "compound_id": "T14081",
+          "role": "sample"
+        },
+        {
+          "well": "F10",
+          "A0": 0.219,
+          "Amax": 0.227,
+          "A_end": 0.215,
+          "t_peak_s": 270.0,
+          "t_peak": "0:04:30",
+          "compound_id": "T1008",
+          "role": "sample"
+        }
+      ],
+      "wavelength_divergence": [
+        {
+          "well": "D8",
+          "A0_490": 0.102,
+          "A0_405": 0.414,
+          "compound_id": "T1005",
+          "role": "sample"
+        },
+        {
+          "well": "F8",
+          "A0_490": 0.071,
+          "A0_405": 0.352,
+          "compound_id": "T1005",
+          "role": "sample"
+        },
+        {
+          "well": "F4",
+          "A0_490": 0.105,
+          "A0_405": 0.367,
+          "compound_id": "T6685",
+          "role": "sample"
+        },
+        {
+          "well": "F7",
+          "A0_490": 0.068,
+          "A0_405": 0.298,
+          "compound_id": "T19860",
+          "role": "pos-ctrl-clavaculin"
+        },
+        {
+          "well": "F3",
+          "A0_490": 0.059,
+          "A0_405": 0.252,
+          "compound_id": "T19860",
+          "role": "pos-ctrl-clavaculin"
+        },
+        {
+          "well": "D7",
+          "A0_490": 0.056,
+          "A0_405": 0.248,
+          "compound_id": null,
+          "role": "no_tem1"
+        },
+        {
+          "well": "D3",
+          "A0_490": 0.062,
+          "A0_405": 0.25,
+          "compound_id": null,
+          "role": "no_tem1"
+        },
+        {
+          "well": "E11",
+          "A0_490": 0.057,
+          "A0_405": 0.23,
+          "compound_id": null,
+          "role": "no_tem1"
+        },
+        {
+          "well": "F6",
+          "A0_490": 0.325,
+          "A0_405": 0.161,
+          "compound_id": "T14081",
+          "role": "sample"
+        },
+        {
+          "well": "D6",
+          "A0_490": 0.298,
+          "A0_405": 0.146,
+          "compound_id": "T14081",
+          "role": "sample"
+        },
+        {
+          "well": "C5",
+          "A0_490": 0.061,
+          "A0_405": 0.21,
+          "compound_id": "T0224",
+          "role": "sample"
+        },
+        {
+          "well": "B8",
+          "A0_490": 0.078,
+          "A0_405": 0.222,
+          "compound_id": "T1005",
+          "role": "sample"
+        }
+      ],
+      "negative_slope_wells": [
+        {
+          "well": "A1",
+          "wavelength_nm": "490",
+          "max_v": -2.0,
+          "source": "gen5_results",
+          "compound_id": null
+        },
+        {
+          "well": "A1",
+          "wavelength_nm": "405",
+          "max_v": -6.0,
+          "source": "gen5_results",
+          "compound_id": null
+        },
+        {
+          "well": "A3",
+          "wavelength_nm": "490",
+          "max_v": -4.0,
+          "source": "gen5_results",
+          "compound_id": null
+        },
+        {
+          "well": "A3",
+          "wavelength_nm": "405",
+          "max_v": -8.0,
+          "source": "gen5_results",
+          "compound_id": null
+        },
+        {
+          "well": "A4",
+          "wavelength_nm": "405",
+          "max_v": -10.0,
+          "source": "gen5_results",
+          "compound_id": null
+        },
+        {
+          "well": "A5",
+          "wavelength_nm": "405",
+          "max_v": -8.0,
+          "source": "gen5_results",
+          "compound_id": null
+        },
+        {
+          "well": "A6",
+          "wavelength_nm": "490",
+          "max_v": -6.0,
+          "source": "gen5_results",
+          "compound_id": null
+        },
+        {
+          "well": "A6",
+          "wavelength_nm": "405",
+          "max_v": -6.0,
+          "source": "gen5_results",
+          "compound_id": null
+        },
+        {
+          "well": "A7",
+          "wavelength_nm": "490",
+          "max_v": -6.0,
+          "source": "gen5_results",
+          "compound_id": null
+        },
+        {
+          "well": "A7",
+          "wavelength_nm": "405",
+          "max_v": -8.0,
+          "source": "gen5_results",
+          "compound_id": null
+        },
+        {
+          "well": "A9",
+          "wavelength_nm": "405",
+          "max_v": -14.0,
+          "source": "gen5_results",
+          "compound_id": null
+        },
+        {
+          "well": "A10",
+          "wavelength_nm": "490",
+          "max_v": -4.0,
+          "source": "gen5_results",
+          "compound_id": null
+        }
+      ],
+      "gen5_max_v_highlights": [
+        {
+          "well": "F3",
+          "wavelength_nm": "405",
+          "max_v": 32.0,
+          "lagtime": "0:09:11",
+          "compound_id": "T19860"
+        },
+        {
+          "well": "F4",
+          "wavelength_nm": "405",
+          "max_v": 32.0,
+          "lagtime": "0:09:15",
+          "compound_id": "T6685"
+        },
+        {
+          "well": "G3",
+          "wavelength_nm": "490",
+          "max_v": 30.0,
+          "lagtime": "0:00:04",
+          "compound_id": "T0138"
+        },
+        {
+          "well": "B2",
+          "wavelength_nm": "405",
+          "max_v": 26.0,
+          "lagtime": "0:06:16",
+          "compound_id": "T1262"
+        },
+        {
+          "well": "B6",
+          "wavelength_nm": "405",
+          "max_v": 26.0,
+          "lagtime": "0:09:12",
+          "compound_id": "T14081"
+        },
+        {
+          "well": "F1",
+          "wavelength_nm": "405",
+          "max_v": 26.0,
+          "lagtime": "0:06:09",
+          "compound_id": null
+        },
+        {
+          "well": "F10",
+          "wavelength_nm": "490",
+          "max_v": 26.0,
+          "lagtime": "0:00:02",
+          "compound_id": "T1008"
+        },
+        {
+          "well": "B1",
+          "wavelength_nm": "405",
+          "max_v": 24.0,
+          "lagtime": "0:06:15",
+          "compound_id": null
+        },
+        {
+          "well": "B5",
+          "wavelength_nm": "405",
+          "max_v": 22.0,
+          "lagtime": "0:09:08",
+          "compound_id": null
+        },
+        {
+          "well": "B4",
+          "wavelength_nm": "405",
+          "max_v": 20.0,
+          "lagtime": "0:06:09",
+          "compound_id": "T6685"
+        },
+        {
+          "well": "F1",
+          "wavelength_nm": "490",
+          "max_v": 20.0,
+          "lagtime": "0:00:00",
+          "compound_id": null
+        },
+        {
+          "well": "H8",
+          "wavelength_nm": "405",
+          "max_v": 18.0,
+          "lagtime": "0:09:20",
+          "compound_id": null
+        }
+      ],
+      "slope_no_tem1_ref": 1.1111111111111081e-05
+    },
+    "next_plate_design_suggestion": "dose_response"
+  },
+  "artifact_paths": {
+    "kinetics_csv": "/Users/fio/zeon_hack/data/screens/2/post-run/kinetics_r2.csv",
+    "annotated_csv": "/Users/fio/zeon_hack/data/screens/2/post-run/v2/analysis/r2_kinetics_annotated.csv",
+    "round_summary_json": "/Users/fio/zeon_hack/data/screens/2/post-run/v2/analysis/r2_round_summary_eda.json",
+    "pattern_summary_json": "/Users/fio/zeon_hack/data/screens/2/post-run/v2/analysis/r2_pattern_summary.json",
+    "plate_map_json": "data/plate_map_r2.json",
+    "parsed_json": "/Users/fio/zeon_hack/data/screens/2/post-run/v2/analysis/r2_parsed.json",
+    "pattern_summary_md": "/Users/fio/zeon_hack/data/screens/2/post-run/v2/analysis/r2_pattern_summary.md"
+  },
+  "deterministic_markdown": "# Kinetics pattern summary\n\nPrimary wavelength: 490 nm\nEarly slope window: 30\u2013210 s\n\n## Notable signal patterns (490 nm)\n\n- **Row A** (A1, A2, A3, A5, A7, A8): flat baseline ~0.041 (range < 0.005)\n- **Row H** (H1, H2, H3, H4, H5, H6, H7, H8, H9, H10, H11, H12): flat baseline ~0.04 (range < 0.005)\n\n**High initial signal (t=0):**\n- F6 (T14081): A0 = 0.325\n- D6 (T14081): A0 = 0.298\n- G5 (T0224): A0 = 0.28\n- B6 (T14081): A0 = 0.278\n- D4 (T6685): A0 = 0.266\n- B4 (T6685): A0 = 0.257\n- D2 (T1262): A0 = 0.243\n- C3 (T0138): A0 = 0.22\n\n**Rising kinetics (early-window slope above no-TEM-1 baseline):**\n- D10 (T1008): 0.2 \u2192 0.278 over run (slope_early = 0.00041111)\n- E9 (T0985): 0.068 \u2192 0.179 over run (slope_early = 0.00039444)\n- G3 (T0138): 0.071 \u2192 0.126 over run (slope_early = 0.00020556)\n- E5 (T0224): 0.195 \u2192 0.233 over run (slope_early = 0.00017222)\n- B7 [vehicle]: 0.095 \u2192 0.135 over run (slope_early = 0.00016667)\n- C7 (T8390): 0.114 \u2192 0.139 over run (slope_early = 0.00013333)\n- B10 (T1008): 0.197 \u2192 0.209 over run (slope_early = 0.00010556)\n- E7 (T8390): 0.139 \u2192 0.158 over run (slope_early = 8.889e-05)\n- B3 [vehicle]: 0.095 \u2192 0.12 over run (slope_early = 8.333e-05)\n- E3 (T0138): 0.139 \u2192 0.158 over run (slope_early = 6.667e-05)\n\n**Peak then decline:**\n- G5 (T0224): peak 0.28 at 0:00:00, ends 0.218\n- D10 (T1008): peak 0.309 at 0:05:30, ends 0.278\n- G9 (T0985): peak 0.182 at 0:05:30, ends 0.154\n- C7 (T8390): peak 0.159 at 0:07:00, ends 0.139\n- E5 (T0224): peak 0.248 at 0:06:30, ends 0.233\n- B10 (T1008): peak 0.223 at 0:05:00, ends 0.209\n- C3 (T0138): peak 0.226 at 0:08:00, ends 0.213\n- C9 (T0985): peak 0.164 at 0:05:30, ends 0.151\n\n## Wavelength divergence (490 vs 405 nm)\n\n- D8 (T1005): A0 0.102 vs 0.414\n- F8 (T1005): A0 0.071 vs 0.352\n- F4 (T6685): A0 0.105 vs 0.367\n- F7 (T19860): A0 0.068 vs 0.298\n- F3 (T19860): A0 0.059 vs 0.252\n- D7 [no_tem1]: A0 0.056 vs 0.248\n- D3 [no_tem1]: A0 0.062 vs 0.25\n- E11 [no_tem1]: A0 0.057 vs 0.23\n\n## Gen5 Results highlights (Max V, QC cross-check)\n\n- F3 (T19860) @ 405 nm: Max V = 32.0, lagtime = 0:09:11\n- F4 (T6685) @ 405 nm: Max V = 32.0, lagtime = 0:09:15\n- G3 (T0138) @ 490 nm: Max V = 30.0, lagtime = 0:00:04\n- B2 (T1262) @ 405 nm: Max V = 26.0, lagtime = 0:06:16\n- B6 (T14081) @ 405 nm: Max V = 26.0, lagtime = 0:09:12\n- F1 @ 405 nm: Max V = 26.0, lagtime = 0:06:09\n- F10 (T1008) @ 490 nm: Max V = 26.0, lagtime = 0:00:02\n- B1 @ 405 nm: Max V = 24.0, lagtime = 0:06:15\n- B5 @ 405 nm: Max V = 22.0, lagtime = 0:09:08\n- B4 (T6685) @ 405 nm: Max V = 20.0, lagtime = 0:06:09\n\n**Negative slope / Max V:**\n- A1: Gen5 Max V = -2.0 @ 490 nm\n- A1: Gen5 Max V = -6.0 @ 405 nm\n- A3: Gen5 Max V = -4.0 @ 490 nm\n- A3: Gen5 Max V = -8.0 @ 405 nm\n- A4: Gen5 Max V = -10.0 @ 405 nm\n- A5: Gen5 Max V = -8.0 @ 405 nm\n- A6: Gen5 Max V = -6.0 @ 490 nm\n- A6: Gen5 Max V = -6.0 @ 405 nm\n"
+}

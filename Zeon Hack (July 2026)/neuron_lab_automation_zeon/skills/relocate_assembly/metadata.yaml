@@ -1,0 +1,21 @@
+skill_id: relocate_assembly
+version: "1.2.0"
+description: "Grip a base object and carry its separately rendered passenger by attaching both scene objects to the same arm during transit."
+
+parameter_descriptions:
+  base: "The object the arm physically grips (wellplate_holder_tags_team10)."
+  passenger: "The seated object carried with the base (round_holder_hackteam10)."
+  dx: "World-frame X offset in metres."
+  dy: "World-frame Y offset in metres. Default -0.10 = 10cm toward -Y, this bench's 'left' (toward right_arm's base)."
+  dz: "World-frame Z offset in metres."
+  grasp_anchor: "Measured TCP-convention grasp anchor on the base object."
+  seat_anchor: "Seat anchor on the base that receives the passenger."
+  passenger_anchor: "Placement anchor on the passenger aligned to the base seat."
+  arm: "Which arm grips and carries `base`."
+  lift_clear_m: "How far to lift clear before, and lower back down after, the lateral slide."
+
+preconditions: {}
+postconditions: {}
+
+tags: ["relocate", "bench-setup"]
+high_risk: true

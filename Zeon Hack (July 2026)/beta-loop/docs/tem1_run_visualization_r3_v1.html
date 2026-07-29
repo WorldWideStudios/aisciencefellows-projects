@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TEM-1 Activity Screen — R3 v1 Run Analysis</title>
+<style>
+  :root {
+    --bg: #f7f6f2;
+    --surface: #ffffff;
+    --border: #e5e7eb;
+    --ink: #1f2933;
+    --muted: #62707f;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    --sans: system-ui, -apple-system, Segoe UI, sans-serif;
+    --c-positive:   #b45309;
+    --c-negative:   #475569;
+    --c-vehicle:    #0f766e;
+    --c-cpd1:       #1d4ed8;
+    --c-cpd2:       #6d28d9;
+    --c-cpd3:       #0e7490;
+    --c-cpd4:       #15803d;
+    --c-cpd5:       #b91c1c;
+    --c-cpd6:       #92400e;
+    --c-cpd7:       #7c3aed;
+    --c-cpd8:       #065f46;
+    --c-cpd9:       #9d174d;
+    --c-empty:      #f3f4f6;
+    --c-warn:       #dc2626;
+    --c-warn-bg:    #fef2f2;
+    --c-ok:         #059669;
+    --c-note:       #2563eb;
+    --c-note-bg:    #eff6ff;
+    --c-green-bg:   #f0fdf4;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--sans); color: var(--ink); background: var(--bg); padding: 32px 24px 64px; }
+  .page { max-width: 1080px; margin: 0 auto; }
+  h1 { font-size: 26px; letter-spacing: -0.5px; margin-bottom: 4px; }
+  .meta { font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 6px; }
+  .run-info { font-size: 13px; color: var(--muted); margin-bottom: 28px; line-height: 1.6; }
+  h2 { font-family: var(--mono); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--muted);
+       border-top: 1px solid var(--border); padding-top: 18px; margin: 32px 0 14px; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 20px; margin-bottom: 16px; }
+  .warn-box { background: var(--c-warn-bg); border: 1px solid #fecaca; border-radius: 8px; padding: 12px 16px; margin-bottom: 12px; font-size: 13px; }
+  .warn-box strong { color: var(--c-warn); }
+  .note-box { background: var(--c-note-bg); border: 1px solid #bfdbfe; border-radius: 8px; padding: 12px 16px; margin-bottom: 12px; font-size: 13px; }
+  .note-box strong { color: var(--c-note); }
+  .ok-box { background: var(--c-green-bg); border: 1px solid #86efac; border-radius: 8px; padding: 12px 16px; margin-bottom: 12px; font-size: 13px; }
+  .ok-box strong { color: #166534; }
+
+  /* ── COMPOUND MISMATCH TABLE ── */
+  .mismatch-table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  .mismatch-table th { font-family: var(--mono); font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px;
+                       border-bottom: 2px solid var(--border); padding: 8px 10px; text-align: left; }
+  .mismatch-table td { padding: 8px 10px; border-bottom: 1px solid #f3f4f6; vertical-align: middle; }
+  .mismatch-table tr:hover td { background: #fafafa; }
+  .mismatch-row-ok td:first-child { border-left: 3px solid #059669; }
+  .mismatch-row-bad td:first-child { border-left: 3px solid #dc2626; }
+  .badge { display: inline-block; font-family: var(--mono); font-size: 10px; font-weight: 700; border-radius: 4px; padding: 2px 7px; }
+  .badge-ok   { background: #dcfce7; color: #166534; }
+  .badge-bad  { background: #fee2e2; color: #991b1b; }
+  .source-well-box { font-family: var(--mono); font-size: 11px; padding: 2px 6px; border-radius: 4px; display: inline-block; }
+  .sw-intended { background: #dbeafe; color: #1e40af; }
+  .sw-actual   { background: #fee2e2; color: #991b1b; }
+  .sw-ok       { background: #dcfce7; color: #166534; }
+
+  /* ── GANTT ── */
+  .gantt-wrap { overflow-x: auto; }
+  .gantt { position: relative; min-width: 900px; }
+  .gantt-axis { display: flex; align-items: flex-end; height: 28px; margin-left: 220px; border-bottom: 1px solid var(--border); }
+  .gantt-tick { position: absolute; border-left: 1px dashed #d1d5db; font-family: var(--mono); font-size: 9.5px; color: var(--muted); padding-top: 2px; }
+  .gantt-rows { margin-left: 220px; position: relative; }
+  .gantt-row { display: flex; align-items: center; height: 30px; border-bottom: 1px solid #f3f4f6; position: relative; }
+  .gantt-label { position: absolute; right: calc(100% + 8px); white-space: nowrap; font-size: 12px; color: var(--ink); text-align: right; width: 210px; }
+  .gantt-bar { position: absolute; height: 18px; border-radius: 3px; top: 6px; display: flex; align-items: center; padding: 0 6px; }
+  .gantt-bar span { font-family: var(--mono); font-size: 9px; color: rgba(255,255,255,0.92); white-space: nowrap; overflow: hidden; }
+  .gantt-bar:hover { filter: brightness(1.1); }
+
+  /* ── 96-WELL PLATE ── */
+  .plate-grid { display: grid; grid-template-columns: 28px repeat(12, 1fr); gap: 3px; }
+  .plate-header { font-family: var(--mono); font-size: 10px; color: var(--muted); text-align: center; padding: 2px 0; }
+  .plate-row-label { font-family: var(--mono); font-size: 10px; color: var(--muted); text-align: right; padding-right: 4px; line-height: 32px; }
+  .well { width: 100%; aspect-ratio: 1; border-radius: 50%; border: 1.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center;
+          font-family: var(--mono); font-size: 8px; color: #fff; font-weight: 700; cursor: default; transition: transform 0.1s; }
+  .well:hover { transform: scale(1.15); z-index: 10; }
+  .well.empty { background: var(--c-empty); color: var(--muted); font-weight: 400; }
+  .well.positive { background: var(--c-positive); }
+  .well.negative { background: var(--c-negative); }
+  .well.vehicle  { background: var(--c-vehicle); }
+  .well.cpd1  { background: var(--c-cpd1); }
+  .well.cpd2  { background: var(--c-cpd2); }
+  .well.cpd3  { background: var(--c-cpd3); }
+  .well.cpd4  { background: var(--c-cpd4); }
+  .well.cpd5  { background: var(--c-cpd5); }
+  .well.cpd6  { background: var(--c-cpd6); }
+  .well.cpd7  { background: var(--c-cpd7); }
+  .well.cpd8  { background: var(--c-cpd8); }
+
+  /* ── LEGEND ── */
+  .legend { display: flex; flex-wrap: wrap; gap: 8px 14px; margin-top: 14px; }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; }
+  .legend-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+
+  /* ── COLD BLOCK ── */
+  .coldblock-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+  .hole-card { border: 1.5px solid var(--border); border-radius: 8px; padding: 10px; text-align: center; }
+  .hole-label { font-family: var(--mono); font-size: 10px; color: var(--muted); margin-bottom: 4px; }
+  .hole-name { font-size: 12px; font-weight: 700; color: var(--ink); margin-bottom: 2px; }
+  .hole-conc { font-family: var(--mono); font-size: 10px; color: var(--muted); }
+  .hole-circle { width: 36px; height: 36px; border-radius: 50%; margin: 6px auto; border: 2px solid currentColor; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; }
+
+  /* ── PCR WORKING PLATE ── */
+  .pcr-row { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+  .pcr-well { width: 64px; border-radius: 6px; border: 1.5px solid var(--border); padding: 6px 4px; text-align: center; font-size: 10px; }
+  .pcr-well .well-id { font-family: var(--mono); font-weight: 700; font-size: 11px; margin-bottom: 2px; }
+  .pcr-well .well-name { font-size: 9.5px; color: var(--muted); line-height: 1.3; }
+  .pcr-well .well-vol  { font-family: var(--mono); font-size: 9px; color: var(--c-note); margin-top: 2px; }
+
+  /* ── STATS ROW ── */
+  .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 4px; }
+  .stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; }
+  .stat-val { font-size: 28px; font-weight: 800; letter-spacing: -1px; }
+  .stat-label { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+  /* ── RESULTS TABLE ── */
+  .results-table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  .results-table th { font-family: var(--mono); font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px;
+                      border-bottom: 2px solid var(--border); padding: 7px 8px; text-align: left; background: #f9fafb; }
+  .results-table td { padding: 7px 8px; border-bottom: 1px solid #f3f4f6; vertical-align: middle; }
+  .results-table tr:hover td { background: #fafafa; }
+  .results-table td.pct { font-family: var(--mono); font-size: 12px; text-align: right; font-weight: 600; color: var(--ink); }
+  .results-table td.dash { color: var(--muted); text-align: right; }
+  .rlabel { display: inline-block; font-family: var(--mono); font-size: 10px; font-weight: 700; border-radius: 4px; padding: 3px 8px; white-space: nowrap; }
+  .confirmed-hit  { background: #3b6ef5; color: #fff; }
+  .surprise-hit   { background: #e07a20; color: #fff; }
+  .surprise-miss  { background: #d4a017; color: #fff; }
+  .confirmed-sub  { background: #9ca3af; color: #fff; }
+  .inconclusive   { background: #fef9c3; color: #92400e; border: 1px solid #fde68a; }
+
+  /* ── MANUAL NITRO NOTE ── */
+  .manual-nitro { display: flex; align-items: flex-start; gap: 14px; background: var(--c-green-bg); border: 1px solid #86efac; border-radius: 10px; padding: 18px 20px; }
+  .manual-nitro-icon { font-size: 28px; flex-shrink: 0; }
+  .manual-nitro h3 { font-size: 14px; font-weight: 700; color: #166534; margin-bottom: 6px; }
+  .manual-nitro p { font-size: 13px; color: #15803d; line-height: 1.6; }
+  .manual-nitro code { font-family: var(--mono); font-size: 11.5px; background: #dcfce7; padding: 1px 5px; border-radius: 3px; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="meta">Zeon Systems · tem1_activity_screen_manual_nitro_r3_v1 — Round 3</div>
+  <h1>TEM-1 Activity Screen — R3 v1 Run Analysis</h1>
+  <div class="run-info">
+    Workflow: <strong>tem1_activity_screen_manual_nitro_r3_v1</strong> &nbsp;·&nbsp;
+    Started: <strong>2:20:00 PM</strong> &nbsp;·&nbsp;
+    Completed: <strong>~3:19 PM</strong> &nbsp;·&nbsp;
+    Duration: <strong>~59 min</strong> &nbsp;·&nbsp;
+    Round: <strong>R3 — manual nitrocefin, hand-prepped dilutions</strong>
+  </div>
+
+  <!-- ── ANOMALY FLAGS ── -->
+  <div class="warn-box">
+    <strong>⚠ Pre-incubation: 2 min actual vs 10 min workflow default.</strong>
+    The workflow default for <code>preincubation_minutes</code> is 10.0. If this was intentional (canvas override), confirm it. If not, pre-incubation was cut 5× short — TEM-1 / compound equilibration may be incomplete.
+  </div>
+  <div class="ok-box">
+    <strong>✓ Dilutions prepared by hand (Round 2 protocol).</strong>
+    TEM-1 working solution, compound working solutions, and nitrocefin were all manually prepared before robot run. Robot skips the Prepare Dilutions phase entirely — <strong>run time reduced by ~76 min</strong> vs Round 1.
+  </div>
+  <div class="ok-box">
+    <strong>✓ Nitrocefin added manually by operator (Round 2 protocol).</strong>
+    Robot workflow ends after sealed pre-incubation. Operator manually unseals and adds nitrocefin outside the workflow. No robot nitrocefin steps.
+  </div>
+
+  <!-- ── STAT TILES ── -->
+  <h2>Run Summary</h2>
+  <div class="stats-row">
+    <div class="stat-card"><div class="stat-val">~59<span style="font-size:18px;font-weight:400"> min</span></div><div class="stat-label">Total robot run time</div></div>
+    <div class="stat-card"><div class="stat-val">30</div><div class="stat-label">Assay wells loaded by robot</div></div>
+    <div class="stat-card"><div class="stat-val">100 <span style="font-size:16px;font-weight:400">µL</span></div><div class="stat-label">Final volume per well (2×)</div></div>
+    <div class="stat-card"><div class="stat-val">−76<span style="font-size:16px;font-weight:400"> min</span></div><div class="stat-label">Time saved vs R2 (hand dilutions)</div></div>
+  </div>
+
+  <!-- ── GANTT ── -->
+  <h2>E2E Operation Timeline</h2>
+  <div class="card gantt-wrap">
+    <div class="gantt" id="gantt"></div>
+  </div>
+
+  <!-- ── 96-WELL PLATE ── -->
+  <h2>Final Assay Plate Layout (96-well flat-bottom)</h2>
+  <div class="card">
+    <div class="plate-grid" id="plate96"></div>
+    <div class="legend" id="legend"></div>
+    <p style="font-size:11.5px;color:var(--muted);margin-top:12px;line-height:1.6">
+      Per well: 40 µL enzyme prep + 10 µL compound/control = 50 µL before manual nitrocefin addition (50 µL → 100 µL final).
+      8 compounds × 3 replicates + positive ctrl (×3) + no-enzyme ctrl (×3) = 30 active wells.
+      Hover over a well to see its identifier.
+    </p>
+  </div>
+
+  <!-- ── COLD BLOCK ── -->
+  <h2>Cold Block Reagent Map (R3 — hand-prepped)</h2>
+  <div class="card">
+    <div class="coldblock-grid" id="coldblock"></div>
+    <p style="font-size:11.5px;color:var(--muted);margin-top:12px;line-height:1.6">
+      R3 change: hole_8 contains hand-prepared TEM-1 working solution (0.1 ng/µL, 1:1000 single-step dilution).
+      No hole_3 T1262 intermediate — tazobactam working solution prepared manually at 500 µM.
+      Nitrocefin (hole_4, hole_7, hole_10) not used by robot — manual addition post-incubation.
+    </p>
+  </div>
+
+  <!-- ── PCR WORKING PLATE ── -->
+  <h2>Working Plate (wellplate_pcr_parts_4) — Compound Working Solutions</h2>
+  <div class="card">
+    <div class="pcr-row" id="pcr-row"></div>
+    <p style="font-size:11.5px;color:var(--muted);margin-top:12px;line-height:1.6">
+      Row A only. 2.5 µL stock + 47.5 µL BLB per compound well (hand-prepared).
+      All compounds at 500 µM working solution; 10 µL added to assay → 50 µM final. Vehicle: 5 µL DMSO + 95 µL BLB → 5% DMSO.
+    </p>
+  </div>
+
+  <!-- ── SCREENING RESULTS ── -->
+  <h2>Screening Results — Round 1 vs Round 2</h2>
+  <div class="card" style="overflow-x:auto">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;min-width:640px">
+
+      <!-- Round 1 -->
+      <div>
+        <div style="font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin-bottom:10px">Round 1 — Endpoint Median</div>
+        <table class="results-table">
+          <thead>
+            <tr><th>Compound</th><th>% inhib (median)</th><th>Label</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>T0224 (meropenem @ 50 µM)</td>    <td class="pct">97.0%</td><td><span class="rlabel surprise-hit">surprise hit</span></td></tr>
+            <tr><td>T1005 (amoxicillin @ 50 µM)</td>   <td class="pct">68.2%</td><td><span class="rlabel surprise-hit">surprise hit</span></td></tr>
+            <tr><td>T6685 (sulbactam sodium @ 50 µM)</td><td class="pct">27.3%</td><td><span class="rlabel surprise-miss">surprise miss</span></td></tr>
+            <tr><td>T0138 (cefpiramide acid @ 50 µM)</td><td class="pct dash">—</td><td><span class="rlabel inconclusive">inconclusive</span></td></tr>
+            <tr><td>T0985 (oxacillin sodium salt @ 50 µM)</td><td class="pct dash">—</td><td><span class="rlabel inconclusive">inconclusive</span></td></tr>
+            <tr><td>T1008 (cephalexin @ 50 µM)</td>    <td class="pct dash">—</td><td><span class="rlabel inconclusive">inconclusive</span></td></tr>
+            <tr><td>T1262 (tazobactam @ 1 µM)</td>     <td class="pct dash">—</td><td><span class="rlabel inconclusive">inconclusive</span></td></tr>
+            <tr><td>T14081 (enmetazobactam @ 50 µM)</td><td class="pct dash">—</td><td><span class="rlabel inconclusive">inconclusive</span></td></tr>
+            <tr><td>T8390 (cefazolin @ 50 µM)</td>     <td class="pct dash">—</td><td><span class="rlabel inconclusive">inconclusive</span></td></tr>
+          </tbody>
+        </table>
+        <div style="font-size:11px;color:var(--muted);margin-top:10px;line-height:1.6">
+          3 callable · 6 inconclusive on endpoint median<br>
+          (22 wells failed 0–150% window · 16 min nitrocefin stagger)
+        </div>
+      </div>
+
+      <!-- Round 2 -->
+      <div>
+        <div style="font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin-bottom:10px">Round 2 — Endpoint Median</div>
+        <table class="results-table">
+          <thead>
+            <tr><th>Compound</th><th>% inhib (median)</th><th>Label</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>T1262 (tazobactam @ 1 µM)</td>      <td class="pct">106.9%</td><td><span class="rlabel confirmed-hit">confirmed hit</span></td></tr>
+            <tr><td>T14081 (enmetazobactam @ 50 µM)</td> <td class="pct">97.2%</td> <td><span class="rlabel confirmed-hit">confirmed hit</span></td></tr>
+            <tr><td>T0224 (meropenem @ 50 µM)</td>       <td class="pct">87.5%</td> <td><span class="rlabel surprise-hit">surprise hit</span></td></tr>
+            <tr><td>T6685 (sulbactam sodium @ 50 µM)</td><td class="pct">58.3%</td> <td><span class="rlabel confirmed-hit">confirmed hit</span></td></tr>
+            <tr><td>T0985 (oxacillin sodium salt @ 50 µM)</td><td class="pct">19.4%</td><td><span class="rlabel confirmed-sub">confirmed substrate</span></td></tr>
+            <tr><td>T1008 (cephalexin @ 50 µM)</td>      <td class="pct">0.0%</td>  <td><span class="rlabel confirmed-sub">confirmed substrate</span></td></tr>
+          </tbody>
+        </table>
+        <div style="font-size:11px;color:var(--muted);margin-top:10px;line-height:1.6">
+          6 discovery compounds on endpoint median<br>
+          Q2E/Q3 PASS · sync dose ~2.0 min
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── MANUAL NITROCEFIN ── -->
+  <h2>Nitrocefin Addition — Manual (R3 Protocol)</h2>
+  <div class="card">
+    <div class="manual-nitro">
+      <div class="manual-nitro-icon">🧪</div>
+      <div>
+        <h3>Nitrocefin added manually by operator after robot teardown</h3>
+        <p>
+          Robot workflow ends after <code>Sealed Pre-Incubation (2 min)</code>.
+          Operator manually unseals the plate and pipettes <strong>50 µL 2× nitrocefin working solution</strong>
+          (100 µM, prepared by hand) into each active well to reach <strong>100 µL final volume</strong> and
+          <strong>50 µM nitrocefin</strong>.<br><br>
+          Manual addition order: No-enzyme ctrl → Positive ctrl → Compounds 1–8 → Vehicle ctrl.
+          Record manual t₀ timestamps per condition for accurate kinetics analysis.
+        </p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// ── DATA ────────────────────────────────────────────────────────────
+
+// Start: 14:20:00 = 2:20 PM
+const START_SEC = 14 * 3600 + 20 * 60 + 0;
+const TOTAL_MIN = 59.13;
+
+function toMin(ts) {
+  const [h, m, s] = ts.split(':').map(Number);
+  const totalSec = h * 3600 + m * 60 + s;
+  let diff = totalSec - START_SEC;
+  if (diff < 0) diff += 86400;
+  return diff / 60;
+}
+
+// Phases — same durations as R2 run log, "Prepare Dilutions" and all Nitrocefin phases removed.
+// Timestamps anchored to 14:20:00 start.
+const PHASES = [
+  { label: "Pick Up Pipette",           start: "14:20:00", end: "14:20:28", color: "#94a3b8", group: "Setup" },
+  { label: "Dispense TEM-1 Prep",       start: "14:20:28", end: "14:33:43", color: "#0f766e", group: "Assay Setup" },
+  { label: "Dispense No-Enzyme Prep",   start: "14:33:43", end: "14:35:07", color: "#475569", group: "Assay Setup" },
+  { label: "Dispense Vehicle",          start: "14:35:07", end: "14:39:37", color: "#0e7490", group: "Assay Setup" },
+  { label: "Dispense Positive Control", start: "14:39:37", end: "14:41:44", color: "#b45309", group: "Assay Setup" },
+  { label: "Dispense Cpd 1 (T1262)",    start: "14:41:44", end: "14:45:42", color: "#1d4ed8", group: "Assay Setup" },
+  { label: "Dispense Cpd 2–8",          start: "14:45:42", end: "15:03:38", color: "#2563eb", group: "Assay Setup" },
+  { label: "Place Pipette / Setup Mix", start: "15:03:38", end: "15:06:06", color: "#94a3b8", group: "Shaker" },
+  { label: "Grab Plate",                start: "15:06:06", end: "15:06:30", color: "#64748b", group: "Shaker" },
+  { label: "Open Shaker",               start: "15:06:30", end: "15:07:42", color: "#64748b", group: "Shaker" },
+  { label: "Load Plate → Shaker",       start: "15:07:42", end: "15:08:17", color: "#64748b", group: "Shaker" },
+  { label: "Close Shaker",              start: "15:08:17", end: "15:09:42", color: "#64748b", group: "Shaker" },
+  { label: "Mix Wait (1 min)",          start: "15:09:42", end: "15:10:42", color: "#f59e0b", group: "Shaker" },
+  { label: "Open / Unload Shaker",      start: "15:10:42", end: "15:12:24", color: "#64748b", group: "Shaker" },
+  { label: "Close / Return Plate",      start: "15:12:24", end: "15:15:32", color: "#64748b", group: "Shaker" },
+  { label: "Pick Pipette After Mix",    start: "15:15:32", end: "15:17:07", color: "#94a3b8", group: "Shaker" },
+  { label: "Pre-Incubate (2 min ⚠)",    start: "15:17:07", end: "15:19:07", color: "#dc2626", group: "Pre-Incubate" },
+  { label: "Save Run / End",            start: "15:19:07", end: "15:19:08", color: "#94a3b8", group: "Done" },
+];
+
+// ── GANTT ────────────────────────────────────────────────────────────
+(function buildGantt() {
+  const el = document.getElementById('gantt');
+  const W = 820;
+  const scale = W / TOTAL_MIN;
+
+  const axisDiv = document.createElement('div');
+  axisDiv.style.cssText = `position:relative;height:28px;margin-left:220px;width:${W}px;border-bottom:1px solid var(--border)`;
+  for (let m = 0; m <= 65; m += 5) {
+    const pct = m / TOTAL_MIN;
+    if (pct > 1.05) break;
+    const tick = document.createElement('div');
+    tick.className = 'gantt-tick';
+    tick.style.cssText = `left:${m * scale}px;bottom:0;padding-bottom:2px`;
+    const totalMin = 14 * 60 + 20 + m;
+    const hh = Math.floor(totalMin / 60) % 24;
+    const mm = totalMin % 60;
+    tick.textContent = `${String(hh).padStart(2,'0')}:${String(mm).padStart(2,'0')}`;
+    axisDiv.appendChild(tick);
+  }
+  el.appendChild(axisDiv);
+
+  const rowsDiv = document.createElement('div');
+  rowsDiv.style.cssText = `margin-left:220px;width:${W}px;position:relative`;
+
+  PHASES.forEach(p => {
+    const s = toMin(p.start);
+    const e = toMin(p.end);
+    const dur = Math.max(e - s, 0.3);
+    const row = document.createElement('div');
+    row.style.cssText = `width:${W}px;height:30px;border-bottom:1px solid #f3f4f6;position:relative`;
+
+    const lbl = document.createElement('div');
+    lbl.className = 'gantt-label';
+    lbl.style.cssText = `position:absolute;right:calc(${W}px + 8px);width:210px;font-size:11.5px;color:var(--ink);text-align:right;line-height:30px;white-space:nowrap`;
+    lbl.textContent = p.label;
+
+    const bar = document.createElement('div');
+    bar.className = 'gantt-bar';
+    bar.style.cssText = `left:${s * scale}px;width:${Math.max(dur * scale, 3)}px;background:${p.color};height:18px;top:6px;border-radius:3px;display:flex;align-items:center;padding:0 5px;position:absolute;min-width:3px`;
+    bar.title = `${p.label}: ${p.start} → ${p.end} (${dur.toFixed(1)} min)`;
+    if (dur > 3) {
+      const sp = document.createElement('span');
+      sp.style.cssText = 'font-family:var(--mono);font-size:9px;color:rgba(255,255,255,0.9);white-space:nowrap;overflow:hidden';
+      sp.textContent = `${dur.toFixed(0)}m`;
+      bar.appendChild(sp);
+    }
+
+    row.appendChild(lbl);
+    row.appendChild(bar);
+    rowsDiv.appendChild(row);
+  });
+  el.appendChild(rowsDiv);
+})();
+
+// ── 96-WELL PLATE ────────────────────────────────────────────────────
+(function buildPlate() {
+  const el = document.getElementById('plate96');
+  const ROWS = ['A','B','C','D','E','F','G','H'];
+  const COLS = [1,2,3,4,5,6,7,8,9,10,11,12];
+
+  const WELL_MAP = {};
+  const assign = (wells, cls, abbr) => wells.forEach(w => WELL_MAP[w] = { cls, abbr });
+  assign(['F3','F7','G11'],     'positive', 'POS');
+  assign(['D3','D7','E11'],     'negative', 'NEG');
+  assign(['B2','D2','F2'],      'cpd1', 'C1');
+  assign(['B4','D4','F4'],      'cpd2', 'C2');
+  assign(['B6','D6','F6'],      'cpd3', 'C3');
+  assign(['B10','D10','F10'],   'cpd4', 'C4');
+  assign(['C5','E5','G5'],      'cpd5', 'C5');
+  assign(['C9','E9','G9'],      'cpd6', 'C6');
+  assign(['C3','E3','G3'],      'cpd7', 'C7');
+  assign(['C7','E7','G7'],      'cpd8', 'C8');
+
+  const spacer = document.createElement('div');
+  el.appendChild(spacer);
+  COLS.forEach(c => {
+    const h = document.createElement('div');
+    h.className = 'plate-header';
+    h.textContent = c;
+    el.appendChild(h);
+  });
+
+  ROWS.forEach(r => {
+    const rl = document.createElement('div');
+    rl.className = 'plate-row-label';
+    rl.textContent = r;
+    el.appendChild(rl);
+    COLS.forEach(c => {
+      const id = `${r}${c}`;
+      const info = WELL_MAP[id];
+      const w = document.createElement('div');
+      w.className = 'well ' + (info ? info.cls : 'empty');
+      w.title = id + (info ? ` — ${info.cls.toUpperCase()}` : ' — empty');
+      w.textContent = info ? info.abbr : '';
+      el.appendChild(w);
+    });
+  });
+
+  const legEl = document.getElementById('legend');
+  const COLOR_MAP = {
+    positive:'#b45309', negative:'#475569',
+    cpd1:'#1d4ed8', cpd2:'#6d28d9', cpd3:'#0e7490', cpd4:'#15803d',
+    cpd5:'#b91c1c', cpd6:'#92400e', cpd7:'#7c3aed', cpd8:'#065f46'
+  };
+  [
+    { cls: 'positive', label: 'Positive ctrl — Tazobactam (F3,F7,G11)' },
+    { cls: 'negative', label: 'No-enzyme ctrl — BLB only (D3,D7,E11)' },
+    { cls: 'cpd1', label: 'C1 T1262 Tazobactam' },
+    { cls: 'cpd2', label: 'C2 T6685 Sulbactam' },
+    { cls: 'cpd3', label: 'C3 T14081 Enmetazobactam' },
+    { cls: 'cpd4', label: 'C4 T1008 Cephalexin' },
+    { cls: 'cpd5', label: 'C5 T0224 Meropenem' },
+    { cls: 'cpd6', label: 'C6 T0985 Oxacillin' },
+    { cls: 'cpd7', label: 'C7 T0138 Cefpiramide acid' },
+    { cls: 'cpd8', label: 'C8 T8390 Cefazolin' },
+  ].forEach(it => {
+    const div = document.createElement('div');
+    div.className = 'legend-item';
+    div.innerHTML = `<div class="legend-dot" style="background:${COLOR_MAP[it.cls]}"></div><span>${it.label}</span>`;
+    legEl.appendChild(div);
+  });
+})();
+
+// ── COLD BLOCK ───────────────────────────────────────────────────────
+(function buildColdBlock() {
+  const el = document.getElementById('coldblock');
+  const holes = [
+    { id: 'hole_5',  name: 'BLB tube 1',          conc: 'Buffer',      color: '#475569', used: 'Compound working solutions' },
+    { id: 'hole_6',  name: 'BLB tube 2',           conc: 'Buffer',      color: '#475569', used: 'No-enzyme ctrl wells' },
+    { id: 'hole_8',  name: 'TEM-1 working',        conc: '0.1 ng/µL',  color: '#059669', used: '40 µL × 27 wells (hand-prepped)' },
+    { id: 'hole_9',  name: 'DMSO',                 conc: '100%',        color: '#92400e', used: '10 µL → vehicle well A2' },
+    { id: 'hole_10', name: 'Nitrocefin (manual)',   conc: '100 µM',      color: '#d97706', used: '50 µL × wells — added by hand' },
+  ];
+  holes.forEach(h => {
+    const card = document.createElement('div');
+    card.className = 'hole-card';
+    card.innerHTML = `
+      <div class="hole-label">${h.id}</div>
+      <div class="hole-circle" style="color:${h.color};border-color:${h.color};background:${h.color}1a">
+        <span style="color:${h.color}">${h.id.replace('hole_','')}</span>
+      </div>
+      <div class="hole-name">${h.name}</div>
+      <div class="hole-conc">${h.conc}</div>
+      <div style="font-size:9.5px;color:#94a3b8;margin-top:4px;line-height:1.3">${h.used}</div>
+    `;
+    el.appendChild(card);
+  });
+})();
+
+// ── PCR WORKING PLATE ─────────────────────────────────────────────────
+(function buildPCR() {
+  const el = document.getElementById('pcr-row');
+  const wells = [
+    { id: 'A1', name: 'Positive ctrl', sub: 'T1262 Tazobactam', conc: '500 µM', color: '#b45309' },
+    { id: 'A2', name: 'Vehicle',       sub: '5% DMSO',          conc: '95 µL BLB + 10 µL DMSO', color: '#0f766e' },
+    { id: 'A3', name: 'Cpd 1',  sub: 'T1262 Tazobactam',    conc: '500 µM', color: '#1d4ed8' },
+    { id: 'A4', name: 'Cpd 2',  sub: 'T6685 Sulbactam',     conc: '500 µM', color: '#6d28d9' },
+    { id: 'A5', name: 'Cpd 3',  sub: 'T14081 Enmetazobactam', conc: '500 µM', color: '#0e7490' },
+    { id: 'A6', name: 'Cpd 4',  sub: 'T1008 Cephalexin',    conc: '500 µM', color: '#15803d' },
+    { id: 'A7', name: 'Cpd 5',  sub: 'T0224 Meropenem',     conc: '500 µM', color: '#b91c1c' },
+    { id: 'A8', name: 'Cpd 6',  sub: 'T0985 Oxacillin',     conc: '500 µM', color: '#92400e' },
+    { id: 'A9', name: 'Cpd 7',  sub: 'T0138 Cefpiramide',   conc: '500 µM', color: '#7c3aed' },
+    { id: 'A10', name: 'Cpd 8', sub: 'T8390 Cefazolin',     conc: '500 µM', color: '#065f46' },
+  ];
+  wells.forEach(w => {
+    const div = document.createElement('div');
+    div.className = 'pcr-well';
+    div.style.borderColor = w.color;
+    div.style.borderTopWidth = '3px';
+    div.innerHTML = `
+      <div class="well-id" style="color:${w.color}">${w.id}</div>
+      <div class="well-name">${w.name}<br>${w.sub}</div>
+      <div class="well-vol">${w.conc}</div>
+    `;
+    el.appendChild(div);
+  });
+})();
+</script>
+</body>
+</html>

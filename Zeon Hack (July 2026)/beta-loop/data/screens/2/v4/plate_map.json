@@ -1,0 +1,319 @@
+{
+  "run": 2,
+  "version": 4,
+  "round": 2,
+  "assay_type": "single_point",
+  "final_volume_ul": 50,
+  "compound_volume_ul": 5,
+  "replicates_per_compound": 3,
+  "exclude_compound_ids": [
+    "T19709"
+  ],
+  "compound_list": "data/screens/2/v4/compound_list.json",
+  "rationale_doc": "pvjthomas/runs/2/v4/selection_rationale.md",
+  "layout_notes": "96-well flat bottom, spaced interior layout: no edge wells (rows A/H, cols 1/12 empty). Controls (9) on B/D/F at cols 3/7/11; 30 sample wells (10 compounds \u00d7 3) on an interior checkerboard (no sample\u2013sample edge contact; controls on spaced complement cells at cols 3/7/11). T1262 @ 1.0 \u00b5M (rule 2); all others @ 50 \u00b5M unless noted in compound_list.json.",
+  "layout": "spaced_interior",
+  "wells": {
+    "B3": {
+      "compound_id": null,
+      "concentration_uM": 0,
+      "role": "vehicle",
+      "bucket": "control"
+    },
+    "B7": {
+      "compound_id": null,
+      "concentration_uM": 0,
+      "role": "vehicle",
+      "bucket": "control"
+    },
+    "B11": {
+      "compound_id": null,
+      "concentration_uM": 0,
+      "role": "vehicle",
+      "bucket": "control"
+    },
+    "D3": {
+      "compound_id": null,
+      "concentration_uM": 0,
+      "role": "no_tem1",
+      "bucket": "control"
+    },
+    "D7": {
+      "compound_id": null,
+      "concentration_uM": 0,
+      "role": "no_tem1",
+      "bucket": "control"
+    },
+    "D11": {
+      "compound_id": null,
+      "concentration_uM": 0,
+      "role": "no_tem1",
+      "bucket": "control"
+    },
+    "F3": {
+      "compound_id": "T19860",
+      "concentration_uM": 50.0,
+      "role": "pos-ctrl-clavaculin",
+      "bucket": "control"
+    },
+    "F7": {
+      "compound_id": "T19860",
+      "concentration_uM": 50.0,
+      "role": "pos-ctrl-clavaculin",
+      "bucket": "control"
+    },
+    "F11": {
+      "compound_id": "T19860",
+      "concentration_uM": 50.0,
+      "role": "pos-ctrl-clavaculin",
+      "bucket": "control"
+    },
+    "B2": {
+      "compound_id": "T19860",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "tier1_inhibitor",
+      "replicate": 1,
+      "functional_class": "positive"
+    },
+    "B4": {
+      "compound_id": "T19860",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "tier1_inhibitor",
+      "replicate": 2,
+      "functional_class": "positive"
+    },
+    "B6": {
+      "compound_id": "T19860",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "tier1_inhibitor",
+      "replicate": 3,
+      "functional_class": "positive"
+    },
+    "B8": {
+      "compound_id": "T1262",
+      "concentration_uM": 1.0,
+      "role": "sample",
+      "bucket": "tier1_inhibitor",
+      "replicate": 1,
+      "functional_class": "positive"
+    },
+    "B10": {
+      "compound_id": "T1262",
+      "concentration_uM": 1.0,
+      "role": "sample",
+      "bucket": "tier1_inhibitor",
+      "replicate": 2,
+      "functional_class": "positive"
+    },
+    "C3": {
+      "compound_id": "T1262",
+      "concentration_uM": 1.0,
+      "role": "sample",
+      "bucket": "tier1_inhibitor",
+      "replicate": 3,
+      "functional_class": "positive"
+    },
+    "C5": {
+      "compound_id": "T6685",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "tier1_inhibitor",
+      "replicate": 1,
+      "functional_class": "positive"
+    },
+    "C7": {
+      "compound_id": "T6685",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "tier1_inhibitor",
+      "replicate": 2,
+      "functional_class": "positive"
+    },
+    "C9": {
+      "compound_id": "T6685",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "tier1_inhibitor",
+      "replicate": 3,
+      "functional_class": "positive"
+    },
+    "C11": {
+      "compound_id": "T14081",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "tier1_inhibitor",
+      "replicate": 1,
+      "functional_class": "positive"
+    },
+    "D2": {
+      "compound_id": "T14081",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "tier1_inhibitor",
+      "replicate": 2,
+      "functional_class": "positive"
+    },
+    "D4": {
+      "compound_id": "T14081",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "tier1_inhibitor",
+      "replicate": 3,
+      "functional_class": "positive"
+    },
+    "D6": {
+      "compound_id": "T1005",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "substrate_control",
+      "replicate": 1,
+      "functional_class": "negative"
+    },
+    "D8": {
+      "compound_id": "T1005",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "substrate_control",
+      "replicate": 2,
+      "functional_class": "negative"
+    },
+    "D10": {
+      "compound_id": "T1005",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "substrate_control",
+      "replicate": 3,
+      "functional_class": "negative"
+    },
+    "E3": {
+      "compound_id": "T1008",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "substrate_control",
+      "replicate": 1,
+      "functional_class": "negative"
+    },
+    "E5": {
+      "compound_id": "T1008",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "substrate_control",
+      "replicate": 2,
+      "functional_class": "negative"
+    },
+    "E7": {
+      "compound_id": "T1008",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "substrate_control",
+      "replicate": 3,
+      "functional_class": "negative"
+    },
+    "E9": {
+      "compound_id": "T0224",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "substrate_control",
+      "replicate": 1,
+      "functional_class": "negative"
+    },
+    "E11": {
+      "compound_id": "T0224",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "substrate_control",
+      "replicate": 2,
+      "functional_class": "negative"
+    },
+    "F2": {
+      "compound_id": "T0224",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "substrate_control",
+      "replicate": 3,
+      "functional_class": "negative"
+    },
+    "F4": {
+      "compound_id": "T0985",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "substrate_control",
+      "replicate": 1,
+      "functional_class": "negative"
+    },
+    "F6": {
+      "compound_id": "T0985",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "substrate_control",
+      "replicate": 2,
+      "functional_class": "negative"
+    },
+    "F8": {
+      "compound_id": "T0985",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "substrate_control",
+      "replicate": 3,
+      "functional_class": "negative"
+    },
+    "F10": {
+      "compound_id": "T0138",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "diverse_pick",
+      "replicate": 1,
+      "functional_class": "unknown"
+    },
+    "G3": {
+      "compound_id": "T0138",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "diverse_pick",
+      "replicate": 2,
+      "functional_class": "unknown"
+    },
+    "G5": {
+      "compound_id": "T0138",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "diverse_pick",
+      "replicate": 3,
+      "functional_class": "unknown"
+    },
+    "G7": {
+      "compound_id": "T8390",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "diverse_pick",
+      "replicate": 1,
+      "functional_class": "unknown"
+    },
+    "G9": {
+      "compound_id": "T8390",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "diverse_pick",
+      "replicate": 2,
+      "functional_class": "unknown"
+    },
+    "G11": {
+      "compound_id": "T8390",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "diverse_pick",
+      "replicate": 3,
+      "functional_class": "unknown"
+    }
+  },
+  "versioned_path": "data/screens/2/v4/plate_map.json",
+  "rationale_doc_active": "pvjthomas/selection_rationale.md",
+  "version_label": "r2-discovery-v4",
+  "default_compound_concentration_uM": 50,
+  "concentrations_from": "data/screens/2/v4/compound_list.json",
+  "working_solution_uM": 500,
+  "description": "Round 2 discovery v4 \u2014 10 compounds in triplicate with literature-backed per-compound concentrations (see compound_list.json); spaced interior layout (no edge wells)"
+}

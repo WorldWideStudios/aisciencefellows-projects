@@ -1,0 +1,24 @@
+skill_id: prepare_nitrocefin_working_solution
+version: "1.0.0"
+description: "Prepare 2x nitrocefin working solution immediately before assay initiation."
+
+parameter_descriptions:
+  pipette: "Starting pipette. The skill swaps between pipettes as needed."
+  tipbox: "Starting tip rack."
+  blb_source: "Object containing BLB for nitrocefin dilution."
+  nitrocefin_stock_source: "Object containing 20 mM nitrocefin stock."
+  nitrocefin_working_source: "Object where 100 uM nitrocefin working solution is prepared."
+  blb_anchor: "Anchor containing BLB for nitrocefin dilution."
+  nitrocefin_stock_anchor: "Anchor containing 20 mM nitrocefin stock."
+  nitrocefin_working_anchor: "Anchor where 100 uM nitrocefin working solution is prepared."
+  nitrocefin_stock_volume_ul: "20 mM nitrocefin stock volume."
+  nitrocefin_blb_volume_ul: "BLB volume for nitrocefin working solution."
+
+preconditions: {}
+postconditions: {}
+
+tags:
+  - nitrocefin
+  - dilution
+  - tem1
+  - assay

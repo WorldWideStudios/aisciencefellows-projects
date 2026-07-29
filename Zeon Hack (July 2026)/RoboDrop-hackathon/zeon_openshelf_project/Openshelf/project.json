@@ -1,0 +1,9 @@
+{
+  "name": "Openshelf",
+  "description": "",
+  "created_at": "2026-07-25T19:53:01.500Z",
+  "updated_at": "2026-07-25T19:53:01.500Z",
+  "archived": false,
+  "active_workflow": "move_plate_to_openshelf_testphyw",
+  "active_world": "openshelf_sucess"
+}

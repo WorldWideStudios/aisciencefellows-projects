@@ -1,0 +1,55 @@
+import time
+
+from execution.execution_functions import is_sim_mode
+import tinytuya
+
+# Zeon Internal Science Gateway — parent of the Zigbee fingerbots / switches
+GATEWAY_ID = "eb285ec4c33852d67cnupg"
+GATEWAY_KEY = "'~R9$FiU^J2E.R2="
+GATEWAY_IP = "192.168.1.199"
+
+SWITCH_CID = "a4c138eada8cfc71"
+
+DP_SWITCH = 1
+
+
+def _tuya_press(cid: str) -> None:
+    """Click one Zigbee fingerbot once (flip switch_1 to a real new value)."""
+    device = tinytuya.Device(GATEWAY_ID, GATEWAY_IP, GATEWAY_KEY, version=3.4)
+    device.set_socketPersistent(True)
+    device.set_socketTimeout(8)
+    device.cid = cid
+    try:
+        status = device.status()
+        dps = status.get("dps") if isinstance(status, dict) else None
+        current = dps.get(str(DP_SWITCH)) if isinstance(dps, dict) else None
+        target = (not current) if isinstance(current, bool) else True
+
+        result = device.set_value(DP_SWITCH, target)
+        time.sleep(2.5)
+
+        echoed = result.get("dps") if isinstance(result, dict) else None
+        if isinstance(echoed, dict) and echoed.get(str(DP_SWITCH)) == target:
+            print(f"shaker run press: CONFIRMED switch_1 -> {target}")
+        else:
+            print(f"shaker run press: NO ACK (sent switch_1 -> {target}); reply={result!r}")
+    finally:
+        device.close()
+
+
+def wellplate_shaker_run(shaker=None, ensure_state: str = ""):
+    """Start the shaker with a single button press. No state tracking.
+
+    Simplified for this workflow: just start the shaker and never stop it. There
+    is no running-flag check — an ``ensure_state="off"`` request is ignored so the
+    shaker is left running. Everything else is a single press.
+    """
+    if (ensure_state or "").strip().lower() == "off":
+        print("wellplate_shaker_run: 'off' ignored — leaving shaker running")
+        return {"success": True, "running": True, "pressed": False}
+
+    if not is_sim_mode():
+        _tuya_press(SWITCH_CID)
+
+    print("wellplate_shaker_run: pressed shaker run button once (started)")
+    return {"success": True, "running": True, "pressed": True}

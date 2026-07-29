@@ -1,0 +1,29 @@
+{
+  "run": 2,
+  "round": 2,
+  "version": 3,
+  "label": "r2-discovery-v3",
+  "created_at": "2026-07-25T18:56:57-0700",
+  "author": "pvjthomas",
+  "status": "pending_signoff",
+  "supersedes": "data/screens/2/v2/manifest.json",
+  "note": "v3 adds literature-backed per-compound concentrations (concentration_rule + concentration_reference in compound_list.json)",
+  "description": "Round 2 discovery v3 \u2014 10 compounds \u00d7 triplicate; T1262 @ 1 \u00b5M, others mostly @ 50 \u00b5M",
+  "concentration_policy": {
+    "rules": {
+      "1": "literature nitrocefin assay inhibitor concentration",
+      "2": "10\u00d7 IC50 or Ki (IC50 preferred)",
+      "3": "project default 50 \u00b5M"
+    },
+    "canonical_file": "data/screens/2/v3/compound_list.json",
+    "literature_search_at": "2026-07-26T01:35:51Z"
+  },
+  "files": {
+    "compound_list": "data/screens/2/v3/compound_list.json",
+    "compound_list_csv": "data/screens/2/v3/compound_list.csv",
+    "plate_map": "data/screens/2/v3/plate_map.json",
+    "selection_rationale": "pvjthomas/runs/2/v3/selection_rationale.md",
+    "active_plate_map": "data/plate_map_r2.json",
+    "active_selection_rationale": "pvjthomas/selection_rationale.md"
+  }
+}

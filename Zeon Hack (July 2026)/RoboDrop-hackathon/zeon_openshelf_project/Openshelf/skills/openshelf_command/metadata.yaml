@@ -1,0 +1,12 @@
+skill_id: openshelf_command
+version: "1.0.0"
+description: "Call an arbitrary OpenShelf endpoint. Escape hatch for anything not yet modelled; does not wait for a settle, so gate on openshelf_status yourself if it actuates."
+
+preconditions: {}   # parsed but NOT enforced by the executor - never gate on these
+postconditions: {}
+safety_rules: []
+tags:
+  - openshelf
+  - bridge
+  - http
+world_state_prime: null

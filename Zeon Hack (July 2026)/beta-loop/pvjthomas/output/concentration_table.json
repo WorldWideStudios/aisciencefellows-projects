@@ -1,0 +1,211 @@
+{
+  "rows": [
+    {
+      "compound_id": "T0138",
+      "name": "Cefpiramide acid",
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "rule_applied": 3,
+      "ki_uM": null,
+      "ic50_uM": null
+    },
+    {
+      "compound_id": "T0198",
+      "name": "Ceftiofur sodium",
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "rule_applied": 3,
+      "ki_uM": null,
+      "ic50_uM": null
+    },
+    {
+      "compound_id": "T0199",
+      "name": "Cephradine",
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "rule_applied": 3,
+      "ki_uM": null,
+      "ic50_uM": null
+    },
+    {
+      "compound_id": "T0234",
+      "name": "Methicillin sodium salt",
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "rule_applied": 3,
+      "ki_uM": null,
+      "ic50_uM": null
+    },
+    {
+      "compound_id": "T0366",
+      "name": "Cefadroxil",
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "rule_applied": 3,
+      "ki_uM": null,
+      "ic50_uM": null
+    },
+    {
+      "compound_id": "T0814",
+      "name": "Ampicillin Trihydrate",
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "rule_applied": 3,
+      "ki_uM": null,
+      "ic50_uM": null
+    },
+    {
+      "compound_id": "T0985",
+      "name": "Oxacillin sodium salt",
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "rule_applied": 3,
+      "ki_uM": null,
+      "ic50_uM": null
+    },
+    {
+      "compound_id": "T1001",
+      "name": "Dicloxacillin Sodium hydrate",
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "rule_applied": 3,
+      "ki_uM": null,
+      "ic50_uM": null
+    },
+    {
+      "compound_id": "T1005",
+      "name": "Amoxicillin",
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "rule_applied": 3,
+      "ki_uM": null,
+      "ic50_uM": null
+    },
+    {
+      "compound_id": "T1008",
+      "name": "Cephalexin",
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "rule_applied": 3,
+      "ki_uM": null,
+      "ic50_uM": null
+    },
+    {
+      "compound_id": "T1213",
+      "name": "Piperacillin sodium",
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "rule_applied": 3,
+      "ki_uM": null,
+      "ic50_uM": null
+    },
+    {
+      "compound_id": "T1262",
+      "name": "Tazobactam",
+      "screen_conc_uM": 1.0,
+      "screen_conc_source": "10x_ic50",
+      "rule_applied": 2,
+      "ki_uM": null,
+      "ic50_uM": 0.1
+    },
+    {
+      "compound_id": "T13038",
+      "name": "Sultamicillin",
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "rule_applied": 3,
+      "ki_uM": null,
+      "ic50_uM": null
+    },
+    {
+      "compound_id": "T14081",
+      "name": "Enmetazobactam",
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "rule_applied": 3,
+      "ki_uM": null,
+      "ic50_uM": null
+    },
+    {
+      "compound_id": "T14979",
+      "name": "Clavulanate lithium",
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "rule_applied": 3,
+      "ki_uM": null,
+      "ic50_uM": null
+    },
+    {
+      "compound_id": "T1631",
+      "name": "Sulbactam",
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "rule_applied": 3,
+      "ki_uM": null,
+      "ic50_uM": null
+    },
+    {
+      "compound_id": "T19860",
+      "name": "Clavulanic Acid",
+      "screen_conc_uM": 50,
+      "screen_conc_source": "literature",
+      "rule_applied": 1,
+      "ki_uM": 0.85,
+      "ic50_uM": null
+    },
+    {
+      "compound_id": "T30787",
+      "name": "Cefetamet sodium",
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "rule_applied": 3,
+      "ki_uM": null,
+      "ic50_uM": null
+    },
+    {
+      "compound_id": "T6385",
+      "name": "Amoxicillin Sodium",
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "rule_applied": 3,
+      "ki_uM": null,
+      "ic50_uM": null
+    },
+    {
+      "compound_id": "T6685",
+      "name": "Sulbactam sodium",
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "rule_applied": 3,
+      "ki_uM": null,
+      "ic50_uM": null
+    },
+    {
+      "compound_id": "T67978",
+      "name": "Cefuzonam",
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "rule_applied": 3,
+      "ki_uM": null,
+      "ic50_uM": null
+    },
+    {
+      "compound_id": "T8390",
+      "name": "Cefazolin",
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "rule_applied": 3,
+      "ki_uM": null,
+      "ic50_uM": null
+    },
+    {
+      "compound_id": "TQ0056",
+      "name": "Cefuracetime",
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "rule_applied": 3,
+      "ki_uM": null,
+      "ic50_uM": null
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+urdf: coldblock_large.urdf
+articulations:
+  default:
+    description: All joints at rest position
+    joints: {}
+anchors:
+  object:
+    parent_link: world
+    description: Table placement frame, origin at (+X, +Y, -Z) bbox corner
+    link_T_anchor:
+      xyz: [0.0582807, 0.0295959, -0.0549725]
+      wxyz: [0.986216, -4.07875e-33, 6.86761e-34, -0.165462]
+  hole_1:
+    parent_link: body
+    description: xyz location of hole 1
+    link_T_anchor:
+      xyz: [0.028206, 0.011232, 0.052297]
+      wxyz: [0.987307, -6.0358e-33, 2.80782e-32, -0.158823]
+  hole_2:
+    parent_link: body
+    description: xyz coordinate for hole 2
+    link_T_anchor:
+      xyz: [0.013105, -0.027648, 0.0523]
+      wxyz: [0.985375, -1.90911e-32, 2.04438e-33, -0.170399]
+  hole_3:
+    parent_link: body
+    description: xyz coordinate for hole 3
+    link_T_anchor:
+      xyz: [-0.010628, 0.025708, 0.0523]
+      wxyz: [0.985683, 1.36336e-32, 1.04361e-32, -0.16861]
+  hole_4:
+    parent_link: body
+    description: xyz coordinate for hole 4
+    link_T_anchor:
+      xyz: [-0.025729, -0.013172, 0.052297]
+      wxyz: [0.987307, -6.0358e-33, 2.80782e-32, -0.158823]

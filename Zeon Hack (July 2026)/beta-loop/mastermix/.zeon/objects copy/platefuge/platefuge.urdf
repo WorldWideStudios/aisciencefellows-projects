@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="platefuge">
+  <link name="world" />
+
+  <!-- Stationary base. body frame = mesh-native (rotated Rx(90deg) from
+       phobos root) so split mesh vertices stay in their original coords. -->
+  <joint name="world_joint" type="fixed">
+    <parent link="world" />
+    <child link="body" />
+    <origin xyz="0 0 0" rpy="1.5708 0 0" />
+  </joint>
+  <link name="body">
+    <visual>
+      <geometry><mesh filename="body.obj" /></geometry>
+    </visual>
+    <collision>
+      <geometry><mesh filename="body.obj" /></geometry>
+    </collision>
+  </link>
+
+  <!-- Lid: revolute. lid.obj is in mesh-native coords; visual origin =
+       inv(body_T_lid) places it correctly at rest. -->
+  <joint name="lid_joint" type="revolute">
+    <parent link="body" />
+    <child link="lid" />
+    <origin xyz="-0.16742 0.09275 -0.01660" rpy="-1.49827 0.00088 1.80859" />
+    <axis xyz="0 0 -1" />
+    <limit lower="-0.75" upper="1.69" effort="0.0" velocity="0.0" />
+  </joint>
+  <link name="lid">
+    <visual>
+      <origin xyz="-0.12959 -0.02665 -0.13930" rpy="-1.27156 1.32245 -2.85190" />
+      <geometry><mesh filename="lid.obj" /></geometry>
+    </visual>
+    <collision>
+      <origin xyz="-0.12959 -0.02665 -0.13930" rpy="-1.27156 1.32245 -2.85190" />
+      <geometry><mesh filename="lid.obj" /></geometry>
+    </collision>
+  </link>
+
+  <!-- Rotor: continuous spin. rotor.obj is in mesh-native coords; visual
+       origin = inv(body_T_rotor) places it correctly at rest. Spin axis
+       (0,0,1) in rotor link frame = mesh-native +Z, which after the body
+       frame's Rx(90deg) reads as world up. -->
+  <joint name="rotor_joint" type="continuous">
+    <parent link="body" />
+    <child link="rotor" />
+    <origin xyz="-0.09819 -0.02196 -0.10189" rpy="-0.02229 0.07153 -0.00384" />
+    <axis xyz="0 0 1" />
+  </joint>
+  <link name="rotor">
+    <visual>
+      <origin xyz="0.09057 0.01991 0.10911" rpy="0.02207 -0.07159 0.00225" />
+      <geometry><mesh filename="rotor.obj" /></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.09057 0.01991 0.10911" rpy="0.02207 -0.07159 0.00225" />
+      <geometry><mesh filename="rotor.obj" /></geometry>
+    </collision>
+  </link>
+</robot>

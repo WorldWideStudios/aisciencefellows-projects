@@ -1,0 +1,9 @@
+{
+  "name": "mastermix",
+  "description": "",
+  "created_at": "2026-07-25T21:11:36.924Z",
+  "updated_at": "2026-07-25T21:11:36.924Z",
+  "archived": false,
+  "active_workflow": "pipette_demo",
+  "active_world": "pipette_demo_world"
+}

@@ -1,0 +1,2315 @@
+{
+  "workflow_id": "cfps_inhibitor_dose_response",
+  "name": "CFPS Inhibitor Dose Response (Part 3)",
+  "description": "Part 3 of the TEM-1 inhibitor screen: doses each of up to 8 already-expressed TEM1 wells (built by cfps_mastermix / Part 1, confirmed by cfps_sfgfp_confirmation / Part 2) with its own compound volume from a pre-arrayed compound_library plate plus nitrocefin substrate, then reads the plate kinetically \u2014 the initial slope of A490 vs time is the enzyme's velocity, and inhibition drops that slope. One run, no seal/shake: the kinetic time course is captured live by the reader.",
+  "version": "1.0.0",
+  "author": "pipeline",
+  "created_at": "2026-07-25T00:00:00.000Z",
+  "updated_at": "2026-07-25T00:00:00.000Z",
+  "simulation_validated": false,
+  "objects": [],
+  "inputs": [
+    {
+      "name": "pipette",
+      "type": "object",
+      "is_array": false,
+      "description": "10 uL pipette",
+      "defaultValue": "epipette_10ul"
+    },
+    {
+      "name": "tipbox",
+      "type": "object",
+      "is_array": false,
+      "description": "10 uL tip rack",
+      "defaultValue": "tipbox_10ul_1"
+    },
+    {
+      "name": "reagent_block",
+      "type": "object",
+      "is_array": false,
+      "description": "Cold block holding the nitrocefin stock",
+      "defaultValue": "coldblock_wellplate"
+    },
+    {
+      "name": "reaction_plate",
+      "type": "object",
+      "is_array": false,
+      "description": "The Part-1 CFPS plate \u2014 dosing goes directly into its already-expressed TEM1 wells",
+      "defaultValue": "wellplate_96_flatbottom"
+    },
+    {
+      "name": "compound_library",
+      "type": "object",
+      "is_array": false,
+      "description": "Pre-arrayed compound stock-dilution plate (operator-prepped off-workflow)",
+      "defaultValue": "wellplate_pcr_parts_2"
+    },
+    {
+      "name": "platereader",
+      "type": "object",
+      "is_array": false,
+      "description": "Plate reader",
+      "defaultValue": "plate_reader"
+    },
+    {
+      "name": "plate_home",
+      "type": "object",
+      "is_array": false,
+      "description": "Object carrying the plate's home anchor",
+      "defaultValue": "wellplate_holder_tags"
+    },
+    {
+      "name": "nitrocefin_hole",
+      "type": "string",
+      "is_array": false,
+      "description": "Cold-block hole holding nitrocefin substrate stock",
+      "defaultValue": "hole_9"
+    },
+    {
+      "name": "compound_id",
+      "type": "string",
+      "is_array": false,
+      "description": "Compound identifier for this round (logged, not bound to any motion)",
+      "defaultValue": ""
+    },
+    {
+      "name": "dose_n",
+      "type": "int",
+      "is_array": false,
+      "description": "Number of dosed wells this run (must match the doseN_* inputs actually populated, max 8)",
+      "defaultValue": 8
+    },
+    {
+      "name": "run_name",
+      "type": "string",
+      "is_array": false,
+      "description": "Name for this run's saved output folder",
+      "defaultValue": "cfps_inhibitor_dose_response_run"
+    },
+    {
+      "name": "dose1_well",
+      "type": "string",
+      "is_array": false,
+      "description": "Existing Part-1 sample well to dose at position 1 (must already contain expressed TEM1 reaction mix)",
+      "defaultValue": ""
+    },
+    {
+      "name": "dose1_compound_src_well",
+      "type": "string",
+      "is_array": false,
+      "description": "compound_library source well for dose position 1",
+      "defaultValue": ""
+    },
+    {
+      "name": "dose1_compound_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Compound volume (uL) for dose position 1",
+      "defaultValue": 0.0
+    },
+    {
+      "name": "dose1_compound_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the compound leg at position 1",
+      "defaultValue": 1
+    },
+    {
+      "name": "dose1_nitrocefin_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Nitrocefin volume (uL) for dose position 1",
+      "defaultValue": 0.0
+    },
+    {
+      "name": "dose1_nitrocefin_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the nitrocefin leg at position 1",
+      "defaultValue": 9
+    },
+    {
+      "name": "dose2_well",
+      "type": "string",
+      "is_array": false,
+      "description": "Existing Part-1 sample well to dose at position 2 (must already contain expressed TEM1 reaction mix)",
+      "defaultValue": ""
+    },
+    {
+      "name": "dose2_compound_src_well",
+      "type": "string",
+      "is_array": false,
+      "description": "compound_library source well for dose position 2",
+      "defaultValue": ""
+    },
+    {
+      "name": "dose2_compound_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Compound volume (uL) for dose position 2",
+      "defaultValue": 0.0
+    },
+    {
+      "name": "dose2_compound_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the compound leg at position 2",
+      "defaultValue": 2
+    },
+    {
+      "name": "dose2_nitrocefin_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Nitrocefin volume (uL) for dose position 2",
+      "defaultValue": 0.0
+    },
+    {
+      "name": "dose2_nitrocefin_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the nitrocefin leg at position 2",
+      "defaultValue": 10
+    },
+    {
+      "name": "dose3_well",
+      "type": "string",
+      "is_array": false,
+      "description": "Existing Part-1 sample well to dose at position 3 (must already contain expressed TEM1 reaction mix)",
+      "defaultValue": ""
+    },
+    {
+      "name": "dose3_compound_src_well",
+      "type": "string",
+      "is_array": false,
+      "description": "compound_library source well for dose position 3",
+      "defaultValue": ""
+    },
+    {
+      "name": "dose3_compound_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Compound volume (uL) for dose position 3",
+      "defaultValue": 0.0
+    },
+    {
+      "name": "dose3_compound_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the compound leg at position 3",
+      "defaultValue": 3
+    },
+    {
+      "name": "dose3_nitrocefin_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Nitrocefin volume (uL) for dose position 3",
+      "defaultValue": 0.0
+    },
+    {
+      "name": "dose3_nitrocefin_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the nitrocefin leg at position 3",
+      "defaultValue": 11
+    },
+    {
+      "name": "dose4_well",
+      "type": "string",
+      "is_array": false,
+      "description": "Existing Part-1 sample well to dose at position 4 (must already contain expressed TEM1 reaction mix)",
+      "defaultValue": ""
+    },
+    {
+      "name": "dose4_compound_src_well",
+      "type": "string",
+      "is_array": false,
+      "description": "compound_library source well for dose position 4",
+      "defaultValue": ""
+    },
+    {
+      "name": "dose4_compound_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Compound volume (uL) for dose position 4",
+      "defaultValue": 0.0
+    },
+    {
+      "name": "dose4_compound_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the compound leg at position 4",
+      "defaultValue": 4
+    },
+    {
+      "name": "dose4_nitrocefin_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Nitrocefin volume (uL) for dose position 4",
+      "defaultValue": 0.0
+    },
+    {
+      "name": "dose4_nitrocefin_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the nitrocefin leg at position 4",
+      "defaultValue": 12
+    },
+    {
+      "name": "dose5_well",
+      "type": "string",
+      "is_array": false,
+      "description": "Existing Part-1 sample well to dose at position 5 (must already contain expressed TEM1 reaction mix)",
+      "defaultValue": ""
+    },
+    {
+      "name": "dose5_compound_src_well",
+      "type": "string",
+      "is_array": false,
+      "description": "compound_library source well for dose position 5",
+      "defaultValue": ""
+    },
+    {
+      "name": "dose5_compound_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Compound volume (uL) for dose position 5",
+      "defaultValue": 0.0
+    },
+    {
+      "name": "dose5_compound_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the compound leg at position 5",
+      "defaultValue": 5
+    },
+    {
+      "name": "dose5_nitrocefin_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Nitrocefin volume (uL) for dose position 5",
+      "defaultValue": 0.0
+    },
+    {
+      "name": "dose5_nitrocefin_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the nitrocefin leg at position 5",
+      "defaultValue": 13
+    },
+    {
+      "name": "dose6_well",
+      "type": "string",
+      "is_array": false,
+      "description": "Existing Part-1 sample well to dose at position 6 (must already contain expressed TEM1 reaction mix)",
+      "defaultValue": ""
+    },
+    {
+      "name": "dose6_compound_src_well",
+      "type": "string",
+      "is_array": false,
+      "description": "compound_library source well for dose position 6",
+      "defaultValue": ""
+    },
+    {
+      "name": "dose6_compound_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Compound volume (uL) for dose position 6",
+      "defaultValue": 0.0
+    },
+    {
+      "name": "dose6_compound_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the compound leg at position 6",
+      "defaultValue": 6
+    },
+    {
+      "name": "dose6_nitrocefin_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Nitrocefin volume (uL) for dose position 6",
+      "defaultValue": 0.0
+    },
+    {
+      "name": "dose6_nitrocefin_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the nitrocefin leg at position 6",
+      "defaultValue": 14
+    },
+    {
+      "name": "dose7_well",
+      "type": "string",
+      "is_array": false,
+      "description": "Existing Part-1 sample well to dose at position 7 (must already contain expressed TEM1 reaction mix)",
+      "defaultValue": ""
+    },
+    {
+      "name": "dose7_compound_src_well",
+      "type": "string",
+      "is_array": false,
+      "description": "compound_library source well for dose position 7",
+      "defaultValue": ""
+    },
+    {
+      "name": "dose7_compound_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Compound volume (uL) for dose position 7",
+      "defaultValue": 0.0
+    },
+    {
+      "name": "dose7_compound_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the compound leg at position 7",
+      "defaultValue": 7
+    },
+    {
+      "name": "dose7_nitrocefin_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Nitrocefin volume (uL) for dose position 7",
+      "defaultValue": 0.0
+    },
+    {
+      "name": "dose7_nitrocefin_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the nitrocefin leg at position 7",
+      "defaultValue": 15
+    },
+    {
+      "name": "dose8_well",
+      "type": "string",
+      "is_array": false,
+      "description": "Existing Part-1 sample well to dose at position 8 (must already contain expressed TEM1 reaction mix)",
+      "defaultValue": ""
+    },
+    {
+      "name": "dose8_compound_src_well",
+      "type": "string",
+      "is_array": false,
+      "description": "compound_library source well for dose position 8",
+      "defaultValue": ""
+    },
+    {
+      "name": "dose8_compound_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Compound volume (uL) for dose position 8",
+      "defaultValue": 0.0
+    },
+    {
+      "name": "dose8_compound_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the compound leg at position 8",
+      "defaultValue": 8
+    },
+    {
+      "name": "dose8_nitrocefin_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Nitrocefin volume (uL) for dose position 8",
+      "defaultValue": 0.0
+    },
+    {
+      "name": "dose8_nitrocefin_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the nitrocefin leg at position 8",
+      "defaultValue": 16
+    }
+  ],
+  "nodes": [
+    {
+      "node_id": "start_0",
+      "type": "start",
+      "label": "Start"
+    },
+    {
+      "node_id": "grab_pipette",
+      "type": "skill",
+      "label": "Pick Up Pipette",
+      "skill_id": "epipette_grab",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "dose1_compound_attach",
+      "type": "skill",
+      "label": "Attach tip (dose1_compound)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "dose1_compound_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "dose1_compound_aspirate",
+      "type": "skill",
+      "label": "Aspirate (dose1_compound)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "compound_library"
+        },
+        "anchor": {
+          "$input": "dose1_compound_src_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "dose1_compound_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "dose1_compound_dispense",
+      "type": "skill",
+      "label": "Dispense (dose1_compound)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "dose1_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "dose1_compound_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "dose1_compound_eject",
+      "type": "skill",
+      "label": "Eject tip (dose1_compound)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "dose1_nitrocefin_attach",
+      "type": "skill",
+      "label": "Attach tip (dose1_nitrocefin)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "dose1_nitrocefin_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "dose1_nitrocefin_aspirate",
+      "type": "skill",
+      "label": "Aspirate (dose1_nitrocefin)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "nitrocefin_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "dose1_nitrocefin_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "dose1_nitrocefin_dispense",
+      "type": "skill",
+      "label": "Dispense (dose1_nitrocefin)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "dose1_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "dose1_nitrocefin_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "dose1_nitrocefin_eject",
+      "type": "skill",
+      "label": "Eject tip (dose1_nitrocefin)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "dose2_compound_attach",
+      "type": "skill",
+      "label": "Attach tip (dose2_compound)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "dose2_compound_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "dose2_compound_aspirate",
+      "type": "skill",
+      "label": "Aspirate (dose2_compound)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "compound_library"
+        },
+        "anchor": {
+          "$input": "dose2_compound_src_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "dose2_compound_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "dose2_compound_dispense",
+      "type": "skill",
+      "label": "Dispense (dose2_compound)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "dose2_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "dose2_compound_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "dose2_compound_eject",
+      "type": "skill",
+      "label": "Eject tip (dose2_compound)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "dose2_nitrocefin_attach",
+      "type": "skill",
+      "label": "Attach tip (dose2_nitrocefin)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "dose2_nitrocefin_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "dose2_nitrocefin_aspirate",
+      "type": "skill",
+      "label": "Aspirate (dose2_nitrocefin)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "nitrocefin_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "dose2_nitrocefin_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "dose2_nitrocefin_dispense",
+      "type": "skill",
+      "label": "Dispense (dose2_nitrocefin)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "dose2_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "dose2_nitrocefin_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "dose2_nitrocefin_eject",
+      "type": "skill",
+      "label": "Eject tip (dose2_nitrocefin)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "dose3_compound_attach",
+      "type": "skill",
+      "label": "Attach tip (dose3_compound)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "dose3_compound_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "dose3_compound_aspirate",
+      "type": "skill",
+      "label": "Aspirate (dose3_compound)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "compound_library"
+        },
+        "anchor": {
+          "$input": "dose3_compound_src_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "dose3_compound_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "dose3_compound_dispense",
+      "type": "skill",
+      "label": "Dispense (dose3_compound)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "dose3_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "dose3_compound_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "dose3_compound_eject",
+      "type": "skill",
+      "label": "Eject tip (dose3_compound)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "dose3_nitrocefin_attach",
+      "type": "skill",
+      "label": "Attach tip (dose3_nitrocefin)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "dose3_nitrocefin_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "dose3_nitrocefin_aspirate",
+      "type": "skill",
+      "label": "Aspirate (dose3_nitrocefin)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "nitrocefin_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "dose3_nitrocefin_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "dose3_nitrocefin_dispense",
+      "type": "skill",
+      "label": "Dispense (dose3_nitrocefin)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "dose3_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "dose3_nitrocefin_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "dose3_nitrocefin_eject",
+      "type": "skill",
+      "label": "Eject tip (dose3_nitrocefin)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "dose4_compound_attach",
+      "type": "skill",
+      "label": "Attach tip (dose4_compound)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "dose4_compound_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "dose4_compound_aspirate",
+      "type": "skill",
+      "label": "Aspirate (dose4_compound)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "compound_library"
+        },
+        "anchor": {
+          "$input": "dose4_compound_src_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "dose4_compound_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "dose4_compound_dispense",
+      "type": "skill",
+      "label": "Dispense (dose4_compound)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "dose4_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "dose4_compound_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "dose4_compound_eject",
+      "type": "skill",
+      "label": "Eject tip (dose4_compound)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "dose4_nitrocefin_attach",
+      "type": "skill",
+      "label": "Attach tip (dose4_nitrocefin)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "dose4_nitrocefin_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "dose4_nitrocefin_aspirate",
+      "type": "skill",
+      "label": "Aspirate (dose4_nitrocefin)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "nitrocefin_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "dose4_nitrocefin_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "dose4_nitrocefin_dispense",
+      "type": "skill",
+      "label": "Dispense (dose4_nitrocefin)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "dose4_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "dose4_nitrocefin_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "dose4_nitrocefin_eject",
+      "type": "skill",
+      "label": "Eject tip (dose4_nitrocefin)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "dose5_compound_attach",
+      "type": "skill",
+      "label": "Attach tip (dose5_compound)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "dose5_compound_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "dose5_compound_aspirate",
+      "type": "skill",
+      "label": "Aspirate (dose5_compound)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "compound_library"
+        },
+        "anchor": {
+          "$input": "dose5_compound_src_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "dose5_compound_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "dose5_compound_dispense",
+      "type": "skill",
+      "label": "Dispense (dose5_compound)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "dose5_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "dose5_compound_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "dose5_compound_eject",
+      "type": "skill",
+      "label": "Eject tip (dose5_compound)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "dose5_nitrocefin_attach",
+      "type": "skill",
+      "label": "Attach tip (dose5_nitrocefin)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "dose5_nitrocefin_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "dose5_nitrocefin_aspirate",
+      "type": "skill",
+      "label": "Aspirate (dose5_nitrocefin)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "nitrocefin_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "dose5_nitrocefin_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "dose5_nitrocefin_dispense",
+      "type": "skill",
+      "label": "Dispense (dose5_nitrocefin)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "dose5_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "dose5_nitrocefin_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "dose5_nitrocefin_eject",
+      "type": "skill",
+      "label": "Eject tip (dose5_nitrocefin)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "dose6_compound_attach",
+      "type": "skill",
+      "label": "Attach tip (dose6_compound)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "dose6_compound_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "dose6_compound_aspirate",
+      "type": "skill",
+      "label": "Aspirate (dose6_compound)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "compound_library"
+        },
+        "anchor": {
+          "$input": "dose6_compound_src_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "dose6_compound_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "dose6_compound_dispense",
+      "type": "skill",
+      "label": "Dispense (dose6_compound)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "dose6_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "dose6_compound_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "dose6_compound_eject",
+      "type": "skill",
+      "label": "Eject tip (dose6_compound)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "dose6_nitrocefin_attach",
+      "type": "skill",
+      "label": "Attach tip (dose6_nitrocefin)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "dose6_nitrocefin_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "dose6_nitrocefin_aspirate",
+      "type": "skill",
+      "label": "Aspirate (dose6_nitrocefin)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "nitrocefin_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "dose6_nitrocefin_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "dose6_nitrocefin_dispense",
+      "type": "skill",
+      "label": "Dispense (dose6_nitrocefin)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "dose6_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "dose6_nitrocefin_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "dose6_nitrocefin_eject",
+      "type": "skill",
+      "label": "Eject tip (dose6_nitrocefin)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "dose7_compound_attach",
+      "type": "skill",
+      "label": "Attach tip (dose7_compound)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "dose7_compound_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "dose7_compound_aspirate",
+      "type": "skill",
+      "label": "Aspirate (dose7_compound)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "compound_library"
+        },
+        "anchor": {
+          "$input": "dose7_compound_src_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "dose7_compound_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "dose7_compound_dispense",
+      "type": "skill",
+      "label": "Dispense (dose7_compound)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "dose7_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "dose7_compound_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "dose7_compound_eject",
+      "type": "skill",
+      "label": "Eject tip (dose7_compound)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "dose7_nitrocefin_attach",
+      "type": "skill",
+      "label": "Attach tip (dose7_nitrocefin)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "dose7_nitrocefin_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "dose7_nitrocefin_aspirate",
+      "type": "skill",
+      "label": "Aspirate (dose7_nitrocefin)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "nitrocefin_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "dose7_nitrocefin_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "dose7_nitrocefin_dispense",
+      "type": "skill",
+      "label": "Dispense (dose7_nitrocefin)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "dose7_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "dose7_nitrocefin_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "dose7_nitrocefin_eject",
+      "type": "skill",
+      "label": "Eject tip (dose7_nitrocefin)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "dose8_compound_attach",
+      "type": "skill",
+      "label": "Attach tip (dose8_compound)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "dose8_compound_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "dose8_compound_aspirate",
+      "type": "skill",
+      "label": "Aspirate (dose8_compound)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "compound_library"
+        },
+        "anchor": {
+          "$input": "dose8_compound_src_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "dose8_compound_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "dose8_compound_dispense",
+      "type": "skill",
+      "label": "Dispense (dose8_compound)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "dose8_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "dose8_compound_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "dose8_compound_eject",
+      "type": "skill",
+      "label": "Eject tip (dose8_compound)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "dose8_nitrocefin_attach",
+      "type": "skill",
+      "label": "Attach tip (dose8_nitrocefin)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "dose8_nitrocefin_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "dose8_nitrocefin_aspirate",
+      "type": "skill",
+      "label": "Aspirate (dose8_nitrocefin)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "nitrocefin_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "dose8_nitrocefin_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "dose8_nitrocefin_dispense",
+      "type": "skill",
+      "label": "Dispense (dose8_nitrocefin)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "dose8_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "dose8_nitrocefin_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "dose8_nitrocefin_eject",
+      "type": "skill",
+      "label": "Eject tip (dose8_nitrocefin)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "place_pipette",
+      "type": "skill",
+      "label": "Place Pipette Back",
+      "skill_id": "place_current_pipette",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "grab_plate",
+      "type": "skill",
+      "label": "Grab Reaction Plate",
+      "skill_id": "wellplate_grab",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "grasp_anchor": "grasp_longside_platereader"
+      }
+    },
+    {
+      "node_id": "reader_open_pre",
+      "type": "skill",
+      "label": "Open Reader Lid",
+      "skill_id": "platereader_open",
+      "parameters": {
+        "platereader": {
+          "$input": "platereader"
+        }
+      }
+    },
+    {
+      "node_id": "reader_load",
+      "type": "skill",
+      "label": "Load Plate Into Reader",
+      "skill_id": "platereader_load",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "platereader": {
+          "$input": "platereader"
+        }
+      }
+    },
+    {
+      "node_id": "reader_closed",
+      "type": "skill",
+      "label": "Close Reader Lid",
+      "skill_id": "platereader_closed",
+      "parameters": {
+        "platereader": {
+          "$input": "platereader"
+        }
+      }
+    },
+    {
+      "node_id": "reader_measure",
+      "type": "skill",
+      "label": "Kinetic Read (nitrocefin inhibition)",
+      "description": "Assumes the operator has selected a kinetic (A490, nitrocefin) protocol in Gen5 before this run. Initial slope of A490 vs time = enzyme velocity per well.",
+      "skill_id": "platereader_measure",
+      "parameters": {}
+    },
+    {
+      "node_id": "reader_open_post",
+      "type": "skill",
+      "label": "Open Reader Lid (retrieve)",
+      "skill_id": "platereader_open",
+      "parameters": {
+        "platereader": {
+          "$input": "platereader"
+        }
+      }
+    },
+    {
+      "node_id": "reader_unload",
+      "type": "skill",
+      "label": "Unload Plate From Reader",
+      "skill_id": "platereader_unload",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "platereader": {
+          "$input": "platereader"
+        }
+      }
+    },
+    {
+      "node_id": "drop_plate",
+      "type": "skill",
+      "label": "Return Plate Home",
+      "skill_id": "wellplate_drop",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "destination": {
+          "$input": "plate_home"
+        },
+        "destination_anchor": "home"
+      }
+    },
+    {
+      "node_id": "save_run",
+      "type": "skill",
+      "label": "Save Run Folder",
+      "skill_id": "save_run_folder",
+      "parameters": {
+        "run_name": {
+          "$input": "run_name"
+        },
+        "checkpoint": "end"
+      }
+    },
+    {
+      "node_id": "end_1",
+      "type": "end",
+      "label": "End"
+    },
+    {
+      "node_id": "save_run_start",
+      "type": "skill",
+      "label": "Checkpoint: run started",
+      "description": "Registers this execution in data/logs/ before any hardware moves, so a run that fails early is still visible to the tracker instead of leaving nothing behind. Its outgoing edge is deliberately 'default', not 'on_success': a checkpoint is bookkeeping, and a failure to record progress must never abort a run that is physically fine. The validator flags this as unconditional \u2014 that is the intent.",
+      "skill_id": "save_run_folder",
+      "parameters": {
+        "run_name": {
+          "$input": "run_name"
+        },
+        "checkpoint": "start"
+      }
+    },
+    {
+      "node_id": "save_run_mid",
+      "type": "skill",
+      "label": "Checkpoint: pipetting done",
+      "description": "Refreshes the run folder once all pipetting is complete, before labware handling \u2014 so a failure during plate/reader moves still has every dispensed leg on record. Its outgoing edge is deliberately 'default', not 'on_success': a checkpoint is bookkeeping, and a failure to record progress must never abort a run that is physically fine. The validator flags this as unconditional \u2014 that is the intent.",
+      "skill_id": "save_run_folder",
+      "parameters": {
+        "run_name": {
+          "$input": "run_name"
+        },
+        "checkpoint": "mid"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e_start_0_save_run_start",
+      "from_node": "start_0",
+      "to_node": "save_run_start",
+      "condition": {
+        "type": "default"
+      }
+    },
+    {
+      "edge_id": "e_dose1_compound_attach_dose1_compound_aspirate",
+      "from_node": "dose1_compound_attach",
+      "to_node": "dose1_compound_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose1_compound_aspirate_dose1_compound_dispense",
+      "from_node": "dose1_compound_aspirate",
+      "to_node": "dose1_compound_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose1_compound_dispense_dose1_compound_eject",
+      "from_node": "dose1_compound_dispense",
+      "to_node": "dose1_compound_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_grab_pipette_dose1_compound_attach",
+      "from_node": "grab_pipette",
+      "to_node": "dose1_compound_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose1_nitrocefin_attach_dose1_nitrocefin_aspirate",
+      "from_node": "dose1_nitrocefin_attach",
+      "to_node": "dose1_nitrocefin_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose1_nitrocefin_aspirate_dose1_nitrocefin_dispense",
+      "from_node": "dose1_nitrocefin_aspirate",
+      "to_node": "dose1_nitrocefin_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose1_nitrocefin_dispense_dose1_nitrocefin_eject",
+      "from_node": "dose1_nitrocefin_dispense",
+      "to_node": "dose1_nitrocefin_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose1_compound_eject_dose1_nitrocefin_attach",
+      "from_node": "dose1_compound_eject",
+      "to_node": "dose1_nitrocefin_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose2_compound_attach_dose2_compound_aspirate",
+      "from_node": "dose2_compound_attach",
+      "to_node": "dose2_compound_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose2_compound_aspirate_dose2_compound_dispense",
+      "from_node": "dose2_compound_aspirate",
+      "to_node": "dose2_compound_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose2_compound_dispense_dose2_compound_eject",
+      "from_node": "dose2_compound_dispense",
+      "to_node": "dose2_compound_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose1_nitrocefin_eject_dose2_compound_attach",
+      "from_node": "dose1_nitrocefin_eject",
+      "to_node": "dose2_compound_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose2_nitrocefin_attach_dose2_nitrocefin_aspirate",
+      "from_node": "dose2_nitrocefin_attach",
+      "to_node": "dose2_nitrocefin_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose2_nitrocefin_aspirate_dose2_nitrocefin_dispense",
+      "from_node": "dose2_nitrocefin_aspirate",
+      "to_node": "dose2_nitrocefin_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose2_nitrocefin_dispense_dose2_nitrocefin_eject",
+      "from_node": "dose2_nitrocefin_dispense",
+      "to_node": "dose2_nitrocefin_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose2_compound_eject_dose2_nitrocefin_attach",
+      "from_node": "dose2_compound_eject",
+      "to_node": "dose2_nitrocefin_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose3_compound_attach_dose3_compound_aspirate",
+      "from_node": "dose3_compound_attach",
+      "to_node": "dose3_compound_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose3_compound_aspirate_dose3_compound_dispense",
+      "from_node": "dose3_compound_aspirate",
+      "to_node": "dose3_compound_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose3_compound_dispense_dose3_compound_eject",
+      "from_node": "dose3_compound_dispense",
+      "to_node": "dose3_compound_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose2_nitrocefin_eject_dose3_compound_attach",
+      "from_node": "dose2_nitrocefin_eject",
+      "to_node": "dose3_compound_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose3_nitrocefin_attach_dose3_nitrocefin_aspirate",
+      "from_node": "dose3_nitrocefin_attach",
+      "to_node": "dose3_nitrocefin_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose3_nitrocefin_aspirate_dose3_nitrocefin_dispense",
+      "from_node": "dose3_nitrocefin_aspirate",
+      "to_node": "dose3_nitrocefin_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose3_nitrocefin_dispense_dose3_nitrocefin_eject",
+      "from_node": "dose3_nitrocefin_dispense",
+      "to_node": "dose3_nitrocefin_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose3_compound_eject_dose3_nitrocefin_attach",
+      "from_node": "dose3_compound_eject",
+      "to_node": "dose3_nitrocefin_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose4_compound_attach_dose4_compound_aspirate",
+      "from_node": "dose4_compound_attach",
+      "to_node": "dose4_compound_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose4_compound_aspirate_dose4_compound_dispense",
+      "from_node": "dose4_compound_aspirate",
+      "to_node": "dose4_compound_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose4_compound_dispense_dose4_compound_eject",
+      "from_node": "dose4_compound_dispense",
+      "to_node": "dose4_compound_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose3_nitrocefin_eject_dose4_compound_attach",
+      "from_node": "dose3_nitrocefin_eject",
+      "to_node": "dose4_compound_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose4_nitrocefin_attach_dose4_nitrocefin_aspirate",
+      "from_node": "dose4_nitrocefin_attach",
+      "to_node": "dose4_nitrocefin_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose4_nitrocefin_aspirate_dose4_nitrocefin_dispense",
+      "from_node": "dose4_nitrocefin_aspirate",
+      "to_node": "dose4_nitrocefin_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose4_nitrocefin_dispense_dose4_nitrocefin_eject",
+      "from_node": "dose4_nitrocefin_dispense",
+      "to_node": "dose4_nitrocefin_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose4_compound_eject_dose4_nitrocefin_attach",
+      "from_node": "dose4_compound_eject",
+      "to_node": "dose4_nitrocefin_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose5_compound_attach_dose5_compound_aspirate",
+      "from_node": "dose5_compound_attach",
+      "to_node": "dose5_compound_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose5_compound_aspirate_dose5_compound_dispense",
+      "from_node": "dose5_compound_aspirate",
+      "to_node": "dose5_compound_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose5_compound_dispense_dose5_compound_eject",
+      "from_node": "dose5_compound_dispense",
+      "to_node": "dose5_compound_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose4_nitrocefin_eject_dose5_compound_attach",
+      "from_node": "dose4_nitrocefin_eject",
+      "to_node": "dose5_compound_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose5_nitrocefin_attach_dose5_nitrocefin_aspirate",
+      "from_node": "dose5_nitrocefin_attach",
+      "to_node": "dose5_nitrocefin_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose5_nitrocefin_aspirate_dose5_nitrocefin_dispense",
+      "from_node": "dose5_nitrocefin_aspirate",
+      "to_node": "dose5_nitrocefin_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose5_nitrocefin_dispense_dose5_nitrocefin_eject",
+      "from_node": "dose5_nitrocefin_dispense",
+      "to_node": "dose5_nitrocefin_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose5_compound_eject_dose5_nitrocefin_attach",
+      "from_node": "dose5_compound_eject",
+      "to_node": "dose5_nitrocefin_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose6_compound_attach_dose6_compound_aspirate",
+      "from_node": "dose6_compound_attach",
+      "to_node": "dose6_compound_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose6_compound_aspirate_dose6_compound_dispense",
+      "from_node": "dose6_compound_aspirate",
+      "to_node": "dose6_compound_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose6_compound_dispense_dose6_compound_eject",
+      "from_node": "dose6_compound_dispense",
+      "to_node": "dose6_compound_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose5_nitrocefin_eject_dose6_compound_attach",
+      "from_node": "dose5_nitrocefin_eject",
+      "to_node": "dose6_compound_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose6_nitrocefin_attach_dose6_nitrocefin_aspirate",
+      "from_node": "dose6_nitrocefin_attach",
+      "to_node": "dose6_nitrocefin_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose6_nitrocefin_aspirate_dose6_nitrocefin_dispense",
+      "from_node": "dose6_nitrocefin_aspirate",
+      "to_node": "dose6_nitrocefin_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose6_nitrocefin_dispense_dose6_nitrocefin_eject",
+      "from_node": "dose6_nitrocefin_dispense",
+      "to_node": "dose6_nitrocefin_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose6_compound_eject_dose6_nitrocefin_attach",
+      "from_node": "dose6_compound_eject",
+      "to_node": "dose6_nitrocefin_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose7_compound_attach_dose7_compound_aspirate",
+      "from_node": "dose7_compound_attach",
+      "to_node": "dose7_compound_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose7_compound_aspirate_dose7_compound_dispense",
+      "from_node": "dose7_compound_aspirate",
+      "to_node": "dose7_compound_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose7_compound_dispense_dose7_compound_eject",
+      "from_node": "dose7_compound_dispense",
+      "to_node": "dose7_compound_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose6_nitrocefin_eject_dose7_compound_attach",
+      "from_node": "dose6_nitrocefin_eject",
+      "to_node": "dose7_compound_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose7_nitrocefin_attach_dose7_nitrocefin_aspirate",
+      "from_node": "dose7_nitrocefin_attach",
+      "to_node": "dose7_nitrocefin_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose7_nitrocefin_aspirate_dose7_nitrocefin_dispense",
+      "from_node": "dose7_nitrocefin_aspirate",
+      "to_node": "dose7_nitrocefin_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose7_nitrocefin_dispense_dose7_nitrocefin_eject",
+      "from_node": "dose7_nitrocefin_dispense",
+      "to_node": "dose7_nitrocefin_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose7_compound_eject_dose7_nitrocefin_attach",
+      "from_node": "dose7_compound_eject",
+      "to_node": "dose7_nitrocefin_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose8_compound_attach_dose8_compound_aspirate",
+      "from_node": "dose8_compound_attach",
+      "to_node": "dose8_compound_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose8_compound_aspirate_dose8_compound_dispense",
+      "from_node": "dose8_compound_aspirate",
+      "to_node": "dose8_compound_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose8_compound_dispense_dose8_compound_eject",
+      "from_node": "dose8_compound_dispense",
+      "to_node": "dose8_compound_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose7_nitrocefin_eject_dose8_compound_attach",
+      "from_node": "dose7_nitrocefin_eject",
+      "to_node": "dose8_compound_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose8_nitrocefin_attach_dose8_nitrocefin_aspirate",
+      "from_node": "dose8_nitrocefin_attach",
+      "to_node": "dose8_nitrocefin_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose8_nitrocefin_aspirate_dose8_nitrocefin_dispense",
+      "from_node": "dose8_nitrocefin_aspirate",
+      "to_node": "dose8_nitrocefin_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose8_nitrocefin_dispense_dose8_nitrocefin_eject",
+      "from_node": "dose8_nitrocefin_dispense",
+      "to_node": "dose8_nitrocefin_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose8_compound_eject_dose8_nitrocefin_attach",
+      "from_node": "dose8_compound_eject",
+      "to_node": "dose8_nitrocefin_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_dose8_nitrocefin_eject_save_run_mid",
+      "from_node": "dose8_nitrocefin_eject",
+      "to_node": "save_run_mid",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_place_pipette_grab_plate",
+      "from_node": "place_pipette",
+      "to_node": "grab_plate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_grab_plate_reader_open_pre",
+      "from_node": "grab_plate",
+      "to_node": "reader_open_pre",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_reader_open_pre_reader_load",
+      "from_node": "reader_open_pre",
+      "to_node": "reader_load",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_reader_load_reader_closed",
+      "from_node": "reader_load",
+      "to_node": "reader_closed",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_reader_closed_reader_measure",
+      "from_node": "reader_closed",
+      "to_node": "reader_measure",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_reader_measure_reader_open_post",
+      "from_node": "reader_measure",
+      "to_node": "reader_open_post",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_reader_open_post_reader_unload",
+      "from_node": "reader_open_post",
+      "to_node": "reader_unload",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_reader_unload_drop_plate",
+      "from_node": "reader_unload",
+      "to_node": "drop_plate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_drop_plate_save_run",
+      "from_node": "drop_plate",
+      "to_node": "save_run",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_save_run_end_1",
+      "from_node": "save_run",
+      "to_node": "end_1",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_save_run_start_grab_pipette",
+      "from_node": "save_run_start",
+      "to_node": "grab_pipette",
+      "condition": {
+        "type": "default"
+      }
+    },
+    {
+      "edge_id": "e_save_run_mid_place_pipette",
+      "from_node": "save_run_mid",
+      "to_node": "place_pipette",
+      "condition": {
+        "type": "default"
+      }
+    }
+  ],
+  "canvas_ui": {
+    "kind": "react",
+    "source_ref": "canvas/cfps_inhibitor_dose_response_screen.tsx",
+    "enabled": true,
+    "version": 1,
+    "updated_at": "2026-07-25T00:00:00.000Z"
+  }
+}

@@ -1,0 +1,865 @@
+2026-07-26T05:22:28.460599+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:22:29.882219+00:00  [event] Prepare Dilutions — ▶ Preparing purified TEM-1 working solution: 100 ng/uL stock -> 1 ng/uL intermediate -> 0.1 ng/uL working solution
+2026-07-26T05:22:30.705596+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:22:46.039218+00:00  [transfer] Prepare Dilutions —   TEM-1 stock to intermediate: 2.0 uL hole_1 -> hole_2 (epipette_10ul, tip #1)
+2026-07-26T05:23:00.576503+00:00  [aspirate] Prepare Dilutions — aspirate 2.0 uL from coldblock_wellplate / well hole_1 (pipette epipette_10ul, speed 5.0, cal (-0.004,0.005))
+2026-07-26T05:23:13.214258+00:00  [dispense] Prepare Dilutions — dispense 2.0 uL into coldblock_wellplate / well hole_2 (pipette epipette_10ul, speed 5.0, cal (-0.004,0.005))
+2026-07-26T05:23:21.113425+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:23:28.459360+00:00  [event] Prepare Dilutions — ⇄ Swapping epipette_10ul → epipette_120ul
+2026-07-26T05:23:28.471391+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:23:53.731306+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:24:15.171985+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:24:29.577160+00:00  [transfer] Prepare Dilutions —   BLB to TEM-1 intermediate: chunk 1 aspirate/dispense 120.0 uL hole_6 -> hole_2 (epipette_120ul, tip #1)
+2026-07-26T05:24:43.284879+00:00  [aspirate] Prepare Dilutions — aspirate 120.0 uL from coldblock_wellplate / well hole_6 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T05:24:54.965091+00:00  [dispense] Prepare Dilutions — dispense 120.0 uL into coldblock_wellplate / well hole_2 (pipette epipette_120ul, speed 5.0, cal (-0.004,0.005))
+2026-07-26T05:25:02.448776+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:25:10.600081+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:25:24.794126+00:00  [transfer] Prepare Dilutions —   BLB to TEM-1 intermediate: chunk 2 aspirate/dispense 78.0 uL hole_6 -> hole_2 (epipette_120ul, tip #2)
+2026-07-26T05:25:38.463682+00:00  [aspirate] Prepare Dilutions — aspirate 78.0 uL from coldblock_wellplate / well hole_6 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T05:25:49.813398+00:00  [dispense] Prepare Dilutions — dispense 78.0 uL into coldblock_wellplate / well hole_2 (pipette epipette_120ul, speed 5.0, cal (-0.004,0.005))
+2026-07-26T05:25:57.340029+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:26:05.433896+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:26:19.258001+00:00  [mix] Prepare Dilutions —   Mix hole_2: 5 cycles x 100.0 uL (epipette_120ul, tip #3)
+2026-07-26T05:26:32.899607+00:00  [aspirate] Prepare Dilutions — aspirate 100.0 uL from coldblock_wellplate / well hole_2 (pipette epipette_120ul, speed 5.0, cal (-0.004,0.005))
+2026-07-26T05:26:44.559038+00:00  [dispense] Prepare Dilutions — dispense 100.0 uL into coldblock_wellplate / well hole_2 (pipette epipette_120ul, speed 5.0, cal (-0.004,0.005))
+2026-07-26T05:27:06.307809+00:00  [aspirate] Prepare Dilutions — aspirate 100.0 uL from coldblock_wellplate / well hole_2 (pipette epipette_120ul, speed 5.0, cal (-0.004,0.005))
+2026-07-26T05:27:18.147996+00:00  [dispense] Prepare Dilutions — dispense 100.0 uL into coldblock_wellplate / well hole_2 (pipette epipette_120ul, speed 5.0, cal (-0.004,0.005))
+2026-07-26T05:27:40.213966+00:00  [aspirate] Prepare Dilutions — aspirate 100.0 uL from coldblock_wellplate / well hole_2 (pipette epipette_120ul, speed 5.0, cal (-0.004,0.005))
+2026-07-26T05:27:52.019679+00:00  [dispense] Prepare Dilutions — dispense 100.0 uL into coldblock_wellplate / well hole_2 (pipette epipette_120ul, speed 5.0, cal (-0.004,0.005))
+2026-07-26T05:28:13.640048+00:00  [aspirate] Prepare Dilutions — aspirate 100.0 uL from coldblock_wellplate / well hole_2 (pipette epipette_120ul, speed 5.0, cal (-0.004,0.005))
+2026-07-26T05:28:25.299215+00:00  [dispense] Prepare Dilutions — dispense 100.0 uL into coldblock_wellplate / well hole_2 (pipette epipette_120ul, speed 5.0, cal (-0.004,0.005))
+2026-07-26T05:28:47.120487+00:00  [aspirate] Prepare Dilutions — aspirate 100.0 uL from coldblock_wellplate / well hole_2 (pipette epipette_120ul, speed 5.0, cal (-0.004,0.005))
+2026-07-26T05:28:58.958422+00:00  [dispense] Prepare Dilutions — dispense 100.0 uL into coldblock_wellplate / well hole_2 (pipette epipette_120ul, speed 5.0, cal (-0.004,0.005))
+2026-07-26T05:29:06.476574+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:29:14.873721+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:29:28.370391+00:00  [transfer] Prepare Dilutions —   TEM-1 intermediate to working: chunk 1 aspirate/dispense 100.0 uL hole_2 -> hole_8 (epipette_120ul, tip #4)
+2026-07-26T05:29:42.041511+00:00  [aspirate] Prepare Dilutions — aspirate 100.0 uL from coldblock_wellplate / well hole_2 (pipette epipette_120ul, speed 5.0, cal (-0.004,0.005))
+2026-07-26T05:29:53.444694+00:00  [dispense] Prepare Dilutions — dispense 100.0 uL into coldblock_wellplate / well hole_8 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T05:30:01.003811+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:30:07.932998+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:30:21.806443+00:00  [transfer] Prepare Dilutions —   BLB to TEM-1 working: chunk 1 aspirate/dispense 120.0 uL hole_6 -> hole_8 (epipette_120ul, tip #5)
+2026-07-26T05:30:35.573206+00:00  [aspirate] Prepare Dilutions — aspirate 120.0 uL from coldblock_wellplate / well hole_6 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T05:30:46.562516+00:00  [dispense] Prepare Dilutions — dispense 120.0 uL into coldblock_wellplate / well hole_8 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T05:30:54.199917+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:31:01.076006+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:31:14.878650+00:00  [transfer] Prepare Dilutions —   BLB to TEM-1 working: chunk 2 aspirate/dispense 120.0 uL hole_6 -> hole_8 (epipette_120ul, tip #6)
+2026-07-26T05:31:28.649154+00:00  [aspirate] Prepare Dilutions — aspirate 120.0 uL from coldblock_wellplate / well hole_6 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T05:31:39.689348+00:00  [dispense] Prepare Dilutions — dispense 120.0 uL into coldblock_wellplate / well hole_8 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T05:31:47.221444+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:31:54.446742+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:32:07.893419+00:00  [transfer] Prepare Dilutions —   BLB to TEM-1 working: chunk 3 aspirate/dispense 120.0 uL hole_6 -> hole_8 (epipette_120ul, tip #7)
+2026-07-26T05:32:21.550305+00:00  [aspirate] Prepare Dilutions — aspirate 120.0 uL from coldblock_wellplate / well hole_6 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T05:32:32.665829+00:00  [dispense] Prepare Dilutions — dispense 120.0 uL into coldblock_wellplate / well hole_8 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T05:32:40.269706+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:32:47.473756+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:33:00.801113+00:00  [transfer] Prepare Dilutions —   BLB to TEM-1 working: chunk 4 aspirate/dispense 120.0 uL hole_6 -> hole_8 (epipette_120ul, tip #8)
+2026-07-26T05:33:14.373440+00:00  [aspirate] Prepare Dilutions — aspirate 120.0 uL from coldblock_wellplate / well hole_6 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T05:33:25.646350+00:00  [dispense] Prepare Dilutions — dispense 120.0 uL into coldblock_wellplate / well hole_8 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T05:33:33.203392+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:33:40.126027+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:33:53.800999+00:00  [transfer] Prepare Dilutions —   BLB to TEM-1 working: chunk 5 aspirate/dispense 120.0 uL hole_6 -> hole_8 (epipette_120ul, tip #9)
+2026-07-26T05:34:07.394753+00:00  [aspirate] Prepare Dilutions — aspirate 120.0 uL from coldblock_wellplate / well hole_6 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T05:34:18.430491+00:00  [dispense] Prepare Dilutions — dispense 120.0 uL into coldblock_wellplate / well hole_8 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T05:34:26.030522+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:34:33.014992+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:34:46.607513+00:00  [transfer] Prepare Dilutions —   BLB to TEM-1 working: chunk 6 aspirate/dispense 120.0 uL hole_6 -> hole_8 (epipette_120ul, tip #10)
+2026-07-26T05:35:00.107507+00:00  [aspirate] Prepare Dilutions — aspirate 120.0 uL from coldblock_wellplate / well hole_6 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T05:35:11.174640+00:00  [dispense] Prepare Dilutions — dispense 120.0 uL into coldblock_wellplate / well hole_8 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T05:35:18.785106+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:35:26.029554+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:35:39.414547+00:00  [transfer] Prepare Dilutions —   BLB to TEM-1 working: chunk 7 aspirate/dispense 120.0 uL hole_6 -> hole_8 (epipette_120ul, tip #11)
+2026-07-26T05:35:53.052343+00:00  [aspirate] Prepare Dilutions — aspirate 120.0 uL from coldblock_wellplate / well hole_6 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T05:36:04.144234+00:00  [dispense] Prepare Dilutions — dispense 120.0 uL into coldblock_wellplate / well hole_8 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T05:36:11.789585+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:36:19.020380+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:36:32.375760+00:00  [transfer] Prepare Dilutions —   BLB to TEM-1 working: chunk 8 aspirate/dispense 60.0 uL hole_6 -> hole_8 (epipette_120ul, tip #12)
+2026-07-26T05:36:45.949509+00:00  [aspirate] Prepare Dilutions — aspirate 60.0 uL from coldblock_wellplate / well hole_6 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T05:36:57.111857+00:00  [dispense] Prepare Dilutions — dispense 60.0 uL into coldblock_wellplate / well hole_8 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T05:37:04.689887+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:37:11.623846+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:37:25.765613+00:00  [mix] Prepare Dilutions —   Mix hole_8: 5 cycles x 100.0 uL (epipette_120ul, tip #13)
+2026-07-26T05:37:38.987000+00:00  [aspirate] Prepare Dilutions — aspirate 100.0 uL from coldblock_wellplate / well hole_8 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T05:37:49.638398+00:00  [dispense] Prepare Dilutions — dispense 100.0 uL into coldblock_wellplate / well hole_8 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T05:38:10.173430+00:00  [aspirate] Prepare Dilutions — aspirate 100.0 uL from coldblock_wellplate / well hole_8 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T05:38:20.775426+00:00  [dispense] Prepare Dilutions — dispense 100.0 uL into coldblock_wellplate / well hole_8 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T05:38:41.410337+00:00  [aspirate] Prepare Dilutions — aspirate 100.0 uL from coldblock_wellplate / well hole_8 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T05:38:51.947694+00:00  [dispense] Prepare Dilutions — dispense 100.0 uL into coldblock_wellplate / well hole_8 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T05:39:33.260420+00:00  [aspirate] Prepare Dilutions — aspirate 100.0 uL from coldblock_wellplate / well hole_8 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T05:39:43.855278+00:00  [dispense] Prepare Dilutions — dispense 100.0 uL into coldblock_wellplate / well hole_8 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T05:40:04.387702+00:00  [aspirate] Prepare Dilutions — aspirate 100.0 uL from coldblock_wellplate / well hole_8 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T05:40:15.047374+00:00  [dispense] Prepare Dilutions — dispense 100.0 uL into coldblock_wellplate / well hole_8 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T05:40:22.589506+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:40:28.550616+00:00  [event] Prepare Dilutions — ▶ Preparing T1262 tazobactam 200 uM intermediate for 1 uM assay condition
+2026-07-26T05:40:29.766133+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:40:43.562880+00:00  [transfer] Prepare Dilutions —   BLB to T1262 intermediate: chunk 1 aspirate/dispense 49.0 uL hole_5 -> hole_3 (epipette_120ul, tip #14)
+2026-07-26T05:40:56.976389+00:00  [aspirate] Prepare Dilutions — aspirate 49.0 uL from coldblock_wellplate / well hole_5 (pipette epipette_120ul, speed 5.0, cal (-0.006,0.005))
+2026-07-26T05:41:08.582413+00:00  [dispense] Prepare Dilutions — dispense 49.0 uL into coldblock_wellplate / well hole_3 (pipette epipette_120ul, speed 5.0, cal (-0.005,0.005))
+2026-07-26T05:41:16.139855+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:41:23.600839+00:00  [event] Prepare Dilutions — ⇄ Swapping epipette_120ul → epipette_10ul
+2026-07-26T05:41:23.610248+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:41:48.802647+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:42:10.895925+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:42:26.293493+00:00  [transfer] Prepare Dilutions —   T1262 stock to intermediate: 1.0 uL A2 -> hole_3 (epipette_10ul, tip #2)
+2026-07-26T05:42:36.663703+00:00  [aspirate] Prepare Dilutions — aspirate 1.0 uL from wellplate_pcr_parts_1 / well A2 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T05:42:47.959104+00:00  [dispense] Prepare Dilutions — dispense 1.0 uL into coldblock_wellplate / well hole_3 (pipette epipette_10ul, speed 5.0, cal (-0.005,0.005))
+2026-07-26T05:42:55.868869+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:43:03.088005+00:00  [event] Prepare Dilutions — ⇄ Swapping epipette_10ul → epipette_120ul
+2026-07-26T05:43:03.101099+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:43:29.672511+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:43:51.366879+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:44:05.657358+00:00  [mix] Prepare Dilutions —   Mix hole_3: 5 cycles x 10.0 uL (epipette_120ul, tip #15)
+2026-07-26T05:44:19.216367+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from coldblock_wellplate / well hole_3 (pipette epipette_120ul, speed 5.0, cal (-0.005,0.005))
+2026-07-26T05:44:31.109677+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into coldblock_wellplate / well hole_3 (pipette epipette_120ul, speed 5.0, cal (-0.005,0.005))
+2026-07-26T05:44:52.633344+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from coldblock_wellplate / well hole_3 (pipette epipette_120ul, speed 5.0, cal (-0.005,0.005))
+2026-07-26T05:45:04.313583+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into coldblock_wellplate / well hole_3 (pipette epipette_120ul, speed 5.0, cal (-0.005,0.005))
+2026-07-26T05:45:25.872092+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from coldblock_wellplate / well hole_3 (pipette epipette_120ul, speed 5.0, cal (-0.005,0.005))
+2026-07-26T05:45:37.461558+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into coldblock_wellplate / well hole_3 (pipette epipette_120ul, speed 5.0, cal (-0.005,0.005))
+2026-07-26T05:45:59.268057+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from coldblock_wellplate / well hole_3 (pipette epipette_120ul, speed 5.0, cal (-0.005,0.005))
+2026-07-26T05:46:10.877192+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into coldblock_wellplate / well hole_3 (pipette epipette_120ul, speed 5.0, cal (-0.005,0.005))
+2026-07-26T05:46:32.350395+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from coldblock_wellplate / well hole_3 (pipette epipette_120ul, speed 5.0, cal (-0.005,0.005))
+2026-07-26T05:46:43.961927+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into coldblock_wellplate / well hole_3 (pipette epipette_120ul, speed 5.0, cal (-0.005,0.005))
+2026-07-26T05:46:51.432788+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:46:58.494529+00:00  [event] Prepare Dilutions — ▶ Preparing 10 compound/control working solutions and one vehicle well
+2026-07-26T05:46:58.519727+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:46:59.943831+00:00  [event] Prepare Dilutions — ▶ Batched dispense hole_5 (coldblock_wellplate) → wellplate_pcr_parts_4: 10 wells @ 47.5 uL using epipette_120ul (2 well(s) per aspiration)
+2026-07-26T05:47:01.007568+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:47:14.732833+00:00  [transfer] Prepare Dilutions —   Batch 1: aspirate 95.0 uL from hole_5; dispense 47.5 uL to ['A1', 'A3'] (tip #16)
+2026-07-26T05:47:28.504781+00:00  [aspirate] Prepare Dilutions — aspirate 95.0 uL from coldblock_wellplate / well hole_5 (pipette epipette_120ul, speed 5.0, cal (-0.006,0.005))
+2026-07-26T05:47:38.364111+00:00  [dispense] Prepare Dilutions — dispense 47.5 uL into wellplate_pcr_parts_4 / well A1 (pipette epipette_120ul, speed 5.0, cal (0.0,0.0))
+2026-07-26T05:47:49.859176+00:00  [dispense] Prepare Dilutions — dispense 47.5 uL into wellplate_pcr_parts_4 / well A3 (pipette epipette_120ul, speed 5.0, cal (0.0,0.0))
+2026-07-26T05:47:53.598197+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:48:00.605524+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:48:14.518576+00:00  [transfer] Prepare Dilutions —   Batch 2: aspirate 95.0 uL from hole_5; dispense 47.5 uL to ['A4', 'A5'] (tip #17)
+2026-07-26T05:48:27.979293+00:00  [aspirate] Prepare Dilutions — aspirate 95.0 uL from coldblock_wellplate / well hole_5 (pipette epipette_120ul, speed 5.0, cal (-0.006,0.005))
+2026-07-26T05:48:37.878074+00:00  [dispense] Prepare Dilutions — dispense 47.5 uL into wellplate_pcr_parts_4 / well A4 (pipette epipette_120ul, speed 5.0, cal (0.0,0.0))
+2026-07-26T05:48:49.970345+00:00  [dispense] Prepare Dilutions — dispense 47.5 uL into wellplate_pcr_parts_4 / well A5 (pipette epipette_120ul, speed 5.0, cal (0.0,0.0))
+2026-07-26T05:48:53.772874+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:49:00.940431+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:49:14.576176+00:00  [transfer] Prepare Dilutions —   Batch 3: aspirate 95.0 uL from hole_5; dispense 47.5 uL to ['A6', 'A7'] (tip #18)
+2026-07-26T05:49:28.259081+00:00  [aspirate] Prepare Dilutions — aspirate 95.0 uL from coldblock_wellplate / well hole_5 (pipette epipette_120ul, speed 5.0, cal (-0.006,0.005))
+2026-07-26T05:49:38.544727+00:00  [dispense] Prepare Dilutions — dispense 47.5 uL into wellplate_pcr_parts_4 / well A6 (pipette epipette_120ul, speed 5.0, cal (0.0,0.0))
+2026-07-26T05:49:50.464692+00:00  [dispense] Prepare Dilutions — dispense 47.5 uL into wellplate_pcr_parts_4 / well A7 (pipette epipette_120ul, speed 5.0, cal (0.0,0.0))
+2026-07-26T05:49:54.295444+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:50:01.637391+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:50:15.501630+00:00  [transfer] Prepare Dilutions —   Batch 4: aspirate 95.0 uL from hole_5; dispense 47.5 uL to ['A8', 'A9'] (tip #19)
+2026-07-26T05:50:28.891015+00:00  [aspirate] Prepare Dilutions — aspirate 95.0 uL from coldblock_wellplate / well hole_5 (pipette epipette_120ul, speed 5.0, cal (-0.006,0.005))
+2026-07-26T05:50:39.143046+00:00  [dispense] Prepare Dilutions — dispense 47.5 uL into wellplate_pcr_parts_4 / well A8 (pipette epipette_120ul, speed 5.0, cal (0.0,0.0))
+2026-07-26T05:50:51.607900+00:00  [dispense] Prepare Dilutions — dispense 47.5 uL into wellplate_pcr_parts_4 / well A9 (pipette epipette_120ul, speed 5.0, cal (0.0,0.0))
+2026-07-26T05:50:55.394840+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:51:02.868475+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:51:16.402413+00:00  [transfer] Prepare Dilutions —   Batch 5: aspirate 95.0 uL from hole_5; dispense 47.5 uL to ['A10', 'A11'] (tip #20)
+2026-07-26T05:51:29.897231+00:00  [aspirate] Prepare Dilutions — aspirate 95.0 uL from coldblock_wellplate / well hole_5 (pipette epipette_120ul, speed 5.0, cal (-0.006,0.005))
+2026-07-26T05:51:40.500535+00:00  [dispense] Prepare Dilutions — dispense 47.5 uL into wellplate_pcr_parts_4 / well A10 (pipette epipette_120ul, speed 5.0, cal (0.0,0.0))
+2026-07-26T05:51:52.938571+00:00  [dispense] Prepare Dilutions — dispense 47.5 uL into wellplate_pcr_parts_4 / well A11 (pipette epipette_120ul, speed 5.0, cal (0.0,0.0))
+2026-07-26T05:51:56.733528+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:52:03.839819+00:00  [event] Prepare Dilutions — ✓ Batched dispense from hole_5 complete: 10 wells, 5 aspirate batch(es), 10 dispense(s), 5 tip(s)
+2026-07-26T05:52:03.845716+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:52:05.227784+00:00  [event] Prepare Dilutions — ▶ Batched dispense hole_6 (coldblock_wellplate) → wellplate_pcr_parts_4: 1 wells @ 95.0 uL using epipette_120ul (1 well(s) per aspiration)
+2026-07-26T05:52:06.251826+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:52:19.822710+00:00  [transfer] Prepare Dilutions —   Batch 1: aspirate 95.0 uL from hole_6; dispense 95.0 uL to ['A2'] (tip #21)
+2026-07-26T05:52:33.805427+00:00  [aspirate] Prepare Dilutions — aspirate 95.0 uL from coldblock_wellplate / well hole_6 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T05:52:43.567925+00:00  [dispense] Prepare Dilutions — dispense 95.0 uL into wellplate_pcr_parts_4 / well A2 (pipette epipette_120ul, speed 5.0, cal (0.0,0.0))
+2026-07-26T05:52:47.374123+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:52:53.781325+00:00  [event] Prepare Dilutions — ✓ Batched dispense from hole_6 complete: 1 wells, 1 aspirate batch(es), 1 dispense(s), 1 tip(s)
+2026-07-26T05:52:54.190333+00:00  [event] Prepare Dilutions — ⇄ Swapping epipette_120ul → epipette_10ul
+2026-07-26T05:52:54.203182+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:53:19.135816+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:53:41.680509+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:53:56.944860+00:00  [transfer] Prepare Dilutions —   Positive control: 2.5 uL H7 -> A1 (epipette_10ul, tip #3)
+2026-07-26T05:54:07.468819+00:00  [aspirate] Prepare Dilutions — aspirate 2.5 uL from wellplate_pcr_parts_1 / well H7 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T05:54:17.382445+00:00  [dispense] Prepare Dilutions — dispense 2.5 uL into wellplate_pcr_parts_4 / well A1 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T05:54:21.481577+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:54:28.675095+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:54:43.508127+00:00  [transfer] Prepare Dilutions —   Compound 1 T1262 intermediate: 2.5 uL hole_3 -> A3 (epipette_10ul, tip #4)
+2026-07-26T05:54:58.118030+00:00  [aspirate] Prepare Dilutions — aspirate 2.5 uL from coldblock_wellplate / well hole_3 (pipette epipette_10ul, speed 5.0, cal (-0.005,0.005))
+2026-07-26T05:55:09.022926+00:00  [dispense] Prepare Dilutions — dispense 2.5 uL into wellplate_pcr_parts_4 / well A3 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T05:55:13.103250+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:55:20.346140+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:55:35.368280+00:00  [transfer] Prepare Dilutions —   Compound 2: 2.5 uL A3 -> A4 (epipette_10ul, tip #5)
+2026-07-26T05:55:45.819160+00:00  [aspirate] Prepare Dilutions — aspirate 2.5 uL from wellplate_pcr_parts_1 / well A3 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T05:55:55.753204+00:00  [dispense] Prepare Dilutions — dispense 2.5 uL into wellplate_pcr_parts_4 / well A4 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T05:55:59.930177+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:56:07.212226+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:56:22.386933+00:00  [transfer] Prepare Dilutions —   Compound 3: 2.5 uL A4 -> A5 (epipette_10ul, tip #6)
+2026-07-26T05:56:32.952024+00:00  [aspirate] Prepare Dilutions — aspirate 2.5 uL from wellplate_pcr_parts_1 / well A4 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T05:56:43.071618+00:00  [dispense] Prepare Dilutions — dispense 2.5 uL into wellplate_pcr_parts_4 / well A5 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T05:56:47.231252+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:56:54.865076+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:57:09.964344+00:00  [transfer] Prepare Dilutions —   Compound 4: 2.5 uL A5 -> A6 (epipette_10ul, tip #7)
+2026-07-26T05:57:20.673989+00:00  [aspirate] Prepare Dilutions — aspirate 2.5 uL from wellplate_pcr_parts_1 / well A5 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T05:57:31.039978+00:00  [dispense] Prepare Dilutions — dispense 2.5 uL into wellplate_pcr_parts_4 / well A6 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T05:57:35.136746+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:57:42.633039+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:57:57.768701+00:00  [transfer] Prepare Dilutions —   Compound 5: 2.5 uL A6 -> A7 (epipette_10ul, tip #8)
+2026-07-26T05:58:08.558063+00:00  [aspirate] Prepare Dilutions — aspirate 2.5 uL from wellplate_pcr_parts_1 / well A6 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T05:58:18.968995+00:00  [dispense] Prepare Dilutions — dispense 2.5 uL into wellplate_pcr_parts_4 / well A7 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T05:58:23.041379+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:58:30.605007+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:58:46.130506+00:00  [transfer] Prepare Dilutions —   Compound 6: 2.5 uL A7 -> A8 (epipette_10ul, tip #9)
+2026-07-26T05:58:56.844107+00:00  [aspirate] Prepare Dilutions — aspirate 2.5 uL from wellplate_pcr_parts_1 / well A7 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T05:59:07.457461+00:00  [dispense] Prepare Dilutions — dispense 2.5 uL into wellplate_pcr_parts_4 / well A8 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T05:59:11.556277+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:59:19.587842+00:00  [step_start] Prepare Dilutions
+2026-07-26T05:59:35.098952+00:00  [transfer] Prepare Dilutions —   Compound 7: 2.5 uL A8 -> A9 (epipette_10ul, tip #10)
+2026-07-26T05:59:45.648544+00:00  [aspirate] Prepare Dilutions — aspirate 2.5 uL from wellplate_pcr_parts_1 / well A8 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T05:59:56.281672+00:00  [dispense] Prepare Dilutions — dispense 2.5 uL into wellplate_pcr_parts_4 / well A9 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:00:00.353587+00:00  [step_start] Prepare Dilutions
+2026-07-26T06:00:08.062652+00:00  [step_start] Prepare Dilutions
+2026-07-26T06:00:23.479478+00:00  [transfer] Prepare Dilutions —   Compound 8: 2.5 uL A9 -> A10 (epipette_10ul, tip #11)
+2026-07-26T06:00:34.629273+00:00  [aspirate] Prepare Dilutions — aspirate 2.5 uL from wellplate_pcr_parts_1 / well A9 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:00:45.136582+00:00  [dispense] Prepare Dilutions — dispense 2.5 uL into wellplate_pcr_parts_4 / well A10 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:00:49.248111+00:00  [step_start] Prepare Dilutions
+2026-07-26T06:00:57.125755+00:00  [step_start] Prepare Dilutions
+2026-07-26T06:01:12.754351+00:00  [transfer] Prepare Dilutions —   Compound 9: 2.5 uL A10 -> A11 (epipette_10ul, tip #12)
+2026-07-26T06:01:23.586632+00:00  [aspirate] Prepare Dilutions — aspirate 2.5 uL from wellplate_pcr_parts_1 / well A10 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:01:34.417666+00:00  [dispense] Prepare Dilutions — dispense 2.5 uL into wellplate_pcr_parts_4 / well A11 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:01:38.520771+00:00  [step_start] Prepare Dilutions
+2026-07-26T06:01:46.758498+00:00  [step_start] Prepare Dilutions
+2026-07-26T06:02:01.874003+00:00  [transfer] Prepare Dilutions —   Vehicle DMSO: 5.0 uL hole_9 -> A2 (epipette_10ul, tip #13)
+2026-07-26T06:02:15.851479+00:00  [aspirate] Prepare Dilutions — aspirate 5.0 uL from coldblock_wellplate / well hole_9 (pipette epipette_10ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T06:02:26.192025+00:00  [dispense] Prepare Dilutions — dispense 5.0 uL into wellplate_pcr_parts_4 / well A2 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:02:30.332379+00:00  [step_start] Prepare Dilutions
+2026-07-26T06:02:37.873111+00:00  [step_start] Prepare Dilutions
+2026-07-26T06:02:53.032024+00:00  [mix] Prepare Dilutions —   Mix A1: 5 cycles x 10.0 uL (epipette_10ul, tip #14)
+2026-07-26T06:03:04.424099+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A1 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:03:14.768712+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A1 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:03:29.955457+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A1 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:03:40.322950+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A1 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:03:55.732744+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A1 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:04:06.151663+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A1 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:04:21.382440+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A1 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:04:31.983172+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A1 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:04:47.220717+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A1 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:04:57.569376+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A1 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:05:01.657342+00:00  [step_start] Prepare Dilutions
+2026-07-26T06:05:09.021281+00:00  [step_start] Prepare Dilutions
+2026-07-26T06:05:24.432084+00:00  [mix] Prepare Dilutions —   Mix A3: 5 cycles x 10.0 uL (epipette_10ul, tip #15)
+2026-07-26T06:05:35.522550+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A3 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:05:45.881832+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A3 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:06:01.396220+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A3 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:06:11.927280+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A3 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:06:27.207943+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A3 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:06:37.554889+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A3 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:06:53.202414+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A3 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:07:03.738632+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A3 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:07:19.058354+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A3 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:07:29.987703+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A3 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:07:34.060005+00:00  [step_start] Prepare Dilutions
+2026-07-26T06:07:41.362773+00:00  [step_start] Prepare Dilutions
+2026-07-26T06:07:56.418409+00:00  [mix] Prepare Dilutions —   Mix A4: 5 cycles x 10.0 uL (epipette_10ul, tip #16)
+2026-07-26T06:08:07.831195+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A4 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:08:18.476540+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A4 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:08:33.798249+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A4 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:08:44.462339+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A4 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:09:00.117063+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A4 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:09:10.675485+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A4 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:09:26.183624+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A4 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:09:36.978285+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A4 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:09:52.638581+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A4 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:10:03.395980+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A4 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:10:07.496143+00:00  [step_start] Prepare Dilutions
+2026-07-26T06:10:14.817262+00:00  [step_start] Prepare Dilutions
+2026-07-26T06:10:30.067357+00:00  [mix] Prepare Dilutions —   Mix A5: 5 cycles x 10.0 uL (epipette_10ul, tip #17)
+2026-07-26T06:10:41.262956+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A5 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:10:52.083153+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A5 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:11:07.729847+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A5 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:11:18.516124+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A5 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:11:34.028498+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A5 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:11:44.688058+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A5 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:12:00.475052+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A5 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:12:11.222522+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A5 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:12:26.749247+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A5 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:12:37.426242+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A5 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:12:41.567369+00:00  [step_start] Prepare Dilutions
+2026-07-26T06:12:49.321620+00:00  [step_start] Prepare Dilutions
+2026-07-26T06:13:04.640415+00:00  [mix] Prepare Dilutions —   Mix A6: 5 cycles x 10.0 uL (epipette_10ul, tip #18)
+2026-07-26T06:13:16.168825+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A6 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:13:26.999015+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A6 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:13:42.503110+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A6 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:13:53.368477+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A6 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:14:09.309812+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A6 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:14:20.221838+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A6 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:14:35.831813+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A6 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:14:46.597894+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A6 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:15:02.496948+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A6 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:15:13.311509+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A6 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:15:17.454800+00:00  [step_start] Prepare Dilutions
+2026-07-26T06:15:25.081349+00:00  [step_start] Prepare Dilutions
+2026-07-26T06:15:40.435509+00:00  [mix] Prepare Dilutions —   Mix A7: 5 cycles x 10.0 uL (epipette_10ul, tip #19)
+2026-07-26T06:15:51.806906+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A7 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:16:02.684663+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A7 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:16:18.600775+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A7 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:16:29.544002+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A7 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:16:45.234536+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A7 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:16:56.334356+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A7 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:17:12.136967+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A7 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:17:23.095834+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A7 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:17:38.695625+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A7 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:17:50.002748+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A7 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:17:54.148601+00:00  [step_start] Prepare Dilutions
+2026-07-26T06:18:01.817490+00:00  [step_start] Prepare Dilutions
+2026-07-26T06:18:17.045365+00:00  [mix] Prepare Dilutions —   Mix A8: 5 cycles x 10.0 uL (epipette_10ul, tip #20)
+2026-07-26T06:18:28.554347+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A8 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:18:39.467482+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A8 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:18:55.191836+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A8 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:19:06.176191+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A8 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:19:22.426117+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A8 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:19:33.502115+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A8 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:19:49.353725+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A8 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:20:00.359123+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A8 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:20:16.344789+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A8 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:20:27.351473+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A8 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:20:31.438091+00:00  [step_start] Prepare Dilutions
+2026-07-26T06:20:39.048523+00:00  [step_start] Prepare Dilutions
+2026-07-26T06:20:54.769682+00:00  [mix] Prepare Dilutions —   Mix A9: 5 cycles x 10.0 uL (epipette_10ul, tip #21)
+2026-07-26T06:21:06.260082+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A9 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:21:17.407343+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A9 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:21:33.628251+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A9 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:21:44.670297+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A9 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:22:00.696006+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A9 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:22:11.917377+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A9 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:22:28.147380+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A9 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:22:39.094785+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A9 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:22:54.998388+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A9 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:23:06.228086+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A9 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:23:10.298192+00:00  [step_start] Prepare Dilutions
+2026-07-26T06:23:18.192756+00:00  [step_start] Prepare Dilutions
+2026-07-26T06:23:33.533771+00:00  [mix] Prepare Dilutions —   Mix A10: 5 cycles x 10.0 uL (epipette_10ul, tip #22)
+2026-07-26T06:23:45.270220+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A10 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:23:56.533514+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A10 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:24:12.522110+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A10 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:24:23.671703+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A10 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:24:40.043412+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A10 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:24:51.268272+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A10 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:25:07.202460+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A10 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:25:18.447638+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A10 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:25:34.747669+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A10 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:25:46.077768+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A10 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:25:50.178539+00:00  [step_start] Prepare Dilutions
+2026-07-26T06:25:58.042482+00:00  [step_start] Prepare Dilutions
+2026-07-26T06:26:13.710541+00:00  [mix] Prepare Dilutions —   Mix A11: 5 cycles x 10.0 uL (epipette_10ul, tip #23)
+2026-07-26T06:26:25.313197+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A11 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:26:36.741519+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A11 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:26:53.218987+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A11 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:27:04.587887+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A11 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:27:20.543862+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A11 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:27:31.899530+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A11 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:27:48.221824+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A11 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:27:59.690034+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A11 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:28:15.923184+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A11 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:28:27.239270+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A11 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:28:31.306076+00:00  [step_start] Prepare Dilutions
+2026-07-26T06:28:39.643930+00:00  [step_start] Prepare Dilutions
+2026-07-26T06:28:55.251368+00:00  [mix] Prepare Dilutions —   Mix A2: 5 cycles x 10.0 uL (epipette_10ul, tip #24)
+2026-07-26T06:29:06.251163+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A2 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:29:16.984305+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A2 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:29:32.278200+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A2 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:29:42.634464+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A2 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:29:58.088336+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A2 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:30:08.497945+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A2 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:30:23.746521+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A2 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:30:34.006333+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A2 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:30:49.409796+00:00  [aspirate] Prepare Dilutions — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A2 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:31:00.053034+00:00  [dispense] Prepare Dilutions — dispense 10.0 uL into wellplate_pcr_parts_4 / well A2 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:31:04.160357+00:00  [step_start] Prepare Dilutions
+2026-07-26T06:31:10.609475+00:00  [event] Prepare Dilutions — ✓ Dilution plate complete: TEM-1 working solution is 0.1 ng/uL; T1262 well is 10 uM; other compound/control wells are 500 uM; vehicle well is 5% DMSO
+2026-07-26T06:31:11.840499+00:00  [step_start] Pick Up Pipette
+2026-07-26T06:31:29.401123+00:00  [step_start] Dispense TEM-1 Prep
+2026-07-26T06:31:31.055669+00:00  [event] Dispense TEM-1 Prep — ▶ Batched dispense hole_8 (coldblock_wellplate) → wellplate_96_flatbottom: 33 wells @ 20.0 uL using epipette_120ul (6 well(s) per aspiration)
+2026-07-26T06:31:31.335548+00:00  [event] Dispense TEM-1 Prep — ⇄ Swapping epipette_10ul → epipette_120ul
+2026-07-26T06:31:31.365145+00:00  [step_start] Dispense TEM-1 Prep
+2026-07-26T06:31:48.870953+00:00  [step_start] Dispense TEM-1 Prep
+2026-07-26T06:32:10.238184+00:00  [step_start] Dispense TEM-1 Prep
+2026-07-26T06:32:24.400349+00:00  [transfer] Dispense TEM-1 Prep —   Batch 1: aspirate 120.0 uL from hole_8; dispense 20.0 uL to ['F3', 'F7', 'G11', 'B3', 'B7', 'C11'] (tip #22)
+2026-07-26T06:32:37.702637+00:00  [aspirate] Dispense TEM-1 Prep — aspirate 120.0 uL from coldblock_wellplate / well hole_8 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T06:32:47.584508+00:00  [dispense] Dispense TEM-1 Prep — dispense 20.0 uL into wellplate_96_flatbottom / well F3 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T06:33:01.249881+00:00  [dispense] Dispense TEM-1 Prep — dispense 20.0 uL into wellplate_96_flatbottom / well F7 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T06:33:14.355531+00:00  [dispense] Dispense TEM-1 Prep — dispense 20.0 uL into wellplate_96_flatbottom / well G11 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T06:33:27.376931+00:00  [dispense] Dispense TEM-1 Prep — dispense 20.0 uL into wellplate_96_flatbottom / well B3 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T06:33:40.761113+00:00  [dispense] Dispense TEM-1 Prep — dispense 20.0 uL into wellplate_96_flatbottom / well B7 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T06:33:54.028196+00:00  [dispense] Dispense TEM-1 Prep — dispense 20.0 uL into wellplate_96_flatbottom / well C11 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T06:33:59.108087+00:00  [step_start] Dispense TEM-1 Prep
+2026-07-26T06:34:05.682204+00:00  [step_start] Dispense TEM-1 Prep
+2026-07-26T06:34:19.223356+00:00  [transfer] Dispense TEM-1 Prep —   Batch 2: aspirate 120.0 uL from hole_8; dispense 20.0 uL to ['B2', 'D2', 'F2', 'B4', 'D4', 'F4'] (tip #23)
+2026-07-26T06:34:32.706660+00:00  [aspirate] Dispense TEM-1 Prep — aspirate 120.0 uL from coldblock_wellplate / well hole_8 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T06:34:42.834172+00:00  [dispense] Dispense TEM-1 Prep — dispense 20.0 uL into wellplate_96_flatbottom / well B2 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T06:34:56.348424+00:00  [dispense] Dispense TEM-1 Prep — dispense 20.0 uL into wellplate_96_flatbottom / well D2 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T06:35:09.789111+00:00  [dispense] Dispense TEM-1 Prep — dispense 20.0 uL into wellplate_96_flatbottom / well F2 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T06:35:23.413573+00:00  [dispense] Dispense TEM-1 Prep — dispense 20.0 uL into wellplate_96_flatbottom / well B4 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T06:35:36.927383+00:00  [dispense] Dispense TEM-1 Prep — dispense 20.0 uL into wellplate_96_flatbottom / well D4 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T06:35:50.179966+00:00  [dispense] Dispense TEM-1 Prep — dispense 20.0 uL into wellplate_96_flatbottom / well F4 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T06:35:55.244963+00:00  [step_start] Dispense TEM-1 Prep
+2026-07-26T06:36:02.123247+00:00  [step_start] Dispense TEM-1 Prep
+2026-07-26T06:36:15.853468+00:00  [transfer] Dispense TEM-1 Prep —   Batch 3: aspirate 120.0 uL from hole_8; dispense 20.0 uL to ['B6', 'D6', 'F6', 'B8', 'D8', 'F8'] (tip #24)
+2026-07-26T06:36:29.231305+00:00  [aspirate] Dispense TEM-1 Prep — aspirate 120.0 uL from coldblock_wellplate / well hole_8 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T06:36:39.189243+00:00  [dispense] Dispense TEM-1 Prep — dispense 20.0 uL into wellplate_96_flatbottom / well B6 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T06:36:52.832393+00:00  [dispense] Dispense TEM-1 Prep — dispense 20.0 uL into wellplate_96_flatbottom / well D6 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T06:37:06.092559+00:00  [dispense] Dispense TEM-1 Prep — dispense 20.0 uL into wellplate_96_flatbottom / well F6 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T06:37:19.021527+00:00  [dispense] Dispense TEM-1 Prep — dispense 20.0 uL into wellplate_96_flatbottom / well B8 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T06:37:32.144824+00:00  [dispense] Dispense TEM-1 Prep — dispense 20.0 uL into wellplate_96_flatbottom / well D8 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T06:37:45.573603+00:00  [dispense] Dispense TEM-1 Prep — dispense 20.0 uL into wellplate_96_flatbottom / well F8 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T06:37:50.643359+00:00  [step_start] Dispense TEM-1 Prep
+2026-07-26T06:37:57.361786+00:00  [step_start] Dispense TEM-1 Prep
+2026-07-26T06:38:11.881260+00:00  [transfer] Dispense TEM-1 Prep —   Batch 4: aspirate 120.0 uL from hole_8; dispense 20.0 uL to ['B10', 'D10', 'F10', 'C5', 'E5', 'G5'] (tip #25)
+2026-07-26T06:38:25.222671+00:00  [aspirate] Dispense TEM-1 Prep — aspirate 120.0 uL from coldblock_wellplate / well hole_8 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T06:38:35.114607+00:00  [dispense] Dispense TEM-1 Prep — dispense 20.0 uL into wellplate_96_flatbottom / well B10 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T06:38:48.109517+00:00  [dispense] Dispense TEM-1 Prep — dispense 20.0 uL into wellplate_96_flatbottom / well D10 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T06:39:01.291422+00:00  [dispense] Dispense TEM-1 Prep — dispense 20.0 uL into wellplate_96_flatbottom / well F10 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T06:39:14.525494+00:00  [dispense] Dispense TEM-1 Prep — dispense 20.0 uL into wellplate_96_flatbottom / well C5 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T06:39:27.910626+00:00  [dispense] Dispense TEM-1 Prep — dispense 20.0 uL into wellplate_96_flatbottom / well E5 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T06:39:41.270205+00:00  [dispense] Dispense TEM-1 Prep — dispense 20.0 uL into wellplate_96_flatbottom / well G5 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T06:39:46.364985+00:00  [step_start] Dispense TEM-1 Prep
+2026-07-26T06:39:53.326284+00:00  [step_start] Dispense TEM-1 Prep
+2026-07-26T06:40:07.359252+00:00  [transfer] Dispense TEM-1 Prep —   Batch 5: aspirate 120.0 uL from hole_8; dispense 20.0 uL to ['C9', 'E9', 'G9', 'C3', 'E3', 'G3'] (tip #26)
+2026-07-26T06:40:20.622578+00:00  [aspirate] Dispense TEM-1 Prep — aspirate 120.0 uL from coldblock_wellplate / well hole_8 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T06:40:30.501946+00:00  [dispense] Dispense TEM-1 Prep — dispense 20.0 uL into wellplate_96_flatbottom / well C9 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T06:40:43.779126+00:00  [dispense] Dispense TEM-1 Prep — dispense 20.0 uL into wellplate_96_flatbottom / well E9 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T06:40:56.862224+00:00  [dispense] Dispense TEM-1 Prep — dispense 20.0 uL into wellplate_96_flatbottom / well G9 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T06:41:09.866661+00:00  [dispense] Dispense TEM-1 Prep — dispense 20.0 uL into wellplate_96_flatbottom / well C3 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T06:41:23.616545+00:00  [dispense] Dispense TEM-1 Prep — dispense 20.0 uL into wellplate_96_flatbottom / well E3 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T06:41:37.007307+00:00  [dispense] Dispense TEM-1 Prep — dispense 20.0 uL into wellplate_96_flatbottom / well G3 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T06:41:42.149748+00:00  [step_start] Dispense TEM-1 Prep
+2026-07-26T06:41:48.950397+00:00  [step_start] Dispense TEM-1 Prep
+2026-07-26T06:42:03.033952+00:00  [transfer] Dispense TEM-1 Prep —   Batch 6: aspirate 60.0 uL from hole_8; dispense 20.0 uL to ['C7', 'E7', 'G7'] (tip #27)
+2026-07-26T06:42:16.441821+00:00  [aspirate] Dispense TEM-1 Prep — aspirate 60.0 uL from coldblock_wellplate / well hole_8 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T06:42:26.335126+00:00  [dispense] Dispense TEM-1 Prep — dispense 20.0 uL into wellplate_96_flatbottom / well C7 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T06:42:39.451263+00:00  [dispense] Dispense TEM-1 Prep — dispense 20.0 uL into wellplate_96_flatbottom / well E7 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T06:42:52.963070+00:00  [dispense] Dispense TEM-1 Prep — dispense 20.0 uL into wellplate_96_flatbottom / well G7 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T06:42:58.162061+00:00  [step_start] Dispense TEM-1 Prep
+2026-07-26T06:43:04.139934+00:00  [event] Dispense TEM-1 Prep — ✓ Batched dispense from hole_8 complete: 33 wells, 6 aspirate batch(es), 33 dispense(s), 6 tip(s)
+2026-07-26T06:43:05.683098+00:00  [step_start] Dispense No-Enzyme Prep
+2026-07-26T06:43:07.056703+00:00  [event] Dispense No-Enzyme Prep — ▶ Batched dispense hole_6 (coldblock_wellplate) → wellplate_96_flatbottom: 3 wells @ 20.0 uL using epipette_120ul (6 well(s) per aspiration)
+2026-07-26T06:43:08.427102+00:00  [step_start] Dispense No-Enzyme Prep
+2026-07-26T06:43:22.549553+00:00  [transfer] Dispense No-Enzyme Prep —   Batch 1: aspirate 60.0 uL from hole_6; dispense 20.0 uL to ['D3', 'D7', 'E11'] (tip #28)
+2026-07-26T06:43:36.321510+00:00  [aspirate] Dispense No-Enzyme Prep — aspirate 60.0 uL from coldblock_wellplate / well hole_6 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T06:43:46.926802+00:00  [dispense] Dispense No-Enzyme Prep — dispense 20.0 uL into wellplate_96_flatbottom / well D3 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T06:44:00.521777+00:00  [dispense] Dispense No-Enzyme Prep — dispense 20.0 uL into wellplate_96_flatbottom / well D7 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T06:44:13.722587+00:00  [dispense] Dispense No-Enzyme Prep — dispense 20.0 uL into wellplate_96_flatbottom / well E11 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T06:44:18.828544+00:00  [step_start] Dispense No-Enzyme Prep
+2026-07-26T06:44:24.630359+00:00  [event] Dispense No-Enzyme Prep — ✓ Batched dispense from hole_6 complete: 3 wells, 1 aspirate batch(es), 3 dispense(s), 1 tip(s)
+2026-07-26T06:44:25.999512+00:00  [step_start] Dispense Vehicle
+2026-07-26T06:44:27.510507+00:00  [event] Dispense Vehicle — ▶ Batched dispense A2 (wellplate_pcr_parts_4) → wellplate_96_flatbottom: 6 wells @ 5.0 uL using epipette_10ul (2 well(s) per aspiration)
+2026-07-26T06:44:28.061775+00:00  [event] Dispense Vehicle — ⇄ Swapping epipette_120ul → epipette_10ul
+2026-07-26T06:44:28.077141+00:00  [step_start] Dispense Vehicle
+2026-07-26T06:44:53.352762+00:00  [step_start] Dispense Vehicle
+2026-07-26T06:45:11.055261+00:00  [step_start] Dispense Vehicle
+2026-07-26T06:45:26.494411+00:00  [transfer] Dispense Vehicle —   Batch 1: aspirate 10.0 uL from A2; dispense 5.0 uL to ['D3', 'D7'] (tip #25)
+2026-07-26T06:45:37.517172+00:00  [aspirate] Dispense Vehicle — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A2 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:45:48.555929+00:00  [dispense] Dispense Vehicle — dispense 5.0 uL into wellplate_96_flatbottom / well D3 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))
+2026-07-26T06:46:03.056238+00:00  [dispense] Dispense Vehicle — dispense 5.0 uL into wellplate_96_flatbottom / well D7 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))
+2026-07-26T06:46:08.506017+00:00  [step_start] Dispense Vehicle
+2026-07-26T06:46:15.516460+00:00  [step_start] Dispense Vehicle
+2026-07-26T06:46:30.821043+00:00  [transfer] Dispense Vehicle —   Batch 2: aspirate 10.0 uL from A2; dispense 5.0 uL to ['E11', 'B3'] (tip #26)
+2026-07-26T06:46:41.972201+00:00  [aspirate] Dispense Vehicle — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A2 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:46:52.708635+00:00  [dispense] Dispense Vehicle — dispense 5.0 uL into wellplate_96_flatbottom / well E11 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))
+2026-07-26T06:47:07.408015+00:00  [dispense] Dispense Vehicle — dispense 5.0 uL into wellplate_96_flatbottom / well B3 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))
+2026-07-26T06:47:12.837204+00:00  [step_start] Dispense Vehicle
+2026-07-26T06:47:19.847877+00:00  [step_start] Dispense Vehicle
+2026-07-26T06:47:35.509775+00:00  [transfer] Dispense Vehicle —   Batch 3: aspirate 10.0 uL from A2; dispense 5.0 uL to ['B7', 'C11'] (tip #27)
+2026-07-26T06:47:46.641405+00:00  [aspirate] Dispense Vehicle — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A2 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:47:57.461192+00:00  [dispense] Dispense Vehicle — dispense 5.0 uL into wellplate_96_flatbottom / well B7 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))
+2026-07-26T06:48:11.795601+00:00  [dispense] Dispense Vehicle — dispense 5.0 uL into wellplate_96_flatbottom / well C11 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))
+2026-07-26T06:48:17.349096+00:00  [step_start] Dispense Vehicle
+2026-07-26T06:48:23.195416+00:00  [event] Dispense Vehicle — ✓ Batched dispense from A2 complete: 6 wells, 3 aspirate batch(es), 6 dispense(s), 3 tip(s)
+2026-07-26T06:48:24.613342+00:00  [step_start] Dispense Positive Control
+2026-07-26T06:48:26.143383+00:00  [event] Dispense Positive Control — ▶ Batched dispense A1 (wellplate_pcr_parts_4) → wellplate_96_flatbottom: 3 wells @ 5.0 uL using epipette_10ul (2 well(s) per aspiration)
+2026-07-26T06:48:27.229992+00:00  [step_start] Dispense Positive Control
+2026-07-26T06:48:42.880041+00:00  [transfer] Dispense Positive Control —   Batch 1: aspirate 10.0 uL from A1; dispense 5.0 uL to ['F3', 'F7'] (tip #28)
+2026-07-26T06:48:53.976273+00:00  [aspirate] Dispense Positive Control — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A1 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:49:04.865750+00:00  [dispense] Dispense Positive Control — dispense 5.0 uL into wellplate_96_flatbottom / well F3 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))
+2026-07-26T06:49:19.572355+00:00  [dispense] Dispense Positive Control — dispense 5.0 uL into wellplate_96_flatbottom / well F7 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))
+2026-07-26T06:49:25.075977+00:00  [step_start] Dispense Positive Control
+2026-07-26T06:49:31.771517+00:00  [step_start] Dispense Positive Control
+2026-07-26T06:49:47.094341+00:00  [transfer] Dispense Positive Control —   Batch 2: aspirate 5.0 uL from A1; dispense 5.0 uL to ['G11'] (tip #29)
+2026-07-26T06:49:58.341996+00:00  [aspirate] Dispense Positive Control — aspirate 5.0 uL from wellplate_pcr_parts_4 / well A1 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:50:09.025521+00:00  [dispense] Dispense Positive Control — dispense 5.0 uL into wellplate_96_flatbottom / well G11 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))
+2026-07-26T06:50:14.541445+00:00  [step_start] Dispense Positive Control
+2026-07-26T06:50:20.316470+00:00  [event] Dispense Positive Control — ✓ Batched dispense from A1 complete: 3 wells, 2 aspirate batch(es), 3 dispense(s), 2 tip(s)
+2026-07-26T06:50:21.592568+00:00  [step_start] Dispense Test Compound 1
+2026-07-26T06:50:22.959453+00:00  [event] Dispense Test Compound 1 — ▶ Batched dispense A3 (wellplate_pcr_parts_4) → wellplate_96_flatbottom: 3 wells @ 5.0 uL using epipette_10ul (2 well(s) per aspiration)
+2026-07-26T06:50:24.422262+00:00  [step_start] Dispense Test Compound 1
+2026-07-26T06:50:39.742109+00:00  [transfer] Dispense Test Compound 1 —   Batch 1: aspirate 10.0 uL from A3; dispense 5.0 uL to ['B2', 'D2'] (tip #30)
+2026-07-26T06:50:50.863513+00:00  [aspirate] Dispense Test Compound 1 — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A3 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:51:02.107735+00:00  [dispense] Dispense Test Compound 1 — dispense 5.0 uL into wellplate_96_flatbottom / well B2 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))
+2026-07-26T06:51:16.895651+00:00  [dispense] Dispense Test Compound 1 — dispense 5.0 uL into wellplate_96_flatbottom / well D2 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))
+2026-07-26T06:51:22.364209+00:00  [step_start] Dispense Test Compound 1
+2026-07-26T06:51:29.335682+00:00  [step_start] Dispense Test Compound 1
+2026-07-26T06:51:44.819791+00:00  [transfer] Dispense Test Compound 1 —   Batch 2: aspirate 5.0 uL from A3; dispense 5.0 uL to ['F2'] (tip #31)
+2026-07-26T06:51:56.398392+00:00  [aspirate] Dispense Test Compound 1 — aspirate 5.0 uL from wellplate_pcr_parts_4 / well A3 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:52:07.438671+00:00  [dispense] Dispense Test Compound 1 — dispense 5.0 uL into wellplate_96_flatbottom / well F2 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))
+2026-07-26T06:52:12.948450+00:00  [step_start] Dispense Test Compound 1
+2026-07-26T06:52:19.219152+00:00  [event] Dispense Test Compound 1 — ✓ Batched dispense from A3 complete: 3 wells, 2 aspirate batch(es), 3 dispense(s), 2 tip(s)
+2026-07-26T06:52:20.579499+00:00  [step_start] Dispense Test Compound 2
+2026-07-26T06:52:22.217502+00:00  [event] Dispense Test Compound 2 — ▶ Batched dispense A4 (wellplate_pcr_parts_4) → wellplate_96_flatbottom: 3 wells @ 5.0 uL using epipette_10ul (2 well(s) per aspiration)
+2026-07-26T06:52:23.356538+00:00  [step_start] Dispense Test Compound 2
+2026-07-26T06:52:38.896178+00:00  [transfer] Dispense Test Compound 2 —   Batch 1: aspirate 10.0 uL from A4; dispense 5.0 uL to ['B4', 'D4'] (tip #32)
+2026-07-26T06:52:49.996783+00:00  [aspirate] Dispense Test Compound 2 — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A4 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:53:01.211484+00:00  [dispense] Dispense Test Compound 2 — dispense 5.0 uL into wellplate_96_flatbottom / well B4 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))
+2026-07-26T06:53:15.801804+00:00  [dispense] Dispense Test Compound 2 — dispense 5.0 uL into wellplate_96_flatbottom / well D4 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))
+2026-07-26T06:53:21.319008+00:00  [step_start] Dispense Test Compound 2
+2026-07-26T06:53:28.145049+00:00  [step_start] Dispense Test Compound 2
+2026-07-26T06:53:43.864251+00:00  [transfer] Dispense Test Compound 2 —   Batch 2: aspirate 5.0 uL from A4; dispense 5.0 uL to ['F4'] (tip #33)
+2026-07-26T06:53:54.954972+00:00  [aspirate] Dispense Test Compound 2 — aspirate 5.0 uL from wellplate_pcr_parts_4 / well A4 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:54:05.988570+00:00  [dispense] Dispense Test Compound 2 — dispense 5.0 uL into wellplate_96_flatbottom / well F4 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))
+2026-07-26T06:54:11.541608+00:00  [step_start] Dispense Test Compound 2
+2026-07-26T06:54:17.705458+00:00  [event] Dispense Test Compound 2 — ✓ Batched dispense from A4 complete: 3 wells, 2 aspirate batch(es), 3 dispense(s), 2 tip(s)
+2026-07-26T06:54:19.106472+00:00  [step_start] Dispense Test Compound 3
+2026-07-26T06:54:20.799696+00:00  [event] Dispense Test Compound 3 — ▶ Batched dispense A5 (wellplate_pcr_parts_4) → wellplate_96_flatbottom: 3 wells @ 5.0 uL using epipette_10ul (2 well(s) per aspiration)
+2026-07-26T06:54:21.726827+00:00  [step_start] Dispense Test Compound 3
+2026-07-26T06:54:37.117242+00:00  [transfer] Dispense Test Compound 3 —   Batch 1: aspirate 10.0 uL from A5; dispense 5.0 uL to ['B6', 'D6'] (tip #34)
+2026-07-26T06:54:48.553480+00:00  [aspirate] Dispense Test Compound 3 — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A5 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:54:59.620515+00:00  [dispense] Dispense Test Compound 3 — dispense 5.0 uL into wellplate_96_flatbottom / well B6 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))
+2026-07-26T06:55:14.196888+00:00  [dispense] Dispense Test Compound 3 — dispense 5.0 uL into wellplate_96_flatbottom / well D6 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))
+2026-07-26T06:55:19.695309+00:00  [step_start] Dispense Test Compound 3
+2026-07-26T06:55:26.772224+00:00  [step_start] Dispense Test Compound 3
+2026-07-26T06:55:42.378114+00:00  [transfer] Dispense Test Compound 3 —   Batch 2: aspirate 5.0 uL from A5; dispense 5.0 uL to ['F6'] (tip #35)
+2026-07-26T06:55:53.636033+00:00  [aspirate] Dispense Test Compound 3 — aspirate 5.0 uL from wellplate_pcr_parts_4 / well A5 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:56:04.943072+00:00  [dispense] Dispense Test Compound 3 — dispense 5.0 uL into wellplate_96_flatbottom / well F6 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))
+2026-07-26T06:56:10.448898+00:00  [step_start] Dispense Test Compound 3
+2026-07-26T06:56:16.512251+00:00  [event] Dispense Test Compound 3 — ✓ Batched dispense from A5 complete: 3 wells, 2 aspirate batch(es), 3 dispense(s), 2 tip(s)
+2026-07-26T06:56:17.789379+00:00  [step_start] Dispense Test Compound 4
+2026-07-26T06:56:19.157889+00:00  [event] Dispense Test Compound 4 — ▶ Batched dispense A6 (wellplate_pcr_parts_4) → wellplate_96_flatbottom: 3 wells @ 5.0 uL using epipette_10ul (2 well(s) per aspiration)
+2026-07-26T06:56:20.123733+00:00  [step_start] Dispense Test Compound 4
+2026-07-26T06:56:36.073330+00:00  [transfer] Dispense Test Compound 4 —   Batch 1: aspirate 10.0 uL from A6; dispense 5.0 uL to ['B8', 'D8'] (tip #36)
+2026-07-26T06:56:47.368599+00:00  [aspirate] Dispense Test Compound 4 — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A6 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:56:58.306136+00:00  [dispense] Dispense Test Compound 4 — dispense 5.0 uL into wellplate_96_flatbottom / well B8 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))
+2026-07-26T06:57:12.996879+00:00  [dispense] Dispense Test Compound 4 — dispense 5.0 uL into wellplate_96_flatbottom / well D8 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))
+2026-07-26T06:57:18.468001+00:00  [step_start] Dispense Test Compound 4
+2026-07-26T06:57:25.126336+00:00  [step_start] Dispense Test Compound 4
+2026-07-26T06:57:40.402745+00:00  [transfer] Dispense Test Compound 4 —   Batch 2: aspirate 5.0 uL from A6; dispense 5.0 uL to ['F8'] (tip #37)
+2026-07-26T06:57:51.566481+00:00  [aspirate] Dispense Test Compound 4 — aspirate 5.0 uL from wellplate_pcr_parts_4 / well A6 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:58:02.741514+00:00  [dispense] Dispense Test Compound 4 — dispense 5.0 uL into wellplate_96_flatbottom / well F8 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))
+2026-07-26T06:58:08.152444+00:00  [step_start] Dispense Test Compound 4
+2026-07-26T06:58:14.115299+00:00  [event] Dispense Test Compound 4 — ✓ Batched dispense from A6 complete: 3 wells, 2 aspirate batch(es), 3 dispense(s), 2 tip(s)
+2026-07-26T06:58:15.418603+00:00  [step_start] Dispense Test Compound 5
+2026-07-26T06:58:17.013178+00:00  [event] Dispense Test Compound 5 — ▶ Batched dispense A7 (wellplate_pcr_parts_4) → wellplate_96_flatbottom: 3 wells @ 5.0 uL using epipette_10ul (2 well(s) per aspiration)
+2026-07-26T06:58:18.436230+00:00  [step_start] Dispense Test Compound 5
+2026-07-26T06:58:33.957109+00:00  [transfer] Dispense Test Compound 5 —   Batch 1: aspirate 10.0 uL from A7; dispense 5.0 uL to ['B10', 'D10'] (tip #38)
+2026-07-26T06:58:45.024625+00:00  [aspirate] Dispense Test Compound 5 — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A7 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T06:58:56.130566+00:00  [dispense] Dispense Test Compound 5 — dispense 5.0 uL into wellplate_96_flatbottom / well B10 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))
+2026-07-26T06:59:10.224892+00:00  [dispense] Dispense Test Compound 5 — dispense 5.0 uL into wellplate_96_flatbottom / well D10 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))
+2026-07-26T06:59:15.761483+00:00  [step_start] Dispense Test Compound 5
+2026-07-26T06:59:22.267947+00:00  [step_start] Dispense Test Compound 5
+2026-07-26T06:59:37.828369+00:00  [transfer] Dispense Test Compound 5 —   Batch 2: aspirate 5.0 uL from A7; dispense 5.0 uL to ['F10'] (tip #39)
+2026-07-26T06:59:49.353195+00:00  [aspirate] Dispense Test Compound 5 — aspirate 5.0 uL from wellplate_pcr_parts_4 / well A7 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T07:00:00.299133+00:00  [dispense] Dispense Test Compound 5 — dispense 5.0 uL into wellplate_96_flatbottom / well F10 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))
+2026-07-26T07:00:05.833602+00:00  [step_start] Dispense Test Compound 5
+2026-07-26T07:00:11.672743+00:00  [event] Dispense Test Compound 5 — ✓ Batched dispense from A7 complete: 3 wells, 2 aspirate batch(es), 3 dispense(s), 2 tip(s)
+2026-07-26T07:00:12.904158+00:00  [step_start] Dispense Test Compound 6
+2026-07-26T07:00:14.227428+00:00  [event] Dispense Test Compound 6 — ▶ Batched dispense A8 (wellplate_pcr_parts_4) → wellplate_96_flatbottom: 3 wells @ 5.0 uL using epipette_10ul (2 well(s) per aspiration)
+2026-07-26T07:00:15.665706+00:00  [step_start] Dispense Test Compound 6
+2026-07-26T07:00:31.068275+00:00  [transfer] Dispense Test Compound 6 —   Batch 1: aspirate 10.0 uL from A8; dispense 5.0 uL to ['C5', 'E5'] (tip #40)
+2026-07-26T07:00:42.550357+00:00  [aspirate] Dispense Test Compound 6 — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A8 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T07:00:53.873326+00:00  [dispense] Dispense Test Compound 6 — dispense 5.0 uL into wellplate_96_flatbottom / well C5 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))
+2026-07-26T07:01:08.500466+00:00  [dispense] Dispense Test Compound 6 — dispense 5.0 uL into wellplate_96_flatbottom / well E5 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))
+2026-07-26T07:01:14.057141+00:00  [step_start] Dispense Test Compound 6
+2026-07-26T07:01:20.826284+00:00  [step_start] Dispense Test Compound 6
+2026-07-26T07:01:36.497681+00:00  [transfer] Dispense Test Compound 6 —   Batch 2: aspirate 5.0 uL from A8; dispense 5.0 uL to ['G5'] (tip #41)
+2026-07-26T07:01:48.002162+00:00  [aspirate] Dispense Test Compound 6 — aspirate 5.0 uL from wellplate_pcr_parts_4 / well A8 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T07:01:59.273855+00:00  [dispense] Dispense Test Compound 6 — dispense 5.0 uL into wellplate_96_flatbottom / well G5 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))
+2026-07-26T07:02:04.776267+00:00  [step_start] Dispense Test Compound 6
+2026-07-26T07:02:10.871251+00:00  [event] Dispense Test Compound 6 — ✓ Batched dispense from A8 complete: 3 wells, 2 aspirate batch(es), 3 dispense(s), 2 tip(s)
+2026-07-26T07:02:12.140741+00:00  [step_start] Dispense Test Compound 7
+2026-07-26T07:02:13.790701+00:00  [event] Dispense Test Compound 7 — ▶ Batched dispense A9 (wellplate_pcr_parts_4) → wellplate_96_flatbottom: 3 wells @ 5.0 uL using epipette_10ul (2 well(s) per aspiration)
+2026-07-26T07:02:14.877134+00:00  [step_start] Dispense Test Compound 7
+2026-07-26T07:02:30.292361+00:00  [transfer] Dispense Test Compound 7 —   Batch 1: aspirate 10.0 uL from A9; dispense 5.0 uL to ['C9', 'E9'] (tip #42)
+2026-07-26T07:02:41.878896+00:00  [aspirate] Dispense Test Compound 7 — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A9 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T07:02:52.831089+00:00  [dispense] Dispense Test Compound 7 — dispense 5.0 uL into wellplate_96_flatbottom / well C9 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))
+2026-07-26T07:03:07.150650+00:00  [dispense] Dispense Test Compound 7 — dispense 5.0 uL into wellplate_96_flatbottom / well E9 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))
+2026-07-26T07:03:12.604335+00:00  [step_start] Dispense Test Compound 7
+2026-07-26T07:03:19.386303+00:00  [step_start] Dispense Test Compound 7
+2026-07-26T07:03:34.969285+00:00  [transfer] Dispense Test Compound 7 —   Batch 2: aspirate 5.0 uL from A9; dispense 5.0 uL to ['G9'] (tip #43)
+2026-07-26T07:03:46.319461+00:00  [aspirate] Dispense Test Compound 7 — aspirate 5.0 uL from wellplate_pcr_parts_4 / well A9 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T07:03:57.669260+00:00  [dispense] Dispense Test Compound 7 — dispense 5.0 uL into wellplate_96_flatbottom / well G9 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))
+2026-07-26T07:04:03.133003+00:00  [step_start] Dispense Test Compound 7
+2026-07-26T07:04:09.019911+00:00  [event] Dispense Test Compound 7 — ✓ Batched dispense from A9 complete: 3 wells, 2 aspirate batch(es), 3 dispense(s), 2 tip(s)
+2026-07-26T07:04:10.387979+00:00  [step_start] Dispense Test Compound 8
+2026-07-26T07:04:11.748923+00:00  [event] Dispense Test Compound 8 — ▶ Batched dispense A10 (wellplate_pcr_parts_4) → wellplate_96_flatbottom: 3 wells @ 5.0 uL using epipette_10ul (2 well(s) per aspiration)
+2026-07-26T07:04:13.060815+00:00  [step_start] Dispense Test Compound 8
+2026-07-26T07:04:28.564355+00:00  [transfer] Dispense Test Compound 8 —   Batch 1: aspirate 10.0 uL from A10; dispense 5.0 uL to ['C3', 'E3'] (tip #44)
+2026-07-26T07:04:40.039179+00:00  [aspirate] Dispense Test Compound 8 — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A10 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T07:04:51.691896+00:00  [dispense] Dispense Test Compound 8 — dispense 5.0 uL into wellplate_96_flatbottom / well C3 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))
+2026-07-26T07:05:06.246811+00:00  [dispense] Dispense Test Compound 8 — dispense 5.0 uL into wellplate_96_flatbottom / well E3 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))
+2026-07-26T07:05:11.741596+00:00  [step_start] Dispense Test Compound 8
+2026-07-26T07:05:18.573003+00:00  [step_start] Dispense Test Compound 8
+2026-07-26T07:05:34.325476+00:00  [transfer] Dispense Test Compound 8 —   Batch 2: aspirate 5.0 uL from A10; dispense 5.0 uL to ['G3'] (tip #45)
+2026-07-26T07:05:45.826303+00:00  [aspirate] Dispense Test Compound 8 — aspirate 5.0 uL from wellplate_pcr_parts_4 / well A10 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T07:05:57.102067+00:00  [dispense] Dispense Test Compound 8 — dispense 5.0 uL into wellplate_96_flatbottom / well G3 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))
+2026-07-26T07:06:02.584448+00:00  [step_start] Dispense Test Compound 8
+2026-07-26T07:06:08.785113+00:00  [event] Dispense Test Compound 8 — ✓ Batched dispense from A10 complete: 3 wells, 2 aspirate batch(es), 3 dispense(s), 2 tip(s)
+2026-07-26T07:06:10.254581+00:00  [step_start] Dispense Test Compound 9
+2026-07-26T07:06:11.865435+00:00  [event] Dispense Test Compound 9 — ▶ Batched dispense A11 (wellplate_pcr_parts_4) → wellplate_96_flatbottom: 3 wells @ 5.0 uL using epipette_10ul (2 well(s) per aspiration)
+2026-07-26T07:06:12.989450+00:00  [step_start] Dispense Test Compound 9
+2026-07-26T07:06:28.917817+00:00  [transfer] Dispense Test Compound 9 —   Batch 1: aspirate 10.0 uL from A11; dispense 5.0 uL to ['C7', 'E7'] (tip #46)
+2026-07-26T07:06:40.820353+00:00  [aspirate] Dispense Test Compound 9 — aspirate 10.0 uL from wellplate_pcr_parts_4 / well A11 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T07:06:52.141916+00:00  [dispense] Dispense Test Compound 9 — dispense 5.0 uL into wellplate_96_flatbottom / well C7 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))
+2026-07-26T07:07:06.548624+00:00  [dispense] Dispense Test Compound 9 — dispense 5.0 uL into wellplate_96_flatbottom / well E7 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))
+2026-07-26T07:07:12.132457+00:00  [step_start] Dispense Test Compound 9
+2026-07-26T07:07:18.802800+00:00  [step_start] Dispense Test Compound 9
+2026-07-26T07:07:34.817130+00:00  [transfer] Dispense Test Compound 9 —   Batch 2: aspirate 5.0 uL from A11; dispense 5.0 uL to ['G7'] (tip #47)
+2026-07-26T07:07:46.344684+00:00  [aspirate] Dispense Test Compound 9 — aspirate 5.0 uL from wellplate_pcr_parts_4 / well A11 (pipette epipette_10ul, speed 5.0, cal (-0.002,0.0005))
+2026-07-26T07:07:57.651869+00:00  [dispense] Dispense Test Compound 9 — dispense 5.0 uL into wellplate_96_flatbottom / well G7 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))
+2026-07-26T07:08:03.169027+00:00  [step_start] Dispense Test Compound 9
+2026-07-26T07:08:09.161499+00:00  [event] Dispense Test Compound 9 — ✓ Batched dispense from A11 complete: 3 wells, 2 aspirate batch(es), 3 dispense(s), 2 tip(s)
+2026-07-26T07:08:10.340701+00:00  [step_start] Place Pipette for Plate Mix
+2026-07-26T07:08:12.237457+00:00  [event] Place Pipette for Plate Mix — ▶ Returning epipette_10ul to its stand
+2026-07-26T07:08:12.253522+00:00  [step_start] Place Pipette for Plate Mix
+2026-07-26T07:08:33.782834+00:00  [step_start] Grab Plate for Mixing
+2026-07-26T07:08:52.422680+00:00  [step_start] Open Shaker for Mixing
+2026-07-26T07:09:44.231460+00:00  [step_start] Load Plate into Shaker
+2026-07-26T07:10:18.289816+00:00  [step_start] Close Shaker for Mixing
+2026-07-26T07:11:07.423885+00:00  [step_start] Wait for Plate Mix
+2026-07-26T07:11:07.461192+00:00  [event] Wait for Plate Mix — Whole-plate compound mixing: waiting 1 minute(s)
+2026-07-26T07:11:09.483498+00:00  [event] Wait for Plate Mix — Whole-plate compound mixing: wait complete
+2026-07-26T07:11:11.422496+00:00  [step_start] Open Shaker After Mix
+2026-07-26T07:11:59.572340+00:00  [step_start] Unload Mixed Plate
+2026-07-26T07:12:27.852280+00:00  [step_start] Close Shaker After Mix
+2026-07-26T07:13:15.999689+00:00  [step_start] Return Mixed Plate
+2026-07-26T07:13:34.200856+00:00  [step_start] Pick Pipette After Mix
+2026-07-26T07:13:56.687565+00:00  [step_start] Pre-Incubate
+2026-07-26T07:13:56.696413+00:00  [event] Pre-Incubate — TEM-1 compound pre-incubation: waiting 10 minute(s)
+2026-07-26T07:13:58.705117+00:00  [event] Pre-Incubate — TEM-1 compound pre-incubation: wait complete
+2026-07-26T07:13:59.901300+00:00  [step_start] Prepare Nitrocefin
+2026-07-26T07:14:01.443294+00:00  [event] Prepare Nitrocefin — ▶ Preparing nitrocefin working solution in hole_10: 6.25 uL 20 mM stock + 1243.75 uL BLB = 1250.0 uL at 100 uM
+2026-07-26T07:14:01.768475+00:00  [event] Prepare Nitrocefin — ⇄ Swapping epipette_10ul → epipette_120ul
+2026-07-26T07:14:01.790602+00:00  [step_start] Prepare Nitrocefin
+2026-07-26T07:14:22.179955+00:00  [step_start] Prepare Nitrocefin
+2026-07-26T07:14:43.812589+00:00  [step_start] Prepare Nitrocefin
+2026-07-26T07:14:58.579125+00:00  [transfer] Prepare Nitrocefin —   BLB to nitrocefin: chunk 1 120.0 uL hole_7 -> hole_10 (epipette_120ul, tip #29)
+2026-07-26T07:15:12.118980+00:00  [aspirate] Prepare Nitrocefin — aspirate 120.0 uL from coldblock_wellplate / well hole_7 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:15:22.532040+00:00  [dispense] Prepare Nitrocefin — dispense 120.0 uL into coldblock_wellplate / well hole_10 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:15:30.169053+00:00  [step_start] Prepare Nitrocefin
+2026-07-26T07:15:37.031309+00:00  [step_start] Prepare Nitrocefin
+2026-07-26T07:15:51.039615+00:00  [transfer] Prepare Nitrocefin —   BLB to nitrocefin: chunk 2 120.0 uL hole_7 -> hole_10 (epipette_120ul, tip #30)
+2026-07-26T07:16:04.377420+00:00  [aspirate] Prepare Nitrocefin — aspirate 120.0 uL from coldblock_wellplate / well hole_7 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:16:14.884749+00:00  [dispense] Prepare Nitrocefin — dispense 120.0 uL into coldblock_wellplate / well hole_10 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:16:22.371359+00:00  [step_start] Prepare Nitrocefin
+2026-07-26T07:16:29.281034+00:00  [step_start] Prepare Nitrocefin
+2026-07-26T07:16:43.450548+00:00  [transfer] Prepare Nitrocefin —   BLB to nitrocefin: chunk 3 120.0 uL hole_7 -> hole_10 (epipette_120ul, tip #31)
+2026-07-26T07:16:56.977142+00:00  [aspirate] Prepare Nitrocefin — aspirate 120.0 uL from coldblock_wellplate / well hole_7 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:17:07.543530+00:00  [dispense] Prepare Nitrocefin — dispense 120.0 uL into coldblock_wellplate / well hole_10 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:17:15.039232+00:00  [step_start] Prepare Nitrocefin
+2026-07-26T07:17:22.285978+00:00  [step_start] Prepare Nitrocefin
+2026-07-26T07:17:35.950366+00:00  [transfer] Prepare Nitrocefin —   BLB to nitrocefin: chunk 4 120.0 uL hole_7 -> hole_10 (epipette_120ul, tip #32)
+2026-07-26T07:17:49.392472+00:00  [aspirate] Prepare Nitrocefin — aspirate 120.0 uL from coldblock_wellplate / well hole_7 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:17:59.889765+00:00  [dispense] Prepare Nitrocefin — dispense 120.0 uL into coldblock_wellplate / well hole_10 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:18:07.395085+00:00  [step_start] Prepare Nitrocefin
+2026-07-26T07:18:14.556892+00:00  [step_start] Prepare Nitrocefin
+2026-07-26T07:18:28.219678+00:00  [transfer] Prepare Nitrocefin —   BLB to nitrocefin: chunk 5 120.0 uL hole_7 -> hole_10 (epipette_120ul, tip #33)
+2026-07-26T07:18:41.654459+00:00  [aspirate] Prepare Nitrocefin — aspirate 120.0 uL from coldblock_wellplate / well hole_7 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:18:52.421905+00:00  [dispense] Prepare Nitrocefin — dispense 120.0 uL into coldblock_wellplate / well hole_10 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:18:59.987828+00:00  [step_start] Prepare Nitrocefin
+2026-07-26T07:19:06.935166+00:00  [step_start] Prepare Nitrocefin
+2026-07-26T07:19:20.808968+00:00  [transfer] Prepare Nitrocefin —   BLB to nitrocefin: chunk 6 120.0 uL hole_7 -> hole_10 (epipette_120ul, tip #34)
+2026-07-26T07:19:34.354947+00:00  [aspirate] Prepare Nitrocefin — aspirate 120.0 uL from coldblock_wellplate / well hole_7 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:19:44.796663+00:00  [dispense] Prepare Nitrocefin — dispense 120.0 uL into coldblock_wellplate / well hole_10 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:19:52.332482+00:00  [step_start] Prepare Nitrocefin
+2026-07-26T07:19:59.188609+00:00  [step_start] Prepare Nitrocefin
+2026-07-26T07:20:13.060908+00:00  [transfer] Prepare Nitrocefin —   BLB to nitrocefin: chunk 7 120.0 uL hole_7 -> hole_10 (epipette_120ul, tip #35)
+2026-07-26T07:20:26.527340+00:00  [aspirate] Prepare Nitrocefin — aspirate 120.0 uL from coldblock_wellplate / well hole_7 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:20:37.118188+00:00  [dispense] Prepare Nitrocefin — dispense 120.0 uL into coldblock_wellplate / well hole_10 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:20:44.654451+00:00  [step_start] Prepare Nitrocefin
+2026-07-26T07:20:51.943096+00:00  [step_start] Prepare Nitrocefin
+2026-07-26T07:21:05.600550+00:00  [transfer] Prepare Nitrocefin —   BLB to nitrocefin: chunk 8 120.0 uL hole_7 -> hole_10 (epipette_120ul, tip #36)
+2026-07-26T07:21:18.985595+00:00  [aspirate] Prepare Nitrocefin — aspirate 120.0 uL from coldblock_wellplate / well hole_7 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:21:29.586850+00:00  [dispense] Prepare Nitrocefin — dispense 120.0 uL into coldblock_wellplate / well hole_10 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:21:37.077833+00:00  [step_start] Prepare Nitrocefin
+2026-07-26T07:21:44.292070+00:00  [step_start] Prepare Nitrocefin
+2026-07-26T07:21:58.490665+00:00  [transfer] Prepare Nitrocefin —   BLB to nitrocefin: chunk 9 120.0 uL hole_7 -> hole_10 (epipette_120ul, tip #37)
+2026-07-26T07:22:11.940932+00:00  [aspirate] Prepare Nitrocefin — aspirate 120.0 uL from coldblock_wellplate / well hole_7 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:22:22.696366+00:00  [dispense] Prepare Nitrocefin — dispense 120.0 uL into coldblock_wellplate / well hole_10 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:22:30.253149+00:00  [step_start] Prepare Nitrocefin
+2026-07-26T07:22:37.171017+00:00  [step_start] Prepare Nitrocefin
+2026-07-26T07:22:51.271536+00:00  [transfer] Prepare Nitrocefin —   BLB to nitrocefin: chunk 10 120.0 uL hole_7 -> hole_10 (epipette_120ul, tip #38)
+2026-07-26T07:23:04.977416+00:00  [aspirate] Prepare Nitrocefin — aspirate 120.0 uL from coldblock_wellplate / well hole_7 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:23:15.390499+00:00  [dispense] Prepare Nitrocefin — dispense 120.0 uL into coldblock_wellplate / well hole_10 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:23:22.927498+00:00  [step_start] Prepare Nitrocefin
+2026-07-26T07:23:29.691637+00:00  [step_start] Prepare Nitrocefin
+2026-07-26T07:23:44.060412+00:00  [transfer] Prepare Nitrocefin —   BLB to nitrocefin: chunk 11 43.75 uL hole_7 -> hole_10 (epipette_120ul, tip #39)
+2026-07-26T07:23:57.472356+00:00  [aspirate] Prepare Nitrocefin — aspirate 43.75 uL from coldblock_wellplate / well hole_7 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:24:07.875963+00:00  [dispense] Prepare Nitrocefin — dispense 43.75 uL into coldblock_wellplate / well hole_10 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:24:15.423513+00:00  [step_start] Prepare Nitrocefin
+2026-07-26T07:24:21.613468+00:00  [event] Prepare Nitrocefin — ⇄ Swapping epipette_120ul → epipette_10ul
+2026-07-26T07:24:21.628046+00:00  [step_start] Prepare Nitrocefin
+2026-07-26T07:24:46.691526+00:00  [step_start] Prepare Nitrocefin
+2026-07-26T07:25:04.389902+00:00  [step_start] Prepare Nitrocefin
+2026-07-26T07:25:20.024257+00:00  [transfer] Prepare Nitrocefin —   Nitrocefin stock: chunk 1 6.25 uL hole_4 -> hole_10 (epipette_10ul, tip #48)
+2026-07-26T07:25:34.292891+00:00  [aspirate] Prepare Nitrocefin — aspirate 6.25 uL from coldblock_wellplate / well hole_4 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.005))
+2026-07-26T07:25:46.331843+00:00  [dispense] Prepare Nitrocefin — dispense 6.25 uL into coldblock_wellplate / well hole_10 (pipette epipette_10ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:25:54.198528+00:00  [step_start] Prepare Nitrocefin
+2026-07-26T07:26:00.209913+00:00  [event] Prepare Nitrocefin — ⇄ Swapping epipette_10ul → epipette_120ul
+2026-07-26T07:26:00.234692+00:00  [step_start] Prepare Nitrocefin
+2026-07-26T07:26:20.775069+00:00  [step_start] Prepare Nitrocefin
+2026-07-26T07:26:42.372896+00:00  [step_start] Prepare Nitrocefin
+2026-07-26T07:26:57.136216+00:00  [mix] Prepare Nitrocefin —   Mix hole_10: 5 cycles x 100.0 uL (epipette_120ul, tip #40)
+2026-07-26T07:27:10.976069+00:00  [aspirate] Prepare Nitrocefin — aspirate 100.0 uL from coldblock_wellplate / well hole_10 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:27:21.251045+00:00  [dispense] Prepare Nitrocefin — dispense 100.0 uL into coldblock_wellplate / well hole_10 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:27:41.565985+00:00  [aspirate] Prepare Nitrocefin — aspirate 100.0 uL from coldblock_wellplate / well hole_10 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:27:51.769269+00:00  [dispense] Prepare Nitrocefin — dispense 100.0 uL into coldblock_wellplate / well hole_10 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:28:12.127442+00:00  [aspirate] Prepare Nitrocefin — aspirate 100.0 uL from coldblock_wellplate / well hole_10 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:28:22.343555+00:00  [dispense] Prepare Nitrocefin — dispense 100.0 uL into coldblock_wellplate / well hole_10 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:28:42.387677+00:00  [aspirate] Prepare Nitrocefin — aspirate 100.0 uL from coldblock_wellplate / well hole_10 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:28:52.712788+00:00  [dispense] Prepare Nitrocefin — dispense 100.0 uL into coldblock_wellplate / well hole_10 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:29:12.912482+00:00  [aspirate] Prepare Nitrocefin — aspirate 100.0 uL from coldblock_wellplate / well hole_10 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:29:23.277941+00:00  [dispense] Prepare Nitrocefin — dispense 100.0 uL into coldblock_wellplate / well hole_10 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:29:30.792064+00:00  [step_start] Prepare Nitrocefin
+2026-07-26T07:29:36.597517+00:00  [event] Prepare Nitrocefin — ✓ Nitrocefin working solution ready; proceed immediately to assay wells
+2026-07-26T07:29:38.089733+00:00  [step_start] Nitrocefin: No-Enzyme Control
+2026-07-26T07:29:39.729977+00:00  [event] Nitrocefin: No-Enzyme Control — ▶ Batched dispense hole_10 (coldblock_wellplate) → wellplate_96_flatbottom: 3 wells @ 25.0 uL using epipette_120ul (4 well(s) per aspiration)
+2026-07-26T07:29:41.024043+00:00  [step_start] Nitrocefin: No-Enzyme Control
+2026-07-26T07:29:55.301307+00:00  [transfer] Nitrocefin: No-Enzyme Control —   Batch 1: aspirate 75.0 uL from hole_10; dispense 25.0 uL to ['D3', 'D7', 'E11'] (tip #41)
+2026-07-26T07:30:08.332058+00:00  [aspirate] Nitrocefin: No-Enzyme Control — aspirate 75.0 uL from coldblock_wellplate / well hole_10 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:30:18.058734+00:00  [dispense] Nitrocefin: No-Enzyme Control — dispense 25.0 uL into wellplate_96_flatbottom / well D3 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T07:30:23.129129+00:00  [nitrocefin_t0] Nitrocefin: No-Enzyme Control — nitrocefin_t0 condition=no_tem1_control well=D3 t0_utc=2026-07-26T07:30:23.090704+00:00 volume_ul=25.0
+2026-07-26T07:30:31.285991+00:00  [dispense] Nitrocefin: No-Enzyme Control — dispense 25.0 uL into wellplate_96_flatbottom / well D7 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T07:30:36.461714+00:00  [nitrocefin_t0] Nitrocefin: No-Enzyme Control — nitrocefin_t0 condition=no_tem1_control well=D7 t0_utc=2026-07-26T07:30:36.417931+00:00 volume_ul=25.0
+2026-07-26T07:30:44.716555+00:00  [dispense] Nitrocefin: No-Enzyme Control — dispense 25.0 uL into wellplate_96_flatbottom / well E11 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T07:30:49.811534+00:00  [nitrocefin_t0] Nitrocefin: No-Enzyme Control — nitrocefin_t0 condition=no_tem1_control well=E11 t0_utc=2026-07-26T07:30:49.773647+00:00 volume_ul=25.0
+2026-07-26T07:30:49.829778+00:00  [step_start] Nitrocefin: No-Enzyme Control
+2026-07-26T07:30:55.631525+00:00  [event] Nitrocefin: No-Enzyme Control — ✓ Batched dispense from hole_10 complete: 3 wells, 1 aspirate batch(es), 3 dispense(s), 1 tip(s)
+2026-07-26T07:30:57.012840+00:00  [step_start] Nitrocefin: Positive Control
+2026-07-26T07:30:58.296674+00:00  [event] Nitrocefin: Positive Control — ▶ Batched dispense hole_10 (coldblock_wellplate) → wellplate_96_flatbottom: 3 wells @ 25.0 uL using epipette_120ul (4 well(s) per aspiration)
+2026-07-26T07:30:59.767162+00:00  [step_start] Nitrocefin: Positive Control
+2026-07-26T07:31:13.699387+00:00  [transfer] Nitrocefin: Positive Control —   Batch 1: aspirate 75.0 uL from hole_10; dispense 25.0 uL to ['F3', 'F7', 'G11'] (tip #42)
+2026-07-26T07:31:26.593163+00:00  [aspirate] Nitrocefin: Positive Control — aspirate 75.0 uL from coldblock_wellplate / well hole_10 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:31:36.384145+00:00  [dispense] Nitrocefin: Positive Control — dispense 25.0 uL into wellplate_96_flatbottom / well F3 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T07:31:41.513182+00:00  [nitrocefin_t0] Nitrocefin: Positive Control — nitrocefin_t0 condition=positive_control well=F3 t0_utc=2026-07-26T07:31:41.496716+00:00 volume_ul=25.0
+2026-07-26T07:31:49.932520+00:00  [dispense] Nitrocefin: Positive Control — dispense 25.0 uL into wellplate_96_flatbottom / well F7 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T07:31:55.018805+00:00  [nitrocefin_t0] Nitrocefin: Positive Control — nitrocefin_t0 condition=positive_control well=F7 t0_utc=2026-07-26T07:31:55.007242+00:00 volume_ul=25.0
+2026-07-26T07:32:02.903245+00:00  [dispense] Nitrocefin: Positive Control — dispense 25.0 uL into wellplate_96_flatbottom / well G11 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T07:32:08.050009+00:00  [nitrocefin_t0] Nitrocefin: Positive Control — nitrocefin_t0 condition=positive_control well=G11 t0_utc=2026-07-26T07:32:08.037043+00:00 volume_ul=25.0
+2026-07-26T07:32:08.059983+00:00  [step_start] Nitrocefin: Positive Control
+2026-07-26T07:32:13.833893+00:00  [event] Nitrocefin: Positive Control — ✓ Batched dispense from hole_10 complete: 3 wells, 1 aspirate batch(es), 3 dispense(s), 1 tip(s)
+2026-07-26T07:32:15.116043+00:00  [step_start] Nitrocefin: Compound 1
+2026-07-26T07:32:16.423821+00:00  [event] Nitrocefin: Compound 1 — ▶ Batched dispense hole_10 (coldblock_wellplate) → wellplate_96_flatbottom: 3 wells @ 25.0 uL using epipette_120ul (4 well(s) per aspiration)
+2026-07-26T07:32:17.911138+00:00  [step_start] Nitrocefin: Compound 1
+2026-07-26T07:32:31.630220+00:00  [transfer] Nitrocefin: Compound 1 —   Batch 1: aspirate 75.0 uL from hole_10; dispense 25.0 uL to ['B2', 'D2', 'F2'] (tip #43)
+2026-07-26T07:32:44.951642+00:00  [aspirate] Nitrocefin: Compound 1 — aspirate 75.0 uL from coldblock_wellplate / well hole_10 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:32:54.804756+00:00  [dispense] Nitrocefin: Compound 1 — dispense 25.0 uL into wellplate_96_flatbottom / well B2 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T07:32:59.876761+00:00  [nitrocefin_t0] Nitrocefin: Compound 1 — nitrocefin_t0 condition=compound_1 well=B2 t0_utc=2026-07-26T07:32:59.862661+00:00 volume_ul=25.0
+2026-07-26T07:33:08.212201+00:00  [dispense] Nitrocefin: Compound 1 — dispense 25.0 uL into wellplate_96_flatbottom / well D2 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T07:33:13.324394+00:00  [nitrocefin_t0] Nitrocefin: Compound 1 — nitrocefin_t0 condition=compound_1 well=D2 t0_utc=2026-07-26T07:33:13.311942+00:00 volume_ul=25.0
+2026-07-26T07:33:21.735523+00:00  [dispense] Nitrocefin: Compound 1 — dispense 25.0 uL into wellplate_96_flatbottom / well F2 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T07:33:26.858164+00:00  [nitrocefin_t0] Nitrocefin: Compound 1 — nitrocefin_t0 condition=compound_1 well=F2 t0_utc=2026-07-26T07:33:26.834388+00:00 volume_ul=25.0
+2026-07-26T07:33:26.868112+00:00  [step_start] Nitrocefin: Compound 1
+2026-07-26T07:33:33.140962+00:00  [event] Nitrocefin: Compound 1 — ✓ Batched dispense from hole_10 complete: 3 wells, 1 aspirate batch(es), 3 dispense(s), 1 tip(s)
+2026-07-26T07:33:34.438455+00:00  [step_start] Nitrocefin: Compound 2
+2026-07-26T07:33:35.928615+00:00  [event] Nitrocefin: Compound 2 — ▶ Batched dispense hole_10 (coldblock_wellplate) → wellplate_96_flatbottom: 3 wells @ 25.0 uL using epipette_120ul (4 well(s) per aspiration)
+2026-07-26T07:33:37.111044+00:00  [step_start] Nitrocefin: Compound 2
+2026-07-26T07:33:51.119335+00:00  [transfer] Nitrocefin: Compound 2 —   Batch 1: aspirate 75.0 uL from hole_10; dispense 25.0 uL to ['B4', 'D4', 'F4'] (tip #44)
+2026-07-26T07:34:04.030355+00:00  [aspirate] Nitrocefin: Compound 2 — aspirate 75.0 uL from coldblock_wellplate / well hole_10 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:34:13.756477+00:00  [dispense] Nitrocefin: Compound 2 — dispense 25.0 uL into wellplate_96_flatbottom / well B4 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T07:34:18.839560+00:00  [nitrocefin_t0] Nitrocefin: Compound 2 — nitrocefin_t0 condition=compound_2 well=B4 t0_utc=2026-07-26T07:34:18.823991+00:00 volume_ul=25.0
+2026-07-26T07:34:27.048093+00:00  [dispense] Nitrocefin: Compound 2 — dispense 25.0 uL into wellplate_96_flatbottom / well D4 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T07:34:32.151121+00:00  [nitrocefin_t0] Nitrocefin: Compound 2 — nitrocefin_t0 condition=compound_2 well=D4 t0_utc=2026-07-26T07:34:32.130259+00:00 volume_ul=25.0
+2026-07-26T07:34:40.737163+00:00  [dispense] Nitrocefin: Compound 2 — dispense 25.0 uL into wellplate_96_flatbottom / well F4 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T07:34:45.890581+00:00  [nitrocefin_t0] Nitrocefin: Compound 2 — nitrocefin_t0 condition=compound_2 well=F4 t0_utc=2026-07-26T07:34:45.871223+00:00 volume_ul=25.0
+2026-07-26T07:34:45.911964+00:00  [step_start] Nitrocefin: Compound 2
+2026-07-26T07:34:52.079156+00:00  [event] Nitrocefin: Compound 2 — ✓ Batched dispense from hole_10 complete: 3 wells, 1 aspirate batch(es), 3 dispense(s), 1 tip(s)
+2026-07-26T07:34:53.419252+00:00  [step_start] Nitrocefin: Compound 3
+2026-07-26T07:34:54.795899+00:00  [event] Nitrocefin: Compound 3 — ▶ Batched dispense hole_10 (coldblock_wellplate) → wellplate_96_flatbottom: 3 wells @ 25.0 uL using epipette_120ul (4 well(s) per aspiration)
+2026-07-26T07:34:56.257523+00:00  [step_start] Nitrocefin: Compound 3
+2026-07-26T07:35:10.038807+00:00  [transfer] Nitrocefin: Compound 3 —   Batch 1: aspirate 75.0 uL from hole_10; dispense 25.0 uL to ['B6', 'D6', 'F6'] (tip #45)
+2026-07-26T07:35:23.179503+00:00  [aspirate] Nitrocefin: Compound 3 — aspirate 75.0 uL from coldblock_wellplate / well hole_10 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:35:32.989223+00:00  [dispense] Nitrocefin: Compound 3 — dispense 25.0 uL into wellplate_96_flatbottom / well B6 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T07:35:38.110640+00:00  [nitrocefin_t0] Nitrocefin: Compound 3 — nitrocefin_t0 condition=compound_3 well=B6 t0_utc=2026-07-26T07:35:38.095289+00:00 volume_ul=25.0
+2026-07-26T07:35:46.430885+00:00  [dispense] Nitrocefin: Compound 3 — dispense 25.0 uL into wellplate_96_flatbottom / well D6 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T07:35:51.573260+00:00  [nitrocefin_t0] Nitrocefin: Compound 3 — nitrocefin_t0 condition=compound_3 well=D6 t0_utc=2026-07-26T07:35:51.559611+00:00 volume_ul=25.0
+2026-07-26T07:35:59.716713+00:00  [dispense] Nitrocefin: Compound 3 — dispense 25.0 uL into wellplate_96_flatbottom / well F6 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T07:36:04.834476+00:00  [nitrocefin_t0] Nitrocefin: Compound 3 — nitrocefin_t0 condition=compound_3 well=F6 t0_utc=2026-07-26T07:36:04.813189+00:00 volume_ul=25.0
+2026-07-26T07:36:04.845565+00:00  [step_start] Nitrocefin: Compound 3
+2026-07-26T07:36:10.908796+00:00  [event] Nitrocefin: Compound 3 — ✓ Batched dispense from hole_10 complete: 3 wells, 1 aspirate batch(es), 3 dispense(s), 1 tip(s)
+2026-07-26T07:36:12.281071+00:00  [step_start] Nitrocefin: Compound 4
+2026-07-26T07:36:13.621826+00:00  [event] Nitrocefin: Compound 4 — ▶ Batched dispense hole_10 (coldblock_wellplate) → wellplate_96_flatbottom: 3 wells @ 25.0 uL using epipette_120ul (4 well(s) per aspiration)
+2026-07-26T07:36:15.284131+00:00  [step_start] Nitrocefin: Compound 4
+2026-07-26T07:36:29.024290+00:00  [transfer] Nitrocefin: Compound 4 —   Batch 1: aspirate 75.0 uL from hole_10; dispense 25.0 uL to ['B8', 'D8', 'F8'] (tip #46)
+2026-07-26T07:36:42.350096+00:00  [aspirate] Nitrocefin: Compound 4 — aspirate 75.0 uL from coldblock_wellplate / well hole_10 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:36:52.228391+00:00  [dispense] Nitrocefin: Compound 4 — dispense 25.0 uL into wellplate_96_flatbottom / well B8 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T07:36:57.411992+00:00  [nitrocefin_t0] Nitrocefin: Compound 4 — nitrocefin_t0 condition=compound_4 well=B8 t0_utc=2026-07-26T07:36:57.381063+00:00 volume_ul=25.0
+2026-07-26T07:37:05.405471+00:00  [dispense] Nitrocefin: Compound 4 — dispense 25.0 uL into wellplate_96_flatbottom / well D8 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T07:37:10.572521+00:00  [nitrocefin_t0] Nitrocefin: Compound 4 — nitrocefin_t0 condition=compound_4 well=D8 t0_utc=2026-07-26T07:37:10.559903+00:00 volume_ul=25.0
+2026-07-26T07:37:18.626416+00:00  [dispense] Nitrocefin: Compound 4 — dispense 25.0 uL into wellplate_96_flatbottom / well F8 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T07:37:23.821567+00:00  [nitrocefin_t0] Nitrocefin: Compound 4 — nitrocefin_t0 condition=compound_4 well=F8 t0_utc=2026-07-26T07:37:23.807910+00:00 volume_ul=25.0
+2026-07-26T07:37:23.840113+00:00  [step_start] Nitrocefin: Compound 4
+2026-07-26T07:37:29.792571+00:00  [event] Nitrocefin: Compound 4 — ✓ Batched dispense from hole_10 complete: 3 wells, 1 aspirate batch(es), 3 dispense(s), 1 tip(s)
+2026-07-26T07:37:31.155992+00:00  [step_start] Nitrocefin: Compound 5
+2026-07-26T07:37:32.871660+00:00  [event] Nitrocefin: Compound 5 — ▶ Batched dispense hole_10 (coldblock_wellplate) → wellplate_96_flatbottom: 3 wells @ 25.0 uL using epipette_120ul (4 well(s) per aspiration)
+2026-07-26T07:37:34.311988+00:00  [step_start] Nitrocefin: Compound 5
+2026-07-26T07:37:48.196952+00:00  [transfer] Nitrocefin: Compound 5 —   Batch 1: aspirate 75.0 uL from hole_10; dispense 25.0 uL to ['B10', 'D10', 'F10'] (tip #47)
+2026-07-26T07:38:01.265525+00:00  [aspirate] Nitrocefin: Compound 5 — aspirate 75.0 uL from coldblock_wellplate / well hole_10 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:38:11.044399+00:00  [dispense] Nitrocefin: Compound 5 — dispense 25.0 uL into wellplate_96_flatbottom / well B10 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T07:38:16.173690+00:00  [nitrocefin_t0] Nitrocefin: Compound 5 — nitrocefin_t0 condition=compound_5 well=B10 t0_utc=2026-07-26T07:38:16.159895+00:00 volume_ul=25.0
+2026-07-26T07:38:24.123148+00:00  [dispense] Nitrocefin: Compound 5 — dispense 25.0 uL into wellplate_96_flatbottom / well D10 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T07:38:29.236937+00:00  [nitrocefin_t0] Nitrocefin: Compound 5 — nitrocefin_t0 condition=compound_5 well=D10 t0_utc=2026-07-26T07:38:29.209614+00:00 volume_ul=25.0
+2026-07-26T07:38:37.342924+00:00  [dispense] Nitrocefin: Compound 5 — dispense 25.0 uL into wellplate_96_flatbottom / well F10 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T07:38:42.444450+00:00  [nitrocefin_t0] Nitrocefin: Compound 5 — nitrocefin_t0 condition=compound_5 well=F10 t0_utc=2026-07-26T07:38:42.430960+00:00 volume_ul=25.0
+2026-07-26T07:38:42.454702+00:00  [step_start] Nitrocefin: Compound 5
+2026-07-26T07:38:48.298619+00:00  [event] Nitrocefin: Compound 5 — ✓ Batched dispense from hole_10 complete: 3 wells, 1 aspirate batch(es), 3 dispense(s), 1 tip(s)
+2026-07-26T07:38:49.555463+00:00  [step_start] Nitrocefin: Compound 6
+2026-07-26T07:38:50.787278+00:00  [event] Nitrocefin: Compound 6 — ▶ Batched dispense hole_10 (coldblock_wellplate) → wellplate_96_flatbottom: 3 wells @ 25.0 uL using epipette_120ul (4 well(s) per aspiration)
+2026-07-26T07:38:52.229143+00:00  [step_start] Nitrocefin: Compound 6
+2026-07-26T07:39:05.952016+00:00  [transfer] Nitrocefin: Compound 6 —   Batch 1: aspirate 75.0 uL from hole_10; dispense 25.0 uL to ['C5', 'E5', 'G5'] (tip #48)
+2026-07-26T07:39:18.967281+00:00  [aspirate] Nitrocefin: Compound 6 — aspirate 75.0 uL from coldblock_wellplate / well hole_10 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:39:28.807019+00:00  [dispense] Nitrocefin: Compound 6 — dispense 25.0 uL into wellplate_96_flatbottom / well C5 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T07:39:33.943920+00:00  [nitrocefin_t0] Nitrocefin: Compound 6 — nitrocefin_t0 condition=compound_6 well=C5 t0_utc=2026-07-26T07:39:33.926860+00:00 volume_ul=25.0
+2026-07-26T07:39:42.611439+00:00  [dispense] Nitrocefin: Compound 6 — dispense 25.0 uL into wellplate_96_flatbottom / well E5 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T07:39:47.794615+00:00  [nitrocefin_t0] Nitrocefin: Compound 6 — nitrocefin_t0 condition=compound_6 well=E5 t0_utc=2026-07-26T07:39:47.777057+00:00 volume_ul=25.0
+2026-07-26T07:39:56.034117+00:00  [dispense] Nitrocefin: Compound 6 — dispense 25.0 uL into wellplate_96_flatbottom / well G5 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T07:40:01.148511+00:00  [nitrocefin_t0] Nitrocefin: Compound 6 — nitrocefin_t0 condition=compound_6 well=G5 t0_utc=2026-07-26T07:40:01.129889+00:00 volume_ul=25.0
+2026-07-26T07:40:01.158802+00:00  [step_start] Nitrocefin: Compound 6
+2026-07-26T07:40:07.249852+00:00  [event] Nitrocefin: Compound 6 — ✓ Batched dispense from hole_10 complete: 3 wells, 1 aspirate batch(es), 3 dispense(s), 1 tip(s)
+2026-07-26T07:40:08.588408+00:00  [step_start] Nitrocefin: Compound 7
+2026-07-26T07:40:09.839552+00:00  [event] Nitrocefin: Compound 7 — ▶ Batched dispense hole_10 (coldblock_wellplate) → wellplate_96_flatbottom: 3 wells @ 25.0 uL using epipette_120ul (4 well(s) per aspiration)
+2026-07-26T07:40:11.441103+00:00  [step_start] Nitrocefin: Compound 7
+2026-07-26T07:40:25.691909+00:00  [transfer] Nitrocefin: Compound 7 —   Batch 1: aspirate 75.0 uL from hole_10; dispense 25.0 uL to ['C9', 'E9', 'G9'] (tip #49)
+2026-07-26T07:40:38.980513+00:00  [aspirate] Nitrocefin: Compound 7 — aspirate 75.0 uL from coldblock_wellplate / well hole_10 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:40:48.604695+00:00  [dispense] Nitrocefin: Compound 7 — dispense 25.0 uL into wellplate_96_flatbottom / well C9 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T07:40:53.796043+00:00  [nitrocefin_t0] Nitrocefin: Compound 7 — nitrocefin_t0 condition=compound_7 well=C9 t0_utc=2026-07-26T07:40:53.754478+00:00 volume_ul=25.0
+2026-07-26T07:41:01.786637+00:00  [dispense] Nitrocefin: Compound 7 — dispense 25.0 uL into wellplate_96_flatbottom / well E9 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T07:41:06.979146+00:00  [nitrocefin_t0] Nitrocefin: Compound 7 — nitrocefin_t0 condition=compound_7 well=E9 t0_utc=2026-07-26T07:41:06.948805+00:00 volume_ul=25.0
+2026-07-26T07:41:14.933194+00:00  [dispense] Nitrocefin: Compound 7 — dispense 25.0 uL into wellplate_96_flatbottom / well G9 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T07:41:20.063594+00:00  [nitrocefin_t0] Nitrocefin: Compound 7 — nitrocefin_t0 condition=compound_7 well=G9 t0_utc=2026-07-26T07:41:20.044863+00:00 volume_ul=25.0
+2026-07-26T07:41:20.073847+00:00  [step_start] Nitrocefin: Compound 7
+2026-07-26T07:41:25.973386+00:00  [event] Nitrocefin: Compound 7 — ✓ Batched dispense from hole_10 complete: 3 wells, 1 aspirate batch(es), 3 dispense(s), 1 tip(s)
+2026-07-26T07:41:27.241581+00:00  [step_start] Nitrocefin: Compound 8
+2026-07-26T07:41:28.787843+00:00  [event] Nitrocefin: Compound 8 — ▶ Batched dispense hole_10 (coldblock_wellplate) → wellplate_96_flatbottom: 3 wells @ 25.0 uL using epipette_120ul (4 well(s) per aspiration)
+2026-07-26T07:41:29.972384+00:00  [step_start] Nitrocefin: Compound 8
+2026-07-26T07:41:44.625489+00:00  [transfer] Nitrocefin: Compound 8 —   Batch 1: aspirate 75.0 uL from hole_10; dispense 25.0 uL to ['C3', 'E3', 'G3'] (tip #50)
+2026-07-26T07:41:57.724256+00:00  [aspirate] Nitrocefin: Compound 8 — aspirate 75.0 uL from coldblock_wellplate / well hole_10 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:42:07.515826+00:00  [dispense] Nitrocefin: Compound 8 — dispense 25.0 uL into wellplate_96_flatbottom / well C3 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T07:42:12.624008+00:00  [nitrocefin_t0] Nitrocefin: Compound 8 — nitrocefin_t0 condition=compound_8 well=C3 t0_utc=2026-07-26T07:42:12.585715+00:00 volume_ul=25.0
+2026-07-26T07:42:21.089749+00:00  [dispense] Nitrocefin: Compound 8 — dispense 25.0 uL into wellplate_96_flatbottom / well E3 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T07:42:26.217057+00:00  [nitrocefin_t0] Nitrocefin: Compound 8 — nitrocefin_t0 condition=compound_8 well=E3 t0_utc=2026-07-26T07:42:26.198195+00:00 volume_ul=25.0
+2026-07-26T07:42:34.807412+00:00  [dispense] Nitrocefin: Compound 8 — dispense 25.0 uL into wellplate_96_flatbottom / well G3 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T07:42:39.945642+00:00  [nitrocefin_t0] Nitrocefin: Compound 8 — nitrocefin_t0 condition=compound_8 well=G3 t0_utc=2026-07-26T07:42:39.909463+00:00 volume_ul=25.0
+2026-07-26T07:42:39.956128+00:00  [step_start] Nitrocefin: Compound 8
+2026-07-26T07:42:46.165121+00:00  [event] Nitrocefin: Compound 8 — ✓ Batched dispense from hole_10 complete: 3 wells, 1 aspirate batch(es), 3 dispense(s), 1 tip(s)
+2026-07-26T07:42:47.519249+00:00  [step_start] Nitrocefin: Compound 9
+2026-07-26T07:42:48.773102+00:00  [event] Nitrocefin: Compound 9 — ▶ Batched dispense hole_10 (coldblock_wellplate) → wellplate_96_flatbottom: 3 wells @ 25.0 uL using epipette_120ul (4 well(s) per aspiration)
+2026-07-26T07:42:50.324860+00:00  [step_start] Nitrocefin: Compound 9
+2026-07-26T07:43:04.490831+00:00  [transfer] Nitrocefin: Compound 9 —   Batch 1: aspirate 75.0 uL from hole_10; dispense 25.0 uL to ['C7', 'E7', 'G7'] (tip #51)
+2026-07-26T07:43:17.479909+00:00  [aspirate] Nitrocefin: Compound 9 — aspirate 75.0 uL from coldblock_wellplate / well hole_10 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:43:27.244188+00:00  [dispense] Nitrocefin: Compound 9 — dispense 25.0 uL into wellplate_96_flatbottom / well C7 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T07:43:32.312048+00:00  [nitrocefin_t0] Nitrocefin: Compound 9 — nitrocefin_t0 condition=compound_9 well=C7 t0_utc=2026-07-26T07:43:32.292230+00:00 volume_ul=25.0
+2026-07-26T07:43:40.682971+00:00  [dispense] Nitrocefin: Compound 9 — dispense 25.0 uL into wellplate_96_flatbottom / well E7 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T07:43:45.806396+00:00  [nitrocefin_t0] Nitrocefin: Compound 9 — nitrocefin_t0 condition=compound_9 well=E7 t0_utc=2026-07-26T07:43:45.789948+00:00 volume_ul=25.0
+2026-07-26T07:43:53.865419+00:00  [dispense] Nitrocefin: Compound 9 — dispense 25.0 uL into wellplate_96_flatbottom / well G7 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T07:43:58.936351+00:00  [nitrocefin_t0] Nitrocefin: Compound 9 — nitrocefin_t0 condition=compound_9 well=G7 t0_utc=2026-07-26T07:43:58.908577+00:00 volume_ul=25.0
+2026-07-26T07:43:58.967665+00:00  [step_start] Nitrocefin: Compound 9
+2026-07-26T07:44:04.952112+00:00  [event] Nitrocefin: Compound 9 — ✓ Batched dispense from hole_10 complete: 3 wells, 1 aspirate batch(es), 3 dispense(s), 1 tip(s)
+2026-07-26T07:44:06.231945+00:00  [step_start] Nitrocefin: Vehicle Control
+2026-07-26T07:44:07.558349+00:00  [event] Nitrocefin: Vehicle Control — ▶ Batched dispense hole_10 (coldblock_wellplate) → wellplate_96_flatbottom: 3 wells @ 25.0 uL using epipette_120ul (4 well(s) per aspiration)
+2026-07-26T07:44:09.002116+00:00  [step_start] Nitrocefin: Vehicle Control
+2026-07-26T07:44:23.042110+00:00  [transfer] Nitrocefin: Vehicle Control —   Batch 1: aspirate 75.0 uL from hole_10; dispense 25.0 uL to ['B3', 'B7', 'C11'] (tip #52)
+2026-07-26T07:44:36.283609+00:00  [aspirate] Nitrocefin: Vehicle Control — aspirate 75.0 uL from coldblock_wellplate / well hole_10 (pipette epipette_120ul, speed 5.0, cal (-0.007,0.003))
+2026-07-26T07:44:46.116941+00:00  [dispense] Nitrocefin: Vehicle Control — dispense 25.0 uL into wellplate_96_flatbottom / well B3 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T07:44:51.305856+00:00  [nitrocefin_t0] Nitrocefin: Vehicle Control — nitrocefin_t0 condition=vehicle_tem1_control well=B3 t0_utc=2026-07-26T07:44:51.262503+00:00 volume_ul=25.0
+2026-07-26T07:44:59.580654+00:00  [dispense] Nitrocefin: Vehicle Control — dispense 25.0 uL into wellplate_96_flatbottom / well B7 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T07:45:04.770042+00:00  [nitrocefin_t0] Nitrocefin: Vehicle Control — nitrocefin_t0 condition=vehicle_tem1_control well=B7 t0_utc=2026-07-26T07:45:04.752216+00:00 volume_ul=25.0
+2026-07-26T07:45:12.687891+00:00  [dispense] Nitrocefin: Vehicle Control — dispense 25.0 uL into wellplate_96_flatbottom / well C11 (pipette epipette_120ul, speed 5.0, cal (-0.0065,0.004))
+2026-07-26T07:45:17.751344+00:00  [nitrocefin_t0] Nitrocefin: Vehicle Control — nitrocefin_t0 condition=vehicle_tem1_control well=C11 t0_utc=2026-07-26T07:45:17.719772+00:00 volume_ul=25.0
+2026-07-26T07:45:17.761424+00:00  [step_start] Nitrocefin: Vehicle Control
+2026-07-26T07:45:23.603791+00:00  [event] Nitrocefin: Vehicle Control — ✓ Batched dispense from hole_10 complete: 3 wells, 1 aspirate batch(es), 3 dispense(s), 1 tip(s)
+2026-07-26T07:45:24.722086+00:00  [step_start] Place Pipette Back
+2026-07-26T07:45:26.690281+00:00  [event] Place Pipette Back — ▶ Returning epipette_120ul to its stand
+2026-07-26T07:45:26.706272+00:00  [step_start] Place Pipette Back

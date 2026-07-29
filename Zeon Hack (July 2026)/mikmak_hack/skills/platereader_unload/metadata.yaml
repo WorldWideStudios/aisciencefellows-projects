@@ -1,0 +1,19 @@
+skill_id: platereader_unload
+version: "1.0.0"
+description: "Right arm picks a well plate out of the plate reader at the unload_plate anchor (the settled pose platereader_load leaves it at): models the lid open, wellplate_grab-style descent (pre-open 4.5 cm, clamp 2.8 cm) onto the grab pose, asserts the canonical grip on grasp_longside_platereader and attaches, lifts out and stows. Reverse of platereader_load."
+
+# parameters are derived from the platereader_unload() signature in robotic_code.py
+
+preconditions:
+  platereader_lid_open: true
+  plate_loaded: true
+
+postconditions:
+  plate_loaded: false
+
+tags:
+  - plate_reader
+  - unload
+  - plate
+  - pick
+  - right_arm

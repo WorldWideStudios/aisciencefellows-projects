@@ -1,0 +1,8 @@
+skill_id: verify_get_arm_pose
+version: "1.0.0"
+description: "Diagnostic only: calls get_arm_pose() for both arms and logs the result, to confirm the function exists and works. Read-only, does not move anything. Delete once confirmed."
+
+# parameters are derived from the verify_get_arm_pose() signature in robotic_code.py
+
+tags:
+  - diagnostic

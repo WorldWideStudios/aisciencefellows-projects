@@ -1,0 +1,15 @@
+# Skill: snap_plate_to_holder
+skill_id: snap_plate_to_holder
+version: "1.0.0"
+description: "Snap a plate into a holder by aligning one plate anchor to one holder seat anchor."
+
+# parameters are derived from the snap_plate_to_holder() signature in robotic_code.py
+
+preconditions: {}
+postconditions: {}
+
+tags:
+  - setup
+  - plate
+  - holder
+  - snap

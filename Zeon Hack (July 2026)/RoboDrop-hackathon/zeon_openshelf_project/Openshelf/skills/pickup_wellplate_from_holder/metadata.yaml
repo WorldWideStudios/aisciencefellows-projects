@@ -1,0 +1,29 @@
+# Skill: pickup_wellplate_from_holder
+skill_id: pickup_wellplate_from_holder
+version: "1.9.0"
+description: "Pick a PCR wellplate from its exposed edge with the right arm and stage it level for horizontal OpenShelf insertion."
+
+preconditions:
+  wellplate_seated_in_holder: true
+postconditions:
+  wellplate_staged_on_right_arm: true
+
+high_risk: true
+
+safety_rules:
+  - "Commands the right arm and gripper; validate the complete pickup and staging path in simulation before hardware use."
+  - "Requires wellplate_pcr.nest_base to be seated at wellplate_holder_tags.plate_nest before execution."
+  - "Keep the wellplate's complete world orientation unchanged from grasp through staging."
+  - "The roll-flipped right-side grasp and matching staging TCP must remain paired with the calibrated snap_example geometry."
+  - "The skill aborts before motion if the pickup and staging quaternions would rotate the plate."
+  - "Collision planning must remain enabled for the wellplate, holder, tables, and OpenShelf."
+  - "If execution fails after grasping, stop and inspect before opening the gripper."
+  - "The skill intentionally finishes with the plate attached to the right arm and its gripper closed."
+
+tags:
+  - wellplate
+  - holder
+  - right-arm
+  - level-transport
+  - pickup
+  - physical-motion

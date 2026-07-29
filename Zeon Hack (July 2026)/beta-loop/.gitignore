@@ -1,0 +1,21 @@
+.venv/
+.env
+__pycache__/
+*.pyc
+.DS_Store
+
+# Philip local workspace — summaries live in data/compound_dossiers.json
+pvjthomas/local/*
+!pvjthomas/local/README.md
+
+# Large structure/docking artifacts (regenerate locally)
+data/assets/
+*.pdbqt
+*.mol2
+
+# Optional: keep full kinetics local by default (push run_*_summary.json instead)
+pvjthomas/local/kinetics/
+
+# Cursor skills — installed locally (K-Dense / scientific-agent-skills); not vendored in repo
+.cursor/skills/
+

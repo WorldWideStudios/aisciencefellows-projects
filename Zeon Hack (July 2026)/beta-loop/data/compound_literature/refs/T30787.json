@@ -1,0 +1,63 @@
+{
+  "compound_id": "T30787",
+  "name": "Cefetamet sodium",
+  "match": "yes",
+  "support": "weak",
+  "entries": [
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Cefetamet sodium. Map complete: 5/5 tasks succeeded in 1737ms\nResults ID: m_c51bbd89\nFull results: /.gxl/map_m_c51bbd89.txt\n\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided paper content, there is no mention of \"Cefetamet sodium\", \"nitrocefin colorimetric assay\", \"Ki\", \"IC50\", or enzymatic inhibition\n  [success] Studies at the Ionizable Position of Cephalosporins and Penicillins: H  (PMC5329033)\n    The provided paper does not contain information regarding Cefetamet sodium, TEM-1 beta-lactamase, Ki, IC50, or nitrocefin colorimetric assays.\n  [success] In Silico Study of the Potential of Brazilein Sappan Wood as a Beta-La  (PMC11229569)\n    Based on the provided paper content, there is no information regarding Cefetamet sodium, nitrocefin colorimetric assays, $K_i$, $IC_{50}$ values, inhi\n  [success] Novel Cephalosporin\nConjugates Display Potent and\nSelective Inhibition  (PMC8273888)\n    Based on the provided paper content, there is no mention of \"Cefetamet sodium\" or \"TEM-1 beta-lactamase\". The paper focuses on cephalosporin conjugate\n  [success] Classification and applicability of new beta-lactamase inhibitors  (PMC12584905)\n    The provided paper does not contain information regarding Cefetamet sodium, TEM-1 beta-lactamase, or nitrocefin colorimetric assay data (such as Ki, I\n\nFull results: /.gxl/map_m_c51bbd89.txt",
+      "paperclip_search_id": "s_95581c6c",
+      "paperclip_map_id": "m_c51bbd89",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "pmcid": "PMC12484619"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Cefetamet sodium. Map complete: 30/30 tasks succeeded in 8971ms\nResults ID: m_7cf161c4\nFull results: /.gxl/map_m_7cf161c4.txt\n\n  [success] Saturation Mutagenesis and Molecular Modeling: The Impact of Methionin  (PMC11276661)\n    Based on the provided paper content, there is no mention of Cefetamet sodium, nitrocefin colorimetric assays, inhibition constants ($K_i$ or $\\text{IC\n  [success] A drug-resistant \u03b2-lactamase variant changes the conformation of its a  (PMC11843585)\n    The provided research paper does not contain information regarding Cefetamet sodium, its interaction with TEM-1 beta-lactamase, or any associated assa\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided paper content, there is no mention of Cefetamet sodium, nitrocefin colorimetric assays, $K_i$ or $IC_{50}$ values, enzyme/substr\n  [success] Kinetic and Structural Requirements for Carbapenemase\nActivity in GES-  (PMC4303295)\n    Based on the provided paper content, there is no information regarding \"Cefetamet sodium,\" \"TEM-1 beta-lactamase,\" or a \"nitrocefin colorimetric assay\n  [success] Molecular Basis for the Catalytic Specificity of the\nCTX-M Extended-Sp  (PMC4303298)\n    Based on the provided research paper, there is no mention of \"Cefetamet sodium\", \"TEM-1 beta-lactamase\" in the context of this compound, or its corres\n  [success] In Silico Study of the Potential of Brazilein Sappan Wood as a Beta-La  (PMC11229569)\n    Based on the provided pape",
+      "paperclip_search_id": "s_77ced26c",
+      "paperclip_map_id": "m_7cf161c4",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "pmcid": "PMC11276661",
+      "paperclip_source": "pmc"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Cefetamet sodium. Map complete: 25/25 tasks succeeded in 4035ms\nResults ID: m_ea6b7e8c\nFull results: /.gxl/map_m_ea6b7e8c.txt\n\n  [success] Distant Site Mutations in Clinical TEM Beta-Lactamase Variants Enhance  (bio_33da24cd7504)\n    Based on the provided paper content, there is no mention of Cefetamet sodium, nitrocefin colorimetric assays, $K_i$ or $IC_{50}$ values for Cefetamet \n  [success] Binding mode of isoxazolyl penicillins to a Class-A  \u03b2 -lactamase at a  (bio_a7f99ac77b0d)\n    Based on the provided paper content, there is no mention of \"Cefetamet sodium\", \"TEM-1 beta-lactamase\", \"nitrocefin colorimetric assay\", or any associ\n  [success] Cefdinir binding to a class-A  \u03b2 -lactamase revealed by serial cryo-cr  (bio_01a5a87c8117)\n    Based on the provided paper content, there is no mention of Cefetamet sodium, TEM-1 beta-lactamase, nitrocefin colorimetric assays, or associated inhi\n  [success] A new type of AmpC \u03b2-lactamases defined by PIB-1, a metal-dependent ca  (bio_9fef02c2845c)\n    Based on the provided research paper, there is no mention of Cefetamet sodium, TEM-1 beta-lactamase, its inhibition constants ($K_i$ or $IC_{50}$), en\n  [success] Sulbactam-mediated inhibition of TEM-1 \u03b2-lactamase increases specific   (bio_e76fe1d274e9)\n    Based on the provided paper content, there is no mention of Cefetamet sodium, nitrocefin colorimetric assays, Ki or IC50 values, enzyme concentrations\n  [success] Substitution of a valine to glutamic acid in the omega-like loop of MS  (bio_71f2617c6f35",
+      "paperclip_search_id": "s_a5f82dc5",
+      "paperclip_map_id": "m_ea6b7e8c",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "paperclip_source": "biorxiv"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Cefetamet sodium. Map complete: 10/10 tasks succeeded in 3589ms\nResults ID: m_f2835c90\nFull results: /.gxl/map_m_f2835c90.txt\n\n  [success] bla - Beta-lactamase TEM  (P62593)\n    Based on the provided paper content, there is no mention of Cefetamet sodium, nitrocefin colorimetric assays, $K_i$ or $IC_{50}$ values, enzyme concen\n  [success] bla - Beta-lactamase TEM  (P62594)\n    Based on the provided paper content, there is no information regarding Cefetamet sodium, nitrocefin colorimetric assays, inhibition values ($K_i$ or $\n  [success] blaT-12b - Beta-lactamase TEM-12  (Q48406)\n    Based on the provided paper content, there is no information regarding Cefetamet sodium, its interaction with TEM-1 beta-lactamase, nitrocefin colorim\n  [success] penPC - Beta-lactamase 1  (P10424)\n    Based on the provided paper content, there is no information regarding Cefetamet sodium, TEM-1 beta-lactamase, nitrocefin colorimetric assays, $K_i$ o\n  [success] blaY - Beta-lactamase 1  (P00809)\n    Based on the provided paper content, there is no mention of Cefetamet sodium, TEM-1 beta-lactamase, nitrocefin colorimetric assays, Ki, IC50 values, e\n  [success] blaCI - Beta-lactamase 1  (P28018)\n    Based on the provided paper content, there is no information regarding Cefetamet sodium, TEM-1 beta-lactamase, nitrocefin colorimetric assays, Ki, IC5\n  [success] blaL - Beta-lactamase 1  (Q03680)\n    Based on the provided paper content, there is no mention of Cefetamet sodium, TEM-1 beta-lactamase, nitrocefin colorimetri",
+      "paperclip_search_id": "s_025a137b",
+      "paperclip_map_id": "m_f2835c90",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "paperclip_source": "proteins"
+    }
+  ],
+  "raw_local": "/Users/fio/zeon_hack/pvjthomas/local/literature/T30787",
+  "assay_recommendations": {
+    "tem1_nitrocefin": {
+      "screen_conc_uM": 50,
+      "screen_rationale": "Project default screen concentration; no literature inhibitor concentration or IC50/Ki extracted.",
+      "screen_conc_source": "project_default",
+      "max_assay_conc_uM": 1000.0,
+      "metric": "relative nitrocefin hydrolysis vs no-inhibitor control"
+    }
+  }
+}

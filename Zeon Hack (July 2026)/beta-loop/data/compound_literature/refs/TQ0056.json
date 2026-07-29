@@ -1,0 +1,63 @@
+{
+  "compound_id": "TQ0056",
+  "name": "Cefuracetime",
+  "match": "yes",
+  "support": "weak",
+  "entries": [
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Cefuracetime. Map complete: 5/5 tasks succeeded in 1519ms\nResults ID: m_16903bf0\nFull results: /.gxl/map_m_16903bf0.txt\n\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Sorry, your request was blocked by the model provider's content filters. Please try rephrasing it and submitting it again.\n  [success] Characterization of Interactions between CTX-M-15 and Clavulanic Acid,  (PMC9100253)\n    Based on the provided paper content, there is no mention of \"Cefuracetime\", \"TEM-1 beta-lactamase\", or any related IC50/Ki values for that specific co\n  [success] In Silico Study of the Potential of Brazilein Sappan Wood as a Beta-La  (PMC11229569)\n    Based on the provided paper, there is no mention of Cefuracetime, a nitrocefin colorimetric assay, Ki/IC50 values, inhibitor concentrations, substrate\n  [success] Reversible inactivation of a peptidoglycan transpeptidase by a \u03b2-lacta  (PMC5567249)\n    Based on the provided research paper content, there is no mention of Cefuracetime, TEM-1 beta-lactamase, or their kinetic/inhibitory values (such as K\n  [success] Classification and applicability of new beta-lactamase inhibitors  (PMC12584905)\n    Based on the provided paper content, there is no mention of \"Cefuracetime\", \"TEM-1 beta-lactamase\", a \"nitrocefin colorimetric assay\", or specific $K_\n\nFull results: /.gxl/map_m_16903bf0.txt",
+      "paperclip_search_id": "s_04b25677",
+      "paperclip_map_id": "m_16903bf0",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "pmcid": "PMC12484619"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Cefuracetime. Map complete: 30/30 tasks succeeded in 7745ms\nResults ID: m_3c717d7d\nFull results: /.gxl/map_m_3c717d7d.txt\n\n  [success] Saturation Mutagenesis and Molecular Modeling: The Impact of Methionin  (PMC11276661)\n    Based on the provided paper, there is no mention of Cefuracetime, nor is there any data regarding a nitrocefin colorimetric assay, $K_i$, $IC_{50}$, o\n  [success] A drug-resistant \u03b2-lactamase variant changes the conformation of its a  (PMC11843585)\n    Based on the provided paper, there is no information regarding Cefuracetime or its interaction with TEM-1 beta-lactamase in a nitrocefin colorimetric \n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided paper content, there is no mention of \"Cefuracetime\", a nitrocefin colorimetric assay, IC50 or Ki values, enzyme/substrate conce\n  [success] Kinetic and Structural Requirements for Carbapenemase\nActivity in GES-  (PMC4303295)\n    Based on the provided paper content, there is no mention of Cefuracetime, TEM-1 beta-lactamase, or their associated assays, kinetic values, or PMIDs. \n  [success] Molecular Basis for the Catalytic Specificity of the\nCTX-M Extended-Sp  (PMC4303298)\n    Based on the provided research paper, there is no mention of \"Cefuracetime\", TEM-1 beta-lactamase assays with this compound, $K_i$, $IC_{50}$ values, \n  [success] In Silico Study of the Potential of Brazilein Sappan Wood as a Beta-La  (PMC11229569)\n    Based on the provided pape",
+      "paperclip_search_id": "s_830b4fb3",
+      "paperclip_map_id": "m_3c717d7d",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "pmcid": "PMC11276661",
+      "paperclip_source": "pmc"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Cefuracetime. Map complete: 23/23 tasks succeeded in 4032ms\nResults ID: m_08fab7cb\nFull results: /.gxl/map_m_08fab7cb.txt\n\n  [success] Distant Site Mutations in Clinical TEM Beta-Lactamase Variants Enhance  (bio_33da24cd7504)\n    Based on the provided paper, there is no mention of \"Cefuracetime,\" a nitrocefin colorimetric assay, IC50/Ki values, or related enzyme/substrate conce\n  [success] Binding mode of isoxazolyl penicillins to a Class-A  \u03b2 -lactamase at a  (bio_a7f99ac77b0d)\n    Based on the provided paper content, there is no mention of Cefuracetime, TEM-1 beta-lactamase, a nitrocefin colorimetric assay, or associated inhibit\n  [success] A new type of AmpC \u03b2-lactamases defined by PIB-1, a metal-dependent ca  (bio_9fef02c2845c)\n    Based on the provided research paper, there is no mention of \"Cefuracetime\" or \"TEM-1 beta-lactamase\". The paper focuses exclusively on the *Pseudomon\n  [success] Cefdinir binding to a class-A  \u03b2 -lactamase revealed by serial cryo-cr  (bio_01a5a87c8117)\n    Based on the provided paper content, there is no information regarding Cefuracetime, TEM-1 beta-lactamase, nitrocefin colorimetric assays, inhibition \n  [success] Sulbactam-mediated inhibition of TEM-1 \u03b2-lactamase increases specific   (bio_e76fe1d274e9)\n    Based on the provided paper content, there is no mention of Cefuracetime, a nitrocefin colorimetric assay, IC50 or Ki values, substrate/enzyme concent\n  [success] The Interplay of Electrostatics and Chemical Positioning in the Evolut  (bio_981769886c09",
+      "paperclip_search_id": "s_440f0e74",
+      "paperclip_map_id": "m_08fab7cb",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "paperclip_source": "biorxiv"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Cefuracetime. Map complete: 10/10 tasks succeeded in 2906ms\nResults ID: m_a3226376\nFull results: /.gxl/map_m_a3226376.txt\n\n  [success] bla - Beta-lactamase TEM  (P62593)\n    Based on the provided paper content, there is no mention of Cefuracetime, nitrocefin colorimetric assay, IC50, Ki, enzyme/substrate concentrations, or\n  [success] bla - Beta-lactamase TEM  (P62594)\n    Based on the provided paper content, there is no mention of Cefuracetime, a nitrocefin colorimetric assay, IC50, Ki, substrate or enzyme concentration\n  [success] blaT-12b - Beta-lactamase TEM-12  (Q48406)\n    Based on the provided paper content, there is no mention of Cefuracetime, TEM-1 beta-lactamase (the paper covers TEM-12 encoded by `blaT-12b`), nitroc\n  [success] penPC - Beta-lactamase 1  (P10424)\n    Based on the provided paper content, there is no mention of Cefuracetime, TEM-1 beta-lactamase, nitrocefin colorimetric assays, $K_i$, $\\text{IC}_{50}\n  [success] blaY - Beta-lactamase 1  (P00809)\n    Based on the provided paper content, there is no mention of Cefuracetime, TEM-1 beta-lactamase, nitrocefin colorimetric assays, $K_i$, $IC_{50}$, enzy\n  [success] blaCI - Beta-lactamase 1  (P28018)\n    Based on the provided paper content, there is no information regarding Cefuracetime, TEM-1 beta-lactamase, nitrocefin colorimetric assays, Ki, IC50, e\n  [success] blaL - Beta-lactamase 1  (Q03680)\n    Based on the provided paper content, there is no mention of \"Cefuracetime\", \"TEM-1 beta-lactamase\", \"nitrocefin colorimetr",
+      "paperclip_search_id": "s_01abb0e1",
+      "paperclip_map_id": "m_a3226376",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "paperclip_source": "proteins"
+    }
+  ],
+  "raw_local": "/Users/fio/zeon_hack/pvjthomas/local/literature/TQ0056",
+  "assay_recommendations": {
+    "tem1_nitrocefin": {
+      "screen_conc_uM": 50,
+      "screen_rationale": "Project default screen concentration; no literature inhibitor concentration or IC50/Ki extracted.",
+      "screen_conc_source": "project_default",
+      "max_assay_conc_uM": 1000.0,
+      "metric": "relative nitrocefin hydrolysis vs no-inhibitor control"
+    }
+  }
+}

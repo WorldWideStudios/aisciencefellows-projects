@@ -1,0 +1,267 @@
+{
+  "known_inhibitors": [
+    "clavulanic acid",
+    "clavulanate lithium",
+    "sulbactam",
+    "tazobactam",
+    "enmetazobactam"
+  ],
+  "expected_substrates_low_inhibition": [
+    "ampicillin",
+    "cephalexin",
+    "penicillins",
+    "cephalosporins",
+    "carbapenems"
+  ],
+  "assay_notes": {
+    "typical_screen_conc_uM": 50,
+    "pre_incubation_min": 10,
+    "read_wavelength_nm": 490,
+    "metric": "initial slope A490 vs time",
+    "hit_threshold_pct": 50
+  },
+  "compound_assay_priors": {
+    "T19860": {
+      "name": "Clavulanic Acid",
+      "role": "pos-ctrl-clavaculin",
+      "recommended_screen_uM": 50,
+      "literature_ki_uM_tem1": 0.85,
+      "screen_conc_source": "literature",
+      "refs_file": "data/compound_literature/refs/T19860.json",
+      "literature_assay": {
+        "type": "TEM-1 nitrocefin inhibition",
+        "enzyme_nM": 0.25,
+        "nitrocefin_uM": 200,
+        "inhibitor_uM_range": [0.25, 5],
+        "buffer": "100 mM NaPi pH 6.4",
+        "temperature_C": 25,
+        "read_nm": 486,
+        "duration_min": 10
+      },
+      "expected_at_50uM": ">=50% inhibition"
+    },
+    "T14979": {
+      "name": "Clavulanate lithium",
+      "recommended_screen_uM": 50,
+      "screen_conc_source": "project_default",
+      "refs_file": "data/compound_literature/refs/T14979.json",
+      "literature_assay": {
+        "type": "TEM-1 nitrocefin inhibition"
+      }
+    },
+    "T1005": {
+      "name": "Amoxicillin",
+      "recommended_screen_uM": 50,
+      "screen_conc_source": "project_default",
+      "refs_file": "data/compound_literature/refs/T1005.json",
+      "literature_assay": {
+        "type": "TEM-1 nitrocefin inhibition"
+      }
+    },
+    "T0138": {
+      "name": "Cefpiramide acid",
+      "recommended_screen_uM": 50,
+      "screen_conc_source": "project_default",
+      "refs_file": "data/compound_literature/refs/T0138.json",
+      "literature_assay": {
+        "type": "TEM-1 nitrocefin inhibition"
+      }
+    },
+    "T0198": {
+      "name": "Ceftiofur sodium",
+      "recommended_screen_uM": 50,
+      "screen_conc_source": "project_default",
+      "refs_file": "data/compound_literature/refs/T0198.json",
+      "literature_assay": {
+        "type": "TEM-1 nitrocefin inhibition"
+      }
+    },
+    "T1213": {
+      "name": "Piperacillin sodium",
+      "recommended_screen_uM": 50,
+      "screen_conc_source": "project_default",
+      "refs_file": "data/compound_literature/refs/T1213.json",
+      "literature_assay": {
+        "type": "TEM-1 nitrocefin inhibition"
+      }
+    },
+    "T1262": {
+      "name": "Tazobactam",
+      "recommended_screen_uM": 1.0,
+      "screen_conc_source": "10x_ic50",
+      "refs_file": "data/compound_literature/refs/T1262.json",
+      "literature_ic50_uM_tem1": 0.1,
+      "expected_at_recommended_uM": ">=50% inhibition",
+      "literature_assay": {
+        "type": "TEM-1 nitrocefin inhibition"
+      }
+    },
+    "T6685": {
+      "name": "Sulbactam sodium",
+      "recommended_screen_uM": 50,
+      "screen_conc_source": "project_default",
+      "refs_file": "data/compound_literature/refs/T6685.json",
+      "literature_assay": {
+        "type": "TEM-1 nitrocefin inhibition"
+      }
+    },
+    "T14081": {
+      "name": "Enmetazobactam",
+      "recommended_screen_uM": 50,
+      "screen_conc_source": "project_default",
+      "refs_file": "data/compound_literature/refs/T14081.json",
+      "literature_assay": {
+        "type": "TEM-1 nitrocefin inhibition"
+      }
+    },
+    "T1631": {
+      "name": "Sulbactam",
+      "recommended_screen_uM": 50,
+      "screen_conc_source": "project_default",
+      "refs_file": "data/compound_literature/refs/T1631.json",
+      "literature_assay": {
+        "type": "TEM-1 nitrocefin inhibition"
+      }
+    },
+    "T13038": {
+      "name": "Sultamicillin",
+      "recommended_screen_uM": 50,
+      "screen_conc_source": "project_default",
+      "refs_file": "data/compound_literature/refs/T13038.json",
+      "literature_assay": {
+        "type": "TEM-1 nitrocefin inhibition"
+      }
+    },
+    "T0199": {
+      "name": "Cephradine",
+      "recommended_screen_uM": 50,
+      "screen_conc_source": "project_default",
+      "refs_file": "data/compound_literature/refs/T0199.json",
+      "literature_assay": {
+        "type": "TEM-1 nitrocefin inhibition"
+      }
+    },
+    "T0234": {
+      "name": "Methicillin sodium salt",
+      "recommended_screen_uM": 50,
+      "screen_conc_source": "project_default",
+      "refs_file": "data/compound_literature/refs/T0234.json",
+      "literature_assay": {
+        "type": "TEM-1 nitrocefin inhibition"
+      }
+    },
+    "T0366": {
+      "name": "Cefadroxil",
+      "recommended_screen_uM": 50,
+      "screen_conc_source": "project_default",
+      "refs_file": "data/compound_literature/refs/T0366.json",
+      "literature_assay": {
+        "type": "TEM-1 nitrocefin inhibition"
+      }
+    },
+    "T1001": {
+      "name": "Dicloxacillin Sodium hydrate",
+      "recommended_screen_uM": 50,
+      "screen_conc_source": "project_default",
+      "refs_file": "data/compound_literature/refs/T1001.json",
+      "literature_assay": {
+        "type": "TEM-1 nitrocefin inhibition"
+      }
+    },
+    "T1008": {
+      "name": "Cephalexin",
+      "recommended_screen_uM": 50,
+      "screen_conc_source": "project_default",
+      "refs_file": "data/compound_literature/refs/T1008.json",
+      "literature_assay": {
+        "type": "TEM-1 nitrocefin inhibition"
+      }
+    },
+    "T0814": {
+      "name": "Ampicillin Trihydrate",
+      "recommended_screen_uM": 50,
+      "screen_conc_source": "project_default",
+      "refs_file": "data/compound_literature/refs/T0814.json",
+      "literature_assay": {
+        "type": "TEM-1 nitrocefin inhibition"
+      }
+    },
+    "T67978": {
+      "name": "Cefuzonam",
+      "recommended_screen_uM": 50,
+      "screen_conc_source": "project_default",
+      "refs_file": "data/compound_literature/refs/T67978.json",
+      "literature_assay": {
+        "type": "TEM-1 nitrocefin inhibition"
+      }
+    },
+    "T30787": {
+      "name": "Cefetamet sodium",
+      "recommended_screen_uM": 50,
+      "screen_conc_source": "project_default",
+      "refs_file": "data/compound_literature/refs/T30787.json",
+      "literature_assay": {
+        "type": "TEM-1 nitrocefin inhibition"
+      }
+    },
+    "T0985": {
+      "name": "Oxacillin sodium salt",
+      "recommended_screen_uM": 50,
+      "screen_conc_source": "project_default",
+      "refs_file": "data/compound_literature/refs/T0985.json",
+      "literature_assay": {
+        "type": "TEM-1 nitrocefin inhibition"
+      }
+    },
+    "T6385": {
+      "name": "Amoxicillin Sodium",
+      "recommended_screen_uM": 50,
+      "screen_conc_source": "project_default",
+      "refs_file": "data/compound_literature/refs/T6385.json",
+      "literature_assay": {
+        "type": "TEM-1 nitrocefin inhibition"
+      }
+    },
+    "T8390": {
+      "name": "Cefazolin",
+      "recommended_screen_uM": 50,
+      "screen_conc_source": "project_default",
+      "refs_file": "data/compound_literature/refs/T8390.json",
+      "literature_assay": {
+        "type": "TEM-1 nitrocefin inhibition"
+      }
+    },
+    "TQ0056": {
+      "name": "Cefuracetime",
+      "recommended_screen_uM": 50,
+      "screen_conc_source": "project_default",
+      "refs_file": "data/compound_literature/refs/TQ0056.json",
+      "literature_assay": {
+        "type": "TEM-1 nitrocefin inhibition"
+      }
+    }
+  },
+  "library_notes": {
+    "total_compounds": 105,
+    "mostly_antibiotic_substrates": true,
+    "exclude_compound_ids": [
+      "T19709"
+    ],
+    "forward_match_count": 5,
+    "forward_compound_groups": 4
+  },
+  "sources": [
+    {
+      "compound_id": "T19860",
+      "pmid": "40484381",
+      "pmcid": "PMC12274840",
+      "doi": "10.1016/j.jbc.2025.110347",
+      "citation": "Radojkovi\u0107 et al., J Biol Chem 2025 \u2014 TEM-1 clavulanic acid Ki = 0.85 \u00b5M (nitrocefin assay)"
+    },
+    "data/compound_literature/tem1_inhibitors_nitrocefin.txt",
+    "data/compound_literature/clavulanate_class_inhibitors.txt"
+  ],
+  "forward_updated_at": "2026-07-26T00:07:44Z",
+  "forward_batch_ran_at": "2026-07-25T23:03:12Z",
+  "reverse_literature_updated_at": "2026-07-26T01:40:39Z"
+}

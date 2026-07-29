@@ -1,0 +1,11 @@
+skill_id: take_from_shelf
+version: "1.0.0"
+description: "Pick an item out of a slot, reading width and approach direction from the item's own grasp anchor so the same skill works for any annotated object."
+
+preconditions: {}   # parsed but NOT enforced by the executor - never gate on these
+postconditions: {}
+safety_rules: []
+tags:
+  - plate
+  - handoff
+world_state_prime: null

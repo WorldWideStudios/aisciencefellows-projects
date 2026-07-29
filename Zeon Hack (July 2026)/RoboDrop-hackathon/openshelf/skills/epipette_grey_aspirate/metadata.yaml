@@ -1,0 +1,10 @@
+skill_id: epipette_grey_aspirate
+version: "1.0.0"
+description: "Left arm aspirates from a named anchor on an object using the grey epipette."
+
+# parameters are derived from the epipette_grey_aspirate() signature in robotic_code.py
+
+tags:
+  - pipette_demo
+  - epipette_grey
+  - liquid_handling

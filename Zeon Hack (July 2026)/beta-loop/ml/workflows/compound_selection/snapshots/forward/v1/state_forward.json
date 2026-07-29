@@ -1,0 +1,200 @@
+{
+  "schema_version": 1,
+  "agent": "forward_agent",
+  "agent_version": "v1",
+  "run_label": "forward-research-agent-v1",
+  "forward": {
+    "library_matches": {
+      "ran_at": "2026-07-26T00:07:44Z",
+      "tanimoto_threshold": 0.85,
+      "matches": [
+        {
+          "reference_name": "clavulanic acid",
+          "match_type": "direct",
+          "compound_id": "T19860",
+          "compound_name": "Clavulanic Acid",
+          "tanimoto": 1.0,
+          "group_id": "clavulanate",
+          "canonical_compound_id": "T19860",
+          "related_forms": [
+            "T14979",
+            "T19860"
+          ]
+        },
+        {
+          "reference_name": "sulbactam",
+          "match_type": "direct",
+          "compound_id": "T1631",
+          "compound_name": "Sulbactam",
+          "tanimoto": 1.0,
+          "group_id": "sulbactam",
+          "canonical_compound_id": "T1631",
+          "related_forms": [
+            "T1631",
+            "T6685"
+          ]
+        },
+        {
+          "reference_name": "tazobactam",
+          "match_type": "direct",
+          "compound_id": "T1262",
+          "compound_name": "Tazobactam",
+          "tanimoto": 1.0,
+          "group_id": "tazobactam",
+          "canonical_compound_id": "T1262",
+          "related_forms": [
+            "T1262"
+          ]
+        },
+        {
+          "reference_name": "enmetazobactam",
+          "match_type": "direct",
+          "compound_id": "T14081",
+          "compound_name": "Enmetazobactam",
+          "tanimoto": 1.0,
+          "group_id": "enmetazobactam",
+          "canonical_compound_id": "T14081",
+          "related_forms": [
+            "T14081"
+          ]
+        },
+        {
+          "reference_name": "clavulanate lithium",
+          "match_type": "direct",
+          "compound_id": "T14979",
+          "compound_name": "Clavulanate lithium",
+          "tanimoto": 1.0,
+          "group_id": "clavulanate",
+          "canonical_compound_id": "T19860",
+          "related_forms": [
+            "T14979",
+            "T19860"
+          ]
+        }
+      ],
+      "literature_only": []
+    },
+    "agent_version": "v1",
+    "run_label": "forward-research-agent-v1",
+    "manifest": "ml/workflows/compound_selection/snapshots/forward/v1/manifest.json",
+    "finalized_at": "2026-07-25T23:03:16Z",
+    "compound_groups": [
+      {
+        "group_id": "clavulanate",
+        "canonical_compound_id": "T19860",
+        "compound_ids": [
+          "T14979",
+          "T19860"
+        ],
+        "forms": [
+          {
+            "compound_id": "T14979",
+            "name": "Clavulanate lithium",
+            "form_type": "lithium_salt",
+            "is_canonical": false
+          },
+          {
+            "compound_id": "T19860",
+            "name": "Clavulanic Acid",
+            "form_type": "free_acid",
+            "is_canonical": true
+          }
+        ]
+      },
+      {
+        "group_id": "enmetazobactam",
+        "canonical_compound_id": "T14081",
+        "compound_ids": [
+          "T14081"
+        ],
+        "forms": [
+          {
+            "compound_id": "T14081",
+            "name": "Enmetazobactam",
+            "form_type": "other",
+            "is_canonical": true
+          }
+        ]
+      },
+      {
+        "group_id": "sulbactam",
+        "canonical_compound_id": "T1631",
+        "compound_ids": [
+          "T1631",
+          "T6685"
+        ],
+        "forms": [
+          {
+            "compound_id": "T1631",
+            "name": "Sulbactam",
+            "form_type": "other",
+            "is_canonical": true
+          },
+          {
+            "compound_id": "T6685",
+            "name": "Sulbactam sodium",
+            "form_type": "sodium_salt",
+            "is_canonical": false
+          }
+        ]
+      },
+      {
+        "group_id": "tazobactam",
+        "canonical_compound_id": "T1262",
+        "compound_ids": [
+          "T1262"
+        ],
+        "forms": [
+          {
+            "compound_id": "T1262",
+            "name": "Tazobactam",
+            "form_type": "other",
+            "is_canonical": true
+          }
+        ]
+      }
+    ],
+    "literature_searches": {
+      "ran_at": "2026-07-25T23:03:12Z",
+      "caps": {
+        "max_batch_queries": 2,
+        "query_limit": 15,
+        "max_searches_per_run": 6
+      },
+      "queries": [
+        {
+          "query": "TEM-1 beta-lactamase inhibitor IC50 nitrocefin",
+          "source": "pmc"
+        },
+        {
+          "query": "clavulanic acid sulbactam tazobactam beta-lactamase inhibitor",
+          "source": "pmc"
+        }
+      ],
+      "results": [
+        {
+          "status": "ok",
+          "query": "TEM-1 beta-lactamase inhibitor IC50 nitrocefin",
+          "source": "pmc",
+          "limit": 15,
+          "result_id": "s_13bfedb9",
+          "output": "Found 15 papers  [s_13bfedb9]\n\n  1. Escherichia coli  phylogeny drives co-amoxiclav resistance through variable expression of TEM-1 beta-lactamase\n     William Matlock, Gillian Rodger, Emma Pritchard, Matthew Colpus, Natalia Kapel, Lucinda Barrett, Mar...\n     PMC12484619 \u00b7 PMC \u00b7 2025-09-30\n     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12484619/\n     \"This study investigated how *E. coli* phylogeny influences co-amoxiclav resistance. Resistance levels are significantly driven by phylogenetic variation in *bla TEM-1* beta-lactamase expression.\"\n\n  2. Assay Platform\nfor Clinically Relevant Metallo-\u03b2-lactamases\n     Sander\nS. van Berkel, J\u00fcrgen Brem, Anna M. Rydzik, Ramya Salimraj, Ricky Cain, Anil Verma, Raymond\nJ...\n     PMC3910272 \u00b7 PMC \u00b7 2013-07-30\n     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3910272/\n     \"A new assay platform using fluorogenic substrates was developed for clinically relevant metallo-\u03b2-lactamases. This platform enabled the identification of 4-chloroisoquinolinols as potential broad-spectrum MBL inhibitors.\"\n\n  3. In Silico Study of the Potential of Brazilein Sappan Wood as a Beta-Lactamase Inhibitor against Extended-Spectrum Beta-Lactamase-Encoding Genes\n     Dwi Krihariyani, Evy Diah Woelansari, Edy Haryanto, Retno Sasongkowati, Anik Handayati, Sri Sulami E...\n     PMC11229569 \u00b7 PMC \u00b7 2024-06-01\n     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11229569/\n     \"This study investigated brazilein from sappan wood as a potential inhibitor of extended-spectrum beta-lactamases. Brazilein showed significant potential to block the beta-lactamase activity of the blaCTX-M gene.\"\n\n  4. Targeting Class A and C Serine\n\u03b2-Lactamases\nwith a Broad-Spectrum Boronic Acid Derivative\n     Donatella Tondi, Alberto Venturelli, Richard Bonnet, Cecilia Pozzi, Brian K. Shoichet, Maria\nPaola C...\n     PMC4079326 \u00b7 PMC \u00b7 2015-05-31\n     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4079326/\n     \"A novel boronic acid derivative was designed and synthesized to inhibit class A and C serine \u03b2-lactamases. This compound demonstrates potent, broad-spectrum activity, offering a potential solution to antibiotic resistance.\"\n\n  5. Classification and applicability of new beta-lactamase inhibitors\n     Emilia Cercenado, Francisco Javier Candel\n     PMC12584905 \u00b7 PMC \u00b7 2025-10-24\n     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12584905/\n     \"This review classifies new beta-lactamase inhibitors and their characteristics. Their applicability depends on the specific beta-lactamase/carbapenemase, microorganism, and resistance mechanisms.\"\n\n  6. Inhibitor Discovery of Full-Length New Delhi Metallo-\u03b2-Lactamase-1 (NDM-1)\n     Bingzheng Shen, Yan Yu, Hui Chen, Xin Cao, Xingzhen Lao, Yongliang Fang, Yun Shi, Jiao Chen, Heng Zh...\n     PMC3652859 \u00b7 biomedrxiv \u00b7 2013-01-01\n     https://doi.org/10.1371/journal.pone.0062955\n     \"NDM-1's hydrolysis of \u03b2-lactam antibiotics was studied, finding it ineffective against aztreonam. Thiophene-carboxylic acid derivatives inhibit NDM-1 and enhance meropenem's antibacterial activity.\"\n\n  7. Saturation Mutagenesis and Molecular Modeling: The Impact of Methionine 182 Substitutions on the Stability of \u03b2-Lactamase TEM-1\n     Vitaly G. Grigorenko, Alexandra V. Krivitskaya, Maria G. Khrenova, Maya Yu. Rubtsova, Galina V. Pres...\n     PMC11276661 \u00b7 PMC \u00b7 2024-07-13\n     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11276661/\n     \"Saturation mutagenesis and molecular modeling studied methionine 182 substitutions in TEM-1 \u03b2-lactamase. Substitutions at this position significantly impact enzyme stability and thermoreactivation, but not catalytic activity, with the M182E variant showing the highest activity.\"\n\n  8. Targeting the Class A Carbapenemase GES-5 via Virtual Screening\n     Raphael Klein, Laura Cendron, Martina Montanari, Pierangelo Bellio, Giuseppe Celenza, Lorenzo Maso, ...\n     PMC7072645 \u00b7 biomedrxiv \u00b7 2020-02-14\n     https://doi.org/10.3390/biom10020304\n     \"Virtual screening identified compounds that inhibit the GES-5 carbapenemase. Four derivatives showed high micromolar inhibitory activity, serving as promising starting points for further development.\"\n\n  9. Breakthrough Advances in Beta-Lactamase Inhibitors: New Synthesized Compounds and Mechanisms of Action Against Drug-Resistant Bacteria\n     Ya-Si Huang, Hong Zhou\n     PMC11859904 \u00b7 PMC \u00b7 2025-02-03\n     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11859904/\n     \"Newly synthesized beta-lactamase inhibitors were studied for their effects and mechanisms against drug-resistant bacteria. These compounds enhance the affinity and stability of inhibitor-enzyme complexes, offering new strategies for combating antibiotic resistance.\"\n\n  10. Screening of inhibitors for S130G inhibitor resistant mutants of TEM type beta-lactamase\n     Mohd Hassan Baig, Mohd Danishuddin, Saif Khan, Asad U Khan\n     PMC3530876 \u00b7 PMC \u00b7 2012-01-01\n     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3530876/\n     \"This study screened for inhibitors against the S130G TEM mutant beta-lactamase using a structure-based virtual screening approach. Several compounds demonstrated higher efficacy than existing inhibitors, with specific amino acids identified as crucial for inhibitor binding.\"\n\n  11. In Vitro Activity of Cefaclor/Beta-Lactamases Inhibitors (Clavulanic Acid and Sulbactam) Combination Against Extended-Spectrum Beta-Lactamase Producing Uropathogenic  E. coli\n     Ali Atoom, Bayan Alzubi, Dana Barakat, Rana Abu-Gheyab, Dalia Ismail-Agha, Awatef Al-Kaabneh, Nawfal...\n     PMC12189933 \u00b7 PMC \u00b7 2025-06-13\n     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12189933/\n     \"Cefaclor combined with clavulanic acid or sulbactam showed improved in vitro activity against ESBL-producing *E. coli*. These combinations demonstrated synergistic and bactericidal effects, restoring susceptibility in many isolates.\"\n\n  12. Discovery of the Novel Inhibitor Against New Delhi Metallo-\u03b2-Lactamase Based on Virtual Screening and Molecular Modelling\n     Xiyan Wang, Yanan Yang, Yawen Gao, Xiaodi Niu\n     PMC7279046 \u00b7 biomedrxiv \u00b7 2020-05-18\n     https://doi.org/10.3390/ijms21103567\n     \"Virtual screening and molecular modeling identified ZINC05683641 as a potential inhibitor of New Delhi metallo-\u03b2-lactamase (NDM-1). This compound competitively inhibits NDM-1 by binding to key catalytic residues, offering a new avenue for combating antibiotic resistance.\"\n\n  13. New Delhi Metallo-Beta-Lactamase Inhibitors: A Systematic Scoping Review\n     Lutfun Nahar, Hideharu Hagiya, Kazuyoshi Gotoh, Md Asaduzzaman, Fumio Otsuka\n     PMC11277577 \u00b7 Journal of Clinical Medicine \u00b7 2024-07-18\n     https://doi.org/10.3390/jcm13144199\n     \"A systematic scoping review synthesized data on New Delhi metallo-beta-lactamase inhibitors. While numerous potential inhibitors have been identified, none are currently clinically applicable for treating infections.\"\n\n  14. Effect of Lactamase Inhibitors on the Biosensor Penp during the Measurement of Lactam Antibiotics Concentration\n     Dagoberto Soto, Camila Silva, Cristian Ugalde, Kwok-Yin Wong, Yun-Chung Leung, Lok-Yan So, Max Andre...\n     PMC6427286 \u00b7 biomedrxiv \u00b7 2019-03-12\n     https://doi.org/10.3390/s19051237\n     \"This study investigated the impact of lactamase inhibitors on the PenP biosensor's ability to measure lactam antibiotics. The findings indicate that lactamase inhibitors have a minimal effect on PenP's detection capabilities.\"\n\n  15. Extended-spectrum beta-lactamases: definition, history, an update on their genetic environment and detection methods\n     Soufyane Yassara, Ikrame Zeouk, Samira Jaouhar, Mohammed Sbiti, Khadija Bekhti\n     PMC12188005 \u00b7 PMC \u00b7 2025-01-01\n     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12188005/\n     \"This review discusses extended-spectrum beta-lactamases (ESBLs), their history, genetic spread, and detection. ESBL-producing bacteria are a significant global threat, requiring vigilant identification and development of new treatments.\"\n\n[582ms, saved to s_13bfedb9]\n\n\ud83d\udca1 Extract data across these results with: map --from s_13bfedb9 \"your question\"\n[582ms, saved to s_13bfedb9]\n",
+          "saved_path": "/Users/fio/zeon_hack/data/compound_literature/pmc_1215905.txt",
+          "elapsed_ms": 2183
+        },
+        {
+          "status": "ok",
+          "query": "clavulanic acid sulbactam tazobactam beta-lactamase inhibitor",
+          "source": "pmc",
+          "limit": 15,
+          "result_id": "s_5530b55f",
+          "output": "Found 15 papers  [s_5530b55f]\n\n  1. In Vitro Activity of Cefaclor/Beta-Lactamases Inhibitors (Clavulanic Acid and Sulbactam) Combination Against Extended-Spectrum Beta-Lactamase Producing Uropathogenic  E. coli\n     Ali Atoom, Bayan Alzubi, Dana Barakat, Rana Abu-Gheyab, Dalia Ismail-Agha, Awatef Al-Kaabneh, Nawfal...\n     PMC12189933 \u00b7 PMC \u00b7 2025-06-13\n     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12189933/\n     \"Cefaclor combined with clavulanic acid or sulbactam showed improved in vitro activity against ESBL-producing *E. coli*. These combinations demonstrated synergistic and bactericidal effects, restoring susceptibility in many isolates.\"\n\n  2. Old and New Beta-Lactamase Inhibitors: Molecular Structure, Mechanism of Action, and Clinical Use\n     Davide Carcione, Claudia Siracusa, Adela Sulejmani, Valerio Leoni, Jari Intra\n     PMC8388860 \u00b7 PMC \u00b7 2021-08-17\n     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8388860/\n     \"This review examines current and emerging beta-lactamase inhibitors, their mechanisms, and clinical applications. New inhibitors are needed to combat resistance, particularly against Gram-negative bacteria and certain beta-lactamase classes.\"\n\n  3. In Silico Study of the Potential of Brazilein Sappan Wood as a Beta-Lactamase Inhibitor against Extended-Spectrum Beta-Lactamase-Encoding Genes\n     Dwi Krihariyani, Evy Diah Woelansari, Edy Haryanto, Retno Sasongkowati, Anik Handayati, Sri Sulami E...\n     PMC11229569 \u00b7 PMC \u00b7 2024-06-01\n     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11229569/\n     \"This study investigated brazilein from sappan wood as a potential inhibitor of extended-spectrum beta-lactamases. Brazilein showed significant potential to block the beta-lactamase activity of the blaCTX-M gene.\"\n\n  4. Molecular Basis of Class A \u03b2-Lactamase Inhibition by Relebactam\n     Catherine L. Tooke, Philip Hinchliffe, Pauline A. Lang, Adrian J. Mulholland, J\u00fcrgen Brem, Christoph...\n     PMC6761529 \u00b7 biomedrxiv \u00b7 2019-08-05\n     https://doi.org/10.1128/AAC.00564-19\n     \"This study investigates the molecular basis of relebactam's inhibition of class A \u03b2-lactamases. Relebactam is a diazabicyclooctane inhibitor effective against common bacterial resistance mechanisms.\"\n\n  5. Comparative evaluation of five \u03b2-Lactamase inhibitors in combination with \u03b2-Lactams against multidrug-resistant Mycobacterium tuberculosis in vitro\n     Jie Shi, Danwei Zheng, Ruyue Su, Xiaoguang Ma, Yankun Zhu, Shaohua Wang, Wenjing Chang, Dingyong Sun\n     PMC12036291 \u00b7 PMC \u00b7 2025-04-28\n     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12036291/\n     \"This study evaluated \u03b2-lactam and \u03b2-lactamase inhibitor combinations against multidrug-resistant tuberculosis. Tebipenem combined with relebactam showed the most potent activity, with specific BlaC mutations potentially linked to increased susceptibility.\"\n\n  6. Novel \u03b2-lactamase inhibitors: a therapeutic hope against the scourge of multidrug resistance\n     Richard R. Watkins, Krisztina M. Papp-Wallace, Sarah M. Drawz, Robert A. Bonomo\n     PMC3871716 \u00b7 biomedrxiv \u00b7 2013-12-24\n     https://doi.org/10.3389/fmicb.2013.00392\n     \"This review examines novel \u03b2-lactamase inhibitors being developed to combat multidrug-resistant bacteria. These new inhibitors offer renewed hope for restoring the effectiveness of \u03b2-lactam antibiotics, though they may not cover all resistant strains.\"\n\n  7. Synergistic Activity of Cefiderocol in Combination with Avibactam, Sulbactam or Tazobactam against Carbapenem-Resistant Gram-Negative Bacteria\n     Russell E. Lewis, Marta Palombo, Erica Diani, Benedetta Secci, Davide Gibellini, Paolo Gaibani\n     PMC11352988 \u00b7 PMC \u00b7 2024-08-06\n     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11352988/\n     \"The activity of cefiderocol combined with avibactam, sulbactam, or tazobactam was studied against carbapenem-resistant Gram-negative bacteria. Cefiderocol/sulbactam showed the most promising synergistic activity across all tested resistant Gram-negative isolates.\"\n\n  8. Biochemical exploration of \u03b2-lactamase inhibitors\n     Varshaa Arer, Debasish Kar\n     PMC9888030 \u00b7 biomedrxiv \u00b7 2023-01-17\n     https://doi.org/10.3389/fgene.2022.1060736\n     \"This study explores the biochemistry of \u03b2-lactamase inhibitors and their mechanisms. Combining these inhibitors with antibiotics is a safe and effective strategy to combat microbial resistance.\"\n\n  9. Genetic Analysis of Virulence and \u03b2-Lactamase Determinants Related to \u03b2-Lactamase Inhibitors in  Pseudomonas aeruginosa  Strains from Nosocomial Infections\n     Gloria Luz Paniagua-Contreras, Elizabeth Olvera-Navarro, Jennefer Paloma Herrera-Gabriel, Laura Ver\u00f3...\n     PMC12837615 \u00b7 PMC \u00b7 2025-12-22\n     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12837615/\n     \"This study analyzed virulence and \u03b2-lactamase genes in *Pseudomonas aeruginosa* strains from nosocomial and community infections. Most strains showed resistance to \u03b2-lactamase inhibitor antibiotics, with phylogroup 1 being more frequent.\"\n\n  10. \u03b2-Lactam Antibiotics and \u03b2-Lactamase Enzymes Inhibitors, Part 2: Our Limited Resources\n     Silvana Alfei, Anna Maria Schito\n     PMC9031764 \u00b7 biomedrxiv \u00b7 2022-04-13\n     https://doi.org/10.3390/ph15040476\n     \"This review examines \u03b2-lactam antibiotics and the \u03b2-lactamase enzymes that confer resistance. It highlights the limited effectiveness of current inhibitors against metallo-\u03b2-lactamases, a growing threat.\"\n\n  11. Approachable Synthetic Methodologies for Second-Generation  \u03b2 -Lactamase Inhibitors: A Review\n     Noor Fatima, Shehla Khalid, Nasir Rasool, Muhammad Imran, Bushra Parveen, Aqsa Kanwal, Marius Irimie...\n     PMC11434895 \u00b7 PMC \u00b7 2024-08-23\n     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11434895/\n     \"This review surveys synthetic methods for second-generation \u03b2-lactamase inhibitors. These inhibitors, including vaborbactam and avibactam, are a successful strategy against multidrug-resistant bacteria.\"\n\n  12. A Review of \u03b2\u2010Lactamase Inhibitors in Clinical Use and Development: Mechanisms, Spectrum, and Therapeutic Applications\n     Mohammad Javad Roustaye Gourabi; Anita Nikoo; Bita Khanbabaei; Masoud Kargar; Amirhossein Fayyazi; S...\n     PMC13191775 \u00b7 biomedrxiv \u00b7 2026-05-21\n     https://doi.org/10.1155/ijm/4479031\n\n  13. Sulbactam\u2013durlobactam: a \u03b2-lactam/\u03b2-lactamase inhibitor combination targeting  Acinetobacter baumannii\n     Sarah M McLeod, John P O'Donnell, Navaneeth Narayanan, John P Mills, Keith S Kaye\n     PMC11229585 \u00b7 PMC \u00b7 2024-03-01\n     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11229585/\n     \"Sulbactam\u2013durlobactam is a new drug combination targeting *Acinetobacter baumannii*. It effectively restores sulbactam's activity against multidrug-resistant strains, offering a promising treatment for serious infections.\"\n\n  14. Production of \u03b2-Lactamase Inhibitors by  Streptomyces  Species\n     Daniela de Ara\u00fajo Viana Marques, Suellen Emilliany Feitosa Machado, Val\u00e9ria Carvalho Santos Ebinuma,...\n     PMC6163296 \u00b7 biomedrxiv \u00b7 2018-07-17\n     https://doi.org/10.3390/antibiotics7030061\n     \"This review discusses *Streptomyces* species as producers of \u03b2-lactamase inhibitors. It highlights methods to enhance production and discusses clinical and commercial aspects of these compounds.\"\n\n  15. Current Strategy for Targeting Metallo-\u03b2-Lactamase with Metal-Ion-Binding Inhibitors\n     Jessica L. Ortega-Balleza, Lenci K. V\u00e1zquez-Jim\u00e9nez, Eyra Ortiz-P\u00e9rez, Guadalupe Avalos-Navarro, Alm...\n     PMC11356879 \u00b7 PMC \u00b7 2024-08-21\n     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11356879/\n     \"This review analyzes strategies for designing metal-ion-binding inhibitors against metallo-\u03b2-lactamases (MBLs). The key finding is that Zn\u00b2\u207a chelation is crucial for the mechanism of action of most MBL inhibitors.\"\n\n[351ms, saved to s_5530b55f]\n\n\ud83d\udca1 Extract data across these results with: map --from s_5530b55f \"your question\"\n[351ms, saved to s_5530b55f]\n",
+          "saved_path": "/Users/fio/zeon_hack/data/compound_literature/pmc_5451187.txt",
+          "elapsed_ms": 1842
+        }
+      ],
+      "search_count": 2,
+      "truncated": []
+    }
+  }
+}

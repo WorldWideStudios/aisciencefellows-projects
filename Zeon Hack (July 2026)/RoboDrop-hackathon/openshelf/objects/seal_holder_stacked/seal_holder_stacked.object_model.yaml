@@ -1,0 +1,29 @@
+urdf: seal_holder_stacked.urdf
+articulations:
+  default:
+    description: All joints at rest position
+    joints: {}
+anchors:
+  object:
+    parent_link: world
+    description: Table placement frame, origin at (+X, +Y, -Z) bbox corner
+    link_T_anchor:
+      xyz: [0.005, 0.085, 0.0]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  grasp_pose_1:
+    parent_link: body
+    description: pose for grasping the first seal in the stack
+    link_T_anchor:
+      xyz: [0.0199, 0.04, 0.086695]
+      wxyz: [-0.5, 0.5, 0.5, -0.5]
+    grasp:
+      width: 0.0
+      standoff: 0.2
+  grasp_approach:
+    parent_link: body
+    description: approach pose for grabbing any of the seals
+    link_T_anchor:
+      xyz: [0.224349, 0.04, 0.2805]
+      wxyz: [-0.5, 0.5, 0.5, -0.5]
+    grasp:
+      width: 0.03

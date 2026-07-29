@@ -1,0 +1,1490 @@
+{
+  "round": 2,
+  "hits": [
+    {
+      "well": "B4",
+      "compound_id": "T6685",
+      "pct_inhibition": 107.7,
+      "concentration_uM": 50
+    },
+    {
+      "well": "B8",
+      "compound_id": "T1005",
+      "pct_inhibition": 100.0,
+      "concentration_uM": 50
+    },
+    {
+      "well": "C5",
+      "compound_id": "T0224",
+      "pct_inhibition": 100.0,
+      "concentration_uM": 50
+    },
+    {
+      "well": "B2",
+      "compound_id": "T1262",
+      "pct_inhibition": 84.6,
+      "concentration_uM": 1.0
+    },
+    {
+      "well": "F10",
+      "compound_id": "T1008",
+      "pct_inhibition": 76.9,
+      "concentration_uM": 50
+    },
+    {
+      "well": "B6",
+      "compound_id": "T14081",
+      "pct_inhibition": 61.5,
+      "concentration_uM": 50
+    },
+    {
+      "well": "C3",
+      "compound_id": "T0138",
+      "pct_inhibition": 61.5,
+      "concentration_uM": 50
+    }
+  ],
+  "failed_wells": [
+    "B10",
+    "C7",
+    "D10",
+    "E5",
+    "E7",
+    "E9",
+    "G3",
+    "G5",
+    "G9"
+  ],
+  "compounds": {
+    "T1262": {
+      "median_pct_inhibition": 84.6,
+      "wells": [
+        {
+          "well": "B2",
+          "pct_inhibition": 84.6,
+          "timing_suspect": false,
+          "concentration_uM": 1.0
+        },
+        {
+          "well": "D2",
+          "pct_inhibition": 53.8,
+          "timing_suspect": false,
+          "concentration_uM": 1.0
+        },
+        {
+          "well": "F2",
+          "pct_inhibition": 92.3,
+          "timing_suspect": false,
+          "concentration_uM": 1.0
+        }
+      ],
+      "label": "confirmed_hit",
+      "timing_suspect_reps": 0
+    },
+    "T6685": {
+      "median_pct_inhibition": 107.7,
+      "wells": [
+        {
+          "well": "B4",
+          "pct_inhibition": 130.8,
+          "timing_suspect": false,
+          "concentration_uM": 50
+        },
+        {
+          "well": "D4",
+          "pct_inhibition": 84.6,
+          "timing_suspect": false,
+          "concentration_uM": 50
+        },
+        {
+          "well": "F4",
+          "pct_inhibition": 107.7,
+          "timing_suspect": false,
+          "concentration_uM": 50
+        }
+      ],
+      "label": "confirmed_hit",
+      "timing_suspect_reps": 0
+    },
+    "T14081": {
+      "median_pct_inhibition": 61.5,
+      "wells": [
+        {
+          "well": "B6",
+          "pct_inhibition": 61.5,
+          "timing_suspect": false,
+          "concentration_uM": 50
+        },
+        {
+          "well": "D6",
+          "pct_inhibition": 76.9,
+          "timing_suspect": false,
+          "concentration_uM": 50
+        },
+        {
+          "well": "F6",
+          "pct_inhibition": 30.8,
+          "timing_suspect": false,
+          "concentration_uM": 50
+        }
+      ],
+      "label": "confirmed_hit",
+      "timing_suspect_reps": 0
+    },
+    "T1005": {
+      "median_pct_inhibition": 100.0,
+      "wells": [
+        {
+          "well": "B8",
+          "pct_inhibition": 38.5,
+          "timing_suspect": false,
+          "concentration_uM": 50
+        },
+        {
+          "well": "D8",
+          "pct_inhibition": 107.7,
+          "timing_suspect": false,
+          "concentration_uM": 50
+        },
+        {
+          "well": "F8",
+          "pct_inhibition": 100.0,
+          "timing_suspect": false,
+          "concentration_uM": 50
+        }
+      ],
+      "label": "surprise_hit",
+      "timing_suspect_reps": 0
+    },
+    "T0138": {
+      "median_pct_inhibition": 61.5,
+      "wells": [
+        {
+          "well": "C3",
+          "pct_inhibition": 100.0,
+          "timing_suspect": false,
+          "concentration_uM": 50
+        },
+        {
+          "well": "E3",
+          "pct_inhibition": 23.1,
+          "timing_suspect": false,
+          "concentration_uM": 50
+        }
+      ],
+      "label": "novel_hit",
+      "timing_suspect_reps": 0
+    },
+    "T0224": {
+      "median_pct_inhibition": 100.0,
+      "wells": [
+        {
+          "well": "C5",
+          "pct_inhibition": 100.0,
+          "timing_suspect": false,
+          "concentration_uM": 50
+        }
+      ],
+      "label": "surprise_hit",
+      "timing_suspect_reps": 0
+    },
+    "T0985": {
+      "median_pct_inhibition": 30.8,
+      "wells": [
+        {
+          "well": "C9",
+          "pct_inhibition": 30.8,
+          "timing_suspect": false,
+          "concentration_uM": 50
+        }
+      ],
+      "label": "likely substrate",
+      "timing_suspect_reps": 0
+    },
+    "T1008": {
+      "median_pct_inhibition": 76.9,
+      "wells": [
+        {
+          "well": "F10",
+          "pct_inhibition": 76.9,
+          "timing_suspect": false,
+          "concentration_uM": 50
+        }
+      ],
+      "label": "surprise_hit",
+      "timing_suspect_reps": 0
+    },
+    "T8390": {
+      "median_pct_inhibition": 30.8,
+      "wells": [
+        {
+          "well": "G7",
+          "pct_inhibition": 30.8,
+          "timing_suspect": false,
+          "concentration_uM": 50
+        }
+      ],
+      "label": "borderline",
+      "timing_suspect_reps": 0
+    }
+  },
+  "wells": {
+    "A1": {
+      "slope_global": 6e-06,
+      "slope_aligned": 6e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "A10": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "A11": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "A12": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "A2": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "A3": {
+      "slope_global": 6e-06,
+      "slope_aligned": 6e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "A4": {
+      "slope_global": 6e-06,
+      "slope_aligned": 6e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "A5": {
+      "slope_global": 1.1e-05,
+      "slope_aligned": 1.1e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "A6": {
+      "slope_global": -6e-06,
+      "slope_aligned": -6e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "A7": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "A8": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "A9": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "B1": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "B10": {
+      "slope_global": 0.000106,
+      "slope_aligned": 0.000106,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": "T1008",
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "B11": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "B12": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "B2": {
+      "slope_global": 2.2e-05,
+      "slope_aligned": 2.2e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": "T1262",
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "B3": {
+      "slope_global": 8.3e-05,
+      "slope_aligned": 8.3e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "vehicle",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ]
+    },
+    "B4": {
+      "slope_global": -1.1e-05,
+      "slope_aligned": -1.1e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": "T6685",
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "B5": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "B6": {
+      "slope_global": 3.9e-05,
+      "slope_aligned": 3.9e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": "T14081",
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "B7": {
+      "slope_global": 0.000167,
+      "slope_aligned": 0.000167,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "vehicle",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ]
+    },
+    "B8": {
+      "slope_global": 5.6e-05,
+      "slope_aligned": 5.6e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": "T1005",
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "B9": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "C1": {
+      "slope_global": 6e-06,
+      "slope_aligned": 6e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "C10": {
+      "slope_global": 2.2e-05,
+      "slope_aligned": 2.2e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "C11": {
+      "slope_global": 1.1e-05,
+      "slope_aligned": 1.1e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "vehicle",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ]
+    },
+    "C12": {
+      "slope_global": 3.9e-05,
+      "slope_aligned": 3.9e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "C2": {
+      "slope_global": 6e-06,
+      "slope_aligned": 6e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "C3": {
+      "slope_global": 1.1e-05,
+      "slope_aligned": 1.1e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": "T0138",
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "C4": {
+      "slope_global": 1.1e-05,
+      "slope_aligned": 1.1e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "C5": {
+      "slope_global": 1.1e-05,
+      "slope_aligned": 1.1e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": "T0224",
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "C6": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "C7": {
+      "slope_global": 0.000133,
+      "slope_aligned": 0.000133,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": "T8390",
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "C8": {
+      "slope_global": -1.1e-05,
+      "slope_aligned": -1.1e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "C9": {
+      "slope_global": 6.1e-05,
+      "slope_aligned": 6.1e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": "T0985",
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "D1": {
+      "slope_global": 1.1e-05,
+      "slope_aligned": 1.1e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "D10": {
+      "slope_global": 0.000411,
+      "slope_aligned": 0.000411,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": "T1008",
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "D11": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "D12": {
+      "slope_global": 6e-06,
+      "slope_aligned": 6e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "D2": {
+      "slope_global": 4.4e-05,
+      "slope_aligned": 4.4e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": "T1262",
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "D3": {
+      "slope_global": 6e-06,
+      "slope_aligned": 6e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "no_tem1",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ]
+    },
+    "D4": {
+      "slope_global": 2.2e-05,
+      "slope_aligned": 2.2e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": "T6685",
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "D5": {
+      "slope_global": 1.1e-05,
+      "slope_aligned": 1.1e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "D6": {
+      "slope_global": 2.8e-05,
+      "slope_aligned": 2.8e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": "T14081",
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "D7": {
+      "slope_global": 1.1e-05,
+      "slope_aligned": 1.1e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "no_tem1",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ]
+    },
+    "D8": {
+      "slope_global": 6e-06,
+      "slope_aligned": 6e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": "T1005",
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "D9": {
+      "slope_global": 6e-06,
+      "slope_aligned": 6e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "E1": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "E10": {
+      "slope_global": 6e-06,
+      "slope_aligned": 6e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "E11": {
+      "slope_global": 1.1e-05,
+      "slope_aligned": 1.1e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "no_tem1",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ]
+    },
+    "E12": {
+      "slope_global": 6e-06,
+      "slope_aligned": 6e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "E2": {
+      "slope_global": 1.1e-05,
+      "slope_aligned": 1.1e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "E3": {
+      "slope_global": 6.7e-05,
+      "slope_aligned": 6.7e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": "T0138",
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "E4": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "E5": {
+      "slope_global": 0.000172,
+      "slope_aligned": 0.000172,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": "T0224",
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "E6": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "E7": {
+      "slope_global": 8.9e-05,
+      "slope_aligned": 8.9e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": "T8390",
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "E8": {
+      "slope_global": 6e-06,
+      "slope_aligned": 6e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "E9": {
+      "slope_global": 0.000394,
+      "slope_aligned": 0.000394,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": "T0985",
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "F1": {
+      "slope_global": 1.7e-05,
+      "slope_aligned": 1.7e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "F10": {
+      "slope_global": 2.8e-05,
+      "slope_aligned": 2.8e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": "T1008",
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "F11": {
+      "slope_global": 1.7e-05,
+      "slope_aligned": 1.7e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "F12": {
+      "slope_global": 1.7e-05,
+      "slope_aligned": 1.7e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "F2": {
+      "slope_global": 1.7e-05,
+      "slope_aligned": 1.7e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": "T1262",
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "F3": {
+      "slope_global": 6e-06,
+      "slope_aligned": 6e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "pos-ctrl-clavaculin",
+      "compound_id": "T19860",
+      "aligned_window": [
+        30,
+        210
+      ]
+    },
+    "F4": {
+      "slope_global": 6e-06,
+      "slope_aligned": 6e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": "T6685",
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "F5": {
+      "slope_global": -6e-06,
+      "slope_aligned": -6e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "F6": {
+      "slope_global": 6.1e-05,
+      "slope_aligned": 6.1e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": "T14081",
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "F7": {
+      "slope_global": 6e-06,
+      "slope_aligned": 6e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "pos-ctrl-clavaculin",
+      "compound_id": "T19860",
+      "aligned_window": [
+        30,
+        210
+      ]
+    },
+    "F8": {
+      "slope_global": 1.1e-05,
+      "slope_aligned": 1.1e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": "T1005",
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "F9": {
+      "slope_global": 6e-06,
+      "slope_aligned": 6e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "G1": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "G10": {
+      "slope_global": -1.1e-05,
+      "slope_aligned": -1.1e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "G11": {
+      "slope_global": -6e-06,
+      "slope_aligned": -6e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "pos-ctrl-clavaculin",
+      "compound_id": "T19860",
+      "aligned_window": [
+        30,
+        210
+      ]
+    },
+    "G12": {
+      "slope_global": -6e-06,
+      "slope_aligned": -6e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "G2": {
+      "slope_global": -6e-06,
+      "slope_aligned": -6e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "G3": {
+      "slope_global": 0.000206,
+      "slope_aligned": 0.000206,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": "T0138",
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "G4": {
+      "slope_global": -1.1e-05,
+      "slope_aligned": -1.1e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "G5": {
+      "slope_global": -4.4e-05,
+      "slope_aligned": -4.4e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": "T0224",
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "G6": {
+      "slope_global": -1.1e-05,
+      "slope_aligned": -1.1e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "G7": {
+      "slope_global": 6.1e-05,
+      "slope_aligned": 6.1e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": "T8390",
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "G8": {
+      "slope_global": -6e-06,
+      "slope_aligned": -6e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "G9": {
+      "slope_global": 0.0001,
+      "slope_aligned": 0.0001,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": "T0985",
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "H1": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "H10": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "H11": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "H12": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "H2": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "H3": {
+      "slope_global": 6e-06,
+      "slope_aligned": 6e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "H4": {
+      "slope_global": 6e-06,
+      "slope_aligned": 6e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "H5": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "H6": {
+      "slope_global": 6e-06,
+      "slope_aligned": 6e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "H7": {
+      "slope_global": 6e-06,
+      "slope_aligned": 6e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "H8": {
+      "slope_global": 6e-06,
+      "slope_aligned": 6e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    },
+    "H9": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        30,
+        210
+      ],
+      "timing_suspect": false
+    }
+  },
+  "control_stats": {
+    "median_vehicle_slope": 8.3e-05,
+    "median_no_tem1_slope": 1.1e-05
+  },
+  "qc_gates": {
+    "q1_pass": true,
+    "q1t_timing_unknown": true,
+    "q1t_timing_stagger": false,
+    "q2_pass": false,
+    "q3_pass": true,
+    "pos_ctrl_median_pct": 107.7
+  },
+  "timing_stagger_min": null,
+  "wells_timing_suspect": [],
+  "pre_read_overage_wells": [],
+  "slope_window_start_s": 30,
+  "slope_window_end_s": 210,
+  "next_plate_design": "dose_response"
+}

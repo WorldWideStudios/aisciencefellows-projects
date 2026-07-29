@@ -1,0 +1,17 @@
+skill_id: platereader_open
+version: "1.0.0"
+description: "Open the plate reader lid with the right arm: grip the lid at the lid_open anchor (lid closed), arc-follow the hinge to fully open (lid_joint = 2.0386), commit the open state, release, stow. Same mechanism as wellplate_shaker_open."
+
+# parameters are derived from the platereader_open() signature in robotic_code.py
+
+preconditions:
+  platereader_lid_closed: true
+
+postconditions:
+  platereader_lid_open: true
+
+tags:
+  - plate_reader
+  - open
+  - lid
+  - right_arm

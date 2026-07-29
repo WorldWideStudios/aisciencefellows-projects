@@ -1,0 +1,260 @@
+{
+  "workflow_id": "shelf_to_fixture",
+  "name": "OpenShelf -> tagged stand -> fixture plate",
+  "description": "Move a deep-well plate from the OpenShelf to a fixture-plate position, using the tagged stand as the regrasp point. Starts by fixing the shelf's world pose from its 60 AprilTags, because the stored pose is about a metre out of reach. Every step is gated on its own success return.",
+  "version": "1.0.0",
+  "author": "team-4",
+  "created_at": "2026-07-25T00:00:00.000Z",
+  "updated_at": "2026-07-25T00:00:00.000Z",
+  "simulation_validated": false,
+  "objects": [],
+  "inputs": [
+    {
+      "name": "plate",
+      "type": "object",
+      "is_array": false,
+      "description": "Deep-well plate to move",
+      "defaultValue": "wellplate_96_deep"
+    },
+    {
+      "name": "shelf",
+      "type": "object",
+      "is_array": false,
+      "description": "OpenShelf unit to pick from",
+      "defaultValue": "openshelf"
+    },
+    {
+      "name": "stand",
+      "type": "object",
+      "is_array": false,
+      "description": "Tagged stand used as the regrasp point",
+      "defaultValue": "wellplate_holder_tags"
+    },
+    {
+      "name": "fixture",
+      "type": "object",
+      "is_array": false,
+      "description": "Fixture plate to place onto",
+      "defaultValue": "fixture_plate"
+    }
+  ],
+  "nodes": [
+    {
+      "node_id": "start_0",
+      "type": "start",
+      "label": "Start"
+    },
+    {
+      "node_id": "localize_shelf",
+      "type": "skill",
+      "label": "Localize shelf from tags",
+      "description": "Cold-start tag solve. The stored shelf pose is about a metre out of reach, so use_prior is False and no max_move_mm guard is set -- that guard would reject exactly the correction being asked for.",
+      "skill_id": "localize_cold",
+      "parameters": {
+        "target": {
+          "$input": "shelf"
+        },
+        "arm": "left_arm",
+        "cold_start": true,
+        "min_detections": 6
+      }
+    },
+    {
+      "node_id": "pick_from_shelf",
+      "type": "skill",
+      "label": "Pick deep-well plate from shelf",
+      "description": "Top grasp off the shelf seat. Width and approach direction come from the plate's own grasp anchor.",
+      "skill_id": "take_from_shelf",
+      "parameters": {
+        "item": {
+          "$input": "plate"
+        },
+        "shelf": {
+          "$input": "shelf"
+        },
+        "shelf_anchor": "plate_seat",
+        "item_anchor": "grasp_top",
+        "arm": "right_arm"
+      }
+    },
+    {
+      "node_id": "put_on_stand",
+      "type": "skill",
+      "label": "Seat plate on tagged stand",
+      "description": "The regrasp point: put the plate down rather than hand it over, so there is no two-arm coordination and the stand's tags can measure where it landed.",
+      "skill_id": "place_on_stand",
+      "parameters": {
+        "plate": {
+          "$input": "plate"
+        },
+        "stand": {
+          "$input": "stand"
+        },
+        "stand_anchor": "plate_nest",
+        "plate_anchor": "nest_base",
+        "arm": "right_arm"
+      }
+    },
+    {
+      "node_id": "verify_on_stand",
+      "type": "skill",
+      "label": "Measure plate pose on the stand",
+      "description": "The stand is tagged, so measure where the plate actually landed instead of trusting the snap. Routine touch-up, so cold_start is False here.",
+      "skill_id": "localize_cold",
+      "parameters": {
+        "target": {
+          "$input": "stand"
+        },
+        "arm": "left_arm",
+        "cold_start": false
+      }
+    },
+    {
+      "node_id": "pick_from_stand",
+      "type": "skill",
+      "label": "Other arm picks plate off stand",
+      "description": "Same skill, different arm and anchors -- this is what makes the stand a generic regrasp point rather than a special case.",
+      "skill_id": "take_from_shelf",
+      "parameters": {
+        "item": {
+          "$input": "plate"
+        },
+        "shelf": {
+          "$input": "stand"
+        },
+        "shelf_anchor": "plate_nest",
+        "item_anchor": "grasp_top",
+        "arm": "left_arm"
+      }
+    },
+    {
+      "node_id": "put_on_fixture",
+      "type": "skill",
+      "label": "Seat plate on fixture_plate.mount_a1",
+      "description": "Final placement at mount_a1, one of the four 2x2 grid positions derived from the holders actually seated on the fixture plate in pipette_demo_world.",
+      "skill_id": "place_on_shelf",
+      "parameters": {
+        "item": {
+          "$input": "plate"
+        },
+        "shelf": {
+          "$input": "fixture"
+        },
+        "shelf_anchor": "mount_a1",
+        "item_anchor": "nest_base",
+        "arm": "left_arm"
+      }
+    },
+    {
+      "node_id": "end_1",
+      "type": "end",
+      "label": "End"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e0",
+      "from_node": "start_0",
+      "to_node": "localize_shelf",
+      "condition": {
+        "type": "default"
+      }
+    },
+    {
+      "edge_id": "e1",
+      "from_node": "localize_shelf",
+      "to_node": "pick_from_shelf",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e2",
+      "from_node": "pick_from_shelf",
+      "to_node": "put_on_stand",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e3",
+      "from_node": "put_on_stand",
+      "to_node": "verify_on_stand",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e4",
+      "from_node": "verify_on_stand",
+      "to_node": "pick_from_stand",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e5",
+      "from_node": "pick_from_stand",
+      "to_node": "put_on_fixture",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e6",
+      "from_node": "put_on_fixture",
+      "to_node": "end_1",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e7",
+      "from_node": "localize_shelf",
+      "to_node": "end_1",
+      "condition": {
+        "type": "on_failure"
+      }
+    },
+    {
+      "edge_id": "e8",
+      "from_node": "pick_from_shelf",
+      "to_node": "end_1",
+      "condition": {
+        "type": "on_failure"
+      }
+    },
+    {
+      "edge_id": "e9",
+      "from_node": "put_on_stand",
+      "to_node": "end_1",
+      "condition": {
+        "type": "on_failure"
+      }
+    },
+    {
+      "edge_id": "e10",
+      "from_node": "verify_on_stand",
+      "to_node": "end_1",
+      "condition": {
+        "type": "on_failure"
+      }
+    },
+    {
+      "edge_id": "e11",
+      "from_node": "pick_from_stand",
+      "to_node": "end_1",
+      "condition": {
+        "type": "on_failure"
+      }
+    },
+    {
+      "edge_id": "e12",
+      "from_node": "put_on_fixture",
+      "to_node": "end_1",
+      "condition": {
+        "type": "on_failure"
+      }
+    }
+  ]
+}

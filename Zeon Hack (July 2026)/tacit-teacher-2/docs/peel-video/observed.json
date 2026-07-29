@@ -1,0 +1,296 @@
+{
+  "V1": {
+    "clip": "IMG_0764",
+    "kind": "good",
+    "data": {
+      "steps": [
+        {
+          "order": 1,
+          "action": "Hold the plate tightly against the table while squeezing it from both sides.",
+          "start": "00:15",
+          "end": "00:37",
+          "narration_quote": "The first element is to hold the plate tightly at place with sufficient enough force so the plate does not move in any direction. I accomplish it by using my right hand and pushing it against the table while squeezing it from both sides."
+        },
+        {
+          "order": 2,
+          "action": "Find the edge of the rubber seal and push the thumb underneath.",
+          "start": "00:37",
+          "end": "00:57",
+          "narration_quote": "Next step, I will find the edge of the rubber seal. Push my thumb underneath and slowly start peeling while holding with the first joint of my finger of my index finger, so lead does not go too fast."
+        },
+        {
+          "order": 3,
+          "action": "Slowly peel the rubber seal mat from the plate.",
+          "start": "00:57",
+          "end": "01:15",
+          "narration_quote": "Then slowly while leads is being peeled, I increase the pressure and slowly continue it without shaking any of the liquid that you cannot see here."
+        },
+        {
+          "order": 4,
+          "action": "Gently place the peeled mat on the surface.",
+          "start": "01:15",
+          "end": "01:23",
+          "narration_quote": "Then I'm gently placing the lid on the surface and it's a complete successful procedure."
+        }
+      ],
+      "geometry": {
+        "grip_location": "from both sides of the plate",
+        "peel_direction": "diagonally across the plate, from top-left to bottom-right (from the perspective of the person)",
+        "plate_stabilised_how": "pushed against the table while squeezed from both sides",
+        "mat_disposal": "placed on the table surface",
+        "peel_angle_estimate_deg": "45"
+      },
+      "timing": {
+        "total_peel_seconds": "18",
+        "pace": "slowly",
+        "pauses": "none"
+      },
+      "cannot_determine": [
+        "sufficient enough force to hold the plate",
+        "pressure applied during peeling"
+      ]
+    }
+  },
+  "V2": {
+    "clip": "IMG_0766",
+    "kind": "good",
+    "data": {
+      "steps": [
+        {
+          "order": 1,
+          "action": "Secure the plate by holding it from both sides and pressing it against the table downwards.",
+          "start": "00:06",
+          "end": "00:11",
+          "narration_quote": "First, we're going to secure the plate while holding it from both sides and pressing it against the table downwards."
+        },
+        {
+          "order": 2,
+          "action": "Grip the bottom-left edge of the mat.",
+          "start": "00:11",
+          "end": "00:15",
+          "narration_quote": "And we're going to hold the edge of the seal and mat"
+        },
+        {
+          "order": 3,
+          "action": "Peel the mat from the bottom-left corner towards the top-right corner, moving it upwards.",
+          "start": "00:15",
+          "end": "00:34",
+          "narration_quote": "and move it upwards gently with equal pressure throughout the whole mat."
+        },
+        {
+          "order": 4,
+          "action": "Place the peeled mat on the side of the table.",
+          "start": "00:34",
+          "end": "00:38",
+          "narration_quote": "Finally, we're going to set it on the side and this is complete procedure."
+        }
+      ],
+      "geometry": {
+        "grip_location": "Bottom-left corner of the mat",
+        "peel_direction": "From bottom-left corner towards top-right corner",
+        "plate_stabilised_how": "Held from both sides by hands and pressed against the table downwards",
+        "mat_disposal": "Placed on the side of the table",
+        "peel_angle_estimate_deg": "Approximately 45 degrees"
+      },
+      "timing": {
+        "total_peel_seconds": "19",
+        "pace": "Slow and steady",
+        "pauses": "None"
+      },
+      "cannot_determine": [
+        "Force applied during peeling",
+        "Torque applied during peeling",
+        "Grip pressure on the mat"
+      ],
+      "verification": []
+    }
+  },
+  "V3": {
+    "clip": "IMG_0767",
+    "kind": "good",
+    "data": {
+      "steps": [
+        {
+          "order": 1,
+          "action": "Hold the plate tight from the side and press it against the table.",
+          "start": "00:06",
+          "end": "00:28",
+          "narration_quote": "First we hold it tight from the side, press it against the table."
+        },
+        {
+          "order": 2,
+          "action": "Grip the rubber mat from one side (top-right corner).",
+          "start": "00:10",
+          "end": "00:15",
+          "narration_quote": "Hold mat from one side"
+        },
+        {
+          "order": 3,
+          "action": "Gently pull the mat upwards and towards the opposite corner (bottom-left) with equal force.",
+          "start": "00:15",
+          "end": "00:28",
+          "narration_quote": "and gently pull it upwards while firmly pressing index and thumb. We gently with equal force pull it towards the other angle without disturbing the liquid."
+        },
+        {
+          "order": 4,
+          "action": "Place the removed mat on the table.",
+          "start": "00:30",
+          "end": "00:31",
+          "narration_quote": "Then we place in the liquid on the table."
+        }
+      ],
+      "geometry": {
+        "grip_location": "The plate is held by the right hand on its right side. The mat is gripped by the left hand's thumb and index finger at its top-right corner.",
+        "peel_direction": "The mat is peeled diagonally from the top-right corner towards the bottom-left corner of the plate.",
+        "plate_stabilised_how": "The plate is stabilized by a hand holding it against the table.",
+        "mat_disposal": "The mat is placed on the table.",
+        "peel_angle_estimate_deg": "Approximately 45 degrees relative to the plate surface during the initial lift, then decreasing as it is pulled away."
+      },
+      "timing": {
+        "total_peel_seconds": "13",
+        "pace": "Slow and steady.",
+        "pauses": "None"
+      },
+      "cannot_determine": [
+        "Force applied by index and thumb",
+        "Specific force used to pull the mat"
+      ],
+      "verification": [
+        "The narration states 'This is complete procedure successfully', implying successful completion, but no visual verification of the plate or wells is shown."
+      ]
+    }
+  },
+  "V4": {
+    "clip": "IMG_0774",
+    "kind": "good",
+    "data": {
+      "steps": [
+        {
+          "order": 1,
+          "action": "Secure the plate",
+          "start": "00:05",
+          "end": "00:13",
+          "narration_quote": "First we tightly secure the plate from the sides and press it against the table. Two forces, one from the side, one against the table."
+        },
+        {
+          "order": 2,
+          "action": "Grip one corner of the rubber mat",
+          "start": "00:13",
+          "end": "00:19",
+          "narration_quote": "Then we firmly hold one corner of the rubber mat"
+        },
+        {
+          "order": 3,
+          "action": "Gently start peeling the rubber mat",
+          "start": "00:19",
+          "end": "00:22",
+          "narration_quote": "and gently start peeling upwards and towards the other angle of the plate."
+        },
+        {
+          "order": 4,
+          "action": "Continue peeling the rubber mat slowly and steadily",
+          "start": "00:22",
+          "end": "00:36",
+          "narration_quote": "While maintaining the force, we make sure that we don't increase the speed of peeling because we're gonna contaminate the wells. We slowly continue until the last well is removed."
+        },
+        {
+          "order": 5,
+          "action": "Place the peeled rubber mat gently on the table",
+          "start": "00:36",
+          "end": "00:42",
+          "narration_quote": "Then we set gently rubber mat on the table"
+        }
+      ],
+      "geometry": {
+        "grip_location": "one corner of the rubber mat",
+        "peel_direction": "upwards and towards the other angle of the plate",
+        "plate_stabilised_how": "secured from the sides and pressed against the table by two hands",
+        "mat_disposal": "placed gently on the table",
+        "peel_angle_estimate_deg": "60-90 degrees"
+      },
+      "timing": {
+        "total_peel_seconds": "17",
+        "pace": "slow and steady",
+        "pauses": "none"
+      },
+      "cannot_determine": [],
+      "verification": [
+        "The wells appear uncontaminated after peeling.",
+        "Narration states 'this is successful peeling'."
+      ]
+    }
+  },
+  "V5": {
+    "clip": "IMG_0768",
+    "kind": "bad",
+    "data": {
+      "failure_name": "Contamination due to improper mat removal from deep-well plate",
+      "what_was_done_wrong": "The rubber mat was peeled off too quickly and forcefully from the deep-well plate.",
+      "visible_symptom": "Blue liquid from the wells splashed onto the surface of the plate and the removed rubber mat, indicating contamination.",
+      "symptom_timestamp": "00:16",
+      "detectable_by_camera": true,
+      "cannot_determine": [
+        "The exact chemical composition of the blue liquid (e.g., if it is truly 'protein extract')",
+        "The precise method for the correct way to peel the mat"
+      ],
+      "narrated_explanation": "Now we're gonna show improper way to peeling the rubber mat of the one mil dish well played. We hold it tightly, we hold the mat on the side and then we move faster. Whoa, look at that drop with. We see how the elements of our protein extract are contaminated and they are outside of the plate. This is failed experiment.",
+      "stated_correct_alternative": ""
+    }
+  },
+  "V6": {
+    "clip": "IMG_0770",
+    "kind": "bad",
+    "data": {
+      "failure_name": "Cross-contamination during mat removal",
+      "what_was_done_wrong": "The rubber mat was peeled off too quickly and forcefully from the well plate.",
+      "visible_symptom": "Blue liquid splashed onto the table, and blue liquid is visible on the underside of the rubber mat and on the top surface of the well plate, indicating liquid transfer between wells.",
+      "symptom_timestamp": "00:13",
+      "detectable_by_camera": true,
+      "cannot_determine": [],
+      "narrated_explanation": "We're going to do improper peeling of the rubber mat from the one meal dip dish well plate. Hold it tightly on the side, but not too tight, hold mat on the side and pull it. Oh. And then we contaminated it on the lid and then liquid or protein extract is moving between the wells. This is complete failure.",
+      "stated_correct_alternative": "None"
+    }
+  },
+  "V7": {
+    "clip": "IMG_0771",
+    "kind": "bad",
+    "data": {
+      "failure_name": "Improper peeling of the mat from the deep dish well plate",
+      "what_was_done_wrong": "The operator attempted to peel the mat from the deep-well plate without applying sufficient upward pressure.",
+      "visible_symptom": "The rubber mat remains sealed to the deep-well plate, failing to detach when pulled. The blue liquid in the wells remains contained.",
+      "symptom_timestamp": "00:15",
+      "detectable_by_camera": true,
+      "cannot_determine": [],
+      "narrated_explanation": "it doesn't pull because we don't apply enough upward pressure. The mat stays sealed. Task is incomplete.",
+      "stated_correct_alternative": "Apply enough upward pressure to peel the mat."
+    }
+  },
+  "V8": {
+    "clip": "IMG_0772",
+    "kind": "bad",
+    "data": {
+      "failure_name": "Improper Mat Peeling Leading to Cross-Contamination",
+      "what_was_done_wrong": "The rubber mat was pulled from one corner and moved upward too quickly, causing the deep-well plate to fly out and spill its contents.",
+      "visible_symptom": "Blue liquid is spilled and cross-contaminated on the rubber mat and around the wells of the deep-well plate. The plate also flips over.",
+      "symptom_timestamp": "00:17",
+      "detectable_by_camera": true,
+      "cannot_determine": [],
+      "narrated_explanation": "We're going to show improper way of peeling the rubber mat from the 1 milliliter deep dish well plate. Hold it from the side, not too tightly. Pull it pull the mat from one corner, move upward and then the plate flies out and we see the elements of the protein extract cross contaminated around the lid around the mat. This is failure.",
+      "stated_correct_alternative": ""
+    }
+  },
+  "V9": {
+    "clip": "IMG_0773",
+    "kind": "bad",
+    "data": {
+      "failure_name": "Cross-contamination from improper handling of the rubber mat",
+      "what_was_done_wrong": "The rubber mat was placed face down on the table after being removed from the plate, and then picked up and placed back on the plate.",
+      "visible_symptom": "Blue liquid residue (cross-contamination) is visible on the table where the mat was placed.",
+      "symptom_timestamp": "00:26",
+      "detectable_by_camera": true,
+      "cannot_determine": [],
+      "narrated_explanation": "This is failure because we put it the same way how it was on the plate. And we have cross contamination that you can visibly see on the table from multiple wells. This is failure.",
+      "stated_correct_alternative": ""
+    }
+  }
+}

@@ -1,0 +1,549 @@
+urdf: openshelf.urdf
+parts:
+  body:
+    links: [body]
+    description: Open shelf unit (~1.49 x 1.78 x 0.78 m). Scan mesh from Downloads/Blerim
+      Callibration.obj, converted mm to m and decimated to 100k faces; source frame
+      kept (y-up, floor at y=0). Not watertight.
+articulations:
+  default:
+    description: Static object, no actuated joints
+    joints: {}
+anchors:
+  object:
+    parent_link: world
+    description: Floor placement frame, origin at the (max_x, max_y, min_z) bbox corner
+      (base on z=0, open front faces +Y). Y-up source rotated to Z-up; verified to
+      match the finalized scratch/openshelf_old placement within ~2 cm (decimation
+      difference).
+    link_T_anchor:
+      xyz: [0.737806, -0.00357212, 0.392149]
+      wxyz: [0.507135, -0.504851, -0.492817, -0.495046]
+  carrier_slot:
+    parent_link: body
+    description: World convention (+Z up). Seat at the accessible shelf opening for
+      the wellplate_holder_tags_team10 object anchor. Derived from the confirmed shelf-opening
+      placement and remains rigid with the openshelf.
+    link_T_anchor:
+      xyz: [-0.478842, 0.802083, 0.248722]
+      wxyz: [0.708649, -0.705458, 0.00851062, 0.00854952]
+  sensorbox_slot:
+    parent_link: body
+    description: Receiving frame for sensorbox_team10.object, calibrated from the
+      confirmed World Builder placement in the accessible shelf opening.
+    link_T_anchor:
+      xyz: [-0.00726685, -1.29665, 0.83]
+      wxyz: [-0.691668, 0.0, 0.0, 0.722215]
+  tag_240:
+    parent_link: body
+    description: Calibrated AprilTag 240 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.67855, 1.07618, 0.407474]
+      wxyz: [0.707758, -0.00180003, 0.00412514, -0.70644]
+  tag_241:
+    parent_link: body
+    description: Calibrated AprilTag 241 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.678231, 1.03744, 0.407688]
+      wxyz: [0.708183, -0.000967551, 0.00334207, -0.70602]
+  tag_242:
+    parent_link: body
+    description: Calibrated AprilTag 242 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.55483, 0.941024, 0.303693]
+      wxyz: [0.699356, 0.000373937, 0.71472, -0.00869165]
+  tag_243:
+    parent_link: body
+    description: Calibrated AprilTag 243 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.554934, 0.940868, 0.265896]
+      wxyz: [0.69652, 0.00111675, 0.717462, -0.0103349]
+  tag_244:
+    parent_link: body
+    description: Calibrated AprilTag 244 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.59729, 0.977532, 0.407133]
+      wxyz: [0.00310951, -0.00312144, -0.000199641, 0.99999]
+  tag_245:
+    parent_link: body
+    description: Calibrated AprilTag 245 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.636161, 0.977715, 0.407683]
+      wxyz: [0.00300788, -0.000512756, -0.000932688, 0.999995]
+  tag_246:
+    parent_link: body
+    description: Calibrated AprilTag 246 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.673739, 1.35708, 0.407834]
+      wxyz: [0.721274, 0.0072303, 0.00545662, 0.69259]
+  tag_247:
+    parent_link: body
+    description: Calibrated AprilTag 247 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.6722, 1.39517, 0.406594]
+      wxyz: [0.720721, 0.0127114, 0.0137121, 0.692973]
+  tag_248:
+    parent_link: body
+    description: Calibrated AprilTag 248 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.535474, 0.802569, 0.318848]
+      wxyz: [-0.699077, 0.715015, -0.00371455, -0.00569273]
+  tag_249:
+    parent_link: body
+    description: Calibrated AprilTag 249 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.496913, 0.802234, 0.318385]
+      wxyz: [-0.698857, 0.715258, -0.00106767, 0.0016677]
+  tag_250:
+    parent_link: body
+    description: Calibrated AprilTag 250 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.596325, 0.850502, 0.407532]
+      wxyz: [-0.00814212, 0.00247525, -0.0150402, 0.999851]
+  tag_251:
+    parent_link: body
+    description: Calibrated AprilTag 251 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.635218, 0.849539, 0.407365]
+      wxyz: [-0.00823563, 0.00565549, -0.00932507, 0.999907]
+  tag_252:
+    parent_link: body
+    description: Calibrated AprilTag 252 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.638973, 1.41895, 0.391932]
+      wxyz: [-0.687447, 0.726167, -0.00679193, 0.00718625]
+  tag_253:
+    parent_link: body
+    description: Calibrated AprilTag 253 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.602555, 1.41568, 0.387238]
+      wxyz: [-0.686835, 0.726706, -0.0124648, -0.000651722]
+  tag_254:
+    parent_link: body
+    description: Calibrated AprilTag 254 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.402831, 0.801148, 0.246572]
+      wxyz: [-0.471715, 0.489282, 0.520556, 0.516826]
+  tag_255:
+    parent_link: body
+    description: Calibrated AprilTag 255 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.405491, 0.801528, 0.285432]
+      wxyz: [-0.472295, 0.488924, 0.519755, 0.517441]
+  tag_256:
+    parent_link: body
+    description: Calibrated AprilTag 256 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.553887, 0.846273, 0.392715]
+      wxyz: [0.513067, 0.492665, 0.519905, 0.473014]
+  tag_257:
+    parent_link: body
+    description: Calibrated AprilTag 257 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.55316, 0.884893, 0.390477]
+      wxyz: [0.514688, 0.492782, 0.515982, 0.475421]
+  tag_258:
+    parent_link: body
+    description: Calibrated AprilTag 258 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.430888, 1.41613, 0.391484]
+      wxyz: [0.0145371, 0.00889015, 0.715455, 0.69845]
+  tag_259:
+    parent_link: body
+    description: Calibrated AprilTag 259 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.46205, 1.41393, 0.386814]
+      wxyz: [0.0136185, -0.00199195, 0.713402, 0.70062]
+  tag_260:
+    parent_link: body
+    description: Calibrated AprilTag 260 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.555231, 0.857497, 0.3471]
+      wxyz: [0.699141, -0.00251683, 0.714861, -0.0130108]
+  tag_261:
+    parent_link: body
+    description: Calibrated AprilTag 261 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.555701, 0.856835, 0.308832]
+      wxyz: [0.696444, -0.00440916, 0.717463, -0.0138972]
+  tag_262:
+    parent_link: body
+    description: Calibrated AprilTag 262 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.383391, 0.967156, 0.390252]
+      wxyz: [-0.50117, 0.504172, 0.501509, -0.49308]
+  tag_263:
+    parent_link: body
+    description: Calibrated AprilTag 263 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.383416, 1.00575, 0.390592]
+      wxyz: [-0.50228, 0.503869, 0.5006, -0.493184]
+  tag_264:
+    parent_link: body
+    description: Calibrated AprilTag 264 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.362247, 0.879267, 0.404602]
+      wxyz: [0.697676, 0.00256347, -0.00266397, 0.716404]
+  tag_265:
+    parent_link: body
+    description: Calibrated AprilTag 265 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.363285, 0.918086, 0.404691]
+      wxyz: [0.698867, 0.00460496, -0.00279015, 0.715231]
+  tag_266:
+    parent_link: body
+    description: Calibrated AprilTag 266 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.695249, 1.2139, 0.388072]
+      wxyz: [-0.486878, 0.52035, 0.489122, -0.502936]
+  tag_267:
+    parent_link: body
+    description: Calibrated AprilTag 267 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.695022, 1.25303, 0.386994]
+      wxyz: [-0.484138, 0.520966, 0.492011, -0.502125]
+  tag_268:
+    parent_link: body
+    description: Calibrated AprilTag 268 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.384661, 0.841365, 0.388568]
+      wxyz: [0.490488, -0.510572, -0.487171, 0.511276]
+  tag_269:
+    parent_link: body
+    description: Calibrated AprilTag 269 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.384061, 0.87986, 0.387471]
+      wxyz: [-0.493747, 0.509433, 0.488157, -0.508324]
+  tag_270:
+    parent_link: body
+    description: Calibrated AprilTag 270 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.342944, 1.28001, 0.406816]
+      wxyz: [-0.702262, -0.00848712, 0.00223131, 0.711864]
+  tag_271:
+    parent_link: body
+    description: Calibrated AprilTag 271 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.34343, 1.24143, 0.406476]
+      wxyz: [-0.702223, -0.0141669, 0.00513085, 0.711798]
+  tag_272:
+    parent_link: body
+    description: Calibrated AprilTag 272 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.323933, 1.26277, 0.386331]
+      wxyz: [0.506567, 0.499862, 0.511321, 0.481745]
+  tag_273:
+    parent_link: body
+    description: Calibrated AprilTag 273 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.324322, 1.30084, 0.383278]
+      wxyz: [0.505833, 0.504874, 0.511383, 0.477202]
+  tag_274:
+    parent_link: body
+    description: Calibrated AprilTag 274 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.552797, 0.931614, 0.392596]
+      wxyz: [0.505624, 0.499245, 0.504437, 0.490552]
+  tag_275:
+    parent_link: body
+    description: Calibrated AprilTag 275 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.552395, 0.970106, 0.392053]
+      wxyz: [0.504282, 0.499696, 0.504364, 0.491549]
+  tag_276:
+    parent_link: body
+    description: Calibrated AprilTag 276 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.36764, 1.33063, 0.404551]
+      wxyz: [0.722583, -0.00255319, -0.0181772, 0.69104]
+  tag_277:
+    parent_link: body
+    description: Calibrated AprilTag 277 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.366099, 1.36927, 0.404532]
+      wxyz: [0.723793, 0.00204624, -0.00920298, 0.689952]
+  tag_278:
+    parent_link: body
+    description: Calibrated AprilTag 278 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.699614, 0.901884, 0.387251]
+      wxyz: [-0.512528, -0.482862, 0.526928, 0.475926]
+  tag_279:
+    parent_link: body
+    description: Calibrated AprilTag 279 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.700607, 0.863392, 0.390547]
+      wxyz: [-0.513431, -0.480847, 0.526505, 0.47746]
+  tag_280:
+    parent_link: body
+    description: Calibrated AprilTag 280 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.693614, 1.35909, 0.386282]
+      wxyz: [-0.491154, 0.512711, 0.503737, -0.492082]
+  tag_281:
+    parent_link: body
+    description: Calibrated AprilTag 281 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.693991, 1.39846, 0.388202]
+      wxyz: [-0.493672, 0.514112, 0.503153, -0.488685]
+  tag_282:
+    parent_link: body
+    description: Calibrated AprilTag 282 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.609821, 0.788095, 0.407439]
+      wxyz: [0.999563, 0.00191723, 0.0050638, -0.0290573]
+  tag_283:
+    parent_link: body
+    description: Calibrated AprilTag 283 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.570803, 0.786228, 0.4077]
+      wxyz: [0.999603, 0.00328545, 0.000488113, -0.0279834]
+  tag_284:
+    parent_link: body
+    description: Calibrated AprilTag 284 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.353932, 1.08514, 0.403846]
+      wxyz: [0.708667, 0.00224056, -0.00528831, -0.70552]
+  tag_285:
+    parent_link: body
+    description: Calibrated AprilTag 285 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.353746, 1.04668, 0.40384]
+      wxyz: [0.70815, -0.00779177, 0.00595098, -0.705994]
+  tag_286:
+    parent_link: body
+    description: Calibrated AprilTag 286 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.698999, 1.04503, 0.391061]
+      wxyz: [-0.484135, 0.517359, 0.489283, -0.508483]
+  tag_287:
+    parent_link: body
+    description: Calibrated AprilTag 287 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.698832, 1.08434, 0.389455]
+      wxyz: [-0.484975, 0.517199, 0.487303, -0.509745]
+  tag_288:
+    parent_link: body
+    description: Calibrated AprilTag 288 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.427178, 0.773367, 0.405953]
+      wxyz: [0.0347595, 0.0100394, 4.11464e-05, 0.999345]
+  tag_289:
+    parent_link: body
+    description: Calibrated AprilTag 289 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.465987, 0.775956, 0.406572]
+      wxyz: [0.0343756, 0.00730995, -0.00330204, 0.999377]
+  tag_290:
+    parent_link: body
+    description: Calibrated AprilTag 290 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.328554, 0.942387, 0.386278]
+      wxyz: [0.492727, -0.503018, 0.508749, -0.495345]
+  tag_291:
+    parent_link: body
+    description: Calibrated AprilTag 291 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.328919, 0.903194, 0.38633]
+      wxyz: [0.491484, -0.505653, 0.508349, -0.494308]
+  tag_292:
+    parent_link: body
+    description: Calibrated AprilTag 292 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.384148, 0.860252, 0.263414]
+      wxyz: [-0.00537661, 0.707624, -0.00498298, -0.706551]
+  tag_293:
+    parent_link: body
+    description: Calibrated AprilTag 293 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.38482, 0.860712, 0.225715]
+      wxyz: [-0.0039388, 0.711628, -0.005573, -0.702524]
+  tag_294:
+    parent_link: body
+    description: Calibrated AprilTag 294 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.382094, 0.939739, 0.295973]
+      wxyz: [-0.703898, -0.0556083, 0.704741, 0.0691032]
+  tag_295:
+    parent_link: body
+    description: Calibrated AprilTag 295 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.382407, 0.93278, 0.33501]
+      wxyz: [-0.699216, -0.0573262, 0.709299, 0.0686059]
+  tag_296:
+    parent_link: body
+    description: Calibrated AprilTag 296 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.331759, 0.745095, 0.388584]
+      wxyz: [0.50076, 0.500223, 0.515053, 0.483464]
+  tag_297:
+    parent_link: body
+    description: Calibrated AprilTag 297 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.331479, 0.784551, 0.387105]
+      wxyz: [0.502058, 0.500351, 0.514828, 0.482222]
+  tag_298:
+    parent_link: body
+    description: Calibrated AprilTag 298 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.325987, 1.14124, 0.383586]
+      wxyz: [-0.471774, 0.520866, -0.489001, 0.516726]
+  tag_299:
+    parent_link: body
+    description: Calibrated AprilTag 299 (offline tag-calibration)
+    link_T_anchor:
+      xyz: [-0.326895, 1.10231, 0.386053]
+      wxyz: [-0.469879, 0.521886, -0.48929, 0.51715]
+  test_neuron_lab:
+    parent_link: world
+    description: ''
+    link_T_anchor:
+      xyz: [-0.426465, 0.844227, 0.0881875]
+      wxyz: [0.032382, 0.737122, 0.674205, -0.0324154]
+    grasp:
+      width: 0.08
+      gripper_variant: wellplate
+  test_neuron_lab_copy:
+    parent_link: world
+    description: ''
+    link_T_anchor:
+      xyz: [-0.424347, 0.891211, 0.599806]
+      wxyz: [0.032382, 0.737122, 0.674205, -0.0324154]
+    grasp:
+      width: 0.08
+      gripper_variant: wellplate
+  prepose_1:
+    parent_link: world
+    description: ''
+    link_T_anchor:
+      xyz: [-0.426462, 0.843808, 0.0881875]
+      wxyz: [0.032394, 0.737124, 0.674201, -0.0324151]
+    grasp:
+      width: 0.0315
+      gripper_variant: wellplate
+  prepose_2:
+    parent_link: world
+    description: ''
+    link_T_anchor:
+      xyz: [-0.426462, 0.853808, 0.0882327]
+      wxyz: [0.032394, 0.737124, 0.674201, -0.0324151]
+    grasp:
+      width: 0.0315
+      gripper_variant: wellplate
+  prepose_3:
+    parent_link: body
+    description: ''
+    link_T_anchor:
+      xyz: [-0.423849, 0.911851, 0.720449]
+      wxyz: [0.032394, 0.737124, 0.674201, -0.0324151]
+    grasp:
+      width: 0.0315
+      gripper_variant: wellplate
+  demo:
+    parent_link: world
+    description: ''
+    link_T_anchor:
+      xyz: [-0.474853, 0.852658, 0.37853]
+      wxyz: [0.101825, 0.680044, 0.725903, -0.0153671]
+    grasp:
+      width: 0.08
+      gripper_variant: wellplate
+  bronte:
+    parent_link: world
+    description: ''
+    link_T_anchor:
+      xyz: [-0.476683, 0.932206, 0.352097]
+      wxyz: [0.0474232, 0.70039, 0.711895, -0.0202605]
+    grasp:
+      width: 0.0185
+      gripper_variant: wellplate
+  grab_holder:
+    parent_link: world
+    description: ''
+    link_T_anchor:
+      xyz: [-0.476683, 0.932206, 0.352097]
+      wxyz: [0.0474232, 0.70039, 0.711895, -0.0202605]
+    grasp:
+      width: 0.0185
+      gripper_variant: wellplate
+  grab_holder_up:
+    parent_link: world
+    description: ''
+    link_T_anchor:
+      xyz: [-0.477012, 0.954913, 0.349909]
+      wxyz: [0.0474232, 0.70039, 0.711895, -0.0202605]
+    grasp:
+      width: 0.0185
+      gripper_variant: wellplate
+  grab_holder_grasped_back:
+    parent_link: world
+    description: ''
+    link_T_anchor:
+      xyz: [-0.493644, 0.9954, 0.772596]
+      wxyz: [0.0474232, 0.70039, 0.711895, -0.0202605]
+    grasp:
+      width: 0.0185
+      gripper_variant: wellplate
+  grab_holder_1:
+    parent_link: world
+    description: ''
+    link_T_anchor:
+      xyz: [-0.476683, 0.932206, 0.352097]
+      wxyz: [0.0474232, 0.70039, 0.711895, -0.0202605]
+    grasp:
+      width: 0.0185
+      gripper_variant: wellplate
+  grab_holder_up_2:
+    parent_link: world
+    description: ''
+    link_T_anchor:
+      xyz: [-0.477012, 0.954913, 0.349909]
+      wxyz: [0.0474232, 0.70039, 0.711895, -0.0202605]
+    grasp:
+      width: 0.0185
+      gripper_variant: wellplate
+  grab_holder_grasped_back_3:
+    parent_link: world
+    description: ''
+    link_T_anchor:
+      xyz: [-0.493644, 0.9954, 0.772596]
+      wxyz: [0.0474232, 0.70039, 0.711895, -0.0202605]
+    grasp:
+      width: 0.0185
+      gripper_variant: wellplate
+  grab_holder_set_down_4:
+    parent_link: world
+    description: ''
+    link_T_anchor:
+      xyz: [-0.535625, 0.72541, 1.06914]
+      wxyz: [-0.491112, 0.505063, 0.501625, -0.502089]
+    grasp:
+      width: 0.0185
+      gripper_variant: wellplate
+  grab_holder_release_5:
+    parent_link: world
+    description: ''
+    link_T_anchor:
+      xyz: [-0.535625, 0.72541, 1.06914]
+      wxyz: [-0.491112, 0.505063, 0.501625, -0.502089]
+    grasp:
+      width: 0.05
+      gripper_variant: wellplate
+  holder_position_0:
+    parent_link: world
+    description: ''
+    link_T_anchor:
+      xyz: [-0.493644, 0.929721, 0.7723]
+      wxyz: [0.0474232, 0.70039, 0.711895, -0.0202605]
+    grasp:
+      width: 0.05
+      gripper_variant: wellplate
+  holder_position_move_open_0:
+    parent_link: world
+    description: ''
+    link_T_anchor:
+      xyz: [-0.476683, 0.932206, 0.352097]
+      wxyz: [0.0474232, 0.70039, 0.711895, -0.0202605]
+    grasp:
+      width: 0.05
+      gripper_variant: wellplate

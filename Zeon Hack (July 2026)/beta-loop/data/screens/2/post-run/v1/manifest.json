@@ -1,0 +1,28 @@
+{
+  "run": 2,
+  "round": 2,
+  "phase": "post-run-analysis",
+  "analysis_version": "v1",
+  "label": "r2-discovery-v5-slope-only",
+  "scoring_mode": "slope",
+  "superseded_by": "data/screens/2/post-run/v2/manifest.json",
+  "decision_tree_spec": "pvjthomas/runs/2/v5/run2_decision_tree.md",
+  "notes": "Initial post-run EDA before endpoint fallback scoring was implemented.",
+  "files": {
+    "decision_report": "data/screens/2/post-run/v1/run2_decision_report.md",
+    "analysis": {
+      "round_summary_eda": "data/screens/2/post-run/v1/analysis/r2_round_summary_eda.json",
+      "annotated_csv": "data/screens/2/post-run/v1/analysis/r2_kinetics_annotated.csv",
+      "parsed_json": "data/screens/2/post-run/v1/analysis/r2_parsed.json",
+      "pattern_summary_json": "data/screens/2/post-run/v1/analysis/r2_pattern_summary.json",
+      "pattern_summary_md": "data/screens/2/post-run/v1/analysis/r2_pattern_summary.md",
+      "llm_context_json": "data/screens/2/post-run/v1/analysis/r2_kinetics_llm_context.json",
+      "llm_context_md": "data/screens/2/post-run/v1/analysis/r2_kinetics_llm_context.md"
+    }
+  },
+  "shared_inputs": {
+    "kinetics_csv": "data/screens/2/post-run/kinetics_r2.csv",
+    "nitrocefin_timing_json": "data/screens/2/post-run/nitrocefin_timing.json",
+    "reader_lid_close_utc": "data/screens/2/post-run/reader_lid_close_utc.txt"
+  }
+}

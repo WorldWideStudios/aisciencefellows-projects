@@ -1,0 +1,49 @@
+{
+  "known_inhibitors": [
+    "clavulanic acid",
+    "clavulanate lithium",
+    "sulbactam",
+    "tazobactam",
+    "enmetazobactam"
+  ],
+  "expected_substrates_low_inhibition": [
+    "ampicillin",
+    "cephalexin"
+  ],
+  "assay_notes": {
+    "typical_screen_conc_uM": 50,
+    "pre_incubation_min": 10,
+    "read_wavelength_nm": 490,
+    "metric": "initial slope A490 vs time",
+    "hit_threshold_pct": 50
+  },
+  "compound_assay_priors": {
+    "T19860": {
+      "name": "Clavulanic Acid",
+      "role": "pos-ctrl-clavaculin",
+      "recommended_screen_uM": 50,
+      "literature_ki_uM_tem1": 0.85,
+      "expected_at_50uM": ">=50% inhibition",
+      "refs_file": "data/compound_literature/refs/T19860.json"
+    },
+    "T14979": {
+      "name": "Clavulanate lithium",
+      "role": "positive_control_analog",
+      "recommended_screen_uM": 50,
+      "note": "Li+ salt of clavulanic acid (T19860 core); use same assay priors as T19860."
+    }
+  },
+  "library_notes": {
+    "total_compounds": 6,
+    "exclude_compound_ids": ["T19709"]
+  },
+  "sources": [
+    {
+      "compound_id": "T19860",
+      "pmid": "40484381",
+      "pmcid": "PMC12274840",
+      "doi": "10.1016/j.jbc.2025.110347",
+      "citation": "Radojković et al., J Biol Chem 2025 — TEM-1 clavulanic acid Ki = 0.85 µM"
+    }
+  ]
+}

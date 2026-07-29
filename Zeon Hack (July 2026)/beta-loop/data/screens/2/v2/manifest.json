@@ -1,0 +1,20 @@
+{
+  "run": 2,
+  "round": 2,
+  "version": 2,
+  "label": "r2-discovery-v2",
+  "created_at": "2026-07-25T18:25:00-07:00",
+  "author": "pvjthomas",
+  "status": "pending_signoff",
+  "supersedes": "data/screens/2/v1/manifest.json",
+  "note": "10-compound screen (4 tier-1 + 4 substrate + 2 diverse); cut from 24 in v1",
+  "description": "Round 2 discovery v2 \u2014 30 sample wells (10 compounds \u00d7 triplicate) + 12 controls @ 50 \u00b5M",
+  "files": {
+    "compound_list": "data/screens/2/v2/compound_list.json",
+    "compound_list_csv": "data/screens/2/v2/compound_list.csv",
+    "plate_map": "data/screens/2/v2/plate_map.json",
+    "selection_rationale": "pvjthomas/runs/2/v2/selection_rationale.md",
+    "active_plate_map": "data/plate_map_r2.json",
+    "active_selection_rationale": "pvjthomas/selection_rationale.md"
+  }
+}

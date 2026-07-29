@@ -1,0 +1,83 @@
+{
+  "threshold": 0.7,
+  "neighbors": [
+    {
+      "reference_name": "clavulanic acid",
+      "reference_smiles": "[H][C@@]12CC(=O)N1[C@@H](C(O)=O)\\C(O2)=C\\CO",
+      "neighbors": [
+        {
+          "compound_id": "T19860",
+          "name": "Clavulanic Acid",
+          "tanimoto": 1.0,
+          "label": "probable_analog"
+        },
+        {
+          "compound_id": "T14979",
+          "name": "Clavulanate lithium",
+          "tanimoto": 0.744,
+          "label": "scaffold_neighbor"
+        }
+      ]
+    },
+    {
+      "reference_name": "sulbactam",
+      "reference_smiles": "[Na+].[H][C@@]12CC(=O)N1C(C([O-])=O)C(C)(C)S2(=O)=O",
+      "neighbors": [
+        {
+          "compound_id": "T6685",
+          "name": "Sulbactam sodium",
+          "tanimoto": 1.0,
+          "label": "probable_analog"
+        },
+        {
+          "compound_id": "T1631",
+          "name": "Sulbactam",
+          "tanimoto": 1.0,
+          "label": "probable_analog"
+        }
+      ]
+    },
+    {
+      "reference_name": "tazobactam",
+      "reference_smiles": "C([C@@]1(C)[C@H](C(O)=O)N2[C@](S1(=O)=O)(CC2=O)[H])N3C=CN=N3",
+      "neighbors": [
+        {
+          "compound_id": "T1262",
+          "name": "Tazobactam",
+          "tanimoto": 1.0,
+          "label": "probable_analog"
+        }
+      ]
+    },
+    {
+      "reference_name": "enmetazobactam",
+      "reference_smiles": "[H][C@@]12CC(=O)N1[C@@H](C([O-])=O)[C@](C)(Cn1cc[n+](C)n1)S2(=O)=O",
+      "neighbors": [
+        {
+          "compound_id": "T14081",
+          "name": "Enmetazobactam",
+          "tanimoto": 1.0,
+          "label": "probable_analog"
+        }
+      ]
+    },
+    {
+      "reference_name": "clavulanate lithium",
+      "reference_smiles": "[Li+].[H][C@@]12CC(=O)N1[C@@H](C([O-])=O)\\C(O2)=C\\CO",
+      "neighbors": [
+        {
+          "compound_id": "T14979",
+          "name": "Clavulanate lithium",
+          "tanimoto": 1.0,
+          "label": "probable_analog"
+        },
+        {
+          "compound_id": "T19860",
+          "name": "Clavulanic Acid",
+          "tanimoto": 0.744,
+          "label": "scaffold_neighbor"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+skill_id: wellplate_shaker_load
+version: "1.0.0"
+description: "Right arm places a held well plate into a wellplate shaker slot (slot_1..slot_4): descends onto the slot grasp pose, releases, then snaps the plate to <slot>_unload (the settled pose ~4mm lower it drops to) — the exact spot wellplate_shaker_unload grabs from, so pick and drop can't disagree. Retreats and stows."
+
+# parameters are derived from the wellplate_shaker_load() signature in robotic_code.py
+
+tags:
+  - pipette_demo
+  - wellplate_shaker
+  - plate
+  - load
+  - place

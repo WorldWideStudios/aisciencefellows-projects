@@ -1,0 +1,117 @@
+{
+  "workflow_id": "pipette_demo",
+  "name": "Pipette Demo",
+  "description": "Minimal end-to-end liquid transfer: pick up an electronic pipette, latch a fresh tip, aspirate from one well, dispense into another, eject the tip, and put the pipette back. A deliberately small subset of a real protocol — no plate maps, conditionals, loops, notifications, or instruments.",
+  "version": "1.0.0",
+  "author": "zeon",
+  "created_at": "2026-07-24T00:00:00.000Z",
+  "updated_at": "2026-07-24T00:00:00.000Z",
+  "simulation_validated": false,
+  "objects": [],
+  "inputs": [
+    { "name": "pipette",      "type": "object", "is_array": false, "description": "Electronic pipette to use",                          "defaultValue": "epipette_10ul" },
+    { "name": "tipbox",       "type": "object", "is_array": false, "description": "Tip rack to draw a fresh tip from",                  "defaultValue": "tipbox_10ul_1" },
+    { "name": "tip_index",    "type": "int",                       "description": "Tip position in the rack; 0 = take the next tip and advance the rack counter", "defaultValue": 0 },
+    { "name": "source_plate", "type": "object", "is_array": false, "description": "Plate to aspirate from",                             "defaultValue": "wellplate_pcr_parts_1" },
+    { "name": "source_well",  "type": "string",                    "description": "Well to aspirate from (A1–H12)",                     "defaultValue": "A1" },
+    { "name": "dest_plate",   "type": "object", "is_array": false, "description": "Plate to dispense into",                             "defaultValue": "wellplate_96_flatbottom" },
+    { "name": "dest_well",    "type": "string",                    "description": "Well to dispense into (A1–H12)",                     "defaultValue": "A1" },
+    { "name": "volume",       "type": "float",                     "description": "Volume to transfer (µL)",                            "defaultValue": 5 }
+  ],
+  "nodes": [
+    {
+      "node_id": "start_0",
+      "type": "start",
+      "label": "Start"
+    },
+    {
+      "node_id": "grab_pipette",
+      "type": "skill",
+      "label": "Pick Up Pipette",
+      "description": "Grasp the pipette at its 'grab' anchor with the left arm and lift it off the stand.",
+      "skill_id": "epipette_grab",
+      "parameters": {
+        "pipette": { "$input": "pipette" }
+      }
+    },
+    {
+      "node_id": "attach_tip",
+      "type": "skill",
+      "label": "Attach a Tip",
+      "description": "Press the nozzle onto one tip in the rack to latch it, then lift off.",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": { "$input": "tipbox" },
+        "pipette": { "$input": "pipette" },
+        "tip_index": { "$input": "tip_index" }
+      }
+    },
+    {
+      "node_id": "aspirate",
+      "type": "skill",
+      "label": "Aspirate",
+      "description": "Dip into the source well and draw up the requested volume.",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": { "$input": "source_plate" },
+        "anchor": { "$input": "source_well" },
+        "pipette": { "$input": "pipette" },
+        "volume": { "$input": "volume" }
+      }
+    },
+    {
+      "node_id": "dispense",
+      "type": "skill",
+      "label": "Dispense",
+      "description": "Descend into the destination well and expel the volume.",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": { "$input": "dest_plate" },
+        "anchor": { "$input": "dest_well" },
+        "pipette": { "$input": "pipette" },
+        "volume": { "$input": "volume" }
+      }
+    },
+    {
+      "node_id": "eject_tip",
+      "type": "skill",
+      "label": "Eject Tip",
+      "description": "Drop the used tip at the cell's eject station.",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": { "$input": "pipette" }
+      }
+    },
+    {
+      "node_id": "place_pipette",
+      "type": "skill",
+      "label": "Put Pipette Back",
+      "description": "Retrace the pick path in reverse and release the pipette back onto its stand.",
+      "skill_id": "epipette_place",
+      "parameters": {
+        "pipette": { "$input": "pipette" }
+      }
+    },
+    {
+      "node_id": "end_1",
+      "type": "end",
+      "label": "End"
+    }
+  ],
+  "edges": [
+    { "edge_id": "e0", "from_node": "start_0",       "to_node": "grab_pipette",  "condition": { "type": "default" } },
+    { "edge_id": "e1", "from_node": "grab_pipette",  "to_node": "attach_tip",    "condition": { "type": "on_success" } },
+    { "edge_id": "e2", "from_node": "attach_tip",    "to_node": "aspirate",      "condition": { "type": "on_success" } },
+    { "edge_id": "e3", "from_node": "aspirate",      "to_node": "dispense",      "condition": { "type": "on_success" } },
+    { "edge_id": "e4", "from_node": "dispense",      "to_node": "eject_tip",     "condition": { "type": "on_success" } },
+    { "edge_id": "e5", "from_node": "eject_tip",     "to_node": "place_pipette", "condition": { "type": "on_success" } },
+    { "edge_id": "e6", "from_node": "place_pipette", "to_node": "end_1",         "condition": { "type": "on_success" } }
+  ],
+  "canvas_ui": {
+    "kind": "react",
+    "source_ref": "canvas/pipette_demo_screen.tsx",
+    "enabled": true,
+    "version": 1,
+    "updated_at": "2026-07-24T00:00:00.000Z"
+  }
+}

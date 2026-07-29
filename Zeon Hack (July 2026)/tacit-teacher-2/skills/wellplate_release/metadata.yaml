@@ -1,0 +1,10 @@
+skill_id: wellplate_release
+version: "1.0.0"
+description: "Release a plate held by the right arm (open gripper, detach) and retreat the right arm to its staging pose, clearing it out of the way. The plate stays exactly where it currently is — this does not relocate it. Never touches the left arm."
+
+# parameters are derived from the wellplate_release() signature in robotic_code.py
+
+tags:
+  - plateandholder
+  - plate
+  - release

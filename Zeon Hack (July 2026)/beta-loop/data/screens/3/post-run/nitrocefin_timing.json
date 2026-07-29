@@ -1,0 +1,254 @@
+{
+  "run_id": "r3-discovery-v1-manual-nitro-sync",
+  "source_log": null,
+  "generated_at_utc": "2026-07-26T22:05:18.838731Z",
+  "method": "operator_estimate_6_dispenses_120s",
+  "note": "Operator estimate: 12-channel pipette, 6 dispenses, ~2 min span. Re-anchored to Gen5 protocol start (reader lid close) from PDF metadata.",
+  "dispense_count": 6,
+  "stagger_span_s": 120,
+  "event_count": 30,
+  "events": [
+    {
+      "t0_utc": "2026-07-26T21:29:19Z",
+      "condition": "T1008",
+      "well": "B10",
+      "source_anchor": "operator_estimate",
+      "dispense_batch": 1,
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T21:29:19Z",
+      "condition": "T1262",
+      "well": "B2",
+      "source_anchor": "operator_estimate",
+      "dispense_batch": 1,
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T21:29:19Z",
+      "condition": "T6685",
+      "well": "B4",
+      "source_anchor": "operator_estimate",
+      "dispense_batch": 1,
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T21:29:19Z",
+      "condition": "T14081",
+      "well": "B6",
+      "source_anchor": "operator_estimate",
+      "dispense_batch": 1,
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T21:29:19Z",
+      "condition": "T0138",
+      "well": "C3",
+      "source_anchor": "operator_estimate",
+      "dispense_batch": 1,
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T21:29:43Z",
+      "condition": "T0224",
+      "well": "C5",
+      "source_anchor": "operator_estimate",
+      "dispense_batch": 2,
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T21:29:43Z",
+      "condition": "T8390",
+      "well": "C7",
+      "source_anchor": "operator_estimate",
+      "dispense_batch": 2,
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T21:29:43Z",
+      "condition": "T0985",
+      "well": "C9",
+      "source_anchor": "operator_estimate",
+      "dispense_batch": 2,
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T21:29:43Z",
+      "condition": "T1008",
+      "well": "D10",
+      "source_anchor": "operator_estimate",
+      "dispense_batch": 2,
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T21:29:43Z",
+      "condition": "T1262",
+      "well": "D2",
+      "source_anchor": "operator_estimate",
+      "dispense_batch": 2,
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T21:30:07Z",
+      "condition": "no_tem1",
+      "well": "D3",
+      "source_anchor": "operator_estimate",
+      "dispense_batch": 3,
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T21:30:07Z",
+      "condition": "T6685",
+      "well": "D4",
+      "source_anchor": "operator_estimate",
+      "dispense_batch": 3,
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T21:30:07Z",
+      "condition": "T14081",
+      "well": "D6",
+      "source_anchor": "operator_estimate",
+      "dispense_batch": 3,
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T21:30:07Z",
+      "condition": "no_tem1",
+      "well": "D7",
+      "source_anchor": "operator_estimate",
+      "dispense_batch": 3,
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T21:30:07Z",
+      "condition": "no_tem1",
+      "well": "E11",
+      "source_anchor": "operator_estimate",
+      "dispense_batch": 3,
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T21:30:31Z",
+      "condition": "T0138",
+      "well": "E3",
+      "source_anchor": "operator_estimate",
+      "dispense_batch": 4,
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T21:30:31Z",
+      "condition": "T0224",
+      "well": "E5",
+      "source_anchor": "operator_estimate",
+      "dispense_batch": 4,
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T21:30:31Z",
+      "condition": "T8390",
+      "well": "E7",
+      "source_anchor": "operator_estimate",
+      "dispense_batch": 4,
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T21:30:31Z",
+      "condition": "T0985",
+      "well": "E9",
+      "source_anchor": "operator_estimate",
+      "dispense_batch": 4,
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T21:30:31Z",
+      "condition": "T1008",
+      "well": "F10",
+      "source_anchor": "operator_estimate",
+      "dispense_batch": 4,
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T21:30:55Z",
+      "condition": "T1262",
+      "well": "F2",
+      "source_anchor": "operator_estimate",
+      "dispense_batch": 5,
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T21:30:55Z",
+      "condition": "pos-ctrl-clavaculin",
+      "well": "F3",
+      "source_anchor": "operator_estimate",
+      "dispense_batch": 5,
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T21:30:55Z",
+      "condition": "T6685",
+      "well": "F4",
+      "source_anchor": "operator_estimate",
+      "dispense_batch": 5,
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T21:30:55Z",
+      "condition": "T14081",
+      "well": "F6",
+      "source_anchor": "operator_estimate",
+      "dispense_batch": 5,
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T21:30:55Z",
+      "condition": "pos-ctrl-clavaculin",
+      "well": "F7",
+      "source_anchor": "operator_estimate",
+      "dispense_batch": 5,
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T21:31:19Z",
+      "condition": "pos-ctrl-clavaculin",
+      "well": "G11",
+      "source_anchor": "operator_estimate",
+      "dispense_batch": 6,
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T21:31:19Z",
+      "condition": "T0138",
+      "well": "G3",
+      "source_anchor": "operator_estimate",
+      "dispense_batch": 6,
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T21:31:19Z",
+      "condition": "T0224",
+      "well": "G5",
+      "source_anchor": "operator_estimate",
+      "dispense_batch": 6,
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T21:31:19Z",
+      "condition": "T8390",
+      "well": "G7",
+      "source_anchor": "operator_estimate",
+      "dispense_batch": 6,
+      "volume_ul": 25.0
+    },
+    {
+      "t0_utc": "2026-07-26T21:31:19Z",
+      "condition": "T0985",
+      "well": "G9",
+      "source_anchor": "operator_estimate",
+      "dispense_batch": 6,
+      "volume_ul": 25.0
+    }
+  ],
+  "reader_anchor_utc": "2026-07-26T21:31:19Z",
+  "dose_span_s": 120.0
+}

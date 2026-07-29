@@ -1,0 +1,59 @@
+urdf: wellplate_pcr_platestand_holder.urdf
+articulations:
+  default:
+    description: All joints at rest position
+    joints: {}
+anchors:
+  object:
+    parent_link: world
+    description: Table placement frame, origin at (+X, +Y, -Z) bbox corner
+    link_T_anchor:
+      xyz: [-0.138, 0.096375, -0.005]
+      wxyz: [0.707107, 0.0, 0.0, 0.707107]
+  align_pre:
+    parent_link: body
+    description: pre drop pose for the plate alignment
+    link_T_anchor:
+      xyz: [-0.0660539, -0.112999, 0.0565655]
+      wxyz: [0.412421, 0.910993, -2.70605e-32, -1.08242e-31]
+    grasp:
+      width: 0.08
+  align_x_push_pose:
+    parent_link: body
+    description: pose to push from to align plate
+    link_T_anchor:
+      xyz: [-0.048948, -0.237005, 0.005]
+      wxyz: [4.25745e-33, 6.12323e-17, 1.0, 6.12323e-17]
+    grasp:
+      width: 0.0
+  align_y_push_pose:
+    parent_link: body
+    description: align push pose for y
+    link_T_anchor:
+      xyz: [0.0483833, -0.046169, 0.005]
+      wxyz: [-4.32978e-17, 0.707107, -0.707107, 4.32978e-17]
+    grasp:
+      width: 0.0
+  pick_pose:
+    parent_link: body
+    description: pick pose for plate gripper
+    link_T_anchor:
+      xyz: [-0.0515, -0.051, 0.005]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+    grasp:
+      width: 0.08
+      gripper_variant: wellplate
+  pick_pose_wellplate:
+    parent_link: body
+    description: ''
+    link_T_anchor:
+      xyz: [-0.0535, -0.0518, -0.0]
+      wxyz: [0.707107, -2.51587e-47, -2.32235e-47, 0.707107]
+  align_push_pose_y_1:
+    parent_link: body
+    description: ''
+    link_T_anchor:
+      xyz: [-0.164581, -0.105609, 0.005]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+    grasp:
+      width: 0.0

@@ -1,0 +1,250 @@
+task: peel_seal
+object: deep_well_plate_1ml          # + rubber sealing mat
+expert: "(operator in V1-V9, name pending)"
+captured: 2026-07-25
+
+# ---------------------------------------------------------------------------
+# SOURCE KINDS
+#   Q<n>            an answer in 10-transcript.md   — someone said it
+#   V<n>@MM:SS      a moment in 15-observed.md      — a camera saw it
+#
+# `method:` records how each value came to exist:
+#   stated | vlm_estimate | measured
+#
+# Where the two kinds disagree, the transcript wins and the disagreement is
+# recorded rather than erased — see geometry.peel_angle_deg, where the video
+# estimate was wrong and Q3 says so.
+# ---------------------------------------------------------------------------
+
+geometry:
+  plate_stabilisation:
+    description: >-
+      Plate held down against the bench AND squeezed from the sides
+      simultaneously — two forces, not one. Applied through thumb and forefinger.
+      Robot equivalent is a fixture.
+    quote_video: "Two forces, one from the side, one against the table."
+    quote_transcript: >-
+      "Press hard enough such that the plate doesn't move left/right or up during
+      the peeling process."
+    source: [Q1, V1@00:15-00:37, V2@00:06-00:11, V3@00:06-00:28, V4@00:05-00:13]
+    method: stated
+
+  grip_location:
+    description: >-
+      One corner or edge of the mat, gripped between thumb and index finger.
+      Thumb goes underneath the seal edge first.
+    source: [Q2, V1@00:37-00:57, V2@00:11-00:15, V3@00:10-00:15, V4@00:13-00:19]
+    method: stated
+
+  peel_direction:
+    description: >-
+      Diagonal, from the gripped corner toward the opposite corner, lifting
+      upward as it advances. Which diagonal varies by clip and appears to be
+      handedness, not technique.
+    source: [V1@00:57-01:15, V2@00:15-00:34, V3@00:15-00:28, V4@00:19-00:36]
+    method: stated
+
+  peel_angle_deg:
+    value: 45
+    tolerance_note: "~45 deg each time for the peel to come off"
+    source: [Q3, V1, V2, V3]
+    method: stated
+    superseded:
+      # Kept deliberately. The video pass reported 45-90 across four clips and
+      # flagged it disputed; Q3 settled it and explained the spread as camera
+      # error, not technique variation. This is the vlm_estimate being corrected
+      # by the person, which is the whole point of asking.
+      was: {value_range: [45, 90], per_clip_V4: "60-90", method: vlm_estimate}
+      corrected_by: Q3
+      quote: >-
+        "camera estimate is a bit off. The angle should be around 45 degrees
+        each time for the peel to come off. The same person was doing the
+        process each time in our videos"
+
+  # RETRACTED: a `regrasp` entry claiming the arm needs a two-stage pull sat
+  # here, citing Q2. The original A2 described gripper positions on a UFactory
+  # arm the expert has no access to — so it was never their technique, and the
+  # two-stage claim was an implementation note recorded in the expert's voice.
+  # Removed rather than left as a parameter, because it is not knowledge from
+  # this session. Whether the arm actually needs two pulls is now an open
+  # engineering question; see unknowns.
+
+force:
+  # Present now, and every entry carries a Q source. The video pass declined to
+  # estimate any of this, correctly — the validator rejects a video-only source
+  # in this section.
+  - stage: hold_down
+    value: qualitative_only
+    description: >-
+      "a pretty hard push" through thumb and forefinger. Threshold is behavioural,
+      not numeric: enough that the plate does not move left/right or lift.
+    note: No force figure available. See unknowns.
+    source: Q1
+    method: stated
+
+  - stage: grip_mat
+    value: maximum
+    description: >-
+      Grip the mat corner as hard as possible. There is no upper bound to
+      respect: the mat does not break, and grip strength is what gives the
+      operator control over the peel. This is a lower-bound-only parameter —
+      the risk is gripping too weakly, never too hard.
+    quote: >-
+      "as hard as humanly possible, because the mat will not break and gripping
+      it strongly gives control to the user"
+    robot_implication: >-
+      Close to the anchor's taught width with no tear-risk ceiling. A slip is
+      the failure to design against; crushing the mat is not.
+    source: Q2
+    method: stated
+
+timing:
+  - parameter: peel_duration_s
+    observed_range: [13, 19]
+    per_clip: {V3: 13, V4: 17, V1: 18, V2: 19}
+    source: [V1@00:57-01:15, V2@00:15-00:34, V3@00:15-00:28, V4@00:19-00:36]
+    method: measured           # from frame timestamps, not estimated
+
+  - parameter: pace
+    value: slow_and_continuous
+    note: >-
+      Speed must not increase as the peel progresses. Both the video narration
+      and Q4 name slowness as the contamination mechanism directly.
+    quote: "we make sure that we don't increase the speed of peeling because we're gonna contaminate the wells"
+    source: [Q4, V4@00:22-00:36]
+    method: stated
+
+  - parameter: pauses
+    value: none
+    note: >-
+      No pauses within a continuous pull. The regrasp between the two stages is
+      a release, not a pause — see geometry.regrasp.
+    source: [V1, V2, V3, V4]
+    method: measured
+
+verification:
+  # THREE conditions, all required. Q4 confirmed the two the video implied and
+  # added the third.
+  - check: mat_detached
+    signal: "mat is fully separated from the plate"
+    note: >-
+      V7 fails with NOTHING spilled: wells clean, no contamination, mat simply
+      still sealed. A contamination-only check passes it.
+    quote: "Mat does need to detach so process also succeeds when the mat comes off"
+    on_pass: continue
+    on_fail: retry
+    source: [Q4, V7@00:15]
+    method: stated
+
+  - check: no_contamination
+    signal: >-
+      no liquid outside the wells, and no droplets transferred between wells
+    note: >-
+      Visually detectable in all four contamination failures because the wells
+      were dyed. Undyed liquid may not be.
+    on_pass: continue
+    on_fail: stop_and_ask
+    source: [Q4, V5@00:16, V6@00:13, V8@00:17, V9@00:26]
+    method: stated
+
+  - check: plate_not_disturbed
+    signal: >-
+      plate has not moved on the bench and contents are not sloshing
+    note: >-
+      Added by Q4; the video never showed anyone checking this. It is also the
+      precondition for retrying — see failure_modes.mat_stays_sealed.
+    quote: >-
+      "the deep well plate must not move around or be disturbed such that the
+      contents are not moving around significantly"
+    on_pass: continue
+    on_fail: stop_and_ask
+    source: Q4
+    method: stated
+
+failure_modes:
+  - name: peeled_too_fast
+    symptom: "dye splashed onto the plate surface and the mat underside"
+    detectable_by_camera: true
+    recovery: none
+    max_retries: 0
+    note: >-
+      Not recoverable, and Q5 is what establishes that: the retry precondition
+      is explicitly "nothing is spilled". Once liquid has moved, the retry gate
+      is shut. Q4 defines success; Q5 is what closes the door on this one.
+    then: stop_and_ask
+    source: [Q5, V5@00:16, V6@00:13]
+    method: stated
+
+  - name: mat_stays_sealed
+    symptom: "mat does not detach; wells remain clean and contained"
+    detectable_by_camera: true
+    note: >-
+      The recoverable one, and only because nothing has been contaminated yet.
+      Retry is conditional on BOTH: nothing spilled AND the plate has not moved.
+    recovery: retry_peel
+    max_retries: 1
+    retry_precondition: "nothing spilled and plate has not moved"
+    then: stop_and_ask
+    quote: >-
+      "yes if the mat stays on and nothing is spilled and the deep well plate
+      hasn't moved, you retry ... retry just once because we don't have ways to
+      validate the position of the deep well plate hasn't changed"
+    source: [Q5, V7@00:15]
+    method: stated
+
+  - name: plate_lifted
+    symptom: "plate flips out of the holding hand and spills"
+    detectable_by_camera: true
+    note: >-
+      Consequence of insufficient hold-down force — the fixture requirement.
+      Not recoverable: the plate has both spilled AND moved, so both halves of
+      Q5's retry precondition fail at once.
+    recovery: none
+    max_retries: 0
+    then: stop_and_ask
+    source: [Q5, V8@00:17]
+    method: stated
+
+  - name: mat_face_down
+    symptom: "dye residue on the bench where the mat was set down"
+    detectable_by_camera: true
+    note: >-
+      Occurs AFTER the peel succeeds. A skill that ends at "mat removed" never
+      sees this.
+    recovery: unknown           # never asked — see unknowns, and Q7 next time
+    max_retries: unknown        # never asked
+    then: stop_and_ask
+    source: V9@00:26
+    method: stated
+
+variation:
+  - condition: "plate contents / fill level"
+    effect: >-
+      None. Contents do not affect the peeling process or the hold-down.
+    source: Q6
+    method: stated
+
+  - condition: "temperature"
+    effect: >-
+      Assumed room temperature always. The expert explicitly scopes the skill to
+      room temperature rather than characterising cold behaviour — so a
+      cold-from-the-fridge plate is OUT OF SCOPE, not "probably fine".
+    quote: >-
+      "let's assume we are unaware of the temperature of the plate or its
+      contents. The temperature should always be room temperature."
+    source: Q6
+    method: stated
+
+unknowns:
+  # Answered by Q1-Q6 and removed: peel angle dispute, recovery policy,
+  # verification criteria, variation. What remains is genuinely still open.
+
+  - "No force figure anywhere, and for the grip there may not need to be one: Q2 says grip as hard as possible with no tear risk, so it is bounded below but not above. Q1's hold-down is a behavioural threshold ('the plate must not move'), not a number. Nothing here is in newtons."
+  - "Whether the arm needs a two-stage pull is OPEN, and is an engineering question rather than a knowledge one. The claim came from a retracted answer (see 10-transcript.md, Q2). The human peels in one continuous motion; nobody has established that the arm cannot. Test it before designing around it."
+  - "A retracted answer reached 20-extracted.yaml before anyone noticed it was not the expert speaking. The validator checks that a source EXISTS, not that the source is the person named in 00-brief.md. Worth thinking about whether that gap is closable."
+  - "No way to validate that the plate has not moved. This is why max_retries is 1 rather than higher: the retry precondition cannot actually be checked. Closing this gap would raise the retry limit, so it is worth real effort."
+  - "Peel angle 45 deg is stated, not measured. Q3 corrected the camera; nothing has confirmed the expert."
+  - "Recovery for mat_face_down was never asked. Q5 covers the mat staying sealed; nothing covers what to do once the mat has contaminated the bench. Ask as Q7: does the run continue, and is the mat still usable for resealing?"
+  - "Mat brand and age never discussed. Q6 covered contents and temperature only."
+  - "cannot_determine came back empty on four of five error clips and on V4 — the error-clip prompt does not force a blind-spot list. Prompt bug, not a clean result."
+  - "No slow-motion footage. All clips 30 fps and Gemini samples at 1 fps, so V5's 3-second splash is ~3 frames. A faster failure would be invisible."

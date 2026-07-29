@@ -1,0 +1,36 @@
+urdf: epipette_grey_framed.urdf
+parts:
+  body:
+    links: [body]
+    description: Electronic pipette in frame (grey volume tag). Geometry shared with
+      epipette_yellow_framed; colour is a volume-system tag only.
+articulations:
+  default:
+    description: Static object, no actuated joints
+    joints: {}
+anchors:
+  object:
+    parent_link: world
+    description: Table placement frame, origin at the (max_x, max_y, min_z) bbox corner.
+      Mesh is authored in millimetres and scaled 0.001 (mm->m) in the URDF; it is
+      already Z-up (pipette vertical, plunger up / tip down), so the anchor uses identity
+      rotation.
+    link_T_anchor:
+      xyz: [-0.000962721, 0.0796449, -0.0431181]
+      wxyz: [0.707107, 0.0, 0.0, 0.707107]
+  grab:
+    parent_link: world
+    description: pose for grabbing the pipette
+    link_T_anchor:
+      xyz: [0.021, 0.0312877, 0.0818114]
+      wxyz: [0.5, 0.5, -0.5, 0.5]
+    grasp:
+      width: 0.025
+  grab_prepose:
+    parent_link: world
+    description: prepose for grabbing the pipette
+    link_T_anchor:
+      xyz: [0.0210003, 0.174537, 0.196016]
+      wxyz: [0.5, 0.5, -0.5, 0.5]
+    grasp:
+      width: 0.025

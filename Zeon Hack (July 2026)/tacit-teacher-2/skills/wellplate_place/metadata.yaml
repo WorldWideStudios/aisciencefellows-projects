@@ -1,0 +1,10 @@
+skill_id: wellplate_place
+version: "1.0.0"
+description: "Place a held wellplate onto a target object's named anchor (e.g. a stand's top_center) and release it, snapping the plate's bottom-center (object) anchor onto the target anchor's resolved world pose so it seats with no gap."
+
+# parameters are derived from the wellplate_place() signature in robotic_code.py
+
+tags:
+  - plateandholder
+  - plate
+  - place

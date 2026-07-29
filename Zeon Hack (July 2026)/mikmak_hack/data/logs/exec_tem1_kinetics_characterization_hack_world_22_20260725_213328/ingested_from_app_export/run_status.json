@@ -1,0 +1,14 @@
+{
+  "execution_id": "exec_tem1_kinetics_characterization_hack_world_22_20260725_213328",
+  "run_name": null,
+  "checkpoints": [],
+  "last_checkpoint": "Open Reader Lid",
+  "complete": false,
+  "source": "log_export",
+  "ingested_at": "2026-07-26T11:32:32.710130-07:00",
+  "ingested_from": "run_log_exec_tem1_kinetics_characterization_hack_world_22_20260725_213328.txt",
+  "steps_seen": 67,
+  "steps_in_workflow": 131,
+  "terminal_step": "Save Run Folder",
+  "note": "Recovered from a Zeon app log export. Step boundaries and timing only \u2014 this export carries no volumes, wells, or input values, so run_inputs.json is deliberately absent rather than reconstructed. steps_seen and steps_in_workflow are NOT comparable: the export emits a STARTING line for only some node types, so steps_seen is not a progress fraction. Completion is judged solely on whether the last logged step is the workflow's terminal step."
+}

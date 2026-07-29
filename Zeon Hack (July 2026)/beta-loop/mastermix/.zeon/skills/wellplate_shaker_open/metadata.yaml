@@ -1,0 +1,17 @@
+skill_id: wellplate_shaker_open
+version: "1.0.0"
+description: "Open the wellplate shaker lid with the left arm: grip the lid at the lid_open anchor (lid closed), sweep to the same anchor with the lid open (lid_joint = 1.6721), commit the open state, release, stow."
+
+# parameters are derived from the wellplate_shaker_open() signature in robotic_code.py
+
+preconditions:
+  shaker_lid_closed: true
+
+postconditions:
+  shaker_lid_open: true
+
+tags:
+  - wellplate_shaker
+  - open
+  - lid
+  - right_arm

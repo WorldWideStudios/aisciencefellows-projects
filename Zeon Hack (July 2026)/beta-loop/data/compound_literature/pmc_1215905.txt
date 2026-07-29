@@ -1,0 +1,102 @@
+Found 15 papers  [s_13bfedb9]
+
+  1. Escherichia coli  phylogeny drives co-amoxiclav resistance through variable expression of TEM-1 beta-lactamase
+     William Matlock, Gillian Rodger, Emma Pritchard, Matthew Colpus, Natalia Kapel, Lucinda Barrett, Mar...
+     PMC12484619 · PMC · 2025-09-30
+     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12484619/
+     "This study investigated how *E. coli* phylogeny influences co-amoxiclav resistance. Resistance levels are significantly driven by phylogenetic variation in *bla TEM-1* beta-lactamase expression."
+
+  2. Assay Platform
+for Clinically Relevant Metallo-β-lactamases
+     Sander
+S. van Berkel, Jürgen Brem, Anna M. Rydzik, Ramya Salimraj, Ricky Cain, Anil Verma, Raymond
+J...
+     PMC3910272 · PMC · 2013-07-30
+     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3910272/
+     "A new assay platform using fluorogenic substrates was developed for clinically relevant metallo-β-lactamases. This platform enabled the identification of 4-chloroisoquinolinols as potential broad-spectrum MBL inhibitors."
+
+  3. In Silico Study of the Potential of Brazilein Sappan Wood as a Beta-Lactamase Inhibitor against Extended-Spectrum Beta-Lactamase-Encoding Genes
+     Dwi Krihariyani, Evy Diah Woelansari, Edy Haryanto, Retno Sasongkowati, Anik Handayati, Sri Sulami E...
+     PMC11229569 · PMC · 2024-06-01
+     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11229569/
+     "This study investigated brazilein from sappan wood as a potential inhibitor of extended-spectrum beta-lactamases. Brazilein showed significant potential to block the beta-lactamase activity of the blaCTX-M gene."
+
+  4. Targeting Class A and C Serine
+β-Lactamases
+with a Broad-Spectrum Boronic Acid Derivative
+     Donatella Tondi, Alberto Venturelli, Richard Bonnet, Cecilia Pozzi, Brian K. Shoichet, Maria
+Paola C...
+     PMC4079326 · PMC · 2015-05-31
+     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4079326/
+     "A novel boronic acid derivative was designed and synthesized to inhibit class A and C serine β-lactamases. This compound demonstrates potent, broad-spectrum activity, offering a potential solution to antibiotic resistance."
+
+  5. Classification and applicability of new beta-lactamase inhibitors
+     Emilia Cercenado, Francisco Javier Candel
+     PMC12584905 · PMC · 2025-10-24
+     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12584905/
+     "This review classifies new beta-lactamase inhibitors and their characteristics. Their applicability depends on the specific beta-lactamase/carbapenemase, microorganism, and resistance mechanisms."
+
+  6. Inhibitor Discovery of Full-Length New Delhi Metallo-β-Lactamase-1 (NDM-1)
+     Bingzheng Shen, Yan Yu, Hui Chen, Xin Cao, Xingzhen Lao, Yongliang Fang, Yun Shi, Jiao Chen, Heng Zh...
+     PMC3652859 · biomedrxiv · 2013-01-01
+     https://doi.org/10.1371/journal.pone.0062955
+     "NDM-1's hydrolysis of β-lactam antibiotics was studied, finding it ineffective against aztreonam. Thiophene-carboxylic acid derivatives inhibit NDM-1 and enhance meropenem's antibacterial activity."
+
+  7. Saturation Mutagenesis and Molecular Modeling: The Impact of Methionine 182 Substitutions on the Stability of β-Lactamase TEM-1
+     Vitaly G. Grigorenko, Alexandra V. Krivitskaya, Maria G. Khrenova, Maya Yu. Rubtsova, Galina V. Pres...
+     PMC11276661 · PMC · 2024-07-13
+     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11276661/
+     "Saturation mutagenesis and molecular modeling studied methionine 182 substitutions in TEM-1 β-lactamase. Substitutions at this position significantly impact enzyme stability and thermoreactivation, but not catalytic activity, with the M182E variant showing the highest activity."
+
+  8. Targeting the Class A Carbapenemase GES-5 via Virtual Screening
+     Raphael Klein, Laura Cendron, Martina Montanari, Pierangelo Bellio, Giuseppe Celenza, Lorenzo Maso, ...
+     PMC7072645 · biomedrxiv · 2020-02-14
+     https://doi.org/10.3390/biom10020304
+     "Virtual screening identified compounds that inhibit the GES-5 carbapenemase. Four derivatives showed high micromolar inhibitory activity, serving as promising starting points for further development."
+
+  9. Breakthrough Advances in Beta-Lactamase Inhibitors: New Synthesized Compounds and Mechanisms of Action Against Drug-Resistant Bacteria
+     Ya-Si Huang, Hong Zhou
+     PMC11859904 · PMC · 2025-02-03
+     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11859904/
+     "Newly synthesized beta-lactamase inhibitors were studied for their effects and mechanisms against drug-resistant bacteria. These compounds enhance the affinity and stability of inhibitor-enzyme complexes, offering new strategies for combating antibiotic resistance."
+
+  10. Screening of inhibitors for S130G inhibitor resistant mutants of TEM type beta-lactamase
+     Mohd Hassan Baig, Mohd Danishuddin, Saif Khan, Asad U Khan
+     PMC3530876 · PMC · 2012-01-01
+     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3530876/
+     "This study screened for inhibitors against the S130G TEM mutant beta-lactamase using a structure-based virtual screening approach. Several compounds demonstrated higher efficacy than existing inhibitors, with specific amino acids identified as crucial for inhibitor binding."
+
+  11. In Vitro Activity of Cefaclor/Beta-Lactamases Inhibitors (Clavulanic Acid and Sulbactam) Combination Against Extended-Spectrum Beta-Lactamase Producing Uropathogenic  E. coli
+     Ali Atoom, Bayan Alzubi, Dana Barakat, Rana Abu-Gheyab, Dalia Ismail-Agha, Awatef Al-Kaabneh, Nawfal...
+     PMC12189933 · PMC · 2025-06-13
+     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12189933/
+     "Cefaclor combined with clavulanic acid or sulbactam showed improved in vitro activity against ESBL-producing *E. coli*. These combinations demonstrated synergistic and bactericidal effects, restoring susceptibility in many isolates."
+
+  12. Discovery of the Novel Inhibitor Against New Delhi Metallo-β-Lactamase Based on Virtual Screening and Molecular Modelling
+     Xiyan Wang, Yanan Yang, Yawen Gao, Xiaodi Niu
+     PMC7279046 · biomedrxiv · 2020-05-18
+     https://doi.org/10.3390/ijms21103567
+     "Virtual screening and molecular modeling identified ZINC05683641 as a potential inhibitor of New Delhi metallo-β-lactamase (NDM-1). This compound competitively inhibits NDM-1 by binding to key catalytic residues, offering a new avenue for combating antibiotic resistance."
+
+  13. New Delhi Metallo-Beta-Lactamase Inhibitors: A Systematic Scoping Review
+     Lutfun Nahar, Hideharu Hagiya, Kazuyoshi Gotoh, Md Asaduzzaman, Fumio Otsuka
+     PMC11277577 · Journal of Clinical Medicine · 2024-07-18
+     https://doi.org/10.3390/jcm13144199
+     "A systematic scoping review synthesized data on New Delhi metallo-beta-lactamase inhibitors. While numerous potential inhibitors have been identified, none are currently clinically applicable for treating infections."
+
+  14. Effect of Lactamase Inhibitors on the Biosensor Penp during the Measurement of Lactam Antibiotics Concentration
+     Dagoberto Soto, Camila Silva, Cristian Ugalde, Kwok-Yin Wong, Yun-Chung Leung, Lok-Yan So, Max Andre...
+     PMC6427286 · biomedrxiv · 2019-03-12
+     https://doi.org/10.3390/s19051237
+     "This study investigated the impact of lactamase inhibitors on the PenP biosensor's ability to measure lactam antibiotics. The findings indicate that lactamase inhibitors have a minimal effect on PenP's detection capabilities."
+
+  15. Extended-spectrum beta-lactamases: definition, history, an update on their genetic environment and detection methods
+     Soufyane Yassara, Ikrame Zeouk, Samira Jaouhar, Mohammed Sbiti, Khadija Bekhti
+     PMC12188005 · PMC · 2025-01-01
+     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12188005/
+     "This review discusses extended-spectrum beta-lactamases (ESBLs), their history, genetic spread, and detection. ESBL-producing bacteria are a significant global threat, requiring vigilant identification and development of new treatments."
+
+[582ms, saved to s_13bfedb9]
+
+💡 Extract data across these results with: map --from s_13bfedb9 "your question"
+[582ms, saved to s_13bfedb9]

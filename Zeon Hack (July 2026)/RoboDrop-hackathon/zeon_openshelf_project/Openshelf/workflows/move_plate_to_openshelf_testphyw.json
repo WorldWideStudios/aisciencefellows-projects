@@ -1,0 +1,92 @@
+{
+  "workflow_id": "move_plate_to_openshelf_testphyw",
+  "name": "Move Plate To OpenShelf Testphyw",
+  "description": "Pick up the PCR plate with the verified pickup_plate skill, carry it with the right arm while preserving the horizontal_grip orientation, place it at the OpenShelf testphyw position, and retreat.",
+  "version": "1.0.0",
+  "author": "zeon",
+  "created_at": "2026-07-26T07:47:25.190Z",
+  "updated_at": "2026-07-26T07:47:25.190Z",
+  "simulation_validated": false,
+  "objects": [],
+  "inputs": [
+    {
+      "name": "plate",
+      "type": "object",
+      "is_array": false,
+      "description": "PCR plate to pick up and place in OpenShelf",
+      "defaultValue": "wellplate_pcr"
+    },
+    {
+      "name": "openshelf",
+      "type": "object",
+      "is_array": false,
+      "description": "OpenShelf providing the testphyw destination",
+      "defaultValue": "openshelf"
+    }
+  ],
+  "nodes": [
+    {
+      "node_id": "start_0",
+      "type": "start",
+      "label": "Start"
+    },
+    {
+      "node_id": "pickup_plate",
+      "type": "skill",
+      "label": "Pick Up PCR Plate",
+      "description": "Run the frozen, simulation-validated horizontal right-arm pickup.",
+      "skill_id": "pickup_plate",
+      "parameters": {
+        "target": {
+          "$input": "plate"
+        }
+      }
+    },
+    {
+      "node_id": "place_plate_at_testphyw",
+      "type": "skill",
+      "label": "Place Plate At Testphyw",
+      "description": "Move the attached plate directly to testphyw, release it without changing orientation, and finish.",
+      "skill_id": "place_plate_at_testphyw",
+      "parameters": {
+        "plate": {
+          "$input": "plate"
+        },
+        "openshelf": {
+          "$input": "openshelf"
+        }
+      }
+    },
+    {
+      "node_id": "end_1",
+      "type": "end",
+      "label": "End"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e0",
+      "from_node": "start_0",
+      "to_node": "pickup_plate",
+      "condition": {
+        "type": "default"
+      }
+    },
+    {
+      "edge_id": "e1",
+      "from_node": "pickup_plate",
+      "to_node": "place_plate_at_testphyw",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e2",
+      "from_node": "place_plate_at_testphyw",
+      "to_node": "end_1",
+      "condition": {
+        "type": "on_success"
+      }
+    }
+  ]
+}

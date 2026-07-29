@@ -1,0 +1,251 @@
+{
+  "compounds": [
+    {
+      "compound_id": "T1262",
+      "name": "Tazobactam",
+      "queries": [
+        {
+          "query": "TEM-1 tazobactam Ki nitrocefin",
+          "source": "pmc",
+          "cache_hit": false,
+          "status": "ok",
+          "result_id": "s_7a97f03f",
+          "map_status": "ok",
+          "map_cache_hit": false,
+          "ki_uM": null,
+          "ic50_uM": null,
+          "nitrocefin_uM": null,
+          "enzyme_nM": null,
+          "pmid": null,
+          "pmcid": "PMC11276661"
+        },
+        {
+          "query": "TEM-1 tazobactam Ki nitrocefin",
+          "source": "proteins",
+          "cache_hit": false,
+          "status": "ok",
+          "result_id": "s_2e39e309",
+          "map_status": "ok",
+          "map_cache_hit": false,
+          "ki_uM": null,
+          "ic50_uM": null,
+          "nitrocefin_uM": null,
+          "enzyme_nM": null,
+          "pmid": null,
+          "pmcid": null
+        },
+        {
+          "query": "TEM-1 tazobactam Ki nitrocefin",
+          "source": "biorxiv",
+          "cache_hit": false,
+          "status": "ok",
+          "result_id": "s_6b3d8f35",
+          "map_status": "ok",
+          "map_cache_hit": false,
+          "ki_uM": null,
+          "ic50_uM": null,
+          "nitrocefin_uM": null,
+          "enzyme_nM": null,
+          "pmid": null,
+          "pmcid": null
+        },
+        {
+          "query": "TEM-1 tazobactam IC50 nitrocefin colorimetric assay",
+          "source": "pmc",
+          "cache_hit": false,
+          "status": "ok",
+          "result_id": "s_97e317a4",
+          "map_status": "ok",
+          "map_cache_hit": false,
+          "ki_uM": null,
+          "ic50_uM": null,
+          "nitrocefin_uM": null,
+          "enzyme_nM": null,
+          "pmid": null,
+          "pmcid": "PMC12832842"
+        },
+        {
+          "query": "TEM-1 tazobactam IC50 nitrocefin colorimetric assay",
+          "source": "proteins",
+          "cache_hit": false,
+          "status": "ok",
+          "result_id": "s_a063f573",
+          "map_status": "ok",
+          "map_cache_hit": false,
+          "ki_uM": null,
+          "ic50_uM": null,
+          "nitrocefin_uM": null,
+          "enzyme_nM": null,
+          "pmid": null,
+          "pmcid": null
+        },
+        {
+          "query": "TEM-1 tazobactam IC50 nitrocefin colorimetric assay",
+          "source": "biorxiv",
+          "cache_hit": false,
+          "status": "ok",
+          "result_id": "s_1bbcb4ba",
+          "map_status": "ok",
+          "map_cache_hit": false,
+          "ki_uM": null,
+          "ic50_uM": null,
+          "nitrocefin_uM": null,
+          "enzyme_nM": null,
+          "pmid": null,
+          "pmcid": null
+        }
+      ],
+      "best": {
+        "ki_uM": null,
+        "ic50_uM": null,
+        "nitrocefin_uM": null,
+        "enzyme_nM": null,
+        "pmid": null,
+        "pmcid": "PMC11276661",
+        "targeted_query": "TEM-1 tazobactam Ki nitrocefin"
+      },
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "ref": {
+        "status": "written",
+        "ref_path": "/Users/fio/zeon_hack/data/compound_literature/refs/T1262.json",
+        "entries_appended": 6,
+        "entries_skipped_duplicate": 0,
+        "ki_uM": null,
+        "ic50_uM": null,
+        "screen_conc_uM": 50,
+        "screen_conc_source": "project_default"
+      }
+    },
+    {
+      "compound_id": "T6685",
+      "name": "Sulbactam sodium",
+      "queries": [
+        {
+          "query": "TEM-1 sulbactam Ki nitrocefin",
+          "source": "pmc",
+          "cache_hit": false,
+          "status": "ok",
+          "result_id": "s_d9380f75",
+          "map_status": "error",
+          "map_cache_hit": false
+        },
+        {
+          "query": "TEM-1 sulbactam Ki nitrocefin",
+          "source": "proteins",
+          "cache_hit": false,
+          "status": "ok",
+          "result_id": "s_ff4ad731",
+          "map_status": "error",
+          "map_cache_hit": false
+        },
+        {
+          "query": "TEM-1 sulbactam Ki nitrocefin",
+          "source": "biorxiv",
+          "cache_hit": false,
+          "status": "ok",
+          "result_id": "s_8bb87db7",
+          "map_status": "error",
+          "map_cache_hit": false
+        },
+        {
+          "query": "TEM-1 sulbactam IC50 nitrocefin TEM-1",
+          "source": "pmc",
+          "cache_hit": false,
+          "status": "ok",
+          "result_id": "s_dd037568",
+          "map_status": "error",
+          "map_cache_hit": false
+        },
+        {
+          "query": "TEM-1 sulbactam IC50 nitrocefin TEM-1",
+          "source": "proteins",
+          "cache_hit": false,
+          "status": "ok",
+          "result_id": "s_3cd107ad",
+          "map_status": "error",
+          "map_cache_hit": false
+        },
+        {
+          "query": "TEM-1 sulbactam IC50 nitrocefin TEM-1",
+          "source": "biorxiv",
+          "cache_hit": false,
+          "status": "ok",
+          "result_id": "s_1b6a2b92",
+          "map_status": "error",
+          "map_cache_hit": false
+        }
+      ],
+      "best": null,
+      "screen_conc_uM": null,
+      "screen_conc_source": null,
+      "ref": null
+    },
+    {
+      "compound_id": "T14081",
+      "name": "Enmetazobactam",
+      "queries": [
+        {
+          "query": "TEM-1 enmetazobactam IC50 nitrocefin",
+          "source": "pmc",
+          "cache_hit": false,
+          "status": "ok",
+          "result_id": "s_47e392c2",
+          "map_status": "error",
+          "map_cache_hit": false
+        },
+        {
+          "query": "TEM-1 enmetazobactam IC50 nitrocefin",
+          "source": "proteins",
+          "cache_hit": false,
+          "status": "ok",
+          "result_id": "s_577e9b49",
+          "map_status": "error",
+          "map_cache_hit": false
+        },
+        {
+          "query": "TEM-1 enmetazobactam IC50 nitrocefin",
+          "source": "biorxiv",
+          "cache_hit": false,
+          "status": "ok",
+          "result_id": "s_5ee3016e",
+          "map_status": "error",
+          "map_cache_hit": false
+        },
+        {
+          "query": "TEM-1 enmetazobactam Ki nitrocefin colorimetric assay",
+          "source": "pmc",
+          "cache_hit": false,
+          "status": "ok",
+          "result_id": "s_4bb9f344",
+          "map_status": "error",
+          "map_cache_hit": false
+        },
+        {
+          "query": "TEM-1 enmetazobactam Ki nitrocefin colorimetric assay",
+          "source": "proteins",
+          "cache_hit": false,
+          "status": "ok",
+          "result_id": "s_e208bf1b",
+          "map_status": "error",
+          "map_cache_hit": false
+        },
+        {
+          "query": "TEM-1 enmetazobactam Ki nitrocefin colorimetric assay",
+          "source": "biorxiv",
+          "cache_hit": false,
+          "status": "ok",
+          "result_id": "s_4e0434dc",
+          "map_status": "error",
+          "map_cache_hit": false
+        }
+      ],
+      "best": null,
+      "screen_conc_uM": null,
+      "screen_conc_source": null,
+      "ref": null
+    }
+  ],
+  "queries_run": 18,
+  "maps_run": 18
+}

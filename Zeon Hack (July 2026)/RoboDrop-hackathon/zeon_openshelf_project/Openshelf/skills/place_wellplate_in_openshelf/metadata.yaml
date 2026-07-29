@@ -1,0 +1,32 @@
+# Skill: place_wellplate_in_openshelf
+skill_id: place_wellplate_in_openshelf
+version: "1.9.0"
+description: "Carry a right-arm-held PCR wellplate in a horizontal side grip, insert it into OpenShelf, release it into the anchor-defined seat, and retreat."
+
+preconditions:
+  wellplate_staged_on_right_arm: true
+postconditions:
+  wellplate_on_openshelf: true
+
+high_risk: true
+
+safety_rules:
+  - "Commands the right arm and gripper; validate the complete attached-plate path in simulation before hardware use."
+  - "Refuses to run unless pickup_wellplate_from_holder recorded the matching plate, grasp, level-orientation contract, and collision-planning requirement."
+  - "Keep the wellplate's complete world orientation unchanged; the pickup, staging, transit, high, entry, release, and seat anchors are a single paired orientation chain."
+  - "The skill aborts before transport if any OpenShelf TCP or seat quaternion violates the recorded carry orientation."
+  - "Collision planning must remain enabled for the wellplate, holder, tables, and OpenShelf; the plate stays attached so its full collision geometry is planned."
+  - "The OpenShelf transit, high, entry, release, and reverse-retreat paths must remain collision-clear with the full plate attached."
+  - "The OpenShelf targets must remain body-link anchors; do not store global poses directly in link_T_anchor."
+  - "The release TCP must remain paired with wellplate_pcr.right_side_grasp_flipped and wellplate_pcr.nest_base."
+  - "If execution fails before release, stop and inspect before opening the gripper."
+  - "Confirm that the OpenShelf slot is physically empty before hardware execution."
+
+tags:
+  - wellplate
+  - openshelf
+  - right-arm
+  - level-transport
+  - collision-aware
+  - placement
+  - physical-motion

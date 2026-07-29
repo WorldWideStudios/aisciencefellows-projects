@@ -1,0 +1,10 @@
+skill_id: epipette_grey_pick
+version: "1.0.0"
+description: "Pick up the grey epipette with the left arm"
+
+# parameters are derived from the epipette_grey_pick() signature in robotic_code.py
+
+tags:
+  - pipette_demo
+  - epipette_grey
+  - pick

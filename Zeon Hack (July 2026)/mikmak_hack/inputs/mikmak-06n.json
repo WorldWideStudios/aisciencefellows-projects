@@ -1,0 +1,142 @@
+{
+  "_label": "mikmak-06n",
+  "reagent_block": "coldblock_wellplate",
+  "reaction_plate": "wellplate_96_flatbottom",
+  "enzyme_hole": "hole_1",
+  "substrate_hole": "hole_2",
+  "buffer_hole": "hole_3",
+  "total_well_volume_ul": 20,
+  "run_name": "tem1_kinetics_run_mikmak-06n",
+  "pt_e1s1_well": "A1",
+  "pt_e1s1_enzyme_vol_ul": 5,
+  "pt_e1s1_enzyme_tip_index": 1,
+  "pt_e1s1_substrate_vol_ul": 5,
+  "pt_e1s1_substrate_tip_index": 2,
+  "pt_e1s1_buffer_vol_ul": 10,
+  "pt_e1s1_buffer_tip_index": 3,
+  "pt_e1s2_well": "A2",
+  "pt_e1s2_enzyme_vol_ul": 5,
+  "pt_e1s2_enzyme_tip_index": 4,
+  "pt_e1s2_substrate_vol_ul": 7,
+  "pt_e1s2_substrate_tip_index": 5,
+  "pt_e1s2_buffer_vol_ul": 8,
+  "pt_e1s2_buffer_tip_index": 6,
+  "pt_e1s3_well": "A3",
+  "pt_e1s3_enzyme_vol_ul": 5,
+  "pt_e1s3_enzyme_tip_index": 7,
+  "pt_e1s3_substrate_vol_ul": 9,
+  "pt_e1s3_substrate_tip_index": 8,
+  "pt_e1s3_buffer_vol_ul": 6,
+  "pt_e1s3_buffer_tip_index": 9,
+  "pt_e2s1_well": "A4",
+  "pt_e2s1_enzyme_vol_ul": 7,
+  "pt_e2s1_enzyme_tip_index": 10,
+  "pt_e2s1_substrate_vol_ul": 5,
+  "pt_e2s1_substrate_tip_index": 11,
+  "pt_e2s1_buffer_vol_ul": 8,
+  "pt_e2s1_buffer_tip_index": 12,
+  "pt_e2s2_well": "A5",
+  "pt_e2s2_enzyme_vol_ul": 7,
+  "pt_e2s2_enzyme_tip_index": 13,
+  "pt_e2s2_substrate_vol_ul": 7,
+  "pt_e2s2_substrate_tip_index": 14,
+  "pt_e2s2_buffer_vol_ul": 6,
+  "pt_e2s2_buffer_tip_index": 15,
+  "pt_e2s3_well": "A6",
+  "pt_e2s3_enzyme_vol_ul": 7,
+  "pt_e2s3_enzyme_tip_index": 16,
+  "pt_e2s3_substrate_vol_ul": 9,
+  "pt_e2s3_substrate_tip_index": 17,
+  "pt_e2s3_buffer_vol_ul": 4,
+  "pt_e2s3_buffer_tip_index": 18,
+  "pt_e3s1_well": "A7",
+  "pt_e3s1_enzyme_vol_ul": 9,
+  "pt_e3s1_enzyme_tip_index": 19,
+  "pt_e3s1_substrate_vol_ul": 5,
+  "pt_e3s1_substrate_tip_index": 20,
+  "pt_e3s1_buffer_vol_ul": 6,
+  "pt_e3s1_buffer_tip_index": 21,
+  "pt_e3s2_well": "A8",
+  "pt_e3s2_enzyme_vol_ul": 9,
+  "pt_e3s2_enzyme_tip_index": 22,
+  "pt_e3s2_substrate_vol_ul": 7,
+  "pt_e3s2_substrate_tip_index": 23,
+  "pt_e3s2_buffer_vol_ul": 4,
+  "pt_e3s2_buffer_tip_index": 24,
+  "pt_e3s3_well": "A9",
+  "pt_e3s3_enzyme_vol_ul": 9,
+  "pt_e3s3_enzyme_tip_index": 25,
+  "pt_e3s3_substrate_vol_ul": 9,
+  "pt_e3s3_substrate_tip_index": 26,
+  "pt_e3s3_buffer_vol_ul": 2,
+  "pt_e3s3_buffer_tip_index": 27,
+  "blank_e_well": "A10",
+  "blank_e_vol_ul": 10.0,
+  "blank_e_tip_index": 28,
+  "blank_e_buffer_vol_ul": 10.0,
+  "blank_e_buffer_tip_index": 29,
+  "blank_s_well": "A11",
+  "blank_s_vol_ul": 10.0,
+  "blank_s_tip_index": 30,
+  "blank_s_buffer_vol_ul": 10.0,
+  "blank_s_buffer_tip_index": 31,
+  "_concentrations": {
+    "pt_e1s1": {
+      "well": "A1",
+      "enzyme_nm": 1.3841,
+      "nitrocefin_um": 31.25
+    },
+    "pt_e1s2": {
+      "well": "A2",
+      "enzyme_nm": 1.3841,
+      "nitrocefin_um": 43.75
+    },
+    "pt_e1s3": {
+      "well": "A3",
+      "enzyme_nm": 1.3841,
+      "nitrocefin_um": 56.25
+    },
+    "pt_e2s1": {
+      "well": "A4",
+      "enzyme_nm": 1.9377,
+      "nitrocefin_um": 31.25
+    },
+    "pt_e2s2": {
+      "well": "A5",
+      "enzyme_nm": 1.9377,
+      "nitrocefin_um": 43.75
+    },
+    "pt_e2s3": {
+      "well": "A6",
+      "enzyme_nm": 1.9377,
+      "nitrocefin_um": 56.25
+    },
+    "pt_e3s1": {
+      "well": "A7",
+      "enzyme_nm": 2.4913,
+      "nitrocefin_um": 31.25
+    },
+    "pt_e3s2": {
+      "well": "A8",
+      "enzyme_nm": 2.4913,
+      "nitrocefin_um": 43.75
+    },
+    "pt_e3s3": {
+      "well": "A9",
+      "enzyme_nm": 2.4913,
+      "nitrocefin_um": 56.25
+    },
+    "blank_e": {
+      "well": "A10",
+      "vol_ul": 10.0
+    },
+    "blank_s": {
+      "well": "A11",
+      "vol_ul": 10.0
+    }
+  },
+  "_stocks": {
+    "enzyme_nm": 5.5363,
+    "nitrocefin_um": 125.0
+  }
+}

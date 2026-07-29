@@ -1,0 +1,90 @@
+{
+  "workflow_id": "pick_and_load",
+  "name": "Pick Tipbox & Load OpenShelf",
+  "description": "Pick a tipbox off the table, carry it to the OpenShelf, insert it into the IO box, release it, then call the store API to load it into the cabinet. The reverse of receive_openshelf.",
+  "version": "1.0.0",
+  "author": "zeon",
+  "created_at": "2026-07-10T00:00:00.000Z",
+  "updated_at": "2026-07-14T00:00:00.000Z",
+  "simulation_validated": false,
+  "objects": [],
+  "inputs": [
+    {
+      "name": "name",
+      "type": "string",
+      "defaultValue": "Sim Item A",
+      "description": "Item name to load into the OpenShelf (must match a stored item; sim uses canned 'Sim Item A' / 'Sim Item B')."
+    }
+  ],
+  "nodes": [
+    {
+      "node_id": "start_0",
+      "type": "start",
+      "label": "Start"
+    },
+    {
+      "node_id": "pick_tipbox",
+      "type": "skill",
+      "label": "Pick Up Tipbox",
+      "description": "Right arm grabs the tipbox off the table (reach standoff, descend, eased close, attach, lift).",
+      "skill_id": "pick_tipbox",
+      "parameters": {}
+    },
+    {
+      "node_id": "enter_openshelf",
+      "type": "skill",
+      "label": "Carry Into OpenShelf",
+      "description": "Carry the held tipbox to a standoff just outside the IO box, then ease straight -Y into the tight square (careful entry, mirror of retract).",
+      "skill_id": "enter_openshelf",
+      "parameters": {}
+    },
+    {
+      "node_id": "release_item",
+      "type": "skill",
+      "label": "Release Into OpenShelf",
+      "description": "Push a bit deeper into the IO box (-Y), ease the gripper open, and detach the tipbox so it stays in the shelf.",
+      "skill_id": "release_into_openshelf",
+      "parameters": {}
+    },
+    {
+      "node_id": "retract",
+      "type": "skill",
+      "label": "Retract",
+      "description": "Pull the arm straight out (+Y) so it clears the shelf, leaving the tipbox behind.",
+      "skill_id": "retract_from_openshelf",
+      "parameters": {}
+    },
+    {
+      "node_id": "store_item",
+      "type": "skill",
+      "label": "Load (Store API)",
+      "description": "Call the OpenShelf store API to load the item into the cabinet (robot auto-assigns the cell). Sim returns canned success.",
+      "skill_id": "openshelf_store_item",
+      "parameters": {
+        "name": { "$input": "name" }
+      }
+    },
+    {
+      "node_id": "carry_home",
+      "type": "skill",
+      "label": "Go Home",
+      "description": "Return the right arm to its stow pose.",
+      "skill_id": "go_home",
+      "parameters": {}
+    },
+    {
+      "node_id": "end_1",
+      "type": "end",
+      "label": "End"
+    }
+  ],
+  "edges": [
+    { "edge_id": "e0", "from_node": "start_0",         "to_node": "pick_tipbox",     "condition": { "type": "default" } },
+    { "edge_id": "e1", "from_node": "pick_tipbox",     "to_node": "enter_openshelf", "condition": { "type": "on_success" } },
+    { "edge_id": "e2", "from_node": "enter_openshelf", "to_node": "release_item",    "condition": { "type": "on_success" } },
+    { "edge_id": "e3", "from_node": "release_item",    "to_node": "retract",         "condition": { "type": "on_success" } },
+    { "edge_id": "e4", "from_node": "retract",         "to_node": "store_item",      "condition": { "type": "on_success" } },
+    { "edge_id": "e5", "from_node": "store_item",      "to_node": "carry_home",      "condition": { "type": "on_success" } },
+    { "edge_id": "e6", "from_node": "carry_home",      "to_node": "end_1",           "condition": { "type": "on_success" } }
+  ]
+}

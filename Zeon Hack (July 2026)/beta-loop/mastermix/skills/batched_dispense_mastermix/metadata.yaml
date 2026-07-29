@@ -1,0 +1,26 @@
+skill_id: batched_dispense_mastermix
+version: "1.0.0"
+description: >-
+  Faster source-to-plate dispense for assay setup. Aspirates once per compatible
+  batch and dispenses the same volume into multiple destination wells before
+  ejecting the tip.
+
+parameter_descriptions:
+  pipette: "Starting pipette. The skill chooses the 10 uL or 120 uL pipette from per-well volume."
+  tipbox: "Starting tip rack; same-type racks are selected automatically by the pipette helpers."
+  reagent_block: "Source object containing the liquid. Can be a cold block or source plate."
+  reaction_plate: "Destination assay plate."
+  mm_anchor: "Source anchor/well/hole."
+  wells: "Comma-separated destination wells."
+  rxn_volume: "Volume to dispense into each destination well, in uL."
+  num_reactions: "Number of destination wells to fill from the wells list."
+  speed: "Pipette plunger speed."
+
+preconditions: {}
+postconditions: {}
+
+tags:
+  - liquid_handling
+  - epipette
+  - assay
+  - batched

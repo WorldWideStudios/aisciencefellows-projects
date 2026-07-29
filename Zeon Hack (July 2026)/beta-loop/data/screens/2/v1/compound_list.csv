@@ -1,0 +1,25 @@
+slot,compound_id,name,bucket,functional_class,screen_conc_uM,working_solution_uM,screen_conc_source,expected_at_screen_conc,source_plate,source_well,refs_file
+1,T19860,Clavulanic Acid,tier1_inhibitor,positive,50,500,literature,>=50% inhibition,PHD215176,h7,data/compound_literature/refs/T19860.json
+2,T1262,Tazobactam,tier1_inhibitor,positive,50,500,project_default,>=50% inhibition,PHD215176,b10,data/compound_literature/refs/T1262.json
+3,T6685,Sulbactam sodium,tier1_inhibitor,positive,50,500,project_default,>=50% inhibition,PHD215176,f2,data/compound_literature/refs/T6685.json
+4,T14081,Enmetazobactam,tier1_inhibitor,positive,50,500,project_default,>=50% inhibition,PHD215176,f7,data/compound_literature/refs/T14081.json
+5,T14979,Clavulanate lithium,inhibitor_analog,positive,50,500,project_default,>=50% inhibition,PHD215176,g6,data/compound_literature/refs/T14979.json
+6,T1631,Sulbactam,inhibitor_analog,positive,50,500,project_default,>=50% inhibition,PHD215177,a10,data/compound_literature/refs/T1631.json
+7,T13038,Sultamicillin,inhibitor_analog,positive,50,500,project_default,>=50% inhibition,PHD215177,b10,data/compound_literature/refs/T13038.json
+8,T1213,Piperacillin sodium,inhibitor_analog,positive,50,500,project_default,>=50% inhibition,PHD215176,b7,data/compound_literature/refs/T1213.json
+9,T0985,Oxacillin sodium salt,substrate_control,negative,50,500,project_default,<20% inhibition,PHD215177,a4,data/compound_literature/refs/T0985.json
+10,T30787,Cefetamet sodium,substrate_control,negative,50,500,project_default,<20% inhibition,PHD215176,h10,data/compound_literature/refs/T30787.json
+11,T67978,Cefuzonam,substrate_control,negative,50,500,project_default,<20% inhibition,PHD215176,h9,data/compound_literature/refs/T67978.json
+12,T0814,Ampicillin Trihydrate,substrate_control,negative,50,500,project_default,<20% inhibition,PHD215176,c2,data/compound_literature/refs/T0814.json
+13,T0366,Cefadroxil,substrate_control,negative,50,500,project_default,<20% inhibition,PHD215176,a6,data/compound_literature/refs/T0366.json
+14,T6385,Amoxicillin Sodium,substrate_control,negative,50,500,project_default,<20% inhibition,PHD215176,e8,data/compound_literature/refs/T6385.json
+15,TQ0056,Cefuracetime,substrate_control,negative,50,500,project_default,<20% inhibition,PHD215176,g2,data/compound_literature/refs/TQ0056.json
+16,T8390,Cefazolin,substrate_control,negative,50,500,project_default,<20% inhibition,PHD215176,f3,data/compound_literature/refs/T8390.json
+17,T0138,Cefpiramide acid,diverse_pick,unknown,50,500,project_default,uncertain,PHD215176,a2,data/compound_literature/refs/T0138.json
+18,T0198,Ceftiofur sodium,diverse_pick,unknown,50,500,project_default,uncertain,PHD215176,a3,data/compound_literature/refs/T0198.json
+19,T0199,Cephradine,diverse_pick,unknown,50,500,project_default,uncertain,PHD215176,a4,data/compound_literature/refs/T0199.json
+20,T0234,Methicillin sodium salt,diverse_pick,unknown,50,500,project_default,uncertain,PHD215176,a5,data/compound_literature/refs/T0234.json
+21,T1001,Dicloxacillin Sodium hydrate,diverse_pick,unknown,50,500,project_default,uncertain,PHD215176,a7,data/compound_literature/refs/T1001.json
+22,T1005,Amoxicillin,diverse_pick,unknown,50,500,project_default,uncertain,PHD215176,a8,data/compound_literature/refs/T1005.json
+23,T1008,Cephalexin,diverse_pick,unknown,50,500,project_default,uncertain,PHD215176,a9,data/compound_literature/refs/T1008.json
+24,T0224,Meropenem,diverse_pick,unknown,50,500,project_default,uncertain,PHD215177,a3,data/compound_literature/refs/T0224.json

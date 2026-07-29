@@ -1,0 +1,19 @@
+{
+  "known_inhibitors": [
+    "clavulanic acid",
+    "clavulanate lithium",
+    "sulbactam",
+    "tazobactam",
+    "enmetazobactam"
+  ],
+  "library_notes": {
+    "total_compounds": 105,
+    "mostly_antibiotic_substrates": true,
+    "exclude_compound_ids": [
+      "T19709"
+    ],
+    "forward_match_count": 5,
+    "forward_compound_groups": 4
+  },
+  "forward_updated_at": "2026-07-26T00:07:44Z"
+}

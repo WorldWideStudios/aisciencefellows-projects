@@ -1,0 +1,37 @@
+urdf: round_holder_hackteam10.urdf
+parts:
+  body:
+    links: [body]
+    description: Round plate holder (SBS footprint 127.8 x 85.5 mm, 5 mm thick, 90
+      mm-diameter round centre cutout). STL geometry, no colour.
+articulations:
+  default:
+    description: Static object, no actuated joints
+    joints: {}
+anchors:
+  object:
+    parent_link: world
+    description: Table placement frame, origin at the (max_x, max_y, min_z) bbox corner.
+      Mesh is authored in millimetres and scaled 0.001 (mm->m) in the URDF; it is
+      already Z-up with the base flat on z=0, so the anchor uses identity rotation.
+    link_T_anchor:
+      xyz: [0.04274, 0.06388, 0.0]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  bottom_center:
+    parent_link: body
+    description: World convention (+Z up). Placement frame at the centre of the 127.8
+      x 85.5 mm footprint and the bottom surface. Align this anchor to a holder seat.
+    link_T_anchor:
+      xyz: [0.0, 0.0, 0.0]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  grasp_shortside:
+    parent_link: body
+    description: TCP convention (+Z into the grasp). Grasp at the centre of the 5
+      mm-thick SBS footprint. The orientation is the existing wellplate_96_flatbottom
+      short-side grasp rotated into this mesh's axes; +Z points down into the part.
+    link_T_anchor:
+      xyz: [0.0, 0.0, -0.016]
+      wxyz: [0.0, 1.0, 0.0, 0.0]
+    grasp:
+      width: 0.075
+      gripper_variant: wellplate

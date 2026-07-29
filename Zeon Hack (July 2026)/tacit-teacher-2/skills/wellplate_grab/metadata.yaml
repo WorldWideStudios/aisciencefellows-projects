@@ -1,0 +1,10 @@
+skill_id: wellplate_grab
+version: "1.0.0"
+description: "Pick up a wellplate with the right arm: stage, optionally move through a wider pre_hold_plate anchor, hover above the hold_plate anchor, descend, close the gripper, attach the plate, and retract."
+
+# parameters are derived from the wellplate_grab() signature in robotic_code.py
+
+tags:
+  - plateandholder
+  - plate
+  - pick

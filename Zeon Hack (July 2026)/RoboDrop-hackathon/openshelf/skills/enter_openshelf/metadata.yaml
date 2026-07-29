@@ -1,0 +1,10 @@
+skill_id: enter_openshelf
+version: "1.0.0"
+description: "Carry the held item into the OpenShelf IO box with a careful straight-line entry (the mirror of retract): go to a standoff just outside the box, then ease straight -Y into the tight square keeping one camera-down orientation (matching the table grasp so the upright box never flips)."
+
+# parameters are derived from the enter_openshelf() signature in robotic_code.py
+
+tags:
+  - openshelf
+  - motion
+  - load

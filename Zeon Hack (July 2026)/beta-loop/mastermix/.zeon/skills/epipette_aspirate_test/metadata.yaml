@@ -1,0 +1,14 @@
+skill_id: epipette_aspirate_test
+version: "1.0.0"
+description: "Calibration sweep: loop over every well running the epipette_aspirate motion, but skip the slow dip into the liquid. Does hover, descend to the rim, aspirate, and retract for each well so you can eyeball XY alignment without wetting the tip. No world state is advanced."
+
+# parameters are derived from the epipette_aspirate_test() signature in robotic_code.py
+
+preconditions:
+  epipette_connected: true
+
+tags:
+  - pipette_demo
+  - epipette
+  - aspirate
+  - test

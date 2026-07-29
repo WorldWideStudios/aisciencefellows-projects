@@ -1,0 +1,29 @@
+{
+  "workflow_id": "test_platereader_kinetic_schedule",
+  "name": "Test Plate Reader Kinetic Schedule",
+  "description": "Fast smoke test for platereader_run_kinetic_schedule. Uses a 3-read, 2-second kinetic window so simulation completes quickly. If run on real hardware, it assumes the plate reader is already loaded and closed and will execute the underlying Gen5 read/export flow three times.",
+  "version": "1.0.0",
+  "author": "",
+  "created_at": "2026-07-25T00:00:00.000Z",
+  "updated_at": "2026-07-25T00:00:00.000Z",
+  "simulation_validated": false,
+  "objects": [],
+  "inputs": [
+    { "name": "kinetic_second_read_s", "type": "float", "description": "Second read time after kinetic t0; tiny value for smoke test.", "defaultValue": 1.0 },
+    { "name": "kinetic_interval_s", "type": "float", "description": "Interval between subsequent reads; tiny value for smoke test.", "defaultValue": 1.0 },
+    { "name": "kinetic_total_time_s", "type": "float", "description": "End of kinetic window; default gives reads at 0, 1, and 2 seconds.", "defaultValue": 2.0 },
+    { "name": "reader_temperature_c", "type": "float", "description": "Recorded plate-reader incubator setpoint.", "defaultValue": 25.0 },
+    { "name": "reader_equilibration_s", "type": "float", "description": "Short equilibration wait before first read.", "defaultValue": 1.0 },
+    { "name": "slope_window_start_s", "type": "float", "description": "Smoke-test slope window start.", "defaultValue": 0.0 },
+    { "name": "slope_window_end_s", "type": "float", "description": "Smoke-test slope window end.", "defaultValue": 2.0 }
+  ],
+  "nodes": [
+    { "node_id": "start_0", "type": "start", "label": "Start" },
+    { "node_id": "run_kinetic_schedule", "type": "skill", "label": "Run Fast Kinetic Schedule Test", "description": "Exercise platereader_run_kinetic_schedule with a minimal 3-read schedule.", "skill_id": "platereader_run_kinetic_schedule", "parameters": { "second_read_s": { "$input": "kinetic_second_read_s" }, "interval_s": { "$input": "kinetic_interval_s" }, "total_time_s": { "$input": "kinetic_total_time_s" }, "temperature_c": { "$input": "reader_temperature_c" }, "equilibration_s": { "$input": "reader_equilibration_s" }, "slope_window_start_s": { "$input": "slope_window_start_s" }, "slope_window_end_s": { "$input": "slope_window_end_s" } } },
+    { "node_id": "end_1", "type": "end", "label": "End" }
+  ],
+  "edges": [
+    { "edge_id": "e0", "from_node": "start_0", "to_node": "run_kinetic_schedule", "condition": { "type": "default" } },
+    { "edge_id": "e1", "from_node": "run_kinetic_schedule", "to_node": "end_1", "condition": { "type": "on_success" } }
+  ]
+}

@@ -1,0 +1,12 @@
+skill_id: wellplate_drop
+version: "1.0.0"
+description: "Right arm drops a held well plate onto a destination anchor (default the holder's home) by aligning the plate's bottom_center to it: approach from above, descend, open the gripper, detach, retreat, then snap the plate's bottom_center onto the anchor so sim seats it exactly. Branches on grasp_anchor: a grasp_longside grip takes the grip-aware placement (carries the tuned straight-down shortside orientation onto the off-centre rotated grip); anything else takes the simple straight-down snap. Takes (object, destination, destination_anchor, grasp_anchor)."
+
+# parameters are derived from the wellplate_drop() signature in robotic_code.py
+
+tags:
+  - pipette_demo
+  - wellplate
+  - wellplate_stand
+  - drop
+  - place

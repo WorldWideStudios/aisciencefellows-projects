@@ -1,0 +1,647 @@
+urdf: wellplate_96_flatbottom.urdf
+parts:
+  body:
+    links: [body]
+    description: 96-well flat-bottom microplate (ANSI/SLAS footprint 127.76 x 85.48
+      mm, ~14.6 mm tall)
+articulations:
+  default:
+    description: Static labware, no actuated joints
+    joints: {}
+anchors:
+  object:
+    parent_link: world
+    description: Table placement frame, origin at the (max_x, max_y, min_z) bbox corner.
+      Mesh is authored in millimetres and scaled 0.001 (mm->m) in the URDF; it is
+      already Z-up with the base on z=0 and centred in XY, so the anchor uses identity
+      rotation.
+    link_T_anchor:
+      xyz: [0.06388, -0.042735, 0.0]
+      wxyz: [0.707107, 0.0, 0.0, -0.707107]
+  grasp_shortside:
+    parent_link: body
+    description: Grasping post for grabbing the plate along the short side (along
+      column 1 and 12)
+    link_T_anchor:
+      xyz: [0.000189767, 0.000433999, -0.00512627]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+    grasp:
+      width: 0.075
+      gripper_variant: wellplate
+  grasp_longside:
+    parent_link: body
+    description: Grasping post for grabbing the plate along the long side (grasp_shortside
+      rotated 90 deg about its local Z axis)
+    link_T_anchor:
+      xyz: [0.000189767, 0.000433999, -0.00512627]
+      wxyz: [0.0, 0.0, 1.0, 0.0]
+    grasp:
+      width: 0.075
+      gripper_variant: wellplate
+  A1:
+    parent_link: body
+    description: Top of well for hole A1
+    link_T_anchor:
+      xyz: [-0.04935, 0.031893, 0.0141394]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  A12:
+    parent_link: body
+    description: Top of well for hole A12
+    link_T_anchor:
+      xyz: [0.0494336, 0.031893, 0.0141394]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  H1:
+    parent_link: body
+    description: Top of well for hole H1
+    link_T_anchor:
+      xyz: [-0.04935, -0.031447, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  H12:
+    parent_link: body
+    description: Top of well for hole H12
+    link_T_anchor:
+      xyz: [0.049434, -0.031447, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  A2:
+    parent_link: body
+    description: Top of well for hole A2
+    link_T_anchor:
+      xyz: [-0.04037, 0.031893, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  A3:
+    parent_link: body
+    description: Top of well for hole A3
+    link_T_anchor:
+      xyz: [-0.031389, 0.031893, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  A4:
+    parent_link: body
+    description: Top of well for hole A4
+    link_T_anchor:
+      xyz: [-0.022409, 0.031893, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  A5:
+    parent_link: body
+    description: Top of well for hole A5
+    link_T_anchor:
+      xyz: [-0.013429, 0.031893, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  A6:
+    parent_link: body
+    description: Top of well for hole A6
+    link_T_anchor:
+      xyz: [-0.004448, 0.031893, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  A7:
+    parent_link: body
+    description: Top of well for hole A7
+    link_T_anchor:
+      xyz: [0.004532, 0.031893, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  A8:
+    parent_link: body
+    description: Top of well for hole A8
+    link_T_anchor:
+      xyz: [0.013512, 0.031893, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  A9:
+    parent_link: body
+    description: Top of well for hole A9
+    link_T_anchor:
+      xyz: [0.022493, 0.031893, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  A10:
+    parent_link: body
+    description: Top of well for hole A10
+    link_T_anchor:
+      xyz: [0.031473, 0.031893, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  A11:
+    parent_link: body
+    description: Top of well for hole A11
+    link_T_anchor:
+      xyz: [0.040453, 0.031893, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  B1:
+    parent_link: body
+    description: Top of well for hole B1
+    link_T_anchor:
+      xyz: [-0.04935, 0.022844, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  B2:
+    parent_link: body
+    description: Top of well for hole B2
+    link_T_anchor:
+      xyz: [-0.04037, 0.022844, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  B3:
+    parent_link: body
+    description: Top of well for hole B3
+    link_T_anchor:
+      xyz: [-0.031389, 0.022844, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  B4:
+    parent_link: body
+    description: Top of well for hole B4
+    link_T_anchor:
+      xyz: [-0.022409, 0.022844, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  B5:
+    parent_link: body
+    description: Top of well for hole B5
+    link_T_anchor:
+      xyz: [-0.013429, 0.022844, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  B6:
+    parent_link: body
+    description: Top of well for hole B6
+    link_T_anchor:
+      xyz: [-0.004448, 0.022844, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  B7:
+    parent_link: body
+    description: Top of well for hole B7
+    link_T_anchor:
+      xyz: [0.004532, 0.022844, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  B8:
+    parent_link: body
+    description: Top of well for hole B8
+    link_T_anchor:
+      xyz: [0.013512, 0.022844, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  B9:
+    parent_link: body
+    description: Top of well for hole B9
+    link_T_anchor:
+      xyz: [0.022493, 0.022844, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  B10:
+    parent_link: body
+    description: Top of well for hole B10
+    link_T_anchor:
+      xyz: [0.031473, 0.022844, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  B11:
+    parent_link: body
+    description: Top of well for hole B11
+    link_T_anchor:
+      xyz: [0.040453, 0.022844, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  B12:
+    parent_link: body
+    description: Top of well for hole B12
+    link_T_anchor:
+      xyz: [0.049434, 0.022844, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  C1:
+    parent_link: body
+    description: Top of well for hole C1
+    link_T_anchor:
+      xyz: [-0.04935, 0.013796, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  C2:
+    parent_link: body
+    description: Top of well for hole C2
+    link_T_anchor:
+      xyz: [-0.04037, 0.013796, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  C3:
+    parent_link: body
+    description: Top of well for hole C3
+    link_T_anchor:
+      xyz: [-0.031389, 0.013796, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  C4:
+    parent_link: body
+    description: Top of well for hole C4
+    link_T_anchor:
+      xyz: [-0.022409, 0.013796, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  C5:
+    parent_link: body
+    description: Top of well for hole C5
+    link_T_anchor:
+      xyz: [-0.013429, 0.013796, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  C6:
+    parent_link: body
+    description: Top of well for hole C6
+    link_T_anchor:
+      xyz: [-0.004448, 0.013796, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  C7:
+    parent_link: body
+    description: Top of well for hole C7
+    link_T_anchor:
+      xyz: [0.004532, 0.013796, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  C8:
+    parent_link: body
+    description: Top of well for hole C8
+    link_T_anchor:
+      xyz: [0.013512, 0.013796, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  C9:
+    parent_link: body
+    description: Top of well for hole C9
+    link_T_anchor:
+      xyz: [0.022493, 0.013796, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  C10:
+    parent_link: body
+    description: Top of well for hole C10
+    link_T_anchor:
+      xyz: [0.031473, 0.013796, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  C11:
+    parent_link: body
+    description: Top of well for hole C11
+    link_T_anchor:
+      xyz: [0.040453, 0.013796, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  C12:
+    parent_link: body
+    description: Top of well for hole C12
+    link_T_anchor:
+      xyz: [0.049434, 0.013796, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  D1:
+    parent_link: body
+    description: Top of well for hole D1
+    link_T_anchor:
+      xyz: [-0.04935, 0.004747, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  D2:
+    parent_link: body
+    description: Top of well for hole D2
+    link_T_anchor:
+      xyz: [-0.04037, 0.004747, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  D3:
+    parent_link: body
+    description: Top of well for hole D3
+    link_T_anchor:
+      xyz: [-0.031389, 0.004747, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  D4:
+    parent_link: body
+    description: Top of well for hole D4
+    link_T_anchor:
+      xyz: [-0.022409, 0.004747, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  D5:
+    parent_link: body
+    description: Top of well for hole D5
+    link_T_anchor:
+      xyz: [-0.013429, 0.004747, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  D6:
+    parent_link: body
+    description: Top of well for hole D6
+    link_T_anchor:
+      xyz: [-0.004448, 0.004747, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  D7:
+    parent_link: body
+    description: Top of well for hole D7
+    link_T_anchor:
+      xyz: [0.004532, 0.004747, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  D8:
+    parent_link: body
+    description: Top of well for hole D8
+    link_T_anchor:
+      xyz: [0.013512, 0.004747, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  D9:
+    parent_link: body
+    description: Top of well for hole D9
+    link_T_anchor:
+      xyz: [0.022493, 0.004747, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  D10:
+    parent_link: body
+    description: Top of well for hole D10
+    link_T_anchor:
+      xyz: [0.031473, 0.004747, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  D11:
+    parent_link: body
+    description: Top of well for hole D11
+    link_T_anchor:
+      xyz: [0.040453, 0.004747, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  D12:
+    parent_link: body
+    description: Top of well for hole D12
+    link_T_anchor:
+      xyz: [0.049434, 0.004747, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  E1:
+    parent_link: body
+    description: Top of well for hole E1
+    link_T_anchor:
+      xyz: [-0.04935, -0.004301, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  E2:
+    parent_link: body
+    description: Top of well for hole E2
+    link_T_anchor:
+      xyz: [-0.04037, -0.004301, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  E3:
+    parent_link: body
+    description: Top of well for hole E3
+    link_T_anchor:
+      xyz: [-0.031389, -0.004301, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  E4:
+    parent_link: body
+    description: Top of well for hole E4
+    link_T_anchor:
+      xyz: [-0.022409, -0.004301, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  E5:
+    parent_link: body
+    description: Top of well for hole E5
+    link_T_anchor:
+      xyz: [-0.013429, -0.004301, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  E6:
+    parent_link: body
+    description: Top of well for hole E6
+    link_T_anchor:
+      xyz: [-0.004448, -0.004301, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  E7:
+    parent_link: body
+    description: Top of well for hole E7
+    link_T_anchor:
+      xyz: [0.004532, -0.004301, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  E8:
+    parent_link: body
+    description: Top of well for hole E8
+    link_T_anchor:
+      xyz: [0.013512, -0.004301, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  E9:
+    parent_link: body
+    description: Top of well for hole E9
+    link_T_anchor:
+      xyz: [0.022493, -0.004301, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  E10:
+    parent_link: body
+    description: Top of well for hole E10
+    link_T_anchor:
+      xyz: [0.031473, -0.004301, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  E11:
+    parent_link: body
+    description: Top of well for hole E11
+    link_T_anchor:
+      xyz: [0.040453, -0.004301, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  E12:
+    parent_link: body
+    description: Top of well for hole E12
+    link_T_anchor:
+      xyz: [0.049434, -0.004301, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  F1:
+    parent_link: body
+    description: Top of well for hole F1
+    link_T_anchor:
+      xyz: [-0.04935, -0.01335, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  F2:
+    parent_link: body
+    description: Top of well for hole F2
+    link_T_anchor:
+      xyz: [-0.04037, -0.01335, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  F3:
+    parent_link: body
+    description: Top of well for hole F3
+    link_T_anchor:
+      xyz: [-0.031389, -0.01335, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  F4:
+    parent_link: body
+    description: Top of well for hole F4
+    link_T_anchor:
+      xyz: [-0.022409, -0.01335, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  F5:
+    parent_link: body
+    description: Top of well for hole F5
+    link_T_anchor:
+      xyz: [-0.013429, -0.01335, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  F6:
+    parent_link: body
+    description: Top of well for hole F6
+    link_T_anchor:
+      xyz: [-0.004448, -0.01335, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  F7:
+    parent_link: body
+    description: Top of well for hole F7
+    link_T_anchor:
+      xyz: [0.004532, -0.01335, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  F8:
+    parent_link: body
+    description: Top of well for hole F8
+    link_T_anchor:
+      xyz: [0.013512, -0.01335, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  F9:
+    parent_link: body
+    description: Top of well for hole F9
+    link_T_anchor:
+      xyz: [0.022493, -0.01335, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  F10:
+    parent_link: body
+    description: Top of well for hole F10
+    link_T_anchor:
+      xyz: [0.031473, -0.01335, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  F11:
+    parent_link: body
+    description: Top of well for hole F11
+    link_T_anchor:
+      xyz: [0.040454, -0.01335, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  F12:
+    parent_link: body
+    description: Top of well for hole F12
+    link_T_anchor:
+      xyz: [0.049434, -0.01335, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  G1:
+    parent_link: body
+    description: Top of well for hole G1
+    link_T_anchor:
+      xyz: [-0.04935, -0.022398, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  G2:
+    parent_link: body
+    description: Top of well for hole G2
+    link_T_anchor:
+      xyz: [-0.04037, -0.022398, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  G3:
+    parent_link: body
+    description: Top of well for hole G3
+    link_T_anchor:
+      xyz: [-0.031389, -0.022398, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  G4:
+    parent_link: body
+    description: Top of well for hole G4
+    link_T_anchor:
+      xyz: [-0.022409, -0.022398, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  G5:
+    parent_link: body
+    description: Top of well for hole G5
+    link_T_anchor:
+      xyz: [-0.013429, -0.022398, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  G6:
+    parent_link: body
+    description: Top of well for hole G6
+    link_T_anchor:
+      xyz: [-0.004448, -0.022398, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  G7:
+    parent_link: body
+    description: Top of well for hole G7
+    link_T_anchor:
+      xyz: [0.004532, -0.022398, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  G8:
+    parent_link: body
+    description: Top of well for hole G8
+    link_T_anchor:
+      xyz: [0.013513, -0.022398, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  G9:
+    parent_link: body
+    description: Top of well for hole G9
+    link_T_anchor:
+      xyz: [0.022493, -0.022398, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  G10:
+    parent_link: body
+    description: Top of well for hole G10
+    link_T_anchor:
+      xyz: [0.031473, -0.022398, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  G11:
+    parent_link: body
+    description: Top of well for hole G11
+    link_T_anchor:
+      xyz: [0.040454, -0.022398, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  G12:
+    parent_link: body
+    description: Top of well for hole G12
+    link_T_anchor:
+      xyz: [0.049434, -0.022398, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  H2:
+    parent_link: body
+    description: Top of well for hole H2
+    link_T_anchor:
+      xyz: [-0.04037, -0.031447, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  H3:
+    parent_link: body
+    description: Top of well for hole H3
+    link_T_anchor:
+      xyz: [-0.031389, -0.031447, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  H4:
+    parent_link: body
+    description: Top of well for hole H4
+    link_T_anchor:
+      xyz: [-0.022409, -0.031447, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  H5:
+    parent_link: body
+    description: Top of well for hole H5
+    link_T_anchor:
+      xyz: [-0.013429, -0.031447, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  H6:
+    parent_link: body
+    description: Top of well for hole H6
+    link_T_anchor:
+      xyz: [-0.004448, -0.031447, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  H7:
+    parent_link: body
+    description: Top of well for hole H7
+    link_T_anchor:
+      xyz: [0.004532, -0.031447, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  H8:
+    parent_link: body
+    description: Top of well for hole H8
+    link_T_anchor:
+      xyz: [0.013513, -0.031447, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  H9:
+    parent_link: body
+    description: Top of well for hole H9
+    link_T_anchor:
+      xyz: [0.022493, -0.031447, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  H10:
+    parent_link: body
+    description: Top of well for hole H10
+    link_T_anchor:
+      xyz: [0.031473, -0.031447, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  H11:
+    parent_link: body
+    description: Top of well for hole H11
+    link_T_anchor:
+      xyz: [0.040454, -0.031447, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  bottom_center:
+    parent_link: body
+    description: bottom center location of the wellplate
+    link_T_anchor:
+      xyz: [-8.0e-05, -1.0e-06, 0.0]
+      wxyz: [0.707107, 1.16117e-47, 0.0, -0.707107]
+  depth_top:
+    parent_link: body
+    description: Depth reference — at the well top (z=0.014139). Colinear (same XY)
+      with depth_bottom; the epipette skills use the 3D distance between the two as
+      the descent depth, which is exact at any object orientation.
+    link_T_anchor:
+      xyz: [-8.0e-05, -1.0e-06, 0.014139]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  depth_bottom:
+    parent_link: body
+    description: Depth reference — 1.62 cm below the well top. distance(depth_top,
+      depth_bottom) = 1.62 cm = how far the tip descends below the well top when aspirating/dispensing.
+    link_T_anchor:
+      xyz: [-8.0e-05, -1.0e-06, -0.002061]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  grasp_longside_platereader:
+    parent_link: body
+    description: Grasping post for grabbing the plate along the long side (grasp_shortside
+      rotated 90 deg about its local Z axis)
+    link_T_anchor:
+      xyz: [0.0387148, 0.000434, 0.00445831]
+      wxyz: [2.73691e-48, 0.0, 1.0, 4.55787e-64]
+    grasp:
+      width: 0.035
+      gripper_variant: wellplate

@@ -1,0 +1,473 @@
+{
+  "ran_at": "2026-07-25T23:20:20Z",
+  "compound_count": 23,
+  "batch_count": 3,
+  "refs_written": [
+    "T0138",
+    "T0198",
+    "T0199",
+    "T0234",
+    "T0366",
+    "T0814",
+    "T0985",
+    "T1001",
+    "T1008",
+    "T1213",
+    "T1262",
+    "T13038",
+    "T14081",
+    "T14979",
+    "T1631",
+    "T30787",
+    "T6385",
+    "T6685",
+    "T67978",
+    "T8390",
+    "TQ0056"
+  ],
+  "refs_skipped_curated": [
+    "T1005",
+    "T19860"
+  ],
+  "truncated_compound_ids": [],
+  "compounds": [
+    {
+      "compound_id": "T0138",
+      "name": "Cefpiramide acid",
+      "tiers": [
+        "Tier 3"
+      ],
+      "query": "Cefpiramide acid beta-lactamase inhibitor TEM-1 nitrocefin",
+      "search_status": "ok",
+      "search_elapsed_ms": 1913,
+      "search_result_id": "s_42e00aaa",
+      "map_status": "ok",
+      "map_elapsed_ms": 4369,
+      "ref_status": "written",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "map_excerpt": "Map complete: 5/5 tasks succeeded in 2066ms\nResults ID: m_605d16ab\nFull results: /.gxl/map_m_605d16ab.txt\n\n  [success] In Silico Study of the Potential of Brazilein Sappan Wood as a Beta-La  (PMC11229569)\n    The provided paper does not contain information about Cefpiramide acid, the nitrocefin colorimetric assay, Ki or IC50 values, inhibitor concentrations\n  [success] Effect of Lactamase Inhibitors on the Biosensor Penp during the Measur  (PMC6427286)\n    Based on the provided paper content, th"
+    },
+    {
+      "compound_id": "T0198",
+      "name": "Ceftiofur sodium",
+      "tiers": [
+        "Tier 3"
+      ],
+      "query": "Ceftiofur sodium beta-lactamase inhibitor TEM-1 nitrocefin",
+      "search_status": "ok",
+      "search_elapsed_ms": 1925,
+      "search_result_id": "s_b7ebe742",
+      "map_status": "ok",
+      "map_elapsed_ms": 6159,
+      "ref_status": "written",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "map_excerpt": "Map complete: 5/5 tasks succeeded in 3908ms\nResults ID: m_99378512\nFull results: /.gxl/map_m_99378512.txt\n\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided research paper content, there is no information regarding testing Ceftiofur sodium against TEM-1 beta-lactamase using a nitrocef\n  [success] Effect of Lactamase Inhibitors on the Biosensor Penp during the Measur  (PMC6427286)\n    Based on the provided paper content, th"
+    },
+    {
+      "compound_id": "T1213",
+      "name": "Piperacillin sodium",
+      "tiers": [
+        "Tier 2"
+      ],
+      "query": "Piperacillin sodium beta-lactamase inhibitor TEM-1 nitrocefin",
+      "search_status": "ok",
+      "search_elapsed_ms": 2482,
+      "search_result_id": "s_edd6f7e1",
+      "map_status": "ok",
+      "map_elapsed_ms": 4859,
+      "ref_status": "written",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "map_excerpt": "Map complete: 5/5 tasks succeeded in 2554ms\nResults ID: m_cd00f8e5\nFull results: /.gxl/map_m_cd00f8e5.txt\n\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided paper content, there is no mention of Piperacillin sodium, nitrocefin colorimetric assays, $K_i$, $IC_{50}$ values, or enzyme/su\n  [success] Effect of Lactamase Inhibitors on the Biosensor Penp during the Measur  (PMC6427286)\n    Based on the provided paper content, th"
+    },
+    {
+      "compound_id": "T1262",
+      "name": "Tazobactam",
+      "tiers": [
+        "Tier 1"
+      ],
+      "query": "Tazobactam beta-lactamase inhibitor TEM-1 nitrocefin",
+      "search_status": "ok",
+      "search_elapsed_ms": 1921,
+      "search_result_id": "s_18914314",
+      "map_status": "ok",
+      "map_elapsed_ms": 4328,
+      "ref_status": "written",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "map_excerpt": "Map complete: 5/5 tasks succeeded in 2103ms\nResults ID: m_78474b36\nFull results: /.gxl/map_m_78474b36.txt\n\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided paper content, there is no mention of tazobactam, nitrocefin colorimetric assays, $K_i$, $IC_{50}$ values, or enzyme/substrate c\n  [success] Molecular Basis of Class A \u03b2-Lactamase Inhibition by Relebactam  (PMC6761529)\n    Based on the provided paper, there is no infor"
+    },
+    {
+      "compound_id": "T6685",
+      "name": "Sulbactam sodium",
+      "tiers": [
+        "Tier 1"
+      ],
+      "query": "Sulbactam sodium beta-lactamase inhibitor TEM-1 nitrocefin",
+      "search_status": "ok",
+      "search_elapsed_ms": 2289,
+      "search_result_id": "s_481e3588",
+      "map_status": "ok",
+      "map_elapsed_ms": 4368,
+      "ref_status": "written",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "map_excerpt": "Map complete: 5/5 tasks succeeded in 1877ms\nResults ID: m_49d0369a\nFull results: /.gxl/map_m_49d0369a.txt\n\n  [success] In Vitro Activity of Cefaclor/Beta-Lactamases Inhibitors (Clavulanic A  (PMC12189933)\n    Based on the provided paper content, there is no information regarding Sulbactam sodium against TEM-1 beta-lactamase in a nitrocefin colorimetric assa\n  [success] Molecular Basis of Class A \u03b2-Lactamase Inhibition by Relebactam  (PMC6761529)\n    Based on the provided paper content, there is "
+    },
+    {
+      "compound_id": "T14081",
+      "name": "Enmetazobactam",
+      "tiers": [
+        "Tier 1"
+      ],
+      "query": "Enmetazobactam beta-lactamase inhibitor TEM-1 nitrocefin",
+      "search_status": "ok",
+      "search_elapsed_ms": 2727,
+      "search_result_id": "s_db29de97",
+      "map_status": "ok",
+      "map_elapsed_ms": 4671,
+      "ref_status": "written",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "map_excerpt": "Map complete: 5/5 tasks succeeded in 3238ms\nResults ID: m_7e377496\nFull results: /.gxl/map_m_7e377496.txt\n\n  [success] Mechanistic basis for inhibition of the extended\u2010spectrum \u03b2\u2010lactamase   (PMC12643063)\n    Based on the provided paper content, there is no information regarding the IC50, Ki, inhibitor concentrations, TEM-1 enzyme concentration, or PMID/PMC\n  [success] Cefepime-enmetazobactam: first approved cefepime-\u03b2- lactamase inhibito  (PMC11938971)\n    Based on the provided paper content, t"
+    },
+    {
+      "compound_id": "T14979",
+      "name": "Clavulanate lithium",
+      "tiers": [
+        "Tier 2"
+      ],
+      "query": "Clavulanate lithium beta-lactamase inhibitor TEM-1 nitrocefin",
+      "search_status": "ok",
+      "search_elapsed_ms": 2039,
+      "search_result_id": "s_910214ba",
+      "map_status": "ok",
+      "map_elapsed_ms": 2543,
+      "ref_status": "written",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "map_excerpt": "Map complete: 5/5 tasks succeeded in 1604ms\nResults ID: m_a095ce5d\nFull results: /.gxl/map_m_a095ce5d.txt\n\n  [success] In Silico Study of the Potential of Brazilein Sappan Wood as a Beta-La  (PMC11229569)\n    Based on the provided paper content, there is no information regarding experimental assays (such as a nitrocefin colorimetric assay), Ki or IC50 value\n  [success] Molecular Basis of Class A \u03b2-Lactamase Inhibition by Relebactam  (PMC6761529)\n    Based on the provided paper, there is no infor"
+    },
+    {
+      "compound_id": "T19860",
+      "name": "Clavulanic Acid",
+      "tiers": [
+        "Tier 1"
+      ],
+      "query": "Clavulanic Acid beta-lactamase inhibitor TEM-1 nitrocefin",
+      "search_status": "ok",
+      "search_elapsed_ms": 1942,
+      "search_result_id": "s_34aea8b3",
+      "map_status": "ok",
+      "map_elapsed_ms": 4371,
+      "ref_status": "skipped_curated",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "map_excerpt": "Map complete: 5/5 tasks succeeded in 1884ms\nResults ID: m_c4548c06\nFull results: /.gxl/map_m_c4548c06.txt\n\n  [success] In Silico Study of the Potential of Brazilein Sappan Wood as a Beta-La  (PMC11229569)\n    Based on the provided paper, the information regarding the *in vitro* nitrocefin colorimetric assay, including specific assay concentrations ($K_i$, $\n  [success] Effect of Lactamase Inhibitors on the Biosensor Penp during the Measur  (PMC6427286)\n    Based on the provided paper content, th"
+    },
+    {
+      "compound_id": "T1631",
+      "name": "Sulbactam",
+      "tiers": [
+        "Tier 2"
+      ],
+      "query": "Sulbactam beta-lactamase inhibitor TEM-1 nitrocefin",
+      "search_status": "ok",
+      "search_elapsed_ms": 2142,
+      "search_result_id": "s_8fd73b8a",
+      "map_status": "ok",
+      "map_elapsed_ms": 4357,
+      "ref_status": "written",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "map_excerpt": "Map complete: 5/5 tasks succeeded in 2136ms\nResults ID: m_fa271726\nFull results: /.gxl/map_m_fa271726.txt\n\n  [success] In Vitro Activity of Cefaclor/Beta-Lactamases Inhibitors (Clavulanic A  (PMC12189933)\n    Based on the provided paper content, there is no mention of a nitrocefin colorimetric assay, TEM-1 beta-lactamase enzyme kinetics, $K_i$, or $\\text{IC\n  [success] The G132S Mutation Enhances the Resistance of  Mycobacterium tuberculo  (PMC8383266)\n    Based on the provided paper content, th"
+    },
+    {
+      "compound_id": "T13038",
+      "name": "Sultamicillin",
+      "tiers": [
+        "Tier 2"
+      ],
+      "query": "Sultamicillin beta-lactamase inhibitor TEM-1 nitrocefin",
+      "search_status": "ok",
+      "search_elapsed_ms": 2555,
+      "search_result_id": "s_7a7e78b8",
+      "map_status": "ok",
+      "map_elapsed_ms": 2414,
+      "ref_status": "written",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "map_excerpt": "Map complete: 5/5 tasks succeeded in 1350ms\nResults ID: m_6a39d77f\nFull results: /.gxl/map_m_6a39d77f.txt\n\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided paper content, there is no mention of Sultamicillin, a nitrocefin colorimetric assay, Ki, IC50 values, inhibitor concentrations,\n  [success] Effect of Lactamase Inhibitors on the Biosensor Penp during the Measur  (PMC6427286)\n    Based on the provided paper content, th"
+    },
+    {
+      "compound_id": "T0199",
+      "name": "Cephradine",
+      "tiers": [
+        "Tier 3"
+      ],
+      "query": "Cephradine beta-lactamase inhibitor TEM-1 nitrocefin",
+      "search_status": "ok",
+      "search_elapsed_ms": 1851,
+      "search_result_id": "s_58443de5",
+      "map_status": "ok",
+      "map_elapsed_ms": 4476,
+      "ref_status": "written",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "map_excerpt": "Map complete: 5/5 tasks succeeded in 2010ms\nResults ID: m_821e5e6e\nFull results: /.gxl/map_m_821e5e6e.txt\n\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided paper content, there is no mention of Cephradine, nitrocefin colorimetric assays, $K_i$, $IC_{50}$, or enzyme/substrate concentr\n  [success] Novel Cephalosporin\nConjugates Display Potent and\nSelective Inhibition  (PMC8273888)\n    Based on the provided paper content, th"
+    },
+    {
+      "compound_id": "T0234",
+      "name": "Methicillin sodium salt",
+      "tiers": [
+        "Tier 3"
+      ],
+      "query": "Methicillin sodium salt beta-lactamase inhibitor TEM-1 nitrocefin",
+      "search_status": "ok",
+      "search_elapsed_ms": 1916,
+      "search_result_id": "s_6f0a8324",
+      "map_status": "ok",
+      "map_elapsed_ms": 2378,
+      "ref_status": "written",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "map_excerpt": "Map complete: 5/5 tasks succeeded in 1781ms\nResults ID: m_faec6b6e\nFull results: /.gxl/map_m_faec6b6e.txt\n\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided paper content, there is no mention of a nitrocefin colorimetric assay, Methicillin sodium salt, inhibition constants ($K_i$ or $\n  [success] \u03b2-Lactamase Suppression as a Strategy\nto Target Methicillin-Resistant   (PMC9773349)\n    Based on the provided paper, there is n"
+    },
+    {
+      "compound_id": "T0366",
+      "name": "Cefadroxil",
+      "tiers": [
+        "Tier 3",
+        "Tier 4"
+      ],
+      "query": "Cefadroxil beta-lactamase inhibitor TEM-1 nitrocefin",
+      "search_status": "ok",
+      "search_elapsed_ms": 1695,
+      "search_result_id": "s_ecfea547",
+      "map_status": "ok",
+      "map_elapsed_ms": 2415,
+      "ref_status": "written",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "map_excerpt": "Map complete: 5/5 tasks succeeded in 1710ms\nResults ID: m_7e06e050\nFull results: /.gxl/map_m_7e06e050.txt\n\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided paper content, there is no mention of Cefadroxil, nitrocefin colorimetric assays, Ki, IC50 values, inhibitor concentrations, nit\n  [success] Effect of Lactamase Inhibitors on the Biosensor Penp during the Measur  (PMC6427286)\n    Based on the provided paper content, th"
+    },
+    {
+      "compound_id": "T1001",
+      "name": "Dicloxacillin Sodium hydrate",
+      "tiers": [
+        "Tier 3"
+      ],
+      "query": "Dicloxacillin Sodium hydrate beta-lactamase inhibitor TEM-1 nitrocefin",
+      "search_status": "ok",
+      "search_elapsed_ms": 1759,
+      "search_result_id": "s_3a18790a",
+      "map_status": "ok",
+      "map_elapsed_ms": 4382,
+      "ref_status": "written",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "map_excerpt": "Map complete: 5/5 tasks succeeded in 2327ms\nResults ID: m_0b1d59f8\nFull results: /.gxl/map_m_0b1d59f8.txt\n\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided paper content, there is no mention of Dicloxacillin Sodium hydrate, nitrocefin colorimetric assays, Ki, IC50 values, enzyme conc\n  [success] Effect of Lactamase Inhibitors on the Biosensor Penp during the Measur  (PMC6427286)\n    Based on the provided paper content, th"
+    },
+    {
+      "compound_id": "T1005",
+      "name": "Amoxicillin",
+      "tiers": [
+        "Tier 3"
+      ],
+      "query": "Amoxicillin beta-lactamase inhibitor TEM-1 nitrocefin",
+      "search_status": "ok",
+      "search_elapsed_ms": 1896,
+      "search_result_id": "s_e902626f",
+      "map_status": "ok",
+      "map_elapsed_ms": 2444,
+      "ref_status": "skipped_curated",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "map_excerpt": "Map complete: 5/5 tasks succeeded in 1764ms\nResults ID: m_a3b7b3cb\nFull results: /.gxl/map_m_a3b7b3cb.txt\n\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided paper content, there is no information regarding the *in vitro* enzymatic kinetics, $K_i$, $\\text{IC}_{50}$, inhibitor concentra\n  [success] Reversible inactivation of a peptidoglycan transpeptidase by a \u03b2-lacta  (PMC5567249)\n    Based on the provided research paper co"
+    },
+    {
+      "compound_id": "T1008",
+      "name": "Cephalexin",
+      "tiers": [
+        "Tier 3"
+      ],
+      "query": "Cephalexin beta-lactamase inhibitor TEM-1 nitrocefin",
+      "search_status": "ok",
+      "search_elapsed_ms": 1883,
+      "search_result_id": "s_30488559",
+      "map_status": "ok",
+      "map_elapsed_ms": 4435,
+      "ref_status": "written",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "map_excerpt": "Map complete: 5/5 tasks succeeded in 2029ms\nResults ID: m_1311e264\nFull results: /.gxl/map_m_1311e264.txt\n\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided paper, there is no information regarding Cephalexin, nitrocefin colorimetric assays, $K_i$, $IC_{50}$, enzyme concentrations, or\n  [success] Synthesis and biochemical evaluation of cephalosporin analogues equipp  (PMC9056950)\n    Based on the provided paper, the reques"
+    },
+    {
+      "compound_id": "T0814",
+      "name": "Ampicillin Trihydrate",
+      "tiers": [
+        "Tier 4"
+      ],
+      "query": "Ampicillin Trihydrate beta-lactamase inhibitor TEM-1 nitrocefin",
+      "search_status": "ok",
+      "search_elapsed_ms": 1701,
+      "search_result_id": "s_bda1cf3e",
+      "map_status": "ok",
+      "map_elapsed_ms": 6449,
+      "ref_status": "written",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "map_excerpt": "Map complete: 5/5 tasks succeeded in 5461ms\nResults ID: m_e8cb01f4\nFull results: /.gxl/map_m_e8cb01f4.txt\n\n  [success] Beta-lactamase dependent and independent evolutionary paths to high-le  (PMC11199616)\n    Based on the provided research paper content, there is no mention of Ampicillin Trihydrate, TEM-1 beta-lactamase, nitrocefin colorimetric assays, $K_i\n  [success] Effect of Lactamase Inhibitors on the Biosensor Penp during the Measur  (PMC6427286)\n    Based on the provided research paper, t"
+    },
+    {
+      "compound_id": "T67978",
+      "name": "Cefuzonam",
+      "tiers": [
+        "Tier 4"
+      ],
+      "query": "Cefuzonam beta-lactamase inhibitor TEM-1 nitrocefin",
+      "search_status": "ok",
+      "search_elapsed_ms": 1786,
+      "search_result_id": "s_6ed55cbe",
+      "map_status": "ok",
+      "map_elapsed_ms": 2396,
+      "ref_status": "written",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "map_excerpt": "Map complete: 5/5 tasks succeeded in 1748ms\nResults ID: m_4633975e\nFull results: /.gxl/map_m_4633975e.txt\n\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided paper, there is no information regarding Cefuzonam, a nitrocefin colorimetric assay, inhibition constants ($K_i$ or $IC_{50}$), \n  [success] Effect of Lactamase Inhibitors on the Biosensor Penp during the Measur  (PMC6427286)\n    Based on the provided paper content, th"
+    },
+    {
+      "compound_id": "T30787",
+      "name": "Cefetamet sodium",
+      "tiers": [
+        "Tier 4"
+      ],
+      "query": "Cefetamet sodium beta-lactamase inhibitor TEM-1 nitrocefin",
+      "search_status": "ok",
+      "search_elapsed_ms": 2126,
+      "search_result_id": "s_95581c6c",
+      "map_status": "ok",
+      "map_elapsed_ms": 2285,
+      "ref_status": "written",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "map_excerpt": "Map complete: 5/5 tasks succeeded in 1737ms\nResults ID: m_c51bbd89\nFull results: /.gxl/map_m_c51bbd89.txt\n\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided paper content, there is no mention of \"Cefetamet sodium\", \"nitrocefin colorimetric assay\", \"Ki\", \"IC50\", or enzymatic inhibition\n  [success] Studies at the Ionizable Position of Cephalosporins and Penicillins: H  (PMC5329033)\n    The provided paper does not contain inf"
+    },
+    {
+      "compound_id": "T0985",
+      "name": "Oxacillin sodium salt",
+      "tiers": [
+        "Tier 4"
+      ],
+      "query": "Oxacillin sodium salt beta-lactamase inhibitor TEM-1 nitrocefin",
+      "search_status": "ok",
+      "search_elapsed_ms": 1691,
+      "search_result_id": "s_ea7efa1d",
+      "map_status": "ok",
+      "map_elapsed_ms": 4427,
+      "ref_status": "written",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "map_excerpt": "Map complete: 5/5 tasks succeeded in 1770ms\nResults ID: m_132d27cf\nFull results: /.gxl/map_m_132d27cf.txt\n\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided paper content, there is no information regarding the use of oxacillin sodium salt against TEM-1 beta-lactamase in a nitrocefin c\n  [success] Effect of Lactamase Inhibitors on the Biosensor Penp during the Measur  (PMC6427286)\n    Based on the provided paper content, th"
+    },
+    {
+      "compound_id": "T6385",
+      "name": "Amoxicillin Sodium",
+      "tiers": [
+        "Tier 4"
+      ],
+      "query": "Amoxicillin Sodium beta-lactamase inhibitor TEM-1 nitrocefin",
+      "search_status": "ok",
+      "search_elapsed_ms": 1759,
+      "search_result_id": "s_a8fe9233",
+      "map_status": "ok",
+      "map_elapsed_ms": 2516,
+      "ref_status": "written",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "map_excerpt": "Map complete: 5/5 tasks succeeded in 1330ms\nResults ID: m_0d446648\nFull results: /.gxl/map_m_0d446648.txt\n\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided research paper content, there is no information regarding the use of Amoxicillin Sodium against TEM-1 beta-lactamase in a nitroc\n  [success] Effect of Lactamase Inhibitors on the Biosensor Penp during the Measur  (PMC6427286)\n    Based on the provided paper content, th"
+    },
+    {
+      "compound_id": "T8390",
+      "name": "Cefazolin",
+      "tiers": [
+        "Tier 4"
+      ],
+      "query": "Cefazolin beta-lactamase inhibitor TEM-1 nitrocefin",
+      "search_status": "ok",
+      "search_elapsed_ms": 1755,
+      "search_result_id": "s_99b9dbdb",
+      "map_status": "ok",
+      "map_elapsed_ms": 4410,
+      "ref_status": "written",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "map_excerpt": "Map complete: 5/5 tasks succeeded in 2084ms\nResults ID: m_1e6dd5c9\nFull results: /.gxl/map_m_1e6dd5c9.txt\n\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided paper content, there is no mention of Cefazolin, nitrocefin colorimetric assays, $K_i$, $IC_{50}$ values, enzyme concentrations,\n  [success] Effect of Lactamase Inhibitors on the Biosensor Penp during the Measur  (PMC6427286)\n    Based on the provided paper content, th"
+    },
+    {
+      "compound_id": "TQ0056",
+      "name": "Cefuracetime",
+      "tiers": [
+        "Tier 4"
+      ],
+      "query": "Cefuracetime beta-lactamase inhibitor TEM-1 nitrocefin",
+      "search_status": "ok",
+      "search_elapsed_ms": 1763,
+      "search_result_id": "s_04b25677",
+      "map_status": "ok",
+      "map_elapsed_ms": 2384,
+      "ref_status": "written",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "screen_conc_uM": 50,
+      "screen_conc_source": "project_default",
+      "map_excerpt": "Map complete: 5/5 tasks succeeded in 1519ms\nResults ID: m_16903bf0\nFull results: /.gxl/map_m_16903bf0.txt\n\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Sorry, your request was blocked by the model provider's content filters. Please try rephrasing it and submitting it again.\n  [success] Characterization of Interactions between CTX-M-15 and Clavulanic Acid,  (PMC9100253)\n    Based on the provided paper content, there is no mention of \"Cefura"
+    }
+  ]
+}

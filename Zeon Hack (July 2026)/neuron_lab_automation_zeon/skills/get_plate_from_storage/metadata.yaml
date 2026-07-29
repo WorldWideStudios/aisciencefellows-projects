@@ -1,0 +1,11 @@
+skill_id: get_plate_from_storage
+version: "0.1.0"
+description: "Placeholder step for retrieving the plate from storage."
+
+parameter_descriptions: {}
+
+preconditions: {}
+postconditions: {}
+
+tags: ["placeholder", "plate", "storage"]
+high_risk: false

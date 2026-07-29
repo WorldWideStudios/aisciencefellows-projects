@@ -1,0 +1,10 @@
+skill_id: epipette_grab
+version: "1.0.0"
+description: "Pick up a pipette with the left arm: optionally move to a prepose anchor, then to the grasp anchor and grab, then optionally reorient at a postpose anchor."
+
+# parameters are derived from the epipette_grab() signature in robotic_code.py
+
+tags:
+  - pipette_demo
+  - pipette
+  - pick

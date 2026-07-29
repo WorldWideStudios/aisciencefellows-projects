@@ -1,0 +1,21 @@
+{
+  "run": 2,
+  "round": 2,
+  "version": 4,
+  "label": "r2-discovery-v4",
+  "created_at": "2026-07-25T19:09:47-0700",
+  "author": "pvjthomas",
+  "status": "pending_signoff",
+  "supersedes": "data/screens/2/v3/manifest.json",
+  "note": "v4 keeps v3 compound concentrations; well layout uses spaced interior checkerboard",
+  "description": "Round 2 discovery v4 \u2014 same compounds/concentrations as v3, spaced interior layout",
+  "layout": "spaced_interior",
+  "files": {
+    "compound_list": "data/screens/2/v4/compound_list.json",
+    "compound_list_csv": "data/screens/2/v4/compound_list.csv",
+    "plate_map": "data/screens/2/v4/plate_map.json",
+    "selection_rationale": "pvjthomas/runs/2/v4/selection_rationale.md",
+    "active_plate_map": "data/plate_map_r2.json",
+    "active_selection_rationale": "pvjthomas/selection_rationale.md"
+  }
+}

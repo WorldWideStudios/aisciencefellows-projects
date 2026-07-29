@@ -1,0 +1,205 @@
+urdf: centrifuge.urdf
+parts:
+  body:
+    links: [body]
+    description: Labhouse centrifuge housing
+  lid:
+    links: [lid]
+    description: Top-loading hinged lid
+  rotor:
+    links: [rotor]
+    description: Rotor disk
+articulations:
+  default:
+    description: Lid closed, rotor at rest
+    joints:
+      lid_joint: 0.0
+      rotor_joint: 0.0
+  open:
+    description: Lid fully open
+    joints:
+      lid_joint: 1.74
+  closed:
+    description: Lid closed
+    joints:
+      lid_joint: 0.0
+anchors:
+  object:
+    parent_link: world
+    description: Table placement frame at body origin.
+    link_T_anchor:
+      xyz: [0.575188, 0.106017, -4.9e-05]
+      wxyz: [0.999921, -3.10771e-34, 3.91802e-36, -0.0126064]
+  lid_grasp:
+    parent_link: lid
+    description: Grasp point on lid +Y edge near free end. Approach from +Y, jaws
+      open vertically.
+    link_T_anchor:
+      xyz: [0.247188, 0.07695, 0.055261]
+      wxyz: [0.490565, 0.50926, -0.490565, 0.50926]
+    grasp:
+      width: 0.0
+      standoff: 0.04
+  button_start_stop:
+    parent_link: body
+    description: Start/stop toggle button on front (+X) face. Z into button (-X).
+    link_T_anchor:
+      xyz: [0.546671, -0.00457918, 0.134898]
+      wxyz: [-0.418208, 6.78479e-33, 0.908351, -6.78479e-33]
+    grasp:
+      width: 0.0
+      standoff: 0.04
+  button_open:
+    parent_link: body
+    description: Lid release button on front (+X) face. Z into button (-X).
+    link_T_anchor:
+      xyz: [0.539261, 0.036003, 0.149909]
+      wxyz: [-0.43716, 0.0, 0.899384, -2.05573e-32]
+    grasp:
+      width: 0.0
+      standoff: 0.03
+  lid_push_left:
+    parent_link: lid
+    description: Push-down point on lid free-end -Y corner.
+    link_T_anchor:
+      xyz: [0.265438, -0.12906, 0.0222804]
+      wxyz: [-2.50269e-32, 0.00634932, 0.99998, -6.67694e-33]
+    grasp:
+      width: 0.0
+  lid_push_right:
+    parent_link: lid
+    description: Push-down point on lid free-end +Y corner.
+    link_T_anchor:
+      xyz: [0.274412, 0.0823316, 0.0238609]
+      wxyz: [-2.50216e-32, 0.0119669, 0.999928, -6.5221e-34]
+    grasp:
+      width: 0.0
+  rotor_center:
+    parent_link: world
+    description: Center of rotor disk top surface. Z axis up. X axis toward slot 1
+      at rotor_joint=0 (21.5 deg offset from URDF rotor +X).
+    link_T_anchor:
+      xyz: [0.329, -0.037, 0.155]
+      wxyz: [0.0162887, 2.46548e-32, 9.07977e-35, 0.999867]
+  view_front:
+    parent_link: body
+    description: View of the front (+X face) of the centrifuge while the lid opens.
+    link_T_anchor:
+      xyz: [0.693274, -0.0619014, 0.288614]
+      wxyz: [-0.565579, 0.0225489, 0.824267, -0.0140419]
+    grasp:
+      width: 0.08
+  tube_slot_1:
+    parent_link: rotor
+    description: 'Tube slot 1 (21.5 deg). Origin at hole opening center on rotor disk
+      surface. Z axis: up along hole axis (out of tube, 47 deg from vertical). Hole
+      depth: 94mm. Rotationally symmetric around Z.'
+    link_T_anchor:
+      xyz: [0.04559, 0.017959, 0.006]
+      wxyz: [-0.171054, -0.391751, -0.074376, 0.900966]
+  tube_slot_1_bottom:
+    parent_link: rotor
+    description: 'Bottom of tube slot 1 (21.5 deg). Origin at hole bottom center.
+      Z axis: up along hole axis (out of tube, opposite to insertion). Hole depth:
+      94mm. Rotationally symmetric around Z.'
+    link_T_anchor:
+      xyz: [0.109554, 0.043155, -0.058108]
+      wxyz: [-0.171054, -0.391751, -0.074376, 0.900966]
+  tube_slot_2:
+    parent_link: rotor
+    description: 'Tube slot 2 (81.5 deg). Origin at hole opening center on rotor disk
+      surface. Z axis: up along hole axis (out of tube, 47 deg from vertical). Hole
+      depth: 94mm. Rotationally symmetric around Z.'
+    link_T_anchor:
+      xyz: [0.007243, 0.048462, 0.006]
+      wxyz: [-0.59862, -0.302078, -0.260287, 0.694733]
+  tube_slot_2_bottom:
+    parent_link: rotor
+    description: 'Bottom of tube slot 2 (81.5 deg). Origin at hole bottom center.
+      Z axis: up along hole axis (out of tube, opposite to insertion). Hole depth:
+      94mm. Rotationally symmetric around Z.'
+    link_T_anchor:
+      xyz: [0.017404, 0.116454, -0.058108]
+      wxyz: [-0.59862, -0.302078, -0.260287, 0.694733]
+  tube_slot_3:
+    parent_link: rotor
+    description: 'Tube slot 3 (141.5 deg). Origin at hole opening center on rotor
+      disk surface. Z axis: up along hole axis (out of tube, 47 deg from vertical).
+      Hole depth: 94mm. Rotationally symmetric around Z.'
+    link_T_anchor:
+      xyz: [-0.038348, 0.030503, 0.006]
+      wxyz: [0.865786, 0.131464, 0.376455, -0.302346]
+  tube_slot_3_bottom:
+    parent_link: rotor
+    description: 'Bottom of tube slot 3 (141.5 deg). Origin at hole bottom center.
+      Z axis: up along hole axis (out of tube, opposite to insertion). Hole depth:
+      94mm. Rotationally symmetric around Z.'
+    link_T_anchor:
+      xyz: [-0.09215, 0.073299, -0.058108]
+      wxyz: [0.865786, 0.131464, 0.376455, -0.302346]
+  tube_slot_4:
+    parent_link: rotor
+    description: 'Tube slot 4 (201.5 deg). Origin at hole opening center on rotor
+      disk surface. Z axis: up along hole axis (out of tube, 47 deg from vertical).
+      Hole depth: 94mm. Rotationally symmetric around Z.'
+    link_T_anchor:
+      xyz: [-0.04559, -0.017959, 0.006]
+      wxyz: [0.900966, -0.074376, 0.391751, 0.171054]
+  tube_slot_4_bottom:
+    parent_link: rotor
+    description: 'Bottom of tube slot 4 (201.5 deg). Origin at hole bottom center.
+      Z axis: up along hole axis (out of tube, opposite to insertion). Hole depth:
+      94mm. Rotationally symmetric around Z.'
+    link_T_anchor:
+      xyz: [-0.109554, -0.043155, -0.058108]
+      wxyz: [0.900966, -0.074376, 0.391751, 0.171054]
+  tube_slot_5:
+    parent_link: rotor
+    description: 'Tube slot 5 (261.5 deg). Origin at hole opening center on rotor
+      disk surface. Z axis: up along hole axis (out of tube, 47 deg from vertical).
+      Hole depth: 94mm. Rotationally symmetric around Z.'
+    link_T_anchor:
+      xyz: [-0.007243, -0.048462, 0.006]
+      wxyz: [0.694733, -0.260287, 0.302078, 0.59862]
+  tube_slot_5_bottom:
+    parent_link: rotor
+    description: 'Bottom of tube slot 5 (261.5 deg). Origin at hole bottom center.
+      Z axis: up along hole axis (out of tube, opposite to insertion). Hole depth:
+      94mm. Rotationally symmetric around Z.'
+    link_T_anchor:
+      xyz: [-0.017404, -0.116454, -0.058108]
+      wxyz: [0.694733, -0.260287, 0.302078, 0.59862]
+  tube_slot_6:
+    parent_link: rotor
+    description: 'Tube slot 6 (321.5 deg). Origin at hole opening center on rotor
+      disk surface. Z axis: up along hole axis (out of tube, 47 deg from vertical).
+      Hole depth: 94mm. Rotationally symmetric around Z.'
+    link_T_anchor:
+      xyz: [0.038348, -0.030503, 0.006]
+      wxyz: [0.302346, -0.376455, 0.131464, 0.865786]
+  tube_slot_6_bottom:
+    parent_link: rotor
+    description: 'Bottom of tube slot 6 (321.5 deg). Origin at hole bottom center.
+      Z axis: up along hole axis (out of tube, opposite to insertion). Hole depth:
+      94mm. Rotationally symmetric around Z.'
+    link_T_anchor:
+      xyz: [0.09215, -0.073299, -0.058108]
+      wxyz: [0.302346, -0.376455, 0.131464, 0.865786]
+  view_rotor:
+    parent_link: body
+    description: Camera view (camera convention) looking down at the rotor disk. Used
+      to infer articulation of the rotor joint from visual observation.
+    link_T_anchor:
+      xyz: [0.68568, -0.0681256, 0.344299]
+      wxyz: [-0.481735, 0.0264028, 0.87589, -0.00712633]
+    grasp:
+      width: 0.08
+  DEBUG_collision:
+    parent_link: world
+    description: Place the tcp here, while you have (vertically) grasped a tube between
+      your fingers. The tube should stick out and collide with the labhouse centrifuge.
+    link_T_anchor:
+      xyz: [0.552824, -0.0374951, 0.174058]
+      wxyz: [-0.413381, -0.0315424, 0.908551, -0.0515432]
+    grasp:
+      width: 0.0

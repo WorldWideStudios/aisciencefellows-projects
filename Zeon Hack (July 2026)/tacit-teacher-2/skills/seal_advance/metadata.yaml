@@ -1,0 +1,10 @@
+skill_id: seal_advance
+version: "1.0.0"
+description: "Move the left arm to the next seal-peel anchor while keeping its current pinch — no gripper change, no attach. Run after seal_grab to continue along the diagonal peel path (seal_approach -> seal_approach2 -> seal_approach3)."
+
+# parameters are derived from the seal_advance() signature in robotic_code.py
+
+tags:
+  - plateandholder
+  - plate
+  - seal

@@ -1,0 +1,78 @@
+{
+  "workflow_id": "validate_snap_plate_to_holder",
+  "name": "Validate Snap Plate To Holder",
+  "description": "Single-step simulator workflow for checking that a plate anchor snaps cleanly onto a holder seat anchor.",
+  "version": "1.0.0",
+  "author": "zeon",
+  "created_at": "2026-07-25T00:00:00.000Z",
+  "updated_at": "2026-07-25T00:00:00.000Z",
+  "simulation_validated": false,
+  "objects": [],
+  "inputs": [
+    {
+      "name": "plate",
+      "type": "object",
+      "is_array": false,
+      "description": "Plate object to snap into the holder",
+      "defaultValue": "wellplate_pcr"
+    },
+    {
+      "name": "holder",
+      "type": "object",
+      "is_array": false,
+      "description": "Holder object with the seat anchor",
+      "defaultValue": "wellplate_holder_tags"
+    },
+    {
+      "name": "plate_anchor",
+      "type": "string",
+      "description": "Anchor on the plate to align to the holder seat",
+      "defaultValue": "bottom_center"
+    },
+    {
+      "name": "holder_anchor",
+      "type": "string",
+      "description": "Seat anchor on the holder",
+      "defaultValue": "plate_slot"
+    }
+  ],
+  "nodes": [
+    {
+      "node_id": "start_0",
+      "type": "start",
+      "label": "Start"
+    },
+    {
+      "node_id": "snap_plate",
+      "type": "skill",
+      "label": "Snap Plate To Holder",
+      "description": "Align the plate anchor to the holder seat anchor.",
+      "skill_id": "snap_plate_to_holder",
+      "parameters": {
+        "plate": { "$input": "plate" },
+        "holder": { "$input": "holder" },
+        "plate_anchor": { "$input": "plate_anchor" },
+        "holder_anchor": { "$input": "holder_anchor" }
+      }
+    },
+    {
+      "node_id": "end_1",
+      "type": "end",
+      "label": "End"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e0",
+      "from_node": "start_0",
+      "to_node": "snap_plate",
+      "condition": { "type": "default" }
+    },
+    {
+      "edge_id": "e1",
+      "from_node": "snap_plate",
+      "to_node": "end_1",
+      "condition": { "type": "on_success" }
+    }
+  ]
+}

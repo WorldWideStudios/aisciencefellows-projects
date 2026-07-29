@@ -1,0 +1,97 @@
+urdf: thermoeppendorf.urdf
+parts:
+  body:
+    links: [body]
+    description: Stationary base of the thermocycler
+  lid:
+    links: [lid, lid_inner]
+    description: Articulated lid assembly (outer clamshell + inner platen)
+articulations:
+  default:
+    description: Lid fully closed (rest position)
+    joints:
+      lid_joint: 0.0
+      lid_inner_joint: 0.0
+  open:
+    description: Lid fully open
+    joints:
+      lid_joint: 1.22173
+      lid_inner_joint: -1.14319
+anchors:
+  object:
+    parent_link: world
+    description: Object placement frame (origin on table surface)
+    link_T_anchor:
+      xyz: [-0.00642778, -0.019305, 0.00907313]
+      wxyz: [0.706953, 0.706951, -0.0148579, 0.0147592]
+  pre_pose:
+    parent_link: body
+    description: Pre-grasp staging pose, above plate_grab
+    link_T_anchor:
+      xyz: [-0.17201, -0.13881, 0.294613]
+      wxyz: [0.000381634, 0.999591, 0.0161599, 0.0236064]
+    grasp:
+      width: 0.08
+  lid_outer_close_start:
+    parent_link: lid
+    description: Outer lid closing starting position
+    link_T_anchor:
+      xyz: [-0.223925, -0.115956, -0.113883]
+      wxyz: [0.422812, -0.427888, 0.565944, -0.563781]
+    grasp:
+      width: 0.0
+      gripper_variant: wellplate
+  lid_close_outer_end:
+    parent_link: lid
+    description: Outer lid closing sequence end
+    link_T_anchor:
+      xyz: [-0.243719, -0.138075, -0.152328]
+      wxyz: [-0.703114, 0.70885, -0.0443007, -0.0346481]
+    grasp:
+      width: 0.0
+      gripper_variant: wellplate
+  lid_inner_grasp:
+    parent_link: lid_inner
+    description: Grasp for ziptie on thermocycler inner lid
+    link_T_anchor:
+      xyz: [0.210377, -0.127589, -0.254614]
+      wxyz: [0.00162816, 0.995876, 0.0899031, 0.0120479]
+    grasp:
+      width: 0.0
+      gripper_variant: wellplate
+  reset_pose:
+    parent_link: body
+    description: Pose to view machine and reset actions
+    link_T_anchor:
+      xyz: [0.0238367, -0.329705, 0.371458]
+      wxyz: [-0.241581, 0.278888, 0.91751, 0.148444]
+    grasp:
+      width: 0.08
+      gripper_variant: wellplate
+  plate_grab_old:
+    parent_link: body
+    description: Gripper pose to load the plate into the thermocycler well
+    link_T_anchor:
+      xyz: [-0.267342, -0.137562, 0.252414]
+      wxyz: [-6.10865e-05, 1.0, 0.0, 0.0]
+    grasp:
+      width: 0.08
+      gripper_variant: wellplate
+  plate_grab:
+    parent_link: body
+    description: Gripper pose to load the plate into the thermocycler well
+    link_T_anchor:
+      xyz: [-0.270071, -0.137487, 0.25]
+      wxyz: [-6.1149e-17, 1.0, 0.0, 0.0]
+    grasp:
+      width: 0.08
+      gripper_variant: wellplate
+  lid_anchor_final:
+    parent_link: body
+    description: ''
+    link_T_anchor:
+      xyz: [-0.0464781, -0.0144851, 0.263746]
+      wxyz: [-0.497779, 0.497782, 0.502211, 0.502209]
+    grasp:
+      width: 0.0
+      gripper_variant: wellplate

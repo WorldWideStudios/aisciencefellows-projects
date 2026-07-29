@@ -1,0 +1,17 @@
+skill_id: epipette_attach
+version: "1.0.0"
+description: "Attach one rack tip to a held pipette — a calibration-file mock of epipette_grey_attach (no anchors). Tip XY = tipbox world pose + the box's per-tip calibration offset (keyed by tip_index); Z = TIP_HEIGHT constant; fixed arm orientation. Hover, slow press to latch, lift. Caller picks the tipbox + tip_index; no rack registry, tip_index advancement, or laser tip-check loop."
+
+# parameters are derived from the epipette_attach() signature in robotic_code.py
+
+preconditions:
+  epipette_connected: true
+
+postconditions:
+  tip_attached: true
+
+tags:
+  - pipette_demo
+  - epipette
+  - tip
+  - attach

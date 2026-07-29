@@ -1,0 +1,11 @@
+skill_id: grab_plate
+version: "0.1.0"
+description: "Placeholder step for grabbing the plate."
+
+parameter_descriptions: {}
+
+preconditions: {}
+postconditions: {}
+
+tags: ["placeholder", "plate", "grasp"]
+high_risk: false

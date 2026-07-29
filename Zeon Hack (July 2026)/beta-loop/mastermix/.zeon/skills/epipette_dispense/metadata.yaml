@@ -1,0 +1,10 @@
+skill_id: epipette_dispense
+version: "1.0.0"
+description: "Dispense into a named well/tube anchor, with approach and dip heights expressed relative to the anchor (well top)."
+
+# parameters are derived from the epipette_dispense() signature in robotic_code.py
+
+tags:
+  - pipette_demo
+  - epipette
+  - liquid_handling

@@ -1,0 +1,11 @@
+skill_id: seal_plate
+version: "1.0.0"
+description: "Super-skill: grab a well plate short-side, seal it on the PlateMax (open door, load, pick + place a seal, close door, press seal), unload it, and drop it back on its home anchor. A generic grab -> seal -> drop closure composed from the wellplate + platesealer atomics (no cfps_ prefix, so any workflow can seal a plate in one node)."
+
+# parameters are derived from the seal_plate() signature in robotic_code.py
+
+tags:
+  - meta
+  - wellplate
+  - platesealer
+  - seal

@@ -1,0 +1,19 @@
+urdf: epipette_stand_chargeable.urdf
+parts:
+  body:
+    links: [body]
+    description: Chargeable electronic-pipette stand (weighted base, curved neck, top charging cradle), pipette included. White ABS, OBJ + body.mtl.
+articulations:
+  default:
+    description: Static object, no actuated joints
+    joints: {}
+anchors:
+  object:
+    parent_link: world
+    description: >-
+      Table placement frame, origin at the (max_x, max_y, min_z) bbox corner.
+      Mesh is authored in metres (URDF scale 1) and already Z-up with the base
+      on z=0, so the anchor uses identity rotation.
+    link_T_anchor:
+      xyz: [0.1225, 0.178, 0.0]
+      wxyz: [1.0, 0.0, 0.0, 0.0]

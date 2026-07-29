@@ -1,0 +1,95 @@
+Found 15 papers  [s_6dd1816c]
+
+  1. In Vitro Activity of Cefaclor/Beta-Lactamases Inhibitors (Clavulanic Acid and Sulbactam) Combination Against Extended-Spectrum Beta-Lactamase Producing Uropathogenic  E. coli
+     Ali Atoom, Bayan Alzubi, Dana Barakat, Rana Abu-Gheyab, Dalia Ismail-Agha, Awatef Al-Kaabneh, Nawfal...
+     PMC12189933 · PMC · 2025-06-13
+     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12189933/
+     "Cefaclor combined with clavulanic acid or sulbactam showed improved in vitro activity against ESBL-producing *E. coli*. These combinations demonstrated synergistic and bactericidal effects, restoring susceptibility in many isolates."
+
+  2. Old and New Beta-Lactamase Inhibitors: Molecular Structure, Mechanism of Action, and Clinical Use
+     Davide Carcione, Claudia Siracusa, Adela Sulejmani, Valerio Leoni, Jari Intra
+     PMC8388860 · PMC · 2021-08-17
+     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8388860/
+     "This review examines current and emerging beta-lactamase inhibitors, their mechanisms, and clinical applications. New inhibitors are needed to combat resistance, particularly against Gram-negative bacteria and certain beta-lactamase classes."
+
+  3. In Silico Study of the Potential of Brazilein Sappan Wood as a Beta-Lactamase Inhibitor against Extended-Spectrum Beta-Lactamase-Encoding Genes
+     Dwi Krihariyani, Evy Diah Woelansari, Edy Haryanto, Retno Sasongkowati, Anik Handayati, Sri Sulami E...
+     PMC11229569 · PMC · 2024-06-01
+     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11229569/
+     "This study investigated brazilein from sappan wood as a potential inhibitor of extended-spectrum beta-lactamases. Brazilein showed significant potential to block the beta-lactamase activity of the blaCTX-M gene."
+
+  4. Molecular Basis of Class A β-Lactamase Inhibition by Relebactam
+     Catherine L. Tooke, Philip Hinchliffe, Pauline A. Lang, Adrian J. Mulholland, Jürgen Brem, Christoph...
+     PMC6761529 · biomedrxiv · 2019-08-05
+     https://doi.org/10.1128/AAC.00564-19
+     "This study investigates the molecular basis of relebactam's inhibition of class A β-lactamases. Relebactam is a diazabicyclooctane inhibitor effective against common bacterial resistance mechanisms."
+
+  5. Comparative evaluation of five β-Lactamase inhibitors in combination with β-Lactams against multidrug-resistant Mycobacterium tuberculosis in vitro
+     Jie Shi, Danwei Zheng, Ruyue Su, Xiaoguang Ma, Yankun Zhu, Shaohua Wang, Wenjing Chang, Dingyong Sun
+     PMC12036291 · PMC · 2025-04-28
+     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12036291/
+     "This study evaluated β-lactam and β-lactamase inhibitor combinations against multidrug-resistant tuberculosis. Tebipenem combined with relebactam showed the most potent activity, with specific BlaC mutations potentially linked to increased susceptibility."
+
+  6. Novel β-lactamase inhibitors: a therapeutic hope against the scourge of multidrug resistance
+     Richard R. Watkins, Krisztina M. Papp-Wallace, Sarah M. Drawz, Robert A. Bonomo
+     PMC3871716 · biomedrxiv · 2013-12-24
+     https://doi.org/10.3389/fmicb.2013.00392
+     "This review examines novel β-lactamase inhibitors being developed to combat multidrug-resistant bacteria. These new inhibitors offer renewed hope for restoring the effectiveness of β-lactam antibiotics, though they may not cover all resistant strains."
+
+  7. Synergistic Activity of Cefiderocol in Combination with Avibactam, Sulbactam or Tazobactam against Carbapenem-Resistant Gram-Negative Bacteria
+     Russell E. Lewis, Marta Palombo, Erica Diani, Benedetta Secci, Davide Gibellini, Paolo Gaibani
+     PMC11352988 · PMC · 2024-08-06
+     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11352988/
+     "The activity of cefiderocol combined with avibactam, sulbactam, or tazobactam was studied against carbapenem-resistant Gram-negative bacteria. Cefiderocol/sulbactam showed the most promising synergistic activity across all tested resistant Gram-negative isolates."
+
+  8. Biochemical exploration of β-lactamase inhibitors
+     Varshaa Arer, Debasish Kar
+     PMC9888030 · biomedrxiv · 2023-01-17
+     https://doi.org/10.3389/fgene.2022.1060736
+     "This study explores the biochemistry of β-lactamase inhibitors and their mechanisms. Combining these inhibitors with antibiotics is a safe and effective strategy to combat microbial resistance."
+
+  9. Genetic Analysis of Virulence and β-Lactamase Determinants Related to β-Lactamase Inhibitors in  Pseudomonas aeruginosa  Strains from Nosocomial Infections
+     Gloria Luz Paniagua-Contreras, Elizabeth Olvera-Navarro, Jennefer Paloma Herrera-Gabriel, Laura Veró...
+     PMC12837615 · PMC · 2025-12-22
+     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12837615/
+     "This study analyzed virulence and β-lactamase genes in *Pseudomonas aeruginosa* strains from nosocomial and community infections. Most strains showed resistance to β-lactamase inhibitor antibiotics, with phylogroup 1 being more frequent."
+
+  10. β-Lactam Antibiotics and β-Lactamase Enzymes Inhibitors, Part 2: Our Limited Resources
+     Silvana Alfei, Anna Maria Schito
+     PMC9031764 · biomedrxiv · 2022-04-13
+     https://doi.org/10.3390/ph15040476
+     "This review examines β-lactam antibiotics and the β-lactamase enzymes that confer resistance. It highlights the limited effectiveness of current inhibitors against metallo-β-lactamases, a growing threat."
+
+  11. Approachable Synthetic Methodologies for Second-Generation  β -Lactamase Inhibitors: A Review
+     Noor Fatima, Shehla Khalid, Nasir Rasool, Muhammad Imran, Bushra Parveen, Aqsa Kanwal, Marius Irimie...
+     PMC11434895 · PMC · 2024-08-23
+     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11434895/
+     "This review surveys synthetic methods for second-generation β-lactamase inhibitors. These inhibitors, including vaborbactam and avibactam, are a successful strategy against multidrug-resistant bacteria."
+
+  12. A Review of β‐Lactamase Inhibitors in Clinical Use and Development: Mechanisms, Spectrum, and Therapeutic Applications
+     Mohammad Javad Roustaye Gourabi; Anita Nikoo; Bita Khanbabaei; Masoud Kargar; Amirhossein Fayyazi; S...
+     PMC13191775 · biomedrxiv · 2026-05-21
+     https://doi.org/10.1155/ijm/4479031
+
+  13. Sulbactam–durlobactam: a β-lactam/β-lactamase inhibitor combination targeting  Acinetobacter baumannii
+     Sarah M McLeod, John P O'Donnell, Navaneeth Narayanan, John P Mills, Keith S Kaye
+     PMC11229585 · PMC · 2024-03-01
+     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11229585/
+     "Sulbactam–durlobactam is a new drug combination targeting *Acinetobacter baumannii*. It effectively restores sulbactam's activity against multidrug-resistant strains, offering a promising treatment for serious infections."
+
+  14. Production of β-Lactamase Inhibitors by  Streptomyces  Species
+     Daniela de Araújo Viana Marques, Suellen Emilliany Feitosa Machado, Valéria Carvalho Santos Ebinuma,...
+     PMC6163296 · biomedrxiv · 2018-07-17
+     https://doi.org/10.3390/antibiotics7030061
+     "This review discusses *Streptomyces* species as producers of β-lactamase inhibitors. It highlights methods to enhance production and discusses clinical and commercial aspects of these compounds."
+
+  15. Current Strategy for Targeting Metallo-β-Lactamase with Metal-Ion-Binding Inhibitors
+     Jessica L. Ortega-Balleza, Lenci K. Vázquez-Jiménez, Eyra Ortiz-Pérez, Guadalupe Avalos-Navarro, Alm...
+     PMC11356879 · PMC · 2024-08-21
+     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11356879/
+     "This review analyzes strategies for designing metal-ion-binding inhibitors against metallo-β-lactamases (MBLs). The key finding is that Zn²⁺ chelation is crucial for the mechanism of action of most MBL inhibitors."
+
+[333ms, saved to s_6dd1816c]
+
+💡 Extract data across these results with: map --from s_6dd1816c "your question"
+[333ms, saved to s_6dd1816c]

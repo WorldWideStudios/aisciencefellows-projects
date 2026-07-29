@@ -1,0 +1,63 @@
+{
+  "compound_id": "T67978",
+  "name": "Cefuzonam",
+  "match": "yes",
+  "support": "weak",
+  "entries": [
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Cefuzonam. Map complete: 5/5 tasks succeeded in 1748ms\nResults ID: m_4633975e\nFull results: /.gxl/map_m_4633975e.txt\n\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided paper, there is no information regarding Cefuzonam, a nitrocefin colorimetric assay, inhibition constants ($K_i$ or $IC_{50}$), \n  [success] Effect of Lactamase Inhibitors on the Biosensor Penp during the Measur  (PMC6427286)\n    Based on the provided paper content, there is no mention of Cefuzonam, TEM-1 beta-lactamase in a nitrocefin colorimetric assay, or associated Ki/IC50 \n  [success] In Silico Study of the Potential of Brazilein Sappan Wood as a Beta-La  (PMC11229569)\n    Based on the provided paper, there is no mention of Cefuzonam, nitrocefin colorimetric assays, $K_i$, $IC_{50}$, enzyme concentrations, or related ass\n  [success] Characterization of Interactions between CTX-M-15 and Clavulanic Acid,  (PMC9100253)\n    Based on the provided paper content, there is no mention of Cefuzonam, TEM-1 beta-lactamase, or their kinetic/inhibition parameters (such as IC50, Ki,\n  [success] Classification and applicability of new beta-lactamase inhibitors  (PMC12584905)\n    Based on the provided paper, there is no mention of Cefuzonam, TEM-1 beta-lactamase, nitrocefin colorimetric assays, or their corresponding kinetic va\n\nFull results: /.gxl/map_m_4633975e.txt",
+      "paperclip_search_id": "s_6ed55cbe",
+      "paperclip_map_id": "m_4633975e",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "pmcid": "PMC12484619"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Cefuzonam. Map complete: 30/30 tasks succeeded in 5582ms\nResults ID: m_52eb182c\nFull results: /.gxl/map_m_52eb182c.txt\n\n  [success] Saturation Mutagenesis and Molecular Modeling: The Impact of Methionin  (PMC11276661)\n    Based on the provided paper, there is no mention of Cefuzonam, its inhibition of nitrocefin cleavage, $K_i$, $IC_{50}$, or related assay parameters ag\n  [success] A drug-resistant \u03b2-lactamase variant changes the conformation of its a  (PMC11843585)\n    Based on the provided paper content, there is no mention of Cefuzonam, TEM-1 beta-lactamase nitrocefin assays, or associated $K_i$/IC$_{50}$ values fo\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided paper content, there is no mention of Cefuzonam, nitrocefin colorimetric assays, $K_i$, $IC_{50}$ values, enzyme/substrate conce\n  [success] Kinetic and Structural Requirements for Carbapenemase\nActivity in GES-  (PMC4303295)\n    Based on the provided paper content, there is no mention of Cefuzonam, TEM-1 beta-lactamase, or nitrocefin assays involving this compound. The paper e\n  [success] In Silico Study of the Potential of Brazilein Sappan Wood as a Beta-La  (PMC11229569)\n    Based on the provided paper content, there is no mention of Cefuzonam, TEM-1 beta-lactamase assays using nitrocefin, IC50 or Ki values, enzyme concent\n  [success] Molecular Basis for the Catalytic Specificity of the\nCTX-M Extended-Sp  (PMC4303298)\n    The provided paper does no",
+      "paperclip_search_id": "s_60b1c330",
+      "paperclip_map_id": "m_52eb182c",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "pmcid": "PMC11276661",
+      "paperclip_source": "pmc"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Cefuzonam. Map complete: 25/25 tasks succeeded in 10055ms\nResults ID: m_748859f8\nFull results: /.gxl/map_m_748859f8.txt\n\n  [success] Distant Site Mutations in Clinical TEM Beta-Lactamase Variants Enhance  (bio_33da24cd7504)\n    Based on the provided paper content, there is no mention of Cefuzonam, nitrocefin colorimetric assays, IC50 values, Ki values, or specific enzyme and \n  [success] Binding mode of isoxazolyl penicillins to a Class-A  \u03b2 -lactamase at a  (bio_a7f99ac77b0d)\n    Based on the provided paper content, there is no mention of Cefuzonam, TEM-1 beta-lactamase, nitrocefin colorimetric assays, $K_i$, $IC_{50}$ values, \n  [success] A new type of AmpC \u03b2-lactamases defined by PIB-1, a metal-dependent ca  (bio_9fef02c2845c)\n    Based on the provided text, there is no mention of Cefuzonam, TEM-1 beta-lactamase, or their evaluation in a nitrocefin colorimetric assay. The paper \n  [success] Cefdinir binding to a class-A  \u03b2 -lactamase revealed by serial cryo-cr  (bio_01a5a87c8117)\n    Based on the provided paper content, there is no mention of Cefuzonam, TEM-1 beta-lactamase, nitrocefin colorimetric assays, $K_i$ or $IC_{50}$ values\n  [success] Sulbactam-mediated inhibition of TEM-1 \u03b2-lactamase increases specific   (bio_e76fe1d274e9)\n    Based on the provided paper, there is no mention of Cefuzonam, nitrocefin colorimetric assays, Ki or IC50 values, enzyme concentrations, or PMIDs/PMCI\n  [success] The Interplay of Electrostatics and Chemical Positioning in the Evolut  (bio_981769886c0",
+      "paperclip_search_id": "s_a636f880",
+      "paperclip_map_id": "m_748859f8",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "paperclip_source": "biorxiv"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Cefuzonam. Map complete: 10/10 tasks succeeded in 2927ms\nResults ID: m_fbbccea0\nFull results: /.gxl/map_m_fbbccea0.txt\n\n  [success] bla - Beta-lactamase TEM  (P62593)\n    Based on the provided paper content, there is no mention of Cefuzonam, nitrocefin colorimetric assays, $K_i$ or $IC_{50}$ values, enzyme concentration\n  [success] bla - Beta-lactamase TEM  (P62594)\n    Based on the provided paper content, there is no mention of Cefuzonam, nitrocefin colorimetric assays, $K_i$, $IC_{50}$ values, enzyme or substrate co\n  [success] blaT-12b - Beta-lactamase TEM-12  (Q48406)\n    Based on the provided paper content, there is no mention of Cefuzonam, TEM-1 beta-lactamase, nitrocefin colorimetric assays, Ki, IC50, enzyme/substrat\n  [success] penPC - Beta-lactamase 1  (P10424)\n    Based on the provided paper content, there is no mention of Cefuzonam, TEM-1 beta-lactamase, nitrocefin colorimetric assays, $K_i$ or $IC_{50}$ values\n  [success] blaY - Beta-lactamase 1  (P00809)\n    Based on the provided paper content, there is no information regarding Cefuzonam, TEM-1 beta-lactamase, nitrocefin colorimetric assays, $K_i$, $IC_{50\n  [success] blaCI - Beta-lactamase 1  (P28018)\n    Based on the provided paper content, there is no information regarding Cefuzonam, TEM-1 beta-lactamase, nitrocefin colorimetric assays, $K_i$, $IC_{50\n  [success] blaL - Beta-lactamase 1  (Q03680)\n    Based on the provided paper, there is no mention of Cefuzonam, TEM-1 beta-lactamase, nitrocefin colorimetric assays, $K_i$",
+      "paperclip_search_id": "s_f5403f7f",
+      "paperclip_map_id": "m_fbbccea0",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "paperclip_source": "proteins"
+    }
+  ],
+  "raw_local": "/Users/fio/zeon_hack/pvjthomas/local/literature/T67978",
+  "assay_recommendations": {
+    "tem1_nitrocefin": {
+      "screen_conc_uM": 50,
+      "screen_rationale": "Project default screen concentration; no literature inhibitor concentration or IC50/Ki extracted.",
+      "screen_conc_source": "project_default",
+      "max_assay_conc_uM": 1000.0,
+      "metric": "relative nitrocefin hydrolysis vs no-inhibitor control"
+    }
+  }
+}

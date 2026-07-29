@@ -1,0 +1,34 @@
+{
+  "run": 3,
+  "round": 3,
+  "version": 2,
+  "label": "r3-discovery-v2",
+  "created_at": "2026-07-26T11:40:58-0700",
+  "author": "pvjthomas",
+  "status": "deprecated",
+  "supersedes": "data/screens/3/v1/manifest.json",
+  "note": "DEPRECATED \u2014 Run 3 v2 \u2014 6 compounds \u00d7 triplicate + 6 QC controls; kept for history only",
+  "description": "Round 3 discovery v2 \u2014 6 compounds in triplicate @ 50 \u00b5M (reduced from 24 in v1); column-strip layout (x-spaced columns, triplicates on B/D/F and C/E/G); no vehicle controls",
+  "layout": "column_strip",
+  "control_policy": {
+    "vehicle": 0,
+    "no_tem1": 3,
+    "positive_T19860": 3,
+    "change_from_v5": "vehicle controls removed"
+  },
+  "files": {
+    "compound_list": "data/screens/3/v2-deprecated/compound_list.json",
+    "compound_list_csv": "data/screens/3/v2-deprecated/compound_list.csv",
+    "plate_map": "data/screens/3/v2-deprecated/plate_map.json",
+    "plate_map_png": "data/screens/3/v2-deprecated/plate_map.png",
+    "plate_map_by_compound_png": "data/screens/3/v2-deprecated/plate_map_by_compound.png",
+    "plate_map_concentrations_png": "data/screens/3/v2-deprecated/plate_map_concentrations.png",
+    "selection_rationale": "pvjthomas/runs/3/v2/selection_rationale.md",
+    "active_plate_map": "data/plate_map_r3.json",
+    "active_selection_rationale": "pvjthomas/selection_rationale.md",
+    "deprecated_notice": "data/screens/3/v2-deprecated/DEPRECATED.md"
+  },
+  "deprecated_at": "2026-07-26",
+  "deprecated_reason": "Alternate 6-compound layout superseded; Run 3 v1 is the active plate design. Do not schedule on robot.",
+  "superseded_by": "data/screens/3/v1/manifest.json"
+}

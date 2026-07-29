@@ -1,0 +1,12 @@
+skill_id: openshelf_probe
+version: "1.0.0"
+description: "Discover what the OpenShelf HTTP API exposes. GET-only and read-only: a blind POST to an unknown path on a machine with moving parts could actuate it. Reports status and body shape per candidate path so the endpoint table can be written from evidence."
+
+preconditions: {}   # parsed but NOT enforced by the executor - never gate on these
+postconditions: {}
+safety_rules: []
+tags:
+  - openshelf
+  - bridge
+  - http
+world_state_prime: null

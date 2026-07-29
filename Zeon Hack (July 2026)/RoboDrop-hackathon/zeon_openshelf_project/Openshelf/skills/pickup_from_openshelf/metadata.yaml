@@ -1,0 +1,24 @@
+skill_id: pickup_from_openshelf
+version: "1.0.0"
+description: ""
+
+# Optional: override per-parameter description text (docstring Args: is the
+# default). Keys are parameter names from the pickup_from_openshelf() signature.
+# parameter_descriptions:
+#   target: World object to act on
+
+preconditions: {}
+
+postconditions: {}
+
+safety_rules: []
+
+tags: []
+
+world_state_prime: null  # Optional: Define initial world state with object_positions
+# Example:
+# world_state_prime:
+#   object_positions:
+#     cube_red: [0.5, 0.2, 0.1]
+#     cube_blue: [0.6, 0.3, 0.1]
+#   world_state_version: "abc123"

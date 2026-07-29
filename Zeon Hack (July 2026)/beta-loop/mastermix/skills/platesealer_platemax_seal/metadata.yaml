@@ -1,0 +1,12 @@
+skill_id: platesealer_platemax_seal
+version: "1.0.0"
+description: "Toggle the platemax plate sealer's seal button once via its Zigbee fingerbot (tinytuya). No-op in simulation."
+
+# parameters are derived from the platesealer_platemax_seal() signature in robotic_code.py
+
+tags:
+  - pipette_demo
+  - platesealer
+  - platemax
+  - seal
+  - tuya

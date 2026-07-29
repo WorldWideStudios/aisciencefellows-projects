@@ -1,0 +1,12 @@
+skill_id: wait_for_media_refill_request
+version: "0.1.0"
+description: "Placeholder step for hosting an endpoint and waiting until a client posts to POST /mediaRefill."
+
+parameter_descriptions:
+  endpoint_path: "HTTP endpoint path that should trigger the refill workflow."
+
+preconditions: {}
+postconditions: {}
+
+tags: ["placeholder", "http", "media-refill"]
+high_risk: false

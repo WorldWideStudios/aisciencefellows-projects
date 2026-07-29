@@ -1,0 +1,25 @@
+---
+description: Git commit identity for this repository
+alwaysApply: true
+---
+
+# Git commit identity
+
+When creating commits in this repository, always use:
+
+- **Email:** `pvjthomas@users.noreply.github.com`
+- **Name:** `pvjthomas`
+
+This avoids GitHub push rejections from private email privacy settings (GH007).
+
+For commits made via the agent, set author and committer explicitly if needed:
+
+```bash
+GIT_AUTHOR_NAME="pvjthomas" \
+GIT_AUTHOR_EMAIL="pvjthomas@users.noreply.github.com" \
+GIT_COMMITTER_NAME="pvjthomas" \
+GIT_COMMITTER_EMAIL="pvjthomas@users.noreply.github.com" \
+git commit -m "message"
+```
+
+Do not use personal emails (e.g. `@gmail.com`) in commits for this repo.

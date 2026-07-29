@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="plate_reader">
+  <link name="world" />
+  <joint name="world_joint" type="fixed">
+    <parent link="world" />
+    <child link="body" />
+    <origin rpy="0 0 0" xyz="0 0 0" />
+  </joint>
+  <link name="body">
+    <visual>
+      <geometry><mesh filename="base.ply" /></geometry>
+    </visual>
+    <collision>
+      <geometry><mesh filename="base.ply" /></geometry>
+    </collision>
+  </link>
+  <!-- Hinge fitted from the open/closed calibrated tag sets
+       (scratch/platereader_hinge): angle open-closed 116.81 deg,
+       residual mean 0.95 mm over 8 lid tags. q=0 closed, q>0 opens.
+       LIMITS are the two MEASURED configurations: lower = the closed scan,
+       upper = the fully-open scan (assumed at the physical stop; a stop
+       beyond the scanned pose would be underestimated). -->
+  <joint name="lid_joint" type="revolute">
+    <parent link="body" />
+    <child link="lid" />
+    <origin xyz="0.133528 0.098526 -0.541222" rpy="0 0 0" />
+    <axis xyz="-0.094202 0.734323 -0.672231" />
+    <limit lower="0.0" upper="2.0386" effort="0.0" velocity="0.0" />
+  </joint>
+  <link name="lid">
+    <visual>
+      <geometry><mesh filename="lid.ply" /></geometry>
+    </visual>
+    <collision>
+      <geometry><mesh filename="lid.ply" /></geometry>
+    </collision>
+  </link>
+</robot>

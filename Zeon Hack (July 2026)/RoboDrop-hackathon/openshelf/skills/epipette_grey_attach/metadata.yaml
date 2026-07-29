@@ -1,0 +1,17 @@
+skill_id: epipette_grey_attach
+version: "1.0.0"
+description: "Attach a tip to the grey epipette from tip rack position"
+
+# parameters are derived from the epipette_grey_attach() signature in robotic_code.py
+
+preconditions:
+  epipette_connected: true
+
+postconditions:
+  tip_attached: true
+
+tags:
+  - epipette
+  - epipette_grey
+  - tip
+  - attachment

@@ -1,0 +1,71 @@
+{
+  "compound_id": "T6685",
+  "match": "yes",
+  "support": "strong",
+  "reference_inhibitor": "sulbactam",
+  "entries": [
+    {
+      "name": "sulbactam",
+      "smiles": "[Na+].[H][C@@]12CC(=O)N1[C@@]([H])(C([O-])=O)C(C)(C)S2(=O)=O",
+      "ic50_uM": "",
+      "assay": "nitrocefin",
+      "source": "manual_seed",
+      "pmid_or_chembl_id": ""
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Sulbactam sodium. Map complete: 5/5 tasks succeeded in 1877ms\nResults ID: m_49d0369a\nFull results: /.gxl/map_m_49d0369a.txt\n\n  [success] In Vitro Activity of Cefaclor/Beta-Lactamases Inhibitors (Clavulanic A  (PMC12189933)\n    Based on the provided paper content, there is no information regarding Sulbactam sodium against TEM-1 beta-lactamase in a nitrocefin colorimetric assa\n  [success] Molecular Basis of Class A \u03b2-Lactamase Inhibition by Relebactam  (PMC6761529)\n    Based on the provided paper content, there is no mention of Sulbactam sodium, TEM-1 beta-lactamase, or their assay metrics. The paper focuses on releb\n  [success] Sulbactam\u2013durlobactam: a \u03b2-lactam/\u03b2-lactamase inhibitor combination ta  (PMC11229585)\n    Based on the provided paper, the specific $K_i$ or $\\text{IC}_{50}$ values, inhibitor concentrations, nitrocefin substrate concentrations, and TEM-1 e\n  [success] Effect of Lactamase Inhibitors on the Biosensor Penp during the Measur  (PMC6427286)\n    Based on the provided paper, the information regarding the nitrocefin colorimetric assay, Ki/IC50 values, enzyme concentrations, and substrate concent\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided paper content, there is no mention of Sulbactam sodium, nitrocefin colorimetric assays, $K_i$, $IC_{50}$, enzyme concentrations,\n\nFull results: /.gxl/map_m_49d0369a.txt",
+      "paperclip_search_id": "s_481e3588",
+      "paperclip_map_id": "m_49d0369a",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "pmcid": "PMC12189933"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Sulbactam sodium. Map complete: 30/30 tasks succeeded in 5345ms\nResults ID: m_dc7248e7\nFull results: /.gxl/map_m_dc7248e7.txt\n\n  [success] Saturation Mutagenesis and Molecular Modeling: The Impact of Methionin  (PMC11276661)\n    Based on the provided paper content, there is no mention of \"Sulbactam\", \"nitrocefin\", or inhibition assays providing $K_i$ or $IC_{50}$ values for Su\n  [success] In Vitro Activity of Cefaclor/Beta-Lactamases Inhibitors (Clavulanic A  (PMC12189933)\n    Based on the provided paper content, there is no information regarding the testing of Sulbactam sodium against TEM-1 beta-lactamase in a nitrocefin co\n  [success] Molecular Basis of Class A \u03b2-Lactamase Inhibition by Relebactam  (PMC6761529)\n    Based on the provided research paper content, there is no information regarding Sulbactam sodium, TEM-1 beta-lactamase, or its IC50/Ki values in a nit\n  [success] Sulbactam\u2013durlobactam: a \u03b2-lactam/\u03b2-lactamase inhibitor combination ta  (PMC11229585)\n    Based on the provided paper, the requested information regarding Sulbactam against TEM-1 beta-lactamase is not contained in the text. The paper discus\n  [success] The G132S Mutation Enhances the Resistance of  Mycobacterium tuberculo  (PMC8383266)\n    Based on the provided paper, there is no information regarding the use of sulbactam sodium against TEM-1 beta-lactamase or any nitrocefin colorimetric\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided paper conte",
+      "paperclip_search_id": "s_0c3634b1",
+      "paperclip_map_id": "m_dc7248e7",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "pmcid": "PMC11276661",
+      "paperclip_source": "pmc"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Sulbactam sodium. Map complete: 25/25 tasks succeeded in 4372ms\nResults ID: m_49748705\nFull results: /.gxl/map_m_49748705.txt\n\n  [success] Distant Site Mutations in Clinical TEM Beta-Lactamase Variants Enhance  (bio_33da24cd7504)\n    Based on the provided paper content, there is no mention of sulbactam sodium, nitrocefin colorimetric assays, IC50/Ki values, or related enzyme kineti\n  [success] Sulbactam-mediated inhibition of TEM-1 \u03b2-lactamase increases specific   (bio_e76fe1d274e9)\n    Based on the provided paper content, the specific quantitative details regarding $K_i$, $\\text{IC}_{50}$ in \u00b5M, nitrocefin substrate concentration, TE\n  [success] Mechanistic Basis for Inhibition of the Extended Spectrum Class A \u03b2-La  (bio_d7ea2f4d7462)\n    Based on the provided paper content, there is no mention of Sulbactam sodium, TEM-1 beta-lactamase, or their kinetic parameters ($K_i$ or $IC_{50}$) i\n  [success] Single-Domain Antibodies as Potent Inhibitors of Clinically Relevant \u03b2  (bio_dc341c396cb5)\n    Based on the provided paper content, there is no information regarding Sulbactam sodium, TEM-1 beta-lactamase, or their kinetic/inhibitory parameters \n  [success] A new type of AmpC \u03b2-lactamases defined by PIB-1, a metal-dependent ca  (bio_9fef02c2845c)\n    Based on the provided paper content, there is no mention of \"Sulbactam sodium\", \"TEM-1 beta-lactamase\", or assays measuring its $K_i$ or $\\text{IC}_{5\n  [success] De Novo Structure-Based Design of TEM-171  \u03b2 -Lactamase Protein Inhibi  (bio_65b9aaff7e48",
+      "paperclip_search_id": "s_71d015d4",
+      "paperclip_map_id": "m_49748705",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "paperclip_source": "biorxiv"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Sulbactam sodium. Map complete: 10/10 tasks succeeded in 2763ms\nResults ID: m_d5df5356\nFull results: /.gxl/map_m_d5df5356.txt\n\n  [success] bla - Beta-lactamase TEM  (P62593)\n    Based on the provided paper content, there is no mention of Sulbactam sodium, nitrocefin colorimetric assays, $K_i$, $IC_{50}$, or related enzyme inhi\n  [success] bla - Beta-lactamase TEM  (P62594)\n    Based on the provided paper content, there is no mention of Sulbactam sodium, nitrocefin colorimetric assays, $K_i$, $IC_{50}$, or related enzyme kine\n  [success] blaT-12b - Beta-lactamase TEM-12  (Q48406)\n    Based on the provided paper content, there is no information regarding Sulbactam sodium, TEM-1 beta-lactamase, nitrocefin colorimetric assays, Ki, IC5\n  [success] penPC - Beta-lactamase 1  (P10424)\n    Based on the provided paper content, there is no information regarding Sulbactam sodium, TEM-1 beta-lactamase, nitrocefin colorimetric assays, $K_i$, \n  [success] blaY - Beta-lactamase 1  (P00809)\n    The provided paper does not contain information about Sulbactam sodium, TEM-1 beta-lactamase, or nitrocefin assays.\n  [success] blaCI - Beta-lactamase 1  (P28018)\n    Based on the provided paper content, there is no mention of Sulbactam sodium, TEM-1 beta-lactamase, nitrocefin colorimetric assays, Ki, IC50, or relat\n  [success] blaL - Beta-lactamase 1  (Q03680)\n    Based on the provided paper content, there is no information regarding Sulbactam sodium, TEM-1 beta-lactamase, nitrocefin colorimetric assays, Ki, IC5\n  [suc",
+      "paperclip_search_id": "s_5cf2dd51",
+      "paperclip_map_id": "m_d5df5356",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "paperclip_source": "proteins"
+    }
+  ],
+  "raw_local": "/Users/fio/zeon_hack/pvjthomas/local/literature/T6685",
+  "assay_recommendations": {
+    "tem1_nitrocefin": {
+      "screen_conc_uM": 50,
+      "screen_rationale": "Project default screen concentration; no literature inhibitor concentration or IC50/Ki extracted.",
+      "screen_conc_source": "project_default",
+      "max_assay_conc_uM": 1000.0,
+      "metric": "relative nitrocefin hydrolysis vs no-inhibitor control"
+    }
+  }
+}

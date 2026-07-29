@@ -1,0 +1,86 @@
+{
+  "workflow_id": "tem1_dilution_plate",
+  "name": "TEM-1 Dilution Plate",
+  "description": "Prepare the working-solution plate for the Round 3 v1 TEM-1 activity screen: 8 compounds, known-active control, and matched vehicle on wellplate_pcr_parts_4.",
+  "version": "1.0.0",
+  "author": "",
+  "created_at": "2026-07-25T00:00:00.000Z",
+  "updated_at": "2026-07-25T00:00:00.000Z",
+  "simulation_validated": false,
+  "objects": [],
+  "inputs": [
+    { "name": "pipette", "type": "object", "is_array": false, "description": "Starting pipette. The skill swaps between 10 uL and 120 uL pipettes as needed.", "defaultValue": "epipette_10ul" },
+    { "name": "tipbox", "type": "object", "is_array": false, "description": "Starting tip rack.", "defaultValue": "tipbox_10ul_1" },
+    { "name": "blb_source", "type": "object", "is_array": false, "description": "Source object containing BLB diluent.", "defaultValue": "coldblock_wellplate" },
+    { "name": "dmso_source", "type": "object", "is_array": false, "description": "Source object containing 100% DMSO for vehicle working solution.", "defaultValue": "coldblock_wellplate" },
+    { "name": "working_plate", "type": "object", "is_array": false, "description": "PCR plate where working solutions are prepared.", "defaultValue": "wellplate_pcr_parts_4" },
+    { "name": "tem1_stock_source", "type": "object", "is_array": false, "description": "Source object containing 100 ng/uL purified TEM-1 stock.", "defaultValue": "coldblock_wellplate" },
+    { "name": "blb_anchor", "type": "string", "description": "Anchor/hole containing BLB diluent for compound/control working-solution dilutions.", "defaultValue": "hole_5" },
+    { "name": "blb_anchor_2", "type": "string", "description": "Second BLB anchor/hole for vehicle BLB and other BLB-only additions; keeps BLB tubes under 1.5 mL.", "defaultValue": "hole_6" },
+    { "name": "dmso_anchor", "type": "string", "description": "Anchor/hole containing 100% DMSO.", "defaultValue": "hole_9" },
+    { "name": "tem1_stock_anchor", "type": "string", "description": "Anchor/hole containing 100 ng/uL purified TEM-1 stock.", "defaultValue": "hole_1" },
+    { "name": "tem1_intermediate_anchor", "type": "string", "description": "Anchor/hole where 1 ng/uL TEM-1 intermediate is prepared.", "defaultValue": "hole_2" },
+    { "name": "tem1_working_anchor", "type": "string", "description": "Anchor/hole where 0.1 ng/uL TEM-1 working solution is prepared.", "defaultValue": "hole_8" },
+
+    { "name": "positive_source_plate", "type": "object", "is_array": false, "description": "T19860 Clavulanic Acid source plate.", "defaultValue": "wellplate_pcr_parts_1" },
+    { "name": "positive_source_well", "type": "string", "description": "T19860 Clavulanic Acid source well.", "defaultValue": "H7" },
+    { "name": "positive_dest_well", "type": "string", "description": "Working-plate destination well for known-active control.", "defaultValue": "A1" },
+    { "name": "vehicle_dest_well", "type": "string", "description": "Working-plate destination well for matched vehicle.", "defaultValue": "A2" },
+
+    { "name": "compound_1_source_plate", "type": "object", "is_array": false, "description": "T1262 Tazobactam source plate.", "defaultValue": "wellplate_pcr_parts_1" },
+    { "name": "compound_1_source_well", "type": "string", "description": "T1262 Tazobactam source well.", "defaultValue": "B10" },
+    { "name": "compound_1_dest_well", "type": "string", "description": "Working-plate destination well for compound 1.", "defaultValue": "A3" },
+    { "name": "compound_2_source_plate", "type": "object", "is_array": false, "description": "T6685 Sulbactam sodium source plate.", "defaultValue": "wellplate_pcr_parts_1" },
+    { "name": "compound_2_source_well", "type": "string", "description": "T6685 Sulbactam sodium source well.", "defaultValue": "F2" },
+    { "name": "compound_2_dest_well", "type": "string", "description": "Working-plate destination well for compound 2.", "defaultValue": "A4" },
+    { "name": "compound_3_source_plate", "type": "object", "is_array": false, "description": "T14081 Enmetazobactam source plate.", "defaultValue": "wellplate_pcr_parts_1" },
+    { "name": "compound_3_source_well", "type": "string", "description": "T14081 Enmetazobactam source well.", "defaultValue": "F7" },
+    { "name": "compound_3_dest_well", "type": "string", "description": "Working-plate destination well for compound 3.", "defaultValue": "A5" },
+    { "name": "compound_4_source_plate", "type": "object", "is_array": false, "description": "T1008 Cephalexin source plate.", "defaultValue": "wellplate_pcr_parts_1" },
+    { "name": "compound_4_source_well", "type": "string", "description": "T1008 Cephalexin source well.", "defaultValue": "A9" },
+    { "name": "compound_4_dest_well", "type": "string", "description": "Working-plate destination well for compound 4.", "defaultValue": "A6" },
+    { "name": "compound_5_source_plate", "type": "object", "is_array": false, "description": "T0224 Meropenem source plate.", "defaultValue": "wellplate_pcr_parts_2" },
+    { "name": "compound_5_source_well", "type": "string", "description": "T0224 Meropenem source well.", "defaultValue": "A3" },
+    { "name": "compound_5_dest_well", "type": "string", "description": "Working-plate destination well for compound 5.", "defaultValue": "A7" },
+    { "name": "compound_6_source_plate", "type": "object", "is_array": false, "description": "T0985 Oxacillin sodium salt source plate.", "defaultValue": "wellplate_pcr_parts_2" },
+    { "name": "compound_6_source_well", "type": "string", "description": "T0985 Oxacillin sodium salt source well.", "defaultValue": "A4" },
+    { "name": "compound_6_dest_well", "type": "string", "description": "Working-plate destination well for compound 6.", "defaultValue": "A8" },
+    { "name": "compound_7_source_plate", "type": "object", "is_array": false, "description": "T0138 Cefpiramide acid source plate.", "defaultValue": "wellplate_pcr_parts_1" },
+    { "name": "compound_7_source_well", "type": "string", "description": "T0138 Cefpiramide acid source well.", "defaultValue": "A2" },
+    { "name": "compound_7_dest_well", "type": "string", "description": "Working-plate destination well for compound 7.", "defaultValue": "A9" },
+    { "name": "compound_8_source_plate", "type": "object", "is_array": false, "description": "T8390 Cefazolin source plate.", "defaultValue": "wellplate_pcr_parts_1" },
+    { "name": "compound_8_source_well", "type": "string", "description": "T8390 Cefazolin source well.", "defaultValue": "F3" },
+    { "name": "compound_8_dest_well", "type": "string", "description": "Working-plate destination well for compound 8.", "defaultValue": "A10" },
+
+    { "name": "stock_volume_ul", "type": "float", "description": "10 mM stock volume per compound/control working solution.", "defaultValue": 2.5 },
+    { "name": "compound_blb_volume_ul", "type": "float", "description": "BLB volume per compound/control working solution.", "defaultValue": 47.5 },
+    { "name": "vehicle_dmso_volume_ul", "type": "float", "description": "DMSO volume for matched vehicle working solution.", "defaultValue": 5.0 },
+    { "name": "vehicle_blb_volume_ul", "type": "float", "description": "BLB volume for matched vehicle working solution.", "defaultValue": 95.0 },
+    { "name": "tem1_stock_volume_ul", "type": "float", "description": "100 ng/uL TEM-1 stock volume for the first dilution step.", "defaultValue": 2.0 },
+    { "name": "tem1_step1_blb_volume_ul", "type": "float", "description": "BLB volume for 1 ng/uL TEM-1 intermediate.", "defaultValue": 198.0 },
+    { "name": "tem1_intermediate_volume_ul", "type": "float", "description": "1 ng/uL TEM-1 intermediate volume for the second dilution step.", "defaultValue": 100.0 },
+    { "name": "tem1_step2_blb_volume_ul", "type": "float", "description": "BLB volume for 0.1 ng/uL TEM-1 working solution.", "defaultValue": 900.0 },
+    { "name": "tem1_mix_volume_ul", "type": "float", "description": "Pipette-mix volume for TEM-1 intermediate and working tubes.", "defaultValue": 100.0 },
+    { "name": "mix_volume_ul", "type": "float", "description": "Pipette-mix volume per working-solution well.", "defaultValue": 10.0 },
+    { "name": "mix_cycles", "type": "int", "description": "Pipette-mix cycles per working-solution well.", "defaultValue": 5 }
+  ],
+  "timing_phases": [
+    { "phase": "setup", "match": ["prepare dilution plate"] }
+  ],
+  "nodes": [
+    { "node_id": "start_0", "type": "start", "label": "Start" },
+    { "node_id": "prepare_dilutions", "type": "skill", "label": "Prepare Dilution Plate", "description": "Prepare 500 uM compound/control working solutions plus 5% DMSO matched vehicle on wellplate_pcr_parts_4.", "skill_id": "prepare_tem1_dilution_plate", "parameters": { "pipette": { "$input": "pipette" }, "tipbox": { "$input": "tipbox" }, "blb_source": { "$input": "blb_source" }, "dmso_source": { "$input": "dmso_source" }, "working_plate": { "$input": "working_plate" }, "tem1_stock_source": { "$input": "tem1_stock_source" }, "positive_source_plate": { "$input": "positive_source_plate" }, "compound_1_source_plate": { "$input": "compound_1_source_plate" }, "compound_2_source_plate": { "$input": "compound_2_source_plate" }, "compound_3_source_plate": { "$input": "compound_3_source_plate" }, "compound_4_source_plate": { "$input": "compound_4_source_plate" }, "compound_5_source_plate": { "$input": "compound_5_source_plate" }, "compound_6_source_plate": { "$input": "compound_6_source_plate" }, "compound_7_source_plate": { "$input": "compound_7_source_plate" }, "compound_8_source_plate": { "$input": "compound_8_source_plate" }, "blb_anchor": { "$input": "blb_anchor" }, "blb_anchor_2": { "$input": "blb_anchor_2" }, "dmso_anchor": { "$input": "dmso_anchor" }, "tem1_stock_anchor": { "$input": "tem1_stock_anchor" }, "tem1_intermediate_anchor": { "$input": "tem1_intermediate_anchor" }, "tem1_working_anchor": { "$input": "tem1_working_anchor" }, "positive_source_well": { "$input": "positive_source_well" }, "positive_dest_well": { "$input": "positive_dest_well" }, "vehicle_dest_well": { "$input": "vehicle_dest_well" }, "compound_1_source_well": { "$input": "compound_1_source_well" }, "compound_1_dest_well": { "$input": "compound_1_dest_well" }, "compound_2_source_well": { "$input": "compound_2_source_well" }, "compound_2_dest_well": { "$input": "compound_2_dest_well" }, "compound_3_source_well": { "$input": "compound_3_source_well" }, "compound_3_dest_well": { "$input": "compound_3_dest_well" }, "compound_4_source_well": { "$input": "compound_4_source_well" }, "compound_4_dest_well": { "$input": "compound_4_dest_well" }, "compound_5_source_well": { "$input": "compound_5_source_well" }, "compound_5_dest_well": { "$input": "compound_5_dest_well" }, "compound_6_source_well": { "$input": "compound_6_source_well" }, "compound_6_dest_well": { "$input": "compound_6_dest_well" }, "compound_7_source_well": { "$input": "compound_7_source_well" }, "compound_7_dest_well": { "$input": "compound_7_dest_well" }, "compound_8_source_well": { "$input": "compound_8_source_well" }, "compound_8_dest_well": { "$input": "compound_8_dest_well" }, "stock_volume_ul": { "$input": "stock_volume_ul" }, "compound_blb_volume_ul": { "$input": "compound_blb_volume_ul" }, "vehicle_dmso_volume_ul": { "$input": "vehicle_dmso_volume_ul" }, "vehicle_blb_volume_ul": { "$input": "vehicle_blb_volume_ul" }, "tem1_stock_volume_ul": { "$input": "tem1_stock_volume_ul" }, "tem1_step1_blb_volume_ul": { "$input": "tem1_step1_blb_volume_ul" }, "tem1_intermediate_volume_ul": { "$input": "tem1_intermediate_volume_ul" }, "tem1_step2_blb_volume_ul": { "$input": "tem1_step2_blb_volume_ul" }, "tem1_mix_volume_ul": { "$input": "tem1_mix_volume_ul" }, "mix_volume_ul": { "$input": "mix_volume_ul" }, "mix_cycles": { "$input": "mix_cycles" } } },
+    { "node_id": "end_1", "type": "end", "label": "End" }
+  ],
+  "edges": [
+    { "edge_id": "e0", "from_node": "start_0", "to_node": "prepare_dilutions", "condition": { "type": "default" } },
+    { "edge_id": "e1", "from_node": "prepare_dilutions", "to_node": "end_1", "condition": { "type": "on_success" } }
+  ],
+  "canvas_ui": {
+    "kind": "react",
+    "source_ref": "canvas/tem1_dilution_plate.tsx",
+    "enabled": true,
+    "version": 1,
+    "updated_at": "2026-07-25T00:00:00.000Z"
+  }
+}

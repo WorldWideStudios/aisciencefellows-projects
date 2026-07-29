@@ -1,0 +1,12 @@
+skill_id: dispense_from_openshelf
+version: "1.0.0"
+description: "Dispense an item by NAME from the OpenShelf cabinet (API). Embeds openshelf_read_storage to match the name (case-insensitive) to its UPCA + stored cell, then blocks until the cabinet finishes. Sim mode simulates the ~50s dispense time."
+
+# parameters are derived from the dispense_from_openshelf() signature in robotic_code.py
+
+tags:
+  - openshelf
+  - api
+  - robot
+  - dispense
+  - meta

@@ -1,0 +1,10 @@
+skill_id: wellplate_grab
+version: "1.0.0"
+description: "Pick up a plate with the right arm at a named grasp anchor: swing in, pre-open at a standoff, descend onto the grasp pose, close, then assert the canonical grip (snap the grasp anchor onto the gripper + attach) so the plate is held identically every pick, and retract."
+
+# parameters are derived from the wellplate_grab() signature in robotic_code.py
+
+tags:
+  - pipette_demo
+  - wellplate
+  - pick

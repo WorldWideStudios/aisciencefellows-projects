@@ -1,0 +1,20 @@
+skill_id: open_container
+version: "1.0.0"
+description: "Lift the O-ring-sealed lid off the container and park it at a holder location."
+
+parameter_descriptions:
+  container: "The vial/cartridge whose lid should be opened."
+  lid: "The lid/cap object, currently seated on the container."
+  arm: "Arm and gripper to use ('left_arm' or 'right_arm')."
+  speed: "Relative speed (0-100) for the close-in grasp, lift, and seat moves."
+  park: "Object carrying the 'lid_park' anchor where the lid gets set down. Defaults to the container itself."
+  park_anchor: "Name of the anchor on `park` where the lid is set down."
+
+preconditions:
+  lid_state: closed
+
+postconditions:
+  lid_state: open
+
+tags: ["lid", "cap", "container", "open"]
+high_risk: false

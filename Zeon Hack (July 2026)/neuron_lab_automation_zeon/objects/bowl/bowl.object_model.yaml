@@ -1,0 +1,20 @@
+urdf: bowl.urdf
+
+parts:
+  body:
+    links: [body]
+    description: "Lab bowl"
+
+articulations:
+  default:
+    description: "Static object, no actuated joints"
+    joints: {}
+
+anchors:
+  object:
+    parent_link: body
+
+    description: "Table placement frame (to be refined)"
+    link_T_anchor:
+      xyz: [0.0, 0.0, 0.0]
+      wxyz: [1.0, 0.0, 0.0, 0.0]

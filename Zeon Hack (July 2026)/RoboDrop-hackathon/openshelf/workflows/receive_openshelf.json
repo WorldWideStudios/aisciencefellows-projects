@@ -1,0 +1,74 @@
+{
+  "workflow_id": "receive_openshelf",
+  "name": "Receive From OpenShelf",
+  "description": "Receive an item from the OpenShelf: the cabinet retrieves it by name (blocks until done), then the right arm reaches the plate anchor, grabs it, and carries it home.",
+  "version": "1.0.0",
+  "author": "zeon",
+  "created_at": "2026-07-12T00:00:00.000Z",
+  "updated_at": "2026-07-12T00:00:00.000Z",
+  "simulation_validated": false,
+  "objects": [],
+  "inputs": [
+    { "name": "name", "type": "string", "description": "Item name to receive from the OpenShelf (case-insensitive)", "defaultValue": "" }
+  ],
+  "nodes": [
+    {
+      "node_id": "start_0",
+      "type": "start",
+      "label": "Start"
+    },
+    {
+      "node_id": "dispense_object",
+      "type": "skill",
+      "label": "Dispense From OpenShelf",
+      "description": "Call the OpenShelf API to dispense the named object from the cabinet and present it at the plate anchor (embeds the snap); blocks until the cabinet physically finishes (~50s).",
+      "skill_id": "dispense_from_openshelf",
+      "parameters": { "name": { "$input": "name" } }
+    },
+    {
+      "node_id": "reach_openshelf",
+      "type": "skill",
+      "label": "Reach OpenShelf",
+      "description": "Right arm moves to the OpenShelf plate anchor where the item is presented.",
+      "skill_id": "reach_openshelf",
+      "parameters": {}
+    },
+    {
+      "node_id": "grab_item",
+      "type": "skill",
+      "label": "Grab Item",
+      "description": "Gradually close the right gripper on the item and attach it so it travels with the arm.",
+      "skill_id": "grab_openshelf_item",
+      "parameters": {}
+    },
+    {
+      "node_id": "retract",
+      "type": "skill",
+      "label": "Back Out Of Box",
+      "description": "Pull the arm (with the item) straight out of the IO box along +Y before homing, so it clears the shelf.",
+      "skill_id": "retract_from_openshelf",
+      "parameters": {}
+    },
+    {
+      "node_id": "carry_home",
+      "type": "skill",
+      "label": "Carry Home",
+      "description": "Return the right arm (holding the item) to its home rest pose.",
+      "skill_id": "go_home",
+      "parameters": {}
+    },
+    {
+      "node_id": "end_1",
+      "type": "end",
+      "label": "End"
+    }
+  ],
+  "edges": [
+    { "edge_id": "e0", "from_node": "start_0",        "to_node": "dispense_object", "condition": { "type": "default" } },
+    { "edge_id": "e1", "from_node": "dispense_object", "to_node": "reach_openshelf", "condition": { "type": "on_success" } },
+    { "edge_id": "e2", "from_node": "reach_openshelf", "to_node": "grab_item",       "condition": { "type": "on_success" } },
+    { "edge_id": "e3", "from_node": "grab_item",       "to_node": "retract",         "condition": { "type": "on_success" } },
+    { "edge_id": "e4", "from_node": "retract",         "to_node": "carry_home",      "condition": { "type": "on_success" } },
+    { "edge_id": "e5", "from_node": "carry_home",      "to_node": "end_1",           "condition": { "type": "on_success" } }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "workflow_id": "preflight_horizontal_grip_openshelf",
+  "name": "Preflight Horizontal Grip OpenShelf",
+  "description": "Test the horizontal-grip OpenShelf entry and release poses with the empty right gripper.",
+  "version": "1.0.0",
+  "author": "zeon",
+  "created_at": "2026-07-26T03:40:00.000Z",
+  "updated_at": "2026-07-26T03:40:00.000Z",
+  "simulation_validated": false,
+  "objects": [],
+  "inputs": [
+    {
+      "name": "openshelf",
+      "type": "object",
+      "is_array": false,
+      "description": "OpenShelf providing the right-arm entry and release anchors",
+      "defaultValue": "openshelf"
+    },
+    {
+      "name": "entry_anchor",
+      "type": "string",
+      "description": "Right-arm horizontal-grip entry TCP",
+      "defaultValue": "wellplate_slot_1_horizontal_grip_entry_tcp"
+    },
+    {
+      "name": "target_anchor",
+      "type": "string",
+      "description": "Exact right-arm horizontal-grip release TCP",
+      "defaultValue": "wellplate_slot_1_horizontal_grip_tcp"
+    }
+  ],
+  "nodes": [
+    {
+      "node_id": "start_0",
+      "type": "start",
+      "label": "Start"
+    },
+    {
+      "node_id": "preflight_right_arm",
+      "type": "skill",
+      "label": "Preflight Right-Arm Shelf Pose",
+      "description": "Move the empty right gripper through the horizontal entry and release poses.",
+      "skill_id": "preflight_right_arm_anchor",
+      "parameters": {
+        "target": { "$input": "openshelf" },
+        "entry_anchor": { "$input": "entry_anchor" },
+        "target_anchor": { "$input": "target_anchor" },
+        "speed": 20.0,
+        "slow_speed": 10.0
+      }
+    },
+    {
+      "node_id": "end_1",
+      "type": "end",
+      "label": "End"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e0",
+      "from_node": "start_0",
+      "to_node": "preflight_right_arm",
+      "condition": { "type": "default" }
+    },
+    {
+      "edge_id": "e1",
+      "from_node": "preflight_right_arm",
+      "to_node": "end_1",
+      "condition": { "type": "on_success" }
+    }
+  ]
+}

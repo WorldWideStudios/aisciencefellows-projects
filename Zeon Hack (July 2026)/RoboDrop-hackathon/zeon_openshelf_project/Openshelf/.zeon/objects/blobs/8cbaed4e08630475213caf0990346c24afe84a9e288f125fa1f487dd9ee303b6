@@ -1,0 +1,22 @@
+# Skill: move_beaker_to_openshelf_physical
+skill_id: move_beaker_to_openshelf_physical
+version: "2.0.0"
+description: "Physically pick a beaker and place it into an anchor-defined OpenShelf seat."
+
+preconditions: {}
+postconditions:
+  beaker_on_openshelf: true
+
+high_risk: true
+
+safety_rules:
+  - "Commands arm and gripper motion; validate the complete path in simulation before hardware use."
+  - "If execution fails while the beaker is attached, stop and inspect before opening the gripper."
+  - "The shelf TCP anchor must be paired with the selected beaker grasp and shelf seat anchors."
+
+tags:
+  - beaker
+  - openshelf
+  - anchor
+  - pick-and-place
+  - physical-motion

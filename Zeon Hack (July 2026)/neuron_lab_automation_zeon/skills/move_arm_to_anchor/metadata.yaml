@@ -1,0 +1,29 @@
+skill_id: move_arm_to_anchor
+version: "1.2.0"
+description: "Move either robot arm through an ordered anchor path and set its gripper to each anchor's configured grasp width."
+
+parameter_descriptions:
+  anchor_names: 'Ordered anchor path, entered as ["prepose_3", "prepose_2", "prepose_1"] or prepose_3,prepose_2,prepose_1.'
+
+preconditions: {}
+
+postconditions:
+  arm_anchor_path_complete: true
+
+safety_rules:
+  - "Preview every selected object anchor in simulation before the first hardware run."
+  - "Verify every direct segment from the current pose through the ordered anchor list is collision-free."
+  - "Verify every anchor has the intended grasp width; an anchor without a grasp width resolves to 0.0 m and closes the gripper."
+  - "Do not use this generic motion skill while the selected arm is carrying an object unless the complete multi-anchor path has been collision-checked."
+  - "Keep a physical emergency stop within reach; Pause and Stop are not emergency stops."
+
+high_risk: true
+
+tags:
+  - anchors
+  - waypoints
+  - gripper
+  - arm_motion
+  - left_arm
+  - right_arm
+  - real_robot

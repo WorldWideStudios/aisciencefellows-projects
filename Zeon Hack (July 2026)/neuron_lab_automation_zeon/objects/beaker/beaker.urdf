@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="beaker">
+  <link name="world" />
+  <joint name="world_joint" type="fixed">
+    <parent link="world" />
+    <child link="body" />
+    <origin rpy="0 0 0" xyz="0 0 0" />
+  </joint>
+  <link name="body">
+    <visual>
+      <geometry><mesh filename="beaker.obj" /></geometry>
+    </visual>
+    <collision>
+      <geometry><mesh filename="beaker.obj" /></geometry>
+    </collision>
+  </link>
+</robot>

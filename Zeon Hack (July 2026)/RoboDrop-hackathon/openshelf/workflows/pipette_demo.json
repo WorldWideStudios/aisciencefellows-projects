@@ -1,0 +1,69 @@
+{
+  "workflow_id": "pipette_demo",
+  "name": "Pipette Demo",
+  "description": "Minimal end-to-end pipetting demo: pick up the electronic pipette, grab a fresh tip, and aspirate from one well of a PCR plate. A deliberately small subset of a real protocol — no plate maps, conditionals, notifications, or machines.",
+  "version": "1.0.0",
+  "author": "zeon",
+  "created_at": "2026-06-20T00:00:00.000Z",
+  "updated_at": "2026-06-20T00:00:00.000Z",
+  "simulation_validated": false,
+  "objects": [],
+  "inputs": [
+    { "name": "plate",  "type": "object", "is_array": false, "description": "PCR wellplate to aspirate from" },
+    { "name": "well",   "type": "string", "description": "Well to aspirate from (A1–H12)", "defaultValue": "A1" },
+    { "name": "volume", "type": "float",  "description": "Volume to aspirate (µL)", "defaultValue": 5 }
+  ],
+  "nodes": [
+    {
+      "node_id": "start_0",
+      "type": "start",
+      "label": "Start"
+    },
+    {
+      "node_id": "pick_pipette",
+      "type": "skill",
+      "label": "Pick Up Pipette",
+      "description": "Grasp the electronic pipette from its stand with the left arm.",
+      "skill_id": "epipette_grey_pick",
+      "parameters": {}
+    },
+    {
+      "node_id": "attach_tip",
+      "type": "skill",
+      "label": "Grab a Tip",
+      "description": "Lower onto the active tip box, latch a fresh tip, and verify it is present.",
+      "skill_id": "epipette_grey_attach",
+      "parameters": {}
+    },
+    {
+      "node_id": "aspirate",
+      "type": "skill",
+      "label": "Aspirate from Well",
+      "description": "Aspirate the requested volume from the selected well of the chosen plate.",
+      "skill_id": "epipette_grey_aspirate",
+      "parameters": {
+        "object": { "$input": "plate" },
+        "anchor": { "$input": "well" },
+        "volume": { "$input": "volume" }
+      }
+    },
+    {
+      "node_id": "end_1",
+      "type": "end",
+      "label": "End"
+    }
+  ],
+  "edges": [
+    { "edge_id": "e0", "from_node": "start_0",     "to_node": "pick_pipette", "condition": { "type": "default" } },
+    { "edge_id": "e1", "from_node": "pick_pipette", "to_node": "attach_tip",  "condition": { "type": "on_success" } },
+    { "edge_id": "e2", "from_node": "attach_tip",   "to_node": "aspirate",    "condition": { "type": "on_success" } },
+    { "edge_id": "e3", "from_node": "aspirate",     "to_node": "end_1",       "condition": { "type": "on_success" } }
+  ],
+  "canvas_ui": {
+    "kind": "react",
+    "source_ref": "canvas/pipette_demo_screen.tsx",
+    "enabled": true,
+    "version": 1,
+    "updated_at": "2026-06-20T00:00:00.000Z"
+  }
+}

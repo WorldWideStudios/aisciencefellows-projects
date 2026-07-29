@@ -1,0 +1,11 @@
+skill_id: platesealer_pick_seal
+version: "1.0.0"
+description: "Pick a plate seal off a stacked seal holder with the left arm at a per-index grasp anchor. Gripper widths and standoffs are read from each anchor's grasp block, so adding a grasp_pose_<n> anchor reaches a new stack position with no code change."
+
+# parameters are derived from the platesealer_pick_seal() signature in robotic_code.py
+
+tags:
+  - pipette_demo
+  - platesealer
+  - seal
+  - pick

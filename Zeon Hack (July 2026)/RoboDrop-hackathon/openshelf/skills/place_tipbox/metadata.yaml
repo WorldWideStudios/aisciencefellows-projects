@@ -1,0 +1,11 @@
+skill_id: place_tipbox
+version: "1.0.0"
+description: "Set the carried tipbox down on the desk (anywhere): park on the feasible pre-grasp branch over the bench, ease down, open the gripper, detach, and lift clear. The inverse of pick_tipbox."
+
+# parameters are derived from the place_tipbox() signature in robotic_code.py
+
+tags:
+  - openshelf
+  - motion
+  - place
+  - tipbox

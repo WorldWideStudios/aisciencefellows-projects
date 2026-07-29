@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "name": "pipette_demo",
+  "baseline_remote_head": "7cfecd85a644a5b4929b2a1598ff1e74c6fadaea0592dfb8daae5842bc5465e4",
+  "description": "Read-only golden reference for Zeon authoring and verification practices. Update only with explicit user approval.",
+  "expected_skill_sequence": [
+    "epipette_grab",
+    "epipette_attach",
+    "epipette_aspirate",
+    "epipette_dispense",
+    "epipette_eject",
+    "epipette_place"
+  ],
+  "files": {
+    "canvas/pipette_demo_screen.tsx": "b606b97df576e10b4a3383dcbcb51f0d18b63166aa8adbbab0ebd47a4ac6f3d2",
+    "skills/epipette_aspirate/metadata.yaml": "d5950f8537c8a6d0380fa14c3636f893de90811fd2544c199e2b83528b652a24",
+    "skills/epipette_aspirate/modules.py": "a6481e8cc760012cb86ac30843460e02f50cab3870432492420e93e95c4cfd3b",
+    "skills/epipette_aspirate/robotic_code.py": "562ef94e76d8971e301dd846a0d1e7aa71d97664cbe36ce890373409d7eced05",
+    "skills/epipette_attach/metadata.yaml": "e2abfbc8e262fdacf0c0a820d185a615879cf29808cb4c3b646c001f63261219",
+    "skills/epipette_attach/modules.py": "a6481e8cc760012cb86ac30843460e02f50cab3870432492420e93e95c4cfd3b",
+    "skills/epipette_attach/robotic_code.py": "8726d902babd95b0e462b6406d26e7761e00044294d5ac3200d1bb3f5b6966a5",
+    "skills/epipette_dispense/metadata.yaml": "3153481a37808a39a8164a0ef04d21da43cf04e3f4f5331b696984e3e1142cf4",
+    "skills/epipette_dispense/modules.py": "a6481e8cc760012cb86ac30843460e02f50cab3870432492420e93e95c4cfd3b",
+    "skills/epipette_dispense/robotic_code.py": "410a4eb037fb4509893b9cd88aa222304168b2eae6e511e5e842cda622d8f7a7",
+    "skills/epipette_eject/metadata.yaml": "23d0a389e3cb061f65f0ab8a2a3a542255e3afc1de5c2a2652e48f2f1d29b6d3",
+    "skills/epipette_eject/modules.py": "c2a18671c1c51031e77ac99b55fb0ab10e3ebec61d7fecc953c8575435030421",
+    "skills/epipette_eject/robotic_code.py": "73fffafece59102a05c3dab4b106c7e78a2cfd867aac995a1f0e339571fe9547",
+    "skills/epipette_grab/metadata.yaml": "e2068408f63b473f0b90a18f3bc5558f400bad0890b1bcfa639d2ceea915c300",
+    "skills/epipette_grab/modules.py": "c2a18671c1c51031e77ac99b55fb0ab10e3ebec61d7fecc953c8575435030421",
+    "skills/epipette_grab/robotic_code.py": "a71ed43d20f284a26c4202402131efbd3609ce3ccd89404ca0ec9d93ff54b9a0",
+    "skills/epipette_place/metadata.yaml": "b71f2dc9552d0fb9478b938c8650e5261405bbf8e9be13cc6a35ca72741a39ad",
+    "skills/epipette_place/modules.py": "c2a18671c1c51031e77ac99b55fb0ab10e3ebec61d7fecc953c8575435030421",
+    "skills/epipette_place/robotic_code.py": "c089a6ebeee41234f7dad4b33dc4e51b7a648cec7789721d2dac473b1bdf51c7",
+    "skills/utils.py": "ac7b6f8aa0be1aeba8f6d11eb8d71a40c5b34d18d6c07b8a2f399dc66d6e58b9",
+    "workflows/pipette_demo.json": "7f2e50c8b5441d9d87c8fabc342b8ce95b4d7f09ee760c019072ff7df9aa342f",
+    "worlds/pipette_demo_world/live_state.yaml": "5a6b7734e5afa942bd7758a596d8f34822bf63a2ac416820d4f83e97ff29e39b",
+    "worlds/pipette_demo_world/world_state.json": "a1e3fd812bcc8865fd276ca3acca831fe8d2b1084f9e113554b5c0f953b20684"
+  }
+}

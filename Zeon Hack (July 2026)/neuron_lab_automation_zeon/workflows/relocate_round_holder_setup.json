@@ -1,0 +1,44 @@
+{
+  "workflow_id": "relocate_round_holder_setup",
+  "name": "Relocate Round Holder Setup",
+  "description": "Use the left arm to move wellplate_holder_tags_team10 while round_holder_hackteam10 is attached to the same TCP during transit and re-seated afterward.",
+  "version": "1.2.0",
+  "author": "zeon",
+  "created_at": "2026-07-26T00:00:00.000Z",
+  "updated_at": "2026-07-26T05:00:00.000Z",
+  "simulation_validated": false,
+  "objects": [],
+  "inputs": [
+    { "name": "base",      "type": "object", "is_array": false, "description": "Tagged holder physically gripped by the left arm.", "defaultValue": "wellplate_holder_tags_team10" },
+    { "name": "passenger", "type": "object", "is_array": false, "description": "Round holder carried with the tagged holder.", "defaultValue": "round_holder_hackteam10" },
+    { "name": "dy",        "type": "float", "description": "World-frame Y offset in metres (-0.10 = 10cm left).", "defaultValue": -0.10 }
+  ],
+  "nodes": [
+    {
+      "node_id": "start_0",
+      "type": "start",
+      "label": "Start"
+    },
+    {
+      "node_id": "relocate",
+      "type": "skill",
+      "label": "Relocate Holder Setup",
+      "description": "Grip the tagged holder and carry both world objects together.",
+      "skill_id": "relocate_assembly",
+      "parameters": {
+        "base": { "$input": "base" },
+        "passenger": { "$input": "passenger" },
+        "dy": { "$input": "dy" }
+      }
+    },
+    {
+      "node_id": "end_1",
+      "type": "end",
+      "label": "End"
+    }
+  ],
+  "edges": [
+    { "edge_id": "e0", "from_node": "start_0",  "to_node": "relocate", "condition": { "type": "default" } },
+    { "edge_id": "e1", "from_node": "relocate", "to_node": "end_1",    "condition": { "type": "on_success" } }
+  ]
+}

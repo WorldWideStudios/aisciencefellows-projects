@@ -1,0 +1,16 @@
+skill_id: platereader_run_kinetic_schedule
+version: "1.0.0"
+description: "Run the nitrocefin A490 kinetic read schedule after the plate is loaded and the reader lid is closed. Waits for incubator equilibration, then reads at initial + 30 s intervals for 10 min (defaults). Writes the schedule JSON beside plate-reader exports."
+
+preconditions:
+  plate_loaded: true
+  platereader_lid_closed: true
+
+postconditions:
+  kinetic_reads_completed: true
+
+tags:
+  - plate_reader
+  - kinetic
+  - nitrocefin
+  - tem1

@@ -1,0 +1,22 @@
+skill_id: round_holder_lift_replace
+version: "1.0.0"
+description: "Lift the round mock plate vertically off the tagged wellplate holder, pause, and replace it on the calibrated seat."
+
+preconditions:
+  round_holder_seated: true
+
+postconditions:
+  round_holder_seated: true
+
+safety_rules:
+  - "Confirm the physical round holder is seated exactly as shown in the selected world."
+  - "Use the wellplate gripper endpoint and verify grasp_shortside with the gripper preview before the first hardware run."
+  - "Keep a physical emergency stop within reach; Pause and Stop are not emergency stops."
+
+high_risk: true
+
+tags:
+  - round_holder
+  - wellplate_holder
+  - pick_place
+  - real_robot

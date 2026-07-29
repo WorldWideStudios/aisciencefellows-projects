@@ -1,0 +1,31 @@
+{
+  "run": 2,
+  "round": 2,
+  "phase": "post-run-analysis",
+  "analysis_version": "v2",
+  "label": "r2-discovery-v5-endpoint-fallback",
+  "scoring_mode": "endpoint",
+  "active": true,
+  "supersedes": "data/screens/2/post-run/v1/manifest.json",
+  "decision_tree_spec": "pvjthomas/runs/2/v5/run2_decision_tree.md",
+  "files": {
+    "decision_report": "data/screens/2/post-run/v2/run2_decision_report.md",
+    "assay_summary": "data/assay/run_2_summary.json",
+    "analysis": {
+      "round_summary_eda": "data/screens/2/post-run/v2/analysis/r2_round_summary_eda.json",
+      "annotated_csv": "data/screens/2/post-run/v2/analysis/r2_kinetics_annotated.csv",
+      "parsed_json": "data/screens/2/post-run/v2/analysis/r2_parsed.json",
+      "pattern_summary_json": "data/screens/2/post-run/v2/analysis/r2_pattern_summary.json",
+      "pattern_summary_md": "data/screens/2/post-run/v2/analysis/r2_pattern_summary.md",
+      "llm_context_json": "data/screens/2/post-run/v2/analysis/r2_kinetics_llm_context.json",
+      "llm_context_md": "data/screens/2/post-run/v2/analysis/r2_kinetics_llm_context.md"
+    }
+  },
+  "shared_inputs": {
+    "kinetics_csv": "data/screens/2/post-run/kinetics_r2.csv",
+    "nitrocefin_timing_json": "data/screens/2/post-run/nitrocefin_timing.json",
+    "reader_lid_close_utc": "data/screens/2/post-run/reader_lid_close_utc.txt",
+    "gen5_pdf": "data/screens/2/post-run/r2_gen5_export.pdf",
+    "run_log": "data/screens/2/post-run/run_log_exec_tem1_activity_screen_hack_world_22_20260725_230432.txt"
+  }
+}

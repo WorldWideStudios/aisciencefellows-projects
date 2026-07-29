@@ -1,0 +1,11 @@
+skill_id: seal_grab
+version: "1.0.0"
+description: "Approach the plate's seal_approach anchor with the left arm and pinch the exposed mat corner. First stage only (approach + pinch) toward peeling — the diagonal pull, two-stage regrasp, and calibrated grip force from tacit/sessions/peel_seal are not yet implemented."
+
+# parameters are derived from the seal_grab() signature in robotic_code.py
+
+tags:
+  - plateandholder
+  - plate
+  - seal
+  - pick

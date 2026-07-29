@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "workflow_id": "tem1_activity_screen",
+  "workflow_version": "1.0.0",
+  "description": "Phase duration budgets from exec_tem1_activity_screen_hack_world_22_20260725_230432",
+  "source_log": "data/screens/2/post-run/run_log_exec_tem1_activity_screen_hack_world_22_20260725_230432.txt",
+  "tolerance_defaults": {
+    "relative_pct": 20.0,
+    "min_absolute_seconds": 60.0
+  },
+  "phases": {
+    "setup": {
+      "expected_seconds": 4587.0
+    },
+    "assay_loading": {
+      "expected_seconds": 2594.0
+    },
+    "nitrocefin_prep": {
+      "expected_seconds": 1144.0
+    },
+    "nitrocefin_dispense": {
+      "expected_seconds": 1023.0
+    },
+    "plate_mix": {
+      "expected_seconds": 812.0
+    },
+    "preincubation": {
+      "expected_seconds": 120.0
+    }
+  },
+  "total_seconds": {
+    "expected_seconds": 10280.0
+  }
+}

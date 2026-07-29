@@ -1,0 +1,11 @@
+skill_id: take_off_top
+version: "0.1.0"
+description: "Placeholder step for removing the top from the sample container or plate."
+
+parameter_descriptions: {}
+
+preconditions: {}
+postconditions: {}
+
+tags: ["placeholder", "lid", "plate"]
+high_risk: false

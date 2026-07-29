@@ -1,0 +1,51 @@
+urdf: epipette_10ul.urdf
+parts:
+  body:
+    links: [body]
+    description: Electronic pipette in frame, 10 uL. Geometry shared with epipette_120ul;
+      the two differ only by volume label, not shape.
+articulations:
+  default:
+    description: Static object, no actuated joints
+    joints: {}
+anchors:
+  object:
+    parent_link: world
+    description: Table placement frame, origin at the (max_x, max_y, min_z) bbox corner.
+      Mesh is authored in millimetres and scaled 0.001 (mm->m) in the URDF; it is
+      already Z-up (pipette vertical, plunger up / tip down), so the anchor uses identity
+      rotation.
+    link_T_anchor:
+      xyz: [0.042963, 0.079645, -0.043118]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  grab:
+    parent_link: world
+    description: pose for grabbing the pipette
+    link_T_anchor:
+      xyz: [0.021, 0.0312877, 0.0818114]
+      wxyz: [0.5, 0.5, -0.5, 0.5]
+    grasp:
+      width: 0.025
+  grab_prepose:
+    parent_link: world
+    description: prepose for grabbing the pipette
+    link_T_anchor:
+      xyz: [0.0210003, 0.174537, 0.196016]
+      wxyz: [0.5, 0.5, -0.5, 0.5]
+    grasp:
+      width: 0.025
+  grab_postpose:
+    parent_link: world
+    description: pose for after grabbing the pipette
+    link_T_anchor:
+      xyz: [0.021, 0.0312877, 0.0818114]
+      wxyz: [0.477438, 0.521587, -0.521587, 0.477438]
+    grasp:
+      width: 0.025
+  tip:
+    parent_link: body
+    description: tip of the epipette (end that tip goes on). It is 11.5mm lower than
+      the mesh.
+    link_T_anchor:
+      xyz: [0.018897, 0.04979, -0.054948]
+      wxyz: [6.12323e-17, 1.0, 0.0, 0.0]

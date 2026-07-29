@@ -1,0 +1,7 @@
+{
+  "database": "dolt",
+  "backend": "dolt",
+  "dolt_mode": "embedded",
+  "dolt_database": "mikmak",
+  "project_id": "fac2eb7b-7aa7-4acd-b68d-1775ecc25c02"
+}

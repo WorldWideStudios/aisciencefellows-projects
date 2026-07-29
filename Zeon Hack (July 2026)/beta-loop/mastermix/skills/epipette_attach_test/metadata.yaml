@@ -1,0 +1,15 @@
+skill_id: epipette_attach_test
+version: "1.0.0"
+description: "Calibration sweep: loop over every tip running the epipette_attach motion, but skip the press move (step 3 repeats step 1) so the nozzle only hovers above each tip top and never inserts. No tip is picked up and no world state is advanced."
+
+# parameters are derived from the epipette_attach_test() signature in robotic_code.py
+
+preconditions:
+  epipette_connected: true
+
+tags:
+  - pipette_demo
+  - epipette
+  - tip
+  - attach
+  - test

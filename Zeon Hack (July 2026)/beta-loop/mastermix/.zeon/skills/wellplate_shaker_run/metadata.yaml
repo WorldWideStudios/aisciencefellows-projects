@@ -1,0 +1,14 @@
+skill_id: wellplate_shaker_run
+version: "1.0.0"
+description: "Toggle the wellplate shaker's run button via its Zigbee fingerbot (tinytuya), tracking on/off in live_state.yaml. With ensure_state 'on'/'off' it only presses when the tracked state must change (state-aware); with no ensure_state it is a plain toggle. Speed and duration come from the unit's own dial. Button press is a no-op in simulation, but the tracked state still updates."
+
+# parameters are derived from the wellplate_shaker_run() signature in robotic_code.py
+
+preconditions:
+  shaker_lid_closed: true
+
+tags:
+  - hackathon_v2
+  - shaker
+  - run
+  - tuya

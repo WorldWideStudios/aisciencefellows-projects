@@ -1,0 +1,17 @@
+skill_id: platereader_closed
+version: "1.0.0"
+description: "Close the plate reader lid with the right arm: grip the lid at the lid_open anchor (lid open, lid_joint = 1.83), arc-follow the hinge back down to closed (lid_joint = 0.0), commit the closed state, release, stow. Reverse of platereader_open."
+
+# parameters are derived from the platereader_closed() signature in robotic_code.py
+
+preconditions:
+  platereader_lid_open: true
+
+postconditions:
+  platereader_lid_closed: true
+
+tags:
+  - plate_reader
+  - close
+  - lid
+  - right_arm

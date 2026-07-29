@@ -1,0 +1,63 @@
+{
+  "compound_id": "T0138",
+  "name": "Cefpiramide acid",
+  "match": "yes",
+  "support": "weak",
+  "entries": [
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Cefpiramide acid. Map complete: 5/5 tasks succeeded in 2066ms\nResults ID: m_605d16ab\nFull results: /.gxl/map_m_605d16ab.txt\n\n  [success] In Silico Study of the Potential of Brazilein Sappan Wood as a Beta-La  (PMC11229569)\n    The provided paper does not contain information about Cefpiramide acid, the nitrocefin colorimetric assay, Ki or IC50 values, inhibitor concentrations\n  [success] Effect of Lactamase Inhibitors on the Biosensor Penp during the Measur  (PMC6427286)\n    Based on the provided paper content, there is no mention of Cefpiramide acid, TEM-1 beta-lactamase in a nitrocefin colorimetric assay, $K_i$, $IC_{50}\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided paper content, there is no mention of \"Cefpiramide acid\", \"nitrocefin colorimetric assay\", Ki, IC50, or enzymatic inhibition ass\n  [success] Reversible inactivation of a peptidoglycan transpeptidase by a \u03b2-lacta  (PMC5567249)\n    Based on the provided paper content, there is no mention of Cefpiramide acid, TEM-1 beta-lactamase, or their kinetic/inhibitory values (such as Ki or \n  [success] Classification and applicability of new beta-lactamase inhibitors  (PMC12584905)\n    Based on the provided paper content, there is no mention of Cefpiramide acid, TEM-1 beta-lactamase, nitrocefin colorimetric assays, Ki, IC50 values, o\n\nFull results: /.gxl/map_m_605d16ab.txt",
+      "paperclip_search_id": "s_42e00aaa",
+      "paperclip_map_id": "m_605d16ab",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "pmcid": "PMC11229569"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Cefpiramide acid. Map complete: 30/30 tasks succeeded in 6258ms\nResults ID: m_121e498b\nFull results: /.gxl/map_m_121e498b.txt\n\n  [success] Saturation Mutagenesis and Molecular Modeling: The Impact of Methionin  (PMC11276661)\n    Based on the provided paper content, there is no mention of Cefpiramide acid, nitrocefin colorimetric assay, IC50/Ki values, or related inhibition dat\n  [success] A drug-resistant \u03b2-lactamase variant changes the conformation of its a  (PMC11843585)\n    Based on the provided paper, there is no mention of Cefpiramide acid or its testing against TEM-1 beta-lactamase using a nitrocefin colorimetric assay\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided paper content, there is no mention of Cefpiramide acid, nitrocefin colorimetric assays, $K_i$, $IC_{50}$ values, enzyme/substrat\n  [success] Kinetic and Structural Requirements for Carbapenemase\nActivity in GES-  (PMC4303295)\n    Based on the provided paper, there is no mention of Cefpiramide acid or TEM-1 beta-lactamase, nor any related assays, inhibition constants, or PMIDs f\n  [success] Revisiting the hydrolysis of ampicillin catalyzed by  Temoneira \u20101 \u03b2\u2010l  (PMC10661098)\n    Based on the provided paper content, there is no mention of \"Cefpiramide acid\", \"nitrocefin\", \"Ki\", \"IC50\", or related measurements. The paper focuses\n  [success] In Silico Study of the Potential of Brazilein Sappan Wood as a Beta-La  (PMC11229569)\n    Based on the provided pap",
+      "paperclip_search_id": "s_3d4c2c85",
+      "paperclip_map_id": "m_121e498b",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "pmcid": "PMC11276661",
+      "paperclip_source": "pmc"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Cefpiramide acid. Map complete: 26/26 tasks succeeded in 4988ms\nResults ID: m_f618f2d5\nFull results: /.gxl/map_m_f618f2d5.txt\n\n  [success] Distant Site Mutations in Clinical TEM Beta-Lactamase Variants Enhance  (bio_33da24cd7504)\n    Based on the provided paper content, there is no mention of \"Cefpiramide acid\", \"nitrocefin\", \"Ki\", \"IC50\", or specific enzyme and substrate concentra\n  [success] A new type of AmpC \u03b2-lactamases defined by PIB-1, a metal-dependent ca  (bio_9fef02c2845c)\n    Based on the provided research paper, there is no mention of Cefpiramide acid, TEM-1 beta-lactamase, or their kinetic/inhibition values in a nitrocefi\n  [success] Binding mode of isoxazolyl penicillins to a Class-A  \u03b2 -lactamase at a  (bio_a7f99ac77b0d)\n    Based on the provided paper content, there is no mention of Cefpiramide acid, TEM-1 beta-lactamase, nitrocefin colorimetric assays, $K_i$, $IC_{50}$ v\n  [success] Mechanistic Basis for Inhibition of the Extended Spectrum Class A \u03b2-La  (bio_d7ea2f4d7462)\n    Based on the provided paper content, there is no mention of \"Cefpiramide acid\" or its interaction with \"TEM-1 beta-lactamase\". Therefore, this informa\n  [success] Cefdinir binding to a class-A  \u03b2 -lactamase revealed by serial cryo-cr  (bio_01a5a87c8117)\n    Based on the provided paper content, there is no mention of \"Cefpiramide acid\", \"TEM-1 beta-lactamase\", a \"nitrocefin colorimetric assay\", or any asso\n  [success] Substitution of a valine to glutamic acid in the omega-like loop of MS  (bio_71f2617c6f35",
+      "paperclip_search_id": "s_6dc2d753",
+      "paperclip_map_id": "m_f618f2d5",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "paperclip_source": "biorxiv"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Cefpiramide acid. Map complete: 10/10 tasks succeeded in 2978ms\nResults ID: m_7d561c2c\nFull results: /.gxl/map_m_7d561c2c.txt\n\n  [success] bla - Beta-lactamase TEM  (P62593)\n    Based on the provided paper content, there is no information regarding Cefpiramide acid, its interaction with TEM-1 beta-lactamase, nitrocefin colorim\n  [success] bla - Beta-lactamase TEM  (P62594)\n    Based on the provided paper content, there is no mention of Cefpiramide acid, nitrocefin colorimetric assays, inhibition values ($K_i$ or $IC_{50}$), \n  [success] blaT-12b - Beta-lactamase TEM-12  (Q48406)\n    Based on the provided paper content, there is no information regarding Cefpiramide acid, its activity against TEM-1 beta-lactamase, nitrocefin colorim\n  [success] penPC - Beta-lactamase 1  (P10424)\n    Based on the provided paper content, there is no information regarding Cefpiramide acid, TEM-1 beta-lactamase, nitrocefin colorimetric assays, Ki, IC5\n  [success] blaY - Beta-lactamase 1  (P00809)\n    Based on the provided paper content, there is no mention of Cefpiramide acid, TEM-1 beta-lactamase, nitrocefin colorimetric assays, $K_i$, $IC_{50}$, \n  [success] blaCI - Beta-lactamase 1  (P28018)\n    Based on the provided paper content, there is no mention of Cefpiramide acid, TEM-1 beta-lactamase, nitrocefin colorimetric assays, $K_i$, $IC_{50}$, \n  [success] blaL - Beta-lactamase 1  (Q03680)\n    Based on the provided paper content, there is no information regarding Cefpiramide acid, TEM-1 beta-lactamase, nitrocefin ",
+      "paperclip_search_id": "s_81e2ff93",
+      "paperclip_map_id": "m_7d561c2c",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "paperclip_source": "proteins"
+    }
+  ],
+  "raw_local": "/Users/fio/zeon_hack/pvjthomas/local/literature/T0138",
+  "assay_recommendations": {
+    "tem1_nitrocefin": {
+      "screen_conc_uM": 50,
+      "screen_rationale": "Project default screen concentration; no literature inhibitor concentration or IC50/Ki extracted.",
+      "screen_conc_source": "project_default",
+      "max_assay_conc_uM": 1000.0,
+      "metric": "relative nitrocefin hydrolysis vs no-inhibitor control"
+    }
+  }
+}

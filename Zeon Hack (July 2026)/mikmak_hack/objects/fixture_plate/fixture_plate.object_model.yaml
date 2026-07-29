@@ -1,0 +1,12 @@
+urdf: fixture_plate.urdf
+articulations:
+  default:
+    description: All joints at rest position
+    joints: {}
+anchors:
+  object:
+    parent_link: world
+    description: Table placement frame, origin at (+X, +Y, -Z) bbox corner
+    link_T_anchor:
+      xyz: [0.225, 0.225, -0.0065]
+      wxyz: [1.0, 0.0, 0.0, 0.0]

@@ -1,0 +1,19 @@
+urdf: sensorbox.urdf
+
+parts:
+  body:
+    links: [body]
+    description: Sensor box body from SensorBox.stl.
+
+articulations:
+  default:
+    description: Static object, no actuated joints.
+    joints: {}
+
+anchors:
+  object:
+    parent_link: body
+    description: Bottom-center placement frame. The STL is authored in millimetres and scaled to metres by the URDF.
+    link_T_anchor:
+      xyz: [0.0, 0.0, 0.0]
+      wxyz: [1.0, 0.0, 0.0, 0.0]

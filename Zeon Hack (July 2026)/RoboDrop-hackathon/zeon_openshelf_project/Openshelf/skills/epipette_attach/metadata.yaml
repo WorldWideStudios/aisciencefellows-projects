@@ -1,0 +1,17 @@
+skill_id: epipette_attach
+version: "1.0.0"
+description: "Attach one rack tip to the held pipette. Calibration-table driven, not anchor driven: tip XY = tipbox world pose + the box's per-tip [dx, dy] offset (keyed by tip_index, per pipette); Z = the TIP_HEIGHT constant; fixed nozzle-down orientation. Hover, slow press to latch, lift. tip_index=0 (the default) consumes and advances the rack's own next-tip counter so repeated runs walk the rack; an explicit 1-96 overrides for one attach without moving the counter. Raises when the rack is exhausted. No verification that a tip latched."
+
+# parameters are derived from the epipette_attach() signature in robotic_code.py
+
+preconditions:
+  epipette_connected: true
+
+postconditions:
+  tip_attached: true
+
+tags:
+  - pipette_demo
+  - epipette
+  - tip
+  - attach

@@ -1,0 +1,8 @@
+# The agent layer.
+# Note: gemini-2.0-flash has no free-tier quota (429, limit:0) — it fails on the
+# first call. Default model is gemini-2.5-flash; override with TACIT_MODEL.
+google-adk>=2.5
+
+# The Zeon CLI is installed separately as a tool, not a project dependency:
+#   uv tool install --force zeon      (or: pip install --upgrade zeon)
+pyyaml>=6.0    # tacit/validate.py

@@ -1,0 +1,14 @@
+{
+  "version": "2.0",
+  "config": {
+    "tensor_device": "cuda",
+    "enable_blox": false,
+    "create_workspace_boundaries": false
+  },
+  "objects": {},
+  "metadata": {
+    "name": "openshelf-neil",
+    "description": "",
+    "source": "manual"
+  }
+}

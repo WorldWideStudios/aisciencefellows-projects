@@ -1,0 +1,20 @@
+urdf: epipette_5ml.urdf
+parts:
+  body:
+    links: [body]
+    description: Electronic pipette, 5 mL. OBJ with a flat grey material (no
+      per-vertex colour or texture). Scanned lying horizontal (long axis along Y).
+articulations:
+  default:
+    description: Static object, no actuated joints
+    joints: {}
+anchors:
+  object:
+    parent_link: world
+    description: >-
+      Table placement frame, origin at the (max_x, max_y, min_z) bbox corner.
+      Mesh is authored in metres (URDF scale 1) with its lowest face on z=0, so
+      the anchor uses identity rotation (pipette rests horizontal as scanned).
+    link_T_anchor:
+      xyz: [0.06129, 0.0, 0.0]
+      wxyz: [1.0, 0.0, 0.0, 0.0]

@@ -1,0 +1,21 @@
+skill_id: unload_test
+version: "1.0.0"
+description: "Move the right arm through the openshelf unload preposes, open the gripper to 7 cm, and reverse the path."
+
+preconditions: {}
+
+postconditions:
+  unload_test_complete: true
+
+safety_rules:
+  - "Verify prepose_3, prepose_2, and prepose_1 in simulation before the first hardware run."
+  - "Confirm the shelf path and both arm workspaces are physically clear."
+  - "Keep a physical emergency stop within reach; Pause and Stop are not emergency stops."
+
+high_risk: true
+
+tags:
+  - openshelf
+  - right_arm
+  - unload
+  - real_robot

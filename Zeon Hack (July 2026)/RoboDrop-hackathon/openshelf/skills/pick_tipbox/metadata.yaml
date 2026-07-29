@@ -1,0 +1,11 @@
+skill_id: pick_tipbox
+version: "1.0.0"
+description: "Pick up a pipette tip box with the right arm using the tipbox's 'grasp_pose' anchor. Mirrors epipette_grey_pick, adapted for the right arm."
+
+# parameters are derived from the pick_tipbox() signature in robotic_code.py
+
+tags:
+  - openshelf
+  - motion
+  - pick
+  - tipbox

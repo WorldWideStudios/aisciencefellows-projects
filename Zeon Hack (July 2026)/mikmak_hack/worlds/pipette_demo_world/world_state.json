@@ -1,0 +1,1381 @@
+{
+  "version": "3.0",
+  "config": {
+    "tensor_device": "cuda",
+    "collision_cache": {
+      "obb": 20,
+      "mesh": 10
+    },
+    "enable_blox": false,
+    "blox_layer_name": "world",
+    "blox_voxel_size": 0.01,
+    "workspace_aabb_min": [
+      -1.35,
+      -1.81,
+      -1.5
+    ],
+    "workspace_aabb_max": [
+      1.35,
+      1.09,
+      2.2
+    ],
+    "create_workspace_boundaries": true,
+    "map_saved": false,
+    "mesh_saved": false,
+    "tsdf_saved": false,
+    "voxel_count": 0,
+    "voxel_export_region": {
+      "aabb_min": [
+        -1.35,
+        -1.81,
+        -1.5
+      ],
+      "aabb_max": [
+        1.35,
+        1.09,
+        2.2
+      ]
+    },
+    "include_objects_in_voxels": false,
+    "voxel_spec": null
+  },
+  "objects": {
+    "x_min": {
+      "geometry": {
+        "type": "Cuboid",
+        "name": "x_min",
+        "pose": {
+          "xyz": [
+            -1.36,
+            -0.36,
+            0.3500000000000001
+          ],
+          "wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "stamp_s": null
+        },
+        "dims": [
+          0.02,
+          2.9000000000000004,
+          3.7
+        ],
+        "color": null
+      },
+      "mount": {
+        "type": "FixedMount",
+        "world_P_body_fixed": {
+          "xyz": [
+            -1.36,
+            -0.36,
+            0.3500000000000001
+          ],
+          "wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "stamp_s": null
+        }
+      },
+      "enabled": true,
+      "filter_from_depth": false,
+      "collide_in_planner": true,
+      "attachment_spec": {
+        "fit_type": "voxel_volume_sample_surface",
+        "surface_sphere_radius": 0.001,
+        "voxelize_method": "ray",
+        "n_spheres": 32
+      },
+      "metadata": {}
+    },
+    "x_max": {
+      "geometry": {
+        "type": "Cuboid",
+        "name": "x_max",
+        "pose": {
+          "xyz": [
+            1.36,
+            -0.36,
+            0.3500000000000001
+          ],
+          "wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "stamp_s": null
+        },
+        "dims": [
+          0.02,
+          2.9000000000000004,
+          3.7
+        ],
+        "color": null
+      },
+      "mount": {
+        "type": "FixedMount",
+        "world_P_body_fixed": {
+          "xyz": [
+            1.36,
+            -0.36,
+            0.3500000000000001
+          ],
+          "wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "stamp_s": null
+        }
+      },
+      "enabled": true,
+      "filter_from_depth": false,
+      "collide_in_planner": true,
+      "attachment_spec": {
+        "fit_type": "voxel_volume_sample_surface",
+        "surface_sphere_radius": 0.001,
+        "voxelize_method": "ray",
+        "n_spheres": 32
+      },
+      "metadata": {}
+    },
+    "y_min": {
+      "geometry": {
+        "type": "Cuboid",
+        "name": "y_min",
+        "pose": {
+          "xyz": [
+            0.0,
+            -1.82,
+            0.3500000000000001
+          ],
+          "wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "stamp_s": null
+        },
+        "dims": [
+          2.7,
+          0.02,
+          3.7
+        ],
+        "color": null
+      },
+      "mount": {
+        "type": "FixedMount",
+        "world_P_body_fixed": {
+          "xyz": [
+            0.0,
+            -1.82,
+            0.3500000000000001
+          ],
+          "wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "stamp_s": null
+        }
+      },
+      "enabled": true,
+      "filter_from_depth": false,
+      "collide_in_planner": true,
+      "attachment_spec": {
+        "fit_type": "voxel_volume_sample_surface",
+        "surface_sphere_radius": 0.001,
+        "voxelize_method": "ray",
+        "n_spheres": 32
+      },
+      "metadata": {}
+    },
+    "y_max": {
+      "geometry": {
+        "type": "Cuboid",
+        "name": "y_max",
+        "pose": {
+          "xyz": [
+            0.0,
+            1.1,
+            0.3500000000000001
+          ],
+          "wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "stamp_s": null
+        },
+        "dims": [
+          2.7,
+          0.02,
+          3.7
+        ],
+        "color": null
+      },
+      "mount": {
+        "type": "FixedMount",
+        "world_P_body_fixed": {
+          "xyz": [
+            0.0,
+            1.1,
+            0.3500000000000001
+          ],
+          "wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "stamp_s": null
+        }
+      },
+      "enabled": true,
+      "filter_from_depth": false,
+      "collide_in_planner": true,
+      "attachment_spec": {
+        "fit_type": "voxel_volume_sample_surface",
+        "surface_sphere_radius": 0.001,
+        "voxelize_method": "ray",
+        "n_spheres": 32
+      },
+      "metadata": {}
+    },
+    "z_min": {
+      "geometry": {
+        "type": "Cuboid",
+        "name": "z_min",
+        "pose": {
+          "xyz": [
+            0.0,
+            -0.36,
+            -1.51
+          ],
+          "wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "stamp_s": null
+        },
+        "dims": [
+          2.7,
+          2.9000000000000004,
+          0.02
+        ],
+        "color": null
+      },
+      "mount": {
+        "type": "FixedMount",
+        "world_P_body_fixed": {
+          "xyz": [
+            0.0,
+            -0.36,
+            -1.51
+          ],
+          "wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "stamp_s": null
+        }
+      },
+      "enabled": true,
+      "filter_from_depth": false,
+      "collide_in_planner": true,
+      "attachment_spec": {
+        "fit_type": "voxel_volume_sample_surface",
+        "surface_sphere_radius": 0.001,
+        "voxelize_method": "ray",
+        "n_spheres": 32
+      },
+      "metadata": {}
+    },
+    "z_max": {
+      "geometry": {
+        "type": "Cuboid",
+        "name": "z_max",
+        "pose": {
+          "xyz": [
+            0.0,
+            -0.36,
+            2.21
+          ],
+          "wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "stamp_s": null
+        },
+        "dims": [
+          2.7,
+          2.9000000000000004,
+          0.02
+        ],
+        "color": null
+      },
+      "mount": {
+        "type": "FixedMount",
+        "world_P_body_fixed": {
+          "xyz": [
+            0.0,
+            -0.36,
+            2.21
+          ],
+          "wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "stamp_s": null
+        }
+      },
+      "enabled": true,
+      "filter_from_depth": false,
+      "collide_in_planner": true,
+      "attachment_spec": {
+        "fit_type": "voxel_volume_sample_surface",
+        "surface_sphere_radius": 0.001,
+        "voxelize_method": "ray",
+        "n_spheres": 32
+      },
+      "metadata": {}
+    },
+    "table": {
+      "geometry": {
+        "type": "Cuboid",
+        "name": "table",
+        "pose": {
+          "xyz": [
+            0.26,
+            -0.3525984815374886,
+            -0.025
+          ],
+          "wxyz": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "stamp_s": null
+        },
+        "dims": [
+          0.76,
+          1.52,
+          0.05
+        ],
+        "color": [
+          0.6,
+          0.4,
+          0.2
+        ]
+      },
+      "mount": {
+        "type": "FixedMount",
+        "world_P_body_fixed": {
+          "xyz": [
+            0.26,
+            -0.3525984815374886,
+            -0.025
+          ],
+          "wxyz": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "stamp_s": null
+        }
+      },
+      "enabled": true,
+      "filter_from_depth": false,
+      "collide_in_planner": true,
+      "attachment_spec": {
+        "fit_type": "voxel_volume_sample_surface",
+        "surface_sphere_radius": 0.001,
+        "voxelize_method": "ray",
+        "n_spheres": 32
+      },
+      "metadata": {}
+    },
+    "left_base_filter": {
+      "geometry": {
+        "type": "Cuboid",
+        "name": "left_base_filter",
+        "pose": {
+          "xyz": [
+            -1.7409598943452255e-19,
+            -4.541341924157597e-21,
+            0.1749999897454631
+          ],
+          "wxyz": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "stamp_s": null
+        },
+        "dims": [
+          0.2,
+          0.2,
+          0.45
+        ],
+        "color": null
+      },
+      "mount": {
+        "type": "FixedMount",
+        "world_P_body_fixed": {
+          "xyz": [
+            -1.7409598943452255e-19,
+            -4.541341924157597e-21,
+            0.1749999897454631
+          ],
+          "wxyz": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "stamp_s": null
+        }
+      },
+      "enabled": true,
+      "filter_from_depth": true,
+      "collide_in_planner": false,
+      "attachment_spec": {
+        "fit_type": "voxel_volume_sample_surface",
+        "surface_sphere_radius": 0.001,
+        "voxelize_method": "ray",
+        "n_spheres": 32
+      },
+      "metadata": {}
+    },
+    "right_base_filter": {
+      "geometry": {
+        "type": "Cuboid",
+        "name": "right_base_filter",
+        "pose": {
+          "xyz": [
+            0.009226930861586463,
+            -0.7051969630749771,
+            0.1763210109911968
+          ],
+          "wxyz": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "stamp_s": null
+        },
+        "dims": [
+          0.2,
+          0.2,
+          0.45
+        ],
+        "color": null
+      },
+      "mount": {
+        "type": "FixedMount",
+        "world_P_body_fixed": {
+          "xyz": [
+            0.009226930861586463,
+            -0.7051969630749771,
+            0.1763210109911968
+          ],
+          "wxyz": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "stamp_s": null
+        }
+      },
+      "enabled": true,
+      "filter_from_depth": true,
+      "collide_in_planner": false,
+      "attachment_spec": {
+        "fit_type": "voxel_volume_sample_surface",
+        "surface_sphere_radius": 0.001,
+        "voxelize_method": "ray",
+        "n_spheres": 32
+      },
+      "metadata": {}
+    },
+    "table_back": {
+      "geometry": {
+        "type": "Cuboid",
+        "name": "table_back",
+        "pose": {
+          "xyz": [
+            -0.56,
+            -0.3525984815374886,
+            -0.025
+          ],
+          "wxyz": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "stamp_s": null
+        },
+        "dims": [
+          0.76,
+          1.52,
+          0.05
+        ],
+        "color": [
+          0.6,
+          0.4,
+          0.2
+        ]
+      },
+      "mount": {
+        "type": "FixedMount",
+        "world_P_body_fixed": {
+          "xyz": [
+            -0.56,
+            -0.3525984815374886,
+            -0.025
+          ],
+          "wxyz": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "stamp_s": null
+        }
+      },
+      "enabled": true,
+      "filter_from_depth": false,
+      "collide_in_planner": true,
+      "attachment_spec": {
+        "fit_type": "voxel_volume_sample_surface",
+        "surface_sphere_radius": 0.001,
+        "voxelize_method": "ray",
+        "n_spheres": 32
+      },
+      "metadata": {}
+    },
+    "epipette_stand_chargeable_5be71318-96d5-42dc-959d-dee4c3d1b2ac": {
+      "geometry": {
+        "type": "articulated",
+        "yaml_path": "objects/epipette_stand_chargeable/epipette_stand_chargeable.object_model.yaml"
+      },
+      "mount": {
+        "type": "FixedMount",
+        "world_P_body_fixed": {
+          "xyz": [
+            0.6700089532102352,
+            0.18019998974441223,
+            0.001018451406612944
+          ],
+          "wxyz": [
+            0.7071067811865476,
+            0.0,
+            0.0,
+            -0.7071067811865475
+          ],
+          "stamp_s": null
+        }
+      },
+      "enabled": true,
+      "filter_from_depth": true,
+      "collide_in_planner": true,
+      "attachment_spec": {
+        "fit_type": "voxel_volume_sample_surface",
+        "surface_sphere_radius": 0.001,
+        "voxelize_method": "ray",
+        "n_spheres": 32
+      },
+      "metadata": {
+        "name": "epipette_stand_chargeable",
+        "type": "epipette_stand_chargeable"
+      },
+      "joint_config": {}
+    },
+    "fixture_plate_4bb422c1-bdaa-4f2c-bd86-ccb318d81a3e": {
+      "geometry": {
+        "type": "articulated",
+        "yaml_path": "objects/fixture_plate/fixture_plate.object_model.yaml"
+      },
+      "mount": {
+        "type": "FixedMount",
+        "world_P_body_fixed": {
+          "xyz": [
+            0.5930134443472451,
+            0.38819753540334884,
+            -0.012666962509535322
+          ],
+          "wxyz": [
+            0.999977423160782,
+            0.0,
+            0.0,
+            0.006719610756767703
+          ],
+          "stamp_s": null
+        }
+      },
+      "enabled": true,
+      "filter_from_depth": true,
+      "collide_in_planner": true,
+      "attachment_spec": {
+        "fit_type": "voxel_volume_sample_surface",
+        "surface_sphere_radius": 0.001,
+        "voxelize_method": "ray",
+        "n_spheres": 32
+      },
+      "metadata": {
+        "name": "fixture_plate",
+        "type": "fixture_plate"
+      },
+      "joint_config": {}
+    },
+    "epipette_10ul_4c8eb936-6084-4353-9bbd-c6ade296309f": {
+      "geometry": {
+        "type": "articulated",
+        "yaml_path": "objects/epipette_10ul/epipette_10ul.object_model.yaml"
+      },
+      "mount": {
+        "type": "FixedMount",
+        "world_P_body_fixed": {
+          "xyz": [
+            0.4965,
+            0.374,
+            0.13609041284141193
+          ],
+          "wxyz": [
+            0.6865569047644974,
+            0.17172738204272503,
+            0.1720590309018825,
+            0.6852335460717389
+          ],
+          "stamp_s": null
+        }
+      },
+      "enabled": true,
+      "filter_from_depth": true,
+      "collide_in_planner": true,
+      "attachment_spec": {
+        "fit_type": "voxel_volume_sample_surface",
+        "surface_sphere_radius": 0.001,
+        "voxelize_method": "ray",
+        "n_spheres": 32
+      },
+      "metadata": {
+        "name": "epipette_10ul",
+        "type": "epipette_10ul"
+      },
+      "joint_config": {}
+    },
+    "wellplate_96_flatbottom_1d8d1882-83a2-4780-889c-0eb33a21c45f": {
+      "geometry": {
+        "type": "articulated",
+        "yaml_path": "objects/wellplate_96_flatbottom/wellplate_96_flatbottom.object_model.yaml"
+      },
+      "mount": {
+        "type": "FixedMount",
+        "world_P_body_fixed": {
+          "xyz": [
+            0.38038292517270555,
+            -0.3152824825652381,
+            0.072
+          ],
+          "wxyz": [
+            1.0,
+            -2.7369110631344083e-48,
+            0.0,
+            0.0
+          ],
+          "stamp_s": null
+        }
+      },
+      "enabled": true,
+      "filter_from_depth": true,
+      "collide_in_planner": true,
+      "attachment_spec": {
+        "fit_type": "voxel_volume_sample_surface",
+        "surface_sphere_radius": 0.001,
+        "voxelize_method": "ray",
+        "n_spheres": 32
+      },
+      "metadata": {
+        "name": "wellplate_96_flatbottom",
+        "type": "wellplate_96_flatbottom"
+      },
+      "joint_config": {}
+    },
+    "wellplate_shaker_aee90981-838d-4de5-96e5-e87d57611153": {
+      "geometry": {
+        "type": "articulated",
+        "yaml_path": "objects/wellplate_shaker/wellplate_shaker.object_model.yaml"
+      },
+      "mount": {
+        "type": "FixedMount",
+        "world_P_body_fixed": {
+          "xyz": [
+            -0.09900133311748505,
+            -0.9321404099464417,
+            -0.012750071473419666
+          ],
+          "wxyz": [
+            0.9999892711639404,
+            -0.0022841477766633034,
+            -0.00031822631717659533,
+            -0.004033752717077732
+          ],
+          "stamp_s": null
+        }
+      },
+      "enabled": true,
+      "filter_from_depth": true,
+      "collide_in_planner": true,
+      "attachment_spec": {
+        "fit_type": "voxel_volume_sample_surface",
+        "surface_sphere_radius": 0.001,
+        "voxelize_method": "ray",
+        "n_spheres": 32
+      },
+      "metadata": {
+        "name": "wellplate_shaker_1",
+        "type": "wellplate_shaker"
+      },
+      "joint_config": {
+        "lid_joint": -0.022549360990524292
+      }
+    },
+    "wellplate_holder_tags_5c9978ae-aebe-409b-bf6f-347331122052": {
+      "geometry": {
+        "type": "articulated",
+        "yaml_path": "objects/wellplate_holder_tags/wellplate_holder_tags.object_model.yaml"
+      },
+      "mount": {
+        "type": "FixedMount",
+        "world_P_body_fixed": {
+          "xyz": [
+            0.2673477530479431,
+            -0.4669443666934967,
+            -0.004649611655622721
+          ],
+          "wxyz": [
+            0.00353949679993093,
+            0.0071498858742415905,
+            0.004111777059733868,
+            0.9999597072601318
+          ],
+          "stamp_s": null
+        }
+      },
+      "enabled": true,
+      "filter_from_depth": true,
+      "collide_in_planner": true,
+      "attachment_spec": {
+        "fit_type": "voxel_volume_sample_surface",
+        "surface_sphere_radius": 0.001,
+        "voxelize_method": "ray",
+        "n_spheres": 32
+      },
+      "metadata": {
+        "name": "wellplate_holder_tags",
+        "type": "wellplate_holder_tags"
+      },
+      "joint_config": {}
+    },
+    "wellplate_holder_fixture_plate_675585df-da18-4cec-a1bf-beed27641017": {
+      "geometry": {
+        "type": "articulated",
+        "yaml_path": "objects/wellplate_holder_fixture_plate/wellplate_holder_fixture_plate.object_model.yaml"
+      },
+      "mount": {
+        "type": "FixedMount",
+        "world_P_body_fixed": {
+          "xyz": [
+            0.28893917619897824,
+            0.09418574330121048,
+            0.00033303749046467886
+          ],
+          "wxyz": [
+            0.999977423160782,
+            0.0,
+            -5.697340647455879e-64,
+            0.006719610756767703
+          ],
+          "stamp_s": null
+        }
+      },
+      "enabled": true,
+      "filter_from_depth": true,
+      "collide_in_planner": true,
+      "attachment_spec": {
+        "fit_type": "voxel_volume_sample_surface",
+        "surface_sphere_radius": 0.001,
+        "voxelize_method": "ray",
+        "n_spheres": 32
+      },
+      "metadata": {
+        "name": "wellplate_holder_fixture_plate",
+        "location": "fixture_plate",
+        "type": "wellplate_holder_fixture_plate"
+      },
+      "joint_config": {}
+    },
+    "wellplate_holder_fixture_plate_ca3338b3-0a7e-4c2a-bf01-69eb0f856774": {
+      "geometry": {
+        "type": "articulated",
+        "yaml_path": "objects/wellplate_holder_fixture_plate/wellplate_holder_fixture_plate.object_model.yaml"
+      },
+      "mount": {
+        "type": "FixedMount",
+        "world_P_body_fixed": {
+          "xyz": [
+            0.28661462491165507,
+            0.24481850635468844,
+            0.00033303749046467886
+          ],
+          "wxyz": [
+            0.999977423160782,
+            2.736849272333382e-48,
+            1.839097702015393e-50,
+            0.006719610756767703
+          ],
+          "stamp_s": null
+        }
+      },
+      "enabled": true,
+      "filter_from_depth": true,
+      "collide_in_planner": true,
+      "attachment_spec": {
+        "fit_type": "voxel_volume_sample_surface",
+        "surface_sphere_radius": 0.001,
+        "voxelize_method": "ray",
+        "n_spheres": 32
+      },
+      "metadata": {
+        "name": "wellplate_holder_fixture_plate_1",
+        "location": "fixture_plate",
+        "type": "wellplate_holder_fixture_plate"
+      },
+      "joint_config": {}
+    },
+    "wellplate_holder_fixture_plate_44cc5261-d90a-42ac-a85c-8bb6071200d6": {
+      "geometry": {
+        "type": "articulated",
+        "yaml_path": "objects/wellplate_holder_fixture_plate/wellplate_holder_fixture_plate.object_model.yaml"
+      },
+      "mount": {
+        "type": "FixedMount",
+        "world_P_body_fixed": {
+          "xyz": [
+            0.4394602806396355,
+            0.095859134628423,
+            0.00033303749046467886
+          ],
+          "wxyz": [
+            0.999977423160782,
+            2.736849272333382e-48,
+            1.839097702015393e-50,
+            0.006719610756767703
+          ],
+          "stamp_s": null
+        }
+      },
+      "enabled": true,
+      "filter_from_depth": true,
+      "collide_in_planner": true,
+      "attachment_spec": {
+        "fit_type": "voxel_volume_sample_surface",
+        "surface_sphere_radius": 0.001,
+        "voxelize_method": "ray",
+        "n_spheres": 32
+      },
+      "metadata": {
+        "name": "wellplate_holder_fixture_plate_2",
+        "location": "fixture_plate",
+        "type": "wellplate_holder_fixture_plate"
+      },
+      "joint_config": {}
+    },
+    "wellplate_holder_fixture_plate_a922b5fa-ca6f-4bbb-a9c7-d0bacb179d71": {
+      "geometry": {
+        "type": "articulated",
+        "yaml_path": "objects/wellplate_holder_fixture_plate/wellplate_holder_fixture_plate.object_model.yaml"
+      },
+      "mount": {
+        "type": "FixedMount",
+        "world_P_body_fixed": {
+          "xyz": [
+            0.4376009886547009,
+            0.24684778298754562,
+            0.00033303749046467886
+          ],
+          "wxyz": [
+            0.999977423160782,
+            2.736849272333382e-48,
+            1.839097702015393e-50,
+            0.006719610756767703
+          ],
+          "stamp_s": null
+        }
+      },
+      "enabled": true,
+      "filter_from_depth": true,
+      "collide_in_planner": true,
+      "attachment_spec": {
+        "fit_type": "voxel_volume_sample_surface",
+        "surface_sphere_radius": 0.001,
+        "voxelize_method": "ray",
+        "n_spheres": 32
+      },
+      "metadata": {
+        "name": "wellplate_holder_fixture_plate_3",
+        "location": "fixture_plate",
+        "type": "wellplate_holder_fixture_plate"
+      },
+      "joint_config": {}
+    },
+    "tipbox_holder_fixture_plate_94af0388-07f2-4dad-be1d-516a314d4222": {
+      "geometry": {
+        "type": "articulated",
+        "yaml_path": "objects/tipbox_holder_fixture_plate/tipbox_holder_fixture_plate.object_model.yaml"
+      },
+      "mount": {
+        "type": "FixedMount",
+        "world_P_body_fixed": {
+          "xyz": [
+            0.57,
+            0.168,
+            0.0
+          ],
+          "wxyz": [
+            0.9999788750743775,
+            0.0,
+            0.0,
+            0.006499954229263357
+          ],
+          "stamp_s": null
+        }
+      },
+      "enabled": true,
+      "filter_from_depth": true,
+      "collide_in_planner": true,
+      "attachment_spec": {
+        "fit_type": "voxel_volume_sample_surface",
+        "surface_sphere_radius": 0.001,
+        "voxelize_method": "ray",
+        "n_spheres": 32
+      },
+      "metadata": {
+        "name": "tipbox_holder_fixture_plate",
+        "location": "fixture_plate",
+        "type": "tipbox_holder_fixture_plate"
+      },
+      "joint_config": {}
+    },
+    "tipbox_holder_fixture_plate_9a329eb4-adf5-4e17-8e55-b69cb96ff4d0": {
+      "geometry": {
+        "type": "articulated",
+        "yaml_path": "objects/tipbox_holder_fixture_plate/tipbox_holder_fixture_plate.object_model.yaml"
+      },
+      "mount": {
+        "type": "FixedMount",
+        "world_P_body_fixed": {
+          "xyz": [
+            0.16783843294782366,
+            0.35697890617325295,
+            0.0005991276153536167
+          ],
+          "wxyz": [
+            0.7026227084858722,
+            -9.876374419735075e-38,
+            1.3875317266664125e-35,
+            0.7115625970496041
+          ],
+          "stamp_s": null
+        }
+      },
+      "enabled": true,
+      "filter_from_depth": true,
+      "collide_in_planner": true,
+      "attachment_spec": {
+        "fit_type": "voxel_volume_sample_surface",
+        "surface_sphere_radius": 0.001,
+        "voxelize_method": "ray",
+        "n_spheres": 32
+      },
+      "metadata": {
+        "name": "tipbox_holder_fixture_plate_1",
+        "location": "fixture_plate",
+        "type": "tipbox_holder_fixture_plate"
+      },
+      "joint_config": {}
+    },
+    "tipbox_holder_fixture_plate_f118c9f9-7125-4e5b-a7fd-ca5ba8b286df": {
+      "geometry": {
+        "type": "articulated",
+        "yaml_path": "objects/tipbox_holder_fixture_plate/tipbox_holder_fixture_plate.object_model.yaml"
+      },
+      "mount": {
+        "type": "FixedMount",
+        "world_P_body_fixed": {
+          "xyz": [
+            0.33437229122630474,
+            0.35947760478936513,
+            0.00033303749046467886
+          ],
+          "wxyz": [
+            0.7026227084858722,
+            -9.876374419735075e-38,
+            1.3875317266664125e-35,
+            0.7115625970496041
+          ],
+          "stamp_s": null
+        }
+      },
+      "enabled": true,
+      "filter_from_depth": true,
+      "collide_in_planner": true,
+      "attachment_spec": {
+        "fit_type": "voxel_volume_sample_surface",
+        "surface_sphere_radius": 0.001,
+        "voxelize_method": "ray",
+        "n_spheres": 32
+      },
+      "metadata": {
+        "name": "tipbox_holder_fixture_plate_2",
+        "location": "fixture_plate",
+        "type": "tipbox_holder_fixture_plate"
+      },
+      "joint_config": {}
+    },
+    "tipbox_10ul_917dd7d2-a4fb-445a-9626-ad70922b2bb3": {
+      "geometry": {
+        "type": "articulated",
+        "yaml_path": "objects/tipbox_10ul/tipbox_10ul.object_model.yaml"
+      },
+      "mount": {
+        "type": "FixedMount",
+        "world_P_body_fixed": {
+          "xyz": [
+            0.48,
+            0.025,
+            0.001
+          ],
+          "wxyz": [
+            0.005796294338028719,
+            0.0,
+            0.0,
+            -0.9999832013448761
+          ],
+          "stamp_s": null
+        }
+      },
+      "enabled": true,
+      "filter_from_depth": true,
+      "collide_in_planner": true,
+      "attachment_spec": {
+        "fit_type": "voxel_volume_sample_surface",
+        "surface_sphere_radius": 0.001,
+        "voxelize_method": "ray",
+        "n_spheres": 32
+      },
+      "metadata": {
+        "name": "tipbox_10ul_1",
+        "location": "fixture_plate",
+        "type": "tipbox_10ul"
+      },
+      "joint_config": {}
+    },
+    "tipbox_120ul_b12a77d3-c9bd-4dd2-aed2-fa667391eb2c": {
+      "geometry": {
+        "type": "articulated",
+        "yaml_path": "objects/tipbox_120ul/tipbox_120ul.object_model.yaml"
+      },
+      "mount": {
+        "type": "FixedMount",
+        "world_P_body_fixed": {
+          "xyz": [
+            0.4773151591211369,
+            0.2683834432783949,
+            0.001333037490464678
+          ],
+          "wxyz": [
+            0.7121218886660919,
+            1.9230158640644462e-48,
+            1.947483543977712e-48,
+            -0.7020558494041896
+          ],
+          "stamp_s": null
+        }
+      },
+      "enabled": true,
+      "filter_from_depth": true,
+      "collide_in_planner": true,
+      "attachment_spec": {
+        "fit_type": "voxel_volume_sample_surface",
+        "surface_sphere_radius": 0.001,
+        "voxelize_method": "ray",
+        "n_spheres": 32
+      },
+      "metadata": {
+        "name": "tipbox_120ul_1",
+        "location": "fixture_plate",
+        "type": "tipbox_120ul"
+      },
+      "joint_config": {}
+    },
+    "tipbox_120ul_6de81d68-0df3-4b1b-a036-2983319d3d09": {
+      "geometry": {
+        "type": "articulated",
+        "yaml_path": "objects/tipbox_120ul/tipbox_120ul.object_model.yaml"
+      },
+      "mount": {
+        "type": "FixedMount",
+        "world_P_body_fixed": {
+          "xyz": [
+            0.3103302402794902,
+            0.2661391439559635,
+            0.001333037490464678
+          ],
+          "wxyz": [
+            0.7121218886660919,
+            1.9230158640644462e-48,
+            1.947483543977712e-48,
+            -0.7020558494041896
+          ],
+          "stamp_s": null
+        }
+      },
+      "enabled": true,
+      "filter_from_depth": true,
+      "collide_in_planner": true,
+      "attachment_spec": {
+        "fit_type": "voxel_volume_sample_surface",
+        "surface_sphere_radius": 0.001,
+        "voxelize_method": "ray",
+        "n_spheres": 32
+      },
+      "metadata": {
+        "name": "tipbox_120ul_2",
+        "location": "fixture_plate",
+        "type": "tipbox_120ul"
+      },
+      "joint_config": {}
+    },
+    "wellplate_pcr_76505b64-9f15-4183-a0dd-4840a580559a": {
+      "geometry": {
+        "type": "articulated",
+        "yaml_path": "objects/wellplate_pcr/wellplate_pcr.object_model.yaml"
+      },
+      "mount": {
+        "type": "FixedMount",
+        "world_P_body_fixed": {
+          "xyz": [
+            0.27172607026083917,
+            0.08760422284199458,
+            0.001333037490464678
+          ],
+          "wxyz": [
+            0.999977423160782,
+            2.736849272333382e-48,
+            1.839097702015393e-50,
+            0.006719610756767703
+          ],
+          "stamp_s": null
+        }
+      },
+      "enabled": true,
+      "filter_from_depth": true,
+      "collide_in_planner": true,
+      "attachment_spec": {
+        "fit_type": "voxel_volume_sample_surface",
+        "surface_sphere_radius": 0.001,
+        "voxelize_method": "ray",
+        "n_spheres": 32
+      },
+      "metadata": {
+        "name": "wellplate_pcr_parts_1",
+        "location": "fixture_plate",
+        "type": "wellplate_pcr"
+      },
+      "joint_config": {}
+    },
+    "wellplate_pcr_fb782a33-d035-4a35-a203-d325cb103281": {
+      "geometry": {
+        "type": "articulated",
+        "yaml_path": "objects/wellplate_pcr/wellplate_pcr.object_model.yaml"
+      },
+      "mount": {
+        "type": "FixedMount",
+        "world_P_body_fixed": {
+          "xyz": [
+            0.2697102325460804,
+            0.2375906768913778,
+            0.001333037490464678
+          ],
+          "wxyz": [
+            0.999977423160782,
+            2.736849272333382e-48,
+            1.839097702015393e-50,
+            0.006719610756767703
+          ],
+          "stamp_s": null
+        }
+      },
+      "enabled": true,
+      "filter_from_depth": true,
+      "collide_in_planner": true,
+      "attachment_spec": {
+        "fit_type": "voxel_volume_sample_surface",
+        "surface_sphere_radius": 0.001,
+        "voxelize_method": "ray",
+        "n_spheres": 32
+      },
+      "metadata": {
+        "name": "wellplate_pcr_parts_2",
+        "location": "fixture_plate",
+        "type": "wellplate_pcr"
+      },
+      "joint_config": {}
+    },
+    "wellplate_pcr_888012b0-df66-414f-bec4-4798f1b2a5f5": {
+      "geometry": {
+        "type": "articulated",
+        "yaml_path": "objects/wellplate_pcr/wellplate_pcr.object_model.yaml"
+      },
+      "mount": {
+        "type": "FixedMount",
+        "world_P_body_fixed": {
+          "xyz": [
+            0.422712434003885,
+            0.08963349947485176,
+            0.001333037490464678
+          ],
+          "wxyz": [
+            0.999977423160782,
+            2.736849272333382e-48,
+            1.839097702015393e-50,
+            0.006719610756767703
+          ],
+          "stamp_s": null
+        }
+      },
+      "enabled": true,
+      "filter_from_depth": true,
+      "collide_in_planner": true,
+      "attachment_spec": {
+        "fit_type": "voxel_volume_sample_surface",
+        "surface_sphere_radius": 0.001,
+        "voxelize_method": "ray",
+        "n_spheres": 32
+      },
+      "metadata": {
+        "name": "wellplate_pcr_parts_3",
+        "location": "fixture_plate",
+        "type": "wellplate_pcr"
+      },
+      "joint_config": {}
+    },
+    "wellplate_pcr_d1bd90cf-1835-4967-a74a-b1eb707d19f2": {
+      "geometry": {
+        "type": "articulated",
+        "yaml_path": "objects/wellplate_pcr/wellplate_pcr.object_model.yaml"
+      },
+      "mount": {
+        "type": "FixedMount",
+        "world_P_body_fixed": {
+          "xyz": [
+            0.4206965962891262,
+            0.23961995352423504,
+            0.001333037490464678
+          ],
+          "wxyz": [
+            0.999977423160782,
+            2.736849272333382e-48,
+            1.839097702015393e-50,
+            0.006719610756767703
+          ],
+          "stamp_s": null
+        }
+      },
+      "enabled": true,
+      "filter_from_depth": true,
+      "collide_in_planner": true,
+      "attachment_spec": {
+        "fit_type": "voxel_volume_sample_surface",
+        "surface_sphere_radius": 0.001,
+        "voxelize_method": "ray",
+        "n_spheres": 32
+      },
+      "metadata": {
+        "name": "wellplate_pcr_parts_4",
+        "location": "fixture_plate",
+        "type": "wellplate_pcr"
+      },
+      "joint_config": {}
+    },
+    "epipette_120ul_b5302b61-d99d-4348-88b8-124e6a2bb497": {
+      "geometry": {
+        "type": "articulated",
+        "yaml_path": "objects/epipette_120ul/epipette_120ul.object_model.yaml"
+      },
+      "mount": {
+        "type": "FixedMount",
+        "world_P_body_fixed": {
+          "xyz": [
+            0.4965,
+            0.27,
+            0.13609041284141193
+          ],
+          "wxyz": [
+            0.6865569047644974,
+            0.17172738204272503,
+            0.1720590309018825,
+            0.6852335460717389
+          ],
+          "stamp_s": null
+        }
+      },
+      "enabled": true,
+      "filter_from_depth": true,
+      "collide_in_planner": true,
+      "attachment_spec": {
+        "fit_type": "voxel_volume_sample_surface",
+        "surface_sphere_radius": 0.001,
+        "voxelize_method": "ray",
+        "n_spheres": 32
+      },
+      "metadata": {
+        "name": "epipette_120ul",
+        "type": "epipette_120ul"
+      },
+      "joint_config": {}
+    }
+  },
+  "metadata": {
+    "name": "pipette_demo_world",
+    "description": "Demo deck: fixture plate carrying PCR plates and tip boxes, both electronic pipettes on the charging stand, a 96-well flat-bottom plate on the tagged holder, and the plate shaker.",
+    "created_at": "2026-07-24T00:00:00.000000",
+    "source": "manual"
+  }
+}

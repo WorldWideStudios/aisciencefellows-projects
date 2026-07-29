@@ -1,0 +1,53 @@
+{
+  "workflow_id": "plate_to_holder",
+  "name": "Plate to Holder",
+  "description": "Pick up a wellplate with the left arm and place it onto a plate stand's top_center anchor.",
+  "version": "1.0.0",
+  "author": "zeon",
+  "created_at": "2026-07-25T00:00:00.000Z",
+  "updated_at": "2026-07-25T00:00:00.000Z",
+  "simulation_validated": false,
+  "objects": [],
+  "inputs": [
+    { "name": "plate",  "type": "object", "is_array": false, "description": "Plate to pick up",                    "defaultValue": "wellplate_96_deep" },
+    { "name": "holder", "type": "object", "is_array": false, "description": "Stand to place the plate onto",       "defaultValue": "wellplate_stand" }
+  ],
+  "nodes": [
+    {
+      "node_id": "start_0",
+      "type": "start",
+      "label": "Start"
+    },
+    {
+      "node_id": "grab_plate",
+      "type": "skill",
+      "label": "Pick Up Plate",
+      "description": "Grasp the plate at its 'grab' anchor with the left arm and lift it off the table.",
+      "skill_id": "wellplate_grab",
+      "parameters": {
+        "plate": { "$input": "plate" }
+      }
+    },
+    {
+      "node_id": "place_plate",
+      "type": "skill",
+      "label": "Place Plate on Holder",
+      "description": "Lower the held plate onto the holder's top_center anchor and release it.",
+      "skill_id": "wellplate_place",
+      "parameters": {
+        "plate": { "$input": "plate" },
+        "target": { "$input": "holder" }
+      }
+    },
+    {
+      "node_id": "end_1",
+      "type": "end",
+      "label": "End"
+    }
+  ],
+  "edges": [
+    { "edge_id": "e0", "from_node": "start_0",    "to_node": "grab_plate",  "condition": { "type": "default" } },
+    { "edge_id": "e1", "from_node": "grab_plate",  "to_node": "place_plate", "condition": { "type": "on_success" } },
+    { "edge_id": "e2", "from_node": "place_plate", "to_node": "end_1",      "condition": { "type": "on_success" } }
+  ]
+}

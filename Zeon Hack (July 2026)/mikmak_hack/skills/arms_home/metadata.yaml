@@ -1,0 +1,11 @@
+skill_id: arms_home
+version: "1.0.0"
+description: "Move both arms to their home (start) joint poses — the same poses epipette_grab uses at its start."
+
+# parameters are derived from the arms_home() signature in robotic_code.py
+
+tags:
+  - home
+  - stow
+  - arms
+  - utility

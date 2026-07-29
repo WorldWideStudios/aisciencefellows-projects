@@ -1,0 +1,11 @@
+skill_id: localize_cold
+version: "1.0.0"
+description: "Find an object's true world pose from its AprilTags, allowing a large correction. Cold start by default: ignores the stored pose and sets no move guard, so a badly misplaced object can be corrected. Commands arm motion to reach each viewpoint."
+
+preconditions: {}   # parsed but NOT enforced by the executor - never gate on these
+postconditions: {}
+safety_rules: []
+tags:
+  - plate
+  - handoff
+world_state_prime: null

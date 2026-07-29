@@ -1,0 +1,19 @@
+skill_id: plate_unseal
+version: "1.0.0"
+description: "Manual unseal step: pings the operator, pauses the run until they physically remove the plate's seal and resume, then asks them to confirm it's unsealed before the workflow continues (re-pauses on 'no'). Moves nothing. No-op in simulation."
+
+# parameters are derived from the plate_unseal() signature in robotic_code.py
+
+preconditions:
+  plate_sealed: true
+
+postconditions:
+  plate_sealed: false
+
+tags:
+  - pipette_demo
+  - plate
+  - unseal
+  - manual
+  - operator
+  - pause

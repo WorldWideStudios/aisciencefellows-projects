@@ -1,0 +1,10 @@
+{
+  "execution_id": "exec_tem1_kinetics_characterization_hack_world_22_20260725_213328",
+  "workflow_ref": "tem1_kinetics_characterization_hack_world_22",
+  "workflow_id": "tem1_kinetics_characterization",
+  "started": "2026-07-25 21:33:28 PDT",
+  "completed": "2026-07-25 22:06:43 PDT",
+  "duration": "33m 14s",
+  "status": "stopped_early",
+  "source": "log_export"
+}

@@ -1,0 +1,17 @@
+{
+  "run": 1,
+  "round": 1,
+  "version": 1,
+  "label": "r1-discovery-v1",
+  "created_at": "2026-07-25T13:50:00-07:00",
+  "author": "pvjthomas",
+  "status": "superseded",
+  "superseded_by": "data/screens/1/v2/manifest.json",
+  "description": "Round 1 discovery screen — single-point @ 50 µM, 24 compounds + 12 plate controls (not run; replaced by v2 validation plate)",
+  "files": {
+    "plate_map": "data/screens/1/v1/plate_map.json",
+    "selection_rationale": "pvjthomas/runs/1/v1/selection_rationale.md",
+    "active_plate_map": "data/plate_map_r1.json",
+    "active_selection_rationale": "pvjthomas/selection_rationale.md"
+  }
+}

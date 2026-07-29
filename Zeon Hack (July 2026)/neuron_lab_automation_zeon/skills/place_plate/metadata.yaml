@@ -1,0 +1,11 @@
+skill_id: place_plate
+version: "0.1.0"
+description: "Placeholder step for placing the plate at the work location."
+
+parameter_descriptions: {}
+
+preconditions: {}
+postconditions: {}
+
+tags: ["placeholder", "plate", "place"]
+high_risk: false

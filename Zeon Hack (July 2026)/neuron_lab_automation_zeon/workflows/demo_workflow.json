@@ -1,0 +1,203 @@
+{
+  "workflow_id": "demo_workflow",
+  "name": "Demo Workflow",
+  "description": "Debuggable left-arm holder-removal sequence with one move_arm_to_anchor node per openshelf anchor.",
+  "version": "1.1.0",
+  "author": "hackerteam10",
+  "created_at": "2026-07-26T18:45:45.000Z",
+  "updated_at": "2026-07-26T18:55:21.000Z",
+  "simulation_validated": false,
+  "objects": [],
+  "inputs": [
+    {
+      "name": "openshelf",
+      "type": "object",
+      "is_array": false,
+      "description": "Open shelf carrying the taught holder-removal anchors.",
+      "defaultValue": "openshelf"
+    }
+  ],
+  "nodes": [
+    {
+      "node_id": "start_0",
+      "type": "start",
+      "label": "Start"
+    },
+    {
+      "node_id": "move_holder_position_0",
+      "type": "skill",
+      "label": "0A - Approach Holder",
+      "description": "Move to holder_position_0 with the gripper open.",
+      "skill_id": "move_arm_to_anchor",
+      "parameters": {
+        "target": {
+          "$input": "openshelf"
+        },
+        "anchor_names": "holder_position_0",
+        "arm": "left_arm",
+        "speed": 20
+      }
+    },
+    {
+      "node_id": "move_holder_position_open_0",
+      "type": "skill",
+      "label": "0B - Move to Holder Open",
+      "description": "Move to holder_position_move_open_0 while keeping the gripper open.",
+      "skill_id": "move_arm_to_anchor",
+      "parameters": {
+        "target": {
+          "$input": "openshelf"
+        },
+        "anchor_names": "holder_position_move_open_0",
+        "arm": "left_arm",
+        "speed": 20
+      }
+    },
+    {
+      "node_id": "move_grab_holder_1",
+      "type": "skill",
+      "label": "1 - Grasp Holder",
+      "description": "Move to grab_holder_1 and close to its configured grasp width.",
+      "skill_id": "move_arm_to_anchor",
+      "parameters": {
+        "target": {
+          "$input": "openshelf"
+        },
+        "anchor_names": "grab_holder_1",
+        "arm": "left_arm",
+        "speed": 20
+      }
+    },
+    {
+      "node_id": "move_grab_holder_up_2",
+      "type": "skill",
+      "label": "2 - Lift Holder",
+      "description": "Move to grab_holder_up_2.",
+      "skill_id": "move_arm_to_anchor",
+      "parameters": {
+        "target": {
+          "$input": "openshelf"
+        },
+        "anchor_names": "grab_holder_up_2",
+        "arm": "left_arm",
+        "speed": 20
+      }
+    },
+    {
+      "node_id": "move_grab_holder_back_3",
+      "type": "skill",
+      "label": "3 - Retract Holder",
+      "description": "Move to grab_holder_grasped_back_3.",
+      "skill_id": "move_arm_to_anchor",
+      "parameters": {
+        "target": {
+          "$input": "openshelf"
+        },
+        "anchor_names": "grab_holder_grasped_back_3",
+        "arm": "left_arm",
+        "speed": 20
+      }
+    },
+    {
+      "node_id": "move_grab_holder_set_down_4",
+      "type": "skill",
+      "label": "4 - Set Holder Down",
+      "description": "Move to grab_holder_set_down_4.",
+      "skill_id": "move_arm_to_anchor",
+      "parameters": {
+        "target": {
+          "$input": "openshelf"
+        },
+        "anchor_names": "grab_holder_set_down_4",
+        "arm": "left_arm",
+        "speed": 20
+      }
+    },
+    {
+      "node_id": "move_grab_holder_release_5",
+      "type": "skill",
+      "label": "5 - Release Holder",
+      "description": "Move to grab_holder_release_5 and open to its configured release width.",
+      "skill_id": "move_arm_to_anchor",
+      "parameters": {
+        "target": {
+          "$input": "openshelf"
+        },
+        "anchor_names": "grab_holder_release_5",
+        "arm": "left_arm",
+        "speed": 20
+      }
+    },
+    {
+      "node_id": "end_1",
+      "type": "end",
+      "label": "End"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e0",
+      "from_node": "start_0",
+      "to_node": "move_holder_position_0",
+      "condition": {
+        "type": "default"
+      }
+    },
+    {
+      "edge_id": "e1",
+      "from_node": "move_holder_position_0",
+      "to_node": "move_holder_position_open_0",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e2",
+      "from_node": "move_holder_position_open_0",
+      "to_node": "move_grab_holder_1",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e3",
+      "from_node": "move_grab_holder_1",
+      "to_node": "move_grab_holder_up_2",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e4",
+      "from_node": "move_grab_holder_up_2",
+      "to_node": "move_grab_holder_back_3",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e5",
+      "from_node": "move_grab_holder_back_3",
+      "to_node": "move_grab_holder_set_down_4",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e6",
+      "from_node": "move_grab_holder_set_down_4",
+      "to_node": "move_grab_holder_release_5",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e7",
+      "from_node": "move_grab_holder_release_5",
+      "to_node": "end_1",
+      "condition": {
+        "type": "on_success"
+      }
+    }
+  ]
+}

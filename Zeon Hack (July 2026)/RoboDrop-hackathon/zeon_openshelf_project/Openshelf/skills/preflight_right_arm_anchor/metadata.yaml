@@ -1,0 +1,21 @@
+skill_id: preflight_right_arm_anchor
+version: "1.0.0"
+description: "Preflight an entry and target Cartesian pose with the empty right gripper before carrying a plate."
+
+preconditions: {}
+postconditions:
+  right_arm_anchor_reachable: true
+
+high_risk: true
+
+safety_rules:
+  - "Simulation-only development probe until the destination route is validated."
+  - "Commands only the right arm and right gripper."
+  - "Requires collision planning to remain enabled for the OpenShelf and tables."
+  - "The entry and target anchors must preserve one TCP orientation."
+
+tags:
+  - right-arm
+  - preflight
+  - ik
+  - collision-aware

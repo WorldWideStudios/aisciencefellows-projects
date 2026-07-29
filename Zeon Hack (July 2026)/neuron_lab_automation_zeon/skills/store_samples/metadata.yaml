@@ -1,0 +1,11 @@
+skill_id: store_samples
+version: "0.1.0"
+description: "Placeholder step for storing samples after media refill."
+
+parameter_descriptions: {}
+
+preconditions: {}
+postconditions: {}
+
+tags: ["placeholder", "samples", "storage"]
+high_risk: false

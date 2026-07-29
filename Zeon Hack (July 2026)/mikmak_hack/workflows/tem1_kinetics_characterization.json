@@ -1,0 +1,3911 @@
+{
+  "workflow_id": "tem1_kinetics_characterization",
+  "name": "TEM1 Kinetics Characterization",
+  "description": "Standalone (non-CFPS) kinetics characterization: purified TEM1 enzyme x nitrocefin substrate concentration grid, plus enzyme-only and substrate-only blanks, read kinetically on the plate reader. Prerequisite round for the CFPS inhibitor dose-response screen \u2014 its fit sets the nitrocefin working concentration and endpoint read timing used there. Grid is 3x3 (enzyme levels x substrate levels) plus 2 blanks by default; extend by copying a grid-point block. Robot half only: the arm builds the plate, loads it into the reader and closes the lid, then stops. The kinetic read and plate retrieval are manual for now.",
+  "version": "1.0.0",
+  "author": "pipeline",
+  "created_at": "2026-07-25T00:00:00.000Z",
+  "updated_at": "2026-07-25T00:00:00.000Z",
+  "simulation_validated": false,
+  "objects": [],
+  "inputs": [
+    {
+      "name": "pipette",
+      "type": "object",
+      "is_array": false,
+      "description": "10 uL pipette",
+      "defaultValue": "epipette_10ul"
+    },
+    {
+      "name": "tipbox",
+      "type": "object",
+      "is_array": false,
+      "description": "10 uL tip rack",
+      "defaultValue": "tipbox_10ul_1"
+    },
+    {
+      "name": "reagent_block",
+      "type": "object",
+      "is_array": false,
+      "description": "Cold block holding enzyme/substrate/buffer stock tubes",
+      "defaultValue": "coldblock_wellplate"
+    },
+    {
+      "name": "reaction_plate",
+      "type": "object",
+      "is_array": false,
+      "description": "Kinetics assay plate",
+      "defaultValue": "wellplate_96_flatbottom"
+    },
+    {
+      "name": "platereader",
+      "type": "object",
+      "is_array": false,
+      "description": "Plate reader",
+      "defaultValue": "plate_reader"
+    },
+    {
+      "name": "plate_home",
+      "type": "object",
+      "is_array": false,
+      "description": "Object carrying the plate's home anchor",
+      "defaultValue": "wellplate_holder_tags"
+    },
+    {
+      "name": "enzyme_hole",
+      "type": "string",
+      "is_array": false,
+      "description": "Cold-block hole holding purified TEM1 enzyme stock",
+      "defaultValue": "hole_1"
+    },
+    {
+      "name": "substrate_hole",
+      "type": "string",
+      "is_array": false,
+      "description": "Cold-block hole holding nitrocefin substrate stock",
+      "defaultValue": "hole_2"
+    },
+    {
+      "name": "buffer_hole",
+      "type": "string",
+      "is_array": false,
+      "description": "Cold-block hole holding reaction buffer/diluent",
+      "defaultValue": "hole_3"
+    },
+    {
+      "name": "total_well_volume_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Target total reaction volume per well (uL) \u2014 informational; per-well buffer_vol inputs must already sum to this",
+      "defaultValue": 20.0
+    },
+    {
+      "name": "run_name",
+      "type": "string",
+      "is_array": false,
+      "description": "Name for this run's saved output folder",
+      "defaultValue": "tem1_kinetics_run_mikmak-06n"
+    },
+    {
+      "name": "pt_e1s1_well",
+      "type": "string",
+      "is_array": false,
+      "description": "Destination well for enzyme level 1 x substrate level 1",
+      "defaultValue": "A1"
+    },
+    {
+      "name": "pt_e1s1_enzyme_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Enzyme volume (uL) at grid point (1,1)",
+      "defaultValue": 5.0
+    },
+    {
+      "name": "pt_e1s1_enzyme_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the enzyme leg at (1,1)",
+      "defaultValue": 1
+    },
+    {
+      "name": "pt_e1s1_substrate_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Nitrocefin substrate volume (uL) at grid point (1,1)",
+      "defaultValue": 5.0
+    },
+    {
+      "name": "pt_e1s1_substrate_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the substrate leg at (1,1)",
+      "defaultValue": 2
+    },
+    {
+      "name": "pt_e1s1_buffer_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Buffer top-up volume (uL) at grid point (1,1)",
+      "defaultValue": 10.0
+    },
+    {
+      "name": "pt_e1s1_buffer_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the buffer leg at (1,1)",
+      "defaultValue": 3
+    },
+    {
+      "name": "pt_e1s2_well",
+      "type": "string",
+      "is_array": false,
+      "description": "Destination well for enzyme level 1 x substrate level 2",
+      "defaultValue": "A2"
+    },
+    {
+      "name": "pt_e1s2_enzyme_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Enzyme volume (uL) at grid point (1,2)",
+      "defaultValue": 5.0
+    },
+    {
+      "name": "pt_e1s2_enzyme_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the enzyme leg at (1,2)",
+      "defaultValue": 4
+    },
+    {
+      "name": "pt_e1s2_substrate_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Nitrocefin substrate volume (uL) at grid point (1,2)",
+      "defaultValue": 7.0
+    },
+    {
+      "name": "pt_e1s2_substrate_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the substrate leg at (1,2)",
+      "defaultValue": 5
+    },
+    {
+      "name": "pt_e1s2_buffer_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Buffer top-up volume (uL) at grid point (1,2)",
+      "defaultValue": 8.0
+    },
+    {
+      "name": "pt_e1s2_buffer_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the buffer leg at (1,2)",
+      "defaultValue": 6
+    },
+    {
+      "name": "pt_e1s3_well",
+      "type": "string",
+      "is_array": false,
+      "description": "Destination well for enzyme level 1 x substrate level 3",
+      "defaultValue": "A3"
+    },
+    {
+      "name": "pt_e1s3_enzyme_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Enzyme volume (uL) at grid point (1,3)",
+      "defaultValue": 5.0
+    },
+    {
+      "name": "pt_e1s3_enzyme_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the enzyme leg at (1,3)",
+      "defaultValue": 7
+    },
+    {
+      "name": "pt_e1s3_substrate_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Nitrocefin substrate volume (uL) at grid point (1,3)",
+      "defaultValue": 9.0
+    },
+    {
+      "name": "pt_e1s3_substrate_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the substrate leg at (1,3)",
+      "defaultValue": 8
+    },
+    {
+      "name": "pt_e1s3_buffer_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Buffer top-up volume (uL) at grid point (1,3)",
+      "defaultValue": 6.0
+    },
+    {
+      "name": "pt_e1s3_buffer_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the buffer leg at (1,3)",
+      "defaultValue": 9
+    },
+    {
+      "name": "pt_e2s1_well",
+      "type": "string",
+      "is_array": false,
+      "description": "Destination well for enzyme level 2 x substrate level 1",
+      "defaultValue": "A4"
+    },
+    {
+      "name": "pt_e2s1_enzyme_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Enzyme volume (uL) at grid point (2,1)",
+      "defaultValue": 7.0
+    },
+    {
+      "name": "pt_e2s1_enzyme_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the enzyme leg at (2,1)",
+      "defaultValue": 10
+    },
+    {
+      "name": "pt_e2s1_substrate_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Nitrocefin substrate volume (uL) at grid point (2,1)",
+      "defaultValue": 5.0
+    },
+    {
+      "name": "pt_e2s1_substrate_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the substrate leg at (2,1)",
+      "defaultValue": 11
+    },
+    {
+      "name": "pt_e2s1_buffer_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Buffer top-up volume (uL) at grid point (2,1)",
+      "defaultValue": 8.0
+    },
+    {
+      "name": "pt_e2s1_buffer_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the buffer leg at (2,1)",
+      "defaultValue": 12
+    },
+    {
+      "name": "pt_e2s2_well",
+      "type": "string",
+      "is_array": false,
+      "description": "Destination well for enzyme level 2 x substrate level 2",
+      "defaultValue": "A5"
+    },
+    {
+      "name": "pt_e2s2_enzyme_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Enzyme volume (uL) at grid point (2,2)",
+      "defaultValue": 7.0
+    },
+    {
+      "name": "pt_e2s2_enzyme_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the enzyme leg at (2,2)",
+      "defaultValue": 13
+    },
+    {
+      "name": "pt_e2s2_substrate_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Nitrocefin substrate volume (uL) at grid point (2,2)",
+      "defaultValue": 7.0
+    },
+    {
+      "name": "pt_e2s2_substrate_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the substrate leg at (2,2)",
+      "defaultValue": 14
+    },
+    {
+      "name": "pt_e2s2_buffer_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Buffer top-up volume (uL) at grid point (2,2)",
+      "defaultValue": 6.0
+    },
+    {
+      "name": "pt_e2s2_buffer_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the buffer leg at (2,2)",
+      "defaultValue": 15
+    },
+    {
+      "name": "pt_e2s3_well",
+      "type": "string",
+      "is_array": false,
+      "description": "Destination well for enzyme level 2 x substrate level 3",
+      "defaultValue": "A6"
+    },
+    {
+      "name": "pt_e2s3_enzyme_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Enzyme volume (uL) at grid point (2,3)",
+      "defaultValue": 7.0
+    },
+    {
+      "name": "pt_e2s3_enzyme_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the enzyme leg at (2,3)",
+      "defaultValue": 16
+    },
+    {
+      "name": "pt_e2s3_substrate_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Nitrocefin substrate volume (uL) at grid point (2,3)",
+      "defaultValue": 9.0
+    },
+    {
+      "name": "pt_e2s3_substrate_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the substrate leg at (2,3)",
+      "defaultValue": 17
+    },
+    {
+      "name": "pt_e2s3_buffer_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Buffer top-up volume (uL) at grid point (2,3)",
+      "defaultValue": 4.0
+    },
+    {
+      "name": "pt_e2s3_buffer_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the buffer leg at (2,3)",
+      "defaultValue": 18
+    },
+    {
+      "name": "pt_e3s1_well",
+      "type": "string",
+      "is_array": false,
+      "description": "Destination well for enzyme level 3 x substrate level 1",
+      "defaultValue": "A7"
+    },
+    {
+      "name": "pt_e3s1_enzyme_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Enzyme volume (uL) at grid point (3,1)",
+      "defaultValue": 9.0
+    },
+    {
+      "name": "pt_e3s1_enzyme_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the enzyme leg at (3,1)",
+      "defaultValue": 19
+    },
+    {
+      "name": "pt_e3s1_substrate_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Nitrocefin substrate volume (uL) at grid point (3,1)",
+      "defaultValue": 5.0
+    },
+    {
+      "name": "pt_e3s1_substrate_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the substrate leg at (3,1)",
+      "defaultValue": 20
+    },
+    {
+      "name": "pt_e3s1_buffer_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Buffer top-up volume (uL) at grid point (3,1)",
+      "defaultValue": 6.0
+    },
+    {
+      "name": "pt_e3s1_buffer_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the buffer leg at (3,1)",
+      "defaultValue": 21
+    },
+    {
+      "name": "pt_e3s2_well",
+      "type": "string",
+      "is_array": false,
+      "description": "Destination well for enzyme level 3 x substrate level 2",
+      "defaultValue": "A8"
+    },
+    {
+      "name": "pt_e3s2_enzyme_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Enzyme volume (uL) at grid point (3,2)",
+      "defaultValue": 9.0
+    },
+    {
+      "name": "pt_e3s2_enzyme_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the enzyme leg at (3,2)",
+      "defaultValue": 22
+    },
+    {
+      "name": "pt_e3s2_substrate_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Nitrocefin substrate volume (uL) at grid point (3,2)",
+      "defaultValue": 7.0
+    },
+    {
+      "name": "pt_e3s2_substrate_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the substrate leg at (3,2)",
+      "defaultValue": 23
+    },
+    {
+      "name": "pt_e3s2_buffer_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Buffer top-up volume (uL) at grid point (3,2)",
+      "defaultValue": 4.0
+    },
+    {
+      "name": "pt_e3s2_buffer_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the buffer leg at (3,2)",
+      "defaultValue": 24
+    },
+    {
+      "name": "pt_e3s3_well",
+      "type": "string",
+      "is_array": false,
+      "description": "Destination well for enzyme level 3 x substrate level 3",
+      "defaultValue": "A9"
+    },
+    {
+      "name": "pt_e3s3_enzyme_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Enzyme volume (uL) at grid point (3,3)",
+      "defaultValue": 9.0
+    },
+    {
+      "name": "pt_e3s3_enzyme_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the enzyme leg at (3,3)",
+      "defaultValue": 25
+    },
+    {
+      "name": "pt_e3s3_substrate_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Nitrocefin substrate volume (uL) at grid point (3,3)",
+      "defaultValue": 9.0
+    },
+    {
+      "name": "pt_e3s3_substrate_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the substrate leg at (3,3)",
+      "defaultValue": 26
+    },
+    {
+      "name": "pt_e3s3_buffer_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Buffer top-up volume (uL) at grid point (3,3)",
+      "defaultValue": 2.0
+    },
+    {
+      "name": "pt_e3s3_buffer_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the buffer leg at (3,3)",
+      "defaultValue": 27
+    },
+    {
+      "name": "blank_e_well",
+      "type": "string",
+      "is_array": false,
+      "description": "Destination well for the blank_e control",
+      "defaultValue": "A10"
+    },
+    {
+      "name": "blank_e_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "enz volume (uL) for the blank_e control",
+      "defaultValue": 10.0
+    },
+    {
+      "name": "blank_e_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the blank_e enz leg",
+      "defaultValue": 28
+    },
+    {
+      "name": "blank_e_buffer_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Buffer top-up volume (uL) for the blank_e control",
+      "defaultValue": 10.0
+    },
+    {
+      "name": "blank_e_buffer_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the blank_e buffer leg",
+      "defaultValue": 29
+    },
+    {
+      "name": "blank_s_well",
+      "type": "string",
+      "is_array": false,
+      "description": "Destination well for the blank_s control",
+      "defaultValue": "A11"
+    },
+    {
+      "name": "blank_s_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "sub volume (uL) for the blank_s control",
+      "defaultValue": 10.0
+    },
+    {
+      "name": "blank_s_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the blank_s sub leg",
+      "defaultValue": 30
+    },
+    {
+      "name": "blank_s_buffer_vol_ul",
+      "type": "float",
+      "is_array": false,
+      "description": "Buffer top-up volume (uL) for the blank_s control",
+      "defaultValue": 10.0
+    },
+    {
+      "name": "blank_s_buffer_tip_index",
+      "type": "int",
+      "is_array": false,
+      "description": "Tip index for the blank_s buffer leg",
+      "defaultValue": 31
+    }
+  ],
+  "nodes": [
+    {
+      "node_id": "start_0",
+      "type": "start",
+      "label": "Start"
+    },
+    {
+      "node_id": "grab_pipette",
+      "type": "skill",
+      "label": "Pick Up Pipette",
+      "skill_id": "epipette_grab",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e1s1_enz_attach",
+      "type": "skill",
+      "label": "Attach tip (pt_e1s1_enz)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "pt_e1s1_enzyme_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e1s1_enz_aspirate",
+      "type": "skill",
+      "label": "Aspirate (pt_e1s1_enz)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "enzyme_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e1s1_enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e1s1_enz_dispense",
+      "type": "skill",
+      "label": "Dispense (pt_e1s1_enz)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "pt_e1s1_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e1s1_enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e1s1_enz_eject",
+      "type": "skill",
+      "label": "Eject tip (pt_e1s1_enz)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e1s1_sub_attach",
+      "type": "skill",
+      "label": "Attach tip (pt_e1s1_sub)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "pt_e1s1_substrate_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e1s1_sub_aspirate",
+      "type": "skill",
+      "label": "Aspirate (pt_e1s1_sub)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "substrate_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e1s1_substrate_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e1s1_sub_dispense",
+      "type": "skill",
+      "label": "Dispense (pt_e1s1_sub)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "pt_e1s1_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e1s1_substrate_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e1s1_sub_eject",
+      "type": "skill",
+      "label": "Eject tip (pt_e1s1_sub)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e1s1_buf_attach",
+      "type": "skill",
+      "label": "Attach tip (pt_e1s1_buf)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "pt_e1s1_buffer_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e1s1_buf_aspirate",
+      "type": "skill",
+      "label": "Aspirate (pt_e1s1_buf)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "buffer_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e1s1_buffer_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e1s1_buf_dispense",
+      "type": "skill",
+      "label": "Dispense (pt_e1s1_buf)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "pt_e1s1_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e1s1_buffer_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e1s1_buf_eject",
+      "type": "skill",
+      "label": "Eject tip (pt_e1s1_buf)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e1s2_enz_attach",
+      "type": "skill",
+      "label": "Attach tip (pt_e1s2_enz)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "pt_e1s2_enzyme_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e1s2_enz_aspirate",
+      "type": "skill",
+      "label": "Aspirate (pt_e1s2_enz)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "enzyme_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e1s2_enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e1s2_enz_dispense",
+      "type": "skill",
+      "label": "Dispense (pt_e1s2_enz)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "pt_e1s2_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e1s2_enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e1s2_enz_eject",
+      "type": "skill",
+      "label": "Eject tip (pt_e1s2_enz)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e1s2_sub_attach",
+      "type": "skill",
+      "label": "Attach tip (pt_e1s2_sub)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "pt_e1s2_substrate_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e1s2_sub_aspirate",
+      "type": "skill",
+      "label": "Aspirate (pt_e1s2_sub)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "substrate_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e1s2_substrate_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e1s2_sub_dispense",
+      "type": "skill",
+      "label": "Dispense (pt_e1s2_sub)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "pt_e1s2_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e1s2_substrate_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e1s2_sub_eject",
+      "type": "skill",
+      "label": "Eject tip (pt_e1s2_sub)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e1s2_buf_attach",
+      "type": "skill",
+      "label": "Attach tip (pt_e1s2_buf)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "pt_e1s2_buffer_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e1s2_buf_aspirate",
+      "type": "skill",
+      "label": "Aspirate (pt_e1s2_buf)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "buffer_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e1s2_buffer_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e1s2_buf_dispense",
+      "type": "skill",
+      "label": "Dispense (pt_e1s2_buf)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "pt_e1s2_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e1s2_buffer_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e1s2_buf_eject",
+      "type": "skill",
+      "label": "Eject tip (pt_e1s2_buf)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e1s3_enz_attach",
+      "type": "skill",
+      "label": "Attach tip (pt_e1s3_enz)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "pt_e1s3_enzyme_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e1s3_enz_aspirate",
+      "type": "skill",
+      "label": "Aspirate (pt_e1s3_enz)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "enzyme_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e1s3_enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e1s3_enz_dispense",
+      "type": "skill",
+      "label": "Dispense (pt_e1s3_enz)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "pt_e1s3_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e1s3_enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e1s3_enz_eject",
+      "type": "skill",
+      "label": "Eject tip (pt_e1s3_enz)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e1s3_sub_attach",
+      "type": "skill",
+      "label": "Attach tip (pt_e1s3_sub)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "pt_e1s3_substrate_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e1s3_sub_aspirate",
+      "type": "skill",
+      "label": "Aspirate (pt_e1s3_sub)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "substrate_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e1s3_substrate_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e1s3_sub_dispense",
+      "type": "skill",
+      "label": "Dispense (pt_e1s3_sub)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "pt_e1s3_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e1s3_substrate_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e1s3_sub_eject",
+      "type": "skill",
+      "label": "Eject tip (pt_e1s3_sub)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e1s3_buf_attach",
+      "type": "skill",
+      "label": "Attach tip (pt_e1s3_buf)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "pt_e1s3_buffer_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e1s3_buf_aspirate",
+      "type": "skill",
+      "label": "Aspirate (pt_e1s3_buf)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "buffer_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e1s3_buffer_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e1s3_buf_dispense",
+      "type": "skill",
+      "label": "Dispense (pt_e1s3_buf)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "pt_e1s3_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e1s3_buffer_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e1s3_buf_eject",
+      "type": "skill",
+      "label": "Eject tip (pt_e1s3_buf)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e2s1_enz_attach",
+      "type": "skill",
+      "label": "Attach tip (pt_e2s1_enz)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "pt_e2s1_enzyme_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e2s1_enz_aspirate",
+      "type": "skill",
+      "label": "Aspirate (pt_e2s1_enz)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "enzyme_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e2s1_enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e2s1_enz_dispense",
+      "type": "skill",
+      "label": "Dispense (pt_e2s1_enz)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "pt_e2s1_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e2s1_enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e2s1_enz_eject",
+      "type": "skill",
+      "label": "Eject tip (pt_e2s1_enz)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e2s1_sub_attach",
+      "type": "skill",
+      "label": "Attach tip (pt_e2s1_sub)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "pt_e2s1_substrate_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e2s1_sub_aspirate",
+      "type": "skill",
+      "label": "Aspirate (pt_e2s1_sub)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "substrate_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e2s1_substrate_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e2s1_sub_dispense",
+      "type": "skill",
+      "label": "Dispense (pt_e2s1_sub)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "pt_e2s1_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e2s1_substrate_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e2s1_sub_eject",
+      "type": "skill",
+      "label": "Eject tip (pt_e2s1_sub)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e2s1_buf_attach",
+      "type": "skill",
+      "label": "Attach tip (pt_e2s1_buf)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "pt_e2s1_buffer_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e2s1_buf_aspirate",
+      "type": "skill",
+      "label": "Aspirate (pt_e2s1_buf)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "buffer_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e2s1_buffer_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e2s1_buf_dispense",
+      "type": "skill",
+      "label": "Dispense (pt_e2s1_buf)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "pt_e2s1_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e2s1_buffer_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e2s1_buf_eject",
+      "type": "skill",
+      "label": "Eject tip (pt_e2s1_buf)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e2s2_enz_attach",
+      "type": "skill",
+      "label": "Attach tip (pt_e2s2_enz)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "pt_e2s2_enzyme_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e2s2_enz_aspirate",
+      "type": "skill",
+      "label": "Aspirate (pt_e2s2_enz)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "enzyme_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e2s2_enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e2s2_enz_dispense",
+      "type": "skill",
+      "label": "Dispense (pt_e2s2_enz)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "pt_e2s2_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e2s2_enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e2s2_enz_eject",
+      "type": "skill",
+      "label": "Eject tip (pt_e2s2_enz)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e2s2_sub_attach",
+      "type": "skill",
+      "label": "Attach tip (pt_e2s2_sub)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "pt_e2s2_substrate_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e2s2_sub_aspirate",
+      "type": "skill",
+      "label": "Aspirate (pt_e2s2_sub)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "substrate_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e2s2_substrate_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e2s2_sub_dispense",
+      "type": "skill",
+      "label": "Dispense (pt_e2s2_sub)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "pt_e2s2_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e2s2_substrate_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e2s2_sub_eject",
+      "type": "skill",
+      "label": "Eject tip (pt_e2s2_sub)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e2s2_buf_attach",
+      "type": "skill",
+      "label": "Attach tip (pt_e2s2_buf)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "pt_e2s2_buffer_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e2s2_buf_aspirate",
+      "type": "skill",
+      "label": "Aspirate (pt_e2s2_buf)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "buffer_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e2s2_buffer_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e2s2_buf_dispense",
+      "type": "skill",
+      "label": "Dispense (pt_e2s2_buf)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "pt_e2s2_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e2s2_buffer_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e2s2_buf_eject",
+      "type": "skill",
+      "label": "Eject tip (pt_e2s2_buf)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e2s3_enz_attach",
+      "type": "skill",
+      "label": "Attach tip (pt_e2s3_enz)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "pt_e2s3_enzyme_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e2s3_enz_aspirate",
+      "type": "skill",
+      "label": "Aspirate (pt_e2s3_enz)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "enzyme_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e2s3_enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e2s3_enz_dispense",
+      "type": "skill",
+      "label": "Dispense (pt_e2s3_enz)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "pt_e2s3_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e2s3_enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e2s3_enz_eject",
+      "type": "skill",
+      "label": "Eject tip (pt_e2s3_enz)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e2s3_sub_attach",
+      "type": "skill",
+      "label": "Attach tip (pt_e2s3_sub)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "pt_e2s3_substrate_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e2s3_sub_aspirate",
+      "type": "skill",
+      "label": "Aspirate (pt_e2s3_sub)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "substrate_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e2s3_substrate_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e2s3_sub_dispense",
+      "type": "skill",
+      "label": "Dispense (pt_e2s3_sub)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "pt_e2s3_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e2s3_substrate_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e2s3_sub_eject",
+      "type": "skill",
+      "label": "Eject tip (pt_e2s3_sub)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e2s3_buf_attach",
+      "type": "skill",
+      "label": "Attach tip (pt_e2s3_buf)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "pt_e2s3_buffer_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e2s3_buf_aspirate",
+      "type": "skill",
+      "label": "Aspirate (pt_e2s3_buf)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "buffer_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e2s3_buffer_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e2s3_buf_dispense",
+      "type": "skill",
+      "label": "Dispense (pt_e2s3_buf)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "pt_e2s3_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e2s3_buffer_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e2s3_buf_eject",
+      "type": "skill",
+      "label": "Eject tip (pt_e2s3_buf)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e3s1_enz_attach",
+      "type": "skill",
+      "label": "Attach tip (pt_e3s1_enz)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "pt_e3s1_enzyme_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e3s1_enz_aspirate",
+      "type": "skill",
+      "label": "Aspirate (pt_e3s1_enz)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "enzyme_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e3s1_enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e3s1_enz_dispense",
+      "type": "skill",
+      "label": "Dispense (pt_e3s1_enz)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "pt_e3s1_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e3s1_enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e3s1_enz_eject",
+      "type": "skill",
+      "label": "Eject tip (pt_e3s1_enz)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e3s1_sub_attach",
+      "type": "skill",
+      "label": "Attach tip (pt_e3s1_sub)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "pt_e3s1_substrate_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e3s1_sub_aspirate",
+      "type": "skill",
+      "label": "Aspirate (pt_e3s1_sub)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "substrate_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e3s1_substrate_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e3s1_sub_dispense",
+      "type": "skill",
+      "label": "Dispense (pt_e3s1_sub)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "pt_e3s1_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e3s1_substrate_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e3s1_sub_eject",
+      "type": "skill",
+      "label": "Eject tip (pt_e3s1_sub)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e3s1_buf_attach",
+      "type": "skill",
+      "label": "Attach tip (pt_e3s1_buf)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "pt_e3s1_buffer_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e3s1_buf_aspirate",
+      "type": "skill",
+      "label": "Aspirate (pt_e3s1_buf)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "buffer_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e3s1_buffer_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e3s1_buf_dispense",
+      "type": "skill",
+      "label": "Dispense (pt_e3s1_buf)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "pt_e3s1_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e3s1_buffer_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e3s1_buf_eject",
+      "type": "skill",
+      "label": "Eject tip (pt_e3s1_buf)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e3s2_enz_attach",
+      "type": "skill",
+      "label": "Attach tip (pt_e3s2_enz)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "pt_e3s2_enzyme_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e3s2_enz_aspirate",
+      "type": "skill",
+      "label": "Aspirate (pt_e3s2_enz)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "enzyme_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e3s2_enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e3s2_enz_dispense",
+      "type": "skill",
+      "label": "Dispense (pt_e3s2_enz)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "pt_e3s2_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e3s2_enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e3s2_enz_eject",
+      "type": "skill",
+      "label": "Eject tip (pt_e3s2_enz)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e3s2_sub_attach",
+      "type": "skill",
+      "label": "Attach tip (pt_e3s2_sub)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "pt_e3s2_substrate_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e3s2_sub_aspirate",
+      "type": "skill",
+      "label": "Aspirate (pt_e3s2_sub)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "substrate_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e3s2_substrate_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e3s2_sub_dispense",
+      "type": "skill",
+      "label": "Dispense (pt_e3s2_sub)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "pt_e3s2_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e3s2_substrate_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e3s2_sub_eject",
+      "type": "skill",
+      "label": "Eject tip (pt_e3s2_sub)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e3s2_buf_attach",
+      "type": "skill",
+      "label": "Attach tip (pt_e3s2_buf)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "pt_e3s2_buffer_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e3s2_buf_aspirate",
+      "type": "skill",
+      "label": "Aspirate (pt_e3s2_buf)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "buffer_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e3s2_buffer_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e3s2_buf_dispense",
+      "type": "skill",
+      "label": "Dispense (pt_e3s2_buf)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "pt_e3s2_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e3s2_buffer_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e3s2_buf_eject",
+      "type": "skill",
+      "label": "Eject tip (pt_e3s2_buf)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e3s3_enz_attach",
+      "type": "skill",
+      "label": "Attach tip (pt_e3s3_enz)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "pt_e3s3_enzyme_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e3s3_enz_aspirate",
+      "type": "skill",
+      "label": "Aspirate (pt_e3s3_enz)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "enzyme_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e3s3_enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e3s3_enz_dispense",
+      "type": "skill",
+      "label": "Dispense (pt_e3s3_enz)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "pt_e3s3_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e3s3_enzyme_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e3s3_enz_eject",
+      "type": "skill",
+      "label": "Eject tip (pt_e3s3_enz)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e3s3_sub_attach",
+      "type": "skill",
+      "label": "Attach tip (pt_e3s3_sub)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "pt_e3s3_substrate_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e3s3_sub_aspirate",
+      "type": "skill",
+      "label": "Aspirate (pt_e3s3_sub)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "substrate_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e3s3_substrate_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e3s3_sub_dispense",
+      "type": "skill",
+      "label": "Dispense (pt_e3s3_sub)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "pt_e3s3_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e3s3_substrate_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e3s3_sub_eject",
+      "type": "skill",
+      "label": "Eject tip (pt_e3s3_sub)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e3s3_buf_attach",
+      "type": "skill",
+      "label": "Attach tip (pt_e3s3_buf)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "pt_e3s3_buffer_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e3s3_buf_aspirate",
+      "type": "skill",
+      "label": "Aspirate (pt_e3s3_buf)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "buffer_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e3s3_buffer_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e3s3_buf_dispense",
+      "type": "skill",
+      "label": "Dispense (pt_e3s3_buf)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "pt_e3s3_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "pt_e3s3_buffer_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "pt_e3s3_buf_eject",
+      "type": "skill",
+      "label": "Eject tip (pt_e3s3_buf)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "blank_e_enz_attach",
+      "type": "skill",
+      "label": "Attach tip (blank_e_enz)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "blank_e_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "blank_e_enz_aspirate",
+      "type": "skill",
+      "label": "Aspirate (blank_e_enz)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "enzyme_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "blank_e_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "blank_e_enz_dispense",
+      "type": "skill",
+      "label": "Dispense (blank_e_enz)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "blank_e_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "blank_e_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "blank_e_enz_eject",
+      "type": "skill",
+      "label": "Eject tip (blank_e_enz)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "blank_e_buf_attach",
+      "type": "skill",
+      "label": "Attach tip (blank_e_buf)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "blank_e_buffer_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "blank_e_buf_aspirate",
+      "type": "skill",
+      "label": "Aspirate (blank_e_buf)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "buffer_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "blank_e_buffer_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "blank_e_buf_dispense",
+      "type": "skill",
+      "label": "Dispense (blank_e_buf)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "blank_e_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "blank_e_buffer_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "blank_e_buf_eject",
+      "type": "skill",
+      "label": "Eject tip (blank_e_buf)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "blank_s_sub_attach",
+      "type": "skill",
+      "label": "Attach tip (blank_s_sub)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "blank_s_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "blank_s_sub_aspirate",
+      "type": "skill",
+      "label": "Aspirate (blank_s_sub)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "substrate_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "blank_s_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "blank_s_sub_dispense",
+      "type": "skill",
+      "label": "Dispense (blank_s_sub)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "blank_s_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "blank_s_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "blank_s_sub_eject",
+      "type": "skill",
+      "label": "Eject tip (blank_s_sub)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "blank_s_buf_attach",
+      "type": "skill",
+      "label": "Attach tip (blank_s_buf)",
+      "skill_id": "epipette_attach",
+      "parameters": {
+        "tipbox": {
+          "$input": "tipbox"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "tip_index": {
+          "$input": "blank_s_buffer_tip_index"
+        }
+      }
+    },
+    {
+      "node_id": "blank_s_buf_aspirate",
+      "type": "skill",
+      "label": "Aspirate (blank_s_buf)",
+      "skill_id": "epipette_aspirate",
+      "parameters": {
+        "object": {
+          "$input": "reagent_block"
+        },
+        "anchor": {
+          "$input": "buffer_hole"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "blank_s_buffer_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "blank_s_buf_dispense",
+      "type": "skill",
+      "label": "Dispense (blank_s_buf)",
+      "skill_id": "epipette_dispense",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "anchor": {
+          "$input": "blank_s_well"
+        },
+        "pipette": {
+          "$input": "pipette"
+        },
+        "volume": {
+          "$input": "blank_s_buffer_vol_ul"
+        }
+      }
+    },
+    {
+      "node_id": "blank_s_buf_eject",
+      "type": "skill",
+      "label": "Eject tip (blank_s_buf)",
+      "skill_id": "epipette_eject",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "place_pipette",
+      "type": "skill",
+      "label": "Place Pipette Back",
+      "skill_id": "place_current_pipette",
+      "parameters": {
+        "pipette": {
+          "$input": "pipette"
+        }
+      }
+    },
+    {
+      "node_id": "grab_plate",
+      "type": "skill",
+      "label": "Grab Assay Plate",
+      "skill_id": "wellplate_grab",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "grasp_anchor": "grasp_longside_platereader"
+      }
+    },
+    {
+      "node_id": "reader_open_pre",
+      "type": "skill",
+      "label": "Open Reader Lid",
+      "skill_id": "platereader_open",
+      "parameters": {
+        "platereader": {
+          "$input": "platereader"
+        }
+      }
+    },
+    {
+      "node_id": "reader_load",
+      "type": "skill",
+      "label": "Load Plate Into Reader",
+      "skill_id": "platereader_load",
+      "parameters": {
+        "object": {
+          "$input": "reaction_plate"
+        },
+        "platereader": {
+          "$input": "platereader"
+        }
+      }
+    },
+    {
+      "node_id": "reader_closed",
+      "type": "skill",
+      "label": "Close Reader Lid (run ends here)",
+      "skill_id": "platereader_closed",
+      "parameters": {
+        "platereader": {
+          "$input": "platereader"
+        }
+      },
+      "description": "Final robot action. The plate is left loaded in the closed reader: the operator starts the kinetic read in Gen5 by hand and retrieves the plate afterwards. platereader_measure is not called \u2014 automated kinetic reads are still in progress on Zeon's side."
+    },
+    {
+      "node_id": "save_run",
+      "type": "skill",
+      "label": "Save Run Folder",
+      "skill_id": "save_run_folder",
+      "parameters": {
+        "run_name": {
+          "$input": "run_name"
+        },
+        "checkpoint": "end"
+      }
+    },
+    {
+      "node_id": "end_1",
+      "type": "end",
+      "label": "End"
+    },
+    {
+      "node_id": "save_run_start",
+      "type": "skill",
+      "label": "Checkpoint: run started",
+      "description": "Registers this execution in data/logs/ before any hardware moves, so a run that fails early is still visible to the tracker instead of leaving nothing behind. Its outgoing edge is deliberately 'default', not 'on_success': a checkpoint is bookkeeping, and a failure to record progress must never abort a run that is physically fine. The validator flags this as unconditional \u2014 that is the intent.",
+      "skill_id": "save_run_folder",
+      "parameters": {
+        "run_name": {
+          "$input": "run_name"
+        },
+        "checkpoint": "start"
+      }
+    },
+    {
+      "node_id": "save_run_mid",
+      "type": "skill",
+      "label": "Checkpoint: pipetting done",
+      "description": "Refreshes the run folder once all pipetting is complete, before labware handling \u2014 so a failure during plate/reader moves still has every dispensed leg on record. Its outgoing edge is deliberately 'default', not 'on_success': a checkpoint is bookkeeping, and a failure to record progress must never abort a run that is physically fine. The validator flags this as unconditional \u2014 that is the intent.",
+      "skill_id": "save_run_folder",
+      "parameters": {
+        "run_name": {
+          "$input": "run_name"
+        },
+        "checkpoint": "mid"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e_start_0_save_run_start",
+      "from_node": "start_0",
+      "to_node": "save_run_start",
+      "condition": {
+        "type": "default"
+      }
+    },
+    {
+      "edge_id": "e_pt_e1s1_enz_attach_pt_e1s1_enz_aspirate",
+      "from_node": "pt_e1s1_enz_attach",
+      "to_node": "pt_e1s1_enz_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e1s1_enz_aspirate_pt_e1s1_enz_dispense",
+      "from_node": "pt_e1s1_enz_aspirate",
+      "to_node": "pt_e1s1_enz_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e1s1_enz_dispense_pt_e1s1_enz_eject",
+      "from_node": "pt_e1s1_enz_dispense",
+      "to_node": "pt_e1s1_enz_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e1s1_sub_attach_pt_e1s1_sub_aspirate",
+      "from_node": "pt_e1s1_sub_attach",
+      "to_node": "pt_e1s1_sub_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e1s1_sub_aspirate_pt_e1s1_sub_dispense",
+      "from_node": "pt_e1s1_sub_aspirate",
+      "to_node": "pt_e1s1_sub_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e1s1_sub_dispense_pt_e1s1_sub_eject",
+      "from_node": "pt_e1s1_sub_dispense",
+      "to_node": "pt_e1s1_sub_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e1s1_buf_attach_pt_e1s1_buf_aspirate",
+      "from_node": "pt_e1s1_buf_attach",
+      "to_node": "pt_e1s1_buf_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e1s1_buf_aspirate_pt_e1s1_buf_dispense",
+      "from_node": "pt_e1s1_buf_aspirate",
+      "to_node": "pt_e1s1_buf_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e1s1_buf_dispense_pt_e1s1_buf_eject",
+      "from_node": "pt_e1s1_buf_dispense",
+      "to_node": "pt_e1s1_buf_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_grab_pipette_pt_e1s1_enz_attach",
+      "from_node": "grab_pipette",
+      "to_node": "pt_e1s1_enz_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e1s1_enz_eject_pt_e1s1_sub_attach",
+      "from_node": "pt_e1s1_enz_eject",
+      "to_node": "pt_e1s1_sub_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e1s1_sub_eject_pt_e1s1_buf_attach",
+      "from_node": "pt_e1s1_sub_eject",
+      "to_node": "pt_e1s1_buf_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e1s1_buf_eject_pt_e1s2_enz_attach",
+      "from_node": "pt_e1s1_buf_eject",
+      "to_node": "pt_e1s2_enz_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e1s2_enz_attach_pt_e1s2_enz_aspirate",
+      "from_node": "pt_e1s2_enz_attach",
+      "to_node": "pt_e1s2_enz_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e1s2_enz_aspirate_pt_e1s2_enz_dispense",
+      "from_node": "pt_e1s2_enz_aspirate",
+      "to_node": "pt_e1s2_enz_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e1s2_enz_dispense_pt_e1s2_enz_eject",
+      "from_node": "pt_e1s2_enz_dispense",
+      "to_node": "pt_e1s2_enz_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e1s2_sub_attach_pt_e1s2_sub_aspirate",
+      "from_node": "pt_e1s2_sub_attach",
+      "to_node": "pt_e1s2_sub_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e1s2_sub_aspirate_pt_e1s2_sub_dispense",
+      "from_node": "pt_e1s2_sub_aspirate",
+      "to_node": "pt_e1s2_sub_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e1s2_sub_dispense_pt_e1s2_sub_eject",
+      "from_node": "pt_e1s2_sub_dispense",
+      "to_node": "pt_e1s2_sub_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e1s2_buf_attach_pt_e1s2_buf_aspirate",
+      "from_node": "pt_e1s2_buf_attach",
+      "to_node": "pt_e1s2_buf_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e1s2_buf_aspirate_pt_e1s2_buf_dispense",
+      "from_node": "pt_e1s2_buf_aspirate",
+      "to_node": "pt_e1s2_buf_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e1s2_buf_dispense_pt_e1s2_buf_eject",
+      "from_node": "pt_e1s2_buf_dispense",
+      "to_node": "pt_e1s2_buf_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e1s2_enz_eject_pt_e1s2_sub_attach",
+      "from_node": "pt_e1s2_enz_eject",
+      "to_node": "pt_e1s2_sub_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e1s2_sub_eject_pt_e1s2_buf_attach",
+      "from_node": "pt_e1s2_sub_eject",
+      "to_node": "pt_e1s2_buf_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e1s2_buf_eject_pt_e1s3_enz_attach",
+      "from_node": "pt_e1s2_buf_eject",
+      "to_node": "pt_e1s3_enz_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e1s3_enz_attach_pt_e1s3_enz_aspirate",
+      "from_node": "pt_e1s3_enz_attach",
+      "to_node": "pt_e1s3_enz_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e1s3_enz_aspirate_pt_e1s3_enz_dispense",
+      "from_node": "pt_e1s3_enz_aspirate",
+      "to_node": "pt_e1s3_enz_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e1s3_enz_dispense_pt_e1s3_enz_eject",
+      "from_node": "pt_e1s3_enz_dispense",
+      "to_node": "pt_e1s3_enz_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e1s3_sub_attach_pt_e1s3_sub_aspirate",
+      "from_node": "pt_e1s3_sub_attach",
+      "to_node": "pt_e1s3_sub_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e1s3_sub_aspirate_pt_e1s3_sub_dispense",
+      "from_node": "pt_e1s3_sub_aspirate",
+      "to_node": "pt_e1s3_sub_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e1s3_sub_dispense_pt_e1s3_sub_eject",
+      "from_node": "pt_e1s3_sub_dispense",
+      "to_node": "pt_e1s3_sub_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e1s3_buf_attach_pt_e1s3_buf_aspirate",
+      "from_node": "pt_e1s3_buf_attach",
+      "to_node": "pt_e1s3_buf_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e1s3_buf_aspirate_pt_e1s3_buf_dispense",
+      "from_node": "pt_e1s3_buf_aspirate",
+      "to_node": "pt_e1s3_buf_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e1s3_buf_dispense_pt_e1s3_buf_eject",
+      "from_node": "pt_e1s3_buf_dispense",
+      "to_node": "pt_e1s3_buf_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e1s3_enz_eject_pt_e1s3_sub_attach",
+      "from_node": "pt_e1s3_enz_eject",
+      "to_node": "pt_e1s3_sub_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e1s3_sub_eject_pt_e1s3_buf_attach",
+      "from_node": "pt_e1s3_sub_eject",
+      "to_node": "pt_e1s3_buf_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e1s3_buf_eject_pt_e2s1_enz_attach",
+      "from_node": "pt_e1s3_buf_eject",
+      "to_node": "pt_e2s1_enz_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e2s1_enz_attach_pt_e2s1_enz_aspirate",
+      "from_node": "pt_e2s1_enz_attach",
+      "to_node": "pt_e2s1_enz_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e2s1_enz_aspirate_pt_e2s1_enz_dispense",
+      "from_node": "pt_e2s1_enz_aspirate",
+      "to_node": "pt_e2s1_enz_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e2s1_enz_dispense_pt_e2s1_enz_eject",
+      "from_node": "pt_e2s1_enz_dispense",
+      "to_node": "pt_e2s1_enz_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e2s1_sub_attach_pt_e2s1_sub_aspirate",
+      "from_node": "pt_e2s1_sub_attach",
+      "to_node": "pt_e2s1_sub_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e2s1_sub_aspirate_pt_e2s1_sub_dispense",
+      "from_node": "pt_e2s1_sub_aspirate",
+      "to_node": "pt_e2s1_sub_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e2s1_sub_dispense_pt_e2s1_sub_eject",
+      "from_node": "pt_e2s1_sub_dispense",
+      "to_node": "pt_e2s1_sub_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e2s1_buf_attach_pt_e2s1_buf_aspirate",
+      "from_node": "pt_e2s1_buf_attach",
+      "to_node": "pt_e2s1_buf_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e2s1_buf_aspirate_pt_e2s1_buf_dispense",
+      "from_node": "pt_e2s1_buf_aspirate",
+      "to_node": "pt_e2s1_buf_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e2s1_buf_dispense_pt_e2s1_buf_eject",
+      "from_node": "pt_e2s1_buf_dispense",
+      "to_node": "pt_e2s1_buf_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e2s1_enz_eject_pt_e2s1_sub_attach",
+      "from_node": "pt_e2s1_enz_eject",
+      "to_node": "pt_e2s1_sub_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e2s1_sub_eject_pt_e2s1_buf_attach",
+      "from_node": "pt_e2s1_sub_eject",
+      "to_node": "pt_e2s1_buf_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e2s1_buf_eject_pt_e2s2_enz_attach",
+      "from_node": "pt_e2s1_buf_eject",
+      "to_node": "pt_e2s2_enz_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e2s2_enz_attach_pt_e2s2_enz_aspirate",
+      "from_node": "pt_e2s2_enz_attach",
+      "to_node": "pt_e2s2_enz_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e2s2_enz_aspirate_pt_e2s2_enz_dispense",
+      "from_node": "pt_e2s2_enz_aspirate",
+      "to_node": "pt_e2s2_enz_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e2s2_enz_dispense_pt_e2s2_enz_eject",
+      "from_node": "pt_e2s2_enz_dispense",
+      "to_node": "pt_e2s2_enz_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e2s2_sub_attach_pt_e2s2_sub_aspirate",
+      "from_node": "pt_e2s2_sub_attach",
+      "to_node": "pt_e2s2_sub_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e2s2_sub_aspirate_pt_e2s2_sub_dispense",
+      "from_node": "pt_e2s2_sub_aspirate",
+      "to_node": "pt_e2s2_sub_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e2s2_sub_dispense_pt_e2s2_sub_eject",
+      "from_node": "pt_e2s2_sub_dispense",
+      "to_node": "pt_e2s2_sub_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e2s2_buf_attach_pt_e2s2_buf_aspirate",
+      "from_node": "pt_e2s2_buf_attach",
+      "to_node": "pt_e2s2_buf_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e2s2_buf_aspirate_pt_e2s2_buf_dispense",
+      "from_node": "pt_e2s2_buf_aspirate",
+      "to_node": "pt_e2s2_buf_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e2s2_buf_dispense_pt_e2s2_buf_eject",
+      "from_node": "pt_e2s2_buf_dispense",
+      "to_node": "pt_e2s2_buf_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e2s2_enz_eject_pt_e2s2_sub_attach",
+      "from_node": "pt_e2s2_enz_eject",
+      "to_node": "pt_e2s2_sub_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e2s2_sub_eject_pt_e2s2_buf_attach",
+      "from_node": "pt_e2s2_sub_eject",
+      "to_node": "pt_e2s2_buf_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e2s2_buf_eject_pt_e2s3_enz_attach",
+      "from_node": "pt_e2s2_buf_eject",
+      "to_node": "pt_e2s3_enz_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e2s3_enz_attach_pt_e2s3_enz_aspirate",
+      "from_node": "pt_e2s3_enz_attach",
+      "to_node": "pt_e2s3_enz_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e2s3_enz_aspirate_pt_e2s3_enz_dispense",
+      "from_node": "pt_e2s3_enz_aspirate",
+      "to_node": "pt_e2s3_enz_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e2s3_enz_dispense_pt_e2s3_enz_eject",
+      "from_node": "pt_e2s3_enz_dispense",
+      "to_node": "pt_e2s3_enz_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e2s3_sub_attach_pt_e2s3_sub_aspirate",
+      "from_node": "pt_e2s3_sub_attach",
+      "to_node": "pt_e2s3_sub_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e2s3_sub_aspirate_pt_e2s3_sub_dispense",
+      "from_node": "pt_e2s3_sub_aspirate",
+      "to_node": "pt_e2s3_sub_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e2s3_sub_dispense_pt_e2s3_sub_eject",
+      "from_node": "pt_e2s3_sub_dispense",
+      "to_node": "pt_e2s3_sub_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e2s3_buf_attach_pt_e2s3_buf_aspirate",
+      "from_node": "pt_e2s3_buf_attach",
+      "to_node": "pt_e2s3_buf_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e2s3_buf_aspirate_pt_e2s3_buf_dispense",
+      "from_node": "pt_e2s3_buf_aspirate",
+      "to_node": "pt_e2s3_buf_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e2s3_buf_dispense_pt_e2s3_buf_eject",
+      "from_node": "pt_e2s3_buf_dispense",
+      "to_node": "pt_e2s3_buf_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e2s3_enz_eject_pt_e2s3_sub_attach",
+      "from_node": "pt_e2s3_enz_eject",
+      "to_node": "pt_e2s3_sub_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e2s3_sub_eject_pt_e2s3_buf_attach",
+      "from_node": "pt_e2s3_sub_eject",
+      "to_node": "pt_e2s3_buf_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e2s3_buf_eject_pt_e3s1_enz_attach",
+      "from_node": "pt_e2s3_buf_eject",
+      "to_node": "pt_e3s1_enz_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e3s1_enz_attach_pt_e3s1_enz_aspirate",
+      "from_node": "pt_e3s1_enz_attach",
+      "to_node": "pt_e3s1_enz_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e3s1_enz_aspirate_pt_e3s1_enz_dispense",
+      "from_node": "pt_e3s1_enz_aspirate",
+      "to_node": "pt_e3s1_enz_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e3s1_enz_dispense_pt_e3s1_enz_eject",
+      "from_node": "pt_e3s1_enz_dispense",
+      "to_node": "pt_e3s1_enz_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e3s1_sub_attach_pt_e3s1_sub_aspirate",
+      "from_node": "pt_e3s1_sub_attach",
+      "to_node": "pt_e3s1_sub_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e3s1_sub_aspirate_pt_e3s1_sub_dispense",
+      "from_node": "pt_e3s1_sub_aspirate",
+      "to_node": "pt_e3s1_sub_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e3s1_sub_dispense_pt_e3s1_sub_eject",
+      "from_node": "pt_e3s1_sub_dispense",
+      "to_node": "pt_e3s1_sub_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e3s1_buf_attach_pt_e3s1_buf_aspirate",
+      "from_node": "pt_e3s1_buf_attach",
+      "to_node": "pt_e3s1_buf_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e3s1_buf_aspirate_pt_e3s1_buf_dispense",
+      "from_node": "pt_e3s1_buf_aspirate",
+      "to_node": "pt_e3s1_buf_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e3s1_buf_dispense_pt_e3s1_buf_eject",
+      "from_node": "pt_e3s1_buf_dispense",
+      "to_node": "pt_e3s1_buf_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e3s1_enz_eject_pt_e3s1_sub_attach",
+      "from_node": "pt_e3s1_enz_eject",
+      "to_node": "pt_e3s1_sub_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e3s1_sub_eject_pt_e3s1_buf_attach",
+      "from_node": "pt_e3s1_sub_eject",
+      "to_node": "pt_e3s1_buf_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e3s1_buf_eject_pt_e3s2_enz_attach",
+      "from_node": "pt_e3s1_buf_eject",
+      "to_node": "pt_e3s2_enz_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e3s2_enz_attach_pt_e3s2_enz_aspirate",
+      "from_node": "pt_e3s2_enz_attach",
+      "to_node": "pt_e3s2_enz_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e3s2_enz_aspirate_pt_e3s2_enz_dispense",
+      "from_node": "pt_e3s2_enz_aspirate",
+      "to_node": "pt_e3s2_enz_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e3s2_enz_dispense_pt_e3s2_enz_eject",
+      "from_node": "pt_e3s2_enz_dispense",
+      "to_node": "pt_e3s2_enz_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e3s2_sub_attach_pt_e3s2_sub_aspirate",
+      "from_node": "pt_e3s2_sub_attach",
+      "to_node": "pt_e3s2_sub_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e3s2_sub_aspirate_pt_e3s2_sub_dispense",
+      "from_node": "pt_e3s2_sub_aspirate",
+      "to_node": "pt_e3s2_sub_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e3s2_sub_dispense_pt_e3s2_sub_eject",
+      "from_node": "pt_e3s2_sub_dispense",
+      "to_node": "pt_e3s2_sub_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e3s2_buf_attach_pt_e3s2_buf_aspirate",
+      "from_node": "pt_e3s2_buf_attach",
+      "to_node": "pt_e3s2_buf_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e3s2_buf_aspirate_pt_e3s2_buf_dispense",
+      "from_node": "pt_e3s2_buf_aspirate",
+      "to_node": "pt_e3s2_buf_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e3s2_buf_dispense_pt_e3s2_buf_eject",
+      "from_node": "pt_e3s2_buf_dispense",
+      "to_node": "pt_e3s2_buf_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e3s2_enz_eject_pt_e3s2_sub_attach",
+      "from_node": "pt_e3s2_enz_eject",
+      "to_node": "pt_e3s2_sub_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e3s2_sub_eject_pt_e3s2_buf_attach",
+      "from_node": "pt_e3s2_sub_eject",
+      "to_node": "pt_e3s2_buf_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e3s2_buf_eject_pt_e3s3_enz_attach",
+      "from_node": "pt_e3s2_buf_eject",
+      "to_node": "pt_e3s3_enz_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e3s3_enz_attach_pt_e3s3_enz_aspirate",
+      "from_node": "pt_e3s3_enz_attach",
+      "to_node": "pt_e3s3_enz_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e3s3_enz_aspirate_pt_e3s3_enz_dispense",
+      "from_node": "pt_e3s3_enz_aspirate",
+      "to_node": "pt_e3s3_enz_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e3s3_enz_dispense_pt_e3s3_enz_eject",
+      "from_node": "pt_e3s3_enz_dispense",
+      "to_node": "pt_e3s3_enz_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e3s3_sub_attach_pt_e3s3_sub_aspirate",
+      "from_node": "pt_e3s3_sub_attach",
+      "to_node": "pt_e3s3_sub_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e3s3_sub_aspirate_pt_e3s3_sub_dispense",
+      "from_node": "pt_e3s3_sub_aspirate",
+      "to_node": "pt_e3s3_sub_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e3s3_sub_dispense_pt_e3s3_sub_eject",
+      "from_node": "pt_e3s3_sub_dispense",
+      "to_node": "pt_e3s3_sub_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e3s3_buf_attach_pt_e3s3_buf_aspirate",
+      "from_node": "pt_e3s3_buf_attach",
+      "to_node": "pt_e3s3_buf_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e3s3_buf_aspirate_pt_e3s3_buf_dispense",
+      "from_node": "pt_e3s3_buf_aspirate",
+      "to_node": "pt_e3s3_buf_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e3s3_buf_dispense_pt_e3s3_buf_eject",
+      "from_node": "pt_e3s3_buf_dispense",
+      "to_node": "pt_e3s3_buf_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e3s3_enz_eject_pt_e3s3_sub_attach",
+      "from_node": "pt_e3s3_enz_eject",
+      "to_node": "pt_e3s3_sub_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e3s3_sub_eject_pt_e3s3_buf_attach",
+      "from_node": "pt_e3s3_sub_eject",
+      "to_node": "pt_e3s3_buf_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_pt_e3s3_buf_eject_blank_e_enz_attach",
+      "from_node": "pt_e3s3_buf_eject",
+      "to_node": "blank_e_enz_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_blank_e_enz_attach_blank_e_enz_aspirate",
+      "from_node": "blank_e_enz_attach",
+      "to_node": "blank_e_enz_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_blank_e_enz_aspirate_blank_e_enz_dispense",
+      "from_node": "blank_e_enz_aspirate",
+      "to_node": "blank_e_enz_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_blank_e_enz_dispense_blank_e_enz_eject",
+      "from_node": "blank_e_enz_dispense",
+      "to_node": "blank_e_enz_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_blank_e_buf_attach_blank_e_buf_aspirate",
+      "from_node": "blank_e_buf_attach",
+      "to_node": "blank_e_buf_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_blank_e_buf_aspirate_blank_e_buf_dispense",
+      "from_node": "blank_e_buf_aspirate",
+      "to_node": "blank_e_buf_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_blank_e_buf_dispense_blank_e_buf_eject",
+      "from_node": "blank_e_buf_dispense",
+      "to_node": "blank_e_buf_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_blank_e_enz_eject_blank_e_buf_attach",
+      "from_node": "blank_e_enz_eject",
+      "to_node": "blank_e_buf_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_blank_e_buf_eject_blank_s_sub_attach",
+      "from_node": "blank_e_buf_eject",
+      "to_node": "blank_s_sub_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_blank_s_sub_attach_blank_s_sub_aspirate",
+      "from_node": "blank_s_sub_attach",
+      "to_node": "blank_s_sub_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_blank_s_sub_aspirate_blank_s_sub_dispense",
+      "from_node": "blank_s_sub_aspirate",
+      "to_node": "blank_s_sub_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_blank_s_sub_dispense_blank_s_sub_eject",
+      "from_node": "blank_s_sub_dispense",
+      "to_node": "blank_s_sub_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_blank_s_buf_attach_blank_s_buf_aspirate",
+      "from_node": "blank_s_buf_attach",
+      "to_node": "blank_s_buf_aspirate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_blank_s_buf_aspirate_blank_s_buf_dispense",
+      "from_node": "blank_s_buf_aspirate",
+      "to_node": "blank_s_buf_dispense",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_blank_s_buf_dispense_blank_s_buf_eject",
+      "from_node": "blank_s_buf_dispense",
+      "to_node": "blank_s_buf_eject",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_blank_s_sub_eject_blank_s_buf_attach",
+      "from_node": "blank_s_sub_eject",
+      "to_node": "blank_s_buf_attach",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_blank_s_buf_eject_save_run_mid",
+      "from_node": "blank_s_buf_eject",
+      "to_node": "save_run_mid",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_place_pipette_grab_plate",
+      "from_node": "place_pipette",
+      "to_node": "grab_plate",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_grab_plate_reader_open_pre",
+      "from_node": "grab_plate",
+      "to_node": "reader_open_pre",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_reader_open_pre_reader_load",
+      "from_node": "reader_open_pre",
+      "to_node": "reader_load",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_reader_load_reader_closed",
+      "from_node": "reader_load",
+      "to_node": "reader_closed",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_save_run_end_1",
+      "from_node": "save_run",
+      "to_node": "end_1",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_reader_closed_save_run",
+      "from_node": "reader_closed",
+      "to_node": "save_run",
+      "condition": {
+        "type": "on_success"
+      }
+    },
+    {
+      "edge_id": "e_save_run_start_grab_pipette",
+      "from_node": "save_run_start",
+      "to_node": "grab_pipette",
+      "condition": {
+        "type": "default"
+      }
+    },
+    {
+      "edge_id": "e_save_run_mid_place_pipette",
+      "from_node": "save_run_mid",
+      "to_node": "place_pipette",
+      "condition": {
+        "type": "default"
+      }
+    }
+  ],
+  "canvas_ui": {
+    "kind": "react",
+    "source_ref": "canvas/tem1_kinetics_characterization_screen.tsx",
+    "enabled": true,
+    "version": 1,
+    "updated_at": "2026-07-25T00:00:00.000Z"
+  }
+}

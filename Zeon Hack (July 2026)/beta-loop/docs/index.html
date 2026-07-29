@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TEM-1 Activity Screen — Protocol Walkthrough</title>
+<style>
+  :root {
+    --bg: #f7f6f2;
+    --surface: #ffffff;
+    --surface-dim: #eeece5;
+    --text: #1e2422;
+    --text-muted: #5b655f;
+    --line: rgba(30,36,34,0.14);
+    --line-strong: rgba(30,36,34,0.28);
+    --amber: #a86a16;
+    --amber-soft: #f1e0bf;
+    --red: #a63b2a;
+    --red-soft: #f3ddd6;
+    --teal: #2f6b64;
+    --teal-soft: #d9ebe7;
+    --slate: #5b655f;
+    --slate-soft: #e3e2dc;
+    --violet: #6b5aa8;
+    --violet-soft: #e4dff2;
+    --well-empty: #e4e2da;
+    --shadow: 0 1px 2px rgba(30,36,34,0.06), 0 8px 24px -16px rgba(30,36,34,0.25);
+    --font-display: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+    --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", ui-sans-serif, sans-serif;
+    --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
+  }
+  :root[data-theme="dark"] {
+    --bg: #15191a; --surface: #1c2122; --surface-dim: #22282a; --text: #e7ebe7; --text-muted: #9aa6a0;
+    --line: rgba(231,235,231,0.12); --line-strong: rgba(231,235,231,0.24);
+    --amber: #d9a24d; --amber-soft: rgba(217,162,77,0.16);
+    --red: #d97e6a; --red-soft: rgba(217,126,106,0.16);
+    --teal: #6bb0a6; --teal-soft: rgba(107,176,166,0.15);
+    --slate: #9aa6a0; --slate-soft: rgba(154,166,160,0.14);
+    --violet: #b3a4e0; --violet-soft: rgba(179,164,224,0.16);
+    --well-empty: #262c2d;
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 12px 28px -18px rgba(0,0,0,0.6);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #15191a; --surface: #1c2122; --surface-dim: #22282a; --text: #e7ebe7; --text-muted: #9aa6a0;
+      --line: rgba(231,235,231,0.12); --line-strong: rgba(231,235,231,0.24);
+      --amber: #d9a24d; --amber-soft: rgba(217,162,77,0.16);
+      --red: #d97e6a; --red-soft: rgba(217,126,106,0.16);
+      --teal: #6bb0a6; --teal-soft: rgba(107,176,166,0.15);
+      --slate: #9aa6a0; --slate-soft: rgba(154,166,160,0.14);
+      --violet: #b3a4e0; --violet-soft: rgba(179,164,224,0.16);
+      --well-empty: #262c2d;
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 12px 28px -18px rgba(0,0,0,0.6);
+    }
+  }
+
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+  ::selection { background: var(--amber-soft); }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 56px 24px 96px; }
+
+  header.top { margin-bottom: 40px; }
+  .eyebrow { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 12px; }
+  .eyebrow .path { color: var(--amber); }
+  h1 { font-family: var(--font-display); font-size: clamp(28px, 4vw, 40px); font-weight: 600; line-height: 1.08; letter-spacing: -0.01em; margin: 0 0 14px; text-wrap: balance; max-width: 22ch; }
+  .lede { font-size: 15.5px; line-height: 1.65; color: var(--text-muted); max-width: 68ch; margin: 0; }
+  .lede strong { color: var(--text); font-weight: 600; }
+
+  .updated-banner { display: flex; gap: 10px; align-items: flex-start; margin-top: 18px; padding: 12px 14px; border: 1px solid var(--violet); background: var(--violet-soft); border-radius: 10px; font-size: 13px; line-height: 1.55; color: var(--text); }
+  .updated-banner .tag { flex: 0 0 auto; font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--violet); border: 1px solid var(--violet); border-radius: 999px; padding: 2px 8px; }
+
+  section { margin-top: 56px; }
+  .section-head { display: flex; align-items: baseline; gap: 10px; border-top: 1px solid var(--line-strong); padding-top: 14px; margin-bottom: 20px; }
+  .section-num { font-family: var(--font-mono); font-size: 11px; color: var(--amber); }
+  .section-title { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); }
+  h2.section-h { font-family: var(--font-display); font-size: 21px; font-weight: 600; margin: 0 0 14px; }
+  p.body-p { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); max-width: 68ch; }
+  p.body-p code, li code, td code { font-family: var(--font-mono); font-size: 0.9em; background: var(--surface-dim); padding: 1px 5px; border-radius: 4px; color: var(--text); }
+
+  /* ---- Phase stepper ---- */
+  .phases { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); box-shadow: var(--shadow); overflow: hidden; }
+  .phase { padding: 16px 12px; display: flex; flex-direction: column; gap: 6px; position: relative; }
+  .phase + .phase { border-left: 1px dashed var(--line-strong); }
+  .phase-num { font-family: var(--font-mono); font-size: 10px; color: var(--amber); }
+  .phase-title { font-weight: 600; font-size: 12.5px; line-height: 1.3; }
+  .phase-meta { font-family: var(--font-mono); font-size: 10.5px; color: var(--text-muted); }
+  @media (max-width: 860px) { .phases { grid-template-columns: 1fr 1fr; } .phase + .phase { border-left: none; border-top: 1px dashed var(--line-strong); } }
+
+  /* ---- Timeline ---- */
+  .timeline { display: flex; flex-direction: column; }
+  .tstep { display: grid; grid-template-columns: 34px 1fr; gap: 14px; position: relative; padding-bottom: 22px; }
+  .tstep:last-child { padding-bottom: 0; }
+  .tstep .rail { display: flex; flex-direction: column; align-items: center; }
+  .tstep .dot { width: 26px; height: 26px; border-radius: 50%; background: var(--surface); border: 1.5px solid var(--line-strong); display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 11px; font-weight: 600; color: var(--text-muted); flex: 0 0 auto; }
+  .tstep.batch .dot { border-color: var(--teal); color: var(--teal); }
+  .tstep.mech .dot { border-color: var(--amber); color: var(--amber); }
+  .tstep.wait .dot { border-color: var(--red); color: var(--red); }
+  .tstep.new .dot { border-color: var(--violet); color: var(--violet); }
+  .tstep .line { flex: 1; width: 1px; background: var(--line-strong); margin-top: 2px; }
+  .tstep:last-child .line { display: none; }
+  .tcontent { padding-top: 2px; }
+  .tcontent .ttitle { font-weight: 600; font-size: 14px; margin-bottom: 3px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .tcontent .tbadge { font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; padding: 2px 7px; border-radius: 999px; border: 1px solid var(--line-strong); color: var(--text-muted); }
+  .tstep.batch .tbadge { color: var(--teal); border-color: var(--teal); background: var(--teal-soft); }
+  .tstep.mech .tbadge { color: var(--amber); border-color: var(--amber); background: var(--amber-soft); }
+  .tstep.wait .tbadge { color: var(--red); border-color: var(--red); background: var(--red-soft); }
+  .tstep.new .tbadge { color: var(--violet); border-color: var(--violet); background: var(--violet-soft); }
+  .tcontent .tdesc { font-size: 13px; color: var(--text-muted); line-height: 1.55; }
+
+  /* ---- Mechanical sub-sequence pills ---- */
+  .pillrow { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 8px; }
+  .pill { font-family: var(--font-mono); font-size: 11px; padding: 5px 10px; border-radius: 7px; background: var(--surface-dim); border: 1px solid var(--line); color: var(--text); white-space: nowrap; }
+  .pill.accent { border-color: var(--amber); color: var(--amber); background: var(--amber-soft); }
+  .pill.accent2 { border-color: var(--red); color: var(--red); background: var(--red-soft); }
+  .pill.accent3 { border-color: var(--violet); color: var(--violet); background: var(--violet-soft); }
+  .pillrow .sep { color: var(--text-muted); font-size: 12px; }
+
+  /* ---- Plate map ---- */
+  .plate-card { border: 1px solid var(--line); background: var(--surface); border-radius: 14px; padding: 20px; box-shadow: var(--shadow); overflow-x: auto; }
+  .plate-grid { display: grid; grid-template-columns: 22px repeat(12, 36px); gap: 5px; align-items: center; width: max-content; }
+  .colhead, .rowhead { font-family: var(--font-mono); font-size: 10px; color: var(--text-muted); text-align: center; }
+  .well { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 9.5px; font-weight: 600; border: 1.5px solid var(--line-strong); background: var(--well-empty); color: var(--text-muted); }
+  .well.empty { border-style: dashed; opacity: 0.4; }
+  .well.positive { background: var(--red-soft); border-color: var(--red); color: var(--red); }
+  .well.negative { background: var(--slate-soft); border-color: var(--slate); color: var(--slate); }
+  .well.vehicle { background: var(--teal-soft); border-color: var(--teal); color: var(--teal); }
+  .well.compound { background: var(--amber-soft); border-color: var(--amber); color: var(--amber); }
+  .well.special { background: var(--violet-soft); border-color: var(--violet); color: var(--violet); }
+  .legend { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 16px; font-size: 12px; color: var(--text-muted); }
+  .legend .item { display: flex; align-items: center; gap: 7px; }
+  .swatch { width: 12px; height: 12px; border-radius: 50%; border: 1.5px solid var(--line-strong); }
+  .swatch.positive { background: var(--red-soft); border-color: var(--red); }
+  .swatch.negative { background: var(--slate-soft); border-color: var(--slate); }
+  .swatch.vehicle { background: var(--teal-soft); border-color: var(--teal); }
+  .swatch.compound { background: var(--amber-soft); border-color: var(--amber); }
+  .swatch.special { background: var(--violet-soft); border-color: var(--violet); }
+  .swatch.empty { background: var(--well-empty); border-style: dashed; }
+
+  /* ---- Table ---- */
+  table.dtable { width: 100%; border-collapse: collapse; font-size: 13px; }
+  table.dtable th { font-family: var(--font-mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line-strong); font-weight: 600; }
+  table.dtable td { padding: 9px 10px; border-bottom: 1px solid var(--line); color: var(--text); }
+  table.dtable td.num, table.dtable th.num { font-family: var(--font-mono); text-align: right; font-variant-numeric: tabular-nums; }
+  table.dtable tr:last-child td { border-bottom: none; }
+  .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); box-shadow: var(--shadow); }
+  .table-wrap table.dtable { min-width: 620px; }
+  .table-wrap td, .table-wrap th { padding-left: 16px; }
+  .dotc { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+  .dotc.positive { background: var(--red); } .dotc.negative { background: var(--slate); } .dotc.vehicle { background: var(--teal); } .dotc.compound { background: var(--amber); } .dotc.special { background: var(--violet); }
+
+  /* ---- Stat row ---- */
+  .stats { display: flex; gap: 0; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); box-shadow: var(--shadow); overflow: hidden; flex-wrap: wrap; }
+  .stat { flex: 1; min-width: 110px; padding: 16px 16px; }
+  .stat + .stat { border-left: 1px dashed var(--line-strong); }
+  .stat-label { font-family: var(--font-mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); }
+  .stat-value { font-family: var(--font-mono); font-size: 20px; font-weight: 500; margin-top: 4px; font-variant-numeric: tabular-nums; }
+  .stat-value .unit { font-size: 12px; color: var(--text-muted); margin-left: 3px; }
+
+  .two-col { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 20px; }
+  @media (max-width: 720px) { .two-col { grid-template-columns: 1fr; } .plate-grid { grid-template-columns: 20px repeat(12, 30px); } .well { width: 30px; height: 30px; } .stat + .stat { border-left: none; border-top: 1px dashed var(--line-strong); } }
+
+  .param-card { border: 1px solid var(--line); background: var(--surface); border-radius: 10px; padding: 14px 16px; font-size: 12.5px; }
+  .param-card h3 { margin: 0 0 8px; font-family: var(--font-mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); font-weight: 600;}
+  ul.rules { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  ul.rules li { display: flex; gap: 10px; font-size: 13.5px; color: var(--text-muted); line-height: 1.55; }
+  ul.rules li::before { content: ""; flex: 0 0 auto; width: 6px; height: 6px; border-radius: 50%; background: var(--amber); margin-top: 7px; }
+  ul.rules li strong { color: var(--text); font-weight: 600; }
+  ul.rules.changelog li::before { background: var(--violet); }
+
+  footer.foot { margin-top: 64px; padding-top: 20px; border-top: 1px solid var(--line-strong); font-family: var(--font-mono); font-size: 11.5px; color: var(--text-muted); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="top">
+    <p class="eyebrow">workflow · <span class="path">mastermix/workflows/tem1_activity_screen.json</span></p>
+    <h1>Running the combined TEM-1 screen</h1>
+    <p class="lede">One workflow file now does the dilution and dosing job end to end: it dilutes its own reagents — TEM-1 enzyme, 9 active test compounds plus a known-active control, matched vehicle, and (just-in-time) nitrocefin — then builds a 36-well assay plate, mixes it, pre-incubates, and develops the color reaction in a stagger-aware order. It then <strong>stops</strong>: the plate reader is no longer touched by the robot at all.</p>
+    <div class="updated-banner">
+      <span class="tag">regenerated · v5</span>
+      <span>Two upstream changes since the last version: (1) <strong>"remove plate reader steps"</strong> — the automated kinetic-read section (grab plate → open/load/close reader → <code>run_kinetic_schedule</code> → unload → return) was deleted from the production workflow entirely; the robot now stops after nitrocefin dosing and hands the plate to a human for a manually-started Gen5 kinetic read. (2) <strong>"fix compound 10"</strong> (round 2) — <code>prepare_tem1_dilution_plate</code>'s Python signature had <code>compound_10_source_plate</code> as a required argument with no default, but the workflow stopped passing it; that parameter is now removed from the skill entirely, matching the workflow. The earlier mismatch callout below is now resolved.</span>
+    </div>
+  </header>
+
+  <section>
+    <div class="section-head"><span class="section-num">01</span><span class="section-title">Five phases, then a hand-off</span></div>
+    <h2 class="section-h">The shape of the protocol</h2>
+    <p class="body-p">Every node falls into one of five phases, executed strictly in sequence (every edge is <code>on_success</code> — no branching, no retries). The robot's job now ends at phase V; reading the plate is a separate, manual step.</p>
+    <div class="phases">
+      <div class="phase">
+        <span class="phase-num">0</span>
+        <span class="phase-title">Prepare working solutions</span>
+        <span class="phase-meta">1 skill, 5 dilutions</span>
+      </div>
+      <div class="phase">
+        <span class="phase-num">I</span>
+        <span class="phase-title">Build the plate</span>
+        <span class="phase-meta">14 batched dispenses</span>
+      </div>
+      <div class="phase">
+        <span class="phase-num">II</span>
+        <span class="phase-title">Whole-plate mix</span>
+        <span class="phase-meta">shaker, 1 min</span>
+      </div>
+      <div class="phase">
+        <span class="phase-num">III</span>
+        <span class="phase-title">Pre-incubate</span>
+        <span class="phase-meta">bench wait, 10 min</span>
+      </div>
+      <div class="phase">
+        <span class="phase-num">IV</span>
+        <span class="phase-title">Nitrocefin, just-in-time</span>
+        <span class="phase-meta">1 prep + 13 dispenses</span>
+      </div>
+      <div class="phase">
+        <span class="phase-num">V</span>
+        <span class="phase-title">Save run · robot stops</span>
+        <span class="phase-meta">plate reader is manual now</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="section-num">02</span><span class="section-title">Phase 0</span></div>
+    <h2 class="section-h">Preparing every working solution before assay setup</h2>
+    <p class="body-p">The very first node, <code>prepare_dilutions</code>, runs the <code>prepare_tem1_dilution_plate</code> skill before the workflow even picks up a pipette for the assay itself. It performs five distinct dilutions on <code>wellplate_pcr_parts_4</code> (the working plate) and in cold-block tubes:</p>
+    <div class="timeline">
+      <div class="tstep new">
+        <div class="rail"><div class="dot">1</div><div class="line"></div></div>
+        <div class="tcontent">
+          <div class="ttitle">TEM-1 enzyme, 2-step dilution <span class="tbadge">100 ng/µL → 0.1 ng/µL</span></div>
+          <div class="tdesc">2 µL stock (<code>hole_1</code>) + 198 µL BLB (<code>hole_6</code>) → 200 µL at 1 ng/µL intermediate (<code>hole_2</code>), mixed; then 100 µL of that + 900 µL more BLB → 1000 µL at 0.1 ng/µL working solution (<code>hole_8</code>), mixed again. A real 100× then 10× dilution — 1000× total.</div>
+        </div>
+      </div>
+      <div class="tstep new">
+        <div class="rail"><div class="dot">2</div><div class="line"></div></div>
+        <div class="tcontent">
+          <div class="ttitle">T1262 tazobactam (now Compound 1), special low-dose intermediate <span class="tbadge">10 mM → 200 µM</span></div>
+          <div class="tdesc">49 µL BLB (<code>hole_5</code>) + 1 µL of 10 mM T1262 stock — read from <code>compound_1_source_plate</code>/<code>compound_1_source_well</code> — → 50 µL at 200 µM in <code>hole_3</code>, mixed. Every other compound targets a 50 µM assay dose (per literature, most default to a project-wide HTS convention); T1262's is set from a 10× IC50 rule, landing at 1 µM, so it gets its own intermediate tube instead of the standard recipe.</div>
+        </div>
+      </div>
+      <div class="tstep batch">
+        <div class="rail"><div class="dot">3</div><div class="line"></div></div>
+        <div class="tcontent">
+          <div class="ttitle">Batch-dispense BLB into 10 working wells <span class="tbadge">batched · 47.5 µL</span></div>
+          <div class="tdesc">Positive control + all 9 active compound wells (including T1262's) get their diluent from BLB tube 1 (<code>hole_5</code>) in one multi-dispense pass. Slot 10 no longer exists in the workflow's compound list at all — as of "fix compound 10," it was removed outright rather than left empty.</div>
+        </div>
+      </div>
+      <div class="tstep batch">
+        <div class="rail"><div class="dot">4</div><div class="line"></div></div>
+        <div class="tcontent">
+          <div class="ttitle">Batch-dispense BLB into the vehicle well <span class="tbadge">batched · 95 µL</span></div>
+          <div class="tdesc">From BLB tube 2 (<code>hole_6</code>) — a second physical tube exists purely to keep either tube under a ~1.5 mL practical fill limit, not for chemistry reasons.</div>
+        </div>
+      </div>
+      <div class="tstep new">
+        <div class="rail"><div class="dot">5</div></div>
+        <div class="tcontent">
+          <div class="ttitle">Transfer stock/intermediate + DMSO into every well, then mix all 11 <span class="tbadge">10× stock + 1× DMSO</span></div>
+          <div class="tdesc">9 compounds + positive control each get 2.5 µL from their own source well — except Compound 1 (T1262), which gets 2.5 µL from its 200 µM intermediate (<code>hole_3</code>) instead of raw stock. Vehicle gets 5 µL DMSO. All 11 wells are then mixed (5 cycles).</div>
+        </div>
+      </div>
+    </div>
+    <p class="body-p" style="margin-top:14px;">Result: positive control + 8 standard compounds at <strong>500 µM</strong>, T1262 at <strong>10 µM</strong>, vehicle at <strong>5% DMSO</strong>, and TEM-1 at <strong>0.1 ng/µL</strong> — all sitting ready before Phase I even starts.</p>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="section-num">03</span><span class="section-title">Phase I</span></div>
+    <h2 class="section-h">Building the assay plate from the prepared solutions</h2>
+    <p class="body-p">14 <code>batched_dispense_mastermix</code> calls fill the 96-well assay plate — and every one of them now correctly draws from what Phase 0 just prepared, not from raw stock:</p>
+    <div class="table-wrap">
+      <table class="dtable">
+        <thead><tr><th>Dispense</th><th>Source</th><th class="num">Volume</th><th>Destination wells</th></tr></thead>
+        <tbody>
+          <tr><td>TEM-1 enzyme prep</td><td><code>hole_8</code> (0.1 ng/µL working)</td><td class="num">20 µL</td><td>33 wells (all but negative)</td></tr>
+          <tr><td>No-enzyme prep</td><td><code>hole_6</code> (BLB tube 2, direct)</td><td class="num">20 µL</td><td>3 negative wells</td></tr>
+          <tr><td>Vehicle</td><td>working plate, A2 (5% DMSO)</td><td class="num">5 µL</td><td>6 wells (negative + vehicle)</td></tr>
+          <tr><td>Positive control</td><td>working plate, A1 (500 µM)</td><td class="num">5 µL</td><td>3 wells</td></tr>
+          <tr><td>9× active test compounds</td><td>working plate, A3–A11</td><td class="num">5 µL</td><td>3 wells each (27 total)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="body-p" style="margin-top:12px;">This is the fix from the previous version: compound, control, and vehicle dispenses used to point at raw 10 mM stock plates directly — a 20× overshoot waiting to happen. They now point at the working plate Phase 0 just built.</p>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="section-num">04</span><span class="section-title">Phase II &amp; III</span></div>
+    <h2 class="section-h">Mix, then wait for compounds to meet TEM-1</h2>
+    <p class="body-p">Unchanged from prior versions. The plate takes an out-and-back trip to the shaker (13 discrete open/load/close/run/wait/unload/return skill calls, since the shaker can't be trusted to hold or release the plate on its own), then sits through a 10-minute room-temperature pre-incubation before anything reacts with nitrocefin.</p>
+    <div class="pillrow">
+      <span class="pill">place pipette</span><span class="sep">→</span>
+      <span class="pill">grab plate</span><span class="sep">→</span>
+      <span class="pill">open · load · close shaker</span><span class="sep">→</span>
+      <span class="pill accent">run · on</span><span class="sep">→</span>
+      <span class="pill accent2">wait 1 min</span><span class="sep">→</span>
+      <span class="pill accent">run · off</span><span class="sep">→</span>
+      <span class="pill">open · unload · close shaker</span><span class="sep">→</span>
+      <span class="pill">return plate · grab pipette</span><span class="sep">→</span>
+      <span class="pill accent2">pre-incubate 10 min</span>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="section-num">05</span><span class="section-title">Phase IV</span></div>
+    <h2 class="section-h">Nitrocefin, prepared just-in-time and dosed in a staggered order</h2>
+    <p class="body-p">New skill: <code>prepare_nitrocefin_working_solution</code> runs right after pre-incubation ends — not back in Phase 0 — because the working solution is meant to go onto the plate immediately after it's made.</p>
+    <div class="timeline">
+      <div class="tstep new">
+        <div class="rail"><div class="dot">1</div><div class="line"></div></div>
+        <div class="tcontent">
+          <div class="ttitle">Dilute nitrocefin, 20 mM → 100 µM <span class="tbadge">just-in-time</span></div>
+          <div class="tdesc">1243.75 µL BLB (<code>hole_7</code>, chunked across pipette-volume-limited transfers) + 6.25 µL of 20 mM stock (<code>hole_4</code>) → 1250 µL at 100 µM in <code>hole_10</code>, then mixed. This is the "2×" nitrocefin: still 2-fold above its 50 µM in-well target, because 25 µL lands in a 50 µL well.</div>
+        </div>
+      </div>
+      <div class="tstep batch">
+        <div class="rail"><div class="dot">2</div></div>
+        <div class="tcontent">
+          <div class="ttitle">Dose 13 conditions in stagger-aware order <span class="tbadge">13× batched · 25 µL</span></div>
+          <div class="tdesc">Order: no-TEM-1 negative → positive control → compounds 1–9 → <strong>vehicle + TEM-1 last</strong>. The vehicle wells have no inhibitor at all, so they're the fastest-reacting condition on the plate — dosing them last minimizes the uncontrolled reaction time they accumulate before the first read.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="section-num">06</span><span class="section-title">Plate layout</span></div>
+    <h2 class="section-h">36 wells, column-strip, max-x-separation</h2>
+    <p class="body-p">The R2 v5 layout (<code>data/screens/2/v5/plate_map.json</code>) replaces the old row-triplet "spaced interior" design with a column-strip pattern: replicates run <em>down a column</em> rather than across a row, and no two occupied wells sit horizontally adjacent — every filled well has an empty well on either side of it in its own row.</p>
+    <div class="plate-card">
+      <div class="plate-grid">
+        <div></div>
+        <div class="colhead">1</div><div class="colhead">2</div><div class="colhead">3</div><div class="colhead">4</div><div class="colhead">5</div><div class="colhead">6</div><div class="colhead">7</div><div class="colhead">8</div><div class="colhead">9</div><div class="colhead">10</div><div class="colhead">11</div><div class="colhead">12</div>
+
+        <div class="rowhead">A</div>
+        <div class="well empty">·</div><div class="well empty">·</div><div class="well empty">·</div><div class="well empty">·</div><div class="well empty">·</div><div class="well empty">·</div><div class="well empty">·</div><div class="well empty">·</div><div class="well empty">·</div><div class="well empty">·</div><div class="well empty">·</div><div class="well empty">·</div>
+
+        <div class="rowhead">B</div>
+        <div class="well empty">·</div>
+        <div class="well special" title="B2 · Compound 1: T1262 Tazobactam, 1 µM · tier1_inhibitor / positive">C1</div>
+        <div class="well vehicle" title="B3 · Vehicle + TEM-1">Veh</div>
+        <div class="well compound" title="B4 · Compound 2: T6685 Sulbactam sodium, 50 µM · tier1_inhibitor / positive">C2</div>
+        <div class="well empty">·</div>
+        <div class="well compound" title="B6 · Compound 3: T14081 Enmetazobactam, 50 µM · tier1_inhibitor / positive">C3</div>
+        <div class="well vehicle" title="B7 · Vehicle + TEM-1">Veh</div>
+        <div class="well compound" title="B8 · Compound 4: T1005 Amoxicillin, 50 µM · substrate_control / negative">C4</div>
+        <div class="well empty">·</div>
+        <div class="well compound" title="B10 · Compound 5: T1008 Cephalexin, 50 µM · substrate_control / negative">C5</div>
+        <div class="well empty">·</div>
+        <div class="well empty">·</div>
+
+        <div class="rowhead">C</div>
+        <div class="well empty">·</div><div class="well empty">·</div>
+        <div class="well compound" title="C3 · Compound 8: T0138 Cefpiramide acid, 50 µM · diverse_pick / unknown">C8</div>
+        <div class="well empty">·</div>
+        <div class="well compound" title="C5 · Compound 6: T0224 Meropenem, 50 µM · substrate_control / negative">C6</div>
+        <div class="well empty">·</div>
+        <div class="well compound" title="C7 · Compound 9: T8390 Cefazolin, 50 µM · diverse_pick / unknown">C9</div>
+        <div class="well empty">·</div>
+        <div class="well compound" title="C9 · Compound 7: T0985 Oxacillin sodium salt, 50 µM · substrate_control / negative">C7</div>
+        <div class="well empty">·</div>
+        <div class="well vehicle" title="C11 · Vehicle + TEM-1">Veh</div>
+        <div class="well empty">·</div>
+
+        <div class="rowhead">D</div>
+        <div class="well empty">·</div>
+        <div class="well special" title="D2 · Compound 1: T1262 Tazobactam, 1 µM · tier1_inhibitor / positive">C1</div>
+        <div class="well negative" title="D3 · No-TEM-1 negative">Neg</div>
+        <div class="well compound" title="D4 · Compound 2: T6685 Sulbactam sodium, 50 µM · tier1_inhibitor / positive">C2</div>
+        <div class="well empty">·</div>
+        <div class="well compound" title="D6 · Compound 3: T14081 Enmetazobactam, 50 µM · tier1_inhibitor / positive">C3</div>
+        <div class="well negative" title="D7 · No-TEM-1 negative">Neg</div>
+        <div class="well compound" title="D8 · Compound 4: T1005 Amoxicillin, 50 µM · substrate_control / negative">C4</div>
+        <div class="well empty">·</div>
+        <div class="well compound" title="D10 · Compound 5: T1008 Cephalexin, 50 µM · substrate_control / negative">C5</div>
+        <div class="well empty">·</div>
+        <div class="well empty">·</div>
+
+        <div class="rowhead">E</div>
+        <div class="well empty">·</div><div class="well empty">·</div>
+        <div class="well compound" title="E3 · Compound 8: T0138 Cefpiramide acid, 50 µM · diverse_pick / unknown">C8</div>
+        <div class="well empty">·</div>
+        <div class="well compound" title="E5 · Compound 6: T0224 Meropenem, 50 µM · substrate_control / negative">C6</div>
+        <div class="well empty">·</div>
+        <div class="well compound" title="E7 · Compound 9: T8390 Cefazolin, 50 µM · diverse_pick / unknown">C9</div>
+        <div class="well empty">·</div>
+        <div class="well compound" title="E9 · Compound 7: T0985 Oxacillin sodium salt, 50 µM · substrate_control / negative">C7</div>
+        <div class="well empty">·</div>
+        <div class="well negative" title="E11 · No-TEM-1 negative">Neg</div>
+        <div class="well empty">·</div>
+
+        <div class="rowhead">F</div>
+        <div class="well empty">·</div>
+        <div class="well special" title="F2 · Compound 1: T1262 Tazobactam, 1 µM · tier1_inhibitor / positive">C1</div>
+        <div class="well positive" title="F3 · Positive control">Pos</div>
+        <div class="well compound" title="F4 · Compound 2: T6685 Sulbactam sodium, 50 µM · tier1_inhibitor / positive">C2</div>
+        <div class="well empty">·</div>
+        <div class="well compound" title="F6 · Compound 3: T14081 Enmetazobactam, 50 µM · tier1_inhibitor / positive">C3</div>
+        <div class="well positive" title="F7 · Positive control">Pos</div>
+        <div class="well compound" title="F8 · Compound 4: T1005 Amoxicillin, 50 µM · substrate_control / negative">C4</div>
+        <div class="well empty">·</div>
+        <div class="well compound" title="F10 · Compound 5: T1008 Cephalexin, 50 µM · substrate_control / negative">C5</div>
+        <div class="well empty">·</div>
+        <div class="well empty">·</div>
+
+        <div class="rowhead">G</div>
+        <div class="well empty">·</div><div class="well empty">·</div>
+        <div class="well compound" title="G3 · Compound 8: T0138 Cefpiramide acid, 50 µM · diverse_pick / unknown">C8</div>
+        <div class="well empty">·</div>
+        <div class="well compound" title="G5 · Compound 6: T0224 Meropenem, 50 µM · substrate_control / negative">C6</div>
+        <div class="well empty">·</div>
+        <div class="well compound" title="G7 · Compound 9: T8390 Cefazolin, 50 µM · diverse_pick / unknown">C9</div>
+        <div class="well empty">·</div>
+        <div class="well compound" title="G9 · Compound 7: T0985 Oxacillin sodium salt, 50 µM · substrate_control / negative">C7</div>
+        <div class="well empty">·</div>
+        <div class="well positive" title="G11 · Positive control">Pos</div>
+        <div class="well empty">·</div>
+
+        <div class="rowhead">H</div>
+        <div class="well empty">·</div><div class="well empty">·</div><div class="well empty">·</div><div class="well empty">·</div><div class="well empty">·</div><div class="well empty">·</div><div class="well empty">·</div><div class="well empty">·</div><div class="well empty">·</div><div class="well empty">·</div><div class="well empty">·</div><div class="well empty">·</div>
+      </div>
+      <div class="legend">
+        <div class="item"><span class="swatch positive"></span>Positive control — clavulanic acid, T19860 (3 wells)</div>
+        <div class="item"><span class="swatch negative"></span>No-TEM-1 negative (3 wells)</div>
+        <div class="item"><span class="swatch vehicle"></span>Vehicle + TEM-1 (3 wells)</div>
+        <div class="item"><span class="swatch compound"></span>8 standard test compounds, 50 µM (24 wells)</div>
+        <div class="item"><span class="swatch special"></span>T1262 tazobactam, 1 µM (3 wells)</div>
+        <div class="item"><span class="swatch empty"></span>Unused — no horizontal neighbors</div>
+      </div>
+    </div>
+    <p class="body-p" style="margin-top:14px;">Each control's 3 replicates split across two rows — 2 reps in its own row at columns 3 &amp; 7, 1 rep in the row below at column 11 — which is how vehicle lands on <code>B3, B7, C11</code>, negative on <code>D3, D7, E11</code>, and positive on <code>F3, F7, G11</code>.</p>
+
+    <div class="table-wrap" style="margin-top:16px;">
+      <table class="dtable">
+        <thead><tr><th>Slot</th><th>Compound</th><th>Bucket</th><th>Functional class</th><th class="num">Assay conc.</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><span class="dotc special"></span>T1262 Tazobactam</td><td>tier1_inhibitor</td><td>positive</td><td class="num">1 µM</td></tr>
+          <tr><td>2</td><td><span class="dotc compound"></span>T6685 Sulbactam sodium</td><td>tier1_inhibitor</td><td>positive</td><td class="num">50 µM</td></tr>
+          <tr><td>3</td><td><span class="dotc compound"></span>T14081 Enmetazobactam</td><td>tier1_inhibitor</td><td>positive</td><td class="num">50 µM</td></tr>
+          <tr><td>4</td><td><span class="dotc compound"></span>T1005 Amoxicillin</td><td>substrate_control</td><td>negative</td><td class="num">50 µM</td></tr>
+          <tr><td>5</td><td><span class="dotc compound"></span>T1008 Cephalexin</td><td>substrate_control</td><td>negative</td><td class="num">50 µM</td></tr>
+          <tr><td>6</td><td><span class="dotc compound"></span>T0224 Meropenem</td><td>substrate_control</td><td>negative</td><td class="num">50 µM</td></tr>
+          <tr><td>7</td><td><span class="dotc compound"></span>T0985 Oxacillin sodium salt</td><td>substrate_control</td><td>negative</td><td class="num">50 µM</td></tr>
+          <tr><td>8</td><td><span class="dotc compound"></span>T0138 Cefpiramide acid</td><td>diverse_pick</td><td>unknown</td><td class="num">50 µM</td></tr>
+          <tr><td>9</td><td><span class="dotc compound"></span>T8390 Cefazolin</td><td>diverse_pick</td><td>unknown</td><td class="num">50 µM</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="body-p" style="margin-top:12px;">From <code>compound_list.csv</code>: T1262's 1 µM comes from a "10× IC50" rule (ChEMBL IC50 = 0.1 µM); every other compound falls back to a 50 µM project-default HTS concentration, since no TEM-1/nitrocefin IC50 was found in open repositories for them. Slot 10 no longer appears here at all — it was removed from the workflow, not just left empty (see next section).</p>
+
+    <div class="updated-banner" style="border-color: var(--teal); background: var(--teal-soft);">
+      <span class="tag" style="border-color: var(--teal); color: var(--teal);">resolved</span>
+      <span>A prior version of this page flagged a mismatch here: <code>prepare_dilutions</code> stopped passing <code>compound_10_source_plate</code>, but <code>prepare_tem1_dilution_plate</code>'s signature still required it with no default — a missing-argument crash waiting to happen. A follow-up "fix compound 10" commit removed <code>compound_10_source_plate</code>/<code>compound_10_source_well</code>/<code>compound_10_dest_well</code> from the skill's signature entirely, matching the workflow. No longer an issue.</span>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="section-num">07</span><span class="section-title">Deck setup</span></div>
+    <h2 class="section-h">What to load before pressing start</h2>
+    <p class="body-p">Straight from <code>mastermix/TEM1_COLD_BLOCK_LOADING.md</code>, the canonical operator loading table. Four holes start empty — the robot fills them during the run; the rest need real reagent in them before the workflow begins.</p>
+    <div class="table-wrap">
+      <table class="dtable">
+        <thead><tr><th>Hole</th><th>Load before starting</th><th class="num">Load at least</th><th>Prepared by</th></tr></thead>
+        <tbody>
+          <tr><td><code>hole_1</code></td><td>100 ng/µL purified TEM-1 stock</td><td class="num">4 µL</td><td>pre-loaded</td></tr>
+          <tr><td><code>hole_2</code></td><td><em>empty tube/well</em></td><td class="num">—</td><td>Phase 0 → 200 µL, 1 ng/µL intermediate</td></tr>
+          <tr><td><code>hole_3</code></td><td><em>empty tube/well</em></td><td class="num">—</td><td>Phase 0 → 50 µL, 200 µM T1262 intermediate</td></tr>
+          <tr><td><code>hole_4</code></td><td>20 mM nitrocefin stock in DMSO (protect from light)</td><td class="num">8.25 µL</td><td>pre-loaded</td></tr>
+          <tr><td><code>hole_5</code></td><td>BLB — compound/control dilutions + T1262 intermediate</td><td class="num">554 µL</td><td>pre-loaded</td></tr>
+          <tr><td><code>hole_6</code></td><td>BLB — TEM-1 dilution, vehicle prep, no-TEM-1 wells</td><td class="num">1283 µL</td><td>pre-loaded</td></tr>
+          <tr><td><code>hole_7</code></td><td>BLB — just-in-time nitrocefin dilution only</td><td class="num">1293.75 µL</td><td>pre-loaded</td></tr>
+          <tr><td><code>hole_8</code></td><td><em>empty tube/well</em></td><td class="num">—</td><td>Phase 0 → 1000 µL, 0.1 ng/µL TEM-1 working</td></tr>
+          <tr><td><code>hole_9</code></td><td>100% DMSO</td><td class="num">10 µL</td><td>pre-loaded</td></tr>
+          <tr><td><code>hole_10</code></td><td><em>empty, light-protected if possible</em></td><td class="num">—</td><td>Phase IV → 1250 µL, 100 µM nitrocefin working</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="body-p" style="margin-top:12px;"><code>hole_6</code> is UI-labeled "no-enzyme prep" because it supplies the no-TEM-1 control wells, but physically it's just BLB — don't load enzyme there.</p>
+
+    <h2 class="section-h" style="margin-top:28px; font-size:16px;">Plus, outside the cold block</h2>
+    <div class="table-wrap">
+      <table class="dtable">
+        <thead><tr><th>Item</th><th>Location</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Positive control — clavulanic acid (T19860)</td><td><code>wellplate_pcr_parts_1</code>, well <code>H7</code></td><td>Source for the positive-control working solution</td></tr>
+          <tr><td>9 test compound stocks</td><td>source PCR plates/wells — see the roster in §06</td><td>Robot prepares each working solution before assay setup</td></tr>
+          <tr><td>Working plate</td><td><code>wellplate_pcr_parts_4</code></td><td>Starts empty — robot fills row A (positive control, vehicle, 9 compounds) in Phase 0</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="body-p" style="margin-top:12px;">Every real dilution this screen depends on is now performed inside this one workflow — TEM-1, all 10 compounds plus control, vehicle, and nitrocefin. Only the raw stocks and buffers above arrive pre-loaded.</p>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="section-num">08</span><span class="section-title">Phase V</span></div>
+    <h2 class="section-h">The robot stops; the reader is manual now</h2>
+    <div class="two-col">
+      <div>
+        <p class="body-p">Place pipette → <strong><code>save_run_folder</code></strong> → end. That's it — no <code>grab_plate</code>, no <code>open_reader</code>/<code>load_reader</code>/<code>close_reader</code>, no <code>run_kinetic_schedule</code>, no <code>platereader</code> input at all. The canvas now says it directly: <em>"The robot stops after nitrocefin addition and run-log capture. Move the plate to the reader manually and start the A490 method from Gen5."</em></p>
+        <p class="body-p">This replaces the previous version's fully-automated kinetic read (21 scripted single-reads via <code>platereader_run_kinetic_schedule</code>). That approach had a real problem: each single-read click sequence in <code>platereader_measure</code> takes ~100+ seconds of GUI automation, far longer than the intended 30 s interval between reads — so the recorded read timestamps didn't match when the reads actually happened. Handing this to a human running Gen5's own native kinetic protocol sidesteps that entirely: Gen5 handles the internal 30 s timing itself.</p>
+      </div>
+      <div class="param-card">
+        <h3>What still exists, just relocated</h3>
+        <ul class="rules">
+          <li><code>platereader_run_kinetic_schedule</code> and the <code>read_schedule.py</code> timing math are unchanged — they're just no longer wired into this production workflow</li>
+          <li>A new isolated workflow, <code>test_platereader_kinetic_schedule.json</code>, exercises the skill directly with a 3-read, 2-second schedule — fast enough to smoke-test in simulation without pretending it represents a real hardware timing guarantee</li>
+          <li><code>kinetic_second_read_s</code>, <code>reader_temperature_c</code>, <code>slope_window_start_s</code>, etc. are gone from <code>tem1_activity_screen.json</code>'s inputs — that configuration now lives on the Gen5 side, set by the operator</li>
+        </ul>
+      </div>
+    </div>
+    <p class="body-p" style="margin-top:14px;">Every nitrocefin dispense node (Phase IV) still carries a <code>timing_label</code> (<code>positive_control</code>, <code>compound_1</code>, …) — <code>batched_dispense_mastermix</code> records the actual wall-clock moment nitrocefin hits each condition. Since dosing is staggered across ~13 batches, not simultaneous, this timestamp is what lets analysis line up each condition's own reaction start against whatever clock the manually-run Gen5 kinetic read produces.</p>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="section-num">09</span><span class="section-title">Timing</span></div>
+    <h2 class="section-h">Where the robot's clock goes</h2>
+    <div class="stats">
+      <div class="stat"><div class="stat-label">Plate mix</div><div class="stat-value">1<span class="unit">min</span></div></div>
+      <div class="stat"><div class="stat-label">Pre-incubation</div><div class="stat-value">10<span class="unit">min</span></div></div>
+      <div class="stat"><div class="stat-label">Conditions</div><div class="stat-value">12<span class="unit">total</span></div></div>
+      <div class="stat"><div class="stat-label">Wells used</div><div class="stat-value">36<span class="unit">/ 96</span></div></div>
+      <div class="stat"><div class="stat-label">Plate read</div><div class="stat-value" style="font-size:15px;">manual<span class="unit">Gen5</span></div></div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <span>mastermix/workflows/tem1_activity_screen.json · canvas/tem1_activity_screen.tsx</span>
+    <span>skills: prepare_tem1_dilution_plate · prepare_nitrocefin_working_solution · batched_dispense_mastermix</span>
+  </footer>
+
+</div>
+
+</body>
+</html>

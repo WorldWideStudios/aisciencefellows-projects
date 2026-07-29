@@ -1,0 +1,630 @@
+urdf: wellplate_pcr.urdf
+articulations:
+  default:
+    description: All joints at rest position
+    joints: {}
+anchors:
+  object:
+    parent_link: world
+    description: Table placement frame, origin at (+X, +Y, -Z) bbox corner
+    link_T_anchor:
+      xyz: [0.12776, 0.0, 0.0]
+      wxyz: [0.707107, 0.0, 0.0, -0.707107]
+  bottom_center:
+    parent_link: body
+    description: bottom center of the well plate
+    link_T_anchor:
+      xyz: [0.06388, 0.04274, 0.0]
+      wxyz: [0.707107, 0.0, 0.0, -0.707107]
+  grasp_short:
+    parent_link: body
+    description:
+      grasp pose to grab the plate along the short sides, camera facing
+      the +x direction of the object.
+    link_T_anchor:
+      xyz: [0.0639, 0.04274, -0.00553893]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+    grasp:
+      width: 0.06
+      gripper_variant: wellplate
+  side_grab:
+    parent_link: body
+    description: Side grab the wellplate from the holder
+    link_T_anchor:
+      xyz: [0.06388, 0.0133059, 0.007677]
+      wxyz: [-0.00220656, 0.00220656, 0.707103, 0.707103]
+    grasp:
+      width: 0.012
+  A1:
+    parent_link: body
+    description: the top of well A1
+    link_T_anchor:
+      xyz: [0.014467, 0.074329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  A2:
+    parent_link: body
+    description: the top of well A2
+    link_T_anchor:
+      xyz: [0.023467, 0.074329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  A3:
+    parent_link: body
+    description: the top of well A3
+    link_T_anchor:
+      xyz: [0.032467, 0.074329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  A4:
+    parent_link: body
+    description: the top of well A4
+    link_T_anchor:
+      xyz: [0.041467, 0.074329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  A5:
+    parent_link: body
+    description: the top of well A5
+    link_T_anchor:
+      xyz: [0.050467, 0.074329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  A6:
+    parent_link: body
+    description: the top of well A6
+    link_T_anchor:
+      xyz: [0.059467, 0.074329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  A7:
+    parent_link: body
+    description: the top of well A7
+    link_T_anchor:
+      xyz: [0.068467, 0.074329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  A8:
+    parent_link: body
+    description: the top of well A8
+    link_T_anchor:
+      xyz: [0.077467, 0.074329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  A9:
+    parent_link: body
+    description: the top of well A9
+    link_T_anchor:
+      xyz: [0.086467, 0.074329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  A10:
+    parent_link: body
+    description: the top of well A10
+    link_T_anchor:
+      xyz: [0.095467, 0.074329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  A11:
+    parent_link: body
+    description: the top of well A11
+    link_T_anchor:
+      xyz: [0.104467, 0.074329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  A12:
+    parent_link: body
+    description: the top of well A12
+    link_T_anchor:
+      xyz: [0.113467, 0.074329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  B1:
+    parent_link: body
+    description: the top of well B1
+    link_T_anchor:
+      xyz: [0.014467, 0.065329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  B2:
+    parent_link: body
+    description: the top of well B2
+    link_T_anchor:
+      xyz: [0.023467, 0.065329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  B3:
+    parent_link: body
+    description: the top of well B3
+    link_T_anchor:
+      xyz: [0.032467, 0.065329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  B4:
+    parent_link: body
+    description: the top of well B4
+    link_T_anchor:
+      xyz: [0.041467, 0.065329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  B5:
+    parent_link: body
+    description: the top of well B5
+    link_T_anchor:
+      xyz: [0.050467, 0.065329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  B6:
+    parent_link: body
+    description: the top of well B6
+    link_T_anchor:
+      xyz: [0.059467, 0.065329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  B7:
+    parent_link: body
+    description: the top of well B7
+    link_T_anchor:
+      xyz: [0.068467, 0.065329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  B8:
+    parent_link: body
+    description: the top of well B8
+    link_T_anchor:
+      xyz: [0.077467, 0.065329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  B9:
+    parent_link: body
+    description: the top of well B9
+    link_T_anchor:
+      xyz: [0.086467, 0.065329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  B10:
+    parent_link: body
+    description: the top of well B10
+    link_T_anchor:
+      xyz: [0.095467, 0.065329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  B11:
+    parent_link: body
+    description: the top of well B11
+    link_T_anchor:
+      xyz: [0.104467, 0.065329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  B12:
+    parent_link: body
+    description: the top of well B12
+    link_T_anchor:
+      xyz: [0.113467, 0.065329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  C1:
+    parent_link: body
+    description: the top of well C1
+    link_T_anchor:
+      xyz: [0.014467, 0.056329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  C2:
+    parent_link: body
+    description: the top of well C2
+    link_T_anchor:
+      xyz: [0.023467, 0.056329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  C3:
+    parent_link: body
+    description: the top of well C3
+    link_T_anchor:
+      xyz: [0.032467, 0.056329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  C4:
+    parent_link: body
+    description: the top of well C4
+    link_T_anchor:
+      xyz: [0.041467, 0.056329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  C5:
+    parent_link: body
+    description: the top of well C5
+    link_T_anchor:
+      xyz: [0.050467, 0.056329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  C6:
+    parent_link: body
+    description: the top of well C6
+    link_T_anchor:
+      xyz: [0.059467, 0.056329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  C7:
+    parent_link: body
+    description: the top of well C7
+    link_T_anchor:
+      xyz: [0.068467, 0.056329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  C8:
+    parent_link: body
+    description: the top of well C8
+    link_T_anchor:
+      xyz: [0.077467, 0.056329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  C9:
+    parent_link: body
+    description: the top of well C9
+    link_T_anchor:
+      xyz: [0.086467, 0.056329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  C10:
+    parent_link: body
+    description: the top of well C10
+    link_T_anchor:
+      xyz: [0.095467, 0.056329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  C11:
+    parent_link: body
+    description: the top of well C11
+    link_T_anchor:
+      xyz: [0.104467, 0.056329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  C12:
+    parent_link: body
+    description: the top of well C12
+    link_T_anchor:
+      xyz: [0.113467, 0.056329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  D1:
+    parent_link: body
+    description: the top of well D1
+    link_T_anchor:
+      xyz: [0.014467, 0.047329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  D2:
+    parent_link: body
+    description: the top of well D2
+    link_T_anchor:
+      xyz: [0.023467, 0.047329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  D3:
+    parent_link: body
+    description: the top of well D3
+    link_T_anchor:
+      xyz: [0.032467, 0.047329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  D4:
+    parent_link: body
+    description: the top of well D4
+    link_T_anchor:
+      xyz: [0.041467, 0.047329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  D5:
+    parent_link: body
+    description: the top of well D5
+    link_T_anchor:
+      xyz: [0.050467, 0.047329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  D6:
+    parent_link: body
+    description: the top of well D6
+    link_T_anchor:
+      xyz: [0.059467, 0.047329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  D7:
+    parent_link: body
+    description: the top of well D7
+    link_T_anchor:
+      xyz: [0.068467, 0.047329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  D8:
+    parent_link: body
+    description: the top of well D8
+    link_T_anchor:
+      xyz: [0.077467, 0.047329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  D9:
+    parent_link: body
+    description: the top of well D9
+    link_T_anchor:
+      xyz: [0.086467, 0.047329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  D10:
+    parent_link: body
+    description: the top of well D10
+    link_T_anchor:
+      xyz: [0.095467, 0.047329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  D11:
+    parent_link: body
+    description: the top of well D11
+    link_T_anchor:
+      xyz: [0.104467, 0.047329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  D12:
+    parent_link: body
+    description: the top of well D12
+    link_T_anchor:
+      xyz: [0.113467, 0.047329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  E1:
+    parent_link: body
+    description: the top of well E1
+    link_T_anchor:
+      xyz: [0.014467, 0.038329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  E2:
+    parent_link: body
+    description: the top of well E2
+    link_T_anchor:
+      xyz: [0.023467, 0.038329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  E3:
+    parent_link: body
+    description: the top of well E3
+    link_T_anchor:
+      xyz: [0.032467, 0.038329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  E4:
+    parent_link: body
+    description: the top of well E4
+    link_T_anchor:
+      xyz: [0.041467, 0.038329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  E5:
+    parent_link: body
+    description: the top of well E5
+    link_T_anchor:
+      xyz: [0.050467, 0.038329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  E6:
+    parent_link: body
+    description: the top of well E6
+    link_T_anchor:
+      xyz: [0.059467, 0.038329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  E7:
+    parent_link: body
+    description: the top of well E7
+    link_T_anchor:
+      xyz: [0.068467, 0.038329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  E8:
+    parent_link: body
+    description: the top of well E8
+    link_T_anchor:
+      xyz: [0.077467, 0.038329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  E9:
+    parent_link: body
+    description: the top of well E9
+    link_T_anchor:
+      xyz: [0.086467, 0.038329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  E10:
+    parent_link: body
+    description: the top of well E10
+    link_T_anchor:
+      xyz: [0.095467, 0.038329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  E11:
+    parent_link: body
+    description: the top of well E11
+    link_T_anchor:
+      xyz: [0.104467, 0.038329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  E12:
+    parent_link: body
+    description: the top of well E12
+    link_T_anchor:
+      xyz: [0.113467, 0.038329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  F1:
+    parent_link: body
+    description: the top of well F1
+    link_T_anchor:
+      xyz: [0.014467, 0.029329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  F2:
+    parent_link: body
+    description: the top of well F2
+    link_T_anchor:
+      xyz: [0.023467, 0.029329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  F3:
+    parent_link: body
+    description: the top of well F3
+    link_T_anchor:
+      xyz: [0.032467, 0.029329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  F4:
+    parent_link: body
+    description: the top of well F4
+    link_T_anchor:
+      xyz: [0.041467, 0.029329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  F5:
+    parent_link: body
+    description: the top of well F5
+    link_T_anchor:
+      xyz: [0.050467, 0.029329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  F6:
+    parent_link: body
+    description: the top of well F6
+    link_T_anchor:
+      xyz: [0.059467, 0.029329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  F7:
+    parent_link: body
+    description: the top of well F7
+    link_T_anchor:
+      xyz: [0.068467, 0.029329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  F8:
+    parent_link: body
+    description: the top of well F8
+    link_T_anchor:
+      xyz: [0.077467, 0.029329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  F9:
+    parent_link: body
+    description: the top of well F9
+    link_T_anchor:
+      xyz: [0.086467, 0.029329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  F10:
+    parent_link: body
+    description: the top of well F10
+    link_T_anchor:
+      xyz: [0.095467, 0.029329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  F11:
+    parent_link: body
+    description: the top of well F11
+    link_T_anchor:
+      xyz: [0.104467, 0.029329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  F12:
+    parent_link: body
+    description: the top of well F12
+    link_T_anchor:
+      xyz: [0.113467, 0.029329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  G1:
+    parent_link: body
+    description: the top of well G1
+    link_T_anchor:
+      xyz: [0.014467, 0.020329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  G2:
+    parent_link: body
+    description: the top of well G2
+    link_T_anchor:
+      xyz: [0.023467, 0.020329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  G3:
+    parent_link: body
+    description: the top of well G3
+    link_T_anchor:
+      xyz: [0.032467, 0.020329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  G4:
+    parent_link: body
+    description: the top of well G4
+    link_T_anchor:
+      xyz: [0.041467, 0.020329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  G5:
+    parent_link: body
+    description: the top of well G5
+    link_T_anchor:
+      xyz: [0.050467, 0.020329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  G6:
+    parent_link: body
+    description: the top of well G6
+    link_T_anchor:
+      xyz: [0.059467, 0.020329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  G7:
+    parent_link: body
+    description: the top of well G7
+    link_T_anchor:
+      xyz: [0.068467, 0.020329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  G8:
+    parent_link: body
+    description: the top of well G8
+    link_T_anchor:
+      xyz: [0.077467, 0.020329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  G9:
+    parent_link: body
+    description: the top of well G9
+    link_T_anchor:
+      xyz: [0.086467, 0.020329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  G10:
+    parent_link: body
+    description: the top of well G10
+    link_T_anchor:
+      xyz: [0.095467, 0.020329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  G11:
+    parent_link: body
+    description: the top of well G11
+    link_T_anchor:
+      xyz: [0.104467, 0.020329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  G12:
+    parent_link: body
+    description: the top of well G12
+    link_T_anchor:
+      xyz: [0.113467, 0.020329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  H1:
+    parent_link: body
+    description: the top of well H1
+    link_T_anchor:
+      xyz: [0.014467, 0.011329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  H2:
+    parent_link: body
+    description: the top of well H2
+    link_T_anchor:
+      xyz: [0.023467, 0.011329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  H3:
+    parent_link: body
+    description: the top of well H3
+    link_T_anchor:
+      xyz: [0.032467, 0.011329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  H4:
+    parent_link: body
+    description: the top of well H4
+    link_T_anchor:
+      xyz: [0.041467, 0.011329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  H5:
+    parent_link: body
+    description: the top of well H5
+    link_T_anchor:
+      xyz: [0.050467, 0.011329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  H6:
+    parent_link: body
+    description: the top of well H6
+    link_T_anchor:
+      xyz: [0.059467, 0.011329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  H7:
+    parent_link: body
+    description: the top of well H7
+    link_T_anchor:
+      xyz: [0.068467, 0.011329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  H8:
+    parent_link: body
+    description: the top of well H8
+    link_T_anchor:
+      xyz: [0.077467, 0.011329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  H9:
+    parent_link: body
+    description: the top of well H9
+    link_T_anchor:
+      xyz: [0.086467, 0.011329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  H10:
+    parent_link: body
+    description: the top of well H10
+    link_T_anchor:
+      xyz: [0.095467, 0.011329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  H11:
+    parent_link: body
+    description: the top of well H11
+    link_T_anchor:
+      xyz: [0.104467, 0.011329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  H12:
+    parent_link: body
+    description: the top of well H12
+    link_T_anchor:
+      xyz: [0.113467, 0.011329, 0.01549]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  grasp_eppendorf_thermo:
+    parent_link: world
+    description: grasp pose for grabbing plate before loading into the eppendorf thermocycler
+    link_T_anchor:
+      xyz: [0.0639, 0.029197, -0.0055]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+    grasp:
+      width: 0.08
+      gripper_variant: wellplate
+  side_grab_unload:
+    parent_link: body
+    description: Side grab adjusted by 3.3mm
+    link_T_anchor:
+      xyz: [0.06388, 0.01, 0.0077]
+      wxyz: [4.32978e-17, 4.32978e-17, 0.707107, 0.707107]
+    grasp:
+      width: 0.08

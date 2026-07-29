@@ -1,0 +1,272 @@
+{
+  "CLAUDE.md": {
+    "blob_sha": "95dbe8be746cc9637c4435d678a2ce54735cabe6a0746059324fc321aa1e7a6b",
+    "mode": "blob",
+    "mtime": 1785013909.8849907
+  },
+  "canvas/.gitkeep": {
+    "blob_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mode": "blob",
+    "mtime": 1785013909.885697
+  },
+  "canvas/pipette_demo_screen.tsx": {
+    "blob_sha": "b606b97df576e10b4a3383dcbcb51f0d18b63166aa8adbbab0ebd47a4ac6f3d2",
+    "mode": "blob",
+    "mtime": 1785013909.8863814
+  },
+  "objects/.gitkeep": {
+    "blob_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mode": "blob",
+    "mtime": 1785013909.887423
+  },
+  "objects/epipette_10ul/epipette_10ul.object_model.yaml": {
+    "blob_sha": "f7fb825b34fdafc8650c2bfda07510516137759742adc2be1bff7258656481d0",
+    "mode": "blob",
+    "mtime": 1785013909.888445
+  },
+  "objects/epipette_10ul/epipette_10ul.urdf": {
+    "blob_sha": "abeaf27c2bcd35f5554718b60c5d2ceda3d2bab81c0d970912a268949e167a2d",
+    "mode": "blob",
+    "mtime": 1785013909.889482
+  },
+  "objects/epipette_120ul/epipette_120ul.object_model.yaml": {
+    "blob_sha": "b7e976eff6a5b56c54e5b1788e03e3a293228d364ddb553224b4723840346432",
+    "mode": "blob",
+    "mtime": 1785013909.8902347
+  },
+  "objects/epipette_120ul/epipette_120ul.urdf": {
+    "blob_sha": "ee8e31ddccb36abc38dda4f5a6dae2b215046fe7344595cc815862e7b45550b9",
+    "mode": "blob",
+    "mtime": 1785013909.8910716
+  },
+  "objects/epipette_stand_chargeable/epipette_stand_chargeable.object_model.yaml": {
+    "blob_sha": "e9f912af4d9076d07a39c7b2f0f89cadedbd80d3d30f4b4105b4ff2d688f725a",
+    "mode": "blob",
+    "mtime": 1785013909.8917146
+  },
+  "objects/epipette_stand_chargeable/epipette_stand_chargeable.urdf": {
+    "blob_sha": "997df4cdcb6b37c7720fab71dcdcb16efe9cefb272c8d717521791d8b47ca1b7",
+    "mode": "blob",
+    "mtime": 1785013909.892209
+  },
+  "objects/fixture_plate/fixture_plate.object_model.yaml": {
+    "blob_sha": "f753c95288876dfb9da1caa39c50f7dd56e89693d51ecb3737397eac5357f56d",
+    "mode": "blob",
+    "mtime": 1785013909.8929439
+  },
+  "objects/fixture_plate/fixture_plate.urdf": {
+    "blob_sha": "4d87fdbcc2b48ab4c644cc6504e0c7344a3e1edaf81658037b5579dea85df3fe",
+    "mode": "blob",
+    "mtime": 1785013909.893621
+  },
+  "objects/tipbox_10ul/tipbox_10ul.object_model.yaml": {
+    "blob_sha": "a3956995cd0d22d0c464b7595c75a9bfd9ca6c80ddba8db79c1ae450675e52b1",
+    "mode": "blob",
+    "mtime": 1785013909.8953416
+  },
+  "objects/tipbox_10ul/tipbox_10ul.urdf": {
+    "blob_sha": "e2cee826ca011bc86a8901b6bb18eea5702085c37b580fa6956da1164723987e",
+    "mode": "blob",
+    "mtime": 1785013909.8959718
+  },
+  "objects/tipbox_120ul/tipbox_120ul.object_model.yaml": {
+    "blob_sha": "4f08a65aef415c456a7843b19bf7efe0200057ac78d176f23e6547dad6b62801",
+    "mode": "blob",
+    "mtime": 1785013909.8964248
+  },
+  "objects/tipbox_120ul/tipbox_120ul.urdf": {
+    "blob_sha": "af900869d988e4bb1bbd4bfbf897e168f04aeb1f211bffe6b0de8644f440b7e9",
+    "mode": "blob",
+    "mtime": 1785013909.8967745
+  },
+  "objects/tipbox_holder_fixture_plate/tipbox_holder_fixture_plate.object_model.yaml": {
+    "blob_sha": "ba20b76bd3844581065e385b58bd7fdef9bf3b8ba959926c7aed7fd25b0e86f6",
+    "mode": "blob",
+    "mtime": 1785013909.897166
+  },
+  "objects/tipbox_holder_fixture_plate/tipbox_holder_fixture_plate.urdf": {
+    "blob_sha": "d7061b23a8d31d465b13c2ff095934e8848cc1eff38e01ace9b8e523368988bb",
+    "mode": "blob",
+    "mtime": 1785013909.8975446
+  },
+  "objects/wellplate_96_flatbottom/wellplate_96_flatbottom.object_model.yaml": {
+    "blob_sha": "b9fff2e8e36ff11084dbfbfa2f51b250c26d485a17296293ddec33ce91759d75",
+    "mode": "blob",
+    "mtime": 1785013909.8980527
+  },
+  "objects/wellplate_96_flatbottom/wellplate_96_flatbottom.urdf": {
+    "blob_sha": "2ed6b173924cd0bea3b5703219737a832efa9c82425eb1743f9aeaab25386e83",
+    "mode": "blob",
+    "mtime": 1785013909.898385
+  },
+  "objects/wellplate_holder_fixture_plate/wellplate_holder_fixture_plate.object_model.yaml": {
+    "blob_sha": "c26cb4474645c28b62cd6264fb942101a9c7ba8d2a45f5c3554ac88d35d258c5",
+    "mode": "blob",
+    "mtime": 1785013909.8988318
+  },
+  "objects/wellplate_holder_fixture_plate/wellplate_holder_fixture_plate.urdf": {
+    "blob_sha": "bf585805a7ca094953df166fde697a920e7dc6ed137438b506cdfa3fb5e2e31c",
+    "mode": "blob",
+    "mtime": 1785013909.89952
+  },
+  "objects/wellplate_holder_tags/wellplate_holder_tags.object_model.yaml": {
+    "blob_sha": "5f93c447d70f0b52a690b50ec9b40e479cacefd457a1d14bca74fead373a230d",
+    "mode": "blob",
+    "mtime": 1785013909.9000368
+  },
+  "objects/wellplate_holder_tags/wellplate_holder_tags.urdf": {
+    "blob_sha": "fbd5d74fcdeb4d51af22e7ae4a04d03fc21df1086e600aaeaf608cc7d45db307",
+    "mode": "blob",
+    "mtime": 1785013909.9004312
+  },
+  "objects/wellplate_pcr/wellplate_pcr.object_model.yaml": {
+    "blob_sha": "147e849094766175f1f5dfdbaab9ad21d76248da20177968fe1cf5fab7e8b7d1",
+    "mode": "blob",
+    "mtime": 1785013909.900947
+  },
+  "objects/wellplate_pcr/wellplate_pcr.urdf": {
+    "blob_sha": "1a1e1360ca9261db6f4d3ea9b2b156c25b07748f2a8674796d4c1a68d2db988a",
+    "mode": "blob",
+    "mtime": 1785013909.9013731
+  },
+  "objects/wellplate_shaker/wellplate_shaker.object_model.yaml": {
+    "blob_sha": "69296da23813244f009fc16c7d0b461983d70d144fc5bce2c8a13206843d64c4",
+    "mode": "blob",
+    "mtime": 1785013909.901876
+  },
+  "objects/wellplate_shaker/wellplate_shaker.urdf": {
+    "blob_sha": "47aae6c6cbb6e9eb99dc8f6f0adec2358bb6a6811f7409b2ff483d585993b94e",
+    "mode": "blob",
+    "mtime": 1785013909.902219
+  },
+  "project.json": {
+    "blob_sha": "5168d649c38f74ee619ff81301753a14cad8b9af7c695b85c0f7a39ce802ed18",
+    "mode": "blob",
+    "mtime": 1785013909.9025416
+  },
+  "skills/.gitkeep": {
+    "blob_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mode": "blob",
+    "mtime": 1785013909.9028816
+  },
+  "skills/epipette_aspirate/metadata.yaml": {
+    "blob_sha": "d5950f8537c8a6d0380fa14c3636f893de90811fd2544c199e2b83528b652a24",
+    "mode": "blob",
+    "mtime": 1785013909.9034142
+  },
+  "skills/epipette_aspirate/modules.py": {
+    "blob_sha": "a6481e8cc760012cb86ac30843460e02f50cab3870432492420e93e95c4cfd3b",
+    "mode": "blob",
+    "mtime": 1785013909.9037588
+  },
+  "skills/epipette_aspirate/robotic_code.py": {
+    "blob_sha": "562ef94e76d8971e301dd846a0d1e7aa71d97664cbe36ce890373409d7eced05",
+    "mode": "blob",
+    "mtime": 1785013909.904104
+  },
+  "skills/epipette_attach/metadata.yaml": {
+    "blob_sha": "e2abfbc8e262fdacf0c0a820d185a615879cf29808cb4c3b646c001f63261219",
+    "mode": "blob",
+    "mtime": 1785013909.9045074
+  },
+  "skills/epipette_attach/modules.py": {
+    "blob_sha": "a6481e8cc760012cb86ac30843460e02f50cab3870432492420e93e95c4cfd3b",
+    "mode": "blob",
+    "mtime": 1785013909.9048555
+  },
+  "skills/epipette_attach/robotic_code.py": {
+    "blob_sha": "8726d902babd95b0e462b6406d26e7761e00044294d5ac3200d1bb3f5b6966a5",
+    "mode": "blob",
+    "mtime": 1785013909.905249
+  },
+  "skills/epipette_dispense/metadata.yaml": {
+    "blob_sha": "3153481a37808a39a8164a0ef04d21da43cf04e3f4f5331b696984e3e1142cf4",
+    "mode": "blob",
+    "mtime": 1785013909.9057193
+  },
+  "skills/epipette_dispense/modules.py": {
+    "blob_sha": "a6481e8cc760012cb86ac30843460e02f50cab3870432492420e93e95c4cfd3b",
+    "mode": "blob",
+    "mtime": 1785013909.9061644
+  },
+  "skills/epipette_dispense/robotic_code.py": {
+    "blob_sha": "410a4eb037fb4509893b9cd88aa222304168b2eae6e511e5e842cda622d8f7a7",
+    "mode": "blob",
+    "mtime": 1785013909.9065607
+  },
+  "skills/epipette_eject/metadata.yaml": {
+    "blob_sha": "23d0a389e3cb061f65f0ab8a2a3a542255e3afc1de5c2a2652e48f2f1d29b6d3",
+    "mode": "blob",
+    "mtime": 1785013909.9073446
+  },
+  "skills/epipette_eject/modules.py": {
+    "blob_sha": "c2a18671c1c51031e77ac99b55fb0ab10e3ebec61d7fecc953c8575435030421",
+    "mode": "blob",
+    "mtime": 1785013909.9078102
+  },
+  "skills/epipette_eject/robotic_code.py": {
+    "blob_sha": "73fffafece59102a05c3dab4b106c7e78a2cfd867aac995a1f0e339571fe9547",
+    "mode": "blob",
+    "mtime": 1785013909.908159
+  },
+  "skills/epipette_grab/metadata.yaml": {
+    "blob_sha": "e2068408f63b473f0b90a18f3bc5558f400bad0890b1bcfa639d2ceea915c300",
+    "mode": "blob",
+    "mtime": 1785013909.9086387
+  },
+  "skills/epipette_grab/modules.py": {
+    "blob_sha": "c2a18671c1c51031e77ac99b55fb0ab10e3ebec61d7fecc953c8575435030421",
+    "mode": "blob",
+    "mtime": 1785013909.9090145
+  },
+  "skills/epipette_grab/robotic_code.py": {
+    "blob_sha": "a71ed43d20f284a26c4202402131efbd3609ce3ccd89404ca0ec9d93ff54b9a0",
+    "mode": "blob",
+    "mtime": 1785013909.9093356
+  },
+  "skills/epipette_place/metadata.yaml": {
+    "blob_sha": "b71f2dc9552d0fb9478b938c8650e5261405bbf8e9be13cc6a35ca72741a39ad",
+    "mode": "blob",
+    "mtime": 1785013909.9096925
+  },
+  "skills/epipette_place/modules.py": {
+    "blob_sha": "c2a18671c1c51031e77ac99b55fb0ab10e3ebec61d7fecc953c8575435030421",
+    "mode": "blob",
+    "mtime": 1785013909.9100127
+  },
+  "skills/epipette_place/robotic_code.py": {
+    "blob_sha": "c089a6ebeee41234f7dad4b33dc4e51b7a648cec7789721d2dac473b1bdf51c7",
+    "mode": "blob",
+    "mtime": 1785013909.9105012
+  },
+  "skills/utils.py": {
+    "blob_sha": "ac7b6f8aa0be1aeba8f6d11eb8d71a40c5b34d18d6c07b8a2f399dc66d6e58b9",
+    "mode": "blob",
+    "mtime": 1785013909.9110818
+  },
+  "workflows/.gitkeep": {
+    "blob_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mode": "blob",
+    "mtime": 1785013909.9114292
+  },
+  "workflows/pipette_demo.json": {
+    "blob_sha": "7f2e50c8b5441d9d87c8fabc342b8ce95b4d7f09ee760c019072ff7df9aa342f",
+    "mode": "blob",
+    "mtime": 1785013909.9117625
+  },
+  "worlds/.gitkeep": {
+    "blob_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mode": "blob",
+    "mtime": 1785013909.9120467
+  },
+  "worlds/pipette_demo_world/live_state.yaml": {
+    "blob_sha": "5a6b7734e5afa942bd7758a596d8f34822bf63a2ac416820d4f83e97ff29e39b",
+    "mode": "blob",
+    "mtime": 1785013909.9124608
+  },
+  "worlds/pipette_demo_world/world_state.json": {
+    "blob_sha": "a1e3fd812bcc8865fd276ca3acca831fe8d2b1084f9e113554b5c0f953b20684",
+    "mode": "blob",
+    "mtime": 1785013909.9127893
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "compound_id": "T1213",
+  "name": "Piperacillin sodium",
+  "match": "yes",
+  "support": "weak",
+  "entries": [
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Piperacillin sodium. Map complete: 5/5 tasks succeeded in 2554ms\nResults ID: m_cd00f8e5\nFull results: /.gxl/map_m_cd00f8e5.txt\n\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided paper content, there is no mention of Piperacillin sodium, nitrocefin colorimetric assays, $K_i$, $IC_{50}$ values, or enzyme/su\n  [success] Effect of Lactamase Inhibitors on the Biosensor Penp during the Measur  (PMC6427286)\n    Based on the provided paper content, there is no mention of Piperacillin sodium, TEM-1 beta-lactamase in a nitrocefin colorimetric assay, IC50 values,\n  [success] Correlation of OXA-1 and TEM-1 genes with antibiotic resistance to pip  (PMC12832842)\n    Based on the provided research paper, there is no information regarding the $K_i$, $IC_{50}$, assay inhibitor concentrations, nitrocefin substrate con\n  [success] In vitro  and  in vivo  Inhibitory Activity of NADPH Against the AmpC   (PMC6308799)\n    Based on the provided paper, there is no mention of Piperacillin sodium, TEM-1 beta-lactamase, or their kinetic/inhibitory values (such as $K_i$ or $\\\n  [success] In Silico Study of the Potential of Brazilein Sappan Wood as a Beta-La  (PMC11229569)\n    Based on the provided paper content, there is no mention of Piperacillin sodium, nitrocefin colorimetric assays, $K_i$, $IC_{50}$ values, enzyme conce\n\nFull results: /.gxl/map_m_cd00f8e5.txt",
+      "paperclip_search_id": "s_edd6f7e1",
+      "paperclip_map_id": "m_cd00f8e5",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "pmcid": "PMC12484619"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Piperacillin sodium. Map complete: 29/30 tasks succeeded in 11285ms\nResults ID: m_b7661ee7\nFull results: /.gxl/map_m_b7661ee7.txt\n\n  [success] Saturation Mutagenesis and Molecular Modeling: The Impact of Methionin  (PMC11276661)\n    Based on the provided paper content, there is no mention of piperacillin sodium, nitrocefin colorimetric assay measurements (other than the general us\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided research paper content, there is no mention of Piperacillin sodium, nitrocefin colorimetric assays, $K_i$ or $IC_{50}$ values, e\n  [success] Molecular Basis of Class A \u03b2-Lactamase Inhibition by Relebactam  (PMC6761529)\n    Based on the provided paper, there is no information about piperacillin sodium, TEM-1 beta-lactamase, or its IC50/Ki values in a nitrocefin assay (the\n  [success] Correlation of OXA-1 and TEM-1 genes with antibiotic resistance to pip  (PMC12832842)\n    Based on the provided paper, there is no information regarding the use of piperacillin sodium against TEM-1 beta-lactamase in a nitrocefin colorimetri\n  [success] Kinetic and Structural Requirements for Carbapenemase\nActivity in GES-  (PMC4303295)\n    Based on the provided paper content, there is no mention of Piperacillin sodium, TEM-1 beta-lactamase, or nitrocefin colorimetric assay metrics involv\n  [success] Molecular Basis for the Catalytic Specificity of the\nCTX-M Extended-Sp  (PMC4303298)\n    The provided paper does not conta",
+      "paperclip_search_id": "s_c406201d",
+      "paperclip_map_id": "m_b7661ee7",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "pmcid": "PMC11276661",
+      "paperclip_source": "pmc"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Piperacillin sodium. Map complete: 24/24 tasks succeeded in 6537ms\nResults ID: m_e991444d\nFull results: /.gxl/map_m_e991444d.txt\n\n  [success] Distant Site Mutations in Clinical TEM Beta-Lactamase Variants Enhance  (bio_dd68730a70c5)\n    Based on the provided paper content, there is no mention of Piperacillin sodium, nitrocefin colorimetric assays, $K_i$ or $IC_{50}$ values, or specifi\n  [success] A new type of AmpC \u03b2-lactamases defined by PIB-1, a metal-dependent ca  (bio_9fef02c2845c)\n    Based on the provided research paper, there is no mention of Piperacillin sodium, TEM-1 beta-lactamase, or their kinetic/inhibition values in a nitroc\n  [success] Binding mode of isoxazolyl penicillins to a Class-A  \u03b2 -lactamase at a  (bio_a7f99ac77b0d)\n    Based on the provided paper content, there is no mention of Piperacillin sodium, TEM-1 beta-lactamase, nitrocefin colorimetric assays, IC50/Ki values,\n  [success] Association of OXA-1 and TEM-1 Genes with Antibiotic Resistance to Pip  (bio_509e494e7b3f)\n    Based on the provided paper, there is no information regarding a nitrocefin colorimetric assay, hydrolysis of Piperacillin sodium, $K_i$ or $IC_{50}$ \n  [success] Sulbactam-mediated inhibition of TEM-1 \u03b2-lactamase increases specific   (bio_e76fe1d274e9)\n    Based on the provided paper content, there is no mention of Piperacillin sodium, a nitrocefin colorimetric assay, Ki or IC50 values, enzyme/substrate \n  [success] Mechanistic Basis for Inhibition of the Extended Spectrum Class A \u03b2-La  (bio_d7ea2f4d7462",
+      "paperclip_search_id": "s_6d002471",
+      "paperclip_map_id": "m_e991444d",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "paperclip_source": "biorxiv"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Piperacillin sodium. Map complete: 10/10 tasks succeeded in 2844ms\nResults ID: m_211024ce\nFull results: /.gxl/map_m_211024ce.txt\n\n  [success] bla - Beta-lactamase TEM  (P62593)\n    Based on the provided paper content, there is no information regarding Piperacillin sodium, nitrocefin colorimetric assays, $K_i$ or $IC_50$ values, e\n  [success] bla - Beta-lactamase TEM  (P62594)\n    The provided paper does not contain information about Piperacillin sodium, nitrocefin colorimetric assays, Ki, IC50 values, enzyme concentrations, or \n  [success] blaT-12b - Beta-lactamase TEM-12  (Q48406)\n    Based on the provided paper content, there is no mention of Piperacillin sodium, TEM-1 beta-lactamase assays, nitrocefin colorimetric assays, Ki, IC50\n  [success] penPC - Beta-lactamase 1  (P10424)\n    Based on the provided paper content, there is no information regarding Piperacillin sodium, TEM-1 beta-lactamase, nitrocefin colorimetric assays, IC50\n  [success] blaY - Beta-lactamase 1  (P00809)\n    Based on the provided paper content, there is no mention of Piperacillin sodium, TEM-1 beta-lactamase, nitrocefin colorimetric assays, $K_i$, $IC_{50}\n  [success] blaCI - Beta-lactamase 1  (P28018)\n    The provided text does not contain information about Piperacillin sodium, TEM-1 beta-lactamase, nitrocefin colorimetric assays, or associated kinetic \n  [success] blaL - Beta-lactamase 1  (Q03680)\n    Based on the provided paper content, there is no mention of Piperacillin sodium, TEM-1 beta-lactamase, nitrocefin colorime",
+      "paperclip_search_id": "s_605d3a0b",
+      "paperclip_map_id": "m_211024ce",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "paperclip_source": "proteins"
+    }
+  ],
+  "raw_local": "/Users/fio/zeon_hack/pvjthomas/local/literature/T1213",
+  "assay_recommendations": {
+    "tem1_nitrocefin": {
+      "screen_conc_uM": 50,
+      "screen_rationale": "Project default screen concentration; no literature inhibitor concentration or IC50/Ki extracted.",
+      "screen_conc_source": "project_default",
+      "max_assay_conc_uM": 1000.0,
+      "metric": "relative nitrocefin hydrolysis vs no-inhibitor control"
+    }
+  }
+}

@@ -1,0 +1,1592 @@
+{
+  "run": 2,
+  "round": 2,
+  "plan_version": 5,
+  "plan_label": "r2-discovery-v5",
+  "status": "complete",
+  "plate_map_active": "data/plate_map_r2.json",
+  "plate_map_snapshot": "data/screens/2/v5/plate_map.json",
+  "source_csv_git": "data/screens/2/post-run/kinetics_r2.csv",
+  "source_csv_local": null,
+  "nitrocefin_timing_json": "data/screens/2/post-run/nitrocefin_timing.json",
+  "reader_lid_close_utc": "2026-07-26T08:57:14Z",
+  "normalization": {
+    "vehicle_wells": [
+      "B3",
+      "B7",
+      "C11"
+    ],
+    "no_tem1_wells": [
+      "D3",
+      "D7",
+      "E11"
+    ],
+    "pos_ctrl_clavaculin_wells": [
+      "F3",
+      "F7",
+      "G11"
+    ]
+  },
+  "hits": [
+    {
+      "well": "C5",
+      "compound_id": "T0224",
+      "pct_inhibition": 97.0,
+      "concentration_uM": 50
+    },
+    {
+      "well": "B8",
+      "compound_id": "T1005",
+      "pct_inhibition": 68.2,
+      "concentration_uM": 50
+    }
+  ],
+  "failed_wells": [
+    "B10",
+    "B2",
+    "B4",
+    "B6",
+    "C3",
+    "C7",
+    "C9",
+    "D10",
+    "D2",
+    "D4",
+    "D6",
+    "E3",
+    "E5",
+    "E7",
+    "E9",
+    "F10",
+    "F2",
+    "F6",
+    "G3",
+    "G5",
+    "G7",
+    "G9"
+  ],
+  "compounds": {
+    "T1005": {
+      "median_pct_inhibition": 68.2,
+      "wells": [
+        {
+          "well": "B8",
+          "pct_inhibition": 68.2,
+          "timing_suspect": false,
+          "concentration_uM": 50,
+          "a490_endpoint": 0.078
+        },
+        {
+          "well": "D8",
+          "pct_inhibition": 31.8,
+          "timing_suspect": false,
+          "concentration_uM": 50,
+          "a490_endpoint": 0.102
+        },
+        {
+          "well": "F8",
+          "pct_inhibition": 78.8,
+          "timing_suspect": false,
+          "concentration_uM": 50,
+          "a490_endpoint": 0.071
+        }
+      ],
+      "label": "surprise_hit",
+      "timing_suspect_reps": 0
+    },
+    "T0224": {
+      "median_pct_inhibition": 97.0,
+      "wells": [
+        {
+          "well": "C5",
+          "pct_inhibition": 97.0,
+          "timing_suspect": false,
+          "concentration_uM": 50,
+          "a490_endpoint": 0.059
+        }
+      ],
+      "label": "surprise_hit",
+      "timing_suspect_reps": 0
+    },
+    "T6685": {
+      "median_pct_inhibition": 27.3,
+      "wells": [
+        {
+          "well": "F4",
+          "pct_inhibition": 27.3,
+          "timing_suspect": false,
+          "concentration_uM": 50,
+          "a490_endpoint": 0.105
+        }
+      ],
+      "label": "surprise_miss",
+      "timing_suspect_reps": 0
+    }
+  },
+  "wells": {
+    "A1": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.04,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "A10": {
+      "slope_global": 7e-06,
+      "slope_aligned": 7e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.039,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "A11": {
+      "slope_global": 1e-05,
+      "slope_aligned": 1e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.039,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "A12": {
+      "slope_global": 1e-05,
+      "slope_aligned": 1e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.038,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "A2": {
+      "slope_global": 3e-06,
+      "slope_aligned": 3e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.04,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "A3": {
+      "slope_global": 7e-06,
+      "slope_aligned": 7e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.04,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "A4": {
+      "slope_global": 1e-05,
+      "slope_aligned": 1e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.038,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "A5": {
+      "slope_global": 7e-06,
+      "slope_aligned": 7e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.039,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "A6": {
+      "slope_global": 1e-05,
+      "slope_aligned": 1e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.038,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "A7": {
+      "slope_global": 7e-06,
+      "slope_aligned": 7e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.039,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "A8": {
+      "slope_global": 7e-06,
+      "slope_aligned": 7e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.039,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "A9": {
+      "slope_global": 7e-06,
+      "slope_aligned": 7e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.04,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "B1": {
+      "slope_global": 3e-06,
+      "slope_aligned": 3e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.041,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "B10": {
+      "slope_global": -2e-05,
+      "slope_aligned": null,
+      "slope_class_global": "flat",
+      "slope_class_aligned": null,
+      "a490_endpoint": 0.201,
+      "endpoint_target_s": 31.7,
+      "role": "sample",
+      "compound_id": "T1008",
+      "aligned_window": [
+        180.0,
+        -88.33333300000004
+      ],
+      "timing_suspect": false
+    },
+    "B11": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.041,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "B12": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.041,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "B2": {
+      "slope_global": 3e-06,
+      "slope_aligned": null,
+      "slope_class_global": "flat",
+      "slope_class_aligned": null,
+      "a490_endpoint": 0.214,
+      "endpoint_target_s": -307.0,
+      "role": "sample",
+      "compound_id": "T1262",
+      "aligned_window": [
+        180.0,
+        -427.0
+      ],
+      "timing_suspect": false
+    },
+    "B3": {
+      "slope_global": 3e-06,
+      "slope_aligned": 2e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.123,
+      "endpoint_target_s": 463.8,
+      "role": "vehicle",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        343.83333300000004
+      ]
+    },
+    "B4": {
+      "slope_global": -1e-05,
+      "slope_aligned": null,
+      "slope_class_global": "flat",
+      "slope_class_aligned": null,
+      "a490_endpoint": 0.257,
+      "endpoint_target_s": -221.2,
+      "role": "sample",
+      "compound_id": "T6685",
+      "aligned_window": [
+        180.0,
+        -341.16666699999996
+      ],
+      "timing_suspect": false
+    },
+    "B5": {
+      "slope_global": -3e-06,
+      "slope_aligned": -3e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.041,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "B6": {
+      "slope_global": -2.7e-05,
+      "slope_aligned": null,
+      "slope_class_global": "flat",
+      "slope_class_aligned": null,
+      "a490_endpoint": 0.278,
+      "endpoint_target_s": -136.2,
+      "role": "sample",
+      "compound_id": "T14081",
+      "aligned_window": [
+        180.0,
+        -256.16666699999996
+      ],
+      "timing_suspect": false
+    },
+    "B7": {
+      "slope_global": 4e-05,
+      "slope_aligned": 6.7e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.143,
+      "endpoint_target_s": 485.5,
+      "role": "vehicle",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        365.5
+      ]
+    },
+    "B8": {
+      "slope_global": 5e-05,
+      "slope_aligned": null,
+      "slope_class_global": "flat",
+      "slope_class_aligned": null,
+      "a490_endpoint": 0.078,
+      "endpoint_target_s": -52.3,
+      "role": "sample",
+      "compound_id": "T1005",
+      "aligned_window": [
+        180.0,
+        -172.33333300000004
+      ],
+      "timing_suspect": false
+    },
+    "B9": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.042,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "C1": {
+      "slope_global": 1.3e-05,
+      "slope_aligned": 1.3e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.041,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "C10": {
+      "slope_global": 7e-06,
+      "slope_aligned": 7e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.037,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "C11": {
+      "slope_global": -1e-05,
+      "slope_aligned": -1.1e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.057,
+      "endpoint_target_s": 507.2,
+      "role": "vehicle",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        387.166667
+      ]
+    },
+    "C12": {
+      "slope_global": 1e-05,
+      "slope_aligned": 1e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.036,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "C2": {
+      "slope_global": 1.3e-05,
+      "slope_aligned": 1.3e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.042,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "C3": {
+      "slope_global": 3e-05,
+      "slope_aligned": null,
+      "slope_class_global": "flat",
+      "slope_class_aligned": null,
+      "a490_endpoint": 0.218,
+      "endpoint_target_s": 284.8,
+      "role": "sample",
+      "compound_id": "T0138",
+      "aligned_window": [
+        180.0,
+        164.83333299999998
+      ],
+      "timing_suspect": false
+    },
+    "C4": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.036,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "C5": {
+      "slope_global": 1e-05,
+      "slope_aligned": null,
+      "slope_class_global": "flat",
+      "slope_class_aligned": null,
+      "a490_endpoint": 0.059,
+      "endpoint_target_s": 115.8,
+      "role": "sample",
+      "compound_id": "T0224",
+      "aligned_window": [
+        180.0,
+        -4.166667000000018
+      ],
+      "timing_suspect": false
+    },
+    "C6": {
+      "slope_global": 2e-05,
+      "slope_aligned": 2e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.036,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "C7": {
+      "slope_global": 4.3e-05,
+      "slope_aligned": 0.000167,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.153,
+      "endpoint_target_s": 369.7,
+      "role": "sample",
+      "compound_id": "T8390",
+      "aligned_window": [
+        180.0,
+        249.666667
+      ],
+      "timing_suspect": false
+    },
+    "C8": {
+      "slope_global": 3e-06,
+      "slope_aligned": 3e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.037,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "C9": {
+      "slope_global": 2e-05,
+      "slope_aligned": null,
+      "slope_class_global": "flat",
+      "slope_class_aligned": null,
+      "a490_endpoint": 0.159,
+      "endpoint_target_s": 199.8,
+      "role": "sample",
+      "compound_id": "T0985",
+      "aligned_window": [
+        180.0,
+        79.83333299999998
+      ],
+      "timing_suspect": false
+    },
+    "D1": {
+      "slope_global": 3e-06,
+      "slope_aligned": 3e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.04,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "D10": {
+      "slope_global": 1e-05,
+      "slope_aligned": null,
+      "slope_class_global": "flat",
+      "slope_class_aligned": null,
+      "a490_endpoint": 0.225,
+      "endpoint_target_s": 53.0,
+      "role": "sample",
+      "compound_id": "T1008",
+      "aligned_window": [
+        180.0,
+        -67.0
+      ],
+      "timing_suspect": false
+    },
+    "D11": {
+      "slope_global": 7e-06,
+      "slope_aligned": 7e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.04,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "D12": {
+      "slope_global": 3e-06,
+      "slope_aligned": 3e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.039,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "D2": {
+      "slope_global": 1e-05,
+      "slope_aligned": null,
+      "slope_class_global": "flat",
+      "slope_class_aligned": null,
+      "a490_endpoint": 0.243,
+      "endpoint_target_s": -285.0,
+      "role": "sample",
+      "compound_id": "T1262",
+      "aligned_window": [
+        180.0,
+        -405.0
+      ],
+      "timing_suspect": false
+    },
+    "D3": {
+      "slope_global": 7e-06,
+      "slope_aligned": null,
+      "slope_class_global": "flat",
+      "slope_class_aligned": null,
+      "a490_endpoint": 0.062,
+      "endpoint_target_s": -475.2,
+      "role": "no_tem1",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        -595.166667
+      ]
+    },
+    "D4": {
+      "slope_global": 1.3e-05,
+      "slope_aligned": null,
+      "slope_class_global": "flat",
+      "slope_class_aligned": null,
+      "a490_endpoint": 0.266,
+      "endpoint_target_s": -199.5,
+      "role": "sample",
+      "compound_id": "T6685",
+      "aligned_window": [
+        180.0,
+        -319.5
+      ],
+      "timing_suspect": false
+    },
+    "D5": {
+      "slope_global": 3e-06,
+      "slope_aligned": 3e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.043,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "D6": {
+      "slope_global": 0.0,
+      "slope_aligned": null,
+      "slope_class_global": "flat",
+      "slope_class_aligned": null,
+      "a490_endpoint": 0.298,
+      "endpoint_target_s": -114.5,
+      "role": "sample",
+      "compound_id": "T14081",
+      "aligned_window": [
+        180.0,
+        -234.5
+      ],
+      "timing_suspect": false
+    },
+    "D7": {
+      "slope_global": 1e-05,
+      "slope_aligned": null,
+      "slope_class_global": "flat",
+      "slope_class_aligned": null,
+      "a490_endpoint": 0.056,
+      "endpoint_target_s": -453.5,
+      "role": "no_tem1",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        -573.5
+      ]
+    },
+    "D8": {
+      "slope_global": 7e-06,
+      "slope_aligned": null,
+      "slope_class_global": "flat",
+      "slope_class_aligned": null,
+      "a490_endpoint": 0.102,
+      "endpoint_target_s": -31.0,
+      "role": "sample",
+      "compound_id": "T1005",
+      "aligned_window": [
+        180.0,
+        -151.0
+      ],
+      "timing_suspect": false
+    },
+    "D9": {
+      "slope_global": 3e-06,
+      "slope_aligned": 3e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.04,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "E1": {
+      "slope_global": 7e-06,
+      "slope_aligned": 7e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.04,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "E10": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.041,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "E11": {
+      "slope_global": 7e-06,
+      "slope_aligned": null,
+      "slope_class_global": "flat",
+      "slope_class_aligned": null,
+      "a490_endpoint": 0.057,
+      "endpoint_target_s": -431.8,
+      "role": "no_tem1",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        -551.833333
+      ]
+    },
+    "E12": {
+      "slope_global": 3e-06,
+      "slope_aligned": 3e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.041,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "E2": {
+      "slope_global": 7e-06,
+      "slope_aligned": 7e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.041,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "E3": {
+      "slope_global": 4e-05,
+      "slope_aligned": null,
+      "slope_class_global": "flat",
+      "slope_class_aligned": null,
+      "a490_endpoint": 0.157,
+      "endpoint_target_s": 306.5,
+      "role": "sample",
+      "compound_id": "T0138",
+      "aligned_window": [
+        180.0,
+        186.5
+      ],
+      "timing_suspect": false
+    },
+    "E4": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.041,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "E5": {
+      "slope_global": 4.7e-05,
+      "slope_aligned": null,
+      "slope_class_global": "flat",
+      "slope_class_aligned": null,
+      "a490_endpoint": 0.228,
+      "endpoint_target_s": 137.5,
+      "role": "sample",
+      "compound_id": "T0224",
+      "aligned_window": [
+        180.0,
+        17.5
+      ],
+      "timing_suspect": false
+    },
+    "E6": {
+      "slope_global": 3e-06,
+      "slope_aligned": 3e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.043,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "E7": {
+      "slope_global": 2.7e-05,
+      "slope_aligned": 5.6e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.166,
+      "endpoint_target_s": 391.0,
+      "role": "sample",
+      "compound_id": "T8390",
+      "aligned_window": [
+        180.0,
+        271.0
+      ],
+      "timing_suspect": false
+    },
+    "E8": {
+      "slope_global": 3e-06,
+      "slope_aligned": 3e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.041,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "E9": {
+      "slope_global": 0.000163,
+      "slope_aligned": null,
+      "slope_class_global": "flat",
+      "slope_class_aligned": null,
+      "a490_endpoint": 0.152,
+      "endpoint_target_s": 221.5,
+      "role": "sample",
+      "compound_id": "T0985",
+      "aligned_window": [
+        180.0,
+        101.5
+      ],
+      "timing_suspect": false
+    },
+    "F1": {
+      "slope_global": 1e-05,
+      "slope_aligned": 1e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.04,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "F10": {
+      "slope_global": -1e-05,
+      "slope_aligned": null,
+      "slope_class_global": "flat",
+      "slope_class_aligned": null,
+      "a490_endpoint": 0.223,
+      "endpoint_target_s": 74.3,
+      "role": "sample",
+      "compound_id": "T1008",
+      "aligned_window": [
+        180.0,
+        -45.66666699999996
+      ],
+      "timing_suspect": false
+    },
+    "F11": {
+      "slope_global": 1e-05,
+      "slope_aligned": 1e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.037,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "F12": {
+      "slope_global": 1e-05,
+      "slope_aligned": 1e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.037,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "F2": {
+      "slope_global": 1e-05,
+      "slope_aligned": null,
+      "slope_class_global": "flat",
+      "slope_class_aligned": null,
+      "a490_endpoint": 0.215,
+      "endpoint_target_s": -263.0,
+      "role": "sample",
+      "compound_id": "T1262",
+      "aligned_window": [
+        180.0,
+        -383.0
+      ],
+      "timing_suspect": false
+    },
+    "F3": {
+      "slope_global": 1.7e-05,
+      "slope_aligned": null,
+      "slope_class_global": "flat",
+      "slope_class_aligned": null,
+      "a490_endpoint": 0.059,
+      "endpoint_target_s": -390.3,
+      "role": "pos-ctrl-clavaculin",
+      "compound_id": "T19860",
+      "aligned_window": [
+        180.0,
+        -510.33333300000004
+      ]
+    },
+    "F4": {
+      "slope_global": 1e-05,
+      "slope_aligned": null,
+      "slope_class_global": "flat",
+      "slope_class_aligned": null,
+      "a490_endpoint": 0.105,
+      "endpoint_target_s": -177.8,
+      "role": "sample",
+      "compound_id": "T6685",
+      "aligned_window": [
+        180.0,
+        -297.83333300000004
+      ],
+      "timing_suspect": false
+    },
+    "F5": {
+      "slope_global": 1e-05,
+      "slope_aligned": 1e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.039,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "F6": {
+      "slope_global": 0.0,
+      "slope_aligned": null,
+      "slope_class_global": "flat",
+      "slope_class_aligned": null,
+      "a490_endpoint": 0.325,
+      "endpoint_target_s": -92.8,
+      "role": "sample",
+      "compound_id": "T14081",
+      "aligned_window": [
+        180.0,
+        -212.83333300000004
+      ],
+      "timing_suspect": false
+    },
+    "F7": {
+      "slope_global": 1.7e-05,
+      "slope_aligned": null,
+      "slope_class_global": "flat",
+      "slope_class_aligned": null,
+      "a490_endpoint": 0.068,
+      "endpoint_target_s": -369.0,
+      "role": "pos-ctrl-clavaculin",
+      "compound_id": "T19860",
+      "aligned_window": [
+        180.0,
+        -489.0
+      ]
+    },
+    "F8": {
+      "slope_global": 2e-05,
+      "slope_aligned": null,
+      "slope_class_global": "flat",
+      "slope_class_aligned": null,
+      "a490_endpoint": 0.071,
+      "endpoint_target_s": -9.7,
+      "role": "sample",
+      "compound_id": "T1005",
+      "aligned_window": [
+        180.0,
+        -129.66666699999996
+      ],
+      "timing_suspect": false
+    },
+    "F9": {
+      "slope_global": 1.3e-05,
+      "slope_aligned": 1.3e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.04,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "G1": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.039,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "G10": {
+      "slope_global": 7e-06,
+      "slope_aligned": 7e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.041,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "G11": {
+      "slope_global": 0.0,
+      "slope_aligned": null,
+      "slope_class_global": "flat",
+      "slope_class_aligned": null,
+      "a490_endpoint": 0.169,
+      "endpoint_target_s": -347.7,
+      "role": "pos-ctrl-clavaculin",
+      "compound_id": "T19860",
+      "aligned_window": [
+        180.0,
+        -467.66666699999996
+      ]
+    },
+    "G12": {
+      "slope_global": 3e-06,
+      "slope_aligned": 3e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.038,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "G2": {
+      "slope_global": 3e-06,
+      "slope_aligned": 3e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.04,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "G3": {
+      "slope_global": 6e-05,
+      "slope_aligned": null,
+      "slope_class_global": "flat",
+      "slope_class_aligned": null,
+      "a490_endpoint": 0.128,
+      "endpoint_target_s": 328.2,
+      "role": "sample",
+      "compound_id": "T0138",
+      "aligned_window": [
+        180.0,
+        208.16666700000002
+      ],
+      "timing_suspect": false
+    },
+    "G4": {
+      "slope_global": 7e-06,
+      "slope_aligned": 7e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.039,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "G5": {
+      "slope_global": -0.00012,
+      "slope_aligned": null,
+      "slope_class_global": "flat",
+      "slope_class_aligned": null,
+      "a490_endpoint": 0.271,
+      "endpoint_target_s": 159.2,
+      "role": "sample",
+      "compound_id": "T0224",
+      "aligned_window": [
+        180.0,
+        39.16666700000002
+      ],
+      "timing_suspect": false
+    },
+    "G6": {
+      "slope_global": 7e-06,
+      "slope_aligned": 7e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.042,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "G7": {
+      "slope_global": 7.3e-05,
+      "slope_aligned": 8.9e-05,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.192,
+      "endpoint_target_s": 412.3,
+      "role": "sample",
+      "compound_id": "T8390",
+      "aligned_window": [
+        180.0,
+        292.33333300000004
+      ],
+      "timing_suspect": false
+    },
+    "G8": {
+      "slope_global": 3e-06,
+      "slope_aligned": 3e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.039,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "G9": {
+      "slope_global": 1e-05,
+      "slope_aligned": null,
+      "slope_class_global": "flat",
+      "slope_class_aligned": null,
+      "a490_endpoint": 0.178,
+      "endpoint_target_s": 243.2,
+      "role": "sample",
+      "compound_id": "T0985",
+      "aligned_window": [
+        180.0,
+        123.16666700000002
+      ],
+      "timing_suspect": false
+    },
+    "H1": {
+      "slope_global": 3e-06,
+      "slope_aligned": 3e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.04,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "H10": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.04,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "H11": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.04,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "H12": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.04,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "H2": {
+      "slope_global": 3e-06,
+      "slope_aligned": 3e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.041,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "H3": {
+      "slope_global": -3e-06,
+      "slope_aligned": -3e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.04,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "H4": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.039,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "H5": {
+      "slope_global": -3e-06,
+      "slope_aligned": -3e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.039,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "H6": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.04,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "H7": {
+      "slope_global": 3e-06,
+      "slope_aligned": 3e-06,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.04,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "H8": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.039,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    },
+    "H9": {
+      "slope_global": 0.0,
+      "slope_aligned": 0.0,
+      "slope_class_global": "flat",
+      "slope_class_aligned": "flat",
+      "a490_endpoint": 0.04,
+      "endpoint_target_s": 900.0,
+      "role": "sample",
+      "compound_id": null,
+      "aligned_window": [
+        180.0,
+        480.0
+      ],
+      "timing_suspect": false
+    }
+  },
+  "control_stats": {
+    "median_vehicle_slope": 2e-05,
+    "median_no_tem1_slope": 7e-06,
+    "median_vehicle_a490_endpoint": 0.123,
+    "median_no_tem1_a490_endpoint": 0.057,
+    "endpoint_dynamic_range": 0.066
+  },
+  "qc_gates": {
+    "q1_pass": true,
+    "q1t_timing_unknown": false,
+    "q1t_timing_stagger": true,
+    "q2_pass": false,
+    "q2_endpoint_pass": true,
+    "q3_pass": true,
+    "pos_ctrl_median_pct": 83.3
+  },
+  "timing_stagger_min": 16.01,
+  "wells_timing_suspect": [],
+  "pre_read_overage_wells": [],
+  "slope_window_start_s": 180.0,
+  "slope_window_end_s": 480.0,
+  "next_plate_design": "dose_response",
+  "scoring_mode": "endpoint",
+  "endpoint_reaction_time_s": 600.0,
+  "analysis_version": "v2",
+  "annotated_csv": "/Users/fio/zeon_hack/data/screens/2/post-run/v2/analysis/r2_kinetics_annotated.csv",
+  "summary_json": "/Users/fio/zeon_hack/data/screens/2/post-run/v2/analysis/r2_round_summary_eda.json",
+  "plate_map": "data/plate_map_r2.json",
+  "pattern_summary_json": "/Users/fio/zeon_hack/data/screens/2/post-run/v2/analysis/r2_pattern_summary.json",
+  "pattern_summary_md": "/Users/fio/zeon_hack/data/screens/2/post-run/v2/analysis/r2_pattern_summary.md",
+  "kinetics_llm_context_json": "/Users/fio/zeon_hack/data/screens/2/post-run/v2/analysis/r2_kinetics_llm_context.json",
+  "kinetics_llm_context_md": "/Users/fio/zeon_hack/data/screens/2/post-run/v2/analysis/r2_kinetics_llm_context.md",
+  "analysis_dir": "data/screens/2/post-run/v2/analysis"
+}

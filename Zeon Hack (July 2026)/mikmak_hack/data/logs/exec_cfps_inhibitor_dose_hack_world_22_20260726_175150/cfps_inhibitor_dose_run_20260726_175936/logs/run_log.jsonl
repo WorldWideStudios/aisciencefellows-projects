@@ -1,0 +1,36 @@
+{"t": "2026-07-26T17:51:52.507927+00:00", "type": "step_start", "node_id": "grab_pipette", "label": "Pick Up Pipette"}
+{"t": "2026-07-26T17:52:14.479939+00:00", "type": "step_start", "node_id": "dose1_attach", "label": "Attach tip (dose1)"}
+{"t": "2026-07-26T17:52:41.290176+00:00", "type": "aspirate", "msg": "aspirate 5 uL from wellplate_pcr_parts_2 / well A2 (pipette epipette_10ul, speed 5.0, cal (-0.0015,0.001))", "node_id": "dose1_aspirate", "label": "Aspirate (dose1)"}
+{"t": "2026-07-26T17:52:52.823300+00:00", "type": "dispense", "msg": "dispense 5 uL into wellplate_96_flatbottom / well A1 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))", "node_id": "dose1_dispense", "label": "Dispense (dose1)"}
+{"t": "2026-07-26T17:52:59.295939+00:00", "type": "step_start", "node_id": "dose1_eject", "label": "Eject tip (dose1)"}
+{"t": "2026-07-26T17:53:06.663350+00:00", "type": "step_start", "node_id": "dose2_attach", "label": "Attach tip (dose2)"}
+{"t": "2026-07-26T17:53:33.030520+00:00", "type": "aspirate", "msg": "aspirate 10 uL from wellplate_pcr_parts_2 / well A4 (pipette epipette_10ul, speed 5.0, cal (-0.0015,0.001))", "node_id": "dose2_aspirate", "label": "Aspirate (dose2)"}
+{"t": "2026-07-26T17:53:44.584148+00:00", "type": "dispense", "msg": "dispense 10 uL into wellplate_96_flatbottom / well A3 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))", "node_id": "dose2_dispense", "label": "Dispense (dose2)"}
+{"t": "2026-07-26T17:53:51.107631+00:00", "type": "step_start", "node_id": "dose2_eject", "label": "Eject tip (dose2)"}
+{"t": "2026-07-26T17:53:58.431395+00:00", "type": "step_start", "node_id": "dose3_attach", "label": "Attach tip (dose3)"}
+{"t": "2026-07-26T17:54:24.692379+00:00", "type": "aspirate", "msg": "aspirate 3 uL from wellplate_pcr_parts_2 / well A6 (pipette epipette_10ul, speed 5.0, cal (-0.0015,0.001))", "node_id": "dose3_aspirate", "label": "Aspirate (dose3)"}
+{"t": "2026-07-26T17:54:36.104575+00:00", "type": "dispense", "msg": "dispense 3 uL into wellplate_96_flatbottom / well A5 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))", "node_id": "dose3_dispense", "label": "Dispense (dose3)"}
+{"t": "2026-07-26T17:54:42.580699+00:00", "type": "step_start", "node_id": "dose3_eject", "label": "Eject tip (dose3)"}
+{"t": "2026-07-26T17:54:49.790517+00:00", "type": "step_start", "node_id": "dose4_attach", "label": "Attach tip (dose4)"}
+{"t": "2026-07-26T17:55:16.180143+00:00", "type": "aspirate", "msg": "aspirate 1 uL from wellplate_pcr_parts_2 / well A8 (pipette epipette_10ul, speed 5.0, cal (-0.0015,0.001))", "node_id": "dose4_aspirate", "label": "Aspirate (dose4)"}
+{"t": "2026-07-26T17:55:27.715812+00:00", "type": "dispense", "msg": "dispense 1 uL into wellplate_96_flatbottom / well A7 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))", "node_id": "dose4_dispense", "label": "Dispense (dose4)"}
+{"t": "2026-07-26T17:55:34.116084+00:00", "type": "step_start", "node_id": "dose4_eject", "label": "Eject tip (dose4)"}
+{"t": "2026-07-26T17:55:41.169518+00:00", "type": "step_start", "node_id": "dose5_attach", "label": "Attach tip (dose5)"}
+{"t": "2026-07-26T17:56:07.451359+00:00", "type": "aspirate", "msg": "aspirate 3 uL from wellplate_pcr_parts_2 / well A10 (pipette epipette_10ul, speed 5.0, cal (-0.0015,0.001))", "node_id": "dose5_aspirate", "label": "Aspirate (dose5)"}
+{"t": "2026-07-26T17:56:19.379401+00:00", "type": "dispense", "msg": "dispense 3 uL into wellplate_96_flatbottom / well A9 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))", "node_id": "dose5_dispense", "label": "Dispense (dose5)"}
+{"t": "2026-07-26T17:56:25.846320+00:00", "type": "step_start", "node_id": "dose5_eject", "label": "Eject tip (dose5)"}
+{"t": "2026-07-26T17:56:32.811446+00:00", "type": "step_start", "node_id": "dose6_attach", "label": "Attach tip (dose6)"}
+{"t": "2026-07-26T17:56:59.172548+00:00", "type": "aspirate", "msg": "aspirate 3 uL from wellplate_pcr_parts_2 / well A12 (pipette epipette_10ul, speed 5.0, cal (-0.0015,0.001))", "node_id": "dose6_aspirate", "label": "Aspirate (dose6)"}
+{"t": "2026-07-26T17:57:10.985060+00:00", "type": "dispense", "msg": "dispense 3 uL into wellplate_96_flatbottom / well A11 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))", "node_id": "dose6_dispense", "label": "Dispense (dose6)"}
+{"t": "2026-07-26T17:57:17.582989+00:00", "type": "step_start", "node_id": "dose6_eject", "label": "Eject tip (dose6)"}
+{"t": "2026-07-26T17:57:24.338075+00:00", "type": "step_start", "node_id": "dose7_attach", "label": "Attach tip (dose7)"}
+{"t": "2026-07-26T17:57:50.276342+00:00", "type": "aspirate", "msg": "aspirate 1 uL from wellplate_pcr_parts_2 / well B1 (pipette epipette_10ul, speed 5.0, cal (-0.0015,0.001))", "node_id": "dose7_aspirate", "label": "Aspirate (dose7)"}
+{"t": "2026-07-26T17:58:01.695225+00:00", "type": "dispense", "msg": "dispense 1 uL into wellplate_96_flatbottom / well B2 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))", "node_id": "dose7_dispense", "label": "Dispense (dose7)"}
+{"t": "2026-07-26T17:58:08.152400+00:00", "type": "step_start", "node_id": "dose7_eject", "label": "Eject tip (dose7)"}
+{"t": "2026-07-26T17:58:15.465301+00:00", "type": "step_start", "node_id": "dose8_attach", "label": "Attach tip (dose8)"}
+{"t": "2026-07-26T17:58:41.831882+00:00", "type": "aspirate", "msg": "aspirate 6 uL from wellplate_pcr_parts_2 / well B3 (pipette epipette_10ul, speed 5.0, cal (-0.0015,0.001))", "node_id": "dose8_aspirate", "label": "Aspirate (dose8)"}
+{"t": "2026-07-26T17:58:53.328813+00:00", "type": "dispense", "msg": "dispense 6 uL into wellplate_96_flatbottom / well B4 (pipette epipette_10ul, speed 5.0, cal (-0.006,0.003))", "node_id": "dose8_dispense", "label": "Dispense (dose8)"}
+{"t": "2026-07-26T17:58:59.884336+00:00", "type": "step_start", "node_id": "dose8_eject", "label": "Eject tip (dose8)"}
+{"t": "2026-07-26T17:59:07.175650+00:00", "type": "step_start", "node_id": "place_pipette", "label": "Place Pipette Back"}
+{"t": "2026-07-26T17:59:08.742038+00:00", "type": "event", "msg": "\u25b6 Returning epipette_10ul to its stand", "node_id": "place_pipette", "label": "Place Pipette Back"}
+{"t": "2026-07-26T17:59:08.752467+00:00", "type": "step_start", "node_id": "place_pipette", "label": "Place Pipette Back"}

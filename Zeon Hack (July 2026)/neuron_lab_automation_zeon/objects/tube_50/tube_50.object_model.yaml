@@ -1,0 +1,62 @@
+urdf: tube_50.urdf
+parts:
+  body:
+    links: [body]
+    description: 50ml centrifuge tube (Falcon-style), conical bottom, screw cap on
+      top
+articulations:
+  default:
+    description: Static object, no actuated joints
+    joints: {}
+anchors:
+  object:
+    parent_link: world
+
+    description: Table placement frame at conical tip (bottom-center of tube). Rotationally
+      symmetric around Z.
+    link_T_anchor:
+      xyz: [0.0, 0.0, 0.0]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  tip:
+    parent_link: body
+
+    description: Conical tip (bottom of tube). Origin at tip center. Z axis pointing
+      up along tube axis. Rotationally symmetric around Z.
+    link_T_anchor:
+      xyz: [0.0, 0.0, 0.0]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  cap:
+    parent_link: body
+
+    description: Top of screw cap. Origin at cap center. Z axis pointing up along
+      tube axis. Tube height 115mm, body diameter 28mm, cap diameter 34mm.
+      Rotationally symmetric around Z.
+    link_T_anchor:
+      xyz: [0.0, 0.0, 0.11514]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  grasp_horizontal:
+    parent_link: body
+
+    description: Side grasp just below screw cap. Origin at tube center. Z axis outward
+      along +X (approach direction). Jaws close across tube body. Cap starts at Z=102mm;
+      grasp is at Z=101mm on the body. Rotationally symmetric around tube Z (object
+      +Z).
+    link_T_anchor:
+      xyz: [3.46945e-18, 0.0, 0.0826257]
+      wxyz: [0.0, 0.707107, 0.0, 0.707107]
+    grasp:
+      width: 0.0285
+      standoff: 0.03
+  grasp_vertical:
+    parent_link: body
+
+    description: Top-down grasp just below screw cap. Origin at tube center. Z axis
+      pointing down (-Z in object frame, approach from above). Jaws close across tube
+      body. Same height as grasp_horizontal (Z=83mm on body). Rotationally symmetric
+      around tube Z (object +Z).
+    link_T_anchor:
+      xyz: [0.0, 3.46945e-18, 0.0861389]
+      wxyz: [0.0, 0.0, 1.0, 0.0]
+    grasp:
+      width: 0.0285
+      standoff: 0.03

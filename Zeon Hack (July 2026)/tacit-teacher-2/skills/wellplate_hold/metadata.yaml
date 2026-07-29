@@ -1,0 +1,10 @@
+skill_id: wellplate_hold
+version: "1.0.0"
+description: "Grip a wellplate at its hold_plate anchor and hold it down in place, without lifting or relocating it — the arm stays at the grasp pose instead of retracting. Optionally moves through a wider pre_hold_plate anchor first."
+
+# parameters are derived from the wellplate_hold() signature in robotic_code.py
+
+tags:
+  - plateandholder
+  - plate
+  - hold

@@ -1,0 +1,12 @@
+skill_id: platesealer_platemax_load
+version: "1.0.0"
+description: "Load a plate held by the right arm into a plate sealer and release it. Follows the sealer's plate_preapproach_1 -> plate_preapproach_2 -> plate_load anchors, detaches and opens the gripper at the load pose, then retreats along the same anchors in reverse."
+
+# parameters are derived from the platesealer_platemax_load() signature in robotic_code.py
+
+tags:
+  - pipette_demo
+  - platesealer
+  - plate
+  - load
+  - place

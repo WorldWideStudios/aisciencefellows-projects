@@ -1,0 +1,20 @@
+skill_id: close_container
+version: "1.0.0"
+description: "Pick the lid up from its park location and press it back onto the container."
+
+parameter_descriptions:
+  container: "The vial/cartridge whose lid should be closed."
+  lid: "The lid/cap object, currently at its park location."
+  arm: "Arm and gripper to use ('left_arm' or 'right_arm')."
+  speed: "Relative speed (0-100) for the close-in grasp, lift, and seat moves."
+  park: "Object carrying the 'lid_park' anchor where the lid currently sits. Defaults to the container itself."
+  park_anchor: "Name of the anchor on `park` where the lid is currently parked."
+
+preconditions:
+  lid_state: open
+
+postconditions:
+  lid_state: closed
+
+tags: ["lid", "cap", "container", "close"]
+high_risk: false

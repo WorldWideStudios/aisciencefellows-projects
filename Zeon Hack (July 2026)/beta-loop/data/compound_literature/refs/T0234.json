@@ -1,0 +1,63 @@
+{
+  "compound_id": "T0234",
+  "name": "Methicillin sodium salt",
+  "match": "yes",
+  "support": "weak",
+  "entries": [
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Methicillin sodium salt. Map complete: 5/5 tasks succeeded in 1781ms\nResults ID: m_faec6b6e\nFull results: /.gxl/map_m_faec6b6e.txt\n\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided paper content, there is no mention of a nitrocefin colorimetric assay, Methicillin sodium salt, inhibition constants ($K_i$ or $\n  [success] \u03b2-Lactamase Suppression as a Strategy\nto Target Methicillin-Resistant   (PMC9773349)\n    Based on the provided paper, there is no information regarding Methicillin sodium salt, TEM-1 beta-lactamase, or their kinetic/inhibitory values ($K_i\n  [success] In Silico Study of the Potential of Brazilein Sappan Wood as a Beta-La  (PMC11229569)\n    Based on the provided paper, there is no mention of \"Methicillin sodium salt\", \"nitrocefin colorimetric assay\", \"Ki\", \"IC50\", or specific assay concen\n  [success] Reversible inactivation of a peptidoglycan transpeptidase by a \u03b2-lacta  (PMC5567249)\n    Based on the provided research paper content, there is no mention of Methicillin sodium salt, TEM-1 beta-lactamase, Ki, IC50 values, or related assays\n  [success] Classification and applicability of new beta-lactamase inhibitors  (PMC12584905)\n    Based on the provided paper content, there is no mention of Methicillin sodium salt, TEM-1 beta-lactamase, nitrocefin colorimetric assays, or specific\n\nFull results: /.gxl/map_m_faec6b6e.txt",
+      "paperclip_search_id": "s_6f0a8324",
+      "paperclip_map_id": "m_faec6b6e",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "pmcid": "PMC12484619"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Methicillin sodium salt. Map complete: 30/30 tasks succeeded in 8125ms\nResults ID: m_d5b53f75\nFull results: /.gxl/map_m_d5b53f75.txt\n\n  [success] Saturation Mutagenesis and Molecular Modeling: The Impact of Methionin  (PMC11276661)\n    Based on the provided paper, there is no mention of Methicillin sodium salt, a nitrocefin colorimetric assay, IC50 or Ki values, or related inhibition\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided paper content, there is no information regarding testing Methicillin sodium salt against TEM-1 beta-lactamase in a nitrocefin co\n  [success] Reversible inactivation of a peptidoglycan transpeptidase by a \u03b2-lacta  (PMC5567249)\n    Based on the provided paper content, there is no information regarding \"Methicillin sodium salt\", \"TEM-1 beta-lactamase\", or any corresponding $K_i$, \n  [success] Effect of Lactamase Inhibitors on the Biosensor Penp during the Measur  (PMC6427286)\n    Based on the provided paper content, there is no information regarding \"Methicillin sodium salt\", \"TEM-1 beta-lactamase\", a \"nitrocefin colorimetric a\n  [success] Hydrolysis of ionic liquid\u2013treated substrate with an  Iocasia fonsfrig  (PMC10774164)\n    Based on the provided paper, there is no information regarding Methicillin sodium salt, TEM-1 beta-lactamase, nitrocefin colorimetric assays, $K_i$, $\n  [success] Assay Platform\nfor Clinically Relevant Metallo-\u03b2-lactamases  (PMC3910272)\n    Based on the provided paper content, t",
+      "paperclip_search_id": "s_4c451c57",
+      "paperclip_map_id": "m_d5b53f75",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "pmcid": "PMC11276661",
+      "paperclip_source": "pmc"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Methicillin sodium salt. Map complete: 24/24 tasks succeeded in 6579ms\nResults ID: m_b03d5815\nFull results: /.gxl/map_m_b03d5815.txt\n\n  [success] Distant Site Mutations in Clinical TEM Beta-Lactamase Variants Enhance  (bio_33da24cd7504)\n    The provided paper does not contain information about \"Methicillin sodium salt\", \"nitrocefin colorimetric assay\", $K_i$, $I\\!C_{50}$, or related enzym\n  [success] A new type of AmpC \u03b2-lactamases defined by PIB-1, a metal-dependent ca  (bio_9fef02c2845c)\n    Based on the provided paper, there is no mention of \"Methicillin sodium salt\", \"TEM-1 beta-lactamase\", IC50, Ki values, or enzyme concentrations relat\n  [success] Mutations in  ampD  cause hyperproduction of AmpC and CphA beta-lactam  (bio_b205dd536f3c)\n    Based on the provided paper content, there is no mention of \"Methicillin sodium salt\", \"TEM-1 beta-lactamase\", \"nitrocefin colorimetric assay\", Ki or \n  [success] Contributions of \u03b2-lactamase substrate specificity and outer membrane   (bio_ca645f447dca)\n    Based on the provided paper content, there is no mention of \"Methicillin sodium salt,\" \"nitrocefin colorimetric assay,\" $K_i$, $IC_{50}$ values in $\\m\n  [success] Mutational effects on carbapenem hydrolysis of YEM-1, a new sub-class   (bio_020c50086d3a)\n    Based on the provided paper, there is no mention of \"Methicillin sodium salt\", \"TEM-1 beta-lactamase\", \"nitrocefin colorimetric assay\", $K_i$, $\\mathr\n  [success] Sulbactam-mediated inhibition of TEM-1 \u03b2-lactamase increases specific   (bio_e76fe1d274e9",
+      "paperclip_search_id": "s_741a68d1",
+      "paperclip_map_id": "m_b03d5815",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "paperclip_source": "biorxiv"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Methicillin sodium salt. Map complete: 10/10 tasks succeeded in 2936ms\nResults ID: m_efec1411\nFull results: /.gxl/map_m_efec1411.txt\n\n  [success] bla - Beta-lactamase TEM  (P62593)\n    Based on the provided paper content, there is no information regarding Methicillin sodium salt, nitrocefin colorimetric assays, inhibition constants (\n  [success] bla - Beta-lactamase TEM  (P62594)\n    Based on the provided paper content, there is no mention of Methicillin sodium salt, nitrocefin colorimetric assays, Ki or IC50 values, enzyme concent\n  [success] blaT-12b - Beta-lactamase TEM-12  (Q48406)\n    Based on the provided paper content, there is no information regarding Methicillin sodium salt, TEM-1 beta-lactamase assays, IC50/Ki values, enzyme or\n  [success] SALT - Salt stress-induced protein  (A2WPN7)\n    Based on the provided paper content, there is no information regarding Methicillin sodium salt, TEM-1 beta-lactamase, nitrocefin colorimetric assays, \n  [success] SALT - Salt stress-induced protein  (Q0JMY8)\n    Based on the provided paper content, there is no mention of Methicillin sodium salt, TEM-1 beta-lactamase, nitrocefin colorimetric assay, IC50, Ki, en\n  [success] penPC - Beta-lactamase 1  (P10424)\n    Based on the provided paper content, there is no information regarding \"Methicillin sodium salt\", \"TEM-1 beta-lactamase\", \"nitrocefin colorimetric ass\n  [success] blaY - Beta-lactamase 1  (P00809)\n    Based on the provided paper content, there is no mention of Methicillin sodium salt, TEM-1 beta-lacta",
+      "paperclip_search_id": "s_ab76fbfb",
+      "paperclip_map_id": "m_efec1411",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "paperclip_source": "proteins"
+    }
+  ],
+  "raw_local": "/Users/fio/zeon_hack/pvjthomas/local/literature/T0234",
+  "assay_recommendations": {
+    "tem1_nitrocefin": {
+      "screen_conc_uM": 50,
+      "screen_rationale": "Project default screen concentration; no literature inhibitor concentration or IC50/Ki extracted.",
+      "screen_conc_source": "project_default",
+      "max_assay_conc_uM": 1000.0,
+      "metric": "relative nitrocefin hydrolysis vs no-inhibitor control"
+    }
+  }
+}

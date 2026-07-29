@@ -1,0 +1,22 @@
+skill_id: cfps_dispense_mastermix
+version: "1.0.0"
+description: >-
+  Super-skill: aliquot ONE built CFPS master-mix tube into its reaction wells.
+  Composes the generic epipette atomics (attach/aspirate/dispense/eject).
+  Dispenses rxn_volume (default 20 uL) from the mix hole into each destination
+  well, splitting the volume into per-stroke chunks with a fresh tip per stroke
+  and routing each stroke to whichever pipette fits (10 uL or 120 uL). The
+  destination wells come from the comma/semicolon-separated `wells` list, capped
+  at num_reactions. num_reactions <= 0 disables the condition (the skill no-ops).
+
+# parameters are derived from the cfps_dispense_mastermix() signature in robotic_code.py
+
+preconditions:
+  epipette_connected: true
+
+tags:
+  - meta
+  - cfps
+  - epipette
+  - liquid_handling
+  - mastermix

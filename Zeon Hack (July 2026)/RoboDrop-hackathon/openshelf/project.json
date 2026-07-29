@@ -1,0 +1,9 @@
+{
+  "name": "openshelf",
+  "description": "Skills and workflows built on the OpenShelf API",
+  "created_at": "2026-07-06T21:44:22.601Z",
+  "updated_at": "2026-07-06T21:44:22.601Z",
+  "archived": false,
+  "active_workflow": "openshelf_full_cycle",
+  "active_world": "v9_open_shelf_world"
+}

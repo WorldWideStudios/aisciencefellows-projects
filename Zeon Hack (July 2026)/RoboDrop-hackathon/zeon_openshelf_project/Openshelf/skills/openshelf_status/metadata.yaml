@@ -1,0 +1,12 @@
+skill_id: openshelf_status
+version: "1.0.0"
+description: "Read the shelf's state and decode a settled flag. Gate arm motion on settled, not on success - a shelf mid-move answers HTTP 200 perfectly well."
+
+preconditions: {}   # parsed but NOT enforced by the executor - never gate on these
+postconditions: {}
+safety_rules: []
+tags:
+  - openshelf
+  - bridge
+  - http
+world_state_prime: null

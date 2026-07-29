@@ -1,0 +1,704 @@
+{
+  "generated_at": "2026-07-26T15:52:04Z",
+  "post_run_dir": "data/screens/2/post-run",
+  "summary": {
+    "keep_in_place": 29,
+    "generate_from_existing": 1,
+    "human_review": 7,
+    "dedupe_do_not_move": 5,
+    "archive_ok": 4,
+    "promote_to_data": 2
+  },
+  "missing_for_decision_tree": [
+    "data/screens/2/post-run/nitrocefin_timing.json \u2014 Per-well t0 from robot dispense log (Q1T)",
+    "data/screens/2/post-run/reader_lid_close_utc.txt \u2014 Plate reader lid-close timestamp",
+    "data/plate_map_r2.json \u2014 Promoted active plate map for analyze_kinetics()",
+    "data/assay/run_2_summary.json \u2014 Decision-tree output summary",
+    "data/round_summary_r2.json \u2014 Legacy agent round summary path"
+  ],
+  "move_recommendations": [],
+  "keep_recommendations": [
+    {
+      "path": "data/screens/2/post-run/kinetics_r2.csv",
+      "reason": "Present: Kinetic CSV for Q1\u2013Q3 analysis"
+    },
+    {
+      "path": "data/kinetics_r2.csv",
+      "reason": "Present: Agent tool path expected by analyze_kinetics(round=2)"
+    },
+    {
+      "path": "data/screens/2/post-run/run_log_exec_tem1_activity_screen_hack_world_22_20260725_230432.txt",
+      "reason": "Robot run log"
+    },
+    {
+      "path": "data/screens/2/post-run/r2_timing_log_analysis.md",
+      "reason": "Timing budget write-up"
+    },
+    {
+      "path": "data/screens/2/post-run/manifest.json",
+      "reason": "Post-run manifest"
+    },
+    {
+      "path": "data/screens/2/post-run/README.md",
+      "reason": "Post-run index"
+    },
+    {
+      "path": "data/screens/2/post-run/kinetics_r2.csv",
+      "reason": "Run 2 post-run: Primary Gen5 kinetic CSV for Run 2 v5"
+    },
+    {
+      "path": "data/screens/2/post-run/r2_gen5_export.pdf",
+      "reason": "Run 2 post-run: Source Gen5 PDF export for Run 2"
+    },
+    {
+      "path": "data/screens/2/post-run/analysis/r2_kinetics_annotated.csv",
+      "reason": "Run 2 post-run: Annotated kinetic CSV (EDA pipeline)"
+    },
+    {
+      "path": "data/screens/2/post-run/analysis/r2_parsed.json",
+      "reason": "Run 2 post-run: Parsed Gen5 PDF JSON (96-well Max V)"
+    },
+    {
+      "path": "data/screens/2/post-run/analysis/r2_round_summary_eda.json",
+      "reason": "Run 2 post-run: Q1/Q2/Q3 round summary from EDA"
+    },
+    {
+      "path": "data/screens/2/post-run/analysis/r2_pattern_summary.json",
+      "reason": "Run 2 post-run: Pattern summary JSON"
+    },
+    {
+      "path": "data/screens/2/post-run/analysis/r2_pattern_summary.md",
+      "reason": "Run 2 post-run: Pattern summary markdown"
+    },
+    {
+      "path": "data/screens/2/post-run/analysis/r2_kinetics_llm_context.json",
+      "reason": "Run 2 post-run: LLM context bundle"
+    },
+    {
+      "path": "data/screens/2/post-run/analysis/r2_kinetics_llm_context.md",
+      "reason": "Run 2 post-run: LLM context markdown"
+    },
+    {
+      "path": "data/screens/2/v5/plate_map.json",
+      "reason": "Pre-run plate design v5 \u2014 canonical under data/screens/2/v5/"
+    },
+    {
+      "path": "data/screens/2/v5/plate_map.png",
+      "reason": "Pre-run plate design v5 \u2014 canonical under data/screens/2/v5/"
+    },
+    {
+      "path": "data/screens/2/v5/plate_map_by_compound.png",
+      "reason": "Pre-run plate design v5 \u2014 canonical under data/screens/2/v5/"
+    },
+    {
+      "path": "data/screens/2/v5/compound_list.json",
+      "reason": "Pre-run plate design v5 \u2014 canonical under data/screens/2/v5/"
+    },
+    {
+      "path": "data/screens/2/v5/compound_list.csv",
+      "reason": "Pre-run plate design v5 \u2014 canonical under data/screens/2/v5/"
+    },
+    {
+      "path": "data/screens/2/v5/kinetic_schedule.json",
+      "reason": "Pre-run plate design v5 \u2014 canonical under data/screens/2/v5/"
+    },
+    {
+      "path": "data/screens/2/v5/manifest.json",
+      "reason": "Pre-run plate design v5 \u2014 canonical under data/screens/2/v5/"
+    },
+    {
+      "path": "pvjthomas/output/plate_map_r2_v5.json",
+      "reason": "Working copy; canonical version lives under data/screens/2/v5/"
+    },
+    {
+      "path": "pvjthomas/output/plate_map_r2_v5.png",
+      "reason": "Working copy; canonical version lives under data/screens/2/v5/"
+    },
+    {
+      "path": "pvjthomas/output/plate_map_r2_v5_by_compound.png",
+      "reason": "Working copy; canonical version lives under data/screens/2/v5/"
+    },
+    {
+      "path": "pvjthomas/output/compound_list_r2_v5.json",
+      "reason": "Working copy; canonical version lives under data/screens/2/v5/"
+    },
+    {
+      "path": "pvjthomas/output/kinetic_schedule_r2_v5.json",
+      "reason": "Working copy; canonical version lives under data/screens/2/v5/"
+    },
+    {
+      "path": "pvjthomas/output/phase_a_report.md",
+      "reason": "Philip workspace report \u2014 not a Run 2 execution artifact"
+    },
+    {
+      "path": "pvjthomas/output/concentration_table.md",
+      "reason": "Philip workspace report \u2014 not a Run 2 execution artifact"
+    },
+    {
+      "path": "pvjthomas/output/concentration_table.json",
+      "reason": "Philip workspace report \u2014 not a Run 2 execution artifact"
+    },
+    {
+      "path": "pvjthomas/output/concentration_literature_run.log",
+      "reason": "Philip workspace report \u2014 not a Run 2 execution artifact"
+    },
+    {
+      "path": "pvjthomas/output/tier1example.md",
+      "reason": "Philip workspace report \u2014 not a Run 2 execution artifact"
+    },
+    {
+      "path": "pvjthomas/output/tier2example.md",
+      "reason": "Philip workspace report \u2014 not a Run 2 execution artifact"
+    },
+    {
+      "path": "pvjthomas/output/status.md",
+      "reason": "Philip workspace report \u2014 not a Run 2 execution artifact"
+    },
+    {
+      "path": "data/screens/2/v1/manifest.json",
+      "reason": "Superseded Round 2 design v1; keep for history"
+    },
+    {
+      "path": "data/screens/2/v2/manifest.json",
+      "reason": "Superseded Round 2 design v2; keep for history"
+    },
+    {
+      "path": "data/screens/2/v3/manifest.json",
+      "reason": "Superseded Round 2 design v3; keep for history"
+    },
+    {
+      "path": "data/screens/2/v4/manifest.json",
+      "reason": "Superseded Round 2 design v4; keep for history"
+    }
+  ],
+  "findings": [
+    {
+      "path": "data/screens/2/post-run/kinetics_r2.csv",
+      "exists": true,
+      "size_bytes": 73717,
+      "sha256_prefix": "df33a98b3d60795f",
+      "relevance": "required_for_analysis",
+      "action": "keep_in_place",
+      "suggested_target": null,
+      "reason": "Present: Kinetic CSV for Q1\u2013Q3 analysis",
+      "duplicate_of": null
+    },
+    {
+      "path": "data/screens/2/post-run/nitrocefin_timing.json",
+      "exists": false,
+      "size_bytes": null,
+      "sha256_prefix": null,
+      "relevance": "missing_expected",
+      "action": "generate_from_existing",
+      "suggested_target": null,
+      "reason": "Missing: Per-well t0 from robot dispense log (Q1T)",
+      "duplicate_of": null
+    },
+    {
+      "path": "data/screens/2/post-run/reader_lid_close_utc.txt",
+      "exists": false,
+      "size_bytes": null,
+      "sha256_prefix": null,
+      "relevance": "missing_expected",
+      "action": "human_review",
+      "suggested_target": null,
+      "reason": "Missing: Plate reader lid-close timestamp",
+      "duplicate_of": null
+    },
+    {
+      "path": "data/plate_map_r2.json",
+      "exists": false,
+      "size_bytes": null,
+      "sha256_prefix": null,
+      "relevance": "missing_expected",
+      "action": "human_review",
+      "suggested_target": null,
+      "reason": "Missing: Promoted active plate map for analyze_kinetics()",
+      "duplicate_of": null
+    },
+    {
+      "path": "data/assay/run_2_summary.json",
+      "exists": false,
+      "size_bytes": null,
+      "sha256_prefix": null,
+      "relevance": "missing_expected",
+      "action": "human_review",
+      "suggested_target": null,
+      "reason": "Missing: Decision-tree output summary",
+      "duplicate_of": null
+    },
+    {
+      "path": "data/kinetics_r2.csv",
+      "exists": true,
+      "size_bytes": 73717,
+      "sha256_prefix": "df33a98b3d60795f",
+      "relevance": "required_for_analysis",
+      "action": "keep_in_place",
+      "suggested_target": null,
+      "reason": "Present: Agent tool path expected by analyze_kinetics(round=2)",
+      "duplicate_of": "data/screens/2/post-run/kinetics_r2.csv"
+    },
+    {
+      "path": "data/round_summary_r2.json",
+      "exists": false,
+      "size_bytes": null,
+      "sha256_prefix": null,
+      "relevance": "missing_expected",
+      "action": "human_review",
+      "suggested_target": null,
+      "reason": "Missing: Legacy agent round summary path",
+      "duplicate_of": null
+    },
+    {
+      "path": "data/screens/2/post-run/run_log_exec_tem1_activity_screen_hack_world_22_20260725_230432.txt",
+      "exists": true,
+      "size_bytes": 31101,
+      "sha256_prefix": "5b62ffc599c178cd",
+      "relevance": "required_for_analysis",
+      "action": "keep_in_place",
+      "suggested_target": null,
+      "reason": "Robot run log",
+      "duplicate_of": null
+    },
+    {
+      "path": "data/screens/2/post-run/r2_timing_log_analysis.md",
+      "exists": true,
+      "size_bytes": 10099,
+      "sha256_prefix": "3cbd98623d42c155",
+      "relevance": "required_for_analysis",
+      "action": "keep_in_place",
+      "suggested_target": null,
+      "reason": "Timing budget write-up",
+      "duplicate_of": null
+    },
+    {
+      "path": "data/screens/2/post-run/manifest.json",
+      "exists": true,
+      "size_bytes": 1380,
+      "sha256_prefix": "e1296ae00fecb42c",
+      "relevance": "required_for_analysis",
+      "action": "keep_in_place",
+      "suggested_target": null,
+      "reason": "Post-run manifest",
+      "duplicate_of": null
+    },
+    {
+      "path": "data/screens/2/post-run/README.md",
+      "exists": true,
+      "size_bytes": 1437,
+      "sha256_prefix": "2ff02a7c5b116c42",
+      "relevance": "required_for_analysis",
+      "action": "keep_in_place",
+      "suggested_target": null,
+      "reason": "Post-run index",
+      "duplicate_of": null
+    },
+    {
+      "path": "data/screens/2/post-run/kinetics_r2.csv",
+      "exists": true,
+      "size_bytes": 73717,
+      "sha256_prefix": "df33a98b3d60795f",
+      "relevance": "required_for_analysis",
+      "action": "keep_in_place",
+      "suggested_target": null,
+      "reason": "Run 2 post-run: Primary Gen5 kinetic CSV for Run 2 v5",
+      "duplicate_of": null
+    },
+    {
+      "path": "data/screens/2/post-run/r2_gen5_export.pdf",
+      "exists": true,
+      "size_bytes": 152596,
+      "sha256_prefix": "c9a38f9c6423b571",
+      "relevance": "required_for_analysis",
+      "action": "keep_in_place",
+      "suggested_target": null,
+      "reason": "Run 2 post-run: Source Gen5 PDF export for Run 2",
+      "duplicate_of": null
+    },
+    {
+      "path": "data/screens/2/post-run/analysis/r2_kinetics_annotated.csv",
+      "exists": true,
+      "size_bytes": 129241,
+      "sha256_prefix": "7e239f8195dfd7c4",
+      "relevance": "useful_derivative",
+      "action": "keep_in_place",
+      "suggested_target": null,
+      "reason": "Run 2 post-run: Annotated kinetic CSV (EDA pipeline)",
+      "duplicate_of": null
+    },
+    {
+      "path": "data/screens/2/post-run/analysis/r2_parsed.json",
+      "exists": true,
+      "size_bytes": 691865,
+      "sha256_prefix": "54203011c23439bf",
+      "relevance": "useful_derivative",
+      "action": "keep_in_place",
+      "suggested_target": null,
+      "reason": "Run 2 post-run: Parsed Gen5 PDF JSON (96-well Max V)",
+      "duplicate_of": null
+    },
+    {
+      "path": "data/screens/2/post-run/analysis/r2_round_summary_eda.json",
+      "exists": true,
+      "size_bytes": 33430,
+      "sha256_prefix": "e7c61ac0fe3baa31",
+      "relevance": "useful_derivative",
+      "action": "keep_in_place",
+      "suggested_target": null,
+      "reason": "Run 2 post-run: Q1/Q2/Q3 round summary from EDA",
+      "duplicate_of": null
+    },
+    {
+      "path": "data/screens/2/post-run/analysis/r2_pattern_summary.json",
+      "exists": true,
+      "size_bytes": 66903,
+      "sha256_prefix": "d8eae1e37405daf7",
+      "relevance": "useful_derivative",
+      "action": "keep_in_place",
+      "suggested_target": null,
+      "reason": "Run 2 post-run: Pattern summary JSON",
+      "duplicate_of": null
+    },
+    {
+      "path": "data/screens/2/post-run/analysis/r2_pattern_summary.md",
+      "exists": true,
+      "size_bytes": 2851,
+      "sha256_prefix": "97b7efd06a58d2e6",
+      "relevance": "useful_derivative",
+      "action": "keep_in_place",
+      "suggested_target": null,
+      "reason": "Run 2 post-run: Pattern summary markdown",
+      "duplicate_of": null
+    },
+    {
+      "path": "data/screens/2/post-run/analysis/r2_kinetics_llm_context.json",
+      "exists": true,
+      "size_bytes": 25756,
+      "sha256_prefix": "7fbc0bbf0e16ddc8",
+      "relevance": "useful_derivative",
+      "action": "keep_in_place",
+      "suggested_target": null,
+      "reason": "Run 2 post-run: LLM context bundle",
+      "duplicate_of": null
+    },
+    {
+      "path": "data/screens/2/post-run/analysis/r2_kinetics_llm_context.md",
+      "exists": true,
+      "size_bytes": 4806,
+      "sha256_prefix": "52788eeec36a55b3",
+      "relevance": "useful_derivative",
+      "action": "keep_in_place",
+      "suggested_target": null,
+      "reason": "Run 2 post-run: LLM context markdown",
+      "duplicate_of": null
+    },
+    {
+      "path": "data/screens/2/v5/plate_map.json",
+      "exists": true,
+      "size_bytes": 8475,
+      "sha256_prefix": "092206cf445c49bf",
+      "relevance": "pre_run_design",
+      "action": "keep_in_place",
+      "suggested_target": null,
+      "reason": "Pre-run plate design v5 \u2014 canonical under data/screens/2/v5/",
+      "duplicate_of": null
+    },
+    {
+      "path": "data/screens/2/v5/plate_map.png",
+      "exists": true,
+      "size_bytes": 105314,
+      "sha256_prefix": "d8450dcda66b58af",
+      "relevance": "pre_run_design",
+      "action": "keep_in_place",
+      "suggested_target": null,
+      "reason": "Pre-run plate design v5 \u2014 canonical under data/screens/2/v5/",
+      "duplicate_of": null
+    },
+    {
+      "path": "data/screens/2/v5/plate_map_by_compound.png",
+      "exists": true,
+      "size_bytes": 132628,
+      "sha256_prefix": "627baa3ae03166ba",
+      "relevance": "pre_run_design",
+      "action": "keep_in_place",
+      "suggested_target": null,
+      "reason": "Pre-run plate design v5 \u2014 canonical under data/screens/2/v5/",
+      "duplicate_of": null
+    },
+    {
+      "path": "data/screens/2/v5/compound_list.json",
+      "exists": true,
+      "size_bytes": 10647,
+      "sha256_prefix": "cb07a9be41d8293b",
+      "relevance": "pre_run_design",
+      "action": "keep_in_place",
+      "suggested_target": null,
+      "reason": "Pre-run plate design v5 \u2014 canonical under data/screens/2/v5/",
+      "duplicate_of": null
+    },
+    {
+      "path": "data/screens/2/v5/compound_list.csv",
+      "exists": true,
+      "size_bytes": 2654,
+      "sha256_prefix": "ecf0e286b712c77c",
+      "relevance": "pre_run_design",
+      "action": "keep_in_place",
+      "suggested_target": null,
+      "reason": "Pre-run plate design v5 \u2014 canonical under data/screens/2/v5/",
+      "duplicate_of": null
+    },
+    {
+      "path": "data/screens/2/v5/kinetic_schedule.json",
+      "exists": true,
+      "size_bytes": 4032,
+      "sha256_prefix": "88bbd5855637a654",
+      "relevance": "pre_run_design",
+      "action": "keep_in_place",
+      "suggested_target": null,
+      "reason": "Pre-run plate design v5 \u2014 canonical under data/screens/2/v5/",
+      "duplicate_of": null
+    },
+    {
+      "path": "data/screens/2/v5/manifest.json",
+      "exists": true,
+      "size_bytes": 920,
+      "sha256_prefix": "b9a75be19f07c0f4",
+      "relevance": "pre_run_design",
+      "action": "keep_in_place",
+      "suggested_target": null,
+      "reason": "Pre-run plate design v5 \u2014 canonical under data/screens/2/v5/",
+      "duplicate_of": null
+    },
+    {
+      "path": "pvjthomas/output/plate_map_r2_v5.json",
+      "exists": true,
+      "size_bytes": 8475,
+      "sha256_prefix": "092206cf445c49bf",
+      "relevance": "duplicate_working_copy",
+      "action": "dedupe_do_not_move",
+      "suggested_target": null,
+      "reason": "Working copy; canonical version lives under data/screens/2/v5/",
+      "duplicate_of": "data/screens/2/v5/plate_map.json"
+    },
+    {
+      "path": "pvjthomas/output/plate_map_r2_v5.png",
+      "exists": true,
+      "size_bytes": 105314,
+      "sha256_prefix": "d8450dcda66b58af",
+      "relevance": "duplicate_working_copy",
+      "action": "dedupe_do_not_move",
+      "suggested_target": null,
+      "reason": "Working copy; canonical version lives under data/screens/2/v5/",
+      "duplicate_of": "data/screens/2/v5/plate_map.png"
+    },
+    {
+      "path": "pvjthomas/output/plate_map_r2_v5_by_compound.png",
+      "exists": true,
+      "size_bytes": 132628,
+      "sha256_prefix": "627baa3ae03166ba",
+      "relevance": "duplicate_working_copy",
+      "action": "dedupe_do_not_move",
+      "suggested_target": null,
+      "reason": "Working copy; canonical version lives under data/screens/2/v5/",
+      "duplicate_of": "data/screens/2/v5/plate_map_by_compound.png"
+    },
+    {
+      "path": "pvjthomas/output/compound_list_r2_v5.json",
+      "exists": true,
+      "size_bytes": 10647,
+      "sha256_prefix": "cb07a9be41d8293b",
+      "relevance": "duplicate_working_copy",
+      "action": "dedupe_do_not_move",
+      "suggested_target": null,
+      "reason": "Working copy; canonical version lives under data/screens/2/v5/",
+      "duplicate_of": "data/screens/2/v5/compound_list.json"
+    },
+    {
+      "path": "pvjthomas/output/kinetic_schedule_r2_v5.json",
+      "exists": true,
+      "size_bytes": 4032,
+      "sha256_prefix": "88bbd5855637a654",
+      "relevance": "duplicate_working_copy",
+      "action": "dedupe_do_not_move",
+      "suggested_target": null,
+      "reason": "Working copy; canonical version lives under data/screens/2/v5/",
+      "duplicate_of": "data/screens/2/v5/kinetic_schedule.json"
+    },
+    {
+      "path": "pvjthomas/output/phase_a_report.md",
+      "exists": true,
+      "size_bytes": 4772,
+      "sha256_prefix": "18350385385d5515",
+      "relevance": "unrelated_or_unclear",
+      "action": "keep_in_place",
+      "suggested_target": null,
+      "reason": "Philip workspace report \u2014 not a Run 2 execution artifact",
+      "duplicate_of": null
+    },
+    {
+      "path": "pvjthomas/output/concentration_table.md",
+      "exists": true,
+      "size_bytes": 3650,
+      "sha256_prefix": "b53b32533548488c",
+      "relevance": "unrelated_or_unclear",
+      "action": "keep_in_place",
+      "suggested_target": null,
+      "reason": "Philip workspace report \u2014 not a Run 2 execution artifact",
+      "duplicate_of": null
+    },
+    {
+      "path": "pvjthomas/output/concentration_table.json",
+      "exists": true,
+      "size_bytes": 5050,
+      "sha256_prefix": "9c60b581d1ca4e72",
+      "relevance": "unrelated_or_unclear",
+      "action": "keep_in_place",
+      "suggested_target": null,
+      "reason": "Philip workspace report \u2014 not a Run 2 execution artifact",
+      "duplicate_of": null
+    },
+    {
+      "path": "pvjthomas/output/concentration_literature_run.log",
+      "exists": true,
+      "size_bytes": 10770,
+      "sha256_prefix": "d674a187d96e198b",
+      "relevance": "unrelated_or_unclear",
+      "action": "keep_in_place",
+      "suggested_target": null,
+      "reason": "Philip workspace report \u2014 not a Run 2 execution artifact",
+      "duplicate_of": null
+    },
+    {
+      "path": "pvjthomas/output/tier1example.md",
+      "exists": true,
+      "size_bytes": 3289,
+      "sha256_prefix": "47c667948160731f",
+      "relevance": "unrelated_or_unclear",
+      "action": "keep_in_place",
+      "suggested_target": null,
+      "reason": "Philip workspace report \u2014 not a Run 2 execution artifact",
+      "duplicate_of": null
+    },
+    {
+      "path": "pvjthomas/output/tier2example.md",
+      "exists": true,
+      "size_bytes": 3485,
+      "sha256_prefix": "1c878c74d2571384",
+      "relevance": "unrelated_or_unclear",
+      "action": "keep_in_place",
+      "suggested_target": null,
+      "reason": "Philip workspace report \u2014 not a Run 2 execution artifact",
+      "duplicate_of": null
+    },
+    {
+      "path": "pvjthomas/output/status.md",
+      "exists": true,
+      "size_bytes": 6342,
+      "sha256_prefix": "fbc046fdfe21225b",
+      "relevance": "unrelated_or_unclear",
+      "action": "keep_in_place",
+      "suggested_target": null,
+      "reason": "Philip workspace report \u2014 not a Run 2 execution artifact",
+      "duplicate_of": null
+    },
+    {
+      "path": "data/screens/2/v1/manifest.json",
+      "exists": true,
+      "size_bytes": 828,
+      "sha256_prefix": "d92b10d94f89b927",
+      "relevance": "superseded_version",
+      "action": "archive_ok",
+      "suggested_target": null,
+      "reason": "Superseded Round 2 design v1; keep for history",
+      "duplicate_of": null
+    },
+    {
+      "path": "data/screens/2/v2/manifest.json",
+      "exists": true,
+      "size_bytes": 827,
+      "sha256_prefix": "d0b3962f7abd68fb",
+      "relevance": "superseded_version",
+      "action": "archive_ok",
+      "suggested_target": null,
+      "reason": "Superseded Round 2 design v2; keep for history",
+      "duplicate_of": null
+    },
+    {
+      "path": "data/screens/2/v3/manifest.json",
+      "exists": true,
+      "size_bytes": 1201,
+      "sha256_prefix": "c377cd2e1366521e",
+      "relevance": "superseded_version",
+      "action": "archive_ok",
+      "suggested_target": null,
+      "reason": "Superseded Round 2 design v3; keep for history",
+      "duplicate_of": null
+    },
+    {
+      "path": "data/screens/2/v4/manifest.json",
+      "exists": true,
+      "size_bytes": 849,
+      "sha256_prefix": "7ffd4f077af517b9",
+      "relevance": "superseded_version",
+      "action": "archive_ok",
+      "suggested_target": null,
+      "reason": "Superseded Round 2 design v4; keep for history",
+      "duplicate_of": null
+    },
+    {
+      "path": "skill_platereader_measure_20260724_231705.pdf",
+      "exists": true,
+      "size_bytes": 109220,
+      "sha256_prefix": "03132e5a6c6afd29",
+      "relevance": "unrelated_or_unclear",
+      "action": "human_review",
+      "suggested_target": "data/screens/2/post-run/skill_platereader_measure_20260724_231705.pdf",
+      "reason": "Plate reader skill PDF at repo root (~109 KB); smaller than r2_gen5_export.pdf (~153 KB) \u2014 likely a different/partial read; confirm before moving",
+      "duplicate_of": null
+    },
+    {
+      "path": "mastermix/data/platereader/skill_platereader_measure_20260725_173839/skill_platereader_measure_20260725_173839.pdf",
+      "exists": true,
+      "size_bytes": 109724,
+      "sha256_prefix": "c72757c7d9ba7a7c",
+      "relevance": "unrelated_or_unclear",
+      "action": "human_review",
+      "suggested_target": null,
+      "reason": "Mastermix platereader skill capture \u2014 compare to r2_gen5_export.pdf before consolidating",
+      "duplicate_of": null
+    },
+    {
+      "path": "mastermix/data/platereader/skill_platereader_measure_20260725_174147/skill_platereader_measure_20260725_174147.pdf",
+      "exists": true,
+      "size_bytes": 109704,
+      "sha256_prefix": "6e59d69c4a3df7a0",
+      "relevance": "unrelated_or_unclear",
+      "action": "human_review",
+      "suggested_target": null,
+      "reason": "Mastermix platereader skill capture \u2014 compare to r2_gen5_export.pdf before consolidating",
+      "duplicate_of": null
+    },
+    {
+      "path": "data/plate_map_r2.json",
+      "exists": false,
+      "size_bytes": null,
+      "sha256_prefix": null,
+      "relevance": "missing_expected",
+      "action": "promote_to_data",
+      "suggested_target": "data/plate_map_r2.json",
+      "reason": "Promote v5 plate map after human sign-off (see pvjthomas/output/status.md)",
+      "duplicate_of": null
+    },
+    {
+      "path": "data/assay/run_2_summary.json",
+      "exists": false,
+      "size_bytes": null,
+      "sha256_prefix": null,
+      "relevance": "required_for_analysis",
+      "action": "promote_to_data",
+      "suggested_target": "data/assay/run_2_summary.json",
+      "reason": "Copy/adapt r2_round_summary_eda.json into data/assay/run_2_summary.json after median-scoring pass",
+      "duplicate_of": null
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+skill_id: release_into_openshelf
+version: "1.0.0"
+description: "Release the carried tipbox into the OpenShelf IO box (inverse of grab): push a little deeper along -Y, ease the right gripper open, then detach the item so it stays in the shelf when the arm retracts."
+
+# parameters are derived from the release_into_openshelf() signature in robotic_code.py
+
+tags:
+  - openshelf
+  - gripper
+  - release

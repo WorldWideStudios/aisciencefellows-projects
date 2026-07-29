@@ -1,0 +1,12 @@
+urdf: pipette_stand.urdf
+articulations:
+  default:
+    description: All joints at rest position
+    joints: {}
+anchors:
+  object:
+    parent_link: world
+    description: Table placement frame, origin at (+X, +Y, -Z) bbox corner
+    link_T_anchor:
+      xyz: [-0.027131, 0.1753, 0.218518]
+      wxyz: [-4.32978e-17, 0.707107, -0.707107, 4.32978e-17]

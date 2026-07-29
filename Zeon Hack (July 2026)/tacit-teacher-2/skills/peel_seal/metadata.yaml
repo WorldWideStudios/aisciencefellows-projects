@@ -1,0 +1,8 @@
+name: peel_seal
+description: >-
+  Peel a rubber sealing mat off a deep-well plate with the left arm, along the
+  diagonal between two taught anchors, rising at the taught peel angle. Plate
+  must be seated in a fixture. Performs the motion; does not verify the outcome.
+knowledge_source: tacit/sessions/peel_seal/
+# Parameters come from the function signature in robotic_code.py, not from this
+# file. Editing metadata to add a parameter does nothing.

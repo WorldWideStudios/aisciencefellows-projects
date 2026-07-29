@@ -1,0 +1,82 @@
+{
+  "compound_id": "T1262",
+  "name": "Tazobactam",
+  "match": "yes",
+  "support": "strong",
+  "reference_inhibitor": "tazobactam",
+  "entries": [
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Tazobactam. Map complete: 5/5 tasks succeeded in 2103ms\nResults ID: m_78474b36\nFull results: /.gxl/map_m_78474b36.txt\n\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided paper content, there is no mention of tazobactam, nitrocefin colorimetric assays, $K_i$, $IC_{50}$ values, or enzyme/substrate c\n  [success] Molecular Basis of Class A \u03b2-Lactamase Inhibition by Relebactam  (PMC6761529)\n    Based on the provided paper, there is no information regarding Tazobactam or its inhibition kinetics against TEM-1 beta-lactamase in a nitrocefin assa\n  [success] In Silico Study of the Potential of Brazilein Sappan Wood as a Beta-La  (PMC11229569)\n    Based on the provided paper content, there is no mention of Tazobactam, nitrocefin colorimetric assays, $K_i$, $IC_{50}$ values, enzyme concentrations\n  [success] Effect of Lactamase Inhibitors on the Biosensor Penp during the Measur  (PMC6427286)\n    Based on the provided paper content, there is no information regarding Tazobactam, TEM-1 beta-lactamase, nitrocefin colorimetric assays, Ki, IC50 valu\n  [success] Correlation of OXA-1 and TEM-1 genes with antibiotic resistance to pip  (PMC12832842)\n    Based on the provided paper, there is no mention of a nitrocefin colorimetric assay, Ki or IC50 values for tazobactam against TEM-1 beta-lactamase, in\n\nFull results: /.gxl/map_m_78474b36.txt",
+      "paperclip_search_id": "s_18914314",
+      "paperclip_map_id": "m_78474b36",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "pmcid": "PMC12484619"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Tazobactam. ERR: map: Results not found: s_b8c3f015\n[exit 1]\n\u001b[2mTry: paperclip search <query>  or  paperclip lookup doi <doi>\u001b[0m",
+      "paperclip_search_id": "s_b8c3f015",
+      "paperclip_map_id": "s_b8c3f015",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "paperclip_source": "pmc"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Tazobactam. Map complete: 24/24 tasks succeeded in 5039ms\nResults ID: m_6de79c33\nFull results: /.gxl/map_m_6de79c33.txt\n\n  [success] Mechanistic Basis for Inhibition of the Extended Spectrum Class A \u03b2-La  (bio_d7ea2f4d7462)\n    Based on the provided paper content, there is no information regarding the $K_i$, $IC_{50}$, inhibitor concentrations, nitrocefin substrate concentrat\n  [success] Distant Site Mutations in Clinical TEM Beta-Lactamase Variants Enhance  (bio_33da24cd7504)\n    Based on the provided paper content, there is no mention of Tazobactam, nitrocefin colorimetric assays, $K_i$, or $IC_{50}$ values. Therefore, this in\n  [success] Association of OXA-1 and TEM-1 Genes with Antibiotic Resistance to Pip  (bio_509e494e7b3f)\n    Based on the provided paper, there is no mention of a nitrocefin colorimetric assay, Ki, IC50 values, inhibitor concentrations, substrate concentratio\n  [success] Sulbactam-mediated inhibition of TEM-1 \u03b2-lactamase increases specific   (bio_e76fe1d274e9)\n    Based on the provided paper, the information regarding the specific $K_i$, $\\text{IC}_{50}$, inhibitor concentrations, nitrocefin substrate concentrat\n  [success] De Novo Structure-Based Design of TEM-171  \u03b2 -Lactamase Protein Inhibi  (bio_65b9aaff7e48)\n    Based on the provided paper content, there is no mention of a nitrocefin colorimetric assay, nor are there any reported $K_i$, $\\text{IC}_{50}$, inhib\n  [success] Tautomer-specific deacylation and \u03a9-loop flexibility explain carbapene  (bio_03abc4056d8e",
+      "paperclip_search_id": "s_6bab9434",
+      "paperclip_map_id": "m_6de79c33",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "paperclip_source": "biorxiv"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Tazobactam. Map complete: 10/10 tasks succeeded in 2843ms\nResults ID: m_2967074d\nFull results: /.gxl/map_m_2967074d.txt\n\n  [success] bla - Beta-lactamase TEM  (P62593)\n    Based on the provided paper content, there is no information regarding Tazobactam, its Ki, IC50, assay concentrations, nitrocefin substrate concentrat\n  [success] bla - Beta-lactamase TEM  (P62594)\n    Based on the provided paper content, there is no mention of a nitrocefin colorimetric assay, specific Ki or IC50 values, inhibitor concentrations, nit\n  [success] blaT-12b - Beta-lactamase TEM-12  (Q48406)\n    Based on the provided paper content, there is no information regarding Tazobactam, TEM-1 beta-lactamase, nitrocefin colorimetric assays, Ki, IC50 valu\n  [success] penPC - Beta-lactamase 1  (P10424)\n    Based on the provided paper content, there is no mention of Tazobactam, TEM-1 beta-lactamase, nitrocefin colorimetric assays, Ki, IC50, or related kin\n  [success] blaY - Beta-lactamase 1  (P00809)\n    Based on the provided paper content, there is no mention of Tazobactam, TEM-1 beta-lactamase, nitrocefin colorimetric assays, or associated Ki/IC50 va\n  [success] blaCI - Beta-lactamase 1  (P28018)\n    Based on the provided paper, there is no mention of Tazobactam, TEM-1 beta-lactamase, nitrocefin colorimetric assays, Ki, IC50, or related assay condi\n  [success] blaL - Beta-lactamase 1  (Q03680)\n    Based on the provided paper content, there is no information regarding Tazobactam, TEM-1 beta-lactamase, nitrocefin colori",
+      "paperclip_search_id": "s_d4abbc72",
+      "paperclip_map_id": "m_2967074d",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "paperclip_source": "proteins"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Tazobactam. Map complete: 30/30 tasks succeeded in 9512ms\nResults ID: m_d0eea8ce\nFull results: /.gxl/map_m_d0eea8ce.txt\n\n  [success] Saturation Mutagenesis and Molecular Modeling: The Impact of Methionin  (PMC11276661)\n    Based on the provided paper content, there is no mention of Tazobactam, nitrocefin colorimetric assay, $K_i$, $IC_{50}$, or related inhibition paramet\n  [success] Mechanistic basis for inhibition of the extended\u2010spectrum \u03b2\u2010lactamase   (PMC12643063)\n    Based on the provided paper content, there is no information regarding the IC50 or Ki of Tazobactam against TEM-1 beta-lactamase, the enzyme and subst\n  [success] Correlation of OXA-1 and TEM-1 genes with antibiotic resistance to pip  (PMC12832842)\n    Based on the provided paper, the information regarding Tazobactam's $K_i$, $\\text{IC}_{50}$, inhibitor concentration, nitrocefin substrate concentrati\n  [success] Kinetic and Structural Requirements for Carbapenemase\nActivity in GES-  (PMC4303295)\n    Based on the provided paper content, there is no mention of Tazobactam, TEM-1 beta-lactamase, or their kinetic/inhibitory parameters (such as Ki or IC\n  [success] A high-resolution genomic and phenotypic analysis of resistance evolut  (PMC12089661)\n    Based on the provided paper, the specific quantitative biochemical parameters for Tazobactam against TEM-1 beta-lactamase in a nitrocefin colorimetric\n  [success] Tazobactam selects for multidrug resistance  (PMC12125205)\n    Based on the provided paper content, there is no inf",
+      "paperclip_search_id": "s_7a97f03f",
+      "paperclip_map_id": "m_d0eea8ce",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "pmcid": "PMC11276661",
+      "paperclip_source": "pmc",
+      "targeted_query": "TEM-1 tazobactam Ki nitrocefin"
+    }
+  ],
+  "raw_local": "/Users/fio/zeon_hack/pvjthomas/local/literature/T1262",
+  "group_id": "tazobactam",
+  "related_forms": [
+    "T1262"
+  ],
+  "canonical_compound_id": "T1262",
+  "assay_recommendations": {
+    "tem1_nitrocefin": {
+      "screen_conc_uM": 50,
+      "screen_rationale": "Project default screen concentration; no literature inhibitor concentration or IC50/Ki extracted.",
+      "screen_conc_source": "project_default",
+      "max_assay_conc_uM": 1000.0,
+      "metric": "relative nitrocefin hydrolysis vs no-inhibitor control"
+    }
+  },
+  "cap_truncated": true
+}

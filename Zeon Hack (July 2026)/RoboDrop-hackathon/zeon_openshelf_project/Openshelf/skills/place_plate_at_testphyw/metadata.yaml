@@ -1,0 +1,22 @@
+skill_id: place_plate_at_testphyw
+version: "1.0.0"
+description: "Move a right-arm-held PCR plate directly to OpenShelf testphyw while preserving horizontal_grip orientation."
+
+preconditions: {}
+postconditions:
+  plate_at_testphyw: true
+
+safety_rules:
+  - "Run the complete pickup-and-place workflow in cloud simulation before hardware."
+  - "Keep collision planning enabled for the attached plate, holder, OpenShelf, and surrounding world."
+  - "Use testphyw for position only; preserve the canonical horizontal_grip orientation."
+
+tags:
+  - plate
+  - place
+  - right_arm
+  - openshelf
+  - testphyw
+
+high_risk: true
+world_state_prime: null

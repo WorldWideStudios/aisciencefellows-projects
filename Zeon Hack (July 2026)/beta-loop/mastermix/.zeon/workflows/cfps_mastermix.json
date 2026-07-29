@@ -1,0 +1,344 @@
+{
+  "workflow_id": "cfps_mastermix",
+  "name": "CFPS Workflow",
+  "description": "OpenCFPS setup (SepiaBio), pipetting only, up to plate-done (no seal). Builds one master-mix tube per condition (positive control, negative control, sample) in cold-block holes, scaled by (reactions + extra) x per-well volume, then aliquots each into its destination wells. Uses generic epipette skills with epipette_10ul; the 10 uL cap is handled by chunked strokes inside the super skills.",
+  "version": "1.0.0",
+  "author": "b-kolar",
+  "created_at": "2026-07-22T00:00:00.000Z",
+  "updated_at": "2026-07-22T00:00:00.000Z",
+  "simulation_validated": false,
+  "objects": [],
+  "inputs": [
+    { "name": "pipette",         "type": "object",  "is_array": false, "description": "Pipette to use (10 uL max, 0.5 uL min)", "defaultValue": "epipette_10ul" },
+    { "name": "tipbox",          "type": "object",  "is_array": false, "description": "Tip rack to draw fresh tips from", "defaultValue": "tipbox_10ul_1" },
+    { "name": "reagent_block",   "type": "object",  "is_array": false, "description": "Cold block holding reagent tubes and the mix tubes (hole_1..hole_10)", "defaultValue": "coldblock_wellplate" },
+    { "name": "reaction_plate",  "type": "object",  "is_array": false, "description": "Destination well plate", "defaultValue": "wellplate_96_flatbottom" },
+
+    { "name": "extract_hole",    "type": "string",  "description": "Hole holding Extract (3.33X)", "defaultValue": "hole_1" },
+    { "name": "buffer_hole",     "type": "string",  "description": "Hole holding Buffer (2.5X)", "defaultValue": "hole_2" },
+    { "name": "ctrl_dna_hole",   "type": "string",  "description": "Hole holding Control DNA (200 nM)", "defaultValue": "hole_3" },
+    { "name": "sample_dna_hole", "type": "string",  "description": "Hole holding Sample / plasmid DNA", "defaultValue": "hole_4" },
+    { "name": "water_hole",      "type": "string",  "description": "Hole holding Water / additives", "defaultValue": "hole_5" },
+    { "name": "pos_mm_hole",     "type": "string",  "description": "Hole where the positive-control master mix is built", "defaultValue": "hole_6" },
+    { "name": "neg_mm_hole",     "type": "string",  "description": "Hole where the negative-control master mix is built", "defaultValue": "hole_7" },
+    { "name": "sample_mm_hole",  "type": "string",  "description": "Hole where the sample master mix is built", "defaultValue": "hole_8" },
+
+    { "name": "vol_per_well",    "type": "float",   "description": "Volume dispensed per destination well in uL (15-30 recommended for 96 flatbottom)", "defaultValue": 20.0 },
+    { "name": "extra_volume_ul", "type": "float", "description": "Fixed dead-volume overage (uL) added to each enabled master-mix tube", "defaultValue": 10.0 },
+    { "name": "sample_dna_vol",  "type": "float",   "description": "Sample/plasmid DNA volume per 10 uL reference reaction (uL)", "defaultValue": 1.0 },
+    { "name": "sample_water_vol","type": "float",   "description": "Sample water per 10 uL reference reaction (uL) = 3 - sample_dna_vol", "defaultValue": 2.0 },
+
+    { "name": "pos_n",           "type": "integer", "description": "Positive-control reactions/wells (0 disables this mix)", "defaultValue": 1 },
+    { "name": "neg_n",           "type": "integer", "description": "Negative-control reactions/wells (0 disables this mix)", "defaultValue": 1 },
+    { "name": "sample_n",        "type": "integer", "description": "Sample reactions/wells (0 disables this mix)", "defaultValue": 2 },
+
+    { "name": "pos_wells",       "type": "string",  "description": "Positive-control destination wells (comma-separated, e.g. A1)", "defaultValue": "A1" },
+    { "name": "neg_wells",       "type": "string",  "description": "Negative-control destination wells (comma-separated, e.g. A2)", "defaultValue": "A2" },
+    { "name": "sample_wells",    "type": "string",  "description": "Sample destination wells (comma-separated, e.g. A3,A4)", "defaultValue": "A3,A4" },
+
+    { "name": "platesealer",  "type": "object",  "is_array": false, "description": "PlateMax plate sealer", "defaultValue": "platesealer_platemax_1" },
+    { "name": "seal_holder",  "type": "object",  "is_array": false, "description": "Stacked seal holder to peel a seal from", "defaultValue": "seal_holder_stacked_reinforced_1" },
+    { "name": "shaker",       "type": "object",  "is_array": false, "description": "Wellplate shaker", "defaultValue": "wellplate_shaker_1" },
+    { "name": "plate_home",   "type": "object",  "is_array": false, "description": "Object carrying the plate's home anchor (where the sealed plate is set back down)", "defaultValue": "wellplate_holder_tags" },
+
+    { "name": "shaker_running", "type": "string", "description": "Is the shaker/incubator ALREADY shaking right now? The shaker has no sensor, so the robot only knows what it was last told. Answer 'yes' only if it is running as you start this run.", "defaultValue": "no" },
+    { "name": "shaker_slot",  "type": "string",  "description": "Shaker slot anchor to load the plate into", "defaultValue": "slot_1" },
+    { "name": "seal_index",   "type": "integer", "description": "1-based seal position in the holder to pick", "defaultValue": 1 },
+    { "name": "run_name",     "type": "string",  "description": "Name for this run's saved output folder (<run_name>_<timestamp>)", "defaultValue": "cfps_run" }
+  ],
+  "nodes": [
+    { "node_id": "start_0", "type": "start", "label": "Start" },
+
+    {
+      "node_id": "seed_shaker_state",
+      "type": "skill",
+      "label": "Record Shaker State",
+      "description": "Write whether the shaker is already running into live_state, so the later off/on steps press the button only when they actually need to.",
+      "skill_id": "wellplate_shaker_set_state",
+      "parameters": {
+        "shaker": { "$input": "shaker" },
+        "running": { "$input": "shaker_running" }
+      }
+    },
+
+    {
+      "node_id": "log_platemap",
+      "type": "skill",
+      "label": "Log Plate Map",
+      "description": "Print the destination plate layout (P/N/S) to the run log for reference.",
+      "skill_id": "cfps_log_platemap",
+      "parameters": {
+        "reaction_plate": { "$input": "reaction_plate" },
+        "pos_wells": { "$input": "pos_wells" },
+        "neg_wells": { "$input": "neg_wells" },
+        "sample_wells": { "$input": "sample_wells" }
+      }
+    },
+
+    {
+      "node_id": "grab_pipette",
+      "type": "skill",
+      "label": "Pick Up Pipette",
+      "description": "Grab the pipette off its stand with the left arm.",
+      "skill_id": "epipette_grab",
+      "parameters": { "pipette": { "$input": "pipette" } }
+    },
+
+    {
+      "node_id": "make_pos",
+      "type": "skill",
+      "label": "Make Positive-Control Master Mix",
+      "description": "Build the positive-control master-mix tube (Extract + Buffer + Control DNA + Water), batched and mixed.",
+      "skill_id": "cfps_make_mastermix",
+      "parameters": {
+        "pipette": { "$input": "pipette" },
+        "tipbox": { "$input": "tipbox" },
+        "reagent_block": { "$input": "reagent_block" },
+        "extract_anchor": { "$input": "extract_hole" },
+        "buffer_anchor": { "$input": "buffer_hole" },
+        "dna_anchor": { "$input": "ctrl_dna_hole" },
+        "water_anchor": { "$input": "water_hole" },
+        "mm_anchor": { "$input": "pos_mm_hole" },
+        "extract_per_rxn": 3.0,
+        "buffer_per_rxn": 4.0,
+        "dna_per_rxn": 0.2,
+        "water_per_rxn": 2.8,
+        "rxn_volume_ul": { "$input": "vol_per_well" },
+        "num_reactions": { "$input": "pos_n" },
+        "extra_volume_ul": { "$input": "extra_volume_ul" }
+      }
+    },
+    {
+      "node_id": "make_neg",
+      "type": "skill",
+      "label": "Make Negative-Control Master Mix",
+      "description": "Build the negative-control master-mix tube (Extract + Buffer + Water, no DNA), batched and mixed.",
+      "skill_id": "cfps_make_mastermix",
+      "parameters": {
+        "pipette": { "$input": "pipette" },
+        "tipbox": { "$input": "tipbox" },
+        "reagent_block": { "$input": "reagent_block" },
+        "extract_anchor": { "$input": "extract_hole" },
+        "buffer_anchor": { "$input": "buffer_hole" },
+        "dna_anchor": { "$input": "ctrl_dna_hole" },
+        "water_anchor": { "$input": "water_hole" },
+        "mm_anchor": { "$input": "neg_mm_hole" },
+        "extract_per_rxn": 3.0,
+        "buffer_per_rxn": 4.0,
+        "dna_per_rxn": 0.0,
+        "water_per_rxn": 3.0,
+        "rxn_volume_ul": { "$input": "vol_per_well" },
+        "num_reactions": { "$input": "neg_n" },
+        "extra_volume_ul": { "$input": "extra_volume_ul" }
+      }
+    },
+    {
+      "node_id": "make_sample",
+      "type": "skill",
+      "label": "Make Sample Master Mix",
+      "description": "Build the sample master-mix tube (Extract + Buffer + plasmid DNA + Water), batched and mixed.",
+      "skill_id": "cfps_make_mastermix",
+      "parameters": {
+        "pipette": { "$input": "pipette" },
+        "tipbox": { "$input": "tipbox" },
+        "reagent_block": { "$input": "reagent_block" },
+        "extract_anchor": { "$input": "extract_hole" },
+        "buffer_anchor": { "$input": "buffer_hole" },
+        "dna_anchor": { "$input": "sample_dna_hole" },
+        "water_anchor": { "$input": "water_hole" },
+        "mm_anchor": { "$input": "sample_mm_hole" },
+        "extract_per_rxn": 3.0,
+        "buffer_per_rxn": 4.0,
+        "dna_per_rxn": { "$input": "sample_dna_vol" },
+        "water_per_rxn": { "$input": "sample_water_vol" },
+        "rxn_volume_ul": { "$input": "vol_per_well" },
+        "num_reactions": { "$input": "sample_n" },
+        "extra_volume_ul": { "$input": "extra_volume_ul" }
+      }
+    },
+
+    {
+      "node_id": "disp_pos",
+      "type": "skill",
+      "label": "Dispense Positive-Control Mix",
+      "description": "Aliquot the positive-control mix into its destination wells.",
+      "skill_id": "cfps_dispense_mastermix",
+      "parameters": {
+        "pipette": { "$input": "pipette" },
+        "tipbox": { "$input": "tipbox" },
+        "reagent_block": { "$input": "reagent_block" },
+        "reaction_plate": { "$input": "reaction_plate" },
+        "mm_anchor": { "$input": "pos_mm_hole" },
+        "wells": { "$input": "pos_wells" },
+        "rxn_volume": { "$input": "vol_per_well" },
+        "num_reactions": { "$input": "pos_n" }
+      }
+    },
+    {
+      "node_id": "disp_neg",
+      "type": "skill",
+      "label": "Dispense Negative-Control Mix",
+      "description": "Aliquot the negative-control mix into its destination wells.",
+      "skill_id": "cfps_dispense_mastermix",
+      "parameters": {
+        "pipette": { "$input": "pipette" },
+        "tipbox": { "$input": "tipbox" },
+        "reagent_block": { "$input": "reagent_block" },
+        "reaction_plate": { "$input": "reaction_plate" },
+        "mm_anchor": { "$input": "neg_mm_hole" },
+        "wells": { "$input": "neg_wells" },
+        "rxn_volume": { "$input": "vol_per_well" },
+        "num_reactions": { "$input": "neg_n" }
+      }
+    },
+    {
+      "node_id": "disp_sample",
+      "type": "skill",
+      "label": "Dispense Sample Mix",
+      "description": "Aliquot the sample mix into its destination wells.",
+      "skill_id": "cfps_dispense_mastermix",
+      "parameters": {
+        "pipette": { "$input": "pipette" },
+        "tipbox": { "$input": "tipbox" },
+        "reagent_block": { "$input": "reagent_block" },
+        "reaction_plate": { "$input": "reaction_plate" },
+        "mm_anchor": { "$input": "sample_mm_hole" },
+        "wells": { "$input": "sample_wells" },
+        "rxn_volume": { "$input": "vol_per_well" },
+        "num_reactions": { "$input": "sample_n" }
+      }
+    },
+
+    {
+      "node_id": "place_pipette",
+      "type": "skill",
+      "label": "Place Pipette Back",
+      "description": "Return whichever pipette is in hand to its stand (the run may have swapped to the 120 uL one).",
+      "skill_id": "place_current_pipette",
+      "parameters": { "pipette": { "$input": "pipette" } }
+    },
+
+    {
+      "node_id": "seal",
+      "type": "skill",
+      "label": "Seal Plate",
+      "description": "Grab the reaction plate short-side, seal it on the PlateMax (open door, load, pick + place seal, close door, press seal), unload it, and drop it back home.",
+      "skill_id": "seal_plate",
+      "parameters": {
+        "plate": { "$input": "reaction_plate" },
+        "platesealer": { "$input": "platesealer" },
+        "seal_holder": { "$input": "seal_holder" },
+        "home_destination": { "$input": "plate_home" },
+        "home_anchor": "home",
+        "grasp_anchor": "grasp_shortside",
+        "seal_index": { "$input": "seal_index" }
+      }
+    },
+
+    {
+      "node_id": "regrab_plate",
+      "type": "skill",
+      "label": "Re-grab Sealed Plate",
+      "description": "Pick the sealed plate back up (short-side) to carry it to the shaker.",
+      "skill_id": "wellplate_grab",
+      "parameters": {
+        "object": { "$input": "reaction_plate" },
+        "grasp_anchor": "grasp_shortside"
+      }
+    },
+
+    {
+      "node_id": "shaker_off",
+      "type": "skill",
+      "label": "Ensure Shaker Off",
+      "description": "Turn the shaker off if it is currently running (state-aware; no-op if already off).",
+      "skill_id": "wellplate_shaker_run",
+      "parameters": {
+        "shaker": { "$input": "shaker" },
+        "ensure_state": "off"
+      }
+    },
+
+    {
+      "node_id": "shaker_open",
+      "type": "skill",
+      "label": "Open Shaker Lid",
+      "description": "Open the shaker lid.",
+      "skill_id": "wellplate_shaker_open",
+      "parameters": { "shaker": { "$input": "shaker" } }
+    },
+
+    {
+      "node_id": "shaker_load",
+      "type": "skill",
+      "label": "Load Plate Into Shaker",
+      "description": "Place the sealed plate into the shaker slot and release it.",
+      "skill_id": "wellplate_shaker_load",
+      "parameters": {
+        "object": { "$input": "reaction_plate" },
+        "wellplate_shaker": { "$input": "shaker" },
+        "slot_anchor": { "$input": "shaker_slot" }
+      }
+    },
+
+    {
+      "node_id": "shaker_close",
+      "type": "skill",
+      "label": "Close Shaker Lid",
+      "description": "Close the shaker lid.",
+      "skill_id": "wellplate_shaker_close",
+      "parameters": { "shaker": { "$input": "shaker" } }
+    },
+
+    {
+      "node_id": "shaker_on",
+      "type": "skill",
+      "label": "Start Shaker",
+      "description": "Turn the shaker on (state-aware; no-op if already running).",
+      "skill_id": "wellplate_shaker_run",
+      "parameters": {
+        "shaker": { "$input": "shaker" },
+        "ensure_state": "on"
+      }
+    },
+
+    {
+      "node_id": "save_run",
+      "type": "skill",
+      "label": "Save Run Folder",
+      "description": "Bundle the run log, any captured images, and the run inputs into a named, timestamped folder under the run's data store.",
+      "skill_id": "save_run_folder",
+      "parameters": { "run_name": { "$input": "run_name" } }
+    },
+
+    { "node_id": "end_1", "type": "end", "label": "End" }
+  ],
+  "edges": [
+    { "edge_id": "e0",  "from_node": "start_0",      "to_node": "seed_shaker_state", "condition": { "type": "default" } },
+    { "edge_id": "e0a", "from_node": "seed_shaker_state", "to_node": "log_platemap", "condition": { "type": "on_success" } },
+    { "edge_id": "e0b", "from_node": "log_platemap", "to_node": "grab_pipette",  "condition": { "type": "on_success" } },
+    { "edge_id": "e1",  "from_node": "grab_pipette",  "to_node": "make_pos",      "condition": { "type": "on_success" } },
+    { "edge_id": "e2", "from_node": "make_pos",      "to_node": "make_neg",      "condition": { "type": "on_success" } },
+    { "edge_id": "e3", "from_node": "make_neg",      "to_node": "make_sample",   "condition": { "type": "on_success" } },
+    { "edge_id": "e4", "from_node": "make_sample",   "to_node": "disp_pos",      "condition": { "type": "on_success" } },
+    { "edge_id": "e5", "from_node": "disp_pos",      "to_node": "disp_neg",      "condition": { "type": "on_success" } },
+    { "edge_id": "e6", "from_node": "disp_neg",      "to_node": "disp_sample",   "condition": { "type": "on_success" } },
+    { "edge_id": "e7", "from_node": "disp_sample",   "to_node": "place_pipette", "condition": { "type": "on_success" } },
+    { "edge_id": "e8", "from_node": "place_pipette", "to_node": "seal",          "condition": { "type": "on_success" } },
+    { "edge_id": "e9",  "from_node": "seal",         "to_node": "shaker_off",    "condition": { "type": "on_success" } },
+    { "edge_id": "e10", "from_node": "regrab_plate", "to_node": "shaker_load",   "condition": { "type": "on_success" } },
+    { "edge_id": "e11", "from_node": "shaker_off",   "to_node": "shaker_open",   "condition": { "type": "on_success" } },
+    { "edge_id": "e12", "from_node": "shaker_open",  "to_node": "regrab_plate",  "condition": { "type": "on_success" } },
+    { "edge_id": "e13", "from_node": "shaker_load",  "to_node": "shaker_close",  "condition": { "type": "on_success" } },
+    { "edge_id": "e14", "from_node": "shaker_close", "to_node": "shaker_on",     "condition": { "type": "on_success" } },
+    { "edge_id": "e15", "from_node": "shaker_on",    "to_node": "save_run",      "condition": { "type": "on_success" } },
+    { "edge_id": "e16", "from_node": "save_run",     "to_node": "end_1",         "condition": { "type": "on_success" } }
+  ],
+  "canvas_ui": {
+    "kind": "react",
+    "source_ref": "canvas/cfps_mastermix_screen.tsx",
+    "enabled": true,
+    "version": 1,
+    "updated_at": "2026-07-22T00:00:00.000Z"
+  }
+}

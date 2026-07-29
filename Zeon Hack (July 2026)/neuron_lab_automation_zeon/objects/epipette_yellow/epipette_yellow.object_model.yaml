@@ -1,0 +1,26 @@
+urdf: epipette_yellow.urdf
+articulations:
+  default:
+    description: All joints at rest position
+    joints: {}
+anchors:
+  object:
+    parent_link: world
+    description: Table placement frame, origin at (+X, +Y, -Z) bbox corner
+    link_T_anchor:
+      xyz: [2.44929e-19, -0.208593, 0.0954334]
+      wxyz: [4.32978e-17, 0.707107, -0.707107, -4.32978e-17]
+  end_tip:
+    parent_link: body
+    description: end tip of epipette
+    link_T_anchor:
+      xyz: [0.0312172, -0.207229, 0.0404293]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  grasp_pose:
+    parent_link: body
+    description: the grasp pose the arm makes to grab the eipiette
+    link_T_anchor:
+      xyz: [0.031147, -0.094, 0.05]
+      wxyz: [0.707107, 8.71576e-33, -7.84419e-32, 0.707107]
+    grasp:
+      width: 0.023

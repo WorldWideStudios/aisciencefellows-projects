@@ -1,0 +1,16 @@
+urdf: tipbox_10ul.urdf
+parts:
+  body:
+    links: [body]
+    description: Pipette tip box (10 uL)
+articulations:
+  default:
+    description: Static object, no actuated joints
+    joints: {}
+anchors:
+  object:
+    parent_link: world
+    description: Table placement frame
+    link_T_anchor:
+      xyz: [0.124, -0.0885013, 0.0]
+      wxyz: [-0.707107, 0.0, 0.0, 0.707107]

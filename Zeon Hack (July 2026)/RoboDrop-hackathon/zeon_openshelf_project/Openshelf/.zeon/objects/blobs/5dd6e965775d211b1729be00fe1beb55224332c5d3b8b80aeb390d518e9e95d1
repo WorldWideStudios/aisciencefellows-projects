@@ -1,0 +1,28 @@
+urdf: wellplate_96_deep.urdf
+parts:
+  body:
+    links: [body]
+    description: 96-well deep-well plate (SBS footprint 127.6 x 85.3 mm, 41 mm deep wells). OBJ + deepwell_503001.mtl
+      (flat material colour, no texture).
+articulations:
+  default:
+    description: Static object, no actuated joints
+    joints: {}
+anchors:
+  object:
+    parent_link: world
+    description: Table placement frame, origin at the (max_x, max_y, min_z) bbox corner. Mesh is authored
+      in metres (URDF scale 1) and already Z-up with the base on z=0 (wells opening up), so the anchor
+      uses identity rotation.
+    link_T_anchor:
+      xyz: [0.0638, 0.04265, 0.0]
+      wxyz: [1.0, 0.0, 0.0, 0.0]
+  nest_base:
+    parent_link: body
+    description: 'Seat frame derived from the solid: the mesh is centred in x/y (+/-63.80, +/-42.65 mm)
+      with its underside at z=0, so the body origin already IS the bottom centre. Deep-well plate is 41.00
+      mm tall vs ~15 mm for a flat-bottom, which changes clearance above every seat it goes into. Identity,
+      +Z up. Pairs with wellplate_holder_tags.plate_nest and with a fixture-plate holder seat.'
+    link_T_anchor:
+      xyz: [0.0, 0.0, 0.0]
+      wxyz: [1.0, 0.0, 0.0, 0.0]

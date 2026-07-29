@@ -1,0 +1,54 @@
+{
+  "workflow_id": "openshelf_plate_anchor",
+  "name": "OpenShelf — Go To Plate Anchor",
+  "description": "Move the left arm to the OpenShelf plate anchor, close the gripper, then return the arm to its home rest pose.",
+  "version": "1.0.0",
+  "author": "zeon",
+  "created_at": "2026-07-09T00:00:00.000Z",
+  "updated_at": "2026-07-09T00:00:00.000Z",
+  "simulation_validated": false,
+  "objects": [],
+  "inputs": [],
+  "nodes": [
+    {
+      "node_id": "start_0",
+      "type": "start",
+      "label": "Start"
+    },
+    {
+      "node_id": "go_to_anchor",
+      "type": "skill",
+      "label": "Go To Plate Anchor",
+      "description": "Move the left arm to the OpenShelf plate anchor (fixed in the skill).",
+      "skill_id": "reach_openshelf",
+      "parameters": {}
+    },
+    {
+      "node_id": "close_grip",
+      "type": "skill",
+      "label": "Close Gripper",
+      "description": "Fully close the left gripper.",
+      "skill_id": "close_gripper",
+      "parameters": {}
+    },
+    {
+      "node_id": "return_home",
+      "type": "skill",
+      "label": "Return Home",
+      "description": "Return the left arm to its home rest pose.",
+      "skill_id": "go_home",
+      "parameters": {}
+    },
+    {
+      "node_id": "end_1",
+      "type": "end",
+      "label": "End"
+    }
+  ],
+  "edges": [
+    { "edge_id": "e0", "from_node": "start_0",     "to_node": "go_to_anchor", "condition": { "type": "default" } },
+    { "edge_id": "e1", "from_node": "go_to_anchor", "to_node": "close_grip",   "condition": { "type": "on_success" } },
+    { "edge_id": "e2", "from_node": "close_grip",   "to_node": "return_home",  "condition": { "type": "on_success" } },
+    { "edge_id": "e3", "from_node": "return_home",  "to_node": "end_1",        "condition": { "type": "on_success" } }
+  ]
+}

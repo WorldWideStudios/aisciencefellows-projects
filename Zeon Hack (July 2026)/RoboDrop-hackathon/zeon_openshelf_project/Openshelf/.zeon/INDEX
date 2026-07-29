@@ -1,0 +1,907 @@
+{
+  ".DS_Store": {
+    "blob_sha": "2b048da9a0572db7118a33b42c31710be0109cafb903b730523343db08f869ec",
+    "mode": "blob",
+    "mtime": 1785100228.1451209
+  },
+  "AGENTS.md": {
+    "blob_sha": "95dbe8be746cc9637c4435d678a2ce54735cabe6a0746059324fc321aa1e7a6b",
+    "mode": "blob",
+    "mtime": 1785100228.148004
+  },
+  "CLAUDE.md": {
+    "blob_sha": "6e05160b3ffded08d867a1404593e807ac36ffb340fb9d11d8e750fc7751bfe1",
+    "mode": "blob",
+    "mtime": 1785100247.2489827
+  },
+  "canvas/.gitkeep": {
+    "blob_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mode": "blob",
+    "mtime": 1785009196.4394414
+  },
+  "canvas/pipette_demo_screen.tsx": {
+    "blob_sha": "b606b97df576e10b4a3383dcbcb51f0d18b63166aa8adbbab0ebd47a4ac6f3d2",
+    "mode": "blob",
+    "mtime": 1785009196.4403415
+  },
+  "objects/.DS_Store": {
+    "blob_sha": "831d4fb3a920fb78862effd4f362a9257faadbc761ab2245529b530326c36120",
+    "mode": "blob",
+    "mtime": 1785100228.0879755
+  },
+  "objects/.gitkeep": {
+    "blob_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mode": "blob",
+    "mtime": 1785009196.4409733
+  },
+  "objects/beaker/beaker.object_model.yaml": {
+    "blob_sha": "d68e815129b606c1e5569f72b579d7cf6820dbe875c33f7853ddbb1ec40fb85b",
+    "mode": "blob",
+    "mtime": 1785100228.0971165
+  },
+  "objects/beaker/beaker.urdf": {
+    "blob_sha": "6f697410c768db794756a87e831febe24ab5825d790f7267d6b918d3558616e4",
+    "mode": "blob",
+    "mtime": 1785100228.148395
+  },
+  "objects/epipette_10ul/epipette_10ul.object_model.yaml": {
+    "blob_sha": "f7fb825b34fdafc8650c2bfda07510516137759742adc2be1bff7258656481d0",
+    "mode": "blob",
+    "mtime": 1785009196.4417946
+  },
+  "objects/epipette_10ul/epipette_10ul.urdf": {
+    "blob_sha": "abeaf27c2bcd35f5554718b60c5d2ceda3d2bab81c0d970912a268949e167a2d",
+    "mode": "blob",
+    "mtime": 1785009196.442379
+  },
+  "objects/epipette_120ul/epipette_120ul.object_model.yaml": {
+    "blob_sha": "b7e976eff6a5b56c54e5b1788e03e3a293228d364ddb553224b4723840346432",
+    "mode": "blob",
+    "mtime": 1785009196.44309
+  },
+  "objects/epipette_120ul/epipette_120ul.urdf": {
+    "blob_sha": "ee8e31ddccb36abc38dda4f5a6dae2b215046fe7344595cc815862e7b45550b9",
+    "mode": "blob",
+    "mtime": 1785009196.4436467
+  },
+  "objects/epipette_stand_chargeable/epipette_stand_chargeable.object_model.yaml": {
+    "blob_sha": "e9f912af4d9076d07a39c7b2f0f89cadedbd80d3d30f4b4105b4ff2d688f725a",
+    "mode": "blob",
+    "mtime": 1785009196.4442036
+  },
+  "objects/epipette_stand_chargeable/epipette_stand_chargeable.urdf": {
+    "blob_sha": "997df4cdcb6b37c7720fab71dcdcb16efe9cefb272c8d717521791d8b47ca1b7",
+    "mode": "blob",
+    "mtime": 1785009196.4446268
+  },
+  "objects/fixture_plate/fixture_plate.object_model.yaml": {
+    "blob_sha": "e095af3cc3c45f5760cddf6c715ba8fef96b6fd6ec669b082d2cf64f8e59e3f1",
+    "mode": "blob",
+    "mtime": 1785100247.2495632
+  },
+  "objects/fixture_plate/fixture_plate.urdf": {
+    "blob_sha": "4d87fdbcc2b48ab4c644cc6504e0c7344a3e1edaf81658037b5579dea85df3fe",
+    "mode": "blob",
+    "mtime": 1785009196.4459646
+  },
+  "objects/openshelf/openshelf.object_model.yaml": {
+    "blob_sha": "ec16835cb0f72e5d1e3662d8e295261de3bd500ff7621608c37fe4c5488a9bae",
+    "mode": "blob",
+    "mtime": 1785100228.2209673
+  },
+  "objects/openshelf/openshelf.urdf": {
+    "blob_sha": "6563b1b629eaee8427ea7496768b30533604f58679ef790e8a8e67456e8d6c49",
+    "mode": "blob",
+    "mtime": 1785100228.2363071
+  },
+  "objects/plate_stand_holder/plate_stand_holder.object_model.yaml": {
+    "blob_sha": "6383587637a265c1ebfa20373ed38287f5ad6bc8449269d2d80c50cfadb9cc2d",
+    "mode": "blob",
+    "mtime": 1785100228.2359679
+  },
+  "objects/plate_stand_holder/plate_stand_holder.urdf": {
+    "blob_sha": "2f66ab146b347fb34aac8daa3d3e4694d88fa4e28f7963c579c83749fecd4733",
+    "mode": "blob",
+    "mtime": 1785100228.2379947
+  },
+  "objects/tipbox_10ul/tipbox_10ul.object_model.yaml": {
+    "blob_sha": "a3956995cd0d22d0c464b7595c75a9bfd9ca6c80ddba8db79c1ae450675e52b1",
+    "mode": "blob",
+    "mtime": 1785009196.4464867
+  },
+  "objects/tipbox_10ul/tipbox_10ul.urdf": {
+    "blob_sha": "e2cee826ca011bc86a8901b6bb18eea5702085c37b580fa6956da1164723987e",
+    "mode": "blob",
+    "mtime": 1785009196.4469905
+  },
+  "objects/tipbox_120ul/tipbox_120ul.object_model.yaml": {
+    "blob_sha": "4f08a65aef415c456a7843b19bf7efe0200057ac78d176f23e6547dad6b62801",
+    "mode": "blob",
+    "mtime": 1785009196.4475336
+  },
+  "objects/tipbox_120ul/tipbox_120ul.urdf": {
+    "blob_sha": "af900869d988e4bb1bbd4bfbf897e168f04aeb1f211bffe6b0de8644f440b7e9",
+    "mode": "blob",
+    "mtime": 1785009196.4481568
+  },
+  "objects/tipbox_holder_fixture_plate/tipbox_holder_fixture_plate.object_model.yaml": {
+    "blob_sha": "ba20b76bd3844581065e385b58bd7fdef9bf3b8ba959926c7aed7fd25b0e86f6",
+    "mode": "blob",
+    "mtime": 1785009196.4487753
+  },
+  "objects/tipbox_holder_fixture_plate/tipbox_holder_fixture_plate.urdf": {
+    "blob_sha": "d7061b23a8d31d465b13c2ff095934e8848cc1eff38e01ace9b8e523368988bb",
+    "mode": "blob",
+    "mtime": 1785009196.4492097
+  },
+  "objects/wellplate_96_deep/wellplate_96_deep.object_model.yaml": {
+    "blob_sha": "5dd6e965775d211b1729be00fe1beb55224332c5d3b8b80aeb390d518e9e95d1",
+    "mode": "blob",
+    "mtime": 1785100228.2214506
+  },
+  "objects/wellplate_96_deep/wellplate_96_deep.urdf": {
+    "blob_sha": "c8cb08157447a5a85c534b9b8ab03e0a8c8615facdd301d13fe2e9863551d79a",
+    "mode": "blob",
+    "mtime": 1785100228.154021
+  },
+  "objects/wellplate_96_flatbottom/wellplate_96_flatbottom.object_model.yaml": {
+    "blob_sha": "b9fff2e8e36ff11084dbfbfa2f51b250c26d485a17296293ddec33ce91759d75",
+    "mode": "blob",
+    "mtime": 1785009196.4498448
+  },
+  "objects/wellplate_96_flatbottom/wellplate_96_flatbottom.urdf": {
+    "blob_sha": "2ed6b173924cd0bea3b5703219737a832efa9c82425eb1743f9aeaab25386e83",
+    "mode": "blob",
+    "mtime": 1785009196.450966
+  },
+  "objects/wellplate_holder_fixture_plate/wellplate_holder_fixture_plate.object_model.yaml": {
+    "blob_sha": "c26cb4474645c28b62cd6264fb942101a9c7ba8d2a45f5c3554ac88d35d258c5",
+    "mode": "blob",
+    "mtime": 1785009196.4514337
+  },
+  "objects/wellplate_holder_fixture_plate/wellplate_holder_fixture_plate.urdf": {
+    "blob_sha": "bf585805a7ca094953df166fde697a920e7dc6ed137438b506cdfa3fb5e2e31c",
+    "mode": "blob",
+    "mtime": 1785009196.4519775
+  },
+  "objects/wellplate_holder_tags/wellplate_holder_tags.object_model.yaml": {
+    "blob_sha": "4ec6dea407cddb8df4a41c823a0b7a91654e0b97a7941ecf3fb5874b94b7999e",
+    "mode": "blob",
+    "mtime": 1785100247.250151
+  },
+  "objects/wellplate_holder_tags/wellplate_holder_tags.urdf": {
+    "blob_sha": "fbd5d74fcdeb4d51af22e7ae4a04d03fc21df1086e600aaeaf608cc7d45db307",
+    "mode": "blob",
+    "mtime": 1785009196.4529688
+  },
+  "objects/wellplate_holder_tags_team4/wellplate_holder_tags_team4.object_model.yaml": {
+    "blob_sha": "015113abe76792e306838f94cabe19ba9b7cd7512a48e6251bd7422bc90667b2",
+    "mode": "blob",
+    "mtime": 1785100228.252137
+  },
+  "objects/wellplate_holder_tags_team4/wellplate_holder_tags_team4.urdf": {
+    "blob_sha": "956d7c31c41df4797969bcf1ad6e391cc6b177378f5c7599f42112f23210f71d",
+    "mode": "blob",
+    "mtime": 1785100228.0957363
+  },
+  "objects/wellplate_pcr/wellplate_pcr.object_model.yaml": {
+    "blob_sha": "3f608142af5c1694b4be737adc36bcaa548f6b525f211addd475b6f5c4f38dea",
+    "mode": "blob",
+    "mtime": 1785100247.2516813
+  },
+  "objects/wellplate_pcr/wellplate_pcr.urdf": {
+    "blob_sha": "1a1e1360ca9261db6f4d3ea9b2b156c25b07748f2a8674796d4c1a68d2db988a",
+    "mode": "blob",
+    "mtime": 1785009196.4540753
+  },
+  "objects/wellplate_shaker/wellplate_shaker.object_model.yaml": {
+    "blob_sha": "69296da23813244f009fc16c7d0b461983d70d144fc5bce2c8a13206843d64c4",
+    "mode": "blob",
+    "mtime": 1785009196.454698
+  },
+  "objects/wellplate_shaker/wellplate_shaker.urdf": {
+    "blob_sha": "47aae6c6cbb6e9eb99dc8f6f0adec2358bb6a6811f7409b2ff483d585993b94e",
+    "mode": "blob",
+    "mtime": 1785009196.4552255
+  },
+  "objects/wellplate_stand/wellplate_stand.object_model.yaml": {
+    "blob_sha": "9fe948130b7146d7dcb638bdeda059b24f17f1dc0c2c235e1e1a26609a340bef",
+    "mode": "blob",
+    "mtime": 1785100228.062951
+  },
+  "objects/wellplate_stand/wellplate_stand.urdf": {
+    "blob_sha": "22726ddca8cb5d85146cedc25d9c727153b85612087fdb756efe331806fb8cf5",
+    "mode": "blob",
+    "mtime": 1785100228.2183602
+  },
+  "project.json": {
+    "blob_sha": "7a2073c888bc844b001ad27816620cd70133f56679ead9a70ad85a8254490f76",
+    "mode": "blob",
+    "mtime": 1785100247.2521827
+  },
+  "scripts/verify_move_plate_to_testphyw.py": {
+    "blob_sha": "655a5128e5c5d0cd19a5e970e77c9018d712dea6f196d8608d0425289535a289",
+    "mode": "blob",
+    "mtime": 1785100228.2190487
+  },
+  "scripts/verify_pickup_plate.py": {
+    "blob_sha": "dc8c4913b089d47b8d2da979a6b01cb84beb69604385f0d886349bd596152de7",
+    "mode": "blob",
+    "mtime": 1785100228.216769
+  },
+  "scripts/verify_zeon_project.py": {
+    "blob_sha": "3677c404a4227c4be82d9f13049191a1a390c25e96582ce3fe95373c1ebc96df",
+    "mode": "blob",
+    "mtime": 1785100228.0947554
+  },
+  "skills/.DS_Store": {
+    "blob_sha": "569073445a8db2dc35b8d256283bfd5198a56db1113e88073024b64360f04be8",
+    "mode": "blob",
+    "mtime": 1785100228.143712
+  },
+  "skills/.gitkeep": {
+    "blob_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mode": "blob",
+    "mtime": 1785009196.4568403
+  },
+  "skills/actuate_module/metadata.yaml": {
+    "blob_sha": "351bb02a368bbc09d5133bad70a7764dd5cda5ba581d1f81d7cb2b6b414fec60",
+    "mode": "blob",
+    "mtime": 1785100228.2509098
+  },
+  "skills/actuate_module/robotic_code.py": {
+    "blob_sha": "ce1b003fa2cb15de05d7b65be231c47944899181897cab2f342bea675be52da0",
+    "mode": "blob",
+    "mtime": 1785100228.2186813
+  },
+  "skills/epipette_aspirate/metadata.yaml": {
+    "blob_sha": "d5950f8537c8a6d0380fa14c3636f893de90811fd2544c199e2b83528b652a24",
+    "mode": "blob",
+    "mtime": 1785009196.4574142
+  },
+  "skills/epipette_aspirate/modules.py": {
+    "blob_sha": "a6481e8cc760012cb86ac30843460e02f50cab3870432492420e93e95c4cfd3b",
+    "mode": "blob",
+    "mtime": 1785009196.4578815
+  },
+  "skills/epipette_aspirate/robotic_code.py": {
+    "blob_sha": "562ef94e76d8971e301dd846a0d1e7aa71d97664cbe36ce890373409d7eced05",
+    "mode": "blob",
+    "mtime": 1785009196.4583495
+  },
+  "skills/epipette_attach/metadata.yaml": {
+    "blob_sha": "e2abfbc8e262fdacf0c0a820d185a615879cf29808cb4c3b646c001f63261219",
+    "mode": "blob",
+    "mtime": 1785009196.4589183
+  },
+  "skills/epipette_attach/modules.py": {
+    "blob_sha": "a6481e8cc760012cb86ac30843460e02f50cab3870432492420e93e95c4cfd3b",
+    "mode": "blob",
+    "mtime": 1785009196.4602811
+  },
+  "skills/epipette_attach/robotic_code.py": {
+    "blob_sha": "8726d902babd95b0e462b6406d26e7761e00044294d5ac3200d1bb3f5b6966a5",
+    "mode": "blob",
+    "mtime": 1785009196.4614625
+  },
+  "skills/epipette_dispense/metadata.yaml": {
+    "blob_sha": "3153481a37808a39a8164a0ef04d21da43cf04e3f4f5331b696984e3e1142cf4",
+    "mode": "blob",
+    "mtime": 1785009196.4622529
+  },
+  "skills/epipette_dispense/modules.py": {
+    "blob_sha": "a6481e8cc760012cb86ac30843460e02f50cab3870432492420e93e95c4cfd3b",
+    "mode": "blob",
+    "mtime": 1785009196.4628274
+  },
+  "skills/epipette_dispense/robotic_code.py": {
+    "blob_sha": "410a4eb037fb4509893b9cd88aa222304168b2eae6e511e5e842cda622d8f7a7",
+    "mode": "blob",
+    "mtime": 1785009196.4635375
+  },
+  "skills/epipette_eject/metadata.yaml": {
+    "blob_sha": "23d0a389e3cb061f65f0ab8a2a3a542255e3afc1de5c2a2652e48f2f1d29b6d3",
+    "mode": "blob",
+    "mtime": 1785009196.4642189
+  },
+  "skills/epipette_eject/modules.py": {
+    "blob_sha": "c2a18671c1c51031e77ac99b55fb0ab10e3ebec61d7fecc953c8575435030421",
+    "mode": "blob",
+    "mtime": 1785009196.4648173
+  },
+  "skills/epipette_eject/robotic_code.py": {
+    "blob_sha": "73fffafece59102a05c3dab4b106c7e78a2cfd867aac995a1f0e339571fe9547",
+    "mode": "blob",
+    "mtime": 1785009196.4652421
+  },
+  "skills/epipette_grab/metadata.yaml": {
+    "blob_sha": "e2068408f63b473f0b90a18f3bc5558f400bad0890b1bcfa639d2ceea915c300",
+    "mode": "blob",
+    "mtime": 1785009196.4657047
+  },
+  "skills/epipette_grab/modules.py": {
+    "blob_sha": "c2a18671c1c51031e77ac99b55fb0ab10e3ebec61d7fecc953c8575435030421",
+    "mode": "blob",
+    "mtime": 1785009196.4660196
+  },
+  "skills/epipette_grab/robotic_code.py": {
+    "blob_sha": "a71ed43d20f284a26c4202402131efbd3609ce3ccd89404ca0ec9d93ff54b9a0",
+    "mode": "blob",
+    "mtime": 1785009196.4664834
+  },
+  "skills/epipette_place/metadata.yaml": {
+    "blob_sha": "b71f2dc9552d0fb9478b938c8650e5261405bbf8e9be13cc6a35ca72741a39ad",
+    "mode": "blob",
+    "mtime": 1785009196.467059
+  },
+  "skills/epipette_place/modules.py": {
+    "blob_sha": "c2a18671c1c51031e77ac99b55fb0ab10e3ebec61d7fecc953c8575435030421",
+    "mode": "blob",
+    "mtime": 1785009196.467473
+  },
+  "skills/epipette_place/robotic_code.py": {
+    "blob_sha": "c089a6ebeee41234f7dad4b33dc4e51b7a648cec7789721d2dac473b1bdf51c7",
+    "mode": "blob",
+    "mtime": 1785009196.4679239
+  },
+  "skills/go_to_waypoints/metadata.yaml": {
+    "blob_sha": "7fc19219912f1b2b8859258caa44add23166ddea17677bf4c19d261bee51d2a5",
+    "mode": "blob",
+    "mtime": 1785100228.2179556
+  },
+  "skills/go_to_waypoints/robotic_code.py": {
+    "blob_sha": "383305033c98d6d082a26ff51861f8c4191300ed08f5532ec37e5f056fd106fa",
+    "mode": "blob",
+    "mtime": 1785100228.2385883
+  },
+  "skills/localize_cold/metadata.yaml": {
+    "blob_sha": "5a9c2d653c8940323007fef2a485a97b34615ba5a3e711bbee695027e8e19ff8",
+    "mode": "blob",
+    "mtime": 1785100228.0974035
+  },
+  "skills/localize_cold/robotic_code.py": {
+    "blob_sha": "23bc58ee2ace743e602c6bb33b46aedaf5d29b9036de04bef05a51513a67f336",
+    "mode": "blob",
+    "mtime": 1785100228.2219334
+  },
+  "skills/move_beaker_to_openshelf/metadata.yaml": {
+    "blob_sha": "8f4ccb2ccde28699003c1c01f92061dc48335e3799694cb5321a5a09694edd8a",
+    "mode": "blob",
+    "mtime": 1785100228.2221613
+  },
+  "skills/move_beaker_to_openshelf/modules.py": {
+    "blob_sha": "c2a18671c1c51031e77ac99b55fb0ab10e3ebec61d7fecc953c8575435030421",
+    "mode": "blob",
+    "mtime": 1785100228.238996
+  },
+  "skills/move_beaker_to_openshelf/robotic_code.py": {
+    "blob_sha": "3e101647119fa455e8f2e9e4f241a93a97db814e5458e71cec4c5cab18e78e8e",
+    "mode": "blob",
+    "mtime": 1785100228.1426
+  },
+  "skills/move_beaker_to_openshelf_physical/metadata.yaml": {
+    "blob_sha": "8cbaed4e08630475213caf0990346c24afe84a9e288f125fa1f487dd9ee303b6",
+    "mode": "blob",
+    "mtime": 1785100228.2212222
+  },
+  "skills/move_beaker_to_openshelf_physical/robotic_code.py": {
+    "blob_sha": "a50a6e811ba7ce2204d2519258a44196b97c13a3de90b54ba50090d3abf993b3",
+    "mode": "blob",
+    "mtime": 1785100228.1423306
+  },
+  "skills/move_wellplate_to_openshelf_physical/metadata.yaml": {
+    "blob_sha": "91018865e00abf7d60c6a439d34c0f329f67f7634e683319cc6c3226b3d6ea58",
+    "mode": "blob",
+    "mtime": 1785100228.1413906
+  },
+  "skills/move_wellplate_to_openshelf_physical/robotic_code.py": {
+    "blob_sha": "726caefa8c73bc5d7a01b36b5f702239e99d3c7bf0c9da6dcb648f7d0bbc5c3c",
+    "mode": "blob",
+    "mtime": 1785100228.1405184
+  },
+  "skills/openshelf_command/metadata.yaml": {
+    "blob_sha": "120dea0d54bfe15bf324c01357745745cbe7ad7c2ad04de38147146556960437",
+    "mode": "blob",
+    "mtime": 1785100228.249702
+  },
+  "skills/openshelf_command/robotic_code.py": {
+    "blob_sha": "e1458a46fb967eef0adc5f58e44f6793119cfc4e7b072f5f8c5dacda42f7f263",
+    "mode": "blob",
+    "mtime": 1785100228.2112083
+  },
+  "skills/openshelf_devices.py": {
+    "blob_sha": "f6ea988cfd000c449062d5e027464b5a42cb4fe9ef968ed735310790dac2c1e9",
+    "mode": "blob",
+    "mtime": 1785100228.238289
+  },
+  "skills/openshelf_probe/metadata.yaml": {
+    "blob_sha": "4ddbb6d3013e58c3cb463fc9203bf3a6b4ddfe44d9411496af68f199c05fe5e3",
+    "mode": "blob",
+    "mtime": 1785100228.240234
+  },
+  "skills/openshelf_probe/robotic_code.py": {
+    "blob_sha": "ceaf061fcad78001d82d75ee5c6afd8621027ce028750c09f87caaa66e377969",
+    "mode": "blob",
+    "mtime": 1785100228.2097785
+  },
+  "skills/openshelf_retrieve/metadata.yaml": {
+    "blob_sha": "53c191919689a2da2bb0318dc9817cc30b3d4e1d148b50666d1a3cae66bc903c",
+    "mode": "blob",
+    "mtime": 1785100228.1488023
+  },
+  "skills/openshelf_retrieve/robotic_code.py": {
+    "blob_sha": "726335e8dff29d0f8a841523099cf635d5739e324525318322103c61d45eaacd",
+    "mode": "blob",
+    "mtime": 1785100228.1460521
+  },
+  "skills/openshelf_status/metadata.yaml": {
+    "blob_sha": "3df8e5feb34263885c3784c36ada6775e24dbb9872175f609ed2cf18cfbb91e0",
+    "mode": "blob",
+    "mtime": 1785100228.091181
+  },
+  "skills/openshelf_status/robotic_code.py": {
+    "blob_sha": "0f714d359a0dc1df0de37d0429cb6eadd5af8b9948e6edcbcd2632a2eb904427",
+    "mode": "blob",
+    "mtime": 1785100228.0960038
+  },
+  "skills/openshelf_store/metadata.yaml": {
+    "blob_sha": "9d97e6fe8328bcf6fce5217190b8e309a0f328de70c9a52ea3860e937aa0a922",
+    "mode": "blob",
+    "mtime": 1785100228.0934837
+  },
+  "skills/openshelf_store/robotic_code.py": {
+    "blob_sha": "fbb9d377790dc1422a6cf63bb749ebbeeaadc400aa5a89c3b3d3a571e7aebc9b",
+    "mode": "blob",
+    "mtime": 1785100228.1408694
+  },
+  "skills/pickup_from_openshelf/__init__.py": {
+    "blob_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mode": "blob",
+    "mtime": 1785100228.1490467
+  },
+  "skills/pickup_from_openshelf/metadata.yaml": {
+    "blob_sha": "bb366705588d7e9ecd7695787fd1228c3df7a297f1dfd7475deb68d5b142d9fa",
+    "mode": "blob",
+    "mtime": 1785100228.2100163
+  },
+  "skills/pickup_from_openshelf/robotic_code.py": {
+    "blob_sha": "e408b26116315178c1e1737aeef880cf1f15d6a79bdfd32a24530470972ce4d6",
+    "mode": "blob",
+    "mtime": 1785100228.2366042
+  },
+  "skills/pickup_plate/__init__.py": {
+    "blob_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mode": "blob",
+    "mtime": 1785100228.0896416
+  },
+  "skills/pickup_plate/metadata.yaml": {
+    "blob_sha": "3d8b8f5bec5b80f8f543d22515fa9788636d8532927adb59ba04cba30e003f26",
+    "mode": "blob",
+    "mtime": 1785100228.1455839
+  },
+  "skills/pickup_plate/robotic_code.py": {
+    "blob_sha": "15003fe68e84e26065ac2261f0126103389d175206ef396b9499f0cec1b0aa90",
+    "mode": "blob",
+    "mtime": 1785100228.251786
+  },
+  "skills/pickup_wellplate_from_holder/metadata.yaml": {
+    "blob_sha": "eb964a1446ef0f08cd9e5ed961c09eefe68c769a9027513a7bbe21195867fe8b",
+    "mode": "blob",
+    "mtime": 1785100228.146797
+  },
+  "skills/pickup_wellplate_from_holder/robotic_code.py": {
+    "blob_sha": "82b234e3f90afd0f2b5ba9c107cbbebbcd56e36c79aebc6a0b78d51176fe9892",
+    "mode": "blob",
+    "mtime": 1785100228.2528944
+  },
+  "skills/place_on_shelf/metadata.yaml": {
+    "blob_sha": "4e75af2ca09fd1d59663522a8316e9d2fd436baf98854a1ac5a840fbc8c97794",
+    "mode": "blob",
+    "mtime": 1785100228.2093945
+  },
+  "skills/place_on_shelf/robotic_code.py": {
+    "blob_sha": "fb01bac496da476c56f260b91c273c812cdd83aceedde4b0b592c341f308ee13",
+    "mode": "blob",
+    "mtime": 1785100228.2124171
+  },
+  "skills/place_on_stand/metadata.yaml": {
+    "blob_sha": "e6f62b7e33a03fb29e38b190d54ea9c185d2477953c618ffa1f2d16e21fc11ba",
+    "mode": "blob",
+    "mtime": 1785100228.146476
+  },
+  "skills/place_on_stand/robotic_code.py": {
+    "blob_sha": "995dc5d02360bdad268d12f850425ac2490a8ceca0802e9bdad8d769fccb1c4d",
+    "mode": "blob",
+    "mtime": 1785100228.0968204
+  },
+  "skills/place_plate_at_testphyw/metadata.yaml": {
+    "blob_sha": "96948fe6396ef4f55090681e48080e4c67fc2bdd821296e663bb561e1231982b",
+    "mode": "blob",
+    "mtime": 1785100228.1518338
+  },
+  "skills/place_plate_at_testphyw/robotic_code.py": {
+    "blob_sha": "2acccddb0cb7ddc1045ecc82c95df3ada878434ac94869de118848cc22b3b4b6",
+    "mode": "blob",
+    "mtime": 1785100228.095372
+  },
+  "skills/place_wellplate_in_openshelf/metadata.yaml": {
+    "blob_sha": "e46bc53ac328a7c520ece8d8cf23c012d7082d460258268a24abec100b238499",
+    "mode": "blob",
+    "mtime": 1785100228.2404635
+  },
+  "skills/place_wellplate_in_openshelf/robotic_code.py": {
+    "blob_sha": "d715f5039e960a0104e064fcf07a68fa0b8d8fc7cc2e21c4cbb97f5ee55a27e5",
+    "mode": "blob",
+    "mtime": 1785100228.093934
+  },
+  "skills/preflight_right_arm_anchor/metadata.yaml": {
+    "blob_sha": "9ebf3f948b0c708060e0d7bd01bdee2c2a87e7efed3a3438e031d3ec20c7e226",
+    "mode": "blob",
+    "mtime": 1785100228.2513037
+  },
+  "skills/preflight_right_arm_anchor/robotic_code.py": {
+    "blob_sha": "13460292096e28eae1a5016a1235b89f0b2c4c96b01fd6b2dbbc4c13d9d4f873",
+    "mode": "blob",
+    "mtime": 1785100228.2502043
+  },
+  "skills/press_button/metadata.yaml": {
+    "blob_sha": "fd8619956f08bd7237fff90625da0f11226367e0f80fd5e561069669634c12d0",
+    "mode": "blob",
+    "mtime": 1785100228.1543365
+  },
+  "skills/press_button/robotic_code.py": {
+    "blob_sha": "f5c1e1b79887b57d0e8926920689bb85c43e4868ee8ee8084bf2c7d0cd42e3fa",
+    "mode": "blob",
+    "mtime": 1785100228.1495848
+  },
+  "skills/snap_plate_to_holder/metadata.yaml": {
+    "blob_sha": "4097f26ebb5e727cafb13ef3d287a5d1155f62c333212988f611c20bad12a27d",
+    "mode": "blob",
+    "mtime": 1785100228.2532043
+  },
+  "skills/snap_plate_to_holder/modules.py": {
+    "blob_sha": "c2a18671c1c51031e77ac99b55fb0ab10e3ebec61d7fecc953c8575435030421",
+    "mode": "blob",
+    "mtime": 1785100228.2353582
+  },
+  "skills/snap_plate_to_holder/robotic_code.py": {
+    "blob_sha": "bca9d7b858174ab0af1e1e94255a3eb4b3f91ebd97a6eb3975ce51c7fc3efa63",
+    "mode": "blob",
+    "mtime": 1785100228.2173119
+  },
+  "skills/take_from_shelf/metadata.yaml": {
+    "blob_sha": "82b874ff6b264b85cfa70832ffa4d102ebcab227c7738c22cf0e4a6cf8f36406",
+    "mode": "blob",
+    "mtime": 1785100228.0950522
+  },
+  "skills/take_from_shelf/robotic_code.py": {
+    "blob_sha": "cab88de7700fe368da01ae0605850afe4b0423328f82ddf85bd57148d687e3a5",
+    "mode": "blob",
+    "mtime": 1785100228.2109482
+  },
+  "skills/utils.py": {
+    "blob_sha": "ac7b6f8aa0be1aeba8f6d11eb8d71a40c5b34d18d6c07b8a2f399dc66d6e58b9",
+    "mode": "blob",
+    "mtime": 1785009196.4684308
+  },
+  "skills/waypoint_replay/__init__.py": {
+    "blob_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mode": "blob",
+    "mtime": 1785100228.252562
+  },
+  "skills/waypoint_replay/metadata.yaml": {
+    "blob_sha": "2418a9e35432847dab75b727cd61fdbd293f1d703fc4518023738cf0d70467d7",
+    "mode": "blob",
+    "mtime": 1785100228.2181575
+  },
+  "skills/waypoint_replay/robotic_code.py": {
+    "blob_sha": "24551850223086710701ec45c5752fd321faf544c67d279fbf63c60130279f76",
+    "mode": "blob",
+    "mtime": 1785100228.1536157
+  },
+  "verification/README.md": {
+    "blob_sha": "d9d0e99672f2f0e79fefe7ef645f2c5c9a02416cbdc5e779382d44a0ca5e9568",
+    "mode": "blob",
+    "mtime": 1785100228.212746
+  },
+  "verification/golden_pipette_demo.json": {
+    "blob_sha": "755bbcf34d4e432356ed07c96df297ce3fd27bf5bccda41f941cdd61bf3d4c05",
+    "mode": "blob",
+    "mtime": 1785100228.2216935
+  },
+  "workflows/.gitkeep": {
+    "blob_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mode": "blob",
+    "mtime": 1785009196.4687712
+  },
+  "workflows/arm_and_shelf.json": {
+    "blob_sha": "2b2d941255b71768de94cb50d535fbf53f043cf3483981db36f2cbf7e1c76e6a",
+    "mode": "blob",
+    "mtime": 1785100228.219348
+  },
+  "workflows/move_plate_to_openshelf_testphyw.json": {
+    "blob_sha": "08f58eb7473c5aad13a804c3106cb2ea6bc46120c9e6f8a1910dd2ac93cadbc4",
+    "mode": "blob",
+    "mtime": 1785100228.140098
+  },
+  "workflows/move_wellplate_to_openshelf.json": {
+    "blob_sha": "e3d5c9018b5e106d7881a43dc06c2b0fef305ecbd8b8d4d52f889e8695a4f90f",
+    "mode": "blob",
+    "mtime": 1785100228.1417358
+  },
+  "workflows/openshelf_discover.json": {
+    "blob_sha": "8040ca040f20615e1841f9e721060c15b479703447c8dc024feb4a2929002fe7",
+    "mode": "blob",
+    "mtime": 1785100228.2374861
+  },
+  "workflows/pipette_demo.json": {
+    "blob_sha": "7f2e50c8b5441d9d87c8fabc342b8ce95b4d7f09ee760c019072ff7df9aa342f",
+    "mode": "blob",
+    "mtime": 1785009196.4692218
+  },
+  "workflows/preflight_horizontal_grip_openshelf.json": {
+    "blob_sha": "00e758c5ec5949397f8c13fd1214c1bc88794649b857f3dea12309ec47f15f96",
+    "mode": "blob",
+    "mtime": 1785100228.0905316
+  },
+  "workflows/shelf_to_fixture.json": {
+    "blob_sha": "fc9efefcd4813a8a41eeaf344d9381ceffd73b434a22144fb881e2dcf2ac1a3e",
+    "mode": "blob",
+    "mtime": 1785100228.2506256
+  },
+  "workflows/simulate_pickup_pcr_plate.json": {
+    "blob_sha": "f8931071b436695933ff83163874a467968e00bfa5bf770b7030016749317c62",
+    "mode": "blob",
+    "mtime": 1785100228.1419795
+  },
+  "workflows/validate_snap_plate_to_holder.json": {
+    "blob_sha": "10eaeb93feb406f1fbc801d9c89e328515848eafb043a421b43568247d475b30",
+    "mode": "blob",
+    "mtime": 1785100228.0926037
+  },
+  "worlds/.DS_Store": {
+    "blob_sha": "fbae81c75da82326eae5972ce247c44e68abf8dc20f27c2769446ff048efef41",
+    "mode": "blob",
+    "mtime": 1785100228.0943244
+  },
+  "worlds/.gitkeep": {
+    "blob_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mode": "blob",
+    "mtime": 1785009196.4694943
+  },
+  "worlds/open_shelf_and_plate/blox_tsdf.npz": {
+    "blob_sha": "41cf854c079994f9a476b3ab3a42599e8f29993412d0e972c23fc5e2bda082c1",
+    "mode": "blob",
+    "mtime": 1785100228.1530392
+  },
+  "worlds/open_shelf_and_plate/blox_voxels.npz": {
+    "blob_sha": "ed41b62c23883574c91d3791043f300fdbd2557ae8dabbb88dce4c32e3e0050f",
+    "mode": "blob",
+    "mtime": 1785100228.0964522
+  },
+  "worlds/open_shelf_and_plate/world_state.json": {
+    "blob_sha": "2eb6517ada6f7f0a6908b7ee8098f5560c29975aaf65003a33b559e17ce380c5",
+    "mode": "blob",
+    "mtime": 1785100228.249323
+  },
+  "worlds/openshelf_calibraed_copy/blox_tsdf.npz": {
+    "blob_sha": "41cf854c079994f9a476b3ab3a42599e8f29993412d0e972c23fc5e2bda082c1",
+    "mode": "blob",
+    "mtime": 1785100228.2398896
+  },
+  "worlds/openshelf_calibraed_copy/blox_voxels.npz": {
+    "blob_sha": "ed41b62c23883574c91d3791043f300fdbd2557ae8dabbb88dce4c32e3e0050f",
+    "mode": "blob",
+    "mtime": 1785100228.252392
+  },
+  "worlds/openshelf_calibraed_copy/world_state.json": {
+    "blob_sha": "6210981211e30527ba7b0509372b7ea28ce6bf6300870b027b8a1c42ce7c9ed4",
+    "mode": "blob",
+    "mtime": 1785100228.0838985
+  },
+  "worlds/openshelf_calibrated/blox_tsdf.npz": {
+    "blob_sha": "41cf854c079994f9a476b3ab3a42599e8f29993412d0e972c23fc5e2bda082c1",
+    "mode": "blob",
+    "mtime": 1785100228.0918412
+  },
+  "worlds/openshelf_calibrated/blox_voxels.npz": {
+    "blob_sha": "ed41b62c23883574c91d3791043f300fdbd2557ae8dabbb88dce4c32e3e0050f",
+    "mode": "blob",
+    "mtime": 1785100228.2482932
+  },
+  "worlds/openshelf_calibrated/world_state.json": {
+    "blob_sha": "fac0801f2e290a73a544b954322c30d74723180e89a1abab9b7e00bf756a9545",
+    "mode": "blob",
+    "mtime": 1785100228.085731
+  },
+  "worlds/openshelf_calibrated_20260725_150946/blox_tsdf.npz": {
+    "blob_sha": "41cf854c079994f9a476b3ab3a42599e8f29993412d0e972c23fc5e2bda082c1",
+    "mode": "blob",
+    "mtime": 1785100228.2116957
+  },
+  "worlds/openshelf_calibrated_20260725_150946/blox_voxels.npz": {
+    "blob_sha": "ed41b62c23883574c91d3791043f300fdbd2557ae8dabbb88dce4c32e3e0050f",
+    "mode": "blob",
+    "mtime": 1785100228.088972
+  },
+  "worlds/openshelf_calibrated_20260725_150946/world_state.json": {
+    "blob_sha": "7ac719048e59678d38fc111e94b5271b7a8399f34d715e0545ed8f216e92a258",
+    "mode": "blob",
+    "mtime": 1785100228.1522353
+  },
+  "worlds/openshelf_new_sucess/blox_tsdf.npz": {
+    "blob_sha": "41cf854c079994f9a476b3ab3a42599e8f29993412d0e972c23fc5e2bda082c1",
+    "mode": "blob",
+    "mtime": 1785100228.147233
+  },
+  "worlds/openshelf_new_sucess/blox_voxels.npz": {
+    "blob_sha": "ed41b62c23883574c91d3791043f300fdbd2557ae8dabbb88dce4c32e3e0050f",
+    "mode": "blob",
+    "mtime": 1785100228.0844457
+  },
+  "worlds/openshelf_new_sucess/world_state.json": {
+    "blob_sha": "8d760b2abd695abf117f0eb4ef3e06c5d22c93f72f483d61dbfa81283d3395d5",
+    "mode": "blob",
+    "mtime": 1785100228.2176847
+  },
+  "worlds/openshelf_sucess/blox_tsdf.npz": {
+    "blob_sha": "41cf854c079994f9a476b3ab3a42599e8f29993412d0e972c23fc5e2bda082c1",
+    "mode": "blob",
+    "mtime": 1785100228.097983
+  },
+  "worlds/openshelf_sucess/blox_voxels.npz": {
+    "blob_sha": "ed41b62c23883574c91d3791043f300fdbd2557ae8dabbb88dce4c32e3e0050f",
+    "mode": "blob",
+    "mtime": 1785100228.0893133
+  },
+  "worlds/openshelf_sucess/world_state.json": {
+    "blob_sha": "adbf74e71fad7425438a5f56fd04b9b05922bd0009201c0624d505167f934406",
+    "mode": "blob",
+    "mtime": 1785100228.2369363
+  },
+  "worlds/openshelf_try2/blox_tsdf.npz": {
+    "blob_sha": "41cf854c079994f9a476b3ab3a42599e8f29993412d0e972c23fc5e2bda082c1",
+    "mode": "blob",
+    "mtime": 1785100228.219812
+  },
+  "worlds/openshelf_try2/blox_voxels.npz": {
+    "blob_sha": "ed41b62c23883574c91d3791043f300fdbd2557ae8dabbb88dce4c32e3e0050f",
+    "mode": "blob",
+    "mtime": 1785100228.2106888
+  },
+  "worlds/openshelf_try2/world_state.json": {
+    "blob_sha": "1e2e6fe00f4cdc59c760dae0cbacf4c999d92abe8e82e5ffea30c147cc6d5602",
+    "mode": "blob",
+    "mtime": 1785100228.2206764
+  },
+  "worlds/pipette_demo_world/live_state.yaml": {
+    "blob_sha": "5a6b7734e5afa942bd7758a596d8f34822bf63a2ac416820d4f83e97ff29e39b",
+    "mode": "blob",
+    "mtime": 1785009196.4700155
+  },
+  "worlds/pipette_demo_world/world_state.json": {
+    "blob_sha": "a1e3fd812bcc8865fd276ca3acca831fe8d2b1084f9e113554b5c0f953b20684",
+    "mode": "blob",
+    "mtime": 1785009196.470439
+  },
+  "worlds/snap_example/blox_tsdf.npz": {
+    "blob_sha": "41cf854c079994f9a476b3ab3a42599e8f29993412d0e972c23fc5e2bda082c1",
+    "mode": "blob",
+    "mtime": 1785100228.150096
+  },
+  "worlds/snap_example/blox_voxels.npz": {
+    "blob_sha": "ed41b62c23883574c91d3791043f300fdbd2557ae8dabbb88dce4c32e3e0050f",
+    "mode": "blob",
+    "mtime": 1785100228.0885694
+  },
+  "worlds/snap_example/world_state.json": {
+    "blob_sha": "6d93711211e7c3e053af5e738fb20ef54271a2378320374fb8cd62349beb9fa0",
+    "mode": "blob",
+    "mtime": 1785100228.2377734
+  },
+  "worlds/snap_example_20260726_054200/blox_tsdf.npz": {
+    "blob_sha": "41cf854c079994f9a476b3ab3a42599e8f29993412d0e972c23fc5e2bda082c1",
+    "mode": "blob",
+    "mtime": 1785100228.2121348
+  },
+  "worlds/snap_example_20260726_054200/blox_voxels.npz": {
+    "blob_sha": "ed41b62c23883574c91d3791043f300fdbd2557ae8dabbb88dce4c32e3e0050f",
+    "mode": "blob",
+    "mtime": 1785100228.2200768
+  },
+  "worlds/snap_example_20260726_054200/world_state.json": {
+    "blob_sha": "3354af121bc4c0c4fa391391541cf6f0636e15d6745f7152ea16beb018742fd0",
+    "mode": "blob",
+    "mtime": 1785100228.2103655
+  },
+  "worlds/snap_example_copy/blox_tsdf.npz": {
+    "blob_sha": "41cf854c079994f9a476b3ab3a42599e8f29993412d0e972c23fc5e2bda082c1",
+    "mode": "blob",
+    "mtime": 1785100228.15132
+  },
+  "worlds/snap_example_copy/blox_voxels.npz": {
+    "blob_sha": "ed41b62c23883574c91d3791043f300fdbd2557ae8dabbb88dce4c32e3e0050f",
+    "mode": "blob",
+    "mtime": 1785100228.0908408
+  },
+  "worlds/snap_example_copy/world_state.json": {
+    "blob_sha": "8c294413677361def8a613982b6119a84c90eff4f91bdf027c661c25c915ba63",
+    "mode": "blob",
+    "mtime": 1785100228.0850527
+  },
+  "worlds/snap_example_v2/blox_tsdf.npz": {
+    "blob_sha": "41cf854c079994f9a476b3ab3a42599e8f29993412d0e972c23fc5e2bda082c1",
+    "mode": "blob",
+    "mtime": 1785100228.09848
+  },
+  "worlds/snap_example_v2/blox_voxels.npz": {
+    "blob_sha": "ed41b62c23883574c91d3791043f300fdbd2557ae8dabbb88dce4c32e3e0050f",
+    "mode": "blob",
+    "mtime": 1785100228.2372277
+  },
+  "worlds/snap_example_v2/world_state.json": {
+    "blob_sha": "efc4f68e06bd16f283f7efda8c1a4db74b5ae4c1cdefb4238ef05e3194d57517",
+    "mode": "blob",
+    "mtime": 1785100228.2487905
+  },
+  "worlds/snap_example_v3/blox_tsdf.npz": {
+    "blob_sha": "41cf854c079994f9a476b3ab3a42599e8f29993412d0e972c23fc5e2bda082c1",
+    "mode": "blob",
+    "mtime": 1785100228.2131279
+  },
+  "worlds/snap_example_v3/blox_voxels.npz": {
+    "blob_sha": "ed41b62c23883574c91d3791043f300fdbd2557ae8dabbb88dce4c32e3e0050f",
+    "mode": "blob",
+    "mtime": 1785100228.093038
+  },
+  "worlds/snap_example_v3/world_state.json": {
+    "blob_sha": "6cb4fd8add785fab5ef3eeee4cde7d6ffa95c813aa70609e2febbb88ca09549f",
+    "mode": "blob",
+    "mtime": 1785100228.086661
+  },
+  "worlds/snap_example_v4/blox_tsdf.npz": {
+    "blob_sha": "41cf854c079994f9a476b3ab3a42599e8f29993412d0e972c23fc5e2bda082c1",
+    "mode": "blob",
+    "mtime": 1785100228.2394574
+  },
+  "worlds/snap_example_v4/blox_voxels.npz": {
+    "blob_sha": "ed41b62c23883574c91d3791043f300fdbd2557ae8dabbb88dce4c32e3e0050f",
+    "mode": "blob",
+    "mtime": 1785100228.0861843
+  },
+  "worlds/snap_example_v4/world_state.json": {
+    "blob_sha": "7464a4562844de2bfd6385f3a0feeed0f352a2e8a7b91eec05c85bcf62954d19",
+    "mode": "blob",
+    "mtime": 1785100228.2477615
+  },
+  "worlds/sunday_success/blox_tsdf.npz": {
+    "blob_sha": "41cf854c079994f9a476b3ab3a42599e8f29993412d0e972c23fc5e2bda082c1",
+    "mode": "blob",
+    "mtime": 1785100228.2203739
+  },
+  "worlds/sunday_success/blox_voxels.npz": {
+    "blob_sha": "ed41b62c23883574c91d3791043f300fdbd2557ae8dabbb88dce4c32e3e0050f",
+    "mode": "blob",
+    "mtime": 1785100228.1525855
+  },
+  "worlds/sunday_success/world_state.json": {
+    "blob_sha": "7143bcd005a1b4a142388f4febd1d03b9dd2f14aea82fdb509d4305e5f22d8f5",
+    "mode": "blob",
+    "mtime": 1785100228.2407444
+  },
+  "worlds/sunday_v2_sucess/blox_tsdf.npz": {
+    "blob_sha": "41cf854c079994f9a476b3ab3a42599e8f29993412d0e972c23fc5e2bda082c1",
+    "mode": "blob",
+    "mtime": 1785100228.1476436
+  },
+  "worlds/sunday_v2_sucess/blox_voxels.npz": {
+    "blob_sha": "ed41b62c23883574c91d3791043f300fdbd2557ae8dabbb88dce4c32e3e0050f",
+    "mode": "blob",
+    "mtime": 1785100228.0901623
+  },
+  "worlds/sunday_v2_sucess/world_state.json": {
+    "blob_sha": "1ce7e26100be1cdc15e99f27f642b0fa43a3a02caf754134942b55db1b57a819",
+    "mode": "blob",
+    "mtime": 1785100228.0624185
+  }
+}

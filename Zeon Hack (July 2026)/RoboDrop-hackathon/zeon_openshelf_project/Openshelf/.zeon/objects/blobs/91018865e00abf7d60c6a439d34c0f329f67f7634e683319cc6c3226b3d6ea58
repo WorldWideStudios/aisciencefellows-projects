@@ -1,0 +1,27 @@
+# Skill: move_wellplate_to_openshelf_physical
+skill_id: move_wellplate_to_openshelf_physical
+version: "1.0.0"
+description: "Physically pick a PCR wellplate and place it into an anchor-defined OpenShelf seat."
+
+preconditions: {}
+postconditions:
+  wellplate_on_openshelf: true
+
+high_risk: true
+
+safety_rules:
+  - "Commands the selected arm and gripper; validate the complete path in simulation before hardware use."
+  - "The default plate grasp is raised 5.5 mm and yaw-flipped for holder clearance and left-arm reachability; physically verify it before hardware use."
+  - "The default source exit is an 8 cm vertical lift followed by two slow anchor-defined clearance moves; physically verify their path before hardware use."
+  - "The plate world model is attached after the slow source-clear moves, so physically verify the exit clearance before hardware use."
+  - "If execution fails while the plate is attached, stop and inspect before opening the gripper."
+  - "The shelf TCP anchor must be paired with the selected plate grasp and shelf seat anchors."
+  - "The holder-exit and center-table transit anchors must remain collision-clear with the plate attached."
+  - "Confirm that the OpenShelf slot has clearance for the full plate and gripper before hardware execution."
+
+tags:
+  - wellplate
+  - openshelf
+  - anchor
+  - pick-and-place
+  - physical-motion

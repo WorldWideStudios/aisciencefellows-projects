@@ -1,0 +1,125 @@
+{
+  "run": 1,
+  "version": 2,
+  "version_label": "r1-validation-v2",
+  "versioned_path": "data/screens/1/v2/plate_map.json",
+  "round": 1,
+  "assay_type": "validation",
+  "description": "Round 1 minimal validation — clavulanic acid (positive) vs DMSO vehicle (negative) @ 50 µM",
+  "final_volume_ul": 50,
+  "compound_concentration_uM": 50,
+  "working_solution_uM": 500,
+  "compound_volume_ul": 5,
+  "pre_incubation_min": 10,
+  "read_wavelength_nm": 490,
+  "literature_refs": {
+    "T19860": "data/compound_literature/refs/T19860.json",
+    "summary": "data/literature_summary.json",
+    "raw_local": "pvjthomas/local/literature/T19860/"
+  },
+  "rationale_doc": "pvjthomas/runs/1/v2/selection_rationale.md",
+  "rationale_doc_active": "pvjthomas/selection_rationale.md",
+  "layout_notes": "Row A only (8 wells). A1–A4 = DMSO vehicle (negative). A5–A8 = clavulanic acid T19860 @ 50 µM (positive). All wells include enzyme except where noted.",
+  "pass_criteria": {
+    "vehicle": "high A490 slope (normalization reference)",
+    "positive_T19860": ">=50% inhibition vs mean vehicle at 50 µM"
+  },
+  "wells": {
+    "A1": {
+      "compound_id": null,
+      "name": "DMSO vehicle",
+      "concentration_uM": 0,
+      "role": "vehicle",
+      "control_polarity": "negative",
+      "bucket": "control",
+      "enzyme": true
+    },
+    "A2": {
+      "compound_id": null,
+      "name": "DMSO vehicle",
+      "concentration_uM": 0,
+      "role": "vehicle",
+      "control_polarity": "negative",
+      "bucket": "control",
+      "enzyme": true
+    },
+    "A3": {
+      "compound_id": null,
+      "name": "DMSO vehicle",
+      "concentration_uM": 0,
+      "role": "vehicle",
+      "control_polarity": "negative",
+      "bucket": "control",
+      "enzyme": true
+    },
+    "A4": {
+      "compound_id": null,
+      "name": "DMSO vehicle",
+      "concentration_uM": 0,
+      "role": "vehicle",
+      "control_polarity": "negative",
+      "bucket": "control",
+      "enzyme": true
+    },
+    "A5": {
+      "compound_id": "T19860",
+      "name": "Clavulanic Acid",
+      "concentration_uM": 50,
+      "role": "pos-ctrl-clavaculin",
+      "control_polarity": "positive",
+      "bucket": "control",
+      "enzyme": true,
+      "source_plate": "PHD215176",
+      "source_well": "h7",
+      "literature_ref": "data/compound_literature/refs/T19860.json",
+      "literature_ki_uM_tem1": 0.85,
+      "literature_pmcid": "PMC12274840",
+      "expected": ">=50% inhibition vs vehicle"
+    },
+    "A6": {
+      "compound_id": "T19860",
+      "name": "Clavulanic Acid",
+      "concentration_uM": 50,
+      "role": "pos-ctrl-clavaculin",
+      "control_polarity": "positive",
+      "bucket": "control",
+      "enzyme": true,
+      "source_plate": "PHD215176",
+      "source_well": "h7",
+      "literature_ref": "data/compound_literature/refs/T19860.json",
+      "literature_ki_uM_tem1": 0.85,
+      "literature_pmcid": "PMC12274840",
+      "expected": ">=50% inhibition vs vehicle"
+    },
+    "A7": {
+      "compound_id": "T19860",
+      "name": "Clavulanic Acid",
+      "concentration_uM": 50,
+      "role": "pos-ctrl-clavaculin",
+      "control_polarity": "positive",
+      "bucket": "control",
+      "enzyme": true,
+      "source_plate": "PHD215176",
+      "source_well": "h7",
+      "literature_ref": "data/compound_literature/refs/T19860.json",
+      "literature_ki_uM_tem1": 0.85,
+      "literature_pmcid": "PMC12274840",
+      "expected": ">=50% inhibition vs vehicle"
+    },
+    "A8": {
+      "compound_id": "T19860",
+      "name": "Clavulanic Acid",
+      "concentration_uM": 50,
+      "role": "pos-ctrl-clavaculin",
+      "control_polarity": "positive",
+      "bucket": "control",
+      "enzyme": true,
+      "source_plate": "PHD215176",
+      "source_well": "h7",
+      "literature_ref": "data/compound_literature/refs/T19860.json",
+      "literature_ki_uM_tem1": 0.85,
+      "literature_pmcid": "PMC12274840",
+      "expected": ">=50% inhibition vs vehicle"
+    }
+  }
+}

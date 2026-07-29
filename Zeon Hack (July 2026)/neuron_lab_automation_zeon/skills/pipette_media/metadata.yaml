@@ -1,0 +1,11 @@
+skill_id: pipette_media
+version: "0.1.0"
+description: "Placeholder step for pipetting media into the samples."
+
+parameter_descriptions: {}
+
+preconditions: {}
+postconditions: {}
+
+tags: ["placeholder", "pipette", "media"]
+high_risk: false

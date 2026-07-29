@@ -1,0 +1,59 @@
+{
+  "workflow_id": "platereader_kinetic_test",
+  "name": "Plate Reader Kinetic Test",
+  "description": "Minimal plate-reader integration test: load a plate, run a short A490 kinetic schedule (25 C, 30 s reads for 3 min), export once, and unload. Use in sim or on hardware to validate Gen5 kinetic AutoGUI wiring before the full TEM-1 screen.",
+  "version": "1.0.0",
+  "author": "",
+  "created_at": "2026-07-26T00:00:00.000Z",
+  "updated_at": "2026-07-26T00:00:00.000Z",
+  "simulation_validated": false,
+  "objects": [],
+  "inputs": [
+    { "name": "assay_plate", "type": "object", "is_array": false, "description": "96-well plate to load into the reader (any plate with buffer or blanks is fine).", "defaultValue": "wellplate_96_flatbottom" },
+    { "name": "platereader", "type": "object", "is_array": false, "description": "Plate reader used for A490 kinetic readout.", "defaultValue": "plate_reader" },
+    { "name": "plate_home", "type": "object", "is_array": false, "description": "Home fixture where the plate starts and returns after the read.", "defaultValue": "wellplate_holder_tags" },
+    { "name": "kinetic_second_read_s", "type": "float", "description": "Second A490 read time after kinetic t0 (seconds).", "defaultValue": 30.0 },
+    { "name": "kinetic_interval_s", "type": "float", "description": "Interval between subsequent A490 reads (seconds).", "defaultValue": 30.0 },
+    { "name": "kinetic_total_time_s", "type": "float", "description": "End of kinetic read window after kinetic t0 (seconds). 180 = 3 min.", "defaultValue": 180.0 },
+    { "name": "reader_temperature_c", "type": "float", "description": "Plate reader incubator setpoint (C); recorded for Gen5 programming.", "defaultValue": 25.0 },
+    { "name": "reader_equilibration_s", "type": "float", "description": "Seconds at setpoint after lid close before the first kinetic read.", "defaultValue": 30.0 },
+    { "name": "slope_window_start_s", "type": "float", "description": "Start of slope-fit window (kinetic time, seconds).", "defaultValue": 60.0 },
+    { "name": "slope_window_end_s", "type": "float", "description": "End of slope-fit window (kinetic time, seconds).", "defaultValue": 180.0 },
+    { "name": "export_extension", "type": "string", "description": "Gen5 raw export file type.", "defaultValue": "csv" },
+    { "name": "run_name", "type": "string", "description": "Name for this run's saved output folder.", "defaultValue": "platereader_kinetic_test" }
+  ],
+  "nodes": [
+    { "node_id": "start_0", "type": "start", "label": "Start" },
+    { "node_id": "grab_plate", "type": "skill", "label": "Grab Test Plate", "description": "Pick up the plate from its home fixture.", "skill_id": "wellplate_grab", "parameters": { "object": { "$input": "assay_plate" }, "grasp_anchor": "grasp_shortside" } },
+    { "node_id": "open_reader", "type": "skill", "label": "Open Plate Reader", "description": "Open the plate reader lid.", "skill_id": "platereader_open", "parameters": { "platereader": { "$input": "platereader" } } },
+    { "node_id": "load_reader", "type": "skill", "label": "Load Plate Reader", "description": "Load the plate into the reader.", "skill_id": "platereader_load", "parameters": { "object": { "$input": "assay_plate" }, "platereader": { "$input": "platereader" } } },
+    { "node_id": "close_reader", "type": "skill", "label": "Close Plate Reader", "description": "Close the lid before the kinetic read.", "skill_id": "platereader_closed", "parameters": { "platereader": { "$input": "platereader" } } },
+    { "node_id": "run_kinetic_schedule", "type": "skill", "label": "Run Short Kinetic Schedule", "description": "25 C, 30 s equilibration, A490 every 30 s for 3 min (7 reads). Triggers one Gen5 kinetic method.", "skill_id": "platereader_run_kinetic_schedule", "parameters": { "second_read_s": { "$input": "kinetic_second_read_s" }, "interval_s": { "$input": "kinetic_interval_s" }, "total_time_s": { "$input": "kinetic_total_time_s" }, "temperature_c": { "$input": "reader_temperature_c" }, "equilibration_s": { "$input": "reader_equilibration_s" }, "slope_window_start_s": { "$input": "slope_window_start_s" }, "slope_window_end_s": { "$input": "slope_window_end_s" }, "export_extension": { "$input": "export_extension" } } },
+    { "node_id": "open_reader_after_read", "type": "skill", "label": "Open Reader After Read", "description": "Open the reader so the plate can be unloaded.", "skill_id": "platereader_open", "parameters": { "platereader": { "$input": "platereader" } } },
+    { "node_id": "unload_reader", "type": "skill", "label": "Unload Plate Reader", "description": "Pick the plate out of the reader.", "skill_id": "platereader_unload", "parameters": { "object": { "$input": "assay_plate" }, "platereader": { "$input": "platereader" } } },
+    { "node_id": "close_reader_after_unload", "type": "skill", "label": "Close Reader After Unload", "description": "Close the plate reader lid.", "skill_id": "platereader_closed", "parameters": { "platereader": { "$input": "platereader" } } },
+    { "node_id": "return_plate", "type": "skill", "label": "Return Test Plate", "description": "Return the plate to its home fixture.", "skill_id": "wellplate_drop", "parameters": { "object": { "$input": "assay_plate" }, "destination": { "$input": "plate_home" }, "destination_anchor": "home", "grasp_anchor": "grasp_longside_platereader" } },
+    { "node_id": "save_run", "type": "skill", "label": "Save Run Folder", "description": "Bundle the run log and plate-reader export.", "skill_id": "save_run_folder", "parameters": { "run_name": { "$input": "run_name" } } },
+    { "node_id": "end_1", "type": "end", "label": "End" }
+  ],
+  "edges": [
+    { "edge_id": "e0", "from_node": "start_0", "to_node": "grab_plate", "condition": { "type": "default" } },
+    { "edge_id": "e1", "from_node": "grab_plate", "to_node": "open_reader", "condition": { "type": "on_success" } },
+    { "edge_id": "e2", "from_node": "open_reader", "to_node": "load_reader", "condition": { "type": "on_success" } },
+    { "edge_id": "e3", "from_node": "load_reader", "to_node": "close_reader", "condition": { "type": "on_success" } },
+    { "edge_id": "e4", "from_node": "close_reader", "to_node": "run_kinetic_schedule", "condition": { "type": "on_success" } },
+    { "edge_id": "e5", "from_node": "run_kinetic_schedule", "to_node": "open_reader_after_read", "condition": { "type": "on_success" } },
+    { "edge_id": "e6", "from_node": "open_reader_after_read", "to_node": "unload_reader", "condition": { "type": "on_success" } },
+    { "edge_id": "e7", "from_node": "unload_reader", "to_node": "close_reader_after_unload", "condition": { "type": "on_success" } },
+    { "edge_id": "e8", "from_node": "close_reader_after_unload", "to_node": "return_plate", "condition": { "type": "on_success" } },
+    { "edge_id": "e9", "from_node": "return_plate", "to_node": "save_run", "condition": { "type": "on_success" } },
+    { "edge_id": "e10", "from_node": "save_run", "to_node": "end_1", "condition": { "type": "on_success" } }
+  ],
+  "canvas_ui": {
+    "kind": "react",
+    "source_ref": "canvas/platereader_kinetic_test_screen.tsx",
+    "enabled": true,
+    "version": 1,
+    "updated_at": "2026-07-26T00:00:00.000Z"
+  }
+}

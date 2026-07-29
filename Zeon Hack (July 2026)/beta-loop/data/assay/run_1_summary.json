@@ -1,0 +1,37 @@
+{
+  "run": 1,
+  "round": 1,
+  "plan_version": 2,
+  "plan_label": "r1-validation-v2",
+  "status": "pending",
+  "plate_map_active": "data/plate_map_r1.json",
+  "plate_map_snapshot": "data/screens/1/v2/plate_map.json",
+  "source_csv_local": "pvjthomas/local/kinetics/kinetics_r1.csv",
+  "source_csv_git": null,
+  "normalization": {
+    "vehicle_wells": ["A1", "A2", "A3", "A4"],
+    "pos-ctrl-clavaculin_wells": ["A5", "A6", "A7", "A8"]
+  },
+  "literature_ref": "data/compound_literature/refs/T19860.json",
+  "compounds": {
+    "T19860": {
+      "wells": ["A5", "A6", "A7", "A8"],
+      "role": "pos-ctrl-clavaculin",
+      "concentration_uM": 50,
+      "literature_ki_uM_tem1": 0.85,
+      "expected": ">=50% inhibition vs vehicle",
+      "slope_a490_per_min": null,
+      "pct_inhibition": null,
+      "label": null
+    }
+  },
+  "controls": {
+    "vehicle": {
+      "wells": ["A1", "A2", "A3", "A4"],
+      "role": "negative",
+      "concentration_uM": 0,
+      "mean_slope_a490_per_min": null,
+      "mean_pct_inhibition": null
+    }
+  }
+}

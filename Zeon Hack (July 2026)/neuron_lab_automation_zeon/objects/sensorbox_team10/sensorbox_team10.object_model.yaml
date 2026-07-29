@@ -1,0 +1,20 @@
+urdf: sensorbox_team10.urdf
+parts:
+  body:
+    links: [body]
+    description: Sensor box (91.5 x 133.5 mm footprint, 115 mm tall). STL
+      geometry, no colour.
+articulations:
+  default:
+    description: Static object, no actuated joints
+    joints: {}
+anchors:
+  object:
+    parent_link: world
+    description: >-
+      Table placement frame, origin at the (max_x, max_y, min_z) bbox corner.
+      Mesh is authored in millimetres and scaled 0.001 (mm->m) in the URDF; it is
+      already Z-up with the base flat on z=0, so the anchor uses identity rotation.
+    link_T_anchor:
+      xyz: [0.04575, 0.06675, 0.0]
+      wxyz: [1.0, 0.0, 0.0, 0.0]

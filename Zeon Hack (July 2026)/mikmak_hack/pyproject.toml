@@ -1,0 +1,12 @@
+[project]
+name = "mikmak-hack"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "google-adk>=2.5.0",
+    "marimo>=0.23.15",
+    "pypdf>=6.14.2",
+    "scipy>=1.17.1",
+]

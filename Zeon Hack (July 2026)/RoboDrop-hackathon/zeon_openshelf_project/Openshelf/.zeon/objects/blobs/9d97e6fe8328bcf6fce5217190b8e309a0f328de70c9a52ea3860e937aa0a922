@@ -1,0 +1,12 @@
+skill_id: openshelf_store
+version: "1.0.0"
+description: "Return the item at the access position to storage. Refuses unless the caller asserts arms_clear, because the shelf is about to move and Zeon models it as static."
+
+preconditions: {}   # parsed but NOT enforced by the executor - never gate on these
+postconditions: {}
+safety_rules: []
+tags:
+  - openshelf
+  - bridge
+  - http
+world_state_prime: null

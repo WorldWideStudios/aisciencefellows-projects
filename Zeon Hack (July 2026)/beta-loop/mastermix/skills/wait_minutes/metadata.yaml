@@ -1,0 +1,14 @@
+skill_id: wait_minutes
+version: "1.0.0"
+description: "Wait for a configurable number of minutes, using pause-aware sleep. Simulation shortens long waits."
+
+parameter_descriptions:
+  minutes: "Duration to wait, in minutes."
+  label: "Human-readable reason shown in the run log."
+
+preconditions: {}
+postconditions: {}
+
+tags:
+  - timing
+  - utility

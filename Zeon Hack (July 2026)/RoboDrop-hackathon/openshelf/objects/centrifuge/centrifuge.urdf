@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="centrifuge">
+  <!-- ==================== WORLD ==================== -->
+  <link name="world"/>
+
+  <joint name="world_joint" type="fixed">
+    <parent link="world"/>
+    <child link="body"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <!-- ==================== BODY ==================== -->
+  <!-- Mesh from open scan; body part is static reference frame -->
+  <link name="body">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/body.ply"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <!-- ==================== LID ==================== -->
+  <!-- Hinge on +X side of body, axis local -Y -->
+  <!-- Convention: 0 = closed, 1.74 = fully open (matching open-scan mesh) -->
+  <joint name="lid_joint" type="revolute">
+    <parent link="body"/>
+    <child link="lid"/>
+    <origin xyz="0.181 -0.009 0.174" rpy="0 0 -0.029"/>
+    <axis xyz="0 -1 0"/>
+    <limit lower="0" upper="1.74" effort="10" velocity="1"/>
+  </joint>
+
+  <link name="lid">
+    <visual>
+      <!-- Pre-rotated so mesh appears closed at lid_joint=0 -->
+      <origin xyz="-0.141004 0.003748 0.207899" rpy="2.973466 1.399149 2.971007"/>
+      <geometry>
+        <mesh filename="meshes/lid.ply"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <!-- ==================== ROTOR ==================== -->
+  <!-- Spin axis Z, centered under lid -->
+  <joint name="rotor_joint" type="continuous">
+    <parent link="body"/>
+    <child link="rotor"/>
+    <origin xyz="0.329 -0.037 0.136" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+
+  <link name="rotor">
+    <visual>
+      <origin xyz="-0.329 0.037 -0.136" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/rotor.ply"/>
+      </geometry>
+    </visual>
+  </link>
+</robot>

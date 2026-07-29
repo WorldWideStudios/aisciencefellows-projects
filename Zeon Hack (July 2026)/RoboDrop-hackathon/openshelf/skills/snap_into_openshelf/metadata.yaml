@@ -1,0 +1,10 @@
+skill_id: snap_into_openshelf
+version: "1.0.0"
+description: "Load-direction mirror of snap_to_openshelf: after the store API confirms, snap the tipbox onto the OpenShelf's object anchor so it visually goes into the cabinet."
+
+# parameters are derived from the snap_into_openshelf() signature in robotic_code.py
+
+tags:
+  - openshelf
+  - snap
+  - load

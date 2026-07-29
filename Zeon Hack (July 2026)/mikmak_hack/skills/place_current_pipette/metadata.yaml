@@ -1,0 +1,11 @@
+skill_id: place_current_pipette
+version: "1.0.0"
+description: "Place whichever pipette is currently in hand (per live_state in_hand) back on its stand. Use at the end of a workflow that swaps pipettes; the pipette parameter is only a fallback."
+
+# parameters are derived from the place_current_pipette() signature in robotic_code.py
+
+tags:
+  - pipette_demo
+  - pipette
+  - place
+  - meta

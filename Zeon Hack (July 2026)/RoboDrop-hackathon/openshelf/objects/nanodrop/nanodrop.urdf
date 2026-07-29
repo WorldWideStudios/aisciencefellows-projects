@@ -1,0 +1,38 @@
+<robot name="nanodrop" version="1.0">
+  <!-- Base link for consistent object model interface -->
+  <link name="base_link"/>
+
+  <joint name="base_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="snapshots_tsdf_20260320_114941_mesh_link"/>
+  </joint>
+
+  <joint name="arm_joint" type="revolute">
+    <limit lower="0.00000" upper="1.80000" effort="0.00000" velocity="0.00000"/>
+    <origin rpy="-1.57080 0.00000 0.00000" xyz="0.29465 -0.00146 0.09970"/>
+    <parent link="snapshots_tsdf_20260320_114941_mesh_link"/>
+    <child link="new_link"/>
+    <axis xyz="0.00000 0.00000 1.00000"/>
+  </joint>
+
+  <link name="snapshots_tsdf_20260320_114941_mesh_link">
+    <visual name="snapshots_tsdf_20260320_114941_mesh">
+      <material name="None"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/stl/snapshots_tsdf_20260320_114941_mesh.stl" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <link name="new_link">
+    <visual name="snapshots_tsdf_20260320_114941_mesh.001">
+      <material name="None"/>
+      <origin rpy="1.57080 0 0" xyz="-0.29465 0.09970 0.00146"/>
+      <geometry>
+        <mesh filename="meshes/stl/snapshots_tsdf_20260320_114941_mesh.001.stl" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+</robot>

@@ -1,0 +1,10 @@
+skill_id: grab_openshelf_item
+version: "1.0.0"
+description: "Grab the dispensed item at the plate anchor: gradually close the right gripper onto it, then attach it to the arm so it travels with the gripper."
+
+# parameters are derived from the grab_openshelf_item() signature in robotic_code.py
+
+tags:
+  - openshelf
+  - gripper
+  - grasp

@@ -1,0 +1,20 @@
+skill_id: pickup_plate
+version: "3.0.0"
+description: "Pick up a PCR plate with the right arm through the horizontal_grip pre-approach while preserving plate orientation."
+
+preconditions: {}
+
+postconditions: {}
+
+safety_rules:
+  - "Run in simulation before attempting hardware execution."
+  - "Verify horizontal_grip pose, standoff, and width against the physical plate before hardware execution."
+  - "Keep collision planning enabled for the plate, holder, and surrounding world objects."
+
+tags:
+  - plate
+  - pick
+  - right_arm
+  - horizontal_grip
+
+world_state_prime: null

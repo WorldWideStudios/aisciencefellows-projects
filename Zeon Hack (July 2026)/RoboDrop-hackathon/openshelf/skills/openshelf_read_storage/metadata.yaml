@@ -1,0 +1,10 @@
+skill_id: openshelf_read_storage
+version: "1.0.0"
+description: "Read all OpenShelf storage items and their locations. Sim mode returns canned items; hardware mode calls GET /api/storage/items (chunk 2)."
+
+# parameters are derived from the openshelf_read_storage() signature in robotic_code.py
+
+tags:
+  - openshelf
+  - api
+  - storage

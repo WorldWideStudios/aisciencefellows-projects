@@ -1,0 +1,11 @@
+skill_id: platesealer_platemax_place_seal
+version: "1.0.0"
+description: "Place a held seal onto the plate in the sealer with the left arm. Carries the seal in (gripper closed) through seal_place_1_align -> 2_descend -> 3_placed, opens to release, retreats to 4_retreat, goes in to 5_tap, then back to 4_retreat. Anchor-driven."
+
+# parameters are derived from the platesealer_platemax_place_seal() signature in robotic_code.py
+
+tags:
+  - pipette_demo
+  - platesealer
+  - seal
+  - place

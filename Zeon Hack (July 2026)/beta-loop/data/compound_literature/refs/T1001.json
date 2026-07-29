@@ -1,0 +1,63 @@
+{
+  "compound_id": "T1001",
+  "name": "Dicloxacillin Sodium hydrate",
+  "match": "yes",
+  "support": "weak",
+  "entries": [
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Dicloxacillin Sodium hydrate. Map complete: 5/5 tasks succeeded in 2327ms\nResults ID: m_0b1d59f8\nFull results: /.gxl/map_m_0b1d59f8.txt\n\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided paper content, there is no mention of Dicloxacillin Sodium hydrate, nitrocefin colorimetric assays, Ki, IC50 values, enzyme conc\n  [success] Effect of Lactamase Inhibitors on the Biosensor Penp during the Measur  (PMC6427286)\n    Based on the provided paper content, there is no information about \"Dicloxacillin Sodium hydrate\", \"TEM-1 beta-lactamase in a nitrocefin colorimetric \n  [success] In Silico Study of the Potential of Brazilein Sappan Wood as a Beta-La  (PMC11229569)\n    Based on the provided paper content, there is no mention of Dicloxacillin Sodium hydrate, TEM-1 beta-lactamase assays using nitrocefin colorimetric as\n  [success] Assay Platform\nfor Clinically Relevant Metallo-\u03b2-lactamases  (PMC3910272)\n    Based on the provided paper content, there is no mention of \"Dicloxacillin Sodium hydrate\", \"TEM-1 beta-lactamase\", or assays testing this specific co\n  [success] Classification and applicability of new beta-lactamase inhibitors  (PMC12584905)\n    The provided paper does not contain information regarding Dicloxacillin Sodium hydrate, TEM-1 beta-lactamase, nitrocefin colorimetric assays, Ki, IC50\n\nFull results: /.gxl/map_m_0b1d59f8.txt",
+      "paperclip_search_id": "s_3a18790a",
+      "paperclip_map_id": "m_0b1d59f8",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "pmcid": "PMC12484619"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Dicloxacillin Sodium hydrate. Map complete: 30/30 tasks succeeded in 9852ms\nResults ID: m_451d7ed9\nFull results: /.gxl/map_m_451d7ed9.txt\n\n  [success] Saturation Mutagenesis and Molecular Modeling: The Impact of Methionin  (PMC11276661)\n    Based on the provided paper, there is no mention of \"Dicloxacillin Sodium hydrate\", \"nitrocefin\", \"Ki\", \"IC50\", or related assays. The paper focuses e\n  [success] Binding mode of Isoxazolyl Penicillins to a Class-A  \u03b2 -lactamase at a  (PMC12672738)\n    Based on the provided paper content, there is no mention of \"Dicloxacillin Sodium hydrate\", \"TEM-1 beta-lactamase\", \"nitrocefin colorimetric assay\", $\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided research paper content, there is no mention of Dicloxacillin Sodium hydrate, nitrocefin colorimetric assays, $K_i$ or $IC_{50}$ \n  [success] Reversible inactivation of a peptidoglycan transpeptidase by a \u03b2-lacta  (PMC5567249)\n    Based on the provided paper content, there is no mention of Dicloxacillin Sodium hydrate, TEM-1 beta-lactamase, or corresponding $K_i$ or $IC_{50}$ va\n  [success] Effect of Lactamase Inhibitors on the Biosensor Penp during the Measur  (PMC6427286)\n    Based on the provided paper content, there is no information regarding Dicloxacillin Sodium hydrate, TEM-1 beta-lactamase, nitrocefin colorimetric ass\n  [success] In Silico Study of the Potential of Brazilein Sappan Wood as a Beta-La  (PMC11229569)\n    Based on the provided pape",
+      "paperclip_search_id": "s_a45d1be7",
+      "paperclip_map_id": "m_451d7ed9",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "pmcid": "PMC11276661",
+      "paperclip_source": "pmc"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Dicloxacillin Sodium hydrate. Map complete: 25/25 tasks succeeded in 5302ms\nResults ID: m_ec11c6a3\nFull results: /.gxl/map_m_ec11c6a3.txt\n\n  [success] Distant Site Mutations in Clinical TEM Beta-Lactamase Variants Enhance  (bio_33da24cd7504)\n    Based on the provided paper, there is no mention of \"Dicloxacillin Sodium hydrate\", \"nitrocefin\", \"Ki\", \"IC50\", or related colorimetric assay details.\n  [success] Binding mode of isoxazolyl penicillins to a Class-A  \u03b2 -lactamase at a  (bio_a7f99ac77b0d)\n    Based on the provided paper content, there is no mention of \"Dicloxacillin Sodium hydrate\", \"TEM-1 beta-lactamase\", \"nitrocefin colorimetric assay\", $\n  [success] A new type of AmpC \u03b2-lactamases defined by PIB-1, a metal-dependent ca  (bio_9fef02c2845c)\n    Based on the provided paper, there is no information regarding Dicloxacillin Sodium hydrate, TEM-1 beta-lactamase, or their kinetic/inhibition paramet\n  [success] Cefdinir binding to a class-A  \u03b2 -lactamase revealed by serial cryo-cr  (bio_01a5a87c8117)\n    Based on the provided paper content, there is no mention of Dicloxacillin Sodium hydrate, TEM-1 beta-lactamase, nitrocefin colorimetric assays, IC50/K\n  [success] Sulbactam-mediated inhibition of TEM-1 \u03b2-lactamase increases specific   (bio_e76fe1d274e9)\n    Based on the provided paper, there is no mention of \"Dicloxacillin Sodium hydrate\", \"nitrocefin colorimetric assay\", \"$K_i$\", \"$IC_{50}$\", nitrocefin \n  [success] Discovery and molecular basis of chloride as an allosteric activator a  (bio_611912f26c3e",
+      "paperclip_search_id": "s_536b8fb7",
+      "paperclip_map_id": "m_ec11c6a3",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "paperclip_source": "biorxiv"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Dicloxacillin Sodium hydrate. Map complete: 10/10 tasks succeeded in 2820ms\nResults ID: m_00e15b48\nFull results: /.gxl/map_m_00e15b48.txt\n\n  [success] bla - Beta-lactamase TEM  (P62593)\n    Based on the provided paper content, there is no information regarding \"Dicloxacillin Sodium hydrate\", nitrocefin colorimetric assays, inhibition cons\n  [success] bla - Beta-lactamase TEM  (P62594)\n    Based on the provided paper content, there is no information regarding Dicloxacillin Sodium hydrate, nitrocefin colorimetric assays, inhibition values\n  [success] blaT-12b - Beta-lactamase TEM-12  (Q48406)\n    Based on the provided paper content, there is no mention of Dicloxacillin Sodium hydrate, TEM-1 beta-lactamase nitrocefin assays, Ki, IC50, enzyme/sub\n  [success] penPC - Beta-lactamase 1  (P10424)\n    Based on the provided paper content, there is no mention of Dicloxacillin Sodium hydrate, TEM-1 beta-lactamase, nitrocefin colorimetric assays, $K_i$,\n  [success] blaY - Beta-lactamase 1  (P00809)\n    Based on the provided paper content, there is no information regarding Dicloxacillin Sodium hydrate, TEM-1 beta-lactamase, nitrocefin colorimetric ass\n  [success] blaCI - Beta-lactamase 1  (P28018)\n    Based on the provided paper content, there is no information regarding Dicloxacillin Sodium hydrate, TEM-1 beta-lactamase, nitrocefin colorimetric ass\n  [success] blaL - Beta-lactamase 1  (Q03680)\n    Based on the provided paper content, there is no information regarding Dicloxacillin Sodium hydrate, TEM-1 beta-lactamase,",
+      "paperclip_search_id": "s_70f67715",
+      "paperclip_map_id": "m_00e15b48",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "paperclip_source": "proteins"
+    }
+  ],
+  "raw_local": "/Users/fio/zeon_hack/pvjthomas/local/literature/T1001",
+  "assay_recommendations": {
+    "tem1_nitrocefin": {
+      "screen_conc_uM": 50,
+      "screen_rationale": "Project default screen concentration; no literature inhibitor concentration or IC50/Ki extracted.",
+      "screen_conc_source": "project_default",
+      "max_assay_conc_uM": 1000.0,
+      "metric": "relative nitrocefin hydrolysis vs no-inhibitor control"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+[
+  {
+    "role": "positive_control",
+    "compound_id": "T19860",
+    "name": "Clavulanic Acid",
+    "source_plate": "PHD215176",
+    "source_well": "H7",
+    "zeon_object": "wellplate_pcr_parts_1"
+  },
+  {
+    "role": "test_compound_1",
+    "compound_id": "T14979",
+    "name": "Clavulanate lithium",
+    "source_plate": "PHD215176",
+    "source_well": "G6",
+    "zeon_object": "wellplate_pcr_parts_1"
+  },
+  {
+    "role": "test_compound_2",
+    "compound_id": "T6685",
+    "name": "Sulbactam sodium",
+    "source_plate": "PHD215176",
+    "source_well": "F2",
+    "zeon_object": "wellplate_pcr_parts_1"
+  },
+  {
+    "role": "test_compound_3",
+    "compound_id": "T1262",
+    "name": "Tazobactam",
+    "source_plate": "PHD215176",
+    "source_well": "B10",
+    "zeon_object": "wellplate_pcr_parts_1"
+  },
+  {
+    "role": "test_compound_4",
+    "compound_id": "T14081",
+    "name": "Enmetazobactam",
+    "source_plate": "PHD215176",
+    "source_well": "F7",
+    "zeon_object": "wellplate_pcr_parts_1"
+  },
+  {
+    "role": "test_compound_5",
+    "compound_id": "T1631",
+    "name": "Sulbactam",
+    "source_plate": "PHD215177",
+    "source_well": "A10",
+    "zeon_object": "wellplate_pcr_parts_2"
+  },
+  {
+    "role": "test_compound_6",
+    "compound_id": "T13038",
+    "name": "Sultamicillin",
+    "source_plate": "PHD215177",
+    "source_well": "B10",
+    "zeon_object": "wellplate_pcr_parts_2"
+  },
+  {
+    "role": "test_compound_7",
+    "compound_id": "T0814L",
+    "name": "Ampicillin",
+    "source_plate": "PHD215176",
+    "source_well": "B4",
+    "zeon_object": "wellplate_pcr_parts_1"
+  },
+  {
+    "role": "test_compound_8",
+    "compound_id": "T20022",
+    "name": "Cephalexin monohydrate",
+    "source_plate": "PHD215176",
+    "source_well": "H8",
+    "zeon_object": "wellplate_pcr_parts_1"
+  },
+  {
+    "role": "test_compound_9",
+    "compound_id": "T0224",
+    "name": "Meropenem",
+    "source_plate": "PHD215177",
+    "source_well": "A3",
+    "zeon_object": "wellplate_pcr_parts_2"
+  },
+  {
+    "role": "test_compound_10",
+    "compound_id": "T7733",
+    "name": "Cefotaxime",
+    "source_plate": "PHD215176",
+    "source_well": "E5",
+    "zeon_object": "wellplate_pcr_parts_1"
+  }
+]

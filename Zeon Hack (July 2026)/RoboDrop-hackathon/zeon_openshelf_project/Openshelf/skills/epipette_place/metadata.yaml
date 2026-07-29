@@ -1,0 +1,10 @@
+skill_id: epipette_place
+version: "1.0.0"
+description: "Place a pipette back down at a named grasp anchor and release it (inverse of epipette_grab), retracing grab's prepose/postpose waypoints in reverse."
+
+# parameters are derived from the epipette_place() signature in robotic_code.py
+
+tags:
+  - pipette_demo
+  - pipette
+  - place

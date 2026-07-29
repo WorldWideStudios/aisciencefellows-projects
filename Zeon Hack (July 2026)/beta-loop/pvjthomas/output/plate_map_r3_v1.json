@@ -1,0 +1,280 @@
+{
+  "run": 3,
+  "version": 1,
+  "round": 3,
+  "assay_type": "single_point",
+  "final_volume_ul": 50,
+  "compound_volume_ul": 5,
+  "replicates_per_compound": 3,
+  "exclude_compound_ids": [
+    "T19709"
+  ],
+  "compound_list": "data/screens/3/v1/compound_list.json",
+  "rationale_doc": "pvjthomas/runs/3/v1/selection_rationale.md",
+  "layout_notes": "96-well flat bottom, column-strip layout: no edge wells (rows A/H, cols 1/12 empty). X-spaced sample columns only (no horizontally adjacent samples): B/D/F @ 2/4/6/10, then C/E/G @ 5/9, then C/E/G @ 3/7. Controls (6): 3\u00d7 no-TEM-1 @ D3/D7/E11; 3\u00d7 clavulanic acid @ F3/F7/G11. No vehicle controls. T1262 @ 1.0 \u00b5M (rule 2); all others @ 50 \u00b5M unless noted in compound_list.json.",
+  "layout": "column_strip",
+  "layout_rules": {
+    "interior_only": true,
+    "max_x_separation": true,
+    "replicate_axis": "column",
+    "sample_cols_band1": "2,4,6,8,10 on B,D,F",
+    "sample_cols_band2": "5,9 on C,E,G",
+    "sample_cols_band3": "3,7 on C,E,G",
+    "control_rows": "B,D,F @ 3/7; C,E,G @ 11",
+    "control_cols": "3,7,11"
+  },
+  "compound_placement_rules": {
+    "positive_control_not_also_sample": {
+      "description": "If clavulanic acid (T19860) is used as the positive control, do not also include it in the discovery sample compound list.",
+      "positive_control_compound_id": "T19860",
+      "enforcement": "sample list excludes positive-control compound_id before layout"
+    }
+  },
+  "wells": {
+    "D3": {
+      "compound_id": null,
+      "concentration_uM": 0,
+      "role": "no_tem1",
+      "bucket": "control"
+    },
+    "D7": {
+      "compound_id": null,
+      "concentration_uM": 0,
+      "role": "no_tem1",
+      "bucket": "control"
+    },
+    "E11": {
+      "compound_id": null,
+      "concentration_uM": 0,
+      "role": "no_tem1",
+      "bucket": "control"
+    },
+    "F3": {
+      "compound_id": "T19860",
+      "concentration_uM": 50.0,
+      "role": "pos-ctrl-clavaculin",
+      "bucket": "control"
+    },
+    "F7": {
+      "compound_id": "T19860",
+      "concentration_uM": 50.0,
+      "role": "pos-ctrl-clavaculin",
+      "bucket": "control"
+    },
+    "G11": {
+      "compound_id": "T19860",
+      "concentration_uM": 50.0,
+      "role": "pos-ctrl-clavaculin",
+      "bucket": "control"
+    },
+    "B2": {
+      "compound_id": "T1262",
+      "concentration_uM": 1.0,
+      "role": "sample",
+      "bucket": "tier1_inhibitor",
+      "replicate": 1,
+      "functional_class": "positive"
+    },
+    "D2": {
+      "compound_id": "T1262",
+      "concentration_uM": 1.0,
+      "role": "sample",
+      "bucket": "tier1_inhibitor",
+      "replicate": 2,
+      "functional_class": "positive"
+    },
+    "F2": {
+      "compound_id": "T1262",
+      "concentration_uM": 1.0,
+      "role": "sample",
+      "bucket": "tier1_inhibitor",
+      "replicate": 3,
+      "functional_class": "positive"
+    },
+    "B4": {
+      "compound_id": "T6685",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "tier1_inhibitor",
+      "replicate": 1,
+      "functional_class": "positive"
+    },
+    "D4": {
+      "compound_id": "T6685",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "tier1_inhibitor",
+      "replicate": 2,
+      "functional_class": "positive"
+    },
+    "F4": {
+      "compound_id": "T6685",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "tier1_inhibitor",
+      "replicate": 3,
+      "functional_class": "positive"
+    },
+    "B6": {
+      "compound_id": "T14081",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "tier1_inhibitor",
+      "replicate": 1,
+      "functional_class": "positive"
+    },
+    "D6": {
+      "compound_id": "T14081",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "tier1_inhibitor",
+      "replicate": 2,
+      "functional_class": "positive"
+    },
+    "F6": {
+      "compound_id": "T14081",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "tier1_inhibitor",
+      "replicate": 3,
+      "functional_class": "positive"
+    },
+    "B10": {
+      "compound_id": "T1008",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "substrate_control",
+      "replicate": 1,
+      "functional_class": "negative"
+    },
+    "D10": {
+      "compound_id": "T1008",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "substrate_control",
+      "replicate": 2,
+      "functional_class": "negative"
+    },
+    "F10": {
+      "compound_id": "T1008",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "substrate_control",
+      "replicate": 3,
+      "functional_class": "negative"
+    },
+    "C5": {
+      "compound_id": "T0224",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "substrate_control",
+      "replicate": 1,
+      "functional_class": "negative"
+    },
+    "E5": {
+      "compound_id": "T0224",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "substrate_control",
+      "replicate": 2,
+      "functional_class": "negative"
+    },
+    "G5": {
+      "compound_id": "T0224",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "substrate_control",
+      "replicate": 3,
+      "functional_class": "negative"
+    },
+    "C9": {
+      "compound_id": "T0985",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "substrate_control",
+      "replicate": 1,
+      "functional_class": "negative"
+    },
+    "E9": {
+      "compound_id": "T0985",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "substrate_control",
+      "replicate": 2,
+      "functional_class": "negative"
+    },
+    "G9": {
+      "compound_id": "T0985",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "substrate_control",
+      "replicate": 3,
+      "functional_class": "negative"
+    },
+    "C3": {
+      "compound_id": "T0138",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "diverse_pick",
+      "replicate": 1,
+      "functional_class": "unknown"
+    },
+    "E3": {
+      "compound_id": "T0138",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "diverse_pick",
+      "replicate": 2,
+      "functional_class": "unknown"
+    },
+    "G3": {
+      "compound_id": "T0138",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "diverse_pick",
+      "replicate": 3,
+      "functional_class": "unknown"
+    },
+    "C7": {
+      "compound_id": "T8390",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "diverse_pick",
+      "replicate": 1,
+      "functional_class": "unknown"
+    },
+    "E7": {
+      "compound_id": "T8390",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "diverse_pick",
+      "replicate": 2,
+      "functional_class": "unknown"
+    },
+    "G7": {
+      "compound_id": "T8390",
+      "concentration_uM": 50,
+      "role": "sample",
+      "bucket": "diverse_pick",
+      "replicate": 3,
+      "functional_class": "unknown"
+    }
+  },
+  "versioned_path": "data/screens/3/v1/plate_map.json",
+  "rationale_doc_active": "pvjthomas/selection_rationale.md",
+  "version_label": "r3-discovery-v1",
+  "control_summary": {
+    "vehicle": 0,
+    "no_tem1": 3,
+    "positive_clavulanic_T19860": 3,
+    "total": 6
+  },
+  "sample_summary": {
+    "compounds": 8,
+    "wells": 24
+  },
+  "default_compound_concentration_uM": 50,
+  "concentrations_from": "data/screens/3/v1/compound_list.json",
+  "working_solution_uM": 500,
+  "description": "Round 3 discovery v1 \u2014 8 compounds in triplicate with literature-backed per-compound concentrations (see compound_list.json); column-strip layout (x-spaced columns, triplicates on B/D/F and C/E/G); no vehicle controls"
+}

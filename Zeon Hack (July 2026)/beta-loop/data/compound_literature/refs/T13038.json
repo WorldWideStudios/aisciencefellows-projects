@@ -1,0 +1,63 @@
+{
+  "compound_id": "T13038",
+  "name": "Sultamicillin",
+  "match": "yes",
+  "support": "weak",
+  "entries": [
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Sultamicillin. Map complete: 5/5 tasks succeeded in 1350ms\nResults ID: m_6a39d77f\nFull results: /.gxl/map_m_6a39d77f.txt\n\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided paper content, there is no mention of Sultamicillin, a nitrocefin colorimetric assay, Ki, IC50 values, inhibitor concentrations,\n  [success] Effect of Lactamase Inhibitors on the Biosensor Penp during the Measur  (PMC6427286)\n    Based on the provided paper content, there is no mention of Sultamicillin, TEM-1 beta-lactamase in a nitrocefin colorimetric assay, $K_i$, $IC_{50}$ v\n  [success] In Silico Study of the Potential of Brazilein Sappan Wood as a Beta-La  (PMC11229569)\n    Based on the provided paper, there is no mention of Sultamicillin, nitrocefin colorimetric assays, $K_i$, $IC_{50}$ values, inhibitor concentrations, \n  [success] Molecular Basis of Class A \u03b2-Lactamase Inhibition by Relebactam  (PMC6761529)\n    Based on the provided paper content, there is no mention of \"Sultamicillin\" or \"TEM-1 beta-lactamase\" (except for brief historical citations of TEM-1 \n  [success] Classification and applicability of new beta-lactamase inhibitors  (PMC12584905)\n    Based on the provided paper, there is no mention of Sultamicillin, TEM-1 beta-lactamase, nitrocefin colorimetric assays, $K_i$, $IC_{50}$ values, enzy\n\nFull results: /.gxl/map_m_6a39d77f.txt",
+      "paperclip_search_id": "s_7a7e78b8",
+      "paperclip_map_id": "m_6a39d77f",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "pmcid": "PMC12484619"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Sultamicillin. Map complete: 30/30 tasks succeeded in 9153ms\nResults ID: m_bed383f7\nFull results: /.gxl/map_m_bed383f7.txt\n\n  [success] Saturation Mutagenesis and Molecular Modeling: The Impact of Methionin  (PMC11276661)\n    Based on the provided paper content, there is no mention of Sultamicillin, nitrocefin colorimetric assays, inhibition constants ($K_i$), half-maximal \n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided paper content, there is no mention of Sultamicillin, a nitrocefin colorimetric assay, $K_i$, $IC_{50}$, enzyme/substrate concent\n  [success] The G132S Mutation Enhances the Resistance of  Mycobacterium tuberculo  (PMC8383266)\n    Based on the provided paper content, there is no mention of Sultamicillin, TEM-1 beta-lactamase, or measurements of Ki/IC50 values for Sultamicillin a\n  [success] In Silico Study of the Potential of Brazilein Sappan Wood as a Beta-La  (PMC11229569)\n    Based on the provided paper, there is no mention of Sultamicillin, TEM-1 beta-lactamase assays using nitrocefin, IC50/Ki values, or related experiment\n  [success] Kinetic and Structural Requirements for Carbapenemase\nActivity in GES-  (PMC4303295)\n    Based on the provided paper content, there is no mention of Sultamicillin, TEM-1 beta-lactamase, or their assays. The text focuses exclusively on GES-\n  [success] Classification and applicability of new beta-lactamase inhibitors  (PMC12584905)\n    Based on the provided paper, th",
+      "paperclip_search_id": "s_95ea488d",
+      "paperclip_map_id": "m_bed383f7",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "pmcid": "PMC11276661",
+      "paperclip_source": "pmc"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Sultamicillin. Map complete: 25/26 tasks succeeded in 6516ms\nResults ID: m_18d0bca5\nFull results: /.gxl/map_m_18d0bca5.txt\n\n  [error] /papers/bio_33da24cd7504/\n    error: Client error '403 Forbidden' for url 'http://localhost:8000/api/chat/stream/stateful'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403\n  [success] Mechanistic Basis for Inhibition of the Extended Spectrum Class A \u03b2-La  (bio_d7ea2f4d7462)\n    Based on the provided paper content, there is no mention of Sultamicillin, TEM-1 beta-lactamase, or their associated assay parameters ($K_i$, $\\text{I\n  [success] Sulbactam-mediated inhibition of TEM-1 \u03b2-lactamase increases specific   (bio_e76fe1d274e9)\n    Based on the provided paper content, there is no mention of \"Sultamicillin\", \"nitrocefin colorimetric assay\", $K_i$, $IC_{50}$ values, or PMIDs/PMCIDs\n  [success] Binding mode of isoxazolyl penicillins to a Class-A  \u03b2 -lactamase at a  (bio_a7f99ac77b0d)\n    Based on the provided paper content, there is no mention of Sultamicillin, TEM-1 beta-lactamase, nitrocefin colorimetric assays, $K_i$, $IC_{50}$, or \n  [success] De Novo Structure-Based Design of TEM-171  \u03b2 -Lactamase Protein Inhibi  (bio_65b9aaff7e48)\n    Based on the provided paper content, there is no mention of Sultamicillin, TEM-1 beta-lactamase, nitrocefin colorimetric assays, $K_i$, $IC_{50}$, or \n  [success] The Structural Role of N170 in Substrate-assisted Deacylation in KPC-2  (bio_aa8d9b9472a9)\n    Based on the provided paper co",
+      "paperclip_search_id": "s_d6726642",
+      "paperclip_map_id": "m_18d0bca5",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "paperclip_source": "biorxiv"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Sultamicillin. Map complete: 10/10 tasks succeeded in 2957ms\nResults ID: m_30088d5a\nFull results: /.gxl/map_m_30088d5a.txt\n\n  [success] bla - Beta-lactamase TEM  (P62593)\n    Based on the provided paper content, there is no information regarding Sultamicillin, its $K_i$ or $\\text{IC}_{50}$ against TEM-1 beta-lactamase, nitr\n  [success] bla - Beta-lactamase TEM  (P62594)\n    Based on the provided paper content, there is no information regarding Sultamicillin, its $K_i$ or $\\text{IC}_{50}$ values, inhibitor concentrations, \n  [success] blaT-12b - Beta-lactamase TEM-12  (Q48406)\n    Based on the provided paper content, there is no mention of Sultamicillin, TEM-1 beta-lactamase, nitrocefin colorimetric assays, Ki, IC50 values, or r\n  [success] penPC - Beta-lactamase 1  (P10424)\n    Based on the provided paper content, there is no information regarding Sultamicillin, TEM-1 beta-lactamase, nitrocefin colorimetric assays, Ki, IC50, \n  [success] blaY - Beta-lactamase 1  (P00809)\n    Based on the provided paper content, there is no mention of Sultamicillin, TEM-1 beta-lactamase, nitrocefin colorimetric assays, or associated Ki/IC50\n  [success] blaCI - Beta-lactamase 1  (P28018)\n    Based on the provided paper content, there is no information regarding Sultamicillin, TEM-1 beta-lactamase, nitrocefin colorimetric assays, Ki, IC50, \n  [success] blaL - Beta-lactamase 1  (Q03680)\n    Based on the provided paper content, there is no mention of Sultamicillin, TEM-1 beta-lactamase, nitrocefin colorimetric a",
+      "paperclip_search_id": "s_7d33884d",
+      "paperclip_map_id": "m_30088d5a",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "paperclip_source": "proteins"
+    }
+  ],
+  "raw_local": "/Users/fio/zeon_hack/pvjthomas/local/literature/T13038",
+  "assay_recommendations": {
+    "tem1_nitrocefin": {
+      "screen_conc_uM": 50,
+      "screen_rationale": "Project default screen concentration; no literature inhibitor concentration or IC50/Ki extracted.",
+      "screen_conc_source": "project_default",
+      "max_assay_conc_uM": 1000.0,
+      "metric": "relative nitrocefin hydrolysis vs no-inhibitor control"
+    }
+  }
+}

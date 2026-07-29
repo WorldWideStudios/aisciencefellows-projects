@@ -1,0 +1,102 @@
+{
+  "workflow_id": "move_wellplate_to_openshelf",
+  "name": "Move Wellplate To OpenShelf",
+  "description": "Pick a PCR wellplate by its exposed edge with the right arm, preserve its full orientation during collision-aware transport, insert it horizontally into OpenShelf slot 1 with the same arm, and retreat.",
+  "version": "1.9.0",
+  "author": "zeon",
+  "created_at": "2026-07-26T00:53:56.000Z",
+  "updated_at": "2026-07-26T02:49:43.000Z",
+  "simulation_validated": false,
+  "objects": [],
+  "inputs": [
+    {
+      "name": "plate",
+      "type": "object",
+      "is_array": false,
+      "description": "PCR wellplate seated in the tagged holder",
+      "defaultValue": "wellplate_pcr"
+    },
+    {
+      "name": "holder",
+      "type": "object",
+      "is_array": false,
+      "description": "Tagged holder containing the PCR wellplate",
+      "defaultValue": "wellplate_holder_tags"
+    },
+    {
+      "name": "openshelf",
+      "type": "object",
+      "is_array": false,
+      "description": "OpenShelf receiving the PCR wellplate",
+      "defaultValue": "openshelf"
+    }
+  ],
+  "nodes": [
+    {
+      "node_id": "start_0",
+      "type": "start",
+      "label": "Start"
+    },
+    {
+      "node_id": "pickup_wellplate",
+      "type": "skill",
+      "label": "Pick Wellplate From Holder",
+      "description": "Pick the seated plate from its exposed edge with the right arm and stage it clear of the holder without changing its orientation.",
+      "skill_id": "pickup_wellplate_from_holder",
+      "parameters": {
+        "plate": { "$input": "plate" },
+        "holder": { "$input": "holder" },
+        "pickup_grasp_anchor": "right_side_grasp_flipped",
+        "staging_right_tcp_anchor": "plate_stage_right_side_flipped_tcp",
+        "lift_m": 0.08,
+        "speed": 30.0,
+        "slow_speed": 10.0
+      }
+    },
+    {
+      "node_id": "place_wellplate",
+      "type": "skill",
+      "label": "Place Wellplate In OpenShelf",
+      "description": "Keep the horizontal side grip on the right arm, preserve the plate orientation through collision-aware OpenShelf insertion, release it, and retreat.",
+      "skill_id": "place_wellplate_in_openshelf",
+      "parameters": {
+        "plate": { "$input": "plate" },
+        "openshelf": { "$input": "openshelf" },
+        "carry_grasp_anchor": "right_side_grasp_flipped",
+        "plate_place_anchor": "nest_base",
+        "shelf_anchor": "wellplate_slot_1",
+        "shelf_transit_tcp_anchor": "wellplate_slot_1_right_side_flipped_transit_tcp",
+        "shelf_pre_tcp_anchor": "wellplate_slot_1_right_side_flipped_high_tcp",
+        "shelf_entry_tcp_anchor": "wellplate_slot_1_right_side_flipped_entry_tcp",
+        "shelf_tcp_anchor": "wellplate_slot_1_right_side_flipped_tcp",
+        "speed": 30.0,
+        "slow_speed": 10.0
+      }
+    },
+    {
+      "node_id": "end_1",
+      "type": "end",
+      "label": "End"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e0",
+      "from_node": "start_0",
+      "to_node": "pickup_wellplate",
+      "condition": { "type": "default" }
+    },
+    {
+      "edge_id": "e1",
+      "from_node": "pickup_wellplate",
+      "to_node": "place_wellplate",
+      "condition": { "type": "on_success" }
+    },
+    {
+      "edge_id": "e2",
+      "from_node": "place_wellplate",
+      "to_node": "end_1",
+      "condition": { "type": "on_success" }
+    }
+  ]
+}

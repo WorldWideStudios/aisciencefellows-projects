@@ -1,0 +1,18 @@
+skill_id: epipette_eject
+version: "1.0.0"
+description: "Eject the tip from the held epipette at the cell eject station."
+
+# parameters are derived from the epipette_eject() signature in robotic_code.py
+
+preconditions:
+  epipette_connected: true
+  tip_attached: true
+
+postconditions:
+  tip_ejected: true
+
+tags:
+  - epipette
+  - pipette
+  - tip
+  - eject

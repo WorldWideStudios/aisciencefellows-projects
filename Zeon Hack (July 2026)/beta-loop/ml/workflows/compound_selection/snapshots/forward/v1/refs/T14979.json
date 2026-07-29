@@ -1,0 +1,72 @@
+{
+  "compound_id": "T14979",
+  "name": "Clavulanate lithium",
+  "match": "yes",
+  "support": "strong",
+  "form_type": "lithium_salt",
+  "canonical_compound_id": "T19860",
+  "related_forms": [
+    "T14979",
+    "T19860"
+  ],
+  "group_id": "clavulanate",
+  "reference_inhibitor": "clavulanate lithium",
+  "note": "Li+ salt of clavulanic acid (T19860 core); use same assay priors as T19860.",
+  "entries": [
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Clavulanate lithium. Map complete: 5/5 tasks succeeded in 1604ms\nResults ID: m_a095ce5d\nFull results: /.gxl/map_m_a095ce5d.txt\n\n  [success] In Silico Study of the Potential of Brazilein Sappan Wood as a Beta-La  (PMC11229569)\n    Based on the provided paper content, there is no information regarding experimental assays (such as a nitrocefin colorimetric assay), Ki or IC50 value\n  [success] Molecular Basis of Class A \u03b2-Lactamase Inhibition by Relebactam  (PMC6761529)\n    Based on the provided paper, there is no information regarding the use of \"Clavulanate lithium against TEM-1 beta-lactamase\" or its $K_i$ / $\\text{IC}\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided paper content, there is no mention of a nitrocefin colorimetric assay, Clavulanate lithium, Ki, IC50 values, inhibitor concentra\n  [success] Phosphate Promotes the Recovery of  Mycobacterium\ntuberculosis  \u03b2-Lact  (PMC5707625)\n    Based on the provided paper, there is no information regarding the interaction of Clavulanate lithium with TEM-1 beta-lactamase. The paper focuses exc\n  [success] In Vitro Activity of Cefaclor/Beta-Lactamases Inhibitors (Clavulanic A  (PMC12189933)\n    Based on the provided paper, there is no mention of Clavulanate lithium, TEM-1 beta-lactamase, a nitrocefin colorimetric assay, $K_i$, $IC_{50}$, or r\n\nFull results: /.gxl/map_m_a095ce5d.txt",
+      "paperclip_search_id": "s_910214ba",
+      "paperclip_map_id": "m_a095ce5d",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "pmcid": "PMC11229569"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Clavulanate lithium. Map complete: 30/30 tasks succeeded in 5917ms\nResults ID: m_c62a120b\nFull results: /.gxl/map_m_c62a120b.txt\n\n  [success] Saturation Mutagenesis and Molecular Modeling: The Impact of Methionin  (PMC11276661)\n    Based on the provided paper content, there is no mention of Clavulanate lithium, IC50 or Ki values against TEM-1 beta-lactamase, nitrocefin colorimetr\n  [success] In Silico Study of the Potential of Brazilein Sappan Wood as a Beta-La  (PMC11229569)\n    Based on the provided paper content, there is no information regarding the experimental testing of clavulanate lithium (or clavulanic acid) using a ni\n  [success] Characterization of Interactions between CTX-M-15 and Clavulanic Acid,  (PMC9100253)\n    Based on the provided paper content, there is no mention of \"Clavulanate lithium\", \"TEM-1 beta-lactamase\", or assays measuring its IC50/Ki against TEM\n  [success] Escherichia coli  phylogeny drives co-amoxiclav resistance through var  (PMC12484619)\n    Based on the provided paper content, there is no information regarding Clavulanate lithium, nitrocefin colorimetric assays, $K_i$, $IC_{50}$ values, i\n  [success] Phosphate Promotes the Recovery of  Mycobacterium\ntuberculosis  \u03b2-Lact  (PMC5707625)\n    Based on the provided paper, there is no information about Clavulanate lithium, TEM-1 beta-lactamase, or its IC50/Ki values in a nitrocefin colorimetr\n  [success] In Vitro Activity of Cefaclor/Beta-Lactamases Inhibitors (Clavulanic A  (PMC12189933)\n    Based on the provided pape",
+      "paperclip_search_id": "s_8e2240ef",
+      "paperclip_map_id": "m_c62a120b",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "pmcid": "PMC11276661",
+      "paperclip_source": "pmc"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Clavulanate lithium. Map complete: 24/24 tasks succeeded in 8555ms\nResults ID: m_026f5b41\nFull results: /.gxl/map_m_026f5b41.txt\n\n  [success] Distant Site Mutations in Clinical TEM Beta-Lactamase Variants Enhance  (bio_33da24cd7504)\n    Based on the provided paper content, there is no mention of Clavulanate lithium, nitrocefin colorimetric assays, $K_i$, $IC_50$ values, or specific en\n  [success] Mechanistic Basis for Inhibition of the Extended Spectrum Class A \u03b2-La  (bio_d7ea2f4d7462)\n    Based on the provided paper, there is no mention of Clavulanate lithium, TEM-1 beta-lactamase, or their associated assay conditions ($K_i$, $\\text{IC}\n  [success] Structure and dynamics of  Burkholderia pseudomallei  OXA-57, a distin  (bio_1861cd3a6f3d)\n    Based on the provided paper content, there is no information regarding Clavulanate lithium against TEM-1 beta-lactamase or any nitrocefin colorimetric\n  [success] Single-Domain Antibodies as Potent Inhibitors of Clinically Relevant \u03b2  (bio_dc341c396cb5)\n    Based on the provided paper content, there is no information regarding Clavulanate lithium, TEM-1 beta-lactamase, their specific assay concentrations \n  [success] Sulbactam-mediated inhibition of TEM-1 \u03b2-lactamase increases specific   (bio_e76fe1d274e9)\n    Based on the provided paper content, the specific values for *Ki*, *IC50*, nitrocefin substrate concentration, TEM-1 enzyme concentration, and PMID/PM\n  [success] De Novo Structure-Based Design of TEM-171  \u03b2 -Lactamase Protein Inhibi  (bio_65b9aaff7e48",
+      "paperclip_search_id": "s_2662e95b",
+      "paperclip_map_id": "m_026f5b41",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "paperclip_source": "biorxiv"
+    },
+    {
+      "source": "paperclip",
+      "target": "TEM-1",
+      "assay": "nitrocefin",
+      "note": "Reverse literature check for Clavulanate lithium. Map complete: 10/10 tasks succeeded in 2918ms\nResults ID: m_df775a7f\nFull results: /.gxl/map_m_df775a7f.txt\n\n  [success] bla - Beta-lactamase TEM  (P62593)\n    Based on the provided paper content, there is no information regarding Clavulanate lithium, Ki, IC50, nitrocefin colorimetric assay conditions, enzyme\n  [success] bla - Beta-lactamase TEM  (P62594)\n    Based on the provided paper content, there is no information regarding Clavulanate lithium, its $K_i$, $IC_{50}$, assay concentrations, nitrocefin sub\n  [success] blaT-12b - Beta-lactamase TEM-12  (Q48406)\n    Based on the provided paper content, there is no information regarding Clavulanate lithium, TEM-1 beta-lactamase assays, Ki, IC50, inhibitor concentra\n  [success] penPC - Beta-lactamase 1  (P10424)\n    Based on the provided paper content, there is no information regarding Clavulanate lithium, TEM-1 beta-lactamase, nitrocefin colorimetric assays, $K_i\n  [success] blaY - Beta-lactamase 1  (P00809)\n    The provided paper does not contain information about Clavulanate lithium, TEM-1 beta-lactamase, or nitrocefin colorimetric assays.\n  [success] blaCI - Beta-lactamase 1  (P28018)\n    Based on the provided paper content, there is no information regarding Clavulanate lithium, TEM-1 beta-lactamase, nitrocefin colorimetric assays, $K_i\n  [success] blaL - Beta-lactamase 1  (Q03680)\n    Based on the provided paper content, there is no information regarding Clavulanate lithium, TEM-1 beta-lactamase, nitrocefin colorimetric ass",
+      "paperclip_search_id": "s_34461949",
+      "paperclip_map_id": "m_df775a7f",
+      "ki_uM": null,
+      "ic50_uM": null,
+      "paperclip_source": "proteins"
+    }
+  ],
+  "raw_local": "/Users/fio/zeon_hack/pvjthomas/local/literature/T14979",
+  "assay_recommendations": {
+    "tem1_nitrocefin": {
+      "screen_conc_uM": 50,
+      "screen_rationale": "Project default screen concentration; no literature inhibitor concentration or IC50/Ki extracted.",
+      "screen_conc_source": "project_default",
+      "max_assay_conc_uM": 1000.0,
+      "metric": "relative nitrocefin hydrolysis vs no-inhibitor control"
+    }
+  }
+}

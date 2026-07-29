@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="sensorbox">
+  <link name="world" />
+  <joint name="world_joint" type="fixed">
+    <parent link="world" />
+    <child link="body" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="body">
+    <visual>
+      <origin xyz="0 0 0.001" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="SensorBox.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.001" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="SensorBox.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+</robot>

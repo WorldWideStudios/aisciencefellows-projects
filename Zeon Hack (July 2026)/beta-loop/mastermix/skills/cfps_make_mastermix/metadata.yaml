@@ -1,0 +1,27 @@
+skill_id: cfps_make_mastermix
+version: "1.0.0"
+description: >-
+  Super-skill: build ONE CFPS master-mix tube for a single condition (positive
+  control, negative control, or sample). Composes the generic epipette atomics
+  (attach/aspirate/dispense/eject). The tube target is
+  num_reactions * rxn_volume_ul + extra_volume_ul (a fixed dead-volume overage),
+  and each component (extract/buffer/water) is scaled from its per-reference-reaction
+  volume against recipe_ref_ul up to that tube total. Every transfer is routed to
+  whichever pipette fits the volume (10 uL or 120 uL, via pipette_for_volume) and
+  split into per-stroke chunks with a fresh tip per stroke. After the tube is
+  filled it is homogenised in place by repeated aspirate/dispense (mix_cycles, no
+  centrifuge). DNA is assumed pre-loaded into the tube by hand — dna_per_rxn is
+  only logged, not pipetted. num_reactions <= 0 disables the condition (the skill
+  no-ops).
+
+# parameters are derived from the cfps_make_mastermix() signature in robotic_code.py
+
+preconditions:
+  epipette_connected: true
+
+tags:
+  - meta
+  - cfps
+  - epipette
+  - liquid_handling
+  - mastermix

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="wellplate_shaker">
+  <link name="world" />
+  <joint name="world_joint" type="fixed">
+    <parent link="world" />
+    <child link="body" />
+    <origin rpy="0 0 0" xyz="0 0 0" />
+  </joint>
+  <link name="body">
+    <visual><geometry><mesh filename="base.ply" /></geometry></visual>
+    <collision><geometry><mesh filename="base.ply" /></geometry></collision>
+  </link>
+  <joint name="lid_joint" type="revolute">
+    <parent link="body" />
+    <child link="lid" />
+    <origin xyz="-0.026889 0.187798 -0.716380" rpy="0 0 0" />
+    <axis xyz="-0.680353 -0.425552 0.596679" />
+    <limit lower="0.0" upper="1.6721" effort="0.0" velocity="0.0" />
+  </joint>
+  <link name="lid">
+    <visual><geometry><mesh filename="lid.ply" /></geometry></visual>
+    <collision><geometry><mesh filename="lid.ply" /></geometry></collision>
+  </link>
+</robot>

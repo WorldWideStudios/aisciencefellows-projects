@@ -1,0 +1,312 @@
+urdf: plate_reader.urdf
+parts:
+  body:
+    links: [body]
+    description: BioTek ELx808 plate reader base (segmented from the closed scan by
+      open/closed motion consistency)
+  lid:
+    links: [lid]
+    description: Hinged lid (axis fitted from 8 lid tags, open angle 116.81 deg)
+articulations:
+  default:
+    description: Lid closed (the closed-scan configuration)
+    joints:
+      lid_joint: 0.0
+  open:
+    description: Lid fully open (the open-scan configuration)
+    joints:
+      lid_joint: 2.0386
+  closed:
+    description: Lid closed (parity with legacy presets)
+    joints:
+      lid_joint: 0.0
+anchors:
+  object:
+    parent_link: world
+    description: Object placement frame, snapped to the (max_x, max_y, min_z) bbox-corner
+      convention.
+    link_T_anchor:
+      xyz: [-0.067372, -0.0866704, -0.561646]
+      wxyz: [-0.0338928, 0.0308054, 0.365747, 0.929587]
+  lid_open:
+    parent_link: lid
+    description: ''
+    link_T_anchor:
+      xyz: [-0.151001, 0.151975, -0.0649575]
+      wxyz: [-0.297429, 0.647254, 0.660249, 0.238052]
+    grasp:
+      width: 0.0039
+      gripper_variant: wellplate
+  lid_close:
+    parent_link: body
+    description: Position from which to close the lid when the lid is open
+    link_T_anchor:
+      xyz: [0.246834, 0.335068, -0.593098]
+      wxyz: [-0.341469, 0.934068, -0.0347258, -0.0985394]
+    grasp:
+      width: 0.004
+      gripper_variant: wellplate
+  load_plate:
+    parent_link: body
+    description: Anchor to load platereader
+    link_T_anchor:
+      xyz: [0.0373657, 0.0539208, -0.547023]
+      wxyz: [0.242352, 0.631262, 0.683702, -0.274455]
+    grasp:
+      width: 0.08
+      gripper_variant: wellplate
+  load_plate_tap:
+    parent_link: body
+    description: ''
+    link_T_anchor:
+      xyz: [0.0569824, 0.10025, -0.506365]
+      wxyz: [0.288352, 0.677215, -0.636869, 0.229416]
+    grasp:
+      width: 0.0
+      gripper_variant: wellplate
+  tag_204:
+    parent_link: body
+    description: Calibrated AprilTag 204 (closed-scan calibration)
+    link_T_anchor:
+      xyz: [0.118133, 0.302191, -0.697453]
+      wxyz: [0.684286, -0.279076, -0.231857, -0.632544]
+  tag_205:
+    parent_link: body
+    description: Calibrated AprilTag 205 (closed-scan calibration)
+    link_T_anchor:
+      xyz: [0.121671, 0.273724, -0.671022]
+      wxyz: [0.682687, -0.282635, -0.2346, -0.63168]
+  tag_206:
+    parent_link: body
+    description: Calibrated AprilTag 206 (closed-scan calibration)
+    link_T_anchor:
+      xyz: [-0.0848335, 0.209385, -0.651619]
+      wxyz: [0.692981, 0.26383, -0.617816, -0.261676]
+  tag_207:
+    parent_link: body
+    description: Calibrated AprilTag 207 (closed-scan calibration)
+    link_T_anchor:
+      xyz: [-0.081041, 0.182659, -0.623648]
+      wxyz: [0.693433, 0.264251, -0.616904, -0.262206]
+  tag_210:
+    parent_link: body
+    description: Calibrated AprilTag 210 (closed-scan calibration)
+    link_T_anchor:
+      xyz: [0.266595, 0.269035, -0.619166]
+      wxyz: [0.721149, -0.157923, -0.339399, -0.582934]
+  tag_211:
+    parent_link: body
+    description: Calibrated AprilTag 211 (closed-scan calibration)
+    link_T_anchor:
+      xyz: [0.270138, 0.240364, -0.592641]
+      wxyz: [0.720691, -0.155667, -0.343603, -0.581644]
+  tag_212:
+    parent_link: body
+    description: Calibrated AprilTag 212 (closed-scan calibration)
+    link_T_anchor:
+      xyz: [0.201816, 0.316449, -0.748916]
+      wxyz: [-0.0434218, -0.0277608, 0.91286, 0.405006]
+  tag_213:
+    parent_link: body
+    description: Calibrated AprilTag 213 (closed-scan calibration)
+    link_T_anchor:
+      xyz: [0.163208, 0.313262, -0.746814]
+      wxyz: [-0.0410498, -0.0266504, 0.913247, 0.404456]
+  tag_214:
+    parent_link: body
+    description: Calibrated AprilTag 214 (closed-scan calibration)
+    link_T_anchor:
+      xyz: [-0.0112939, 0.282034, -0.759188]
+      wxyz: [-0.0660474, 0.0113455, 0.904822, 0.420483]
+  tag_215:
+    parent_link: body
+    description: Calibrated AprilTag 215 (closed-scan calibration)
+    link_T_anchor:
+      xyz: [-0.0503032, 0.281117, -0.754363]
+      wxyz: [-0.0531238, 0.0184643, 0.912792, 0.404534]
+  tag_216:
+    parent_link: lid
+    description: Calibrated AprilTag 216 (closed-scan calibration, lid frame)
+    link_T_anchor:
+      xyz: [-0.19174, 0.036091, -0.0569214]
+      wxyz: [0.678132, 0.296013, -0.612304, -0.278562]
+  tag_217:
+    parent_link: lid
+    description: Calibrated AprilTag 217 (closed-scan calibration, lid frame)
+    link_T_anchor:
+      xyz: [-0.187599, 0.00718301, -0.0313014]
+      wxyz: [0.67498, 0.293062, -0.617081, -0.278797]
+  tag_218:
+    parent_link: body
+    description: Calibrated AprilTag 218 (closed-scan calibration)
+    link_T_anchor:
+      xyz: [0.300531, 0.120509, -0.659511]
+      wxyz: [0.606643, 0.291344, 0.679423, 0.292382]
+  tag_219:
+    parent_link: body
+    description: Calibrated AprilTag 219 (closed-scan calibration)
+    link_T_anchor:
+      xyz: [0.296855, 0.149623, -0.684902]
+      wxyz: [0.60841, 0.290601, 0.677578, 0.293728]
+  tag_220:
+    parent_link: body
+    description: Calibrated AprilTag 220 (closed-scan calibration)
+    link_T_anchor:
+      xyz: [0.289153, 0.189556, -0.753828]
+      wxyz: [0.611748, 0.286137, 0.679095, 0.287611]
+  tag_221:
+    parent_link: body
+    description: Calibrated AprilTag 221 (closed-scan calibration)
+    link_T_anchor:
+      xyz: [0.285745, 0.21832, -0.779695]
+      wxyz: [0.612997, 0.286409, 0.677761, 0.287828]
+  tag_222:
+    parent_link: lid
+    description: Calibrated AprilTag 222 (closed-scan calibration, lid frame)
+    link_T_anchor:
+      xyz: [-0.132402, -0.0900342, 0.0578796]
+      wxyz: [0.911824, 0.407226, 0.0517248, 0.00823716]
+  tag_223:
+    parent_link: lid
+    description: Calibrated AprilTag 223 (closed-scan calibration, lid frame)
+    link_T_anchor:
+      xyz: [-0.0937993, -0.0880386, 0.0546646]
+      wxyz: [0.912499, 0.406021, 0.0494477, 0.00693495]
+  tag_224:
+    parent_link: body
+    description: Calibrated AprilTag 224 (closed-scan calibration)
+    link_T_anchor:
+      xyz: [0.312035, 0.0694318, -0.563673]
+      wxyz: [0.611444, 0.274226, 0.68907, 0.275897]
+  tag_225:
+    parent_link: body
+    description: Calibrated AprilTag 225 (closed-scan calibration)
+    link_T_anchor:
+      xyz: [0.308005, 0.0972491, -0.59061]
+      wxyz: [0.613411, 0.27401, 0.687514, 0.275625]
+  tag_226:
+    parent_link: body
+    description: Calibrated AprilTag 226 (closed-scan calibration)
+    link_T_anchor:
+      xyz: [0.223068, 0.0214305, -0.486717]
+      wxyz: [0.91971, 0.388983, 0.0528031, -0.00616492]
+  tag_227:
+    parent_link: body
+    description: Calibrated AprilTag 227 (closed-scan calibration)
+    link_T_anchor:
+      xyz: [0.261771, 0.0225196, -0.490692]
+      wxyz: [0.918438, 0.392054, 0.0521837, -0.00645282]
+  tag_228:
+    parent_link: lid
+    description: Calibrated AprilTag 228 (closed-scan calibration, lid frame)
+    link_T_anchor:
+      xyz: [-0.0419405, -0.00806899, 0.0110476]
+      wxyz: [0.68977, -0.281366, -0.228037, -0.626937]
+  tag_229:
+    parent_link: lid
+    description: Calibrated AprilTag 229 (closed-scan calibration, lid frame)
+    link_T_anchor:
+      xyz: [-0.0377482, -0.0366759, 0.0373956]
+      wxyz: [0.688967, -0.283081, -0.235109, -0.62443]
+  tag_230:
+    parent_link: lid
+    description: Calibrated AprilTag 230 (closed-scan calibration, lid frame)
+    link_T_anchor:
+      xyz: [-0.162288, 0.021666, -0.0109424]
+      wxyz: [0.623271, -0.229626, 0.285942, 0.690682]
+  tag_231:
+    parent_link: lid
+    description: Calibrated AprilTag 231 (closed-scan calibration, lid frame)
+    link_T_anchor:
+      xyz: [-0.16692, 0.050247, -0.0372374]
+      wxyz: [0.622976, -0.229824, 0.286446, 0.690674]
+  tag_232:
+    parent_link: body
+    description: Calibrated AprilTag 232 (closed-scan calibration)
+    link_T_anchor:
+      xyz: [-0.0442163, 0.232253, -0.634649]
+      wxyz: [0.698741, -0.25022, -0.260926, -0.617308]
+  tag_233:
+    parent_link: body
+    description: Calibrated AprilTag 233 (closed-scan calibration)
+    link_T_anchor:
+      xyz: [-0.0403967, 0.203693, -0.608242]
+      wxyz: [0.697825, -0.252378, -0.260562, -0.617619]
+  tag_234:
+    parent_link: body
+    description: Calibrated AprilTag 234 (closed-scan calibration)
+    link_T_anchor:
+      xyz: [0.0740548, 0.224601, -0.623868]
+      wxyz: [0.931679, -0.3607, 0.0217972, 0.037338]
+  tag_235:
+    parent_link: body
+    description: Calibrated AprilTag 235 (closed-scan calibration)
+    link_T_anchor:
+      xyz: [0.112962, 0.226556, -0.6268]
+      wxyz: [0.930424, -0.363814, 0.0277994, 0.034333]
+  tag_236:
+    parent_link: body
+    description: Calibrated AprilTag 236 (closed-scan calibration)
+    link_T_anchor:
+      xyz: [0.0128013, 0.297197, -0.691299]
+      wxyz: [0.695365, -0.263279, -0.252406, -0.619228]
+  tag_237:
+    parent_link: body
+    description: Calibrated AprilTag 237 (closed-scan calibration)
+    link_T_anchor:
+      xyz: [0.016922, 0.268651, -0.665019]
+      wxyz: [0.695807, -0.260977, -0.260376, -0.616399]
+  tag_238:
+    parent_link: body
+    description: Calibrated AprilTag 238 (closed-scan calibration)
+    link_T_anchor:
+      xyz: [0.190656, 0.289199, -0.668988]
+      wxyz: [0.720573, -0.153901, -0.339012, -0.584945]
+  tag_239:
+    parent_link: body
+    description: Calibrated AprilTag 239 (closed-scan calibration)
+    link_T_anchor:
+      xyz: [0.194018, 0.26049, -0.642624]
+      wxyz: [0.719714, -0.153087, -0.342655, -0.584092]
+  testP:
+    parent_link: lid
+    description: ''
+    link_T_anchor:
+      xyz: [0.229221, -0.145417, -0.0372445]
+      wxyz: [0.323724, 0.777407, -0.155888, -0.516276]
+  lid_open_body:
+    parent_link: body
+    description: prepose for lid_open
+    link_T_anchor:
+      xyz: [0.0165861, 0.189115, -0.47537]
+      wxyz: [-0.350471, 0.620139, 0.677831, 0.182052]
+    grasp:
+      width: 0.0039
+      gripper_variant: wellplate
+  lid_open_retreat_2:
+    parent_link: body
+    description: ''
+    link_T_anchor:
+      xyz: [0.28003, 0.121426, -0.407334]
+      wxyz: [-0.393158, 0.911232, -0.0611704, -0.106493]
+    grasp:
+      width: 0.0039
+      gripper_variant: wellplate
+  lid_open_retreat:
+    parent_link: body
+    description: ''
+    link_T_anchor:
+      xyz: [0.253883, 0.0617206, -0.350587]
+      wxyz: [-0.390477, 0.907213, -0.0975636, -0.122367]
+    grasp:
+      width: 0.0039
+      gripper_variant: wellplate
+  unload_plate:
+    parent_link: body
+    description: Anchor to load platereader
+    link_T_anchor:
+      xyz: [0.031685, 0.0536222, -0.546628]
+      wxyz: [0.242352, 0.631262, 0.683702, -0.274455]
+    grasp:
+      width: 0.08
+      gripper_variant: wellplate
