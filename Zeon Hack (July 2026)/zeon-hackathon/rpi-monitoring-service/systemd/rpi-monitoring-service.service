@@ -1,0 +1,18 @@
+[Unit]
+Description=Raspberry Pi Monitoring Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=hack
+SupplementaryGroups=dialout video render
+WorkingDirectory=/home/hack/rpi-monitoring-service
+Environment=APP_ENV=production
+Environment=LED_SERIAL_PORT=/dev/serial/by-id/usb-Adafruit_QT2040_Trinkey_DF609C80671A2926-if00
+ExecStart=/home/hack/rpi-monitoring-service/.venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8080
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,6 @@
+fastapi==0.116.1
+uvicorn[standard]==0.35.0
+psutil==7.0.0
+pyserial==3.5
+opencv-python-headless==5.0.0.93
+numpy==2.5.1

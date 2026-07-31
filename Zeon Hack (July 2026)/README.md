@@ -15,7 +15,7 @@ of any project, follow the repo link. Pitch decks live in [`slides/`](./slides).
 | BugPicker | Sean, Jeremy, Austin | A robotic plate-shuttling workflow that moves 96-well plates between the BugPicker and imaging station, runs a plate-reader scan, and returns the plate automatically — reducing manual handling bottlenecks in scalable biodiversity imaging and sequencing. | [BugPicker-arm-demo](./BugPicker-arm-demo) | [PDF](./slides/BugPicker_biodiversity_robotics_deck.pptx.pdf) | [GitHub](https://github.com/BioKEA/BugPicker-arm-demo) |
 | 🤖TeamFour🤖 | Masa, Neil, Will, Ryan | Dynamic item storage in OpenShelf using Zeon. | [RoboDrop-hackathon](./RoboDrop-hackathon) | [PDF](./slides/Team%204%20Hackathon.pdf) | [GitHub](https://github.com/RoboDrop/hackathon) |
 | Biomate | Anshu, Arnab, Juan, Tiffany, Ruta | Track A — closed-loop system to create TEM and test it with substrates. | — (repo unavailable) | [PDF](./slides/Biomate_redesigned.pptx.pdf) | [GitHub](https://github.com/cdarnab/AI_Protein_Synthesis) |
-| Hive Mind | Sai Thatigolta, Simon Coelho | Enabling self-maintenance for small-batch neural cell cultures, with long-term sensor modules integrated directly into the culture storage solution. | [neuron_lab_automation_zeon](./neuron_lab_automation_zeon) | [PDF](./slides/Team%2010_%20Hive%20Mind.pdf) | [GitHub](https://github.com/Grant-E-G/neuron_lab_automation_zeon) · [GitHub (unavailable)](https://github.com/simoncoelho/zeon-hackathon) |
+| Hive Mind | Sai Thatigolta, Simon Coelho | Enabling self-maintenance for small-batch neural cell cultures, with long-term sensor modules integrated directly into the culture storage solution. | [neuron_lab_automation_zeon](./neuron_lab_automation_zeon) · [zeon-hackathon](./zeon-hackathon) | [PDF](./slides/Team%2010_%20Hive%20Mind.pdf) | [GitHub](https://github.com/Grant-E-G/neuron_lab_automation_zeon) · [GitHub](https://github.com/simoncoelho/zeon-hackathon) |
 | Turning Red | Phillip, Chang, Rob | An agentic workflow combined with Zeon systems robotics to make a self-improving colorimetric assay for enzyme activity. | [beta-loop](./beta-loop) | [PDF](./slides/turning_red.pdf) | [GitHub](https://github.com/pvjthomas/beta-loop) |
 | OT OneCapped | Dale Herzog, Lukas Bromig, Di Hu | Robust decapping with vision-based feedback and tracking. | [hackathon-zeon](./hackathon-zeon) | [PDF](./slides/OT%20ONECAPPED%20TrackC-Pitch.pptx.pdf) | [GitHub](https://github.com/Lbromig/hackathon-zeon) |
 | MIKMAK | Manoj, Mohammad, Isabelle, Karthik, Kevin | An agent-run Design → Make → Test → Analyze loop for lab science, where the scientist stays the rigor gate. Proven on real hardware in 24 hours across three assays — a platform, not one-off experiments. | [mikmak_hack](./mikmak_hack) | [PDF](./slides/MIKMAK_deck.pdf) | [GitHub](https://github.com/AFMT8721/mikmak_hack) |
@@ -24,6 +24,8 @@ of any project, follow the repo link. Pitch decks live in [`slides/`](./slides).
 
 - **Biomate** — `cdarnab/AI_Protein_Synthesis` returns 404 (private or deleted), so there is no
   code snapshot for this team. The deck is included.
-- **Hive Mind** — the team listed two repos. `simoncoelho/zeon-hackathon` returns 404 (private or
-  deleted); `Grant-E-G/neuron_lab_automation_zeon` was archived successfully.
+- **Hive Mind** — the team listed two repos, both archived here.
+  `Grant-E-G/neuron_lab_automation_zeon` holds the Zeon/OpenShelf automation side;
+  `simoncoelho/zeon-hackathon` holds the culture-node sensing stack (Raspberry Pi monitoring
+  service, HiveOverwatch orchestration service, and hardware photos/videos in `assets/`).
 - **OT OneCapped** — the repo contains only a `README.md` upstream; the snapshot reflects that.
