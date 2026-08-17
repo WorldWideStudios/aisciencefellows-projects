@@ -1,0 +1,8 @@
+L14|The bone marrow precursors are cultured in the presence of interleukin 4 (IL-4) and granulocyte-macrophage colony-stimulating factor (GM-CSF) to generate DCs.
+L16|Dendritic cell biology witnessed significant advances in the 1990s when Sallusto and Lanzavecchia developed an assay to differentiate DCs from blood monocytes by culturing them in the presence of granulocyte-macrophage colony-stimulating factor (GM-CSF) and interleukin (IL)-4 [5].
+L31|Murine GM-CSF (Thermo Fisher Scientific, PeproTech, catalog number: 315-03-20UG, product format: 5 ng/mL in SFRPMI)
+L130|To a 100 mm cell culture plate, add approximately 10–15 × 10 6  bone marrow cells in 15 mL of RPMI supplemented with 5 ng/mL of GM-CSF and IL4.
+L133|After 2 days, replace 5 mL of fresh RPMI supplemented with 5 ng/mL of GM-CSF and IL4 with the equivalent volumes of the existing culture medium in each plate.
+L142|Bone marrow cells upon culture in medium devoid of (left panel) or supplemented with granulocyte-macrophage colony-stimulating factor (GM-CSF) + interleukin (IL) 4 (right panel) to differentiate into bone marrow dendritic cells (BMDCs).
+L142|The differentiation of BMDCs is confirmed by the presence of cells with dendritic projections within the medium supplemented with GM-CSF and IL4.
+L237|The use of GM-CSF and IL-4 for the generation of BMDCs has been described in this protocol.

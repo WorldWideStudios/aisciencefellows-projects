@@ -1,0 +1,12 @@
+   2 l14:mice
+   1 l8:mice
+   1 l8:human
+   1 l63:mice
+   1 l62:human
+   1 l51:mouse
+   1 l51:c57bl/6
+   1 l34:mouse
+   1 l17:human
+   1 l14:mouse
+   1 l14:c57bl/6
+   1 l10:mouse

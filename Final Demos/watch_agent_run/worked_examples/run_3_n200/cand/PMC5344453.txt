@@ -1,0 +1,39 @@
+L1|Robust growth of avirulent phase II  Coxiella burnetii  in bone marrow-derived murine macrophages
+L15|Published data show that murine bone marrow-derived macrophages (BMDM) restrict growth of avirulent phase II, but not virulent phase I,  Coxiella burnetii .
+L15|Past studies have used conditioned medium from L-929 murine fibroblasts as a source of macrophage-colony stimulating factor (M-CSF) to promote differentiation of bone marrow-derived myeloid precursors into macrophages.
+L15|In the current study, we show that the  C .  burnetii  Nine Mile phase II (NMII) strain grows robustly in primary macrophages from C57BL/6J mice when bone marrow cells are differentiated with recombinant murine M-CSF (rmM-CSF).
+L15|To demonstrate the utility of the ER-Hoxb8 system, myeloid progenitors from natural resistance-associated macrophage protein 1 (Nramp1) C57BL/6J knock-in mice were transduced with  ER-Hoxb8 , and macrophages were derived from immortalized progenitors using rmM-CSF and infected with NMII.
+L15|M-CSF differentiated murine macrophages from bone marrow and conditional ER-Hoxb8 myeloid progenitors will be useful  ex vivo  models for studying  Coxiella -macrophage interactions.
+L22|In contrast, the robust pro-inflammatory response observed upon NMII infection of murine primary bone marrow-derived macrophages (BMDM) is associated with moderate to severe growth restriction, depending on the mouse strain [ 25 ,  27 ,  29 – 35 ].
+L23|To our knowledge, conditioned medium from murine L-929 cell cultures has been used in published NMII infection studies as the source of macrophage-colony stimulating factor (M-CSF) for differentiation of bone marrow-derived myeloid progenitors into macrophages [ 25 ,  27 ,  29 – 35 ].
+L23|Here, we demonstrate that BMDM from C57BL/6J mice are highly permissive for growth of NMII when myeloid progenitor cells are differentiated with recombinant murine M-CSF (rmM-CSF).
+L28|Progenitor cells were isolated from femurs and tibia, and cultured in Dulbecco’s modified Eagle’s Medium (DMEM) + GlutaMAX (Gibco) containing 10% heat-inactivated fetal bovine serum (FBS), 1 mM sodium pyruvate (Corning), 20 ng/ml rmM-CSF (Peprotech), and penicillin/streptomycin (pen/strep) (Thermo Fisher Scientific) in 75-cm 2  flasks.
+L28|Adherent cells were collected after 4 days and replated in 24 or 6-well plates in fresh medium containing rmM-CSF.
+L28|For differentiation with L-929 cell-conditioned medium, rmM-CSF was replaced with 10% conditioned medium in BMDM growth medium.
+L31|Plates were centrifuged for 90 min at 1,500 x  g , then 3 ml of Mac-Pro medium (RPMI + GlutaMAX, 10% FBS, pen/strep, 20 ng/ml murine granulocyte-macrophage colony-stimulating factor [GM-CSF, Peprotech], 30 μM beta-mercaptoethanol, and 1 μM beta-estradiol [Sigma]) were added to each well and the plate was incubated at 37°C in 5% CO 2 .
+L33|The cells were then resuspended in Mac-Diff medium (RPMI + GlutaMax, 10% FBS, and 20 ng/ml rmM-CSF without beta-estradiol), seeded in 75-cm 2  flasks, and cultured for 6 days at 37°C in 5% CO 2 .
+L48|NMII grows robustly in degradative, lysosome-like vacuoles of C57BL/6J BMDM differentiated with rmM-CSF
+L49|Previous studies using C57BL/6 BMDM differentiated with L-929 cell-conditioned medium show a severe growth restriction of NMII [ 25 ,  27 ,  30 – 35 ].
+L49|We therefore tested NMII growth in BMDM differentiated with rmM-CSF because this recombinant growth factor is recommended for experimental reproducibility [ 44 ].
+L49|As a control, we also infected BMDM differentiated with L-929 cell-conditioned medium.
+L49|At 5 days post-infection, large  Coxiella -containing vacuoles were evident in macrophages treated with rmM-CSF, but not L-929 cell-conditioned medium ( S1 Fig ).
+L50|Fig 1 NMII grows robustly in C57BL6/J BMDM differentiated with rmM-CSF.
+L54|Overall, these data demonstrate that uninfected and NMII-infected murine BMDM differentiated with rmM-CSF display an M0 phenotype.
+L58|We therefore examined whether macrophages obtained from bone marrow-derived myeloid progenitors of C57BL/6J mice immortalized with an estrogen-regulated  Hoxb8  ( ER-Hoxb8 ) oncogene could support NMII growth [ 42 ].
+L58|Removal of estrogen and culture in rmM-CSF results in differentiation of progenitors into macrophages [ 46 ].
+L59|(A) Bone marrow-derived myeloid progenitors from wild type and C57BL/6J  Nramp1+  mice were immortalized with an estrogen-regulated  Hoxb8  ( ER-Hoxb8 ) oncogene.
+L59|Macrophages were derived from immortalized progenitors using M-CSF and infected with NMII at an MOI of 10.
+L59|(C) Primary BMDM from wild type and C57BL/6J  Nramp1+  mice differentiated with rmM-CSF were infected with NMII at an MOI of 0.1.
+L59|(D) Primary BMDM from wild type and C57BL/6J  Nramp1+  mice differentiated with rmM-CSF were infected with  Salmonella  Typhimurium at an MOI of 5.
+L60|To validate our results with ER-Hoxb8 macrophages, we infected primary BMDM from wild type and C57BL/6J  Nramp1+  mice differentiated with rmM-CSF with NMII and  Salmonella enterica  serovar Typhimurium.
+L64|To our knowledge, conditioned medium from murine L-929 cell cultures has been exclusively used in published NMII BMDM infection studies as a source of M-CSF to differentiate bone marrow-derived myeloid progenitors into macrophages.
+L64|Here, we show that bone marrow progenitors of C57BL/6J mice differentiated with rmM-CSF are highly permissive for NMII growth, a phenotype that correlates with the lack of defined M1/M2 polarization.
+L64|Furthermore, BMDM cultured with L-929 cell-conditioned medium versus rmM-CSF may be primed to produce more TNF that limits NMII growth via activation of downstream effectors.
+L66|Conditioned medium from murine L-929 cell cultures is commonly used as a source of M-CSF to differentiate bone marrow-derived myeloid progenitors into macrophages.
+L66|To achieve reproducibility in BMDM experiments between different laboratories, differentiation of progenitors with endotoxin-free, rmM-CSF is now the accepted experimental standard [ 44 ].
+L67|Growth permissiveness in fully differentiated alveolar macrophages is attributed to a pronounced M2 polarization as compared to the M1 polarization of control BMDMs that were differentiated from monocytes with L-929 cell-conditioned medium.
+L71|S1 Fig C57BL/6J BMDM differentiated with L-929 cell-conditioned medium are less permissive for NMII growth than cells differentiated with rmM-CSF.
+L195|Cell density during differentiation can alter the phenotype of bone marrow-derived macrophages .
+L198|Bone marrow-derived macrophages: development and regulation of differentiation markers by colony-stimulating factor and interferons .
+L220|**S1 Figure** . **BMDM differentiated with L-929 cell conditioned medium are less**
+L221|**permissive for NMII growth than cells differentiated with rmM-CSF.** BMDM

@@ -1,0 +1,15 @@
+   2 l62:mice
+   1 l95:mice
+   1 l83:rat
+   1 l62:c57bl/6
+   1 l58:mouse
+   1 l50:bovine
+   1 l47:mouse
+   1 l47:mice
+   1 l45:mice
+   1 l43:mice
+   1 l16:mice
+   1 l121:mouse
+   1 l119:human
+   1 l113:human
+   1 l110:mice

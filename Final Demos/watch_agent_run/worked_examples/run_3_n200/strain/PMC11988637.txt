@@ -1,0 +1,17 @@
+   5 l39:mouse
+   2 l45:mouse
+   2 l43:mouse
+   2 l26:mice
+   1 l497:human
+   1 l486:mouse
+   1 l418:mice
+   1 l410:human
+   1 l39:mice
+   1 l39:bovine
+   1 l298:mice
+   1 l289:mice
+   1 l282:human
+   1 l184:mice
+   1 l170:mice
+   1 l151:mice
+   1 l15:mice

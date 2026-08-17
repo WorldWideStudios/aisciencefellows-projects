@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DMD Mechanism Workbench</title>
+<!--
+================================================================
+  Slim shell: title strip + global patient dropdown + iframe of
+  patient_chat.html (the sole view). Dashboard, Dynamic Dashboard,
+  and Patient View tabs have been retired.
+================================================================
+-->
+<link rel="stylesheet" href="theme.css">
+<style>
+  html, body { height: 100%; margin: 0; overflow: hidden; }
+
+  /* --- title strip (gene + disease + inline patient dropdown) --- */
+  .page-title { max-width: 1240px; margin: 20px auto 0; padding: 14px 20px 12px;
+    display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap;
+    border-bottom: 1px solid var(--line); }
+  .page-title .pt-gene { font-size: 22px; font-weight: 800; letter-spacing: -0.01em;
+    color: var(--ink); }
+  .page-title .pt-disease { font-size: 16px; color: var(--ink-2); font-weight: 500; }
+  .page-title .pt-patient { display: inline-flex; align-items: center; gap: 6px;
+    margin-left: 4px; }
+  .page-title .pt-patient-lbl { font-size: 10px; text-transform: uppercase;
+    letter-spacing: 0.06em; color: var(--ink-3); font-weight: 700; }
+  .page-title .pt-patient select { padding: 4px 8px; border: 1px solid var(--line-2);
+    border-radius: 4px; background: white; font-size: 12px; font-family: inherit;
+    color: var(--ink); width: auto; min-width: 0; }
+  .page-title .pt-meta { margin-left: auto; color: var(--ink-3); font-size: 11px;
+    font-variant-numeric: tabular-nums; display: flex; gap: 14px; }
+  .page-title .pt-meta b { color: var(--ink-2); font-weight: 600; }
+
+  /* --- content iframe (fills viewport below title strip) --- */
+  .content-iframe { display: block; width: 100%;
+    height: calc(100vh - 68px);
+    border: none; background: var(--bg); }
+</style>
+</head>
+<body>
+
+<div class="page-title">
+  <span class="pt-gene">DMD</span>
+  <span class="pt-disease">Duchenne Muscular Dystrophy — mechanism workbench</span>
+  <span class="pt-patient">
+    <span class="pt-patient-lbl">Patient</span>
+    <select id="global-patient-picker" title="Select patient">
+      <option value="">Loading…</option>
+    </select>
+  </span>
+  <span class="pt-meta">
+    <span><b>UniProt</b> P11532</span>
+    <span><b>Locus</b> Xp21.2</span>
+    <span><b>Isoforms</b> 7</span>
+    <span><b>Exons</b> 79</span>
+  </span>
+</div>
+
+<iframe class="content-iframe" id="patientchat-frame" src="" title="Chat with Patient Data"></iframe>
+
+<script>
+// Populate the global patient picker from patient_data.json; on change,
+// reload the patient_chat iframe with ?patient=<uid>. Selection persists
+// in localStorage across reloads.
+(function () {
+  const picker = document.getElementById('global-patient-picker');
+  const frame  = document.getElementById('patientchat-frame');
+  const base   = 'patient_chat.html';
+
+  fetch('patient_data.json', { cache: 'no-store' })
+    .then(r => r.ok ? r.json() : null)
+    .then(d => {
+      if (!d) {
+        picker.innerHTML = '<option>data unavailable</option>';
+        return;
+      }
+      const stored = localStorage.getItem('dmd.currentPatient');
+      const validStored = stored && d.patients.some(p => p.id === stored);
+      const initial = validStored ? stored : (d.featured[0] || d.patients[0].id);
+
+      // Short option labels keep the dropdown narrow. Full detail
+      // (phenotype, exon, consequence) is in each patient's Overview
+      // panel once selected.
+      picker.innerHTML = d.patients.map(p =>
+        `<option value="${p.id}" ${p.id === initial ? 'selected' : ''}` +
+        ` title="${p.phenotype} · exon ${p.variant.exon || '?'} · ${p.variant.consequence || '?'}">` +
+        `Patient ${p.seqNum}</option>`).join('');
+
+      const loadFrame = (pid) => {
+        frame.src = `${base}?patient=${encodeURIComponent(pid)}`;
+      };
+
+      picker.addEventListener('change', () => {
+        localStorage.setItem('dmd.currentPatient', picker.value);
+        loadFrame(picker.value);
+      });
+
+      localStorage.setItem('dmd.currentPatient', initial);
+      loadFrame(initial);
+    })
+    .catch(() => {
+      picker.innerHTML = '<option>data failed to load</option>';
+      frame.src = base;
+    });
+})();
+</script>
+
+</body>
+</html>

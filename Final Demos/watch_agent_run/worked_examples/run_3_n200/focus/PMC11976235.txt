@@ -1,0 +1,3 @@
+L18|• Prepare recombinant mouse M-CSF protein by dissolving 10 μg of M-CSF powder in 1 mL PBS supplemented with 0.1% bovine serum albumin (BSA) to obtain a final solution of 10 μg/mL.
+L37|Supplement the cell suspension with 40 ng/mL of M-CSF.
+L37|Replenish the media by adding 1 mL complete DMEM supplemented with 20 ng/mL M-CSF and the compound at the desired concentration.

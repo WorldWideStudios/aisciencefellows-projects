@@ -1,0 +1,13 @@
+L14|Phagocytosis of early or late  Plasmodium falciparum  gametocytes was evaluated through methanol fixed cytospin preparations of immortalized mouse C57Bl/6 bone marrow-derived macrophages treated for 2 h with  P. falciparum  and stained with Giemsa, and it was confirmed through a standardized bioluminescent method using the transgenic  P. falciparum  3D7elo1-pfs16-CBG99 strain.
+L14|Activation was evaluated by measuring nitric oxide or cytokine levels in the supernatants of immortalized mouse C57Bl/6 bone marrow-derived macrophages treated with early or late gametocytes.
+L16|The results showed that murine bone marrow-derived macrophages can phagocytose both early and late gametocytes, but only the latter were able to induce the production of inflammatory mediators, specifically nitric oxide and the cytokines tumour necrosis factor and macrophage inflammatory protein 2.
+L20|Immortalized mouse C57Bl/6 bone marrow-derived macrophages;
+L38|Incubation of immortalized mouse C57Bl/6 bone marrow-derived macrophages with GCT
+L46|Determination of nitric oxide production by immortalized mouse C57Bl/6 bone marrow-derived macrophages
+L48|Determination of cytokine/chemokine production by immortalized mouse C57Bl/6 bone marrow-derived macrophages
+L55|1 Set up of a luminescent assay to evaluate the phagocytosis of late GCT by immortalized mouse C57Bl/6 bone marrow-derived macrophages.  a  After 2 h incubation with GCT, cells were washed with water (water lysis, striped column) or PBS (no lysis, black column);  b  BMDM were pre-incubated in the presence (+ CytoD, grey column) or absence (-CytoD, white column) of Cytochalasin D (CytoD) 2 µM for 1 h before incubation with GCT.
+L60|2 Microscopic observation of phagocytosis of late GCT by immortalized mouse C57Bl/6 bone marrow-derived macrophages.  a  BMDM were incubated with GCT for 2 h, detached from the plate, spotted on smears by cytospin centrifugation, fixed in absolute methanol, and stained with Giemsa.
+L64|3 Immortalized mouse C57Bl/6 bone marrow-derived macrophages were treated with early or late GCT at the cell:GCT ratio of 1:1.5, for 2 h.  a  After washing and lysis, luminescence was read using a Biotek Synergy4 microplate reader.
+L69|Production of nitric oxide and cytokines by immortalized mouse C57Bl/6 bone marrow-derived macrophages treated with GCT
+L71|4 Immortalized mouse C57Bl/6 bone marrow-derived macrophages were treated with early or late GCT at the cell:GCT ratio of 1:2, for 24 h.
+L74|5 Immortalized mouse C57Bl/6 bone marrow-derived macrophages were pre-incubated in the presence (+ CytoD, grey column) or absence (-CytoD, white column) of Cytochalasin D (CytoD) 2 µM for 1 h before incubation with early or late GCT at the cell:GCT ratio of 1:2, for 24 h.

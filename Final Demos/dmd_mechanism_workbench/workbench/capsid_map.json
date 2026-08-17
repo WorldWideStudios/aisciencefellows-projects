@@ -1,0 +1,814 @@
+{
+  "01_adipose": [
+    {
+      "rank": 1,
+      "capsid_id": "68e0921b",
+      "mapping_score": 0.0556,
+      "muscle_transduction": 0.48,
+      "nab_escape": 0.718,
+      "hepatotoxicity": 0.146,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 2,
+      "capsid_id": "d3e0c864",
+      "mapping_score": 0.0512,
+      "muscle_transduction": 0.43,
+      "nab_escape": 0.781,
+      "hepatotoxicity": 0.335,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 3,
+      "capsid_id": "f914dfaf",
+      "mapping_score": 0.048,
+      "muscle_transduction": 0.397,
+      "nab_escape": 0.817,
+      "hepatotoxicity": 0.115,
+      "tropism": "muscle"
+    }
+  ],
+  "01_kidney": [
+    {
+      "rank": 1,
+      "capsid_id": "68e0921b",
+      "mapping_score": 0.0278,
+      "muscle_transduction": 0.48,
+      "nab_escape": 0.718,
+      "hepatotoxicity": 0.146,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 2,
+      "capsid_id": "d3e0c864",
+      "mapping_score": 0.0256,
+      "muscle_transduction": 0.43,
+      "nab_escape": 0.781,
+      "hepatotoxicity": 0.335,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 3,
+      "capsid_id": "f914dfaf",
+      "mapping_score": 0.024,
+      "muscle_transduction": 0.397,
+      "nab_escape": 0.817,
+      "hepatotoxicity": 0.115,
+      "tropism": "muscle"
+    }
+  ],
+  "01_other": [
+    {
+      "rank": 1,
+      "capsid_id": "68e0921b",
+      "mapping_score": 0.0278,
+      "muscle_transduction": 0.48,
+      "nab_escape": 0.718,
+      "hepatotoxicity": 0.146,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 2,
+      "capsid_id": "d3e0c864",
+      "mapping_score": 0.0256,
+      "muscle_transduction": 0.43,
+      "nab_escape": 0.781,
+      "hepatotoxicity": 0.335,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 3,
+      "capsid_id": "f914dfaf",
+      "mapping_score": 0.024,
+      "muscle_transduction": 0.397,
+      "nab_escape": 0.817,
+      "hepatotoxicity": 0.115,
+      "tropism": "muscle"
+    }
+  ],
+  "01_peripheral_nerve": [
+    {
+      "rank": 1,
+      "capsid_id": "68e0921b",
+      "mapping_score": 0.0278,
+      "muscle_transduction": 0.48,
+      "nab_escape": 0.718,
+      "hepatotoxicity": 0.146,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 2,
+      "capsid_id": "d3e0c864",
+      "mapping_score": 0.0256,
+      "muscle_transduction": 0.43,
+      "nab_escape": 0.781,
+      "hepatotoxicity": 0.335,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 3,
+      "capsid_id": "f914dfaf",
+      "mapping_score": 0.024,
+      "muscle_transduction": 0.397,
+      "nab_escape": 0.817,
+      "hepatotoxicity": 0.115,
+      "tropism": "muscle"
+    }
+  ],
+  "01_retina": [
+    {
+      "rank": 1,
+      "capsid_id": "dafb70c6",
+      "mapping_score": 0.0404,
+      "muscle_transduction": 0.342,
+      "nab_escape": 0.762,
+      "hepatotoxicity": 0.188,
+      "tropism": "retinal"
+    },
+    {
+      "rank": 2,
+      "capsid_id": "7419c3e5",
+      "mapping_score": 0.039,
+      "muscle_transduction": 0.325,
+      "nab_escape": 0.801,
+      "hepatotoxicity": 0.264,
+      "tropism": "retinal"
+    },
+    {
+      "rank": 3,
+      "capsid_id": "6976eb64",
+      "mapping_score": 0.0388,
+      "muscle_transduction": 0.325,
+      "nab_escape": 0.787,
+      "hepatotoxicity": 0.157,
+      "tropism": "retinal"
+    }
+  ],
+  "01_skeletal_muscle": [
+    {
+      "rank": 1,
+      "capsid_id": "68e0921b",
+      "mapping_score": 0.0556,
+      "muscle_transduction": 0.48,
+      "nab_escape": 0.718,
+      "hepatotoxicity": 0.146,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 2,
+      "capsid_id": "d3e0c864",
+      "mapping_score": 0.0512,
+      "muscle_transduction": 0.43,
+      "nab_escape": 0.781,
+      "hepatotoxicity": 0.335,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 3,
+      "capsid_id": "f914dfaf",
+      "mapping_score": 0.048,
+      "muscle_transduction": 0.397,
+      "nab_escape": 0.817,
+      "hepatotoxicity": 0.115,
+      "tropism": "muscle"
+    }
+  ],
+  "01_smooth_muscle": [
+    {
+      "rank": 1,
+      "capsid_id": "68e0921b",
+      "mapping_score": 0.0556,
+      "muscle_transduction": 0.48,
+      "nab_escape": 0.718,
+      "hepatotoxicity": 0.146,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 2,
+      "capsid_id": "d3e0c864",
+      "mapping_score": 0.0512,
+      "muscle_transduction": 0.43,
+      "nab_escape": 0.781,
+      "hepatotoxicity": 0.335,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 3,
+      "capsid_id": "f914dfaf",
+      "mapping_score": 0.048,
+      "muscle_transduction": 0.397,
+      "nab_escape": 0.817,
+      "hepatotoxicity": 0.115,
+      "tropism": "muscle"
+    }
+  ],
+  "02_adipose": [
+    {
+      "rank": 1,
+      "capsid_id": "68e0921b",
+      "mapping_score": 0.5003,
+      "muscle_transduction": 0.48,
+      "nab_escape": 0.718,
+      "hepatotoxicity": 0.146,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 2,
+      "capsid_id": "d3e0c864",
+      "mapping_score": 0.4607,
+      "muscle_transduction": 0.43,
+      "nab_escape": 0.781,
+      "hepatotoxicity": 0.335,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 3,
+      "capsid_id": "f914dfaf",
+      "mapping_score": 0.4318,
+      "muscle_transduction": 0.397,
+      "nab_escape": 0.817,
+      "hepatotoxicity": 0.115,
+      "tropism": "muscle"
+    }
+  ],
+  "02_kidney": [
+    {
+      "rank": 1,
+      "capsid_id": "68e0921b",
+      "mapping_score": 0.2502,
+      "muscle_transduction": 0.48,
+      "nab_escape": 0.718,
+      "hepatotoxicity": 0.146,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 2,
+      "capsid_id": "d3e0c864",
+      "mapping_score": 0.2304,
+      "muscle_transduction": 0.43,
+      "nab_escape": 0.781,
+      "hepatotoxicity": 0.335,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 3,
+      "capsid_id": "f914dfaf",
+      "mapping_score": 0.2159,
+      "muscle_transduction": 0.397,
+      "nab_escape": 0.817,
+      "hepatotoxicity": 0.115,
+      "tropism": "muscle"
+    }
+  ],
+  "02_other": [
+    {
+      "rank": 1,
+      "capsid_id": "68e0921b",
+      "mapping_score": 0.2502,
+      "muscle_transduction": 0.48,
+      "nab_escape": 0.718,
+      "hepatotoxicity": 0.146,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 2,
+      "capsid_id": "d3e0c864",
+      "mapping_score": 0.2304,
+      "muscle_transduction": 0.43,
+      "nab_escape": 0.781,
+      "hepatotoxicity": 0.335,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 3,
+      "capsid_id": "f914dfaf",
+      "mapping_score": 0.2159,
+      "muscle_transduction": 0.397,
+      "nab_escape": 0.817,
+      "hepatotoxicity": 0.115,
+      "tropism": "muscle"
+    }
+  ],
+  "02_peripheral_nerve": [
+    {
+      "rank": 1,
+      "capsid_id": "68e0921b",
+      "mapping_score": 0.2502,
+      "muscle_transduction": 0.48,
+      "nab_escape": 0.718,
+      "hepatotoxicity": 0.146,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 2,
+      "capsid_id": "d3e0c864",
+      "mapping_score": 0.2304,
+      "muscle_transduction": 0.43,
+      "nab_escape": 0.781,
+      "hepatotoxicity": 0.335,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 3,
+      "capsid_id": "f914dfaf",
+      "mapping_score": 0.2159,
+      "muscle_transduction": 0.397,
+      "nab_escape": 0.817,
+      "hepatotoxicity": 0.115,
+      "tropism": "muscle"
+    }
+  ],
+  "02_retina": [
+    {
+      "rank": 1,
+      "capsid_id": "dafb70c6",
+      "mapping_score": 0.3639,
+      "muscle_transduction": 0.342,
+      "nab_escape": 0.762,
+      "hepatotoxicity": 0.188,
+      "tropism": "retinal"
+    },
+    {
+      "rank": 2,
+      "capsid_id": "7419c3e5",
+      "mapping_score": 0.351,
+      "muscle_transduction": 0.325,
+      "nab_escape": 0.801,
+      "hepatotoxicity": 0.264,
+      "tropism": "retinal"
+    },
+    {
+      "rank": 3,
+      "capsid_id": "6976eb64",
+      "mapping_score": 0.3492,
+      "muscle_transduction": 0.325,
+      "nab_escape": 0.787,
+      "hepatotoxicity": 0.157,
+      "tropism": "retinal"
+    }
+  ],
+  "02_skeletal_muscle": [
+    {
+      "rank": 1,
+      "capsid_id": "68e0921b",
+      "mapping_score": 0.5003,
+      "muscle_transduction": 0.48,
+      "nab_escape": 0.718,
+      "hepatotoxicity": 0.146,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 2,
+      "capsid_id": "d3e0c864",
+      "mapping_score": 0.4607,
+      "muscle_transduction": 0.43,
+      "nab_escape": 0.781,
+      "hepatotoxicity": 0.335,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 3,
+      "capsid_id": "f914dfaf",
+      "mapping_score": 0.4318,
+      "muscle_transduction": 0.397,
+      "nab_escape": 0.817,
+      "hepatotoxicity": 0.115,
+      "tropism": "muscle"
+    }
+  ],
+  "02_smooth_muscle": [
+    {
+      "rank": 1,
+      "capsid_id": "68e0921b",
+      "mapping_score": 0.5003,
+      "muscle_transduction": 0.48,
+      "nab_escape": 0.718,
+      "hepatotoxicity": 0.146,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 2,
+      "capsid_id": "d3e0c864",
+      "mapping_score": 0.4607,
+      "muscle_transduction": 0.43,
+      "nab_escape": 0.781,
+      "hepatotoxicity": 0.335,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 3,
+      "capsid_id": "f914dfaf",
+      "mapping_score": 0.4318,
+      "muscle_transduction": 0.397,
+      "nab_escape": 0.817,
+      "hepatotoxicity": 0.115,
+      "tropism": "muscle"
+    }
+  ],
+  "03_adipose": [
+    {
+      "rank": 1,
+      "capsid_id": "68e0921b",
+      "mapping_score": 0.3336,
+      "muscle_transduction": 0.48,
+      "nab_escape": 0.718,
+      "hepatotoxicity": 0.146,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 2,
+      "capsid_id": "d3e0c864",
+      "mapping_score": 0.3072,
+      "muscle_transduction": 0.43,
+      "nab_escape": 0.781,
+      "hepatotoxicity": 0.335,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 3,
+      "capsid_id": "f914dfaf",
+      "mapping_score": 0.2879,
+      "muscle_transduction": 0.397,
+      "nab_escape": 0.817,
+      "hepatotoxicity": 0.115,
+      "tropism": "muscle"
+    }
+  ],
+  "03_kidney": [
+    {
+      "rank": 1,
+      "capsid_id": "68e0921b",
+      "mapping_score": 0.1668,
+      "muscle_transduction": 0.48,
+      "nab_escape": 0.718,
+      "hepatotoxicity": 0.146,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 2,
+      "capsid_id": "d3e0c864",
+      "mapping_score": 0.1536,
+      "muscle_transduction": 0.43,
+      "nab_escape": 0.781,
+      "hepatotoxicity": 0.335,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 3,
+      "capsid_id": "f914dfaf",
+      "mapping_score": 0.1439,
+      "muscle_transduction": 0.397,
+      "nab_escape": 0.817,
+      "hepatotoxicity": 0.115,
+      "tropism": "muscle"
+    }
+  ],
+  "03_other": [
+    {
+      "rank": 1,
+      "capsid_id": "68e0921b",
+      "mapping_score": 0.1668,
+      "muscle_transduction": 0.48,
+      "nab_escape": 0.718,
+      "hepatotoxicity": 0.146,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 2,
+      "capsid_id": "d3e0c864",
+      "mapping_score": 0.1536,
+      "muscle_transduction": 0.43,
+      "nab_escape": 0.781,
+      "hepatotoxicity": 0.335,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 3,
+      "capsid_id": "f914dfaf",
+      "mapping_score": 0.1439,
+      "muscle_transduction": 0.397,
+      "nab_escape": 0.817,
+      "hepatotoxicity": 0.115,
+      "tropism": "muscle"
+    }
+  ],
+  "03_peripheral_nerve": [
+    {
+      "rank": 1,
+      "capsid_id": "68e0921b",
+      "mapping_score": 0.1668,
+      "muscle_transduction": 0.48,
+      "nab_escape": 0.718,
+      "hepatotoxicity": 0.146,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 2,
+      "capsid_id": "d3e0c864",
+      "mapping_score": 0.1536,
+      "muscle_transduction": 0.43,
+      "nab_escape": 0.781,
+      "hepatotoxicity": 0.335,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 3,
+      "capsid_id": "f914dfaf",
+      "mapping_score": 0.1439,
+      "muscle_transduction": 0.397,
+      "nab_escape": 0.817,
+      "hepatotoxicity": 0.115,
+      "tropism": "muscle"
+    }
+  ],
+  "03_retina": [
+    {
+      "rank": 1,
+      "capsid_id": "dafb70c6",
+      "mapping_score": 0.2426,
+      "muscle_transduction": 0.342,
+      "nab_escape": 0.762,
+      "hepatotoxicity": 0.188,
+      "tropism": "retinal"
+    },
+    {
+      "rank": 2,
+      "capsid_id": "7419c3e5",
+      "mapping_score": 0.234,
+      "muscle_transduction": 0.325,
+      "nab_escape": 0.801,
+      "hepatotoxicity": 0.264,
+      "tropism": "retinal"
+    },
+    {
+      "rank": 3,
+      "capsid_id": "6976eb64",
+      "mapping_score": 0.2328,
+      "muscle_transduction": 0.325,
+      "nab_escape": 0.787,
+      "hepatotoxicity": 0.157,
+      "tropism": "retinal"
+    }
+  ],
+  "03_skeletal_muscle": [
+    {
+      "rank": 1,
+      "capsid_id": "68e0921b",
+      "mapping_score": 0.3336,
+      "muscle_transduction": 0.48,
+      "nab_escape": 0.718,
+      "hepatotoxicity": 0.146,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 2,
+      "capsid_id": "d3e0c864",
+      "mapping_score": 0.3072,
+      "muscle_transduction": 0.43,
+      "nab_escape": 0.781,
+      "hepatotoxicity": 0.335,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 3,
+      "capsid_id": "f914dfaf",
+      "mapping_score": 0.2879,
+      "muscle_transduction": 0.397,
+      "nab_escape": 0.817,
+      "hepatotoxicity": 0.115,
+      "tropism": "muscle"
+    }
+  ],
+  "03_smooth_muscle": [
+    {
+      "rank": 1,
+      "capsid_id": "68e0921b",
+      "mapping_score": 0.3336,
+      "muscle_transduction": 0.48,
+      "nab_escape": 0.718,
+      "hepatotoxicity": 0.146,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 2,
+      "capsid_id": "d3e0c864",
+      "mapping_score": 0.3072,
+      "muscle_transduction": 0.43,
+      "nab_escape": 0.781,
+      "hepatotoxicity": 0.335,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 3,
+      "capsid_id": "f914dfaf",
+      "mapping_score": 0.2879,
+      "muscle_transduction": 0.397,
+      "nab_escape": 0.817,
+      "hepatotoxicity": 0.115,
+      "tropism": "muscle"
+    }
+  ],
+  "04_adipose": [
+    {
+      "rank": 1,
+      "capsid_id": "68e0921b",
+      "mapping_score": 0.4169,
+      "muscle_transduction": 0.48,
+      "nab_escape": 0.718,
+      "hepatotoxicity": 0.146,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 2,
+      "capsid_id": "d3e0c864",
+      "mapping_score": 0.384,
+      "muscle_transduction": 0.43,
+      "nab_escape": 0.781,
+      "hepatotoxicity": 0.335,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 3,
+      "capsid_id": "f914dfaf",
+      "mapping_score": 0.3598,
+      "muscle_transduction": 0.397,
+      "nab_escape": 0.817,
+      "hepatotoxicity": 0.115,
+      "tropism": "muscle"
+    }
+  ],
+  "04_kidney": [
+    {
+      "rank": 1,
+      "capsid_id": "68e0921b",
+      "mapping_score": 0.2085,
+      "muscle_transduction": 0.48,
+      "nab_escape": 0.718,
+      "hepatotoxicity": 0.146,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 2,
+      "capsid_id": "d3e0c864",
+      "mapping_score": 0.192,
+      "muscle_transduction": 0.43,
+      "nab_escape": 0.781,
+      "hepatotoxicity": 0.335,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 3,
+      "capsid_id": "f914dfaf",
+      "mapping_score": 0.1799,
+      "muscle_transduction": 0.397,
+      "nab_escape": 0.817,
+      "hepatotoxicity": 0.115,
+      "tropism": "muscle"
+    }
+  ],
+  "04_other": [
+    {
+      "rank": 1,
+      "capsid_id": "68e0921b",
+      "mapping_score": 0.2085,
+      "muscle_transduction": 0.48,
+      "nab_escape": 0.718,
+      "hepatotoxicity": 0.146,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 2,
+      "capsid_id": "d3e0c864",
+      "mapping_score": 0.192,
+      "muscle_transduction": 0.43,
+      "nab_escape": 0.781,
+      "hepatotoxicity": 0.335,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 3,
+      "capsid_id": "f914dfaf",
+      "mapping_score": 0.1799,
+      "muscle_transduction": 0.397,
+      "nab_escape": 0.817,
+      "hepatotoxicity": 0.115,
+      "tropism": "muscle"
+    }
+  ],
+  "04_peripheral_nerve": [
+    {
+      "rank": 1,
+      "capsid_id": "68e0921b",
+      "mapping_score": 0.2085,
+      "muscle_transduction": 0.48,
+      "nab_escape": 0.718,
+      "hepatotoxicity": 0.146,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 2,
+      "capsid_id": "d3e0c864",
+      "mapping_score": 0.192,
+      "muscle_transduction": 0.43,
+      "nab_escape": 0.781,
+      "hepatotoxicity": 0.335,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 3,
+      "capsid_id": "f914dfaf",
+      "mapping_score": 0.1799,
+      "muscle_transduction": 0.397,
+      "nab_escape": 0.817,
+      "hepatotoxicity": 0.115,
+      "tropism": "muscle"
+    }
+  ],
+  "04_retina": [
+    {
+      "rank": 1,
+      "capsid_id": "dafb70c6",
+      "mapping_score": 0.3033,
+      "muscle_transduction": 0.342,
+      "nab_escape": 0.762,
+      "hepatotoxicity": 0.188,
+      "tropism": "retinal"
+    },
+    {
+      "rank": 2,
+      "capsid_id": "7419c3e5",
+      "mapping_score": 0.2925,
+      "muscle_transduction": 0.325,
+      "nab_escape": 0.801,
+      "hepatotoxicity": 0.264,
+      "tropism": "retinal"
+    },
+    {
+      "rank": 3,
+      "capsid_id": "6976eb64",
+      "mapping_score": 0.291,
+      "muscle_transduction": 0.325,
+      "nab_escape": 0.787,
+      "hepatotoxicity": 0.157,
+      "tropism": "retinal"
+    }
+  ],
+  "04_skeletal_muscle": [
+    {
+      "rank": 1,
+      "capsid_id": "68e0921b",
+      "mapping_score": 0.4169,
+      "muscle_transduction": 0.48,
+      "nab_escape": 0.718,
+      "hepatotoxicity": 0.146,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 2,
+      "capsid_id": "d3e0c864",
+      "mapping_score": 0.384,
+      "muscle_transduction": 0.43,
+      "nab_escape": 0.781,
+      "hepatotoxicity": 0.335,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 3,
+      "capsid_id": "f914dfaf",
+      "mapping_score": 0.3598,
+      "muscle_transduction": 0.397,
+      "nab_escape": 0.817,
+      "hepatotoxicity": 0.115,
+      "tropism": "muscle"
+    }
+  ],
+  "04_smooth_muscle": [
+    {
+      "rank": 1,
+      "capsid_id": "68e0921b",
+      "mapping_score": 0.4169,
+      "muscle_transduction": 0.48,
+      "nab_escape": 0.718,
+      "hepatotoxicity": 0.146,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 2,
+      "capsid_id": "d3e0c864",
+      "mapping_score": 0.384,
+      "muscle_transduction": 0.43,
+      "nab_escape": 0.781,
+      "hepatotoxicity": 0.335,
+      "tropism": "muscle"
+    },
+    {
+      "rank": 3,
+      "capsid_id": "f914dfaf",
+      "mapping_score": 0.3598,
+      "muscle_transduction": 0.397,
+      "nab_escape": 0.817,
+      "hepatotoxicity": 0.115,
+      "tropism": "muscle"
+    }
+  ]
+}

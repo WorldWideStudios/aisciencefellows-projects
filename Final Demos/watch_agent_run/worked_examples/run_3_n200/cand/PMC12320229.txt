@@ -1,0 +1,11 @@
+L20|Bone marrow derived macrophages (BMDMs) isolation and stimulation
+L21|The cells were then cultured in DMEM supplemented with 10% fetal bovine serum (FBS), 1% penicillin-streptomycin (PS), and 20 ng/mL macrophage colony-stimulating factor (M-CSF) (GMP-TL654, T&L Biotechnology, Beijing, China) to promote macrophage differentiation over 7 days.
+L23|After washing twice with warm RPMI medium containing 10% FBS, cells were cultured in M-CSF (20 ng/mL).
+L60|Bone marrow-derived macrophages (BMDMs) were cultured and identified as detailed in Figs.
+L87|This heterogeneity stems from developmental ontogeny, with yolk sac-derived macrophages exhibiting distinct iron regulation compared to bone marrow-derived populations.
+L98|We cultured bone marrow-derived macrophages (BMDMs) and splenic macrophages in vitro and examined key indicators of ferroptosis.
+L98|Briefly, macrophages were cultured in vitro with 20 ng/mL MCSF for 7 d.
+L100|Figure 4 Bone marrow-derived M2 macrophages display elevated expression of autophagy-related proteins and demonstrate a comprehensive autophagic flux.
+L101|In addition, silencing ATG5 and NCOA4 genes mimic the control of autophagy inhibitors on ferroptosis in both bone marrow-derived and splenic macrophages.
+L232|2.** Cell viability of polarized bone marrow-derived and splenic macrophages
+L417|208 with 10% FBS, 1% PS, and M-CSF was added to the cells.

@@ -1,0 +1,14 @@
+L11|To further explore the role of GSL modulation in macrophage biology, we performed in vitro studies with homeostatic and inflammatory bone marrow-derived macrophages.
+L47|To interrogate how the effects of GSL lowering may be influenced by macrophage cell state, we performed in vitro experiments with “resting” (endotoxin-naive) and “inflammatory” (LPS-induced) bone marrow-derived (BM) macrophages.
+L81|BM monocytes were then differentiated to macrophages with 25 ng/ml m-CSF (Peprotech, 3150250 UG) for 10 days, and medium was replenished every 3 days.
+L87|Differentiated macrophages were induced with 10 ng/ml lipopolysaccharide at 37 °C for 3 hours, subsequently, the macrophages were treated with vehicle (DMSO) or 300 nM GCS inhibitors (Genz-667161 or venglustat (aka GZ402671)) for 48 hours in complete media supplemented with 25 ng/ml m-CSF and 10 ng/ml LPS at 37 °C.
+L110|Macrophages were seeded in Seahorse XF96 V3 PS Cell Culture Microplates (Agilent, 101085-004) at 80,000 cells per well overnight in complete media supplemented with 25 ng/ml m-CSF (Peprotech, 3150250 UG) at 37 °C.
+L112|As for the energy metabolic profile measurement during inflammatory state, the macrophages were induced with 10 ng/ml lipopolysaccharide at 37 °C for 3 hours, subsequently, the macrophages were treated with vehicle (DMSO) or 300 nM GCSi for 48 hours in complete media supplemented with 25 ng/ml m-CSF and 10 ng/ml LPS at 37 °C.
+L113|To measure the energy metabolic profile following BTC stimulation, the macrophages were induced with 10 ng/ml lipopolysaccharide at 37 °C for 3 hours, and the macrophages were subsequently treated with vehicle (DMSO) or 300 nM GCSi for 48 hours in complete media containing 25 ng/ml m-CSF supplemented with or without 10 ng/ml LPS.
+L127|Following 5 hours of transfection, the transfection reagent was removed, and the cells were replenished with complete media supplemented with 25 ng/ml m-CSF (Peprotech, 3150250 UG) and incubated for 72 h at 37 °C.
+L212|Bone marrow-derived cells play a major role in kidney fibrosis via proliferation and differentiation in the infiltrated site.
+L564|Lastly, _in vitro_ studies with _Nek8_ _[jck]_ bone marrow derived macrophages revealed profound differences in
+L680|_and “inflammatory” (LPS-induced) bone marrow-derived (BM) macrophages._
+L840|_(LPS-induced) bone marrow-derived (BM) macrophages._
+L859|The _in vitro_ experiment was performed in wild type and _Nek8_ _[jck]_ bone marrow derived
+L1016|( **b-c** ) GSL analysis in mouse bone marrow derived macrophages demonstrated

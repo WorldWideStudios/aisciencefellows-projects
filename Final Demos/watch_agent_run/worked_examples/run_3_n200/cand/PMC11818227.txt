@@ -1,0 +1,28 @@
+L6|This study examined the effects of pooling donor-derived macrophages on their phenotype and function, focusing on murine bone marrow-derived macrophages (BMDMs) and human monocyte-derived macrophages (hMDMs).
+L6|Murine BMDMs were generated using L929-conditioned media and compared across single and pooled donors (two-to-five mice).
+L6|Similarly, hMDMs cultured with M-CSF from individual donors were compared to pooled cultures.
+L11|Bone marrow-derived macrophages (BMDMs) are also commonly employed to study macrophage biology because of their ready accessibility and the ability to produce large quantities of cells.
+L11|Differentiation usually requires macrophage colony-stimulating factor (M-CSF), either via direct supplementation of recombinant M-CSF or L929 cell-conditioned medium [ 11 , 12 ].
+L11|While it is generally accepted that L929-conditioned media can produce functional macrophages, the detailed phenotypes of these cells, compared to those generated using recombinant M-CSF, remain underexplored.
+L12|Two primary sources of human macrophages are typically used in research and clinical settings: macrophages derived from peripheral blood monocytes (hMDMs) in the presence of recombinant M-CSF, and macrophages generated from human-induced pluripotent stem cells (hIPSCs) [ 18 , 19 , 20 ]. hMDMs are straightforward to produce, while hIPSC-derived macrophages require more-complex culture conditions but offer a potentially unlimited supply.
+L13|In this work, we provide a detailed characterization of murine and human macrophages, each cultured under specific conditions: mouse cells using L929-conditioned medium and human cells with M-CSF.
+L17|The number of BMDMs obtained for each specific combination on the seventh day of culture in each case was 15 million or higher ( Figure 1 c) from 2 million bone marrow cells.
+L22|Expression of the F4/80 receptor ( Figure 2 a), a characteristic receptor used as a marker for bone marrow-derived murine macrophages, was similar between the groups.
+L40|In this study, we examined mouse bone marrow-derived macrophages (BMDMs) and human monocyte-derived macrophages (hMDMs) to determine how pooling cells from multiple donors influences macrophage phenotypes.
+L46|Mouse Bone Marrow-Derived Macrophages
+L48|L929 cells were grown to full confluence in 150 cm² flasks (Corning, New York, NY, USA) using DMEM/F12 (Gibco, San Jose, CA, USA) medium enriched with 10% heat-inactivated FBS (Cytiva/HyClone, Marlborough, MA, USA) and 100 U/mL penicillin/streptomycin (Gibco, USA).
+L48|After a period of 7 days, the conditioned medium from the L929 cells was harvested, filtered, and subsequently stored at −80 °C until needed.
+L49|The medium used was DMEM/F12 (Gibco, USA) supplemented with 10% FBS (Cytiva/HyClone, USA), antibiotics (100 U/mL penicillin/streptomycin, Gibco, USA), and 20% of L929-conditioned medium as the source of M-CSF.
+L52|Monocytes were then obtained using the Pan Monocyte Isolation Kit (Miltenyi Biotec, Los Angeles, CA, USA), placed into sterile 90 mm Petri dishes (Promed, FL Medical, Padova, Italy) at a density of 6 × 10 6  cells per plate, and cultured for five days in TexMACS medium (Miltenyi Biotec, USA) supplemented with 100 ng/mL M-CSF (Miltenyi Biotec, USA).
+L56|Bone marrow-derived macrophages (BMDM) in the samples were identified using the following antibodies, each targeting specific surface markers: Anti-CD11b-FITC (Invitrogen, San Diego, CA, USA);
+L67|Figure 1 Bone marrow ( a , b ) and bone marrow-derived macrophage ( c – e ) cell characteristics: ( a ) Number of cells isolated from the bone marrow of individual mice, expressed as the mean ± SEM from three biological replicates;
+L148|Bone Marrow-Derived Macrophages (BMM): Isolation and Applications CSH Protoc.
+L154|Use of Bone Marrow-Derived Macrophages to Model Murine Innate Immune Responses J.
+L164|M-CSF- and L929-Derived Macrophages Present Distinct Metabolic Profiles with Similar Inflammatory Outcomes Immunobiology 2020 225 151935 10.1016/j.imbio.2020.151935 32201093
+L172|Proteomics Characterisation of the L929 Cell Supernatant and Its Role in BMDM Differentiation Life Sci.
+L177|Preparation and Culture of Bone Marrow-Derived Macrophages from Mice for Functional Analysis STAR Protocols 2021 2 100246 10.1016/j.xpro.2020.100246 33458708
+L184|Bone Marrow-Derived Macrophage Production J.
+L187|Cell Density during Differentiation Can Alter the Phenotype of Bone Marrow-Derived Macrophages Cell Biosci.
+L308|Mononuclear but Not Polymorphonuclear Phagocyte Depletion Increases Circulation Times and Improves Mammary Tumor-Homing Efficiency of Donor Bone Marrow-Derived Monocytes Cancers 2019 11 1752 10.3390/cancers11111752 31717301
+L317|Bone Marrow-Derived and Elicited Peritoneal Macrophages Are Not Created Equal: The Questions Asked Dictate the Cell Type Used Front.
+L331|Luteolin Transforms the Polarity of Bone Marrow-Derived Macrophages to Regulate the Cytokine Storm J.

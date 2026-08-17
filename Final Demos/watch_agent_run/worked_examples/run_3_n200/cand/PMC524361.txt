@@ -1,0 +1,28 @@
+L1|Generation of competent bone marrow-derived antigen presenting cells from the deer mouse ( Peromyscus maniculatus )
+L10|To solve this problem, we have developed an in vitro method of expanding and generating competent antigen presenting cells (APC) from deer mouse bone marrow using commercially-available house mouse ( Mus musculus ) granulocyte-macrophage colony stimulating factor.
+L20|This led us to hypothesize that house mouse GM-CSF, which is commercially-available, might be useful in expanding and differentiating deer mouse bone marrow cells into competent APC.
+L25|Morphologic characteristics of bone marrow-derived APC
+L26|Deer mouse bone marrow cultures contained mostly cells that appeared dead or dying after 24 hours in culture with GM-CSF.
+L27|Figure 2 Morphologic characteristics of deer mouse bone marrow-derived APC.
+L27|Day 14 bone marrow cells cultured in GM-CSF were processed by cytospin and stained with Wright's stain.
+L29|Day 8 deer mouse bone marrow cells were cultured with various concentrations of house mouse GM-CSF.
+L29|Two days later, proliferation was assessed (Figure  3A ) and maximal proliferation was observed at about 0.5 ng/ml of GM-CSF.
+L30|(A) After 8 days of incubation with GM-CSF, deer mouse bone marrow cells were washed and then cultured with dilutions of GM-CSF in duplicate for 48 hours, then proliferation assessed by MTS assay.
+L33|Total RNA was extracted from T cells and bone marrow-derived APC.
+L35|For recall proliferation, KLH, in vitro-propagated T cells (14 days with IL-2) and BM-APC (14 days with GM-CSF) or freshly thawed splenocytes were cultured together for 72 hours, and proliferation was assessed by MTS assay (Figure  5 ).
+L41|This cytokine apparently binds to the GM-CSF receptor on deer mouse cells such that it generates competent APC from the bone marrow.
+L42|Subsequent experiments demonstrated that GM-CSF induces proliferation of deer mouse bone marrow cells, and since GM-CSF is routinely used to generate APC from the bone marrow we hypothesized that it would do so with deer mouse bone marrow.
+L44|This method involves culturing of bone marrow cells with GM-CSF for 10 days, then freezing aliquots of 10 6  cells.
+L44|Three days before T cell restimulation, the 10-day BM-APC are thawed and cultured with GM-CSF, then used for restimulation with fresh antigen in one well of a 24-well plate.
+L45|Simultaneously, bone marrow cells are thawed and cultured with GM-CSF.
+L45|Expansion of the T cells is performed with huIL-2 and the BM-APC with GM-CSF for 14 days.
+L49|A limitation of this approach is that BM-APC lose their ability to proliferate in the presence of GM-CSF after four to six weeks, similar to what has been observed with house mouse bone marrow-derived cells [ 53 , 54 ].
+L49|In this manner, large numbers of progenitor cells might be produced in vitro for storage and then thawed, as needed, for culturing in GM-CSF to produce functional APC.
+L51|We have developed a method for generating large numbers of competent antigen presenting cells from deer mouse bone marrow using house mouse GM-CSF.
+L56|Briefly, a primer (Table  1 ) was designed from a partial cDNA of deer mouse GM-CSF [ 30 ] and used to amplify the 5' end according to manufacturer's directions (SMART RACE, BD CLONTech, Palo Alto, CA) using con A-activated spleen cell culture cDNA.
+L65|Bone marrow-derived APC (BM-APC) were generated with modification of a previously described method for dendritic cells (DC) [ 39 ].
+L65|One vial of bone marrow cells (2 × 10 6 ) was quick-thawed in a 37°C water bath and cultured without washing in 100 mm bacterial Petri dishes in DMM-10 containing 20 ng/ml recombinant house mouse GM-CSF (R&D Systems, Minneapolis, MN) at 37°C under 7% CO 2 .
+L65|Fresh GM-CSF/DMM-10 was provided on days 3, 6, 8, 10, and 12 for the generation of APC.
+L74|Functional assessment of bone marrow-derived APC
+L134|Inaba K Inaba M Romani N Aya H Deguchi M Ikehara S Muramatsu S Steinman RM Generation of large numbers of dendritic cells from mouse bone marrow cultures supplemented with granulocyte/macrophage colony-stimulating factor J Exp Med 1992 176 1693 1702 1460426 10.1084/jem.176.6.1693
+L135|Caux C Dezutter-Dambuyant C Schmitt D Banchereau J GM-CSF and TNF-alpha cooperate in the generation of dendritic Langerhans cells Nature 1992 360 258 261 1279441 10.1038/360258a0

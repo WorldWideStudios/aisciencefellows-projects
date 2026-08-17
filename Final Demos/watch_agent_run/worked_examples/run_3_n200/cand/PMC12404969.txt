@@ -1,0 +1,20 @@
+L10|Based on their developmental origins, tissue-resident macrophages (TRMs) in humans can be classified into those of embryonic origin and those derived from bone marrow-derived monocytes (BMDMs); embryonically derived macrophages emerge during early development, possess self-renewal capacity, and persist into adulthood in specific tissues such as microglia in the brain and Kupffer cells in the liver, whereas BMDMs originate from hematopoietic stem cells in the bone marrow via monocytic differentiation, infiltrate tissues during inflammation or injury, and differentiate into macrophages that transiently reside in tissues but lack self-renewal capability, thus requiring continuous replenishment.
+L16|Animals (like peritoneal macrophages [PMs] and bone marrow-derived macrophages [BMDMs]) or humans (such as peripheral blood mononuclear cells [PBMCs] and induced pluripotent stem cells [iPSCs]) can serve as primary macrophage models.
+L26|BMDMs were isolated from mouse femurs and tibias using a standard bone marrow harvest and erythrocyte lysis protocol ( 28 ,  29 ).
+L26|BMDMs differentiate from bone marrow monocytes (BMMs); however, the isolation of bone marrow monocytes is technically challenging and requires fresh preparation for each experiment.
+L26|Mature BMDMs can only be obtained after a 5–7 day induction period with M-CSF or equivalent factors (e.g., secretory factors from L929 cells) in the extracellular milieu, which significantly extends experimental timelines ( 30 ,  31 ).
+L69|For instance, chemokines and inflammatory cues stimulate the membrane receptor CCR2, which attracts bone marrow-derived mononuclear macrophages to adipose tissue.
+L83|It is noteworthy that during  in vitro  culture, this cell line does not require external addition of M-CSF or other growth hormones.
+L83|It is unclear, nevertheless, if J774A.1 makes M-CSF on its own to get around this requirement or if its tumor-derived origin gives it intrinsic proliferative ability that is not dependent on M-CSF signaling ( 109 ).
+L87|M-CSF induction can differentiate the cells ( 115 ).
+L89|WEHI-3 proliferates under conventional culture conditions without exogenous M-CSF, in contrast to the majority of established macrophage-like cell lines that require M-CSF for proliferation ( 119 ).
+L129|3 Particular Elements/Components ts ( 109 ): ① Co-culturing monocytes with macrophage-stimulating factors (typically M-CSF or GM-CSF) for five to seven days causes the monocytes to differentiate into macrophages.GM-CSF stimulates differentiation into the pro-inflammatory M1 phenotype, whereas M-CSF encourages polarization toward M2-type macrophages.
+L129|M-CSF serves as the main regulator for macrophage survival, proliferation, and differentiation.
+L130|The primary modulator of macrophage survival, proliferation, and differentiation is M-CSF.
+L130|M-CSF, which is consistently present in mouse plasma at a concentration of around 10 ng/ml, is essential for monocyte recruitment and differentiation ( 167 ).
+L130|M-CSF is frequently used in  in vitro  research to encourage the differentiation of immature PBMCs and BMDMs into macrophages while preserving cell viability.
+L130|These cells barely live for two to three days without M-CSF treatment ( 168 ).
+L131|The study also showed that although M-CSF doses and treatment times were adequate to promote differentiation in primary monocytes, neither THP-1 nor U937 cells could be made to develop into macrophages by M-CSF.
+L187|Impaired phagocytosis of apoptotic cells causes accumulation of bone marrow-derived macrophages in aged mice .
+L188|Growing murine bone marrow-derived macrophages .
+L355|Mesenchymal stem cells reciprocally regulate the M1/M2 balance in mouse bone marrow-derived macrophages .

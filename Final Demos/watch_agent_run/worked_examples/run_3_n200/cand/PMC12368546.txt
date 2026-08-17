@@ -1,0 +1,5 @@
+L1|Proline/serine-rich coiled-coil protein 1 alleviates pyroptosis in murine bone marrow-derived macrophages
+L42|These findings suggest that PSRC1 can alleviate pyroptosis and inflammation in bone marrow-derived macrophages (BMDMs) by regulating the ECM and negatively regulating POSTN.
+L45|proline/serine-rich coiled-coil protein 1; pyroptosis; bone marrow-derived macrophages; inflammation
+L67|PSRC1 -knockout bone marrow-derived macrophages (BMDMs), we further found that PSRC1 mitigates macrophage pyroptosis and the accompanying proinflammatory cytokines.
+L81|Primary BMDMs were subsequently cultured in high-glucose DMEM supplemented with 10% FBS, 100 U/mL penicillin/streptomycin and 20 ng/mL M-CSF (Z03275;

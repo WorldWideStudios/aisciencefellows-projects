@@ -1,0 +1,6 @@
+   2 l19:mice
+   1 l32:human
+   1 l19:mouse
+   1 l19:c57bl/6j
+   1 l17:bovine
+   1 l136:mice

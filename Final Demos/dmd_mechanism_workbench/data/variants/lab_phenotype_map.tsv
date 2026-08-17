@@ -1,0 +1,30 @@
+## Lab → phenotype-node mapping for the DMD workbench.
+## Each row is: a lab key we observe → the mechanism-chain phenotype node it is
+## evidence for. The phenotype nodes are the terminal nodes of the biological
+## cascade (variant → protein → pathway → cell/tissue → phenotype). Labs are
+## the observable projection of those phenotype nodes.
+##
+## Curated from DMD clinical trial endpoints (NSAA, 6MWT, TTS), standard
+## cardiology (troponin, BNP, LVEF, LGE), respiratory (FVC, PCF), muscle-
+## enzyme biochemistry (CK, LDH, aldolase, MRI fat fraction), Dp260/retinal
+## (ERG), Dp427c/cognitive (IQ), and Dp71/renal (UACR).
+##
+## Multiple labs can point to the same phenotype (they corroborate). Multi-
+## phenotype labs (LDH — muscle + hemolysis + tumor lysis) are entered
+## against their DMD-relevant primary phenotype only.
+lab_key	phenotype_node	interpretation
+CK	skeletal_muscle_myonecrosis	CK leak from damaged sarcolemma; hallmark of active myofiber necrosis
+LDH	skeletal_muscle_myonecrosis	nonspecific tissue lysis; in DMD context reflects muscle damage
+aldolase	skeletal_muscle_myonecrosis	muscle enzyme leak; corroborates CK
+MRI_ff_VL	skeletal_muscle_fibro_fatty_replacement	MRI fat fraction — chronic replacement of muscle with fibro-fatty tissue
+FVC_pct	respiratory_failure	forced vital capacity decline — diaphragm + intercostal weakness
+PCF	respiratory_failure	peak cough flow — bulbar / respiratory muscle strength
+NT_proBNP	cardiac_muscle_injury	ventricular stress / injury signal
+LVEF	cardiac_dysfunction	global cardiac contractile function
+LGE	cardiac_fibrosis	late gadolinium enhancement = replacement fibrosis (endomysial → chamber-level)
+ERG_bwave	retinal_dysfunction	Dp260 loss → altered scotopic b-wave amplitude
+IQ	cns_cognitive	Dp427c / Dp140 loss → cognitive comorbidity
+UACR	renal_dysfunction	Dp71 loss in podocytes → glomerular filtration signal
+NSAA	functional_impairment_ambulatory	North Star Ambulatory Assessment — composite functional score
+m6MWT	functional_impairment_ambulatory	6-minute walk test — endurance / gait function
+TTS	functional_impairment_ambulatory	time to stand from supine — Gowers-adjacent functional endpoint

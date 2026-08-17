@@ -1,0 +1,3 @@
+L22|Culture L929 cells in complete DMEM ( Table 1 ) in 10-cm cell culture dishes at 37°C and 5% CO 2 .
+L41|Table 3 BMDM differentiation medium Reagent Final concentration Amount for 500 mL Complete RPMI 1640 Medium 70% 350 mL L929 conditioned medium 30% 150 mL Store at 4°C for up to 1 month
+L62|If the quality of the L929 conditioned media is good, differentiation of BMDMs is expected to be achieved within 7 days.

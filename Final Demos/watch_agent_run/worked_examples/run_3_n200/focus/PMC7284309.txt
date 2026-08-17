@@ -1,0 +1,12 @@
+L24|The supernatants were discarded and cells were resuspended in 1 ml of DMEM F12 growth media containing  l -glutamine (2 mM), penicillin (100 units/ml), streptomycin (0.1 mg/ml), 10% FBS and 10% L-Cell Media (LCM) as a source of MCSF growth factor (DMEM F12 LCM growth media).
+L28|Cells were cultured for 7 days and fed with addition of 1 ml DMEM F12 MCSF growth media containing MCSF (50 ng/ml) on Day 5 of culture, and addition of GMCSF (50 ng/ml) on Day 6.
+L28|On Day 7 cells were washed with warm PBS to remove unadhered cells and media was replaced with DMEM F12 containing  l -glutamine (2 mM), penicillin (100 units/ml), streptomycin (0.1 mg/ml), 2% FBS, MCSF (25 ng/ml) and GMCSF (50 ng/ml).
+L50|Interestingly, similarly substantial levels of BH 4  and BH 2  were present in 10% LCM but not preparations of recombinant MCSF growth factor ( Fig.
+L53|Culturing macrophages using a range of seeding densities and feeding protocols (data not shown) revealed that bone marrow seeded at 500,000 cells/well of a 6 well plate in DMEM F12 media containing 5% FBS and 25 ng/ml MCSF for 7 days, with addition of 50 ng/ml MCSF media on Day 5, was optimal to produce confluent macrophages on day 7 ( Figs.
+L53|Removing MCSF from media overnight between day 7 and 8 resulted in detachment of cells ( Fig.
+L53|S5C ), but with MCSF in the media cells were adherent in both 5 and 2% FBS media ( Fig.
+L53|S5C ), so DMEM F12 media containing 2% FBS and 25 ng/ml MCSF was chosen for overnight stimulation ( Fig.
+L63|Macrophages grown in LCM, MCSF and MCSF + GMCSF were at least 95% positive for the leukocyte cell surface receptor CD45, as well as macrophage markers F4/80, CD11b and MHC II on day 7 of culture ( Fig.
+L65|Cytokines were measured in DMEM F12 media containing 5% FBS and (A) 10% LCM or (B) MCSF and GMCSF using a cytokine profiler spotted with specific capture antibodies.
+L68|To further define the composition of this media, DMEM F12 media containing 10% LCM was analysed using a cytokine profiler array which revealed that in addition to MCSF, this media contained TNFα, CXCL1, CCL2 and tissue inhibitor of metalloproteinases-1 (TIMP1), whereas MCSF + GMCSF media only contained MCSF and GMCSF ( Fig.
+L78|The concentration of MCSF in culture media was optimised to 25 ng/ml and, although MCSF levels appeared relatively much lower in media containing 10% LCM, the cells in LCM grew at the same rate (not shown).

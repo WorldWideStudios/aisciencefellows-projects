@@ -1,0 +1,76 @@
+[1] Scafidi et al. "Metformin impacts the differentiation of mouse bone marrow cells into macrophages affecting tumour immunity" *Heliyon* (2024). doi:10.1016/j.heliyon.2024.e37792
+[2] Wang et al. "Characterization of murine macrophages from bone marrow, spleen and peritoneum" *BMC Immunology* (2013). doi:10.1186/1471-2172-14-6
+[3] Xie et al. "Phenotypic comparison and the potential antitumor function of immortalized bone marrow-derived macrophages (iBMDMs)" *Frontiers in Immunology* (2024). doi:10.3389/fimmu.2024.1379853
+[4] Cockrell et al. "Robust growth of avirulent phase II  Coxiella burnetii  in bone marrow-derived murine macrophages" *PLoS ONE* (2017). doi:10.1371/journal.pone.0173528
+[5] Bailey et al. "Isolation and culture of murine bone marrow-derived macrophages for nitric oxide and redox biology" *Nitric Oxide* (2020). doi:10.1016/j.niox.2020.04.005
+[6] Petry et al. "Protocol for long-term monocultures of murine macrophages derived from distinct adult tissues" *STAR Protocols* (2024). doi:10.1016/j.xpro.2024.103145
+[7] Woods et al. "HIF-1α regulates mitochondrial function in bone marrow-derived macrophages, but not in tissue-resident alveolar macrophages" *bioRxiv* (2024). doi:10.1101/2024.10.14.618294
+[8] Woods et al. "HIF-1 regulates mitochondrial function in bone marrow-derived macrophages but not in tissue-resident alveolar macrophages" *Scientific Reports* (2025). doi:10.1038/s41598-025-95962-3
+[9] Nasser et al. "Establishment of bone marrow-derived M-CSF receptor-dependent self-renewing macrophages" *Cell Death Discovery* (2020). doi:10.1038/s41420-020-00300-3
+[10] Habash et al. "Macrophages with different origins proliferate  ex vivo  and do not lose their core intrinsic features" *iScience* (2025). doi:10.1016/j.isci.2025.112635
+[11] Huang et al. "B cells induced regulatory T cells attenuated the classical M1 polarization of mouse bone marrow-derived macrophages" *Scientific Reports* (2025). doi:10.1038/s41598-025-19445-1
+[12] Henning et al. "The novel cytotoxic polybisphosphonate osteodex decreases bone resorption by enhancing cell death of mature osteoclasts without affecting osteoclastogenesis of RANKL-stimulated mouse bone marrow macrophages" *Investigational New Drugs* (2024). doi:10.1007/s10637-024-01427-1
+[13] Yun et al. "Rhusflavone Modulates Osteoclastogenesis Through RANKL-Induced AKT Signaling in Bone Marrow-Derived Macrophages" *International Journal of Molecular Sciences* (2025). doi:10.3390/ijms26073025
+[14] Memida et al. "B10 Promotes Polarization and Pro-Resolving Functions of Bone Marrow Derived Macrophages (BMDM) Through PD-1 Activation" *Cells* (2025). doi:10.3390/cells14120860
+[15] Wu et al. "Proline/serine-rich coiled-coil protein 1 alleviates pyroptosis in murine bone marrow-derived macrophages" *Acta Biochimica et Biophysica Sinica* (2025). doi:10.3724/abbs.2025012
+[16] Jang et al. "An LGR4 agonist activates the GSK-3β pathway to inhibit RANK-RANKL signaling during osteoclastogenesis in bone marrow-derived macrophages" *International Journal of Molecular Medicine* (2024). doi:10.3892/ijmm.2023.5334
+[17] Dawson et al. "Leukaemia exposure alters the transcriptional profile and function of BCR::ABL1 negative macrophages in the bone marrow niche" *Nature Communications* (2024). doi:10.1038/s41467-024-45471-0
+[18] Andreu et al. "Primary macrophages and J774 cells respond differently to infection with  Mycobacterium tuberculosis" *Scientific Reports* (2017). doi:10.1038/srep42225
+[19] Dill-McFarland et al. "Shared and distinct responses of human and murine alveolar macrophages and monocyte-derived macrophages to  Mycobacterium tuberculosis" *ImmunoHorizons* (2025). doi:10.1093/immhor/vlaf051
+[20] Livkisa et al. "Distinct immunomodulation elicited by young versus aged extracellular vesicles in bone marrow-derived macrophages" *Immunity & Ageing : I & A* (2024). doi:10.1186/s12979-024-00472-x
+[21] Veerapandian et al. "Comparative transcriptomic analysis of mouse macrophages infected with live attenuated vaccine strains of  Mycobacterium tuberculosis" *Frontiers in Immunology* (2025). doi:10.3389/fimmu.2025.1583439
+[22] Song et al. "The Culture Dish Surface Influences the Phenotype and Dissociation Strategy in Distinct Mouse Macrophage Populations" *Frontiers in Immunology* (2022). doi:10.3389/fimmu.2022.920232
+[23] Bisgaard et al. "Bone marrow-derived and peritoneal macrophages have different inflammatory response to oxLDL and M1/M2 marker expression – implications for atherosclerosis research" *Scientific Reports* (2016). doi:10.1038/srep35234
+[24] Wasson et al. "Bone marrow monocytes and macrophages from mice lacking  βENaC  and  ASIC2  have a reduced chemotactic migration response and polarization" *Physiological Reports* (2024). doi:10.14814/phy2.16139
+[25] Ihle et al. "Unique macrophage phenotypes activated by BMP signaling in breast cancer bone metastases" *JCI Insight* (2024). doi:10.1172/jci.insight.168517
+[26] Xu et al. "Protocol for analyzing BCG-induced trained immunity in murine bone marrow-derived macrophages" *STAR Protocols* (2024). doi:10.1016/j.xpro.2024.103267
+[27] Chen et al. "Protocol for isolating and characterizing extracellular vesicles by ultracentrifugation from bone marrow-derived macrophages" *STAR Protocols* (2025). doi:10.1016/j.xpro.2025.104098
+[28] Scafidi et al. "Protocol for the generation and assessment of functional macrophages from mouse bone marrow cells" *STAR Protocols* (2025). doi:10.1016/j.xpro.2025.103706
+[29] Toda et al. "Preparation and culture of bone marrow-derived macrophages from mice for functional analysis" *STAR Protocols* (2020). doi:10.1016/j.xpro.2020.100246
+[30] Chan et al. "Proinflammatory Cytokine Response and Viral Replication in Mouse Bone Marrow Derived Macrophages Infected with Influenza H1N1 and H5N1 Viruses" *PLoS ONE* (2012). doi:10.1371/journal.pone.0051057
+[31] Takahashi et al. "Persistent colonization of non-lymphoid tissue-resident macrophages by  Stenotrophomonas maltophilia" *International Immunology* (2020). doi:10.1093/intimm/dxz071
+[32] Zheng et al. "Single-cell analysis reveals  Mycobacterium tuberculosis  ESX-1–mediated accumulation of permissive macrophages in infected mouse lungs" *Science Advances* (2025). doi:10.1126/sciadv.adq8158
+[33] Lai et al. "Ferritinophagy activation states determine the susceptibility to ferroptosis of macrophages in bone marrow and spleen" *International Journal of Biological Sciences* (2025). doi:10.7150/ijbs.114545
+[34] Rabhi et al. "Transcriptomic Signature of  Leishmania  Infected Mice Macrophages: A Metabolic Point of View" *PLoS Neglected Tropical Diseases* (2012). doi:10.1371/journal.pntd.0001763
+[35] Cheong et al. "Glucosylceramide synthase modulation ameliorates murine renal pathologies and promotes macrophage effector function in vitro" *Communications Biology* (2024). doi:10.1038/s42003-024-06606-7
+[36] Khan et al. "Francisella tularensis  Live Vaccine Strain training of murine alveolar and bone marrow-derived macrophages" *Microbiology Spectrum* (2024). doi:10.1128/spectrum.00028-24
+[37] Lin et al. "Bone marrow-derived CD169 +  macrophages promote autoimmune hepatitis by recruiting CCR2 +  monocytes via secreting CCL12" *Experimental & Molecular Medicine* (2025). doi:10.1038/s12276-025-01607-w
+[38] Carter et al. "Delta-9-Tetrahydrocannabinol Blocks Bone Marrow-Derived Macrophage Differentiation through Elimination of Reactive Oxygen Species" *Antioxidants* (2024). doi:10.3390/antiox13080887
+[39] Ma et al. "Epstein–Barr virus infection exacerbates ulcerative colitis by driving macrophage pyroptosis via the upregulation of glycolysis" *Precision Clinical Medicine* (2025). doi:10.1093/pcmedi/pbaf002
+[40] Yakhshimurodov et al. "A generalized protocol for the induction of M2-like macrophages from mouse and rat bone marrow mononuclear cells" *Biology Methods & Protocols* (2025). doi:10.1093/biomethods/bpaf020
+[41] Marim et al. "A Method for Generation of Bone Marrow-Derived Macrophages from Cryopreserved Mouse Bone Marrow Cells" *PLoS ONE* (2010). doi:10.1371/journal.pone.0015263
+[42] Zajd et al. "Bone Marrow-Derived and Elicited Peritoneal Macrophages Are Not Created Equal: The Questions Asked Dictate the Cell Type Used" *Frontiers in Immunology* (2020). doi:10.3389/fimmu.2020.00269
+[43] Wollman et al. "Mannose receptor (MRC1) mediates uptake of dextran by bone marrow–derived macrophages" *Molecular Biology of the Cell* (2024). doi:10.1091/mbc.E24-08-0355
+[44] Lee & Hu "Cell density during differentiation can alter the phenotype of bone marrow-derived macrophages" *Cell & Bioscience* (2013). doi:10.1186/2045-3701-3-30
+[45] Li et al. "Dysregulated cholesterol uptake and efflux of bone marrow-derived α-SMA +  macrophages contribute to atherosclerotic plaque formation" *Cellular and Molecular Life Sciences: CMLS* (2025). doi:10.1007/s00018-025-05655-3
+[46] Su et al. "G protein-coupled receptor 91 promotes the inflammatory response to  Porphyromonas gingivalis  in bone marrow-derived macrophages" *Heliyon* (2024). doi:10.1016/j.heliyon.2024.e34509
+[47] Jin et al. "EGFR-MEK1/2 cascade negatively regulates bactericidal function of bone marrow macrophages in mice with  Staphylococcus aureus  osteomyelitis" *PLOS Pathogens* (2024). doi:10.1371/journal.ppat.1012437
+[48] Silva et al. "The Effects of  Paracoccidioides brasiliensis  Infection on GM-CSF- and M-CSF-Induced Mouse Bone Marrow-Derived Macrophage from Resistant and Susceptible Mice Strains" *Mediators of Inflammation* (2015). doi:10.1155/2015/605450
+[49] Heap et al. "Proteomics characterisation of the L929 cell supernatant and its role in BMDM differentiation" *Life Science Alliance* (2021). doi:10.26508/lsa.202000957
+[50] Meester et al. "Nocardia brasiliensis  Induces Formation of Foamy Macrophages and Dendritic Cells  In Vitro  and  In Vivo" *PLoS ONE* (2014). doi:10.1371/journal.pone.0100064
+[51] Pajarinen et al. "Establishment of Green Fluorescent Protein and Firefly Luciferase Expressing Mouse Primary Macrophages for In Vivo Bioluminescence Imaging" *PLoS ONE* (2015). doi:10.1371/journal.pone.0142736
+[52] Alothaimeen et al. "Differential TLR7-mediated cytokine expression by R848 in M-CSF- versus GM-CSF-derived macrophages after LCMV infection" *The Journal of General Virology* (2021). doi:10.1099/jgv.0.001541
+[53] Robles-Vera et al. "Microbiota translocation following intestinal barrier disruption promotes Mincle-mediated training of myeloid progenitors in the bone marrow" *Immunity* (2025). doi:10.1016/j.immuni.2024.12.012
+[54] Gracey et al. "Intracellular Survival and Persistence of  Chlamydia muridarum  Is Determined by Macrophage Polarization" *PLoS ONE* (2013). doi:10.1371/journal.pone.0069421
+[55] Petursdottir et al. "Macrophage Control of Phagocytosed Mycobacteria Is Increased by Factors Secreted by Alveolar Epithelial Cells through Nitric Oxide Independent Mechanisms" *PLoS ONE* (2014). doi:10.1371/journal.pone.0103411
+[56] Tian et al. "Myeloid-derived Wnts play an indispensible role in macrophage and fibroblast activation and kidney fibrosis" *International Journal of Biological Sciences* (2024). doi:10.7150/ijbs.94166
+[57] Taciak et al. "Unveiling the Phenotypic Variability of Macrophages: Insights from Donor Diversity and Pooling Strategies" *International Journal of Molecular Sciences* (2025). doi:10.3390/ijms26031272
+[58] Nguyen et al. "A protocol for macrophage depletion and reconstitution in a mouse model of sepsis" *STAR Protocols* (2021). doi:10.1016/j.xpro.2021.101004
+[59] Lewis et al. "In Vitro Screening Method for Characterization of Macrophage Activation Responses" *Methods and Protocols* (2022). doi:10.3390/mps5050068
+[60] Steele "Bacterial Synchronized Transfer Assays in Bone Marrow Derived Macrophages" *Bio-protocol* (None). doi:10.21769/BioProtoc.3437
+[61] Yeung et al. "Conditional-ready mouse embryonic stem cell derived macrophages enable the study of essential genes in macrophage function" *Scientific Reports* (2015). doi:10.1038/srep08908
+[62] Lee et al. "Insufficient Generation of Mycobactericidal Mediators and Inadequate Level of Phagosomal Maturation Are Related with Susceptibility to Virulent  Mycobacterium tuberculosis  Infection in Mouse Macrophages" *Frontiers in Microbiology* (2016). doi:10.3389/fmicb.2016.00541
+[63] Cabral et al. "Circadian Control of the Response of Macrophages to  Plasmodium  Spp.–Infected Red Blood Cells" *ImmunoHorizons* (2024). doi:10.4049/immunohorizons.2400021
+[64] Wells et al. "Differentiating  Peromyscus leucopus  bone marrow-derived macrophages for characterization of responses to  Borrelia burgdorferi  and lipopolysaccharide" *Infection and Immunity* (2025). doi:10.1128/iai.00581-24
+[65] Comità et al. "Lack of Hfe and TfR2 in Macrophages Impairs Iron Metabolism in the Spleen and the Bone Marrow" *International Journal of Molecular Sciences* (2024). doi:10.3390/ijms25179142
+[66] Na et al. "GM-CSF Grown Bone Marrow Derived Cells Are Composed of Phenotypically Different Dendritic Cells and Macrophages" *Molecules and Cells* (2016). doi:10.14348/molcells.2016.0160
+[67] Robinson et al. "Generation and utilization of a HEK-293T murine GM-CSF expressing cell line" *PLoS ONE* (2021). doi:10.1371/journal.pone.0249117.r006
+[68] Nix et al. "Hemophagocytic Macrophages Harbor  Salmonella enterica  during Persistent Infection" *PLoS Pathogens* (2007). doi:10.1371/journal.ppat.0030193
+[69] Ito et al. "Establishment of Self-Renewable GM-CSF-Dependent Immature Macrophages  In Vitro  from Murine Bone Marrow" *PLoS ONE* (2013). doi:10.1371/journal.pone.0076943
+[70] Kobatake et al. "Small extracellular vesicles derived from auricular chondrocytes promote secretion of interleukin 10 in bone marrow M1-like macrophages" *Regenerative Therapy* (2025). doi:10.1016/j.reth.2025.01.009
+[71] Nakao et al. "Modifying immune cells using mouse bone marrow-derived cell exosomes during administration of heat-killed lactic acid bacterium  Enterococcus faecalis" *Biomedical Reports* (2025). doi:10.3892/br.2025.1992
+[72] Hu et al. "Extracellular Vesicles From Bone Marrow‐Derived Macrophages Enriched in ARG1 Enhance Microglial Phagocytosis and Haematoma Clearance Following Intracerebral Haemorrhage" *Journal of Extracellular Vesicles* (2025). doi:10.1002/jev2.70041
+[73] Yoshida et al. "Transcriptome analysis of long non-coding RNAs in  Mycobacterium avium  complex–infected macrophages" *Frontiers in Immunology* (2024). doi:10.3389/fimmu.2024.1374437
+[74] Roberts et al. "Cas9 +  conditionally-immortalized macrophages as a tool for bacterial pathogenesis and beyond" *eLife* (2019). doi:10.7554/eLife.45957.012
+[75] Aktories et al. "An improved organotypic cell culture system to study tissue-resident macrophages  ex vivo" *Cell Reports Methods* (2022). doi:10.1016/j.crmeth.2022.100260
+[76] Nazzaro et al. "In vitro  generated macrophages reflect the immunosuppressive phenotype of  in vivo  glioblastoma-associated macrophages" *Oncoimmunology* (2026). doi:10.1080/2162402X.2025.2610562

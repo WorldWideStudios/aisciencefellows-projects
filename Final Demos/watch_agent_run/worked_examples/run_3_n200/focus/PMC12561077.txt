@@ -1,0 +1,4 @@
+L16|CMPs differentiate into granulocyte-monocyte progenitors (GMPs) in response to GM-CSF and IL-3, activating signaling pathways such as JAK-STAT and MAPK/ERK, promoting nuclear translocation of transcription factors PU.1 and C/EBPα, and initiating the expression of CSF1R and CSF3R [ 9 ].
+L16|Under the influence of GM-CSF and G-CSF, GMPs generate neutrophil precursors that mature into neutrophils.
+L16|GMPs further differentiate into monocytes, which migrate to tissues and differentiate into macrophages (M1 or M2 type) under the action of M-CSF, participating in pathogen phagocytosis, antigen presentation, and immune regulation [ 11 ].
+L25|Macrophages can also differentiate into osteoclasts under the influence of RANKL and M-CSF, contributing to bone resorption.

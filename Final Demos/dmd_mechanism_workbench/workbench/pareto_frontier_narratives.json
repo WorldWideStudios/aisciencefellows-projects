@@ -1,0 +1,486 @@
+{
+  "P1|01": {
+    "patient_id": "P1",
+    "hypothesis_id": "01",
+    "narrative": "Patient P1 carries DMD c.6540del, p.(Leu2181Tyrfs*8) in exon 45 (Zhang 2024, ACMG LP), a frameshift that introduces a premature termination codon consistent with the Monaco 1988 reading-frame rule and the Aartsma-Rus 2006 downstream-PTC pattern. Because this PTC sits at c.6540 \u2014 4499 nt upstream of the last exon\u2013exon junction at c.11039 \u2014 it triggers NMD under the 50-nt rule (nmd_prediction; Popp & Maquat 2013), degrading transcripts for Dp427m, Dp427c, Dp427p, Dp260 and Dp140 while sparing Dp71/Dp116 (iso_arch), with Hoffman 1988 confirming <3% residual protein. Loss of the C-terminal cysteine-rich \u03b2-DG-binding and syntrophin/dystrobrevin domains (domain_annotation P11532) abolishes the sarcolemmal anchor documented by UniProt localisation and by Ervasti & Campbell 1993 and Ohlendieck 1991, dismantling the Reactome DGC-formation pathway (R-HSA-9913351; OpenTargets assoc 0.87). Contraction-induced micro-tears then admit Ca\u00b2\u207a (Petrof 1993), activating calpain-1 (Alderton 2000) and opening the MPTP in already-compromised mitochondria (Millay 2008, Vila 2017), producing myonecrosis in Myonuclei and Cardiomyocytes \u2014 precisely the DGC-completeness=0.43 populations flagged in this patient \u2014 reflected in CK 14348 U/L, LDH 560, aldolase 43 (Zatz 2016). Repeated injury exhausts satellite cells (Sacco 2010, Dumont 2015) and drives FAP-mediated fibro-fatty replacement (Uezumi 2010, Bernasconi 1995), matching vastus-lateralis fat fraction 52%, cardiac LGE, FVC 70.4%, NSAA 3/34, 30-s supine-to-stand and 6MWT 0 m. With no contradictions, this mechanism fully and credibly explains P1's DMD phenotype and is directly addressable by casimersen (AMONDYS 45).",
+    "model": "claude-opus-4-7",
+    "generated": "2026-08-13T19:38:33+00:00",
+    "n_node_premises": 31,
+    "n_edge_premises": 23,
+    "usage": {
+      "input_tokens": 22783,
+      "output_tokens": 788,
+      "cost_usd": 0.4008
+    },
+    "summary": "DMD c.6540del p.(Leu2181Tyrfs*8) triggers NMD-mediated loss of Dp427m/c/p/Dp260/Dp140, dismantling the sarcolemmal DGC and enabling Ca\u00b2\u207a-driven myonecrosis and fibro-fatty degeneration.",
+    "summary_model": "claude-haiku-4-5-20251001",
+    "summary_at": "2026-08-13T19:47:18+00:00",
+    "summary_usage": {
+      "input_tokens": 753,
+      "output_tokens": 82,
+      "cost_usd": 0.00116
+    }
+  },
+  "P1|03": {
+    "patient_id": "P1",
+    "hypothesis_id": "03",
+    "narrative": "The patient's DMD exon 45 frameshift c.6540del, p.(Leu2181Tyrfs*8), catalogued as likely pathogenic in the Zhang 2024 S1_novel cohort, introduces a premature termination codon with negligible splice contribution (AbSplice 0.03; absplice premise), so the exonic consequence dominates. Per the nmd_prediction premise, the PTC at c.6540 lies 4499 nt upstream of the terminal exon-junction at c.11039, satisfying the \u226550-nt rule (Popp & Maquat 2013) and marking the transcript for nonsense-mediated decay; the isoform_arch projection shows Dp427m, Dp427c, Dp427p, Dp260, and Dp140 are all hit, while Dp116 and Dp71 are spared. Kerr 2001 quantifies muscle NMD as reducing mutant mRNA to ~5\u201315% of wild-type, effectively abolishing sarcolemmal dystrophin, whose UniProt-annotated peripheral membrane localization and cysteine-rich/C-terminal \u03b2-dystroglycan anchoring (domain_annotation) are required for DGC assembly via SNTA1, SGCA/B/D, DTNA, and CAV3 (OpenTargets Reactome R-HSA-9913351). Linde 2007 notes tissue-graded NMD escape, but Flanigan 2009 confirms muscle NMD is efficient, producing severe DMD. The celltype_impact and dgc_completeness premises show Myonuclei and Cardiomyocytes lose Dp427m with mean DGC-completeness 0.31, driving the CK of 14,348 U/L, LDH 560, and aldolase 43. Cell-to-tissue propagation (tissue_impact; Bello 2016) explains vastus lateralis fat fraction 52%, cardiac late gadolinium enhancement, FVC 70.4%, NSAA 3/34, and non-ambulation (6MWT 0 m). This mechanism credibly and comprehensively explains the patient's severe DMD phenotype.",
+    "model": "claude-opus-4-7",
+    "generated": "2026-08-13T19:38:47+00:00",
+    "n_node_premises": 23,
+    "n_edge_premises": 15,
+    "usage": {
+      "input_tokens": 19151,
+      "output_tokens": 714,
+      "cost_usd": 0.3408
+    },
+    "summary": "DMD c.6540del causes premature termination codon\u2013driven nonsense-mediated decay of Dp427m, Dp427c, Dp427p, Dp260, and Dp140 isoforms, ablating sarcolemmal dystrophin and DGC assembly in myonuclei and cardiomyocytes, producing severe muscle degeneration, elevated creatine kinase, and non-ambulatory DMD.",
+    "summary_model": "claude-haiku-4-5-20251001",
+    "summary_at": "2026-08-13T19:47:20+00:00",
+    "summary_usage": {
+      "input_tokens": 681,
+      "output_tokens": 104,
+      "cost_usd": 0.0012
+    }
+  },
+  "P1|04": {
+    "patient_id": "P1",
+    "hypothesis_id": "04",
+    "narrative": "The Zhang 2024 record (premiseId zhang|S1_novel|2) identifies a frameshift c.6540del, p.(Leu2181Tyrfs*8) in exon 45 of DMD, classified LP with a DMD phenotype. At the protein layer, the isoform-architecture projection (iso_arch|S1_novel|2) places this exon-45 lesion upstream of the Dp140 promoter (intron 44) but downstream of the Dp71 promoter (intron 62; Byers 1993), so Dp427m, Dp427c, Dp427p, Dp260 and Dp140 are hit while Dp116 and Dp71 are spared; the nmd_prediction premise confirms the PTC at c.6540 sits 4499 nt upstream of the last EEJ (c.11039), triggering NMD (Popp & Maquat 2013) and eliminating the affected transcripts. Because the Dp427m sarcolemmal pool is also lost, UniProt-annotated sarcolemma/costamere localisation (uniprot_subcellular|DMD) collapses in muscle rather than being selectively distal. At the cell layer, HPA expression (hpa|DMD) and celltype_impact confirm Dp427m loss in myonuclei and cardiomyocytes plus partial Dp260 loss in rod/cone photoreceptors, with Dp71 sparing adipocytes; Lidov 1995 and Pillers 1993 tie the Dp140/Dp260 loss to cortical astrocytes and retina. Tissue-impact evidence (tissue_impact|S1_novel|2) shows CNS, retina, kidney AND skeletal/cardiac muscle involvement, matching the FVC 70.4%, vastus fat fraction 52%, cardiac LGE, CK 14348 U/L, NSAA 3/34 and 6MWT 0 m \u2014 a classical Dp427m-loss picture, not an isoform-scoped one. The cellType contradiction (negativeSum 0.8 > positiveSum 0.6) and preserved-motor expectation of H04 are directly violated. Verdict: the distal-isoform-loss mechanism is at best a secondary contributor explaining the reduced IQ (87) and attenuated ERG b-wave (Ricotti 2016; Pillers 1993), while classical Dp427m loss drives the dominant phenotype.",
+    "model": "claude-opus-4-7",
+    "generated": "2026-08-13T19:39:03+00:00",
+    "n_node_premises": 12,
+    "n_edge_premises": 17,
+    "usage": {
+      "input_tokens": 17259,
+      "output_tokens": 801,
+      "cost_usd": 0.319
+    },
+    "summary": "Frameshift c.6540del p.(Leu2181Tyrfs*8) in DMD exon 45 triggers NMD and eliminates Dp427m, Dp260, and Dp140, causing classical multi-tissue dystrophy (muscle, heart, CNS, retina) rather than isolated distal-isoform pathology.",
+    "summary_model": "claude-haiku-4-5-20251001",
+    "summary_at": "2026-08-13T19:47:21+00:00",
+    "summary_usage": {
+      "input_tokens": 752,
+      "output_tokens": 84,
+      "cost_usd": 0.00117
+    }
+  },
+  "P10|01": {
+    "patient_id": "P10",
+    "hypothesis_id": "01",
+    "narrative": "Patient P10 carries the ACMG-pathogenic DMD splice-donor variant c.9361+1G>C (Zhang 2024, cohort S2_reported), which AbSplice scores at 0.88 in Heart_Atrial_Appendage and 0.86 in Muscle_Skeletal, abolishing U1 recognition and predicting canonical exon 65 skipping (absplice premise). Applying the Monaco 1988 reading-frame rule and Aartsma-Rus 2006's ~200-codon PTC estimate, the resulting frameshift generates a premature termination codon well upstream of the last exon-exon junction at cDNA 11039, triggering NMD (nmd_prediction; Popp & Maquat 2013 50-nt rule) and ablating every long-form isoform \u2014 Dp427m, Dp427c, Dp427p, Dp260, Dp140, Dp116, and Dp71 (iso_arch). Because the truncation lies at aa~3120 within the cysteine-rich \u03b2-dystroglycan-binding domain (domain_annotation, aa 3081\u20133360), the C-terminal syntrophin/dystrobrevin scaffold is lost, and per Ervasti & Campbell 1993 and Ohlendieck 1991 the entire DGC dissociates from the sarcolemma (protein\u2192subcellular; UniProt P11532 sarcolemmal localisation). Petrof 1993 links this to contraction-induced micro-tears admitting Ca\u00b2\u207a, activating calpain-1 (Alderton 2000) and opening the MPTP with ROS burst (Millay 2008, Vila 2017). Necrosis manifests in myonuclei and cardiomyocytes (celltype_impact; mean DGC-completeness 0.29), driving CK 13081 U/L (65\u00d7 ULN), LDH 444, and aldolase 41 (Zatz 2016). FAP expansion (Uezumi 2010) and TGF-\u03b2 fibrosis (Bernasconi 1995) yield vastus lateralis fat fraction 27.7% and 6MWT 380 m. The exon_skip contradiction (no approved ASO for exon 64) limits therapy but does not weaken mechanism. Verdict: this mechanism fully and credibly explains P10's DMD phenotype.",
+    "model": "claude-opus-4-7",
+    "generated": "2026-08-13T19:39:20+00:00",
+    "n_node_premises": 30,
+    "n_edge_premises": 23,
+    "usage": {
+      "input_tokens": 23209,
+      "output_tokens": 772,
+      "cost_usd": 0.406
+    },
+    "summary": "DMD c.9361+1G>C abolishes U1 recognition, causing exon 65 skipping, frameshift, NMD of all long-form isoforms, DGC sarcolemmal loss, and Ca\u00b2\u207a-driven myonecrosis manifesting as severe elevation of CK, LDH, and progressive muscle weakness.",
+    "summary_model": "claude-haiku-4-5-20251001",
+    "summary_at": "2026-08-13T19:47:23+00:00",
+    "summary_usage": {
+      "input_tokens": 745,
+      "output_tokens": 84,
+      "cost_usd": 0.00117
+    }
+  },
+  "P10|03": {
+    "patient_id": "P10",
+    "hypothesis_id": "03",
+    "narrative": "Patient P10 carries the DMD canonical splice-donor variant c.9361+1G>C (ACMG Pathogenic, Zhang 2024 record 266). Per Aartsma-Rus 2006, splice-site lesions generate a premature termination codon via exon skipping or intron retention, and AbSplice scores of 0.88 in Heart_Atrial_Appendage and 0.86 in Muscle_Skeletal confirm the +1 donor abolishes U1 recognition and forces exon 65 skipping. Because the resulting PTC lies at cDNA 9361 \u2014 well upstream of the 10,989-nt escape threshold and last exon-exon junction at 11,039 (Popp & Maquat 2013, 50-nt rule) \u2014 the transcript is NMD-triggered, hitting Dp427m, Dp260, Dp140, Dp116 and Dp71 with no spared isoforms (iso_arch). Kerr 2001 documents that muscle NMD collapses mutant mRNA to 5\u201315% of wild-type, so the sarcolemmal dystrophin pool (UniProt P11532: peripheral membrane, cytoplasmic face) is essentially absent, precluding assembly of the Reactome DGC (R-HSA-9913351). Linde 2007 notes tissue-graded NMD escape, which fits this patient's multi-tissue but muscle-dominant profile: myonuclei and cardiomyocytes lose Dp427m (DGC completeness 0.43), while rod/cone photoreceptors lose Dp260/Dp71 (completeness 0.14\u20130.21). Per Flanigan 2009, efficient muscle NMD yields near-total Dp427m loss and severe DMD indistinguishable from deletion carriers, manifest here as CK 13,081 U/L (65\u00d7 ULN), aldolase 41, LDH 444, vastus lateralis MRI fat fraction 27.7%, 6MWT 380 m, plus subclinical retinal (ERG b-wave 140 \u00b5V) and renal (ACR 44 mg/g) DGC involvement. With no contradictions, this NMD-mediated tissue-graded transcript loss credibly and sufficiently explains P10's Duchenne phenotype.",
+    "model": "claude-opus-4-7",
+    "generated": "2026-08-13T19:39:37+00:00",
+    "n_node_premises": 21,
+    "n_edge_premises": 15,
+    "usage": {
+      "input_tokens": 18137,
+      "output_tokens": 754,
+      "cost_usd": 0.3286
+    },
+    "summary": "DMD c.9361+1G>C splice-donor variant triggers exon 65 skipping and NMD-mediated loss of all dystrophin isoforms (Dp427m, Dp260, Dp140, Dp116, Dp71), collapsing sarcolemmal DGC assembly and causing severe muscle weakness with multi-tissue involvement.",
+    "summary_model": "claude-haiku-4-5-20251001",
+    "summary_at": "2026-08-13T19:47:24+00:00",
+    "summary_usage": {
+      "input_tokens": 726,
+      "output_tokens": 86,
+      "cost_usd": 0.00116
+    }
+  },
+  "P2|01": {
+    "patient_id": "P2",
+    "hypothesis_id": "01",
+    "narrative": "Patient P2 carries DMD c.982A>T, p.(Lys328*), a nonsense variant in exon 10 confirmed by Zhang 2024 (ACMG LP); by the Monaco 1988 reading-frame rule and Aartsma-Rus 2006, this introduces a bona fide PTC, while AbSplice (max 0.04) excludes a competing splice mechanism. At the variant\u2192protein transition, the nmd_prediction premise shows the PTC lies 10,057 nt upstream of the last exon-exon junction, firing the Popp & Maquat 2013 \u226550-nt rule and destroying Dp427m, Dp427c, and Dp427p transcripts while sparing Dp260, Dp140, Dp116, and Dp71 (iso_arch). Loss of full-length dystrophin ablates both the cysteine-rich \u03b2-DG binding and C-terminal syntrophin/dystrobrevin domains (domain_annotation), so per Ervasti & Campbell 1993 and Ohlendieck 1991 the DGC dissociates from the sarcolemma (uniprot_subcellular: peripheral sarcolemmal membrane). At the subcellular\u2192pathway step, Petrof 1993 shows contraction admits Ca\u00b2\u207a through micro-tears, activating calpain-1 (Alderton 2000); Millay 2008 and Vila 2017 then link Ca\u00b2\u207a overload to MPTP opening and mitochondrial ROS, driving myonuclear/cardiomyocyte necrosis (mean DGC-completeness 0.38 across 4 hit cell types; Zatz 2016), reflected in CK 15,153 U/L (75\u00d7 ULN), LDH 601, and aldolase 47. Fibro-adipogenic progenitor expansion (Uezumi 2010) and TGF-\u03b2 fibrosis (Bernasconi 1995) then convert skeletal muscle to fibro-fatty tissue (vastus lateralis fat fraction 35.6%), yielding NSAA 26/34 and 6MWT 378 m. The only contradiction \u2014 no FDA-approved exon-10 skip \u2014 is therapeutic, not mechanistic. Verdict: this mechanism fully and credibly explains P2's DMD phenotype.",
+    "model": "claude-opus-4-7",
+    "generated": "2026-08-13T19:39:53+00:00",
+    "n_node_premises": 30,
+    "n_edge_premises": 23,
+    "usage": {
+      "input_tokens": 22409,
+      "output_tokens": 764,
+      "cost_usd": 0.3934
+    },
+    "summary": "DMD c.982A>T (p.Lys328*) introduces a premature termination codon 10,057 nt upstream of the final exon-exon junction, triggering nonsense-mediated decay of Dp427m/c/p and ablating full-length dystrophin's \u03b2-dystroglycan and syntrophin-binding domains, causing sarcolemmal DGC dissociation, Ca\u00b2\u207a-calpain-1 myonuclear necrosis, and fibro-adipogenic replacement.",
+    "summary_model": "claude-haiku-4-5-20251001",
+    "summary_at": "2026-08-13T19:47:26+00:00",
+    "summary_usage": {
+      "input_tokens": 724,
+      "output_tokens": 127,
+      "cost_usd": 0.00136
+    }
+  },
+  "P2|02": {
+    "patient_id": "P2",
+    "hypothesis_id": "02",
+    "narrative": "The candidate mechanism \u2014 in-frame rod deletion yielding a partial-function dystrophin \u2014 is a poor fit for this variant because c.982A>T, p.(Lys328*) in exon 10 is a nonsense change (Zhang 2024, ACMG LP), not an in-frame deletion; per iso_arch the premature stop hits Dp427m/c/p while sparing Dp260/Dp140/Dp116/Dp71 (aartsma_rus_2006 notes typical in-frame rescues span exons 45\u201355, not exon 10). If any truncated product escaped NMD it would retain only the N-terminal actin-binding domain (aa 1\u2013240) and lose both DGC-anchoring domains \u2014 the cysteine-rich \u03b2-dystroglycan binding region and the C-terminal syntrophin/dystrobrevin scaffold (domain_annotation; Ervasti & Campbell 1993) \u2014 so the Ohlendieck 1993 model of a partial DGC assembling around a shortened dystrophin cannot apply. At the sarcolemma (UniProt P11532), rather than Petrof 1993's \"reduced-fidelity\" mechanical coupling, the membrane is left essentially unsupported, driving frank rather than low-grade Ca\u00b2\u207a influx and calpain activation (Alderton 2000). This propagates through the Reactome DGC-formation and striated-muscle-contraction pathways into affected cardiomyocytes, myonuclei, thymic myoid and salivary myoepithelial cells (dgc_completeness 0.38), producing the patient's markedly elevated CK 15153 U/L, LDH 601 U/L and aldolase 47 U/L and 35.6% vastus lateralis fat fraction. The contradictions are decisive: NSAA 26/34 and 6MWT 378 m are only mildly reduced and were flagged as weakly BMD-supportive (Emery & Skinner 1976; Bushby 1993), yet Zhang 2024 assigns a DMD phenotype, and no approved exon-skip covers exon 10. Verdict: this in-frame/partial-function mechanism does not credibly explain this nonsense-variant DMD patient and is at best a marginal, non-operative alternative.",
+    "model": "claude-opus-4-7",
+    "generated": "2026-08-13T19:40:09+00:00",
+    "n_node_premises": 18,
+    "n_edge_premises": 11,
+    "usage": {
+      "input_tokens": 17004,
+      "output_tokens": 748,
+      "cost_usd": 0.3112
+    },
+    "summary": "c.982A>T, p.(Lys328*) in exon 10 is a nonsense variant causing premature termination of Dp427m/c/p with loss of C-terminal DGC-anchoring domains, driving unmitigated sarcolemmal Ca\u00b2\u207a influx and myonecrosis rather than partial dystrophin rescue.",
+    "summary_model": "claude-haiku-4-5-20251001",
+    "summary_at": "2026-08-13T19:47:28+00:00",
+    "summary_usage": {
+      "input_tokens": 715,
+      "output_tokens": 87,
+      "cost_usd": 0.00115
+    }
+  },
+  "P3|01": {
+    "patient_id": "P3",
+    "hypothesis_id": "01",
+    "narrative": "Patient P3 carries DMD c.9248G>A, p.(Trp3083*) in exon 63 (Zhang 2024, ACMG-P), a nonsense variant confirmed as exonic-only by negligible AbSplice signal (0.04). The PTC at codon 3083 sits 1791 nt upstream of the last exon-exon junction, firing the \u226550-nt rule (Popp & Maquat 2013) and triggering NMD, so Dp427m mRNA is degraded and any escaping truncated protein terminates within the cysteine-rich \u03b2-dystroglycan-binding domain (aa 3081\u20133360); isoform-architecture projection shows Dp427m, Dp260, Dp140, and Dp71 are all hit, with no spared isoforms. Because the cys-rich and C-terminal syntrophin/dystrobrevin domains are the DGC-anchoring modules (Ervasti & Campbell 1993; Ohlendieck 1991), dystrophin can no longer localize to the sarcolemmal peripheral membrane (UniProt P11532), collapsing Reactome's DGC-formation pathway. Contraction-induced sarcolemmal micro-tears admit Ca\u00b2\u207a (Petrof 1993), activating calpain-1 (Alderton 2000) and opening the mitochondrial permeability transition pore with ROS burst (Millay 2008; Vila 2017) in myonuclei and cardiomyocytes, producing necrosis reflected in CK 14,104 U/L (70\u00d7 ULN), LDH 594, and aldolase 39. Repeated injury exhausts satellite cells (Sacco 2010; Dumont 2015), and FAP-driven fibro-fatty replacement (Uezumi 2010; Bernasconi 1995) yields vastus lateralis fat fraction 39.7% and the DMD phenotype: NSAA 3/34, 6MWT 0 m, time-to-stand 30 s. Retinal (ERG b-wave 142 \u00b5V) and CNS (FSIQ 78) findings track loss of Dp260/Dp71 and Dp140. The only opposing edge \u2014 absence of an FDA-approved exon-63 skip \u2014 is therapeutic, not mechanistic, and does not weaken causation. Verdict: this mechanism fully and credibly explains P3's multisystem DMD phenotype.",
+    "model": "claude-opus-4-7",
+    "generated": "2026-08-13T19:40:28+00:00",
+    "n_node_premises": 31,
+    "n_edge_premises": 24,
+    "usage": {
+      "input_tokens": 23714,
+      "output_tokens": 795,
+      "cost_usd": 0.4153
+    },
+    "summary": "DMD c.9248G>A (p.Trp3083*) triggers NMD-mediated loss of all dystrophin isoforms, ablating sarcolemmal DGC anchoring and permitting Ca\u00b2\u207a-driven necrosis in skeletal and cardiac muscle, retina, and CNS.",
+    "summary_model": "claude-haiku-4-5-20251001",
+    "summary_at": "2026-08-13T19:47:30+00:00",
+    "summary_usage": {
+      "input_tokens": 759,
+      "output_tokens": 77,
+      "cost_usd": 0.00114
+    }
+  },
+  "P3|03": {
+    "patient_id": "P3",
+    "hypothesis_id": "03",
+    "narrative": "Patient P3 carries DMD c.9248G>A, p.(Trp3083*) in exon 63, a Zhang 2024\u2013reported ACMG-Pathogenic nonsense variant (zhang|S2_reported|258); AbSplice (max 0.04) confirms the lesion is exonic rather than splice-disruptive, so PTC generation is the whole story (Aartsma-Rus 2006). At the variant\u2192protein transition, the NMD predictor shows the PTC at c.9248 lies 1791 nt upstream of the terminal exon 78/79 EEJ at c.11039, firing the \u226550-nt rule (Popp & Maquat 2013) and triggering degradation of every dystrophin isoform whose 5\u2032 start lies proximal to exon 63 \u2014 isoform_arch flags Dp427m, Dp427c, Dp427p, Dp260, Dp140, Dp116 and Dp71 all hit, none spared, and ESM3 modelling (mean pLDDT 0.69) shows the truncation removes the cysteine-rich \u03b2-dystroglycan-binding domain (aa 3081\u20133360) and the entire C-terminal syntrophin/dystrobrevin scaffold \u2014 the two domains that anchor the DGC (domain_annotation|DMD). At protein\u2192subcellular, loss of these anchoring domains eliminates dystrophin from the sarcolemma (uniprot_subcellular|DMD), with residual mutant mRNA at only 5\u201315% of wild-type in muscle (Kerr 2001). At subcellular\u2192cellType, tissue-graded NMD (Linde 2007) yields efficient muscle decay (Flanigan 2009): myonuclei and cardiomyocytes lose Dp427m, collapsing the DGC (dgc_completeness 0.43, mean 0.29), producing CK 14104 U/L (70\u00d7 ULN), LDH 594 and aldolase 39. At cellType\u2192tissue (tissue_impact, hpa|DMD), skeletal muscle degenerates to 39.7% vastus-lateralis fat fraction, while partial CNS NMD escape still yields FSIQ 78 and retinal Dp260/Dp71 loss produces ERG b-wave 142 \u00b5V (Bello 2016). The phenotype \u2014 NSAA 3/34, non-ambulant (6MWT 0 m) \u2014 is classical Duchenne (Bushby 2014). This mechanism fully explains P3's multisystem DMD phenotype.",
+    "model": "claude-opus-4-7",
+    "generated": "2026-08-13T19:40:47+00:00",
+    "n_node_premises": 23,
+    "n_edge_premises": 16,
+    "usage": {
+      "input_tokens": 18959,
+      "output_tokens": 832,
+      "cost_usd": 0.3468
+    },
+    "summary": "DMD c.9248G>A p.(Trp3083*) generates a PTC 1791 nt upstream of the terminal EEJ, triggering NMD-mediated degradation of all dystrophin isoforms and loss of the cysteine-rich and C-terminal scaffolding domains required for sarcolemmal DGC anchoring, causing severe muscle degeneration and classical Duchenne phenotype.",
+    "summary_model": "claude-haiku-4-5-20251001",
+    "summary_at": "2026-08-13T19:47:31+00:00",
+    "summary_usage": {
+      "input_tokens": 797,
+      "output_tokens": 100,
+      "cost_usd": 0.0013
+    }
+  },
+  "P4|01": {
+    "patient_id": "P4",
+    "hypothesis_id": "01",
+    "narrative": "Patient P4 carries DMD c.717dup (p.(Pro240Alafs*7)) in exon 8, curated as likely-pathogenic Duchenne in Zhang 2024 (zhang|S1_novel|57) and obeying the Monaco 1988 reading-frame rule (lit|monaco_1988); AbSplice max 0.03 confirms the lesion is exonic frameshift, not a splice event (absplice|S1_novel|57). At the variant\u2192protein transition, the premature termination at codon 240 lies 10,322 nt upstream of the last exon-exon junction, firing the \u226550-nt NMD rule (nmd_prediction|S1_novel|57; lit|popp_maquat_2013) and matching Hoffman 1988's <3% residual dystrophin; isoform architecture shows Dp427m/c/p ablated while Dp260, Dp140, Dp116 and Dp71 are spared (iso_arch|S1_novel|57), so pathology localizes to Dp427-dependent lineages. Loss of the cysteine-rich \u03b2-DG-binding and C-terminal syntrophin/dystrobrevin domains (domain_annotation|DMD) prevents dystrophin from bridging F-actin to the sarcolemmal DGC (lit|ervasti_campbell_1993; uniprot_subcellular|DMD), and DGC partners \u03b2-DG, sarcoglycans and nNOS dissociate from the membrane (lit|ohlendieck_1991), collapsing the Reactome DGC-formation pathway (reactome|DMD). Contraction-induced micro-tears then admit Ca\u00b2\u207a (lit|petrof_1993), activating calpain-1 (lit|alderton_2000) and opening the MPTP with ROS burst (lit|millay_2008; lit|vila_2017). In myonuclei, cardiomyocytes and thymic myoid cells (celltype_impact; mean DGC-completeness 0.38, dgc_completeness|S1_novel|57), this drives necrosis reflected in CK 10,605 U/L (53\u00d7 ULN; lit|zatz_2016) with LDH 518 and aldolase 35. Satellite-cell exhaustion (lit|sacco_2010; lit|dumont_2015) and FAP-driven fibro-fatty replacement (lit|uezumi_2010; lit|bernasconi_1995) yield the vastus-lateralis MRI fat fraction of 23% (tissue_impact|S1_novel|57), producing the Duchenne phenotype (opentargets|DMD, assoc 0.87). The only opposing premise \u2014 no approved exon-8 skip (exon_skip|S1_novel|57) \u2014 is therapeutic, not mechanistic, so the chain holds. Verdict: this mechanism fully and credibly explains P4's DMD phenotype.",
+    "model": "claude-opus-4-7",
+    "generated": "2026-08-13T19:41:03+00:00",
+    "n_node_premises": 29,
+    "n_edge_premises": 23,
+    "usage": {
+      "input_tokens": 21900,
+      "output_tokens": 959,
+      "cost_usd": 0.4004
+    },
+    "summary": "DMD c.717dup p.(Pro240Alafs*7) causes premature termination 10,322 nt upstream of the last exon, triggering NMD and ablating Dp427 isoforms, which prevents dystrophin from bridging F-actin to the sarcolemmal DGC and causes calcium-mediated necrosis in myonuclei and cardiomyocytes.",
+    "summary_model": "claude-haiku-4-5-20251001",
+    "summary_at": "2026-08-13T19:47:33+00:00",
+    "summary_usage": {
+      "input_tokens": 880,
+      "output_tokens": 100,
+      "cost_usd": 0.00138
+    }
+  },
+  "P4|02": {
+    "patient_id": "P4",
+    "hypothesis_id": "02",
+    "narrative": "Patient P4 (Zhang 2024 cohort S1_novel, ID 57) carries DMD c.717dup, p.(Pro240Alafs*7) in exon 8, an ACMG-LP frameshift (premise zhang|S1_novel|57). Per the isoform-architecture projection (iso_arch), exon 8 lies within Dp427m/c/p while sparing Dp260, Dp140, Dp116 and Dp71 \u2014 but crucially the frameshift falls at the very boundary of the N-terminal actin-binding domain (aa 1\u2013240; domain_annotation|DMD), truncating the protein before the spectrin rod, cysteine-rich \u03b2-dystroglycan-binding, and C-terminal syntrophin/dystrobrevin domains that Ervasti & Campbell 1993 identify as essential for DGC anchoring. Without the cys-rich and CTD domains, dystrophin cannot tether to the sarcolemma (uniprot_subcellular|DMD) and the DGC cannot assemble around a partial protein (Ohlendieck 1993) \u2014 patient DGC-completeness averages only 0.38 across affected cells (dgc_completeness). Loss of sarcolemmal mechanical coupling drives contraction-induced micro-tears, Ca\u00b2\u207a influx, and calpain-mediated proteolysis (Petrof 1993, Alderton 2000) across the four hit muscle cell types \u2014 myonuclei, cardiomyocytes, thymic myoid and salivary myoepithelial cells (celltype_impact) \u2014 producing the massive cytosolic-enzyme leak seen here: CK 10,605 U/L, LDH 518 U/L, aldolase 35 U/L, with 23% MRI fat fraction in vastus lateralis marking established skeletal replacement, and clinically the Zhang-labeled DMD phenotype (Bushby 1993). Contradictions: the mechanism family posits in-frame partial-function BMD, but this variant is frank frameshift with a premature stop (Pro240Alafs*7), sparing essentially none of the rod/DGC-anchoring architecture; the supporting BMD-preserving labs (LVEF 68.8%, FVC 102%, NSAA 34/34) and Emery-Skinner BMD criteria therefore do not fit. Verdict: this in-frame partial-function BMD mechanism does not credibly explain P4 \u2014 the frameshift abolishes DGC anchoring and the DMD phenotype is better explained by the complete loss-of-function family.",
+    "model": "claude-opus-4-7",
+    "generated": "2026-08-13T19:41:21+00:00",
+    "n_node_premises": 16,
+    "n_edge_premises": 11,
+    "usage": {
+      "input_tokens": 16433,
+      "output_tokens": 851,
+      "cost_usd": 0.3103
+    },
+    "summary": "DMD c.717dup p.(Pro240Alafs*7) truncates dystrophin before the cysteine-rich and C-terminal domains, preventing DGC assembly and sarcolemmal anchoring across myonuclei and cardiomyocytes, driving the DMD phenotype via contraction-induced calcium influx and proteolysis.",
+    "summary_model": "claude-haiku-4-5-20251001",
+    "summary_at": "2026-08-13T19:47:35+00:00",
+    "summary_usage": {
+      "input_tokens": 775,
+      "output_tokens": 84,
+      "cost_usd": 0.00119
+    }
+  },
+  "P5|01": {
+    "patient_id": "P5",
+    "hypothesis_id": "01",
+    "narrative": "Patient P5 carries DMD c.10654dup, p.(Ser3552Lysfs*6) in exon 75 (Zhang 2024, ACMG LP), a frameshift that by the Monaco 1988 reading-frame rule and Aartsma-Rus 2006 introduces a premature termination codon; AbSplice (0.03) confirms no splice contribution. At the variant\u2192protein transition, nmd_prediction places the PTC at c.10654, 385 nt upstream of the last exon-exon junction at c.11039, firing the \u226550-nt rule (Popp & Maquat 2013) and degrading the transcript, with residual truncated Dp427m/Dp140/Dp71 (iso_arch: all seven isoforms hit; ESM3 cache P11532_Dp71_truncP5) lacking the cysteine-rich \u03b2-dystroglycan-binding and C-terminal syntrophin/dystrobrevin domains (domain_annotation aa 3081\u20133685). Protein\u2192subcellular: per Ervasti & Campbell 1993 and Ohlendieck 1991, loss of these C-terminal domains uncouples sarcolemmal dystrophin (UniProt P11532) from \u03b2-DG, sarcoglycans, and nNOS \u2014 quantified here as mean DGC-completeness 0.29 across affected cell types. Subcellular\u2192pathway\u2192subcellular: contraction-induced micro-tears (Petrof 1993) admit Ca\u00b2\u207a, activating calpain-1 (Alderton 2000) and opening the MPTP with ROS burst (Millay 2008, Vila 2017). Subcellular\u2192cellType: myonuclei and cardiomyocytes undergo necrosis (Zatz 2016), reflected in CK 15259 U/L (76\u00d7 ULN), LDH 492, aldolase 44, with satellite-cell exhaustion (Sacco 2010, Dumont 2015). CellType\u2192tissue: FAP-driven fibro-fatty replacement (Uezumi 2010, Bernasconi 1995) manifests as vastus lateralis fat fraction 41.7%, LVEF 51.1% with LGE+ and NT-proBNP 283, and FVC 51.8%, yielding the DMD phenotype (NSAA 2/34, 6MWT 0 m; OpenTargets association 0.868). The lone contradiction \u2014 no FDA-approved exon-75 skip \u2014 is therapeutic, not mechanistic, and does not weaken the chain. Verdict: this mechanism fully and credibly explains P5's multisystem DMD phenotype.",
+    "model": "claude-opus-4-7",
+    "generated": "2026-08-13T19:41:43+00:00",
+    "n_node_premises": 33,
+    "n_edge_premises": 24,
+    "usage": {
+      "input_tokens": 24588,
+      "output_tokens": 869,
+      "cost_usd": 0.434
+    },
+    "summary": "DMD c.10654dup p.(Ser3552Lysfs*6) introduces a premature termination codon triggering nonsense-mediated decay, producing truncated dystrophin lacking C-terminal \u03b2-dystroglycan and syntrophin-binding domains, uncoupling the sarcolemmal DGC complex and causing calcium-dependent myonecrosis, fibroadiposis, and progressive multisystem failure.",
+    "summary_model": "claude-haiku-4-5-20251001",
+    "summary_at": "2026-08-13T19:47:37+00:00",
+    "summary_usage": {
+      "input_tokens": 816,
+      "output_tokens": 99,
+      "cost_usd": 0.00131
+    }
+  },
+  "P5|03": {
+    "patient_id": "P5",
+    "hypothesis_id": "03",
+    "narrative": "Patient P5 carries DMD c.10654dup (p.Ser3552Lysfs*6) in exon 75, a frameshift confirmed as likely pathogenic in the Zhang 2024 S1_novel cohort (premiseId zhang|S1_novel|5); AbSplice scores \u22480.03 exclude a splice mechanism, so the exonic PTC is decisive (Aartsma-Rus 2006). The PTC at aa 3552 (c.10654) sits 385 nt upstream of the last exon-junction complex at c.11039 (exon 78/79), satisfying the \u226550-nt rule of Popp & Maquat 2013 and predicting efficient NMD (nmd_prediction|S1_novel|5), with ESM3 modelling of the truncated Dp71 confirming loss of the cysteine-rich \u03b2-dystroglycan-binding and C-terminal syntrophin/dystrobrevin domains (domain_annotation|DMD) \u2014 the two DGC-anchoring modules. Because exon 75 lies in the shared 3\u2032 region, every isoform is hit (Dp427m, Dp427c/p, Dp260, Dp140, Dp116, Dp71; iso_arch). Loss of these DGC anchors abolishes sarcolemmal targeting (uniprot_subcellular|DMD), and Kerr 2001 documents that muscle NMD collapses mutant mRNA to 5\u201315% of wild-type. This translates cell-type-wise into DGC-assembly failure across 7 lineages (mean completeness 0.29; dgc_completeness), most severely in myonuclei and cardiomyocytes (Flanigan 2009), driving the CK 15,259 U/L, LDH 492, aldolase 44. At tissue scale (tissue_impact|S1_novel|5), skeletal fatty replacement (MRI fat fraction 41.7%), cardiac fibrosis with LVEF 51.1% and NT-proBNP 283, and FVC 51.8% follow; incomplete brain NMD escape (Linde 2007) leaves FSIQ 79 (labs|IQ). These converge (Bello 2016) on the ambulatory-loss DMD phenotype: NSAA 2/34, 6MWT 0 m. Verdict: this mechanism credibly and completely explains P5's multisystem DMD presentation.",
+    "model": "claude-opus-4-7",
+    "generated": "2026-08-13T19:42:01+00:00",
+    "n_node_premises": 23,
+    "n_edge_premises": 16,
+    "usage": {
+      "input_tokens": 19245,
+      "output_tokens": 797,
+      "cost_usd": 0.3485
+    },
+    "summary": "DMD c.10654dup (p.Ser3552Lysfs*6) causes premature termination codon\u2013triggered NMD of all dystrophin isoforms, abolishing sarcolemmal DGC anchoring across skeletal muscle, cardiac, and brain tissues to produce severe multisystem dystrophy.",
+    "summary_model": "claude-haiku-4-5-20251001",
+    "summary_at": "2026-08-13T19:47:38+00:00",
+    "summary_usage": {
+      "input_tokens": 759,
+      "output_tokens": 76,
+      "cost_usd": 0.00114
+    }
+  },
+  "P5|04": {
+    "patient_id": "P5",
+    "hypothesis_id": "04",
+    "narrative": "The exon-75 frameshift c.10654dup, p.(Ser3552Lysfs*6), reported as likely-pathogenic in Zhang 2024 (S1_novel patient 5), lies distal to every internal DMD promoter, so per the isoform_arch projection every transcript \u2014 Dp427m, Dp427c/p, Dp260, Dp140, Dp116 and Dp71 \u2014 carries the PTC; the nmd_prediction premise shows the stop at c.10654 sits 385 nt upstream of the last exon-junction (c.11039), triggering the 50-nt rule (Popp & Maquat 2013) and degrading all isoforms, with no spared C-terminal cysteine-rich/CTD anchor (domain_annotation). UniProt localises dystrophin to sarcolemma, postsynaptic membrane and \u2014 for Dp71 \u2014 retina/CNS/kidney compartments, so isoform loss simultaneously disassembles the sarcolemmal DGC in myonuclei/cardiomyocytes and the distal Dp260/Dp71/Dp140 assemblies in rod and cone photoreceptors, cortical astrocytes (Lidov 1995), and podocytes (Haenggi 2006), per celltype_impact showing 7 hit cell types. HPA expression and tissue_impact then translate this into concurrent CNS, retinal and renal tissue involvement, matching the patient's FSIQ 79 (Ricotti 2016: ~10-point deficit with Dp140 loss) and UACR 42 mg/g. Contradictions: the OpenTargets premise notes approved therapies target Dp427 restoration, not distal isoforms, weakening treatability but not the mechanism; and Muntoni 2003 predicts Dp427m sparing should preserve muscle \u2014 yet here Dp427m is co-ablated, which is why CK 15259, NSAA 2/34, 6MWT 0 m, LVEF 51.1% and FVC 51.8% coexist with the distal features. Verdict: H04 credibly explains the cognitive, renal and retinal-risk features but is only a partial mechanism \u2014 the classical DMD motor/cardiac/respiratory decline is driven by concurrent Dp427m loss, making distal-isoform ablation a contributory overlay on a full DMD phenotype.",
+    "model": "claude-opus-4-7",
+    "generated": "2026-08-13T19:42:18+00:00",
+    "n_node_premises": 14,
+    "n_edge_premises": 17,
+    "usage": {
+      "input_tokens": 17342,
+      "output_tokens": 778,
+      "cost_usd": 0.3185
+    },
+    "summary": "The c.10654dup frameshift triggers nonsense-mediated decay of all dystrophin isoforms (Dp427m, Dp260, Dp140, Dp71) via the 50-nt rule, simultaneously dismantling sarcolemmal DGC in muscle/heart and distal assemblies in retina/CNS/kidney, causing concurrent classical DMD with cognitive impairment, albuminuria, and retinal involvement.",
+    "summary_model": "claude-haiku-4-5-20251001",
+    "summary_at": "2026-08-13T19:47:40+00:00",
+    "summary_usage": {
+      "input_tokens": 734,
+      "output_tokens": 103,
+      "cost_usd": 0.00125
+    }
+  },
+  "P6|01": {
+    "patient_id": "P6",
+    "hypothesis_id": "01",
+    "narrative": "Patient P6 carries DMD c.2510del, p.(Asn837Ilefs*9) in exon 20, a frameshift that by the Monaco 1988 reading-frame rule and Aartsma-Rus 2006 introduces a premature termination codon within ~200 codons; AbSplice scores only 0.03, confirming an exonic \u2014 not splicing \u2014 mechanism. The nmd_prediction premise places this PTC 8529 nt upstream of the last exon\u2013exon junction, firing the \u226550-nt rule (Popp & Maquat 2013) and triggering nonsense-mediated decay, so the muscle isoform Dp427m (along with Dp427c/p) is effectively absent while Dp260, Dp140, Dp116 and Dp71 are spared per iso_arch. Loss of full-length dystrophin removes both the cysteine-rich \u03b2-dystroglycan-binding and C-terminal syntrophin/dystrobrevin domains (domain_annotation; Ervasti & Campbell 1993), so the DGC fails to assemble at the sarcolemma (uniprot_subcellular; Ohlendieck 1991), quantified here by a mean DGC-completeness of 0.38 across affected cells (dgc_completeness). Contraction-induced sarcolemmal micro-tears admit Ca\u00b2\u207a (Petrof 1993), activating calpain-1 (Alderton 2000) and opening the mitochondrial permeability transition pore with ROS burst (Millay 2008; Vila 2017), driving necrosis of Dp427m-expressing myonuclei and cardiomyocytes (celltype_impact) \u2014 reflected in CK 12111 U/L (60\u00d7 ULN; Zatz 2016), LDH 440 and aldolase 34. Failed regeneration recruits FAPs and TGF-\u03b2-driven fibrosis (Uezumi 2010; Bernasconi 1995) in skeletal and cardiac muscle (tissue_impact), producing vastus lateralis fat fraction 31.4%, NSAA 26/34 and 6MWT 377 m \u2014 the Zhang 2024 DMD phenotype. The only opposing premise (no approved exon-20 skip) concerns therapeutic access, not mechanism, and does not weaken causation. This mechanism fully explains P6's phenotype.",
+    "model": "claude-opus-4-7",
+    "generated": "2026-08-13T19:42:33+00:00",
+    "n_node_premises": 30,
+    "n_edge_premises": 23,
+    "usage": {
+      "input_tokens": 22419,
+      "output_tokens": 779,
+      "cost_usd": 0.3947
+    },
+    "summary": "DMD c.2510del p.(Asn837Ilefs*9) triggers nonsense-mediated decay of Dp427m, ablating the dystrophin-associated glycoprotein complex at the sarcolemma and enabling Ca\u00b2\u207a-driven myonecrocis and fibrosis.",
+    "summary_model": "claude-haiku-4-5-20251001",
+    "summary_at": "2026-08-13T19:47:42+00:00",
+    "summary_usage": {
+      "input_tokens": 740,
+      "output_tokens": 73,
+      "cost_usd": 0.00111
+    }
+  },
+  "P6|02": {
+    "patient_id": "P6",
+    "hypothesis_id": "02",
+    "narrative": "Patient P6 (Zhang 2024, S1_novel cohort) carries DMD c.2510del, p.(Asn837Ilefs*9) in exon 20 \u2014 but the in-frame-deletion/BMD mechanism requires an in-frame rearrangement, and per the isoform_arch premise this frameshift hits Dp427m, Dp427c, and Dp427p (sparing Dp260/Dp140/Dp116/Dp71) with premature termination rather than producing an internally-truncated rod protein (aartsma_rus_2006: in-frame indels remove spectrin repeats without shifting the reading frame). If a low-level partial dystrophin were nonetheless produced (Ervasti & Campbell 1993: shortened dystrophin retains N-terminal actin-binding and C-terminal \u03b2-DG binding), the domain_annotation premise indicates the cys-rich and C-terminal DGC-anchoring domains would still permit sarcolemmal targeting (UniProt P11532: peripheral sarcolemmal membrane), and Ohlendieck 1993 shows the DGC can assemble around a partial dystrophin at reduced levels \u2014 consistent with the observed mean DGC-completeness of 0.38 across affected myonuclei, cardiomyocytes, thymic myoid and salivary myoepithelial cells. Petrof 1993 and Alderton 2000 would then predict subclinical membrane injury with slow-onset Ca\u00b2\u207a leak and delayed calpain activation (Reactome R-HSA-9913351 DGC formation; R-HSA-390522 striated muscle contraction), producing the muscle-cell damage seen as CK 12111 U/L, LDH 440, aldolase 34, and vastus lateralis fat fraction 31.4%. Bushby 1993 links this partial-DGC state to retained ambulation, weakly matched by NSAA 26/34 and 6MWT 377 m (Emery & Skinner 1976). However, contradictions[] flags that Zhang 2024 labels this a frameshift/DMD variant with no approved exon-skip rescue, directly opposing the in-frame premise. Verdict: this mechanism does not credibly explain P6 \u2014 the frameshift consequence is incompatible with partial-function dystrophin, making BMD-style rescue at best a marginal secondary contributor via trace revertant fibers.",
+    "model": "claude-opus-4-7",
+    "generated": "2026-08-13T19:42:52+00:00",
+    "n_node_premises": 18,
+    "n_edge_premises": 11,
+    "usage": {
+      "input_tokens": 17021,
+      "output_tokens": 795,
+      "cost_usd": 0.3149
+    },
+    "summary": "DMD c.2510del causes frameshift-induced premature termination in Dp427m/c/p isoforms, precluding the in-frame partial-dystrophin mechanism proposed for retained ambulation and sarcolemmal DGC assembly.",
+    "summary_model": "claude-haiku-4-5-20251001",
+    "summary_at": "2026-08-13T19:47:43+00:00",
+    "summary_usage": {
+      "input_tokens": 733,
+      "output_tokens": 60,
+      "cost_usd": 0.00103
+    }
+  },
+  "P7|01": {
+    "patient_id": "P7",
+    "hypothesis_id": "01",
+    "narrative": "Patient P7 carries DMD c.6577C>T, p.(Gln2193*), a Zhang 2024\u2013reported ACMG-pathogenic nonsense variant in exon 45 (CGA>TGA; AbSplice 0.04 excludes a splice mechanism, so the exonic PTC is the whole story). By the Monaco 1988 reading-frame logic and Aartsma-Rus 2006, this PTC sits at c.6577 \u2014 4462 nt upstream of the last exon-exon junction at c.11039 \u2014 so the \u226550-nt rule (Popp & Maquat 2013) triggers NMD, degrading the transcript and abolishing Dp427m, Dp427c, Dp427p, Dp260, and Dp140 while sparing Dp71/Dp116 (iso_arch premise; Hoffman 1988 confirms <3% residual dystrophin). Loss of full-length dystrophin removes both the cysteine-rich \u03b2-dystroglycan-binding and C-terminal syntrophin/dystrobrevin domains (domain_annotation), which per Ervasti & Campbell 1993 and Ohlendieck 1991 causes \u03b2-DG, sarcoglycans, and nNOS to dissociate from the sarcolemma (UniProt localisation), collapsing the Reactome DGC-formation pathway. Contraction-induced micro-tears then admit Ca\u00b2\u207a (Petrof 1993), activating calpain-1 (Alderton 2000) and opening the MPTP with ROS burst (Millay 2008, Vila 2017). In this patient this manifests across DGC-expressing cells (mean DGC-completeness 0.31 across 6 hit cell types including myonuclei and cardiomyocytes; HPA), driving myofiber necrosis reflected in CK 13493 U/L (67\u00d7 ULN), LDH 572, and aldolase 37 (Zatz 2016). Failed regeneration recruits fibro-adipogenic progenitors (Uezumi 2010) with TGF-\u03b2-driven fibrosis (Bernasconi 1995), producing vastus lateralis fat-fraction 20.9% and a 6MWT of 397 m \u2014 the classic DMD trajectory. This mechanism fully and credibly explains P7's phenotype, and exon-45 casimersen offers a direct disease-modifying option.",
+    "model": "claude-opus-4-7",
+    "generated": "2026-08-13T19:43:08+00:00",
+    "n_node_premises": 30,
+    "n_edge_premises": 23,
+    "usage": {
+      "input_tokens": 22164,
+      "output_tokens": 789,
+      "cost_usd": 0.3916
+    },
+    "summary": "DMD c.6577C>T (p.Gln2193*) triggers nonsense-mediated decay of dystrophin transcripts, ablating full-length Dp427 isoforms and DGC-associated proteins, causing sarcolemmal destabilization, calcium influx, calpain/MPTP-driven myofiber necrosis, and progressive fibroadipogenic replacement.",
+    "summary_model": "claude-haiku-4-5-20251001",
+    "summary_at": "2026-08-13T19:47:45+00:00",
+    "summary_usage": {
+      "input_tokens": 760,
+      "output_tokens": 95,
+      "cost_usd": 0.00123
+    }
+  },
+  "P7|03": {
+    "patient_id": "P7",
+    "hypothesis_id": "03",
+    "narrative": "Patient P7 carries DMD c.6577C>T; p.(Gln2193*) in exon 45, a pathogenic CGA>TGA nonsense variant confirmed by Zhang 2024 (ACMG P) with negligible splice signal (AbSplice 0.04), so the exonic consequence dominates (Aartsma-Rus 2006). The premature termination codon at aa 2193 sits 4462 nt upstream of the last exon-junction at c.11039, firing the \u226550-nt rule (Popp & Maquat 2013) and triggering NMD (nmd_prediction), which the ClinVar 11,790-variant cross-tab corroborates at cohort scale; per isoform_arch, this destroys Dp427m, Dp427c, Dp427p, Dp260 and Dp140, while sparing Dp116 and Dp71. Kerr 2001 shows residual mutant mRNA falls to 5\u201315% of wild-type, effectively abolishing dystrophin at its UniProt-annotated sarcolemmal/costameric localization (uniprot_subcellular P11532), eliminating the cysteine-rich \u03b2-dystroglycan and C-terminal syntrophin/dystrobrevin anchors required for DGC assembly (domain_annotation). Linde 2007 notes tissue-graded NMD escape, but muscle NMD is efficient (Flanigan 2009), so Dp427m loss in myonuclei and cardiomyocytes collapses DGC assembly (mean DGC-completeness 0.31 across 6 affected cell types; celltype_impact), producing sarcolemmal fragility manifest as CK 13,493 U/L (67\u00d7 ULN), LDH 572, aldolase 37 (patient_evidence_bullets). This propagates via HPA-mapped expression to skeletal and cardiac muscle (tissue_impact), yielding vastus-lateralis fat fraction 20.9% and 6MWT 397 m \u2014 the classic DMD phenotype (OpenTargets association 0.87; Bushby 2014), directly skip-eligible with casimersen. Verdict: this mechanism fully and credibly explains P7's DMD phenotype as the primary driver.",
+    "model": "claude-opus-4-7",
+    "generated": "2026-08-13T19:43:22+00:00",
+    "n_node_premises": 23,
+    "n_edge_premises": 15,
+    "usage": {
+      "input_tokens": 18829,
+      "output_tokens": 739,
+      "cost_usd": 0.3379
+    },
+    "summary": "DMD c.6577C>T (p.Gln2193*) triggers NMD-mediated loss of Dp427m, Dp427c, Dp427p, Dp260, and Dp140, collapsing sarcolemmal dystrophin-glycoprotein complex assembly and causing P7's DMD phenotype.",
+    "summary_model": "claude-haiku-4-5-20251001",
+    "summary_at": "2026-08-13T19:47:47+00:00",
+    "summary_usage": {
+      "input_tokens": 712,
+      "output_tokens": 82,
+      "cost_usd": 0.00112
+    }
+  },
+  "P8|01": {
+    "patient_id": "P8",
+    "hypothesis_id": "01",
+    "narrative": "Patient P8 carries DMD c.7817G>A, p.(Trp2606*), a nonsense variant in exon 53 (Zhang 2024, ACMG P) that introduces a premature termination codon within the spectrin-like rod. Because the PTC at c.7817 sits 3222 nt upstream of the last exon-exon junction at c.11039, the \u226550-nt rule fires (nmd_prediction; Popp & Maquat 2013), triggering nonsense-mediated decay so that Dp427m, Dp427c, Dp427p, Dp260 and Dp140 transcripts are degraded while Dp71 and Dp116 are spared (iso_arch premise); Hoffman 1988 confirms <3% residual dystrophin on Western in such PTC carriers. Loss of full-length dystrophin removes the cysteine-rich \u03b2-dystroglycan-binding and C-terminal syntrophin/dystrobrevin domains (domain_annotation) that anchor the dystrophin-glycoprotein complex at the sarcolemma (uniprot_subcellular; Ervasti & Campbell 1993), and DGC partners \u03b2-DG, sarcoglycans and nNOS dissociate from the membrane (Ohlendieck 1991), collapsing the Reactome \"Formation of the DGC\" and Striated Muscle Contraction pathways (opentargets, reactome). Contraction then produces sarcolemmal micro-tears admitting Ca\u00b2\u207a (Petrof 1993), activating calpain-1 (Alderton 2000) and opening the mitochondrial permeability transition pore with ROS burst (Millay 2008, Vila 2017). This necrotic cycle plays out in the four hit muscle-lineage cell types \u2014 myonuclei, cardiomyocytes, thymic myoid and salivary myoepithelial cells (celltype_impact; mean DGC-completeness 0.31) \u2014 driving the CK of 16,378 U/L, LDH 511 and aldolase 52 (Zatz 2016), exhausting satellite cells (Sacco 2010, Dumont 2015), and yielding fibro-fatty replacement (Uezumi 2010, Bernasconi 1995) manifest as vastus-lateralis fat fraction 23.9% and the DMD phenotype; the mildly reduced FSIQ 82 is consistent with concomitant Dp140 loss. No contradictions were flagged. This mechanism credibly and near-completely explains P8's Duchenne phenotype, with exon-53 skipping (golodirsen/viltolarsen) directly actionable.",
+    "model": "claude-opus-4-7",
+    "generated": "2026-08-13T19:43:40+00:00",
+    "n_node_premises": 29,
+    "n_edge_premises": 23,
+    "usage": {
+      "input_tokens": 21998,
+      "output_tokens": 873,
+      "cost_usd": 0.3954
+    },
+    "summary": "DMD c.7817G>A (p.Trp2606*) triggers nonsense-mediated decay of full-length dystrophin isoforms, disrupting sarcolemmal DGC anchorage and causing calcium-driven myonecrosis across muscle lineages in Duchenne muscular dystrophy.",
+    "summary_model": "claude-haiku-4-5-20251001",
+    "summary_at": "2026-08-13T19:47:49+00:00",
+    "summary_usage": {
+      "input_tokens": 818,
+      "output_tokens": 75,
+      "cost_usd": 0.00119
+    }
+  },
+  "P8|03": {
+    "patient_id": "P8",
+    "hypothesis_id": "03",
+    "narrative": "The DMD c.7817G>A; p.(Trp2606*) nonsense variant in exon 53 (Zhang 2024, patient 225; ACMG P) creates a premature termination codon whose exonic effect dominates (AbSplice max 0.04; Aartsma-Rus 2006 confirms nonsense codons directly encode a PTC). At the variant\u2192protein step, the nmd_prediction premise shows the PTC at c.7817 sits 3222 nt upstream of the last exon-exon junction at c.11039, firing the \u226550-nt rule (Popp & Maquat 2013) and triggering NMD; the iso_arch projection assigns loss to Dp427m/Dp427c/Dp427p/Dp260/Dp140 while sparing Dp116/Dp71. Loss of the full-length transcript ablates the cysteine-rich \u03b2-dystroglycan and C-terminal syntrophin/dystrobrevin domains that anchor the DGC (domain_annotation), and dystrophin's sarcolemmal/costameric localisation is consequently lost (uniprot_subcellular; Kerr 2001: mutant mRNA falls to ~5\u201315% of wild-type in muscle biopsies). Reactome pathway R-HSA-9913351 \"Formation of the DGC\" is disassembled, with mean DGC-completeness of 0.31 across affected cells (dgc_completeness). Efficient muscle NMD (Flanigan 2009) drives near-total Dp427m loss in myonuclei and cardiomyocytes, releasing CK 16378 U/L, LDH 511 U/L and aldolase 52 U/L; at tissue level this manifests as vastus lateralis MRI fat fraction 23.9% (tissue_impact: skeletal + cardiac muscle hit). Partial NMD escape in brain isoforms (Linde 2007; Bello 2016) explains the mild FSIQ 82 via Dp140 involvement. Verdict: this NMD-mediated tissue-graded dystrophin-loss mechanism fully and credibly explains the patient's DMD phenotype.",
+    "model": "claude-opus-4-7",
+    "generated": "2026-08-13T19:43:55+00:00",
+    "n_node_premises": 24,
+    "n_edge_premises": 15,
+    "usage": {
+      "input_tokens": 19232,
+      "output_tokens": 712,
+      "cost_usd": 0.3419
+    },
+    "summary": "DMD c.7817G>A (p.Trp2606*) triggers NMD via \u226550-nt PTC-to-last-exon distance, ablating Dp427m/Dp260/Dp140 in muscle and brain to cause progressive dystrophin-loss myodegeneration.",
+    "summary_model": "claude-haiku-4-5-20251001",
+    "summary_at": "2026-08-13T19:47:51+00:00",
+    "summary_usage": {
+      "input_tokens": 693,
+      "output_tokens": 77,
+      "cost_usd": 0.00108
+    }
+  },
+  "P9|01": {
+    "patient_id": "P9",
+    "hypothesis_id": "01",
+    "narrative": "Patient P9 carries DMD c.7745C>G, p.(Ser2582*), a nonsense variant in exon 53 (Zhang 2024, ACMG-P), which by the Monaco 1988 reading-frame rule and Aartsma-Rus 2006 directly encodes a premature termination codon. At the variant\u2192protein transition, the nmd_prediction premise places this PTC 3294 nt upstream of the last exon 78/79 EEJ, firing the \u226550-nt Popp & Maquat 2013 rule and triggering NMD; the residual <3% dystrophin seen on Western blot by Hoffman 1988 corroborates near-complete loss of Dp427m, Dp427c, Dp427p, Dp260 and Dp140 (isoform_arch), while Dp71 is spared. Loss of full-length dystrophin eliminates its cysteine-rich \u03b2-dystroglycan and C-terminal syntrophin/dystrobrevin domains (domain_annotation), which per Ervasti & Campbell 1993 normally bridge cytoskeletal actin to laminin, so at protein\u2192subcellular the sarcolemmal DGC dissociates (Ohlendieck 1991; UniProt P11532 sarcolemma). Reactome R-HSA-9913351 (DGC formation) collapses, and per Petrof 1993 contraction-induced micro-tears admit Ca\u00b2\u207a, activating calpain-1 (Alderton 2000) and opening the MPTP with mitochondrial ROS (Millay 2008, Vila 2017). At subcellular\u2192cellType, this necrotic cascade hits myonuclei and cardiomyocytes (celltype_impact; mean DGC-completeness 0.31, dgc_completeness), reflected in CK 10225 U/L (51\u00d7 ULN, Zatz 2016) with LDH 384 and aldolase 26. Serial injury exhausts satellite cells (Sacco 2010, Dumont 2015), and FAP-driven fibro-fatty replacement (Uezumi 2010, Bernasconi 1995) yields vastus lateralis MRI fat fraction 19.7% (tissue_impact: skeletal+cardiac), manifesting as the DMD phenotype with NSAA 35\u2014exon-53-skip-eligible for golodirsen/viltolarsen. No contradictions. This mechanism fully and credibly explains P9's phenotype.",
+    "model": "claude-opus-4-7",
+    "generated": "2026-08-13T19:44:12+00:00",
+    "n_node_premises": 29,
+    "n_edge_premises": 23,
+    "usage": {
+      "input_tokens": 22093,
+      "output_tokens": 815,
+      "cost_usd": 0.3925
+    },
+    "summary": "DMD c.7745C>G (p.Ser2582*) triggers nonsense-mediated decay of Dp427m/c/p, Dp260, and Dp140, collapsing the sarcolemmal dystrophin-glycoprotein complex and permitting calcium-driven necrosis in skeletal and cardiac myonuclei.",
+    "summary_model": "claude-haiku-4-5-20251001",
+    "summary_at": "2026-08-13T19:47:53+00:00",
+    "summary_usage": {
+      "input_tokens": 776,
+      "output_tokens": 84,
+      "cost_usd": 0.0012
+    }
+  },
+  "P9|03": {
+    "patient_id": "P9",
+    "hypothesis_id": "03",
+    "narrative": "The nonsense variant DMD c.7745C>G, p.(Ser2582*) in exon 53 (Zhang 2024, ACMG-P; confirmed also by Aartsma-Rus 2006, which notes nonsense codons directly encode a PTC) introduces a premature termination codon that lies 3,294 nt upstream of the last exon-exon junction at c.11039 \u2014 well beyond the Popp & Maquat 2013 \u226550-nt threshold \u2014 so the nmd_prediction premise projects efficient NMD-mediated mRNA degradation, with AbSplice adding a minor exonic SRE-disruption effect. Isoform architecture (iso_arch) shows this exon-53 PTC hits Dp427m, Dp427c, Dp427p, Dp260, and Dp140, while sparing Dp116 and Dp71; the eliminated transcripts encode the cysteine-rich \u03b2-DG\u2013binding and C-terminal syntrophin/dystrobrevin domains (domain_annotation) that anchor the DGC at the sarcolemma (UniProt P11532: peripheral membrane, cytoplasmic face). Loss of dystrophin from this site collapses assembly of the Reactome R-HSA-9913351 dystrophin-glycoprotein complex (OpenTargets association 0.87 with DMD). At the cellular level, Kerr 2001 documents mRNA reduced to 5\u201315% WT in muscle biopsies, and Flanigan 2009 confirms efficient muscle NMD yields near-total Dp427m loss; dgc_completeness quantifies this as mean 0.31 across 6 affected cell types, driving myonuclei and cardiomyocyte fragility, with partial Dp260 loss in rod/cone photoreceptors (Linde 2007 tissue-graded escape). This translates (tissue_impact, hpa) into skeletal and cardiac muscle plus retinal involvement, corroborated by CK 10,225 U/L (51\u00d7 ULN), aldolase 26, LDH 384, vastus-lateralis MRI fat fraction 19.7%, and reduced ERG b-wave 142 \u00b5V \u2014 the classic DMD phenotype (Bushby 2014). No contradictions were reported. Verdict: this mechanism fully and credibly explains this patient's DMD phenotype.",
+    "model": "claude-opus-4-7",
+    "generated": "2026-08-13T19:44:29+00:00",
+    "n_node_premises": 23,
+    "n_edge_premises": 15,
+    "usage": {
+      "input_tokens": 19044,
+      "output_tokens": 782,
+      "cost_usd": 0.3443
+    },
+    "summary": "DMD c.7745C>G p.(Ser2582*) introduces a PTC in exon 53 that triggers NMD-mediated mRNA degradation, eliminating Dp427m/c/p, Dp260, and Dp140 isoforms and collapsing sarcolemmal dystrophin-glycoprotein complex assembly across skeletal muscle, cardiac muscle, and retina.",
+    "summary_model": "claude-haiku-4-5-20251001",
+    "summary_at": "2026-08-13T19:47:55+00:00",
+    "summary_usage": {
+      "input_tokens": 732,
+      "output_tokens": 96,
+      "cost_usd": 0.00121
+    }
+  }
+}

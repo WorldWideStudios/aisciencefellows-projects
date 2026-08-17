@@ -1,0 +1,11 @@
+   3 l7:mouse
+   1 l92:mouse
+   1 l49:bovine
+   1 l32:mouse
+   1 l21:mouse
+   1 l21:bovine
+   1 l18:human
+   1 l143:rat
+   1 l138:mouse
+   1 l122:rats
+   1 l11:mouse

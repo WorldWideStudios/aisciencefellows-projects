@@ -1,0 +1,16 @@
+L1|Distinct immunomodulation elicited by young versus aged extracellular vesicles in bone marrow-derived macrophages
+L14|This study uses a factorial experimental design to explore the interactions between circulating EVs and bone marrow-derived macrophages (BMDMs) isolated from young (7–12 weeks) and aged (70–90 weeks) mice.
+L35|Isolation and differentiation of bone marrow derived macrophages (BMDMs) .
+L35|After washing, cells were resuspended and cultured in DMEM with 10% (v/v) FBS, 1% (v/v) penicillin/streptomycin and 5 ng/ml M-CSF1 at 37˚C in 5% CO 2 .
+L35|At four days post-isolation, an equal volume of culture medium including 10 ng/ml M-CSF1 was added.
+L50|Y_EV = young mouse plasma extracellular vesicle, O_EV = old mouse plasma extracellular vesicle, Y_BMDM = young mouse bone marrow-derived macrophage, O_BMDM = old mouse bone marrow derived-macrophage.
+L52|Isolation and differentiation of young and old bone marrow-derived macrophages
+L53|Next, we isolated bone marrow cells (BMCs) from young and old mice and differentiated them into bone marrow-derived macrophages (BMDMs); termed Y_BMDM and O_BMDM respectively.
+L54|2 Comparison of bone marrow derived macrophages (BMDMs) isolated from young and old mice ( a ) Experimental timeline.
+L54|Bone marrow-derived cells (BMCs) were isolated, differentiated with M-CSF, washed and switched to EV-depleted FBS medium at D6, and analysed at D8.
+L129|Preparation and culture of bone marrow-derived macrophages from mice for functional analysis.
+L139|Selection of reliable reference genes for the normalisation of gene expression levels following time course LPS stimulation of murine bone marrow derived macrophages.
+L160|Distinct Immunomodulation Elicited by Young Versus Aged Extracellular Vesicles in Bone Marrow-Derived Macrophages
+L196|Primers used for assessing bone marrow-derived macrophage (BMDM) polarization.
+L240|Suitability and stability of Hnrnpa1 as a housekeeping gene for bone marrow derived macrophages
+L242|Y/O_BMDM = young/old mouse derived bone marrow derived macrophage, Y_EV = young/old mouse derived plasma extracellular vesicle, Y/O_PL = young/old mouse derived plasma.

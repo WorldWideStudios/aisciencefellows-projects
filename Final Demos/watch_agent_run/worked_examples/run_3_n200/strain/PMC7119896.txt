@@ -1,0 +1,5 @@
+   3 l6:mice
+   2 l6:c57bl/6
+   1 l8:mouse
+   1 l6:mouse
+   1 l1:mouse

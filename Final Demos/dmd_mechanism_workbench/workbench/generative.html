@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DMD Workbench · Generative UI (stub)</title>
+<!--
+================================================================
+  ARCHITECTURE
+================================================================
+  A chat-style query bar that renders a fresh panel per turn by
+  picking widgets from workbench/widget_palette.js and pulling
+  data from workbench/mechanism_data.json (already served by the
+  hydrator).
+
+  The LLM part is stubbed: `plan(query)` is a hard-coded router
+  from question → {tools_called, prose, layout_spec}. Layout specs
+  reference widget types by name and props are populated from the
+  real substrate JSON. Everything downstream of `plan()` is what
+  the production version would keep.
+
+  What we're demonstrating:
+    - constrained generative UI (fixed palette, typed props)
+    - inspectable turn: tool calls + layout spec are visible
+    - real data end-to-end (only planning is stubbed)
+================================================================
+-->
+<link rel="stylesheet" href="theme.css">
+<style>
+  .gen-wrap { max-width: 1000px; margin: 0 auto; padding: 20px; }
+  .gen-head { margin-bottom: 20px; }
+  .gen-head h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.01em; margin: 0; }
+  .gen-head p  { color: var(--ink-3); font-size: 12px; margin: 4px 0 0; }
+
+  .gen-bar { display: flex; gap: 8px; margin-bottom: 8px; }
+  .gen-input { flex: 1; padding: 10px 14px; border: 1px solid var(--line-2);
+    border-radius: 8px; font-size: 13px; background: var(--panel); color: var(--ink);
+    font-family: inherit; outline: none; }
+  .gen-input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+  .gen-submit { padding: 10px 18px; background: var(--accent); color: white;
+    border: none; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; }
+  .gen-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+
+  .gen-suggest { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px;
+    align-items: center; }
+  .gen-chip { padding: 5px 10px; background: var(--panel); border: 1px solid var(--line);
+    border-radius: 14px; font-size: 11px; color: var(--ink-2); cursor: pointer;
+    font-family: inherit; }
+  .gen-chip:hover { border-color: var(--accent); color: var(--accent); }
+
+  .gen-more-toggle { background: transparent; border: none; color: var(--ink-3);
+    font-size: 11px; cursor: pointer; padding: 4px 6px; font-family: inherit; }
+  .gen-more-toggle:hover { color: var(--accent); }
+  .gen-more-panel { background: var(--panel); border: 1px solid var(--line);
+    border-radius: 10px; padding: 14px 16px; margin-bottom: 20px; }
+  .gen-more-panel[hidden] { display: none; }
+  .gen-more-hd { display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 10px; }
+  .gen-more-hd h3 { margin: 0; font-size: 12px; text-transform: uppercase;
+    letter-spacing: 0.06em; color: var(--ink-3); font-weight: 600; }
+  .gen-more-close { background: transparent; border: none; color: var(--ink-3);
+    font-size: 16px; cursor: pointer; padding: 0 4px; }
+  .gen-more-close:hover { color: var(--ink); }
+  /* 3-column layout via CSS multi-columns — categories flow top-to-bottom
+     within each column with no row-alignment gaps. */
+  .gen-cats { column-count: 4; column-gap: 14px; }
+  .gen-cat { break-inside: avoid; margin-bottom: 12px; display: block; }
+  .gen-cat h4 { font-size: 13px; color: var(--ink); margin: 0 0 6px;
+    font-weight: 700; text-transform: none; letter-spacing: 0; }
+  .gen-cat .gen-chip { display: block; width: 100%; text-align: left;
+    margin-bottom: 4px; }
+  .gen-chip-row { display: flex !important; flex-direction: column;
+    align-items: stretch !important; gap: 2px; padding: 6px 10px !important;
+    border-radius: 8px !important; }
+  .gen-chip-widget { font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 10px; color: var(--ink-3); }
+  .gen-chip-q { font-size: 11.5px; color: var(--ink); }
+  .gen-chip-row:hover .gen-chip-widget { color: var(--accent); }
+  .gen-chip-row:hover .gen-chip-q      { color: var(--accent); }
+  .gen-more-panel + #turns > .empty { display: none; }
+
+  .turn { background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+    padding: 16px 18px; margin-bottom: 14px; }
+  .turn-q { font-size: 12px; color: var(--ink-3); margin-bottom: 6px; }
+  .turn-q b { color: var(--ink-2); font-weight: 600; }
+
+  .turn-status { color: var(--ink-3); font-size: 12px; font-style: italic;
+    padding: 4px 0; }
+  .turn-status .dots::after { content: '···'; letter-spacing: 2px; animation: dots 1.2s infinite; }
+  @keyframes dots { 0%,20%{opacity:.2} 50%{opacity:1} 100%{opacity:.2} }
+
+  .turn-prose { font-size: 13px; line-height: 1.55; color: var(--ink);
+    margin: 6px 0 12px; }
+  .turn-prose .cursor { display: inline-block; width: 6px; background: var(--accent);
+    margin-left: 1px; animation: blink 1s steps(2) infinite; }
+  @keyframes blink { 50% { background: transparent; } }
+
+  .turn-widgets .tiles { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  .turn-widgets .tile { min-height: 180px; }
+
+  .turn-inspect { margin-top: 12px; border-top: 1px dashed var(--line); padding-top: 10px; }
+  .turn-inspect summary { font-size: 11px; color: var(--ink-3); cursor: pointer;
+    text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; }
+  .turn-inspect summary:hover { color: var(--accent); }
+  .inspect-body { display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+    margin-top: 10px; font-size: 11px; }
+  .inspect-col h4 { font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em;
+    color: var(--ink-3); margin: 0 0 6px; font-weight: 600; }
+  .tool-call { background: var(--bg); border: 1px solid var(--line);
+    border-radius: 6px; padding: 6px 8px; margin-bottom: 4px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; }
+  .tool-call .tc-name { color: var(--accent); font-weight: 600; }
+  .tool-call .tc-args { color: var(--ink-3); }
+  .tool-call .tc-out  { color: var(--ink-2); margin-top: 2px; }
+  .layout-spec { background: var(--bg); border: 1px solid var(--line);
+    border-radius: 6px; padding: 8px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 10.5px; white-space: pre; overflow-x: auto; max-height: 260px; }
+
+  .empty { color: var(--ink-3); font-size: 12px; padding: 20px;
+    text-align: center; border: 1px dashed var(--line-2); border-radius: 8px; }
+</style>
+</head>
+<body>
+<div class="gen-wrap">
+
+  <div class="gen-head">
+    <h1>DMD Generative UI <span style="font-weight:400;color:var(--ink-3)">— stub</span></h1>
+    <p>Type a question. A plan() function (stubbed for now) picks tools + widgets from the palette and renders a fresh panel below. Data comes from the real substrate; only the planning step is faked.</p>
+  </div>
+
+  <div class="gen-bar">
+    <input id="q" class="gen-input" type="text"
+           placeholder="Ask about DMD — expression, pathways, phenotypes, overview…"
+           autocomplete="off">
+    <button id="go" class="gen-submit">Ask</button>
+  </div>
+
+  <div class="gen-suggest" id="chips"><!-- populated from CANNED --></div>
+
+  <button id="more-toggle" class="gen-more-toggle" aria-controls="more-panel" aria-expanded="false">
+    See more example questions ▾
+  </button>
+  <div id="more-panel" class="gen-more-panel" hidden>
+    <div class="gen-more-hd">
+      <h3>Example questions</h3>
+      <button id="more-close" class="gen-more-close" aria-label="Close">×</button>
+    </div>
+    <div class="gen-cats" id="cats"><!-- populated from EXAMPLES --></div>
+  </div>
+
+  <div id="turns"></div>
+
+  <div id="empty" class="empty">
+    Panels render here. Try one of the suggested questions above.
+  </div>
+</div>
+
+<script src="widget_palette.js"></script>
+<script>
+// ---------------------------------------------------------------
+//  SUBSTRATE — one fetch on load, shared across turns
+// ---------------------------------------------------------------
+let DATA = null;
+fetch('mechanism_data.json', { cache: 'no-store' })
+  .then(r => r.ok ? r.json() : null)
+  .then(d => { DATA = d; });
+
+// ---------------------------------------------------------------
+//  CANNED PLANS — the "LLM" for this stub
+// ---------------------------------------------------------------
+//  Each entry is what plan(query) would return in the real system:
+//    match(q)    — a predicate; first match wins
+//    tools       — array of {name, args, out_summary} shown in inspector
+//    prose       — narration streamed word-by-word
+//    layout(D)   — returns [{type, props}]; renders via WIDGETS[type].render(props)
+//
+//  Data comes from DATA (mechanism_data.json). No values are invented.
+// ---------------------------------------------------------------
+const CANNED = [
+  // -------- WIDGET-SPECIFIC ROUTES (placed first so their specific ------
+  // -------- keywords beat the broader routes below).                ------
+
+  {
+    id: 'reasoning_chain',        // opens: reasoningChain
+    label: 'Show me the reasoning chain for the top hypothesis',
+    match: q => /reasoning chain|chain (from|of).*(reason|genotype|logic|hypothesis)|step[- ]?by[- ]?step (logic|reasoning|chain)|show.*(reasoning chain|the chain)|logic (from|behind) (dmd|genotype)/i.test(q),
+    tools: [
+      { name: 'top_hypothesis_chain', args: { symbol: 'DMD' },
+        out: '9 nodes · 8 edges · 5 tiers (genotype → therapeutic target)' },
+    ],
+    prose:
+      "The top DMD hypothesis lays out a 9-node causal chain across five tiers: genotype (out-of-frame deletion) → " +
+      "transcript (frame disruption) → protein (truncated / absent dystrophin) → cellular consequence (DGC dissociation, " +
+      "sarcolemmal fragility) → pathophysiology (progressive necrosis + fibrosis) → therapeutic target (exon-skipping, " +
+      "gene replacement). Click any arrow in the chain to expand the paper-level evidence for that specific step.",
+    layout: (D) => {
+      const top = D.hypotheses.find(h => h.selected) || D.hypotheses[0];
+      return [{ type: 'reasoningChain', props: { chain: top.detail.chain, selectedEdgeId: null } }];
+    },
+  },
+
+  {
+    id: 'edge_evidence',          // opens: edgeEvidenceBar
+    label: 'What evidence supports the genotype→protein step?',
+    match: q => /evidence (supports|for) (the|a|any).*(step|edge|arrow|link)|evidence bar|which (edge|arrow).*(evidence|strong)|citations? for.*(step|edge|arrow)|why does.*imply/i.test(q),
+    tools: [
+      { name: 'top_hypothesis_chain', args: { symbol: 'DMD' },
+        out: '8 edges · each with curated citations' },
+      { name: 'edge_evidence',        args: { edge: '(top edge with citations)' },
+        out: '2–3 paper-level bullets per edge' },
+    ],
+    prose:
+      "Each arrow in a reasoning chain carries paper-level evidence — the citations that support the claim that " +
+      "A implies B. Below is one such edge from the top DMD hypothesis with its citation list. In the full UI you " +
+      "would click any arrow in the chain to inspect its evidence this way.",
+    layout: (D) => {
+      const top = D.hypotheses.find(h => h.selected) || D.hypotheses[0];
+      const edges = top.detail.chain.edges;
+      const edge = edges.find(e => e.evidence && e.evidence.length) || edges[0];
+      return [{ type: 'edgeEvidenceBar', props: { edge, evidence: edge.evidence || [] } }];
+    },
+  },
+
+  {
+    id: 'variant_lollipop',       // opens: variantLollipop
+    label: 'Where do DMD variants cluster on the protein?',
+    match: q => /lollipop|variants? (cluster|map)|cluster.*(on|along).*(protein|amino acid|position)|variant.*(protein|amino acid) (position|coordinate)/i.test(q),
+    tools: [
+      { name: 'variant_positions', args: { symbol: 'DMD', bin: 'aa' },
+        out: '~10k unique alleles binned by protein position (demo)' },
+    ],
+    prose:
+      "A lollipop map plots variant positions along the DMD protein axis. Marker height encodes how many times each " +
+      "position has been reported; color encodes the predicted consequence class. This view uses a demonstration " +
+      "binning; the production version would pull from clinvar_phenotype + lovd_variants, group by amino-acid " +
+      "position, and color by ACMG classification.",
+    layout: (D) => [{ type: 'variantLollipop', props: window.WIDGETS.variantLollipop.example }],
+  },
+
+  {
+    id: 'exon_architecture',      // opens: exonArchitecturePanel
+    label: 'Show me the exon architecture of DMD',
+    match: q => /exon (architecture|structure|layout|panel|ruler)|actin[- ]?binding|spectrin repeat|central rod|dystrobrevin|which exons? (encode|contain|make up)|domain (architecture|panel|band)/i.test(q),
+    tools: [
+      { name: 'exon_architecture', args: { symbol: 'DMD' },
+        out: '79 exons · 4 domains (ABD, central rod, CR, C-term)' },
+      { name: 'exon_psi_by_cell',  args: { symbol: 'DMD' },
+        out: 'PSI tracks per cell type (demo values)' },
+    ],
+    prose:
+      "DMD's 79 exons encode four functional protein domains: N-terminal actin-binding (ABD, exons 1–8), a long " +
+      "central rod of 24 spectrin-like repeats (exons 8–63), cysteine-rich (CR, exons 64–70), and C-terminal " +
+      "syntrophin/dystrobrevin-binding (exons 71–79). Below: exon-by-exon ruler with domain bands, tissue-specific " +
+      "inclusion (PSI) tracks, and variant-density markers. PSI values here are demonstrative pending a full " +
+      "splicing atlas bake.",
+    layout: (D) => [{ type: 'exonArchitecturePanel', props: window.WIDGETS.exonArchitecturePanel.example }],
+  },
+
+  {
+    id: 'isoform_heatmap',        // opens: heatmap
+    match: q => /isoform.*(cell type|tissue|matrix|heatmap|across)|expression.*isoform.*(cell|tissue)|(cell type|tissue).*isoform|isoform (expression|profile) (matrix|heatmap|grid)/i.test(q),
+    label: 'How does isoform expression vary across cell types?',
+    tools: [
+      { name: 'isoform_celltype_matrix', args: { symbol: 'DMD' },
+        out: '7 isoforms × ~15 cell types (demo)' },
+    ],
+    prose:
+      "A heatmap of DMD's 7 isoforms against a panel of cell types shows which promoter drives expression where: " +
+      "Dp427m in myofibers and cardiomyocytes, Dp260 in retinal photoreceptors, Dp140 in fetal CNS + kidney, " +
+      "Dp116 in Schwann cells, Dp71 broadly. Values below are demonstrative; the production version would need a " +
+      "broader single-cell atlas bake than HPA alone.",
+    layout: (D) => [{ type: 'heatmap', props: window.WIDGETS.heatmap.example }],
+  },
+
+  {
+    id: 'linked_view',            // opens: linkedHeatmap
+    label: 'Link DMD variants to cell types and pathways',
+    match: q => /linked heatmap|link.*(variant|pathway|cell type)|variant.*cell type.*pathway|joined heatmap|cross[- ]?axis|connect.*(variant|pathway|cell type).*(pathway|cell type)/i.test(q),
+    tools: [
+      { name: 'linkage_matrix', args: { symbol: 'DMD' },
+        out: 'variant class × cell type × pathway (demo)' },
+    ],
+    prose:
+      "A linked heatmap joins three axes at once: variant classes → cell types → pathways. It answers 'which " +
+      "variant classes hit which cell types, and which processes those cell types drive.' Cell type is the shared " +
+      "middle axis (rows). This is a demonstration matrix; the production version would compute pathogenicity-" +
+      "weighted overlaps from LOVD + HPA + Reactome.",
+    layout: (D) => [{ type: 'linkedHeatmap', props: window.WIDGETS.linkedHeatmap.example }],
+  },
+
+  // -------- BROADER ROUTES (fallbacks for general questions) ------------
+
+  {
+    id: 'overview',
+    label: 'Give me an overview of DMD',
+    match: q => /overview|summar(y|ize)|about (the )?(dmd|gene)|what (kind|type) of (gene|protein)/i.test(q),
+    tools: [
+      { name: 'gene_meta',                args: { symbol: 'DMD' },
+        out: '1 row · 7 isoforms · Xp21.2 · 79 exons' },
+      { name: 'header_counts',            args: { symbol: 'DMD' },
+        out: 'lovd=41,566 · unique=10,136 · phenotyped=2,097' },
+      { name: 'variant_class_breakdown',  args: { symbol: 'DMD' },
+        out: 'structural=48% · snv=44% · other=8%' },
+      { name: 'phenotype_summary',        args: { cohort: 'total_2097' },
+        out: '4 buckets: DMD/BMD/IMD/pending' },
+    ],
+    prose:
+      "DMD encodes dystrophin on Xp21.2, a 2.3-Mb locus with 79 exons and 7 tissue-specific isoforms. " +
+      "Across 41,566 LOVD entries (~10,136 unique variants), roughly half are structural (large deletions/duplications) and " +
+      "the rest are SNVs. In Zhang 2024's 2,097-patient cohort, 81% present as Duchenne, 15% Becker, ~2% intermediate. " +
+      "The classical mechanism: out-of-frame changes abolish dystrophin → DMD; in-frame changes preserve a shortened " +
+      "but partially functional protein → BMD (Monaco rule).",
+    layout: (D) => [
+      { type: 'geneHeader',
+        props: { gene: D.gene, header: D.header } },
+      { type: 'stackedBar',
+        props: { title: 'Genetic Evidence', ...D.tiles.geneticEvidence } },
+      { type: 'donutBreakdown',
+        props: { title: 'Phenotype Distribution', ...D.tiles.phenotypeDist } },
+    ],
+  },
+
+  {
+    id: 'expression',
+    label: 'Where is DMD expressed?',
+    match: q => /(where|which).*(express|cell type|tissue)|cell types?|express(ed|ion)?|nCPM|dystrophin.*express/i.test(q),
+    tools: [
+      { name: 'top_cell_types_for_gene',  args: { symbol: 'DMD', k: 7 },
+        out: '7 rows · Myonuclei @ 14,979 nCPM top' },
+      { name: 'sources_and_tissues',      args: { symbol: 'DMD' },
+        out: 'Human Protein Atlas · muscle/heart/retina/adipose' },
+    ],
+    prose:
+      "DMD's peak expression sits in myonuclei (post-fusion skeletal muscle) and cardiomyocytes — consistent with the " +
+      "Dp427m isoform being the primary driver of striated-muscle dystrophin. It also shows up in retinal photoreceptors " +
+      "(Rod > Cone), matching Dp260's role in the outer retina, and in myoepithelial-like contractile cells " +
+      "(thymic myoid, salivary). Human Protein Atlas' specific-nCPM set doesn't surface CNS or Schwann-cell expression " +
+      "here — those isoforms (Dp71, Dp140, Dp116) would need a broader atlas bake.",
+    layout: (D) => [
+      { type: 'hbarList',
+        props: { title: 'Cell Types (Human Protein Atlas)', ...D.tiles.cellTypes } },
+    ],
+  },
+
+  {
+    id: 'pathways',
+    label: 'What pathways is DMD in?',
+    match: q => /pathway|reactome|go[-\s]?bp|process|complex/i.test(q),
+    tools: [
+      { name: 'pathways_for_gene',        args: { symbol: 'DMD', source: 'reactome' },
+        out: '5 Reactome pathways' },
+      { name: 'pathway_specificity',      args: { pathway_ids: '(5 ids)' },
+        out: '10 − log(n_genes) → score 4.23 – 6.42' },
+    ],
+    prose:
+      "DMD is a member of five human Reactome pathways. The tightest (highest-specificity) memberships are Striated " +
+      "Muscle Contraction and Formation of the dystrophin-glycoprotein complex (DGC) — both small, muscle-specific pathways " +
+      "with score ≈ 6.4. It also participates in broader ECM-organization pathways. Reactome doesn't directly annotate DMD " +
+      "into costamere or Ca²⁺-homeostasis pathways — those are hung off DTNA, SGCB, etc. — so absence there is a Reactome " +
+      "curation choice, not a biology claim.",
+    layout: (D) => [
+      { type: 'hbarList',
+        props: { title: 'Pathways (Reactome)', ...D.tiles.pathways } },
+    ],
+  },
+
+  {
+    id: 'isoforms',
+    label: 'Which isoforms are hit by exon deletions?',
+    match: q => /isoform|dp\s*(427|260|140|116|71)|exon\s*(del|skip)|monaco|reading frame/i.test(q),
+    tools: [
+      { name: 'exon_usage_per_isoform',   args: { symbol: 'DMD' },
+        out: '553 exon-usage rows · 7 isoforms × 79 exons' },
+      { name: 'isoform_coverage',         args: { symbol: 'DMD' },
+        out: 'Dp427x: ~100% · Dp260: 62% · Dp140: 44% · Dp71: 8%' },
+    ],
+    prose:
+      "The seven DMD isoforms differ by promoter and by which exons they use. Dp427 (m/c/p) covers essentially the full " +
+      "79-exon transcript, so a deletion anywhere impacts it. Shorter isoforms use progressively fewer exons: Dp260 skips " +
+      "the N-terminal actin-binding region, Dp140 skips more, Dp116 is Schwann-cell-restricted, and Dp71 uses only ~8% " +
+      "of the exons (mostly the C-terminal cysteine-rich + syntrophin-binding domains). A deletion's impact depends on " +
+      "which isoforms include the affected exons AND whether the reading frame is preserved (Monaco rule).",
+    layout: (D) => [
+      { type: 'hbarList',
+        props: { title: 'Isoform Impact (exon coverage)', ...D.tiles.isoformImpact } },
+    ],
+  },
+
+  {
+    id: 'variants',
+    label: 'How many pathogenic variants are in DMD?',
+    // Placed BEFORE isoforms so raw "deletion" queries land here; isoforms
+    // still wins for "exon deletion" (its regex requires "exon" prefix).
+    match: q => /variant|mutation|allele|pathogen(ic|icity)|reported|lovd|clinvar|snv|dup(licat)?|(del|deletion)s?\b(?!.*(exon|isoform))/i.test(q),
+    tools: [
+      { name: 'variant_class_breakdown',  args: { symbol: 'DMD' },
+        out: 'structural 48% · SNV 44% · other 8%' },
+      { name: 'variant_top_types',        args: { symbol: 'DMD', k: 4 },
+        out: 'del 62% · sub 25% · dup 11% · delins 1%' },
+      { name: 'clinvar_summary',          args: { symbol: 'DMD' },
+        out: '11,790 ClinVar submissions (DMD gene subset)' },
+    ],
+    prose:
+      "The LOVD-DMD atom feed carries 41,566 variant reports across ~10,136 unique alleles. Deletions dominate " +
+      "the landscape (~62% of reports), followed by substitutions (~25%), duplications (~11%), and delins (~1%). " +
+      "The heavy deletion skew is a feature of the locus itself: at 2.3 Mb DMD is the largest human gene, and its " +
+      "very long introns are rich in repetitive elements that promote non-allelic homologous recombination — the " +
+      "mechanism behind most large intragenic deletions. ClinVar independently carries 11,790 submissions for DMD, " +
+      "the majority annotated pathogenic.",
+    layout: (D) => [
+      { type: 'stackedBar',
+        props: { title: 'DMD Variant Landscape', ...D.tiles.geneticEvidence } },
+    ],
+  },
+
+  {
+    id: 'hypotheses',
+    label: 'Show me the top DMD mechanistic hypothesis',
+    match: q => /hypothes|reasoning|leading (mechanism|hypothesis)|top (mechanism|hypothesis)|ranked mechanism|mechanism (for|of) dmd/i.test(q),
+    tools: [
+      { name: 'list_hypotheses',        args: { symbol: 'DMD' },
+        out: '4 hypotheses ranked · overall confidence 82/100' },
+      { name: 'top_hypothesis_detail',  args: { symbol: 'DMD' },
+        out: 'lede + 7 evidence bullets + 9-node reasoning chain' },
+    ],
+    prose:
+      "Four mechanistic hypotheses are ranked for the DMD gene, all rooted in dystrophin loss but differing in " +
+      "downstream emphasis. The top-ranked hypothesis — out-of-frame deletions → truncated dystrophin → sarcolemmal " +
+      "fragility — is the classical Monaco reading-frame story, supported by cited biopsy, imaging, and cohort data. " +
+      "Its full reasoning chain (genotype → transcript → protein → pathophysiology → therapeutic target) is shown " +
+      "below. Click any arrow in the chain to see paper-level evidence for that specific step.",
+    layout: (D) => {
+      const top = D.hypotheses.find(h => h.selected) || D.hypotheses[0];
+      return [
+        { type: 'hypothesisTable',  props: { rows: D.hypotheses, meta: D.hypothesesMeta } },
+        { type: 'hypothesisDetail', props: { hypothesis: top, selectedEdgeId: null } },
+      ];
+    },
+  },
+
+  {
+    id: 'phenotype',
+    label: 'What fraction of patients present as Becker?',
+    match: q => /phenotype|becker|duchenne|patient|cohort|severity|bmd|dmd\s+vs/i.test(q),
+    tools: [
+      { name: 'phenotype_summary',        args: { cohort: 'total_2097' },
+        out: 'DMD 1697 · BMD 315 · IMD 44 · pending 41' },
+      { name: 'patient_phenotype_sample', args: { source: 'zhang2024', k: 10 },
+        out: '10 rows · exon/HGVS/phenotype/age triples' },
+    ],
+    prose:
+      "In Zhang et al. 2024's 2,097-patient cohort, ~81% present as Duchenne (severe, wheelchair by early teens), " +
+      "~15% as Becker (later onset, longer ambulation), ~2% as intermediate, and ~2% pending phenotypic classification. " +
+      "Note this is patient-level, not variant-level: ClinVar's per-variant labels skew ~98% DMD due to submission bias " +
+      "(severe alleles are the ones people report). The Zhang cohort is the honest denominator for 'what does a random " +
+      "DMD-gene patient look like clinically'.",
+    layout: (D) => [
+      { type: 'donutBreakdown',
+        props: { title: 'Phenotype Distribution', ...D.tiles.phenotypeDist } },
+    ],
+  },
+];
+
+// ---------------------------------------------------------------
+//  EXAMPLES catalog — questions grouped by which widget they open.
+//  Every widget in widget_palette.js should appear here at least once
+//  so the panel doubles as a live widget-catalog demo.
+//
+//  Each item: { widget, question }
+//    widget    — display tag; may name multiple widgets if the route
+//                renders more than one
+//    question  — the query that gets submitted when the user clicks
+//
+//  When editing: the question must route to a CANNED entry (not
+//  FALLBACK). The smoke-test script at the bottom of this file confirms
+//  routing when the page loads.
+// ---------------------------------------------------------------
+// Questions organized by biological layer of organization (matches the
+// Overview panel grouping in patient_chat.html and the layered reasoning
+// chain view). Each question routes to a CANNED entry above — the
+// smoke-test at the bottom of this file catches drift.
+const EXAMPLES = [
+  { category: 'Overview', items: [
+    { widget: 'geneHeader + stackedBar + donutBreakdown',
+      question: 'Give me an overview of DMD' },
+  ]},
+  { category: 'Variant', items: [
+    { widget: 'stackedBar',
+      question: 'What variant classes drive DMD?' },
+    { widget: 'variantLollipop',
+      question: 'Where do DMD variants cluster on the protein?' },
+  ]},
+  { category: 'Gene', items: [
+    { widget: 'exonArchitecturePanel',
+      question: 'Show me the exon architecture of DMD' },
+  ]},
+  { category: 'Protein', items: [
+    { widget: 'hbarList (isoforms)',
+      question: 'Which isoforms are hit by exon deletions?' },
+    { widget: 'heatmap',
+      question: 'How does isoform expression vary across cell types?' },
+  ]},
+  { category: 'Pathway', items: [
+    { widget: 'hbarList (pathways)',
+      question: 'What pathways does DMD participate in?' },
+  ]},
+  { category: 'Cell type', items: [
+    { widget: 'hbarList (cell types)',
+      question: 'Where is DMD expressed at cell-type resolution?' },
+  ]},
+  { category: 'Phenotype', items: [
+    { widget: 'donutBreakdown',
+      question: 'What fraction of patients present as Becker?' },
+  ]},
+  { category: 'Mechanism (hypothesis)', items: [
+    { widget: 'hypothesisTable + hypothesisDetail',
+      question: 'How are the DMD mechanism hypotheses ranked?' },
+    { widget: 'reasoningChain',
+      question: 'Show me the reasoning chain for the top hypothesis' },
+    { widget: 'edgeEvidenceBar',
+      question: 'What evidence supports the genotype-to-protein step?' },
+  ]},
+  { category: 'Therapy (closes the loop)', items: [
+    { widget: 'hypothesisTable + hypothesisDetail',
+      question: 'Which mechanism hypothesis has the best therapeutic rationale?' },
+    { widget: 'reasoningChain',
+      question: 'Show me the reasoning chain through to the therapeutic target' },
+  ]},
+  { category: 'Cross-axis views', items: [
+    { widget: 'linkedHeatmap',
+      question: 'Link DMD variants to cell types and pathways' },
+  ]},
+];
+
+// Fallback plan when no CANNED entry matches. Shows the pattern's honest failure mode.
+const FALLBACK = {
+  tools: [],
+  prose:
+    "The stub planner didn't recognize that question. In the production system this would either (a) fall through to a " +
+    "general query-decomposer that picks tools from the MCP servers listed in CLAUDE.md, or (b) return a 'I don't have " +
+    "a substrate for that' with a suggestion. For this demo, try one of the suggested chips above.",
+  layout: () => [],
+};
+
+function plan(query) {
+  for (const c of CANNED) if (c.match(query)) return c;
+  return FALLBACK;
+}
+
+// ---------------------------------------------------------------
+//  RENDERING
+// ---------------------------------------------------------------
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g,
+  c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+
+function renderInspector(p) {
+  const toolsHtml = p.tools.length ? p.tools.map(t =>
+    `<div class="tool-call">
+       <div><span class="tc-name">${esc(t.name)}</span><span class="tc-args">(${esc(JSON.stringify(t.args))})</span></div>
+       <div class="tc-out">→ ${esc(t.out)}</div>
+     </div>`).join('') : '<div class="tool-call" style="color:var(--ink-3)">(no tools called)</div>';
+
+  const specHtml = esc(JSON.stringify(
+    (p.layout ? p.layout(DATA) : []).map(w => ({ type: w.type, props: '(…)' })),
+    null, 2
+  ));
+
+  return `<details class="turn-inspect">
+    <summary>Inspect — what the "model" chose</summary>
+    <div class="inspect-body">
+      <div class="inspect-col">
+        <h4>Tool calls</h4>
+        ${toolsHtml}
+      </div>
+      <div class="inspect-col">
+        <h4>Layout spec</h4>
+        <div class="layout-spec">${specHtml}</div>
+      </div>
+    </div>
+  </details>`;
+}
+
+function renderWidgets(p) {
+  if (!DATA) return '<div class="empty">Data not loaded yet — try again in a moment.</div>';
+  const items = p.layout(DATA);
+  if (!items.length) return '';
+  // Wrap tile-type widgets in .tiles for consistent grid look.
+  const tileTypes = new Set(['stackedBar', 'donutBreakdown', 'hbarList']);
+  const tiled = items.filter(w => tileTypes.has(w.type));
+  const banner = items.filter(w => !tileTypes.has(w.type));
+  const bannerHtml = banner.map(w =>
+    window.WIDGETS[w.type].render(w.props)).join('');
+  const tileHtml = tiled.length
+    ? `<div class="tiles">${tiled.map(w =>
+        window.WIDGETS[w.type].render({ title: w.props.title, ...w.props })).join('')}</div>`
+    : '';
+  return `<div class="turn-widgets">${bannerHtml}${tileHtml}</div>`;
+}
+
+// Fake token streaming — word-by-word with a small delay.
+function streamProse(el, text, done) {
+  const words = text.split(' ');
+  let i = 0;
+  el.innerHTML = '<span class="body"></span><span class="cursor">&nbsp;</span>';
+  const body = el.querySelector('.body');
+  const iv = setInterval(() => {
+    if (i >= words.length) {
+      clearInterval(iv);
+      el.querySelector('.cursor').remove();
+      done && done();
+      return;
+    }
+    body.textContent += (i ? ' ' : '') + words[i++];
+  }, 22);
+}
+
+function renderTurn(query) {
+  const empty = document.getElementById('empty');
+  if (empty) empty.remove();
+
+  const turns = document.getElementById('turns');
+  const div = document.createElement('div');
+  div.className = 'turn';
+  div.innerHTML = `
+    <div class="turn-q"><b>You asked:</b> ${esc(query)}</div>
+    <div class="turn-status"><span class="dots">planning</span></div>
+  `;
+  turns.prepend(div);
+
+  const p = plan(query);
+
+  setTimeout(() => {
+    // "planning" → "calling tools" → prose stream → widgets
+    const status = div.querySelector('.turn-status');
+    status.innerHTML = `<span class="dots">calling ${p.tools.length || 0} tool${p.tools.length===1?'':'s'}</span>`;
+
+    setTimeout(() => {
+      status.remove();
+      const proseEl = document.createElement('div');
+      proseEl.className = 'turn-prose';
+      div.appendChild(proseEl);
+      streamProse(proseEl, p.prose, () => {
+        // then widgets + inspector
+        const widgetsEl = document.createElement('div');
+        widgetsEl.innerHTML = renderWidgets(p);
+        div.appendChild(widgetsEl);
+        const insEl = document.createElement('div');
+        insEl.innerHTML = renderInspector(p);
+        div.appendChild(insEl);
+      });
+    }, 500);
+  }, 400);
+}
+
+// ---------------------------------------------------------------
+//  WIRING
+// ---------------------------------------------------------------
+function submit() {
+  const q = document.getElementById('q').value.trim();
+  if (!q) return;
+  renderTurn(q);
+  document.getElementById('q').value = '';
+}
+
+document.getElementById('go').addEventListener('click', submit);
+document.getElementById('q').addEventListener('keydown', e => {
+  if (e.key === 'Enter') submit();
+});
+
+function makeChip(text, onClick) {
+  const b = document.createElement('button');
+  b.className = 'gen-chip';
+  b.textContent = text;
+  b.addEventListener('click', onClick);
+  return b;
+}
+function askThis(text) {
+  document.getElementById('q').value = text;
+  submit();
+}
+
+// Quick-start chips at the top — curated shortlist covering distinct
+// widget families (overview, distribution, chain, gene-level view).
+const CHIP_QUESTIONS = [
+  'Give me an overview of DMD',
+  'Where is DMD expressed?',
+  'How are the DMD mechanism hypotheses ranked?',
+  'Show me the reasoning chain for the top hypothesis',
+  'Show me the exon architecture of DMD',
+];
+const chips = document.getElementById('chips');
+CHIP_QUESTIONS.forEach(q => chips.appendChild(makeChip(q, () => askThis(q))));
+
+// Populate the "See more example questions" panel from EXAMPLES —
+// widget-tagged so the reader sees which widget each question opens.
+const cats = document.getElementById('cats');
+EXAMPLES.forEach(cat => {
+  const wrap = document.createElement('div');
+  wrap.className = 'gen-cat';
+  wrap.innerHTML = `<h4>${esc(cat.category)}</h4>`;
+  cat.items.forEach(item => {
+    const row = document.createElement('button');
+    row.className = 'gen-chip gen-chip-row';
+    row.innerHTML = `<span class="gen-chip-widget">${esc(item.widget)}</span><span class="gen-chip-q">${esc(item.question)}</span>`;
+    row.addEventListener('click', () => { askThis(item.question); closeMore(); });
+    wrap.appendChild(row);
+  });
+  cats.appendChild(wrap);
+});
+
+// Smoke test — log any EXAMPLES question that routes to FALLBACK.
+// Prevents silent drift when someone adds a question without a match.
+const _drift = EXAMPLES.flatMap(c => c.items).filter(i => plan(i.question) === FALLBACK);
+if (_drift.length) console.warn('[generative] Questions routing to FALLBACK:', _drift.map(i => i.question));
+
+// Toggle logic for the more-panel
+const moreToggle = document.getElementById('more-toggle');
+const morePanel  = document.getElementById('more-panel');
+const moreClose  = document.getElementById('more-close');
+function openMore()  { morePanel.hidden = false; moreToggle.setAttribute('aria-expanded', 'true');
+  moreToggle.textContent = 'Hide example questions ▴'; }
+function closeMore() { morePanel.hidden = true;  moreToggle.setAttribute('aria-expanded', 'false');
+  moreToggle.textContent = 'See more example questions ▾'; }
+moreToggle.addEventListener('click', () => morePanel.hidden ? openMore() : closeMore());
+moreClose .addEventListener('click', closeMore);
+</script>
+</body>
+</html>

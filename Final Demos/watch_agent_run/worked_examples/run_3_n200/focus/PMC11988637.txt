@@ -1,0 +1,7 @@
+L39|The next day, floating cells were cultured in α-MEM containing 10% FBS, 1× Gibco antibiotic–antimycotic, and 30 ng/mL mouse M-CSF (PeproTech, Cranbury, NJ, USA).
+L39|Cells with >95% purity that differentiated due to M-CSF stimulation and adhered to the culture dish were classified as BMMs [ 60 ].
+L39|Adherent BMMs were differentiated into osteoclasts using 100 ng/mL mouse RANKL (PeproTech, Cranbury, NJ, USA), 30 ng/mL mouse M-CSF, and the indicated Rhus concentrations.
+L43|BMMs were differentiated into osteoclasts using 100 ng/mL mouse RANKL, 30 ng/mL mouse M-CSF, and indicated Rhus concentrations for 5 days.
+L52|The BMMs were differentiated into osteoclasts using 30 ng/mL macrophage colony-stimulating factor (M-CSF) and 100 ng/mL receptor activator of nuclear factor kappa B ligand (RANKL) for 3 days, and the cells were subsequently treated with the indicated Rhus concentration ( F ).
+L53|( A , B ) Bone marrow macrophages (BMMs) were seeded into 48-well plates and cultured for 5 days in a medium containing 100 ng/mL of receptor activator of nuclear factor kappa B ligand (RANKL) and 30 ng/mL of macrophage colony-stimulating factor (M-CSF) with 1–30 μM of Rhus.
+L56|( B , C ) The BMMs were cultured in 30 ng/mL M-CSF and 100 ng/mL RANKL with 10 μM Rhus, in the presence or absence of 1 μM SC79 or LY294002, for 5 days.

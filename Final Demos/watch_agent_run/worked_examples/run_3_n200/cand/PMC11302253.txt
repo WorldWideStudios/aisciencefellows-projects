@@ -1,0 +1,7 @@
+L1|Francisella tularensis  Live Vaccine Strain training of murine alveolar and bone marrow-derived macrophages
+L7|To do so, we used a previous  in vitro  co-culture approach with murine bone marrow-derived macrophages to expand and study lung alveolar macrophages.
+L7|However, we find no evidence that either bone marrow-derived or alveolar macrophages are trained by LVS vaccination.
+L8|For the first time, we show that immune (but not naïve) splenocytes controlled bacterial replication within alveolar macrophages, similar to previous results using bone marrow-derived macrophage.
+L16|However, to date, only bone marrow-derived macrophages (BMMØs) have been used in this system.
+L23|As noted, to date, previous studies have utilized rodent bone marrow-derived macrophages to quantitate immune lymphocyte-mediated control of intracellular bacterial growth ( 18 – 23 ).
+L42|Briefly, BMMØs were cultured in complete Dulbecco's modified Eagle medium (DMEM with 10% heat-inactivated fetal calf serum, 0.2 mM L-glutamine, 0.1 mM non-essential amino acids, 10 mM HEPES buffer, 1 mM sodium pyruvate, and 1 mM sodium bicarbonate) and macrophage colony stimulating factor (M-CSF) in 24-well plates.

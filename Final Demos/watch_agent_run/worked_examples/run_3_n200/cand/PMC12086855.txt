@@ -1,0 +1,9 @@
+L19|For instance, murine fetal liver-derived macrophages cultured with granulocyte–macrophages colony-stimulating factor (GM-CSF) produce “Max Planck Institute cells” (MPI), which are non-transformed and self-renewing [ 7 ].
+L19|Recent advances have enabled the culture and expansion of murine AMs using weekly GM-CSF treatment [ 9 ,  10 ], though these still fail to capture the full heterogeneity of AM populations, which are constantly influenced by environmental factors over an organism's lifespan [ 3 ,  11 ].
+L32|Red blood cells were lysed for 5 min and 2×10 6  cells were cultured in a 10-cm Petri dish with RPMI 1640 medium containing 10% FBS, 100 U·mL −1  penicillin, 100 μg·mL −1  streptomycin, 15 ng·mL −1  of recombinant murine GM-CSF and 1X solution of sodium pyruvate.
+L35|For  ex vivo  human AMs (hAM) culture, BALF was centrifuged, cells were counted and plated in a 10-cm or 20-cm (depending on the number of cells) Petri dish with RPMI 1640 medium containing 10% of FBS, 100 U·mL −1  penicillin, 100 μg·mL −1  streptomycin, 15 ng·mL −1  of recombinant human GM-CSF (cat. no.
+L41|All cell types were seeded in 96-well plates (2.105 cells/200 µL) in their respective medium the day before the experiment without GM-CSF for each cell type.
+L83|Early efforts focused on culturing fetal liver cells with GM-CSF, yielding self-replicating AM-like cells termed MPI.
+L83|To maintain an AM-like phenotype, some have proposed culturing fetal liver-derived cells with transforming growth factor-β (TGF-β) alongside GM-CSF, which preserved high SiglecF expression levels [ 29 ].
+L87|Despite some evidence for using GM-CSF and TGF-β for maintaining the AM phenotype, we chose to use GM-CSF alone for the maintenance of mouse and human AMs during culture, because the recent work from S ubramamian
+L88|et al.  [ 9 ] demonstrated that the use of GM-CSF is sufficient to maintain long-term proliferation of cultured mAM without compromising cellular identity  in vivo .

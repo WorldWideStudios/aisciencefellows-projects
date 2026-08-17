@@ -1,0 +1,19 @@
+L1|Bone Marrow-Derived and Elicited Peritoneal Macrophages Are Not Created Equal: The Questions Asked Dictate the Cell Type Used
+L7|Macrophage biologists utilize peritoneal (pMAC) and bone marrow-derived macrophages (BMDM) for  in vitro  studies.
+L9|peritoneal macrophages; bone marrow-derived macrophages; polarization; cytokines; phagocytosis; flow cytometry; gene expression
+L11|The most commonly used primary macrophages are elicited peritoneal and bone marrow-derived.
+L11|Myeloid progenitor cells, harvested from the bone marrow, are differentiated with macrophage colony-stimulating factor (M-CSF) or conditioned L929 media, to produce adherent bone marrow-derived macrophages (BMDM) ( 2 ).
+L14|Bone marrow-derived macrophages were differentiated using L-cell conditioned media as the source of macrophage colony stimulating factor (M-CSF).
+L15|Figure 1 Bone marrow-derived macrophages exist as two distinct populations.
+L17|Figure 2 The size and granularity of bone marrow-derived and peritoneal macrophages are similar, but not identical.
+L72|Thioglycolate-elicited and bone marrow-derived are the most commonly used primary macrophages.
+L72|In contrast, bone marrow-derived macrophages, differentiated from progenitor cells, are a relatively pure population that can be produced in high numbers but must be differentiated ~7 days prior to use.
+L73|The M1 skewing may result from our use of conditioned L cell media as the source of M-CSF for BMDM differentiation.
+L73|While M-CSF is essential for progenitor differentiation, L cell media (LCM) contains other (undefined) factors that produce a phenotype slightly different from that produced in the presence of purified M-CSF.
+L81|Dulbecco's Modified Eagle Medium (DMEM, Gibco), ACK lysis buffer (150 mM NH 4 Cl, 10 mM KHCO 3 , 0.1 mM Na 2 EDTA, pH 7.2–7.4), Bone marrow macrophage differentiation media: DMEM supplemented with 20% L-cell conditioned media, 10% FBS, 0.2% sodium bicarbonate, and gentamycin (50 μg/ml);
+L92|Bone Marrow-Derived Macrophages (BMDMs)
+L131|Isolation and culture of mouse bone marrow-derived macrophages (BMM'phi') .
+L134|Cell density during differentiation can alter the phenotype of bone marrow-derived macrophages .
+L135|Distinct lysosome phenotypes influence inflammatory function in peritoneal and bone marrow-derived macrophages .
+L136|Bone marrow-derived and peritoneal macrophages have different inflammatory response to oxLDL and M1/M2 marker expression—implications for atherosclerosis research .
+L160|The interaction of macrophages with anti-immunoglobulin IgG-coated bone marrow-derived lymphocytes .

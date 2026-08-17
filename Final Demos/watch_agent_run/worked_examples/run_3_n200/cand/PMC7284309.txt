@@ -1,0 +1,55 @@
+L1|Isolation and culture of murine bone marrow-derived macrophages for nitric oxide and redox biology
+L7|To study macrophages  in vitro , cells are typically cultured  ex vivo  from the peritoneum or alveoli, or differentiated from myeloid bone marrow progenitor cells to form bone marrow-derived macrophages (BMDMs).
+L11|As part of the innate immune response, monocytes are recruited to sites of inflammation, where growth factors such as macrophage colony stimulating factor (MCSF) stimulate their differentiation into macrophages [ 2 ].
+L13|Macrophage experimentation typically involves  ex vivo  culture (e.g. from the peritoneum), or the differentiation from bone marrow progenitor cells to form bone marrow-derived macrophages (BMDMs).
+L14|MCSF elicits the differentiation of haematopoietic stem cells into macrophages and has been used to generate  in vitro  BMDMs from bone marrow progenitor cells for decades [ 8 , 9 ].
+L14|However, it is common to differentiate macrophages using whole conditioned media from L929 cells (L-cells), which are known to secrete large amounts of MCSF.
+L20|Gch1 fl/fl  animals were bred with Tie2cre transgenic mice to produce  Gch1 fl/fl Tie2cre mice where  Gch1  is deleted in endothelial cells and bone marrow-derived cells.
+L23|Established protocol for growing bone marrow derived macrophages
+L24|The supernatants were discarded and cells were resuspended in 1 ml of DMEM F12 growth media containing  l -glutamine (2 mM), penicillin (100 units/ml), streptomycin (0.1 mg/ml), 10% FBS and 10% L-Cell Media (LCM) as a source of MCSF growth factor (DMEM F12 LCM growth media).
+L26|Optimised protocol for growing bone marrow derived macrophages
+L27|The schematic describes A) the well-established LCM dependent culture of BMDMs and B) the newly optimised BMDM culture method using a combination of MCSF and GMCSF.
+L28|500,000 cells/well were seeded into non-tissue culture treated 6 well plates in 2 ml DMEM F12 MCSF growth media on Day 0 ( Fig.
+L28|Cells were cultured for 7 days and fed with addition of 1 ml DMEM F12 MCSF growth media containing MCSF (50 ng/ml) on Day 5 of culture, and addition of GMCSF (50 ng/ml) on Day 6.
+L28|On Day 7 cells were washed with warm PBS to remove unadhered cells and media was replaced with DMEM F12 containing  l -glutamine (2 mM), penicillin (100 units/ml), streptomycin (0.1 mg/ml), 2% FBS, MCSF (25 ng/ml) and GMCSF (50 ng/ml).
+L34|The levels of nitrite/nitrate (NOx) produced by bone marrow derived macrophages from Gch fl/fl Tie2cre and Gch fl/fl  control mice were determined using the CLD88 NO analyser (Ecophysics), as previously described [ 13 ].
+L42|Characterising Gch fl/fl Tie2cre bone marrow derived macrophages grown using the established protocol.
+L50|Interestingly, similarly substantial levels of BH 4  and BH 2  were present in 10% LCM but not preparations of recombinant MCSF growth factor ( Fig.
+L53|Next, conditions were optimised to culture BMDMs using recombinant MCSF (which had proven to be biopterin free ( Fig.
+L53|Culturing macrophages using a range of seeding densities and feeding protocols (data not shown) revealed that bone marrow seeded at 500,000 cells/well of a 6 well plate in DMEM F12 media containing 5% FBS and 25 ng/ml MCSF for 7 days, with addition of 50 ng/ml MCSF media on Day 5, was optimal to produce confluent macrophages on day 7 ( Figs.
+L53|Removing MCSF from media overnight between day 7 and 8 resulted in detachment of cells ( Fig.
+L53|S5C ), but with MCSF in the media cells were adherent in both 5 and 2% FBS media ( Fig.
+L53|S5C ), so DMEM F12 media containing 2% FBS and 25 ng/ml MCSF was chosen for overnight stimulation ( Fig.
+L55|To investigate the effect of GMCSF treatment on NO generation, cells grown in LCM, MCSF alone, and MCSF cells treated with GMCSF ( Fig.
+L55|Nitrite measurements showed that LPS/IFNγ induced NO synthesis in Gch fl/fl  cells from the three cell culture protocols with indications of greater amounts in GMCSF treated MCSF cells, and there were no detectable accumulation of nitrite in media from Gch fl/fl Tie2cre macrophages ( Fig.
+L55|However, the effect of GMCSF treatment on NO generation in Gch fl/fl  cells was less clear and a more thorough investigation carried out.
+L56|5 Macrophages cultured in MCSF and treated with GMCSF produce more nitric oxide upon stimulation with LPS/IFNγ.
+L57|NO x  levels were almost undetectable in unstimulated cells and elevated in all M LPS/IFNγ  Gch fl/fl  macrophages and were around 2-fold higher in GMCSF treated M LPS/IFNγ  cells compared with those cultured in MCSF or LCM only ( Fig.
+L58|BMDMs were cultured in either LCM, MCSF alone, or MCSF + GMCSF and harvested for Western blot analysis and determination of Monomer/Dimer ratio as an indicator of iNOS activity.
+L59|7 Biopterin measurements in macrophages cultured in LCM, MCSF and MCSF  +  GMCSF media .
+L61|These results confirmed that BMDM culture using recombinant MCSF and reduced FBS concentrations produced macrophages that induced NO production by Gch fl/fl , but not Gch fl/fl Tie2cre cells upon stimulation with LPS/IFNγ.
+L61|GMCSF treatment was also shown to increase NO generation.
+L63|Macrophages grown in LCM, MCSF and MCSF + GMCSF were at least 95% positive for the leukocyte cell surface receptor CD45, as well as macrophage markers F4/80, CD11b and MHC II on day 7 of culture ( Fig.
+L63|Gch fl/fl Tie2cre macrophages showed the same profile as Gch fl/fl  cells grown in MCSF media and treated with GMCSF, showing that knocking out  Gch1  did not affect macrophage differentiation according to these markers ( Fig.
+L65|Cytokines were measured in DMEM F12 media containing 5% FBS and (A) 10% LCM or (B) MCSF and GMCSF using a cytokine profiler spotted with specific capture antibodies.
+L66|Unstimulated cells resulted in an absence of signal (only MCSF and GMCSF were visible as these were supplemented into the culture media, as demonstrated in  Fig.
+L68|To further define the composition of this media, DMEM F12 media containing 10% LCM was analysed using a cytokine profiler array which revealed that in addition to MCSF, this media contained TNFα, CXCL1, CCL2 and tissue inhibitor of metalloproteinases-1 (TIMP1), whereas MCSF + GMCSF media only contained MCSF and GMCSF ( Fig.
+L70|10 Characterisation of Gch fl/fl Tie2cre and iNOS KO bone marrow derived macrophages grown in media containing recombinant MCSF and treated with GMCSF .
+L75|In addition, treating macrophages with GMCSF prior to, and during, stimulation was found to enhance NO generation and was included as described herein.
+L77|MCSF has been used to generate  in vitro  BMDMs from bone marrow progenitor cells for decades, as it is a cytokine that causes differentiation of haematopoietic stem cells into macrophages and is involved in their proliferation and survival [ 8 , 9 ].
+L77|GMCSF in another growth factor commonly used in cell culture systems to generate bone marrow derived dendritic cells; however, evidence suggests that these cells display macrophage markers and are transcriptionally more similar to macrophages than dendritic cells [ [21] ,  [22] ,  [23] ].
+L77|Thus, GMCSF derived macrophages have become another commonly used, but distinct, BMDM model [ 24 , 25 ].
+L77|In this study, GMCSF was used to treat macrophages differentiated using the better understood MCSF cell culture system, as GMCSF has been shown to have a ‘priming’ effect leading to enhanced inflammatory cytokine and NO production when added prior to stimulation [ 21 , 26 , 27 ].
+L77|Differences in cytokine levels and increased NO generation were observed in GMCSF treated macrophages compared with untreated cells, and are discussed further below.
+L78|LCM is used as a convenient source of MCSF, which is required for differentiation and maintenance of macrophages, but is undefined and suffers from batch variability [ 8 ].
+L78|Cytokine analysis revealed that, in addition to MCSF, our current batch of LCM contained TNFα, CXCL1, CCL2, and TIMP1—all of which affect macrophage differentiation and activation.
+L78|The concentration of MCSF in culture media was optimised to 25 ng/ml and, although MCSF levels appeared relatively much lower in media containing 10% LCM, the cells in LCM grew at the same rate (not shown).
+L79|Notable IL-10 secretion by MCSF derived BMDMs compared with GMCSF treated cells has been described previously [ 27 ].
+L79|These results show that all three culture models produce BMDMs secrete pro-inflammatory cytokines upon stimulation, but that un-primed MCSF cells also produce increased amounts of anti-inflammatory IL-10.
+L80|In accordance with previous reports [ 27 ], GMCSF treatment of MCSF-differentiated macrophages led to higher NO production by stimulated macrophages compared with un-primed cells (LCM- or recombinant MCSF-derived).
+L80|This is supported by evidence in this study showing an increased amount of iNOS dimer (vs. monomer) in the macrophages cultured in MCSF and GMCSF, compared to LCM.
+L80|It is also known that iNOS is limited by availability of arginine, NADPH, and BH 4 , but it is unlikely that either arginine or NADPH were limiting either under LCM conditions, or in MCSF-derived cells not treated with GMCSF.
+L111|GM-CSF grown bone marrow derived cells are composed of phenotypically different dendritic cells and macrophages Mol.
+L112|Alveolar macrophages develop from fetal monocytes that differentiate into long-lived cells in the first week of life via GM-CSF J.
+L115|GM-CSF priming drives bone marrow-derived macrophages to a pro-inflammatory pattern and downmodulates PGE(2) in response to TLR2 ligands PloS One 7 7 2012
+L116|Bone marrow-derived macrophages - development and regulation of differentiation markers by colony-stimulating factor and interferons J.

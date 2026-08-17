@@ -1,0 +1,4 @@
+L32|Bone marrow cells were collected from C57BL/6N mouse femurs and tibia subsequently cultured for 7 days in the presence of M-CSF (20 ng/mL) with or without metformin (2 mM).
+L33|To analyse the immunological functions of macrophages differentiated in the presence of metformin, we collected bone marrow cells from the femurs and tibias of C57BL/6N female mice and seeded them under differentiating conditions in the presence of M-CSF (20 ng/mL) with or without metformin (2 mM) [ 16 ].
+L54|Bone marrow cells have been collected and differentiated with M-CSF (20 ng/mL) without metformin.
+L72|Red blood cells (RBCs) were lysed and bone marrow cells were cultured in low-attachment conditions for 7 days in DMEM GlutaMax (Gibco/Life Technologies) supplemented with 10 % fetal bovine serum (FBS) (Gibco/Life Technologies), 1 % HEPES (Life Technologies), 100 U/mL pen-strep (Lonza), and 20 ng/mL of m-CSF (R&D Systems), with or without metformin hydrochloride (Merck).

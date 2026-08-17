@@ -1,0 +1,2 @@
+run_1a       23  setup0 setup2 pc_read2 pc_read3 pc_read2 pc_read3 pc_read3 pc_read3 pc_read3 pc_read3 pc_read2 pc_read2 pc_read3 pc_read3 pc_read3 pc_read3 pc_read3 pc_read3 pc_read3 pc_read3 pc_read2 local_work1 local_work0
+                 pc_read=19  setup=2  local_work=2

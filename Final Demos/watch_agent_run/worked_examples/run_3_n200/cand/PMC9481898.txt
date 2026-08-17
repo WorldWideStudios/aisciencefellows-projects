@@ -1,0 +1,9 @@
+L35|In our differentiation protocol, M-CSF was the only myeloid growth factor required to induce functional macrophages from hPSCs (see  experimental procedures ) ( Figure 1 ).
+L35|In distinction to previous methods that often include multiple myeloid growth factors, such as interleukin (IL) 1, IL3, IL6, granulocyte-macrophage colony stimulating factor (GM-CSF), and tissue necrosis factor ( Lyadova et al., 2021 ), we found that using M-CSF as the sole myeloid factor was sufficient to efficiently induce functional macrophages from the endothelial cell stage onward, and it maintained hPSC-macrophages over a prolonged period of  in vitro  culture ( Figure S2 ).
+L236|maintained with 50ng/ml M-CSF until required up to a further 4 weeks.
+L240|Prolong-cultured macrophages were maintained with only 50ng/ml M-CSF in Magec
+L242|2 mls of Magec medium supplemented with 50ng/ml M-CSF.
+L261||**1**|VEGF 20ng/ml|VEGF 20ng/ml|VEGF 20ng/ml|MCSF 50ng/ml<br>|
+L264||**4**|BMP4 10 ng/ml|BMP4 10ng/ml|M-CSF 25ng/ml||
+L304|infection in of Magec medium supplemented with 5ng/ml M-CSF.
+L745|M-CSF as the sole myeloid factor was sufficient to efficiently induce functional macrophages from the endothelial cell stage onward, and it maintained hPSC-macrophages over a prolonged period of in vitro culture

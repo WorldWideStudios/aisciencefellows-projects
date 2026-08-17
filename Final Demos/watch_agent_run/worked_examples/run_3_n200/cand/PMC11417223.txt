@@ -1,0 +1,25 @@
+L21|Transcriptional analyses of metformin-treated mouse bone marrow-derived macrophages show decreased expression levels of pro-tumour genes, including  Tgfbi  and  Il1β , related to enhanced mTOR/HIF1α signalling and metabolic rewiring towards glycolysis.
+L27|Nonetheless, the effect of metformin on the differentiation of bone marrow-derived macrophages, which play critical roles in tumour immunity [ 8 ] and therefore may contribute to decrease the risk of cancer development and progression, remains elusive.
+L32|Bone marrow cells were collected from C57BL/6N mouse femurs and tibia subsequently cultured for 7 days in the presence of M-CSF (20 ng/mL) with or without metformin (2 mM).
+L33|To analyse the immunological functions of macrophages differentiated in the presence of metformin, we collected bone marrow cells from the femurs and tibias of C57BL/6N female mice and seeded them under differentiating conditions in the presence of M-CSF (20 ng/mL) with or without metformin (2 mM) [ 16 ].
+L34|At the morphological level, bone marrow-derived macrophages (BMDMs) differentiated in the presence of metformin showed longer protrusions and a spindle-shaped morphology ( Fig.
+L36|Metformin reduces bone marrow-derived macrophage sensitivity to pro- and anti-inflammatory cues
+L37|2 Metformin impairs bone marrow-derived macrophage polarization.
+L41|3 Metformin induces specific bone marrow-derived macrophage phenotypical and transcriptional adaptation related to autophagy and HIF1α programs.
+L41|(A)  Heatmap showing top 50 differentially expressed genes between metformin-treated and untreated bone marrow-derived macrophages (p value < 0.05; |logFC| ≥ 0.5).
+L41|(B)  Dot plot showing top 10 modulated gene ontology (GO) biological processes related to up- and down-regulated genes between metformin-treated and untreated bone marrow-derived macrophages (circles denote number of genes within each specific GO term and color bar shows adjusted p value).
+L41|(C)  Gene set enrichment analysis (GSEA) of representative gene ontology biological processes (enrichment plot 1 and 2) and KEGG pathway (enrichment plot 3 and 4) upregulated in metformin-treated bone marrow-derived macrophages compared to control.
+L48|4 Metformin induces HIF1α activation and autophagy inhibition in bone marrow-derived macrophages.
+L48|(D)  Scheme depicting the metabolic rewiring induced in bone marrow-derived macrophages treated 7 days with metformin.
+L54|Bone marrow cells have been collected and differentiated with M-CSF (20 ng/mL) without metformin.
+L54|Fully differentiated bone marrow-derived macrophages were collected for RNA extraction and transcriptional analysis by qPCR.
+L66|We found that metformin-instructed bone marrow-derived macrophages displayed cytotoxic activity against glioma cells.
+L67|In summary, our study describes the impact of metformin on bone marrow-derived macrophages when treated during their differentiation from bone marrow cells at the morphological, functional and transcriptional levels.
+L69|This is a descriptive and mechanistic study elucidating the consequences of metformin treatment in mouse bone marrow-derived macrophage cultures  in vitro .
+L71|Mouse bone marrow-derived macrophage differentiation and treatments
+L72|Bone marrow-derived macrophages (BMDMs) were differentiated as previously described [ 79 ].
+L72|Red blood cells (RBCs) were lysed and bone marrow cells were cultured in low-attachment conditions for 7 days in DMEM GlutaMax (Gibco/Life Technologies) supplemented with 10 % fetal bovine serum (FBS) (Gibco/Life Technologies), 1 % HEPES (Life Technologies), 100 U/mL pen-strep (Lonza), and 20 ng/mL of m-CSF (R&D Systems), with or without metformin hydrochloride (Merck).
+L92|Bone marrow cells were differentiated into BMDMs as previously described with and without metformin.
+L94|Bone marrow cells were differentiated into BMDMs as previously described with and without metformin in a 96-well plate at day 0 (P96.1.5H-N, #1.5 High Performance Cover Glass (0.17 ± 0.005 mm), Cellvis) at a density of 1.5 x105 cells per well.
+L148|Polarization profiles of human M-CSF-generated macrophages and comparison of M1-markers in classically activated macrophages from GM-CSF and M-CSF origin Cell.
+L191|Preparation and culture of bone marrow-derived macrophages from mice for functional analysis STAR Protoc 2 1 2021 100246

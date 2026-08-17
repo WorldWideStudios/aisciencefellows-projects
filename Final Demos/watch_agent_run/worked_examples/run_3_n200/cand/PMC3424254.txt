@@ -1,0 +1,4 @@
+L15|We analyzed the transcriptional signatures of mouse bone marrow-derived macrophages at different times after infection with promastigotes of the protozoan parasite  Leishmania major .
+L24|BALB/c mice (Elevage Janvier) were killed and hind legs removed for bone marrow derived macrophages (BMDM) isolation.
+L24|All cells were incubated in T75 culture flasks at 1.5 10 6  cell per ml in RPMI 1640 media supplemented with 5 mM L-glutamine, 10% heat inactivated foetal calf serum, penicillin (100 U/ml) and streptomycin (100 µg/ml) and 80 ng/ml M-CSF (Peprotech, Neuilly sur Seine, France) overnight for stromal cell elimination.
+L93|Both live and heat-inactivated  Leishmania  promastigotes induce the transcription of the same set of genes involved in the intracellular cholesterol accumulation and foam cell formation in bone marrow-derived macrophages suggesting that the development of the parasite is not required.

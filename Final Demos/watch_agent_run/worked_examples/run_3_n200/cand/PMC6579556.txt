@@ -1,0 +1,3 @@
+L14|Bone marrow derived macrophages (BMMs) were generated from the femurs and tibias from wild-type C57BL/6 (The Jackson Laboratory) mice that were 8–12 weeks old.
+L15|Progenitor CIMs prior to differentiation were maintained in RPMI (Gibco) supplemented with 10% FBS, 2% GM-CSF supernatant produced by a B16 murine melanoma cell line, 2 mM L-glutamine, 1 mM sodium pyruvate, 10 mM HEPES, 43 uM β-mercaptoethanol, and 2 uM β-estradiol (Sigma #E2758).
+L15|BMMs and differentiated CIM macrophages were cultured in macrophage media: DMEM (Gibco) supplemented with 10% FBS, 10% M-CSF supernatant produced by 3T3-MCSF cells as previously described, 2 mM L-glutamine (Gibco), and 1 mM sodium pyruvate (Gibco).

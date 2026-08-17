@@ -1,0 +1,18 @@
+   4 l49:mouse
+   4 l42:deer mouse
+   4 l38:deer mouse
+   4 l29:deer mouse
+   3 l8:deer mice
+   3 l49:human
+   3 l49:deer mouse
+   3 l44:deer mice
+   3 l43:deer mouse
+   3 l30:deer mouse
+   3 l20:deer mice
+   3 l19:deer mice
+   3 l18:deer mice
+   3 l17:deer mice
+   2 l75:deer mouse
+   2 l61:deer mice
+   2 l56:mouse
+   2 l56:deer mouse

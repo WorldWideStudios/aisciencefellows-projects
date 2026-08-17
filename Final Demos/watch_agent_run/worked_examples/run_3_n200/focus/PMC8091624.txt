@@ -1,0 +1,8 @@
+L24|Next, we evaluated how proteomes of BMDMs changed when they were differentiated with 20% LCCM or recombinant M-CSF.
+L24|Therefore, three culture conditions were defined: 10 ng/ml of M-CSF, 10 ng/ml of MIF + 10 ng/ml of M-CSF, and 20% LCCM.
+L24|The concentration of 10 ng/ml was chosen for M-CSF as this is the most widely reported differentiation concentration ( 24 ,  25 ).
+L31|(B)  ELISAs of TNF-α, interleukin-6 (IL-6), and interferon-β (IFN-β) of different macrophage populations in response to treatment with 100 ng/ml LPS for 6 h show that LCCM-differentiated macrophages have enhanced immune responses compared with M-CSF–differentiated macrophages.
+L38|Interestingly, the top 100 iBAQ proteins contributed towards more than 60% of the total protein content with M-CSF being highly expressed.
+L55|Next, BM cells were transferred into one of three different culture conditions of IMDM supplemented with 10% FBS, 1% L-glutamine, 1% pen/strep, and either ( 1 ) 20% L929 conditioned media ( 2 ), 10 ng/ml of M-CSF or ( 3 ) 10 ng/ml of M-CSF and 10 ng/ml of MIF (Invitrogen).
+L59|BMDMs cultured in either M-CSF or L929 supernatant were treated with 100 ng/ml of LPS.
+L62|Precipitated L929 secretions were resuspended in 8 M Urea, 50 mM triethyl ammonium bicarbonate (TEAB), pH 8.5, whereas BMDM cell pellets were lysed in 5% SDS, 50 mM TEAB, pH 7.55.

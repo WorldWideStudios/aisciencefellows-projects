@@ -1,0 +1,28 @@
+L1|Differential TLR7-mediated cytokine expression by R848 in M-CSF- versus GM-CSF-derived macrophages after LCMV infection
+L6|Granulocyte-macrophage colony-stimulating factor (GM-CSF) and macrophage colony-stimulating factor (M-CSF) play an important role in macrophage (MФ) development by influencing their differentiation and polarization.
+L6|Our goal was to explore the difference between M-CSF- and GM-CSF-derived bone marrow MФ responsiveness to TLR7-mediated signalling pathways that influence cytokine production early after infection in a model of acute virus infection.
+L11|MФ cultured in granulocyte macrophage colony-stimulating factor (GM-CSF) have been found to be closely related to M1 MФ, based on cytokine expression [ 6, 7, 11–14 ].
+L11|Monocytes treated with macrophage-colony stimulating factor (M-CSF) differentiate into MФ, which express anti-inflammatory cytokines such as IL-10 and are characterized by enhanced arginase-1 production over nitric oxide [ 15 ].
+L13|Since early levels of proinflammatory and anti-inflammatory cytokines may dictate the success of the immune response later on, we focused on examining how a relatively short timeframe of LCMV infection (1–6 h) influenced the balance of proinflammatory cytokines versus anti-inflammatory cytokines in M-CSF- and GM-CSF-derived-MФ.
+L16|Mice were used as a source for bone marrow-derived MФ (BMDMs).
+L20|Cells were cultured in six-well tissue culture plates with RPMI supplemented with 10 % FCS (Fisher Scientific, USA), 50 µg ml −1  gentamycin and 20 % supernatant from GM-CSF-secreting X63Ag8 cells or 20 % supernatant from M-CSF-secreting L929 fibroblasts.
+L20|After 3 days, non-adherent cells were removed from both GM-CSF- and M-CSF-conditioned media.
+L24|Flow cytometry analyses of M-CSF MФ and GM-CSF MФ were performed after 7 days in culture.
+L32|M-CSF- and GM-CSF-derived MФ express F4/80 and CD11b surface markers and are readily infected with LCMV
+L33|Throughout this study, we used bone marrow-derived cells differentiated in the presence of either M-CSF or GM-CSF, resulting in differentially polarized MФ.
+L33|As expected, M-CSF-derived cells show higher levels of F4/80 expression compared to GM-CSF-derived MФ ( Fig.
+L34|Phenotyping of bone marrow-derived MФ cultured in M-CSF versus GM-CSF.
+L34|Cells were differentiated with either M-CSF or GM-CSF for 7 days in RPMI with 10 % FBS.
+L35|To confirm that M-CSF and GM-CSF cells are permissive to LCMV infection, we cultured the MФ with LCMV-ARM at an m.o.i. of 3, and tested for  de novo  synthesis of LCMV-NP.
+L35|The data show that LCMV infected 93.3 % of M-CSF MФ ( Fig.
+L35|MED MFI: 6950, LCMV MFI: 9600), compared to 66.1 % of the GM-CSF MФ ( Fig.
+L37|M-CSF- and GM-CSF-derived MФ exhibit disparate cytokine responses early post-LCMV infection
+L39|Infection with LCMV causes differential cytokine production in M-CSF- and GM-CSF-derived MФ.
+L39|Murine bone marrow-derived MФ cultured in M-CSF or GM-CSF for 7 days were exposed to media conditions, mock infection, or LCMV infection for 1, 3, or 6 h before the supernatants were harvested.
+L41|To evaluate how GM-CSF MФ and M-CSF MФ respond to TLR7 ligation very early after virus infection, differentiated cells were either infected with LCMV or mock for 1 h and then stimulated with R848 for an additional 1, 3 and 6 h.
+L48|Murine bone marrow-derived MФ were differentiated in M-CSF- or GM-CSF-enriched media for 7 days before infection.
+L51|Analysis of differentiated cells cultured in media or mock control conditions revealed that M-CSF cells expressed significantly higher levels of TLR7 compared to GM-CSF cells ( Fig.
+L56|Typically, GM-CSF and M-CSF have the ability to differentiate MФ into opposing phenotypes, whereby M-CSF MФ tend to have an M2 MФ phenotype, and GM-CSF MФ tend to have an M1 MФ phenotype [ 12, 14, 16, 17, 20, 23, 34, 35 ].
+L58|Basal IL-12p40 mRNA levels are increased in GM-CSF MФ during differentiation [ 12 ] and our data indicate that in GM-CSF MФ, IL-12p40 was induced by LCMV infection alone and R848 alone, and was further enhanced in response to R848 in LCMV-infected cells.
+L78|16 Helft J Böttcher J Chakravarty P Zelenay S Huotari J et al GM-CSF Mouse Bone Marrow Cultures Comprise a Heterogeneous Population of CD11c(+)MHCII(+) Macrophages and Dendritic Cells Immunity 2015 42 1197 1211 10.1016/j.immuni.2015.05.018 26084029
+L80|Na YR Jung D Gu GJ Seok SH YR N GM-CSF grown bone marrow derived cells are composed of phenotypically different dendritic cells and macrophages Mol Cells 2016 39 734 741 10.14348/molcells.2016.0160 27788572

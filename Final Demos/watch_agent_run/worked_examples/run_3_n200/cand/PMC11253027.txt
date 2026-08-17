@@ -1,0 +1,40 @@
+L25|We examined ENaC/ASIC subunit transcript expression and the importance of select subunits in migration of bone marrow derived monocytes (freshly isolated) and macrophages (monocytes differentiated in culture).
+L31|Several empirical studies suggest that degenerin family members are expressed in cells of myeloid origin including peripheral blood mononuclear cells, monocytes, splenic and bone marrow derived dendritic cells, and monocyte–macrophage cell line RAW cells (Barbaro et al.,  2017 ;
+L31|However, which degenerin subunits are expressed in bone marrow derived monocytes and macrophages has not been studied.
+L32|However, whether ENaC or other ASIC subunits play a critical role in bone marrow derived monocyte and macrophage migration and polarization has not been addressed.
+L33|In the current investigation, we examined ENaC/ASIC subunit transcript expression and the importance of select subunits in migration of freshly isolated bone marrow derived monocytes and monocytes differentiated into macrophages in culture.
+L38|For differentiation to macrophages, 1 × 10 6  freshly isolated monocytes were plated on T75 flasks (Fisher #FB012937) in Opti‐MEM (Gibco, Cat # 31985–070) plus 10% heat inactivated FBS (30 min at 50°C), 1% penicillin–streptomycin (Corning, Cat # 30‐002‐CI), and 20 ng/mL macrophage colony‐stimulating factor 1 (CSF1, R&D Systems, Cat # 486‐ML‐50).
+L42|qPCR was used to determine (1) mouse α, β, and γENaC, ASIC1–5 gene expression in bone marrow derived macrophages and freshly isolated monocytes and (2) impact of βENaC and ASIC2 loss on expression of macrophage polarization markers (CD68, CD86, CD163, and CD206).
+L57|The lower chamber contained 500 μL Opti‐MEM, 10% standard FBS (non‐heat inactivated) plus 10 ng/mL CSF1.
+L63|Expression of  ENaC  and  ASIC  transcripts in male and female bone marrow derived macrophages and monocytes
+L65|FIGURE 1 qPCR detection of α, β, γENaC, and ASIC1‐5 transcript expression in cultured bone marrow derived macrophages and freshly isolated monocytes from male and female mice.
+L65|Macrophages were cultured in the presence of 20 ng/mL of CSF1.
+L65|(b) Macrophage C th 's individual ENaC and ASIC transcripts from bone marrow derived macrophages 3 replicates in  n  = 2 trials.
+L65|(c) Bone marrow derived freshly isolated monocytes C th 's for individual ENaC and ASIC subunits using 75 ng RNA template equivalent.
+L65|(d) Bone marrow derived freshly isolated monocyte Western blot detection of αENaC and βENaC.
+L66|Characterization of bone marrow derived macrophages
+L67|We have previously examined the importance of proinflammatory cytokine (IFNγ and TNFα) regulation on macrophage morphology, migration and αENaC expression and wanted to determine if a similar relationship occurs in bone marrow derived macrophages (Nemeth et al.,  2022 ).
+L67|Similar to RAW cell line, expression of αENaC is abolished and CD86, a marker of activated macrophages (M1), is enhanced following exposure to bone marrow derived macrophages to IFNγ and TNFα.
+L67|Images in Figure  2b  show polarization of bone marrow derived macrophages following treatment with IFNγ, TNFα, or both, characterized by cell loss, and enlargement and flattening of surviving cells.
+L67|Exposure to IFNγ or IFNγ plus TNFα, but not TNFα alone, inhibited migration of bone marrow derived macrophages.
+L67|These findings suggest that bone marrow derived macrophages generally behave similarly to IFNγ and TNFα in regards to αENaC expression, morphological changes, and migration responses.
+L68|Cells (female) were grown in the presence of CSF1 for 7 days.
+L69|Role of degenerins in migration of bone marrow derived macrophages
+L70|To determine the importance of degenerins in migration of bone marrow derived macrophages, we used 1 μM amiloride, a broad‐spectrum inhibitor.
+L70|These data support a role for degenerins, including αENaC and βENaC in bone marrow derived macrophage migration.
+L71|FIGURE 3 Broad spectrum degenerin inhibitor amiloride inhibits migration in male and female bone marrow derived macrophages.
+L74|To determine if the migratory response in primary bone marrow derived monocytes is also dependent on select degenerins, we studied migration responses of monocytes from βENaC hypomorph (βENaC m/m ) and global ASIC2 knockout (ASIC2 −/− ) mice as these models are available in our laboratory.
+L77|Is there a link between migration and polarization status in bone marrow derived macrophages?
+L78|To begin to address this issue, we first examined migration and phenotype marker expression in cultured bone marrow derived macrophages from control and βENaC m/m  x ASIC2 −/−  mice.
+L79|(a) Migration of bone marrow derived macrophages from ASIC2 −/− /βENaC m/m  mice are inhibited to 55% and 65% of WT control cells from females and males, respectively.
+L83|This investigation examined expression of the degenerin proteins, an evolutionarily conserved family of cation ion channels that function in epithelial Na +  absorption, extracellular proton sensors, neurotransmitter gated channels, and mechanosensors, in their role in bone marrow derived monocyte–macrophage polarization and migration (Bianchi & Driscoll,  2002 ;
+L83|The major findings of this investigation demonstrate that most degenerins are expressed in bone marrow derived monocytes and macrophages and select degenerins contribute to chemotactic migration and polarization status.
+L83|Interestingly, we found bone marrow derived monocytes and macrophages from female mice migrate to a greater extent than males.
+L85|Most degenerin subunits are expressed in bone marrow derived macrophages and freshly isolated monocytes, with minor sex differences.
+L87|Our findings in bone marrow monocytes and differentiated macrophages share similarities and differences in degenerin expression to peripheral blood mononuclear cells, bone marrow derived dendritic cells, splenic dendritic cells, and the monocyte–macrophage RAW cell line.
+L87|ASIC1‐3 are expressed in RAW cells, bone marrow derived dendritic cells, and bone marrow monocytes and derived macrophages (Ni et al.,  2018 ;
+L88|Bone marrow derived macrophages have a similar response to proinflammatory cytokines as the monocyte–macrophage  RAW  cell line
+L89|When exposed to the proinflammatory cytokines IFNγ and TNFα, bone marrow derived differentiated macrophages exhibited morphological changes (enlargement, flattening, and reduced circularity), cell loss, reduced αENaC expression, and suppressed chemotactic migration similar to our previous findings in the RAW cell line (Nemeth et al.,  2022 ).
+L89|In contrast to the RAW cell line, bone marrow derived macrophages required a survival factor such as CSF1 or CSF2 to proliferate in culture.
+L90|Degenerins are required for normal bone marrow derived macrophage and monocyte chemotactic migration
+L97|This finding, combined with our finding that polarization with IFNγ/TNFα suppresses at least αENaC expression (in RAW cells and bone marrow derived macrophages), suggests silencing of βENaC and ASIC2 is part of the proinflammatory cytokine‐initiated polarization signaling (Nemeth et al., Figure  2a,b ).

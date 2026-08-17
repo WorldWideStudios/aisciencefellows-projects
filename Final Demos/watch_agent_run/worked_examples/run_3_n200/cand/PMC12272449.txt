@@ -1,0 +1,28 @@
+L1|Bone marrow-derived myeloid cells drive neuroinflammation in Alzheimer's disease: Insights from the FAD 4T  mouse model
+L12|While neuroinflammation is a key feature of AD, the potential involvement of bone marrow-derived cells in its pathology remains unclear.
+L12|This study aimed to investigate the role of bone marrow-derived myeloid cells in driving neuroinflammation in AD.
+L14|Bone marrow transplantation experiments were conducted to assess the contribution of bone marrow-derived macrophages to neuroinflammation in AD.
+L16|Single-cell transcriptomic analysis identified a significant increase in bone marrow-derived macrophages in the brains of FAD 4T  mice.
+L16|Bone marrow transplantation experiments further confirmed that bone marrow-derived macrophages contributed to the inflammatory processes in the AD brain.
+L18|Our findings demonstrate that bone marrow-derived myeloid cells infiltrate the brain and might play a critical role in driving neuroinflammation in AD.
+L20|Our findings suggest that bone marrow-derived inflammation play a critical role in AD-associated inflammation, offering potential targets for therapeutic intervention such as  Cst7  and  Ctsd  in bone marrow-derived myeloid cells.
+L27|Through single-cell transcriptome analysis, we found an increase of bone marrow-derived macrophages and monocytes in the brain of 8-month-old FAD 4T  mice.
+L27|Further analysis suggested bone marrow-derived macrophages shaped the inflammatory microenvironment during AD progress.
+L27|Moreover, we demonstrated a subset of bone marrow-derived myeloid cells marked with Ctsd migrated into brain and promoted inflammation by bone marrow transplantation.
+L27|These findings underscore the pivotal role of bone marrow-derived myeloid cells in the inflammatory cascade of Alzheimer's disease, offering novel insights into potential therapeutic targets for intervention in this devastating condition.
+L31|Recent studies have indicated the crosstalk between bone marrow-derived immune cells and brain in AD using 5xFAD mouse model [ 12 ].
+L43|6 BMCs transplantation and bone marrow-derived cell analysis in brain of FAD4T and WT mouse. a, Schematic diagram of the bone-brain axis in the AD disease process via bone marrow transfer assay.  b,  The body weight of FAD4T and WT mice after transplantation.  c,  Representative confocal images and quantification of GFP + F4/80+ co-localization in the brains of FAD4T and WT mice 6 months post transplantation.  d,  Representative confocal images, and quantification of GFP-positive cells number, and fluorescence intensity of  Ctsd  in GFP-positive cells in the brain of FAD4T and WT mice 6 months post transplantation.  e, f,  Bone mass analysis of FAD4T and WT mouse spines.  e,  Representative microcomputed tomography (μCT) reconstructive images and trabecular microstructural parameters of 2-month-old FAD4T and WT mouse spines (BV/TV, bone volume fraction;
+L48|Overall, bone marrow-derived myeloid cells may reshape the neuroinflammatory environment, which is mediated by brain M1 macrophages and endothelial cells.
+L60|In bone marrow-derived myeloid cells, we observed the same enrichment of the  Grn-Sort1  axis as in CPCs ( Fig.
+L60|Taken together, these data suggest bone marrow-derived myeloid cells reshaped the immune microenvironment in FAD 4T  mice brain through the perturbation of cell states and functions of Monocytes and M1-like macrophages.
+L61|A subset of bone marrow-derived myeloid cells migrates into brain and promotes the inflammation process of Alzheimer's disease
+L62|After different time of transplantation (0.5 months, 2 months, and 6 months), we checked bone marrow-derived cells in the brain via flow cytometer and immunofluorescence.
+L62|We observed a time-dependent increase of bone marrow derived cells (BMCs, marked with GFP) after transplantation, and the number of BMCs were similar in FAD 4T  and WT mice (Extended Data  Fig.
+L62|Taken together, these findings suggest that bone marrow-derived myeloid cells marked with  Ctsd  migrated into brain and promoted the inflammation of AD due to altered bone microenvironment.
+L64|In this study, we provide novel evidence that bone marrow derived myeloid cells migrate into brain and reshape the immune microenvironment through the perturbation of differentiation and function of Monocytes and M1-like macrophages during AD progress (Extended Data  Fig.
+L65|Accumulating evidence emphasizes the leading role of peripheral immune cells, especially bone marrow-derived myeloid cells, in CNS diseases [ 34 ].
+L69|Importantly, there is considerable clinical evidence from human AD samples supporting the infiltration of bone marrow-derived and peripheral immune cells into the brain following blood–brain barrier breakdown [ 10 ].
+L70|Previous studies have shown that immune modulation by primed bone marrow-derived myeloid cells could alleviate neuroinflammation in other amyloid models.
+L72|Due to the changes of bone microenvironment and density, a subset of bone marrow-derived myeloid cells marked with Ctsd migrates into brain and participates in neuroinflammation during AD progress.
+L139|Bone marrow-derived GCA(+) immune cells drive Alzheimer's disease progression Adv Sci (Weinh) 10 2023 e2303402
+L140|Alzheimer's disease modification mediated by bone marrow-derived macrophages via a TREM2-independent pathway in mouse model of amyloidosis Nat Aging 2 2022 60 73 37118355

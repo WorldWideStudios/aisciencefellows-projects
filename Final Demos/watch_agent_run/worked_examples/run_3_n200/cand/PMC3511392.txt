@@ -1,0 +1,24 @@
+L1|Proinflammatory Cytokine Response and Viral Replication in Mouse Bone Marrow Derived Macrophages Infected with Influenza H1N1 and H5N1 Viruses
+L11|We developed  in vitro  cultures of mouse bone marrow derived macrophages (BMDMΦ) from C57BL/6N mouse to compare influenza A (H5N1 and H1N1) virus replication and pro-inflammatory cytokine and chemokine responses.
+L11|While both H1N1 and H5N1 viruses infected the mouse bone marrow derived macrophages, only the H1N1 virus had showed evidence of productive viral replication from the infected cells.
+L17|Figure 1 Cell characterization and lectin profile of the mouse bone marrow derived macrophages.
+L17|Histogram showing the percentage of positive stained mouse bone marrow derived macrophages by flow cytometry (open peak-blue line).
+L17|Isotype control (open peak-black line) and non-stained cells as negative control (shaded peak) of bone marrow derived macrophages stained with (A) CD14 and (B) F4/80.
+L17|Lectin immune-staining assay to determine the sialic acid (SA) distribution on mouse bone marrow derived macrophages.
+L21|Figure 2 Representative immunofluorescence staining of mouse bone marrow derived macrophages after (A) Mock;
+L21|Mouse bone marrow derived macrophages at 20 hours post-influenza virus infection is shown.
+L22|Mouse Bone Marrow Derived Macrophages (BMDMΦ)
+L23|The cell pellet was then washed with warm RPMI-1640 at least twice and then resuspended in the RPMI-1640 medium supplemented with 5% FCS, 100 units/mL penicillin and 100 µg/mL streptomycin, 1.3µg/mL Amphotericin B (Cambrex Bio Science, Walkersville, Inc., Maryland, USA) and 6 ng/mL recombinant Macrophage Colony Stimulating Factor (M-CSF, R&D systems).
+L24|Figure 3 Viral matrix (M) gene expression copy number normalized to β-actin gene expression (10 5  copies) by quantitative RT-PCR in influenza virus infected mouse bone marrow derived macrophages.
+L25|Figure 4 Virus titer detected in the supernatant of influenza A virus infected mouse bone marrow derived macrophages.
+L25|Virus titer of various (A) influenza H1N1, and (B) H5N1 influenza viruses was determined at 3, 24, 48 and 72 h post-influenza virus infection of mouse bone marrow derived macrophages.
+L28|Figure 5 Cytokine and chemokine gene expression in mouse bone marrow derived macrophages after influenza A virus infection.
+L28|The cytokines  ( A) TNF-α, (B) IFN-β, (C) IP-10 (CXCL-10) and (D) RANTES (CCL-5) mRNA gene expression profile of influenza-virus-infected mouse bone marrow derived macrophages were analyzed by quantitative RT-PCR.
+L31|Figure 6 Cytokine and chemokine secretion from mouse bone marrow derived macrophages after influenza A virus infection.
+L31|(A) TNF-α (B) IP-10 protein secreted by the mouse bone marrow derived macrophages after influenza A viruses infection (as denoted in legend).
+L44|The yield of the primary culture of mouse bone marrow derived macrophages were 3.5±0.9×10 6  cells/mouse at 93±5% cell purity as demonstrated by the expression of the macrophage specific markers CD14 and F4/80 antibodies by flow cytometry ( Fig.
+L45|Lectin immunohistochemistry on the primary culture of mouse bone marrow derived macrophages showed that both lectins, MAA ( Fig.
+L45|1D ) (which recognizes the human influenza receptor Siaα2-6) bound strongly to the mouse bone marrow derived macrophages.
+L48|We first determined whether avian and human influenza viruses could infect mouse bone marrow derived macrophages  in vitro .
+L51|We investigated the cytokine and chemokine induction profile induced by influenza H1N1 and H5N1 viruses in primary cultures of mouse bone marrow derived macrophages.
+L58|In our study, the influenza H5N1 virus infection of mouse bone marrow derived macrophages led to the initiation of viral gene transcription and viral protein synthesis.

@@ -1,0 +1,18 @@
+L1|Rhusflavone Modulates Osteoclastogenesis Through RANKL-Induced AKT Signaling in Bone Marrow-Derived Macrophages
+L7|In this study, we investigated the effects and underlying biological mechanisms of Rhus isolated from the dried roots of  Rhus succedanea  on osteoclastogenesis in primary cultured bone marrow-derived macrophages.
+L7|No cytotoxicity was observed in bone marrow macrophages (BMMs) or during osteoclast differentiation.
+L12|In this study, we demonstrate the potential effects of Rhus on osteoclast differentiation and bone resorption activity, as well as explore the signaling pathways associated with Rhus using primary bone marrow macrophages (BMMs).
+L15|The 3-(4,5-dimethylthiazol-2-yl)-2,5-diphenyl tetrazolium bromide (MTT) experiment revealed no cytotoxic effects of 1–100 μM Rhus in the primary BMMs derived from mice bone marrow cells ( Figure 1 E) or under osteoclast differentiation ( Figure 1 F).
+L17|To investigate the potential activities of Rhus on osteoclast differentiation, the BMMs were differentiated by RANKL and M-CSF in the presence or absence of 1–30 μM Rhus.
+L39|The next day, floating cells were cultured in α-MEM containing 10% FBS, 1× Gibco antibiotic–antimycotic, and 30 ng/mL mouse M-CSF (PeproTech, Cranbury, NJ, USA).
+L39|Cells with >95% purity that differentiated due to M-CSF stimulation and adhered to the culture dish were classified as BMMs [ 60 ].
+L39|Adherent BMMs were differentiated into osteoclasts using 100 ng/mL mouse RANKL (PeproTech, Cranbury, NJ, USA), 30 ng/mL mouse M-CSF, and the indicated Rhus concentrations.
+L43|BMMs were differentiated into osteoclasts using 100 ng/mL mouse RANKL, 30 ng/mL mouse M-CSF, and indicated Rhus concentrations for 5 days.
+L52|The BMMs were differentiated into osteoclasts using 30 ng/mL macrophage colony-stimulating factor (M-CSF) and 100 ng/mL receptor activator of nuclear factor kappa B ligand (RANKL) for 3 days, and the cells were subsequently treated with the indicated Rhus concentration ( F ).
+L53|( A , B ) Bone marrow macrophages (BMMs) were seeded into 48-well plates and cultured for 5 days in a medium containing 100 ng/mL of receptor activator of nuclear factor kappa B ligand (RANKL) and 30 ng/mL of macrophage colony-stimulating factor (M-CSF) with 1–30 μM of Rhus.
+L54|( A , B ) Bone marrow macrophages (BMMs) were seeded in 6-well plates and differentiated for 1 day ( A ) or 2 days ( B ).
+L55|( A – C ) Bone marrow macrophages (BMMs) were seeded on 6-well plates and stimulated in 100 ng/mL RANKL with 10 μM Rhus for the indicated time.
+L56|( A ) Bone marrow macrophages (BMMs) were differentiated with 10 μM Rhus, in the presence or absence of 1 μM SC79 or LY294002, for 1 day.
+L56|( B , C ) The BMMs were cultured in 30 ng/mL M-CSF and 100 ng/mL RANKL with 10 μM Rhus, in the presence or absence of 1 μM SC79 or LY294002, for 5 days.
+L486|Generation of mouse bone marrow-derived macrophages using tumor coculture assays to mimic the tumor microenvironment Methods Enzymol.
+L492|RANKL-induced osteoclastogenesis is suppressed by 4-O-methylhonokiol in bone marrow-derived macrophages Arch.

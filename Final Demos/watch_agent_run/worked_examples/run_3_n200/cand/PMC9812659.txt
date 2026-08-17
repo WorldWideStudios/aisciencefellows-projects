@@ -1,0 +1,28 @@
+L5|Chicken bone marrow-derived macrophages (BMMΦ) and dendritic cells (BMDC) are utilized as models to study the mononuclear phagocytic system (MPS).
+L5|A widely used method to generate macrophages and DC  in vitro  is to culture bone marrow cells in the presence of colony-stimulating factor-1 (CSF1) to differentiate BMMΦ and granulocyte-macrophage-CSF (GM-CSF, CSF2) and interleukin-4 (IL-4) to differentiate BMDC, while CSF2 alone can lead to the development of granulocyte-macrophage-CSF-derived DC (GMDC).
+L9|Cells of the mononuclear phagocyte system (MPS) differentiate from pluripotent stem cells in response to hemopoietins, such as colony-stimulating factor (CSF1), granulocyte-macrophage-CSF (GM-CSF, CSF2) or fms-like tyrosine kinase receptor 3 ligand (FLT3L).
+L10|In mouse and human, BM cells can differentiate into macrophages using CSF1 ( 4 ), while murine BMDC have been established using CSF2 ( 2 ).
+L12|The present study uniquely derived BM cells from individual birds and followed their growth in the presence of both CSF2 + IL-4 (BMDC), CSF2 alone (GMDC) or CSF1 (BMMΦ) and their simultaneous characterization at days 2, 4, 6 and 8 in culture to achieve an in-depth kinetic comparison.
+L17|All BM cells were cultured in complete RPMI supplemented with 10 ng/mL recombinant chicken IL-4 and CSF2 (Kingfisher Biotech Inc., USA) for BMDC, 10 ng/mL CSF2 for GMDC and 200 ng/mL of CSF1 for BMMΦ [produced in house ( 26 )].
+L17|For phenotypical and functional analysis, BM were isolated from six individual chickens over two independent experimental days (n=3 per experiment) and cultured independently with CSF1, CSF2 + IL-4 or CSF2 for 2, 4, 6 and 8 days of culture.
+L31|Bone marrow cultures derived from three individual chickens were independently cultured with CSF1, CSF2 + IL-4 or CSF2 on 6-well plates.
+L40|CSF1 induces a morphologically homogenous cell culture in contrast to CSF2 + IL-4 treated cultures
+L41|CSF1 to generate BMMΦ, CSF2 to generate GMDC, and a combination of CSF2 + IL-4 to generate BMDC.
+L45|In contrast, clusters of cells were rarely observed in the CSF1 treated cultures.
+L52|Figure 1 CSF1 induces a morphologically homogenous BM cell cultures in contrast to BM treated with CSF2 + IL-4 or CSF2 alone.
+L52|(A)  Representative DIC images of chicken BM cells treated with CSF2 + IL-4 (BMDC), CSF2 (GMDC) or CSF1 (BMMΦ) on day 4 of culture.
+L186|To obtain large numbers of macrophages or cDC, BM progenitor cells are cultured in the presence of hematopoietic cytokines CSF1, CSF2 + IL-4, to drive macrophage or DC development, respectively ( 26 ,  28 ,  35 – 37 ).
+L186|To this end, a thorough investigation of chicken BM cultures treated with the traditional CSF2 + IL-4 or with CSF2 or CSF1 alone, was carried out to understand the heterogeneity across the cultures, their function and cell lineage investigated by temporal transcriptomic analysis.
+L190|RNA-seq analysis of CSF1-treated chicken BM cells has demonstrated their macrophage lineage by day 7 of culture ( 22 ,  30 ).
+L190|The transcriptome of CSF1-treated chicken BM cells were further analyzed in this study on days 2, 4, 6 and 8 and used to examine the enriched cell lineages along with BM treated with CSF2 + IL-4 or CSF2 alone.
+L192|Overall, RNA-seq transcriptomic and network gene analysis indicates that chicken BM cultures treated with CSF1, CSF2 + IL-4 or CSF2 alone activate a core macrophage transcriptional program.
+L211|Generation of Large numbers of dendritic cells from mouse bone marrow cultures supplemented with Granulocyte/Macrophage colony-stimulating factor .
+L214|Generation of dendritic cells from bone marrow progenitors using gm-csf, tnf-alpha, and additional cytokines: Antagonistic effects of il-4 and ifn-gamma and selective involvement of tnf-alpha receptor-1 .
+L215|Gm-csf mouse bone marrow cultures comprise a heterogeneous population of Cd11c(+)Mhcii(+) macrophages and dendritic cells .
+L221|Isolation and functional studies on feline bone marrow derived macrophages .
+L224|Generation and functional characterisation of canine bone marrow-derived macrophages .
+L225|Two populations of ovine bone marrow-derived dendritic cells can be generated with recombinant gm-csf and separated on Cd11b expression .
+L229|Gm-csf grown bone marrow derived cells are composed of phenotypically different dendritic cells and macrophages .
+L244|Generation and characterization of chicken bone marrow-derived dendritic cells .
+L257|In vitro  chicken bone marrow-derived dendritic cells comprise subsets at different states of maturation .
+L259|Pustulan activates chicken bone marrow-derived dendritic cells in vitro and promotes ex vivo Cd4(+) T cell recall response to infectious bronchitis virus .

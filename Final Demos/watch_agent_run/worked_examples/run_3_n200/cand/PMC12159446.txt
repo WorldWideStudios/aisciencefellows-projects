@@ -1,0 +1,47 @@
+L17|8  Consistent with this, Fejer et al. reported an  ex vivo  expansion of mouse FL -derived macrophages, which could proliferate  in vitro  for an extended period in almost unlimited numbers in the presence of a cytokine GM-CSF.
+L18|10 , 11 , 12 , 13  Consistent with this, Ito et al. reported the  ex vivo  expansion of mouse BM-derived macrophages using GM-CSF.
+L18|15 , 16  In fact, we recently demonstrated that macrophages could be expanded by long-term culture of BM cells with M-CSF, and that they were non-tumorigenic but stably proliferated in unlimited numbers in the presence of M-CSF, 17  as with GM-CSF-expanded FL or BM-derived macrophages.
+L23|In the previous study, we cultured BM cells with M-CSF, repeated the detachment/reseeding when macrophages proliferated, and obtained stably proliferating BM-derived macrophages.
+L23|They could be maintained in continuous culture for at least 18 months after the expansion in the presence of M-CSF, and could be frozen without losing the proliferative capacity.
+L32|Figure 4 Proliferation of expanded macrophages (A) BM, FL, or YS lines ( n  = 3 for each group) were seeded at 1 × 10 5  cells/mL and cultured in the presence of 100 ng/mL M-CSF, and the number of viable cells was counted on day 2, 3, or 4, by trypan blue dye exclusion method (mean ± SD).  n.s. , not significant.  ∗ p  < 0.05. [two-way ANOVA with Tukey’s multiple comparisons test].
+L32|(B) BM, FL, or YS lines ( n  = 3 for each group) were seeded at 1 × 10 5  cells/mL and cultured for 3 days in the absence or presence of the indicated concentrations of M-CSF (10, 30, or 70 ng/mL), and the number of cells was monitored by the MTT assay.
+L32|The number of cells shown is the percentage to that of the culture containing 100 ng/mL M-CSF (mean ± SD).  n.s. , not significant.  ∗ p  < 0.05. [two-way ANOVA with Tukey’s multiple comparisons test].
+L32|(C) BM line #1, FL line #1, or YS line #1 was M-CSF-depleted for 3 h, left untreated or treated with 100 ng/mL M-CSF for the indicated periods (1, 5, or 15 min), and analyzed for the phosphorylated (=activated) M-CSF receptor by western blotting using antibody specific for tyrosine-809-phosphorylated M-CSF receptor 24  (pTyr809 M-CSFR).
+L33|Although all the lines proliferated in the presence of the optimal concentration of M-CSF (100 ng/mL), YS lines showed the fastest proliferation ( Figure 4 A).
+L33|The fastest proliferation of YS lines was the case at suboptimal concentrations of M-CSF (10, 30, or 70 ng/mL) ( Figures 4 B and  S8 ).
+L35|Figure 5 Apoptosis of expanded macrophages (A) BM, FL, or YS lines ( n  = 3 for each group) were cultured with (+) or without (−) M-CSF for 12 h (left) or 36 h (right), and analyzed for the percentage of cells positive for annexin-V and 7-AAD by flow cytometry (mean ± SD).  n.s. , not significant.  ∗ p  < 0.05. [two-way ANOVA with Sidak’s multiple comparisons test].
+L35|(B) BM, FL, or YS lines ( n  = 2 for each group) were cultured with (+) or without (−) M-CSF for 6 h, and analyzed for cleaved caspase-3 or cleaved PARP by western blotting. β-actin blot is the loading control.
+L35|The level shown is relative to that of M-CSF-containing culture.
+L35|(C) BM, FL, or YS lines ( n  = 3 for each group) were seeded with M-CSF, cultured for 1 h (left) or 2 h (right) in the absence or presence of staurosporine (STS), and analyzed as in A (mean ± SD).  n.s. , not significant.  ∗ p  < 0.05. [two-way ANOVA with Sidak’s multiple comparisons test].
+L35|(D) BM, FL, or YS lines ( n  = 2 for each group) were seeded with M-CSF, cultured for 1 h in the absence or presence of STS, and analyzed as in B.
+L35|(E) BM, FL, or YS lines ( n  = 3 for each group) were seeded with M-CSF, cultured for 8 h (left) or 24 h (right) in the absence or presence of nutlin-3, and analyzed as in A (mean ± SD).  n.s. , not significant.  ∗ p  < 0.05. [two-way ANOVA with Sidak’s multiple comparisons test].
+L35|(F) BM, FL, or YS lines ( n  = 2 for each group) were seeded with M-CSF, cultured for 5 h in the absence or presence of nutlin-3, and analyzed as in B.
+L36|In the proliferation assay, the number of YS lines that survived without M-CSF for 3 days was higher than that of FL or BM lines (see  Figure 4 B, M-CSF “0”), suggesting that YS lines are relatively resistant to cell death.
+L38|YS lines survive for a longer period than BM or FL lines under M-CSF-free culture
+L39|Figure 6 Survival of expanded macrophages under M-CSF-free culture (A) BM, FL, or YS lines ( n  = 3 for each group) were seeded without (w/o) M-CSF (left), or without M-CSF but with GM-CSF (right), cultured for 1, 2 or 3 days, and analyzed for their survival by the MTT assay.
+L39|(B) YS lines ( n  = 3) were seeded without M-CSF, cultured with different concentrations of fetal calf serum (FCS;
+L39|(C) Carboxyfluorescein succinimidyl ester-labeled BM line #1 was cultured in the presence or absence of M-CSF, or co-cultured with YS line #1 (1:5, “BM + YS”) in the presence or absence of M-CSF, and cultured for 24 h.
+L39|(D) BM line #1 was cultured in the presence or absence of M-CSF for 24 h, or seeded with media containing the supernatants collected from YS line #1 (50% v/v, "YS-sup"), and cultured in the presence or absence of M-CSF for 24 h.
+L39|The YS-sup was prepared by culturing with M-CSF-free media for 3 days.
+L39|The level shown is the percentage to that of the M-CSF-containing/YS-sup-free culture.  n.s. , not significant.  ∗ p  < 0.05. [two-way ANOVA with Tukey’s multiple comparisons test].
+L40|Components in fetal calf serum (FCS) might allow such M-CSF-free longer survival of YS lines as they severely died during 4 h-culture with lower concentrations of FCS ( Figure 6 B).
+L41|The co-culture with YS lines did not potentiate the M-CSF-free survival of BM lines ( Figure 6 C).
+L41|However, when assessed by ELISA, the concentration of M-CSF in media conditioned by YS lines was <10 pg/m, the level of which was lower than that required to support the proliferation or survival of YS lines (>1 ng/mL).
+L47|Interestingly, YS lines survived for a longer period than BM or FL lines under M-CSF-free culture ( Figure 6 ), and YS and FL lines were more resistant to apoptotic cell death induced by staurosporine or nutlin-3 than BM lines ( Figure 5 ).
+L50|15 , 16  Meanwhile, GM-CSF is generally used for the culture of alveolar macrophages 32 , 34  because it is critical for their functions.
+L53|For example, GM-CSF supported the proliferation of primary BM-derived macrophages ( Figure S12 A), but not of BM lines ( Figure S12 B).
+L53|This weak response of BM lines to GM-CSF is presumably due to their adaptation to M-CSF during the long-term culture with M-CSF, but the precise underlying mechanism remains unexplored.
+L74|Those cells were suspended into RPMI1640 media supplemented with 10% FCS and 100 ng/mL recombinant human (rh)M-CSF (complete media).
+L81|rhM-CSF was provided by Morinaga Milk Industry (Kanagawa, Japan), and added to the culture at a final concentration of 100 ng/mL.
+L81|Recombinant mouse (rm)IFN-γ and rmGM-CSF were purchased from BioLegend and Miltenyi Biotec, respectively, and added to the culture at a final concentration of 10 ng/mL.
+L115|Distinct bone marrow-derived and tissue-resident macrophage lineages proliferate at key stages during inflammation Nat.
+L116|Bone marrow-derived monocytes give rise to self-renewing and fully differentiated Kupffer cells Nat.
+L117|Long-lived self-renewing bone marrow-derived macrophages displace embryo-derived cells to inhabit adult serous cavities Nat.
+L122|Establishment of bone marrow-derived M-CSF receptor-dependent self-renewing macrophages Cell Death Discov.
+L224|and cultured in the presence of 100 ng/mL M-CSF for up to day 14.
+L253|M-CSF (ng/mL): 10 30
+L257|and cultured for 4 or 5 days in the presence of 10 or 30 ng/mL of M-CSF.
+L268|GM-CSF (day): 0 1 2 3
+L282|( **A** ) The primary bone marrow-derived macrophages prepared using M-CSF were
+L283|cultured in the presence of GM-CSF for 1, 2 or 3 days, and analyzed for their
+L287|( **B** ) BM lines (n=3) were seeded in the presence or absence of GM-CSF, cultured

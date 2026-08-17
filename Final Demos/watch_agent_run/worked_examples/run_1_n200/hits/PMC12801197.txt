@@ -1,0 +1,41 @@
+L1:3D  In Vitro  Models of the Bone Marrow
+L15:The bone marrow niche
+L24:components of the bone marrow niche, highlighting their coordinated
+L26:then critically examine current approaches for 3D  in vitro  bone marrow models, including scaffold-based methods, decellularized
+L35:relevance. Advances like bone marrow-on-a-chip, computational models,
+L38:chimeric antigen receptor expression. Bone marrow models have evolved
+L43:3D cultures; bone marrow; niche; tissue
+L54:mesenchymal stem cells (MSCs), bone marrow adipocytes (BMAd), fibroblasts,
+L58:uncharacterized system is known as bone marrow hematopoietic niche.  The term “niche” refers to a local
+L68:  Under physiological conditions, mature cells leave the bone marrow
+L71:in the bone marrow.  The osteoblastic niche
+L85:diseases, bone marrow niche architecture and composition are completely
+L93:bone marrow areas, to ensure stemness maintenance or promote mature
+L105:factor (GM-CSF), erythropoietin (EPO), stem cell factor (SCF), IL-16,
+L115:bone marrow niche and current 3D  in vitro  models
+L120:Bone Marrow
+L122:The bone marrow niche is divided into two
+L126:1 Bone marrow
+L127:niche composition. The bone marrow niche is mainly
+L132:2 (NG2+) pericytes, bone marrow adipocytes (BMAd), and mesenchymal
+L137:innervations in the bone marrow. Once released from the endosteal
+L196:conditions, the bone marrow niche is a hypoxic tissue, with an approximate
+L221:combined with computational modeling using mouse bone marrow tissues,
+L248:macrophage colony-stimulating factor (M-CSF), and play a role in bone
+L250:bone marrow CD169 +  macrophages can maintain HSC quiescence
+L256:finely tune osteoclast differentiation through M-CSF and RANKL, which
+L257:are also expressed by bone marrow-associated stromal cells.
+L258:Bone marrow-derived mesenchymal stem cells
+L262:they localize in the bone marrow niche.  In the perivascular regions, MSCs express SDF-1, Leptin receptor
+L301:The bone marrow
+L315:in the bone marrow matrix. 
+L327:types are present in the bone marrow, including COL1, COL3, COL4,
+L329:abundant collagen in the bone marrow matrix and is produced by osteoblasts
+L342:toward HSCs. Moreover, perlecan can bind GM-CSF and regulate HSC differentiation.
+L344:Bone marrow
+L351:cultures.  For bone marrow cells, HSCs
+L357:bone regions where bone marrow components are hosted. Moreover, 3D
+L359:diseases and their related bone marrow niche impairment.  Indeed, the entire bone marrow niche contributes
+L372:neoplastic cells and the bone marrow microenvironment. 
+L374:  Early bone marrow niche models were reproduced in 2D culture, where
+[64ms]

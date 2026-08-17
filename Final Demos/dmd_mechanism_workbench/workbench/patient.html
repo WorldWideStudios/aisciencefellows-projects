@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DMD Patient View</title>
+<!--
+================================================================
+  Patient View — enters with a specific pathogenic variant and
+  propagates its impact through the isoform architecture to
+  affected cell types + tissues.
+
+  Data: workbench/patient_data.json (built by
+  prototype/ingest/hydrate_patient_view.py).
+
+  Layout:
+    header · patient selector strip
+    identity strip (id · phenotype · age · ambulatory)
+    genotype card (variant details) + exon-position strip
+    tiles row: isoform impact · cell types · tissues · pathways
+================================================================
+-->
+<link rel="stylesheet" href="theme.css">
+<style>
+  .app { max-width: 1240px; margin: 0 auto; padding: 20px; }
+
+  /* patient selector strip ------------------------------------------ */
+  .pat-strip { background: var(--panel); border: 1px solid var(--line);
+    border-radius: 10px; padding: 12px 14px; margin-bottom: 12px; }
+  .pat-strip-h { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em;
+    color: var(--ink-3); font-weight: 600; margin-bottom: 8px; }
+  .pat-chips { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .pat-chip { background: var(--bg); border: 1px solid var(--line-2);
+    border-radius: 6px; padding: 6px 10px; font-size: 12px; color: var(--ink-2);
+    cursor: pointer; display: inline-flex; align-items: center; gap: 8px;
+    font-family: inherit; }
+  .pat-chip:hover { border-color: var(--accent); color: var(--ink); }
+  .pat-chip.active { background: var(--accent-soft); border-color: var(--accent);
+    color: var(--accent); font-weight: 600; }
+  .pat-chip .pat-chip-badge { font-size: 10px; padding: 1px 6px; border-radius: 3px;
+    background: var(--line); color: var(--ink-3); font-weight: 600; }
+  .pat-chip.active .pat-chip-badge { background: white; }
+  .pat-more { margin-left: auto; display: flex; align-items: center; gap: 8px;
+    font-size: 11px; color: var(--ink-3); }
+  .pat-more select { padding: 5px 8px; border: 1px solid var(--line-2);
+    border-radius: 6px; background: white; font-size: 12px; font-family: inherit;
+    color: var(--ink-2); min-width: 240px; }
+
+  /* identity strip -------------------------------------------------- */
+  .pat-id { background: var(--panel); border: 1px solid var(--line);
+    border-radius: 10px; padding: 14px 20px; margin-bottom: 12px;
+    display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+  .pat-id-uid { font-size: 20px; font-weight: 700; letter-spacing: -0.01em;
+    color: var(--ink); font-family: "SF Mono", Menlo, monospace; }
+  .pat-id-uid .pat-uid-sub { color: var(--ink-3); font-size: 12px;
+    font-weight: 500; margin-left: 6px; font-family: inherit; }
+  .pat-badge { font-size: 11px; padding: 3px 10px; border-radius: 4px;
+    font-weight: 700; letter-spacing: 0.02em; }
+  .pat-badge.DMD { background: var(--bad-soft); color: var(--bad); }
+  .pat-badge.BMD { background: #e6f4ec;         color: var(--good); }
+  .pat-badge.IMD { background: var(--warn-soft); color: var(--warn); }
+  .pat-badge.pending { background: var(--line); color: var(--ink-3); }
+  .pat-id-meta { color: var(--ink-2); font-size: 12px; display: flex; gap: 18px;
+    flex-wrap: wrap; }
+  .pat-id-meta b { color: var(--ink); font-weight: 600; }
+  .pat-id-meta .k { color: var(--ink-3); margin-right: 4px; }
+
+  /* patient identity strip becomes vertical when genotype is nested */
+  .pat-id { flex-wrap: wrap; align-items: flex-start; }
+  .pat-geno { display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 8px 22px; padding-top: 12px; margin-top: 12px;
+    border-top: 1px solid var(--line); width: 100%; }
+  .pat-geno-item { display: flex; flex-direction: column; gap: 2px; }
+  .pat-geno-item .g-k { color: var(--ink-3); font-size: 10px;
+    text-transform: uppercase; letter-spacing: 0.05em; }
+  .pat-geno-item .g-v { color: var(--ink); font-size: 12px; font-weight: 600;
+    font-family: "SF Mono", Menlo, monospace; word-break: break-all; }
+  .pat-geno-item .g-v.plain { font-family: inherit; }
+
+  /* compact variant × isoform coverage strip (inside Overview tile) */
+  .exon-svg { width: 100%; display: block; }
+  .ofd-overview .exon-tile { padding: 10px 12px; }
+
+  /* collapsible tile chrome (Overview tiles default to collapsed) --- */
+  .ofd-overview .collapsible-tile { padding: 0; }
+  .collapsible-tile .tile-toggle { width: 100%; background: transparent;
+    border: none; padding: 10px 12px; font: inherit; text-align: left;
+    display: flex; align-items: center; gap: 8px; cursor: pointer;
+    color: var(--ink); }
+  .collapsible-tile .tile-toggle:hover { background: var(--bg); border-radius: 8px; }
+  .collapsible-tile .tile-toggle .tile-h { margin-bottom: 0; flex-shrink: 0; }
+  .collapsible-tile .tile-summary { flex: 1; font-size: 10px; color: var(--ink-3);
+    font-weight: 500; text-align: right; margin-right: 4px;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .collapsible-tile .tile-summary b { color: var(--ink-2); font-weight: 700; }
+  .collapsible-tile .tile-summary .warn { color: var(--bad); font-weight: 700; }
+  .collapsible-tile .tile-chevron { color: var(--ink-3); font-size: 10px;
+    transition: transform 0.15s; flex-shrink: 0; }
+  .collapsible-tile.expanded .tile-chevron { transform: rotate(0deg); }
+  .collapsible-tile .tile-body { padding: 4px 12px 12px 12px;
+    border-top: 1px solid var(--line); }
+
+  /* clinical labs tile — grouped by biological layer ---------------- */
+  .labs-tile .labs-group { margin-bottom: 8px; }
+  .labs-tile .labs-group:last-child { margin-bottom: 0; }
+  .labs-group-h { font-size: 9px; text-transform: uppercase;
+    letter-spacing: 0.06em; color: var(--ink-3); font-weight: 700;
+    margin: 4px 0 3px 0; padding-bottom: 2px; border-bottom: 1px solid var(--line); }
+  .lab-row { display: grid; grid-template-columns: 1fr auto auto;
+    gap: 6px; align-items: baseline; font-size: 10px; padding: 2px 0;
+    line-height: 1.3; }
+  .lab-lbl { color: var(--ink-2); overflow: hidden; text-overflow: ellipsis;
+    white-space: nowrap; }
+  .lab-val { font-variant-numeric: tabular-nums; font-weight: 600; }
+  .lab-flag { font-size: 9px; text-transform: uppercase; letter-spacing: 0.04em;
+    padding: 0 4px; border-radius: 3px; font-weight: 700; }
+  .lab-flag.normal { color: var(--ink-3); background: var(--line); }
+  .lab-flag.low    { color: var(--warn); background: var(--warn-soft); }
+  .lab-flag.high   { color: var(--bad);  background: var(--bad-soft); }
+
+  /* patient-specific evidence — inside hypothesis rank rows + detail */
+  .hyp-rank-row .patient-evi { margin-top: 6px; margin-left: 28px;
+    padding: 6px 8px; background: var(--bad-soft); border-radius: 6px;
+    border-left: 3px solid var(--bad); font-size: 10px; }
+  .hyp-rank-row .patient-evi-h { font-size: 9px; text-transform: uppercase;
+    letter-spacing: 0.05em; color: var(--bad); font-weight: 700;
+    margin-bottom: 3px; }
+  .hyp-rank-row .patient-evi-item { color: var(--ink-2); line-height: 1.4;
+    padding: 2px 0; display: flex; gap: 5px; }
+  .hyp-rank-row .patient-evi-item .pe-tick { color: var(--bad); font-weight: 700;
+    flex: 0 0 10px; }
+  .hyp-rank-row .patient-evi-item .pe-tick.warn { color: var(--warn); }
+  .hyp-rank-row .patient-evi-count { margin-left: 4px; font-size: 9px;
+    color: var(--ink-3); font-weight: 500; }
+
+  /* patient-evidence panel in the DETAIL panel (bigger, above lede) --- */
+  .hyp-patient-evi-panel { background: var(--bad-soft);
+    border: 1px solid var(--bad); border-radius: 8px; padding: 12px 14px;
+    margin-bottom: 12px; }
+  .hyp-patient-evi-h { font-size: 11px; text-transform: uppercase;
+    letter-spacing: 0.06em; color: var(--bad); font-weight: 700;
+    margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+  .hyp-patient-evi-h .pe-badge { background: var(--bad); color: white;
+    padding: 2px 6px; border-radius: 3px; font-size: 9px; font-weight: 700;
+    letter-spacing: 0.04em; }
+  .hyp-patient-evi-h .pe-hint { text-transform: none; letter-spacing: 0;
+    color: var(--ink-3); font-weight: 500; margin-left: auto; }
+  .hyp-patient-evi-list { list-style: none; padding: 0; margin: 0; }
+  .hyp-patient-evi-list li { display: flex; gap: 8px; padding: 5px 0;
+    font-size: 12px; line-height: 1.5; color: var(--ink); }
+  .hyp-patient-evi-list li .tick { color: var(--bad); font-weight: 800;
+    flex: 0 0 12px; }
+  .hyp-patient-evi-empty { color: var(--ink-3); font-size: 11px; font-style: italic;
+    padding: 4px 0; }
+
+  /* tiles ---------------------------------------------------------- */
+  .tiles-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .tile { background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+    padding: 14px; min-height: 210px; display: flex; flex-direction: column; }
+  .tile-h { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em;
+    color: var(--ink-3); font-weight: 600; margin-bottom: 10px; }
+  .tile-foot { color: var(--ink-3); font-size: 11px; margin-top: 8px; }
+
+  /* isoform impact rows -------------------------------------------- */
+  .iso-row { display: grid; grid-template-columns: 62px 1fr 60px; align-items: center;
+    gap: 8px; font-size: 12px; margin-bottom: 6px; }
+  .iso-lbl { color: var(--ink-2); font-weight: 600; font-family: "SF Mono", Menlo, monospace;
+    font-size: 11px; }
+  .iso-track { height: 12px; background: var(--line); border-radius: 3px; overflow: hidden;
+    position: relative; }
+  .iso-fill { height: 100%; }
+  .iso-fill.hit    { background: var(--bad); }
+  .iso-fill.spared { background: var(--good); }
+  .iso-tag { text-align: right; font-size: 10px; font-weight: 700;
+    letter-spacing: 0.04em; text-transform: uppercase; }
+  .iso-tag.hit    { color: var(--bad); }
+  .iso-tag.spared { color: var(--good); }
+  .iso-meta { font-size: 10px; color: var(--ink-3); grid-column: 2 / span 2;
+    margin-top: -3px; margin-bottom: 4px; padding-left: 2px; }
+
+  /* cell type rows (same shape as isoforms but sized-by-score) ----- */
+  .cell-row { display: grid; grid-template-columns: 1fr 44px; align-items: center;
+    gap: 8px; margin-bottom: 6px; font-size: 12px; }
+  .cell-lbl { color: var(--ink-2); white-space: nowrap; overflow: hidden;
+    text-overflow: ellipsis; font-size: 11px; }
+  .cell-track { height: 10px; background: var(--line); border-radius: 3px;
+    overflow: hidden; margin-top: 3px; }
+  .cell-fill { height: 100%; }
+  .cell-fill.hit     { background: var(--bad); }
+  .cell-fill.partial { background: var(--warn); }
+  .cell-fill.spared  { background: var(--good); }
+  .cell-fill.unknown { background: var(--slate); }
+  .cell-status { text-align: right; font-size: 10px; font-weight: 700;
+    letter-spacing: 0.04em; text-transform: uppercase; }
+  .cell-status.hit     { color: var(--bad); }
+  .cell-status.partial { color: var(--warn); }
+  .cell-status.spared  { color: var(--good); }
+  .cell-status.unknown { color: var(--slate); }
+
+  /* tissue chip lists ---------------------------------------------- */
+  .tis-group { margin-bottom: 10px; }
+  .tis-group-h { font-size: 10px; text-transform: uppercase;
+    letter-spacing: 0.05em; color: var(--ink-3); font-weight: 700; margin-bottom: 6px; }
+  .tis-chips { display: flex; flex-wrap: wrap; gap: 5px; }
+  .tis-chip { padding: 3px 8px; border-radius: 4px; font-size: 11px;
+    font-family: "SF Mono", Menlo, monospace; }
+  .tis-chip.hit    { background: var(--bad-soft);  color: var(--bad); }
+  .tis-chip.spared { background: var(--good-soft); color: var(--good); }
+
+  /* pathway rows (reuse hbar look) --------------------------------- */
+  .pw-row { display: grid; grid-template-columns: 1fr 32px; align-items: center;
+    gap: 8px; margin-bottom: 6px; font-size: 12px; }
+  .pw-lbl { color: var(--ink-2); font-size: 11px; overflow: hidden;
+    text-overflow: ellipsis; white-space: nowrap; }
+  .pw-track { height: 8px; background: var(--line); border-radius: 3px;
+    overflow: hidden; margin-top: 3px; }
+  .pw-fill { height: 100%; background: var(--good); }
+  .pw-val { text-align: right; color: var(--ink-3); font-variant-numeric: tabular-nums;
+    font-size: 11px; }
+
+  /* hypothesis ranking section ------------------------------------- */
+  .hyp-section { display: grid; grid-template-columns: 400px 1fr; gap: 12px;
+    margin-top: 12px; }
+  .hyp-rank-tile { background: var(--panel); border: 1px solid var(--line);
+    border-radius: 10px; padding: 14px; }
+  .hyp-rank-h { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em;
+    color: var(--ink-3); font-weight: 600; margin-bottom: 12px; }
+  .hyp-rank-row { padding: 10px; border-radius: 8px; margin-bottom: 6px;
+    border: 1px solid transparent; cursor: pointer;
+    transition: background 0.12s, border-color 0.12s; }
+  .hyp-rank-row:hover { background: var(--bg); border-color: var(--line-2); }
+  .hyp-rank-row.selected { background: var(--accent-soft); border-color: var(--accent); }
+  .hyp-rank-row.selected:hover { background: var(--accent-soft); }
+  .hyp-rank-row.top .hyp-rank-badge { background: var(--good); }
+  .hyp-rank-row.selected .hyp-rank-badge { background: var(--accent); }
+  .hyp-rank-head { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+  .hyp-rank-badge { background: var(--ink-3); color: white; width: 20px;
+    height: 20px; border-radius: 50%; display: inline-flex; align-items: center;
+    justify-content: center; font-size: 11px; font-weight: 700; flex-shrink: 0; }
+  .hyp-rank-name { font-size: 12px; font-weight: 600; color: var(--ink); line-height: 1.3; }
+  .hyp-rank-row.selected .hyp-rank-name { color: var(--accent); }
+  .hyp-rank-score { margin-left: auto; font-size: 11px; font-weight: 700;
+    font-variant-numeric: tabular-nums; color: var(--ink-3);
+    background: var(--line); padding: 2px 6px; border-radius: 3px; flex-shrink: 0; }
+  .hyp-rank-row.selected .hyp-rank-score { color: var(--accent); background: white; }
+  .hyp-rank-bar { height: 4px; background: var(--line); border-radius: 2px;
+    overflow: hidden; margin: 4px 0 6px 28px; }
+  .hyp-rank-fill { height: 100%; background: var(--ink-3); }
+  .hyp-rank-row.top .hyp-rank-fill { background: var(--good); }
+  .hyp-rank-row.selected .hyp-rank-fill { background: var(--accent); }
+  .hyp-rank-fit { font-size: 11px; color: var(--ink-2); margin-left: 28px;
+    line-height: 1.4; }
+
+  .hyp-chain-tile { background: var(--panel); border: 1px solid var(--line);
+    border-radius: 10px; padding: 14px; }
+  .hyp-chain-h { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em;
+    color: var(--ink-3); font-weight: 600; margin-bottom: 8px;
+    display: flex; align-items: baseline; gap: 8px; }
+  .hyp-chain-h .hyp-chain-h-sub { text-transform: none; letter-spacing: 0;
+    color: var(--ink-2); font-weight: 500; }
+  .hyp-lede { font-size: 12px; color: var(--ink-2); line-height: 1.5;
+    margin-bottom: 10px; padding: 10px 12px; background: var(--bg);
+    border-radius: 6px; border-left: 3px solid var(--accent); }
+
+  /* overview-focus-detail 3-panel layout --------------------------- */
+  .ofd-layout { display: grid;
+    grid-template-columns: 240px 340px minmax(0, 1fr);
+    gap: 12px; margin-top: 12px; align-items: stretch; }
+  .ofd-panel { background: var(--panel); border: 1px solid var(--line);
+    border-radius: 10px; padding: 12px; display: flex; flex-direction: column;
+    min-height: 560px; max-height: calc(100vh - 200px); overflow-y: auto; }
+  .ofd-panel-h { font-size: 11px; text-transform: uppercase;
+    letter-spacing: 0.06em; color: var(--ink-3); font-weight: 700;
+    margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid var(--line);
+    display: flex; align-items: center; gap: 8px; }
+  .ofd-panel-h .ofd-panel-h-sub { text-transform: none; letter-spacing: 0;
+    color: var(--ink-3); font-weight: 500; margin-left: auto; }
+
+  /* compact tile variant used inside the overview panel ------------ */
+  .ofd-overview .tile { min-height: 0; padding: 10px 12px; margin-bottom: 8px;
+    border-color: var(--line-2); }
+  .ofd-overview .tile:last-child { margin-bottom: 0; }
+  .ofd-overview .tile-h { font-size: 10px; margin-bottom: 6px; }
+  .ofd-overview .tile-foot { font-size: 10px; margin-top: 4px; }
+  .ofd-overview .iso-row { margin-bottom: 4px; grid-template-columns: 52px 1fr 46px; }
+  .ofd-overview .iso-lbl { font-size: 10px; }
+  .ofd-overview .iso-track { height: 8px; }
+  .ofd-overview .iso-tag { font-size: 9px; }
+  .ofd-overview .iso-meta { display: none; }
+  .ofd-overview .cell-row { margin-bottom: 4px; }
+  .ofd-overview .cell-lbl { font-size: 10px; }
+  .ofd-overview .cell-track { height: 6px; }
+  .ofd-overview .cell-status { font-size: 9px; }
+  .ofd-overview .tis-chip { font-size: 10px; padding: 2px 6px; }
+  .ofd-overview .tis-group-h { font-size: 9px; margin-bottom: 4px; }
+  .ofd-overview .pw-row { margin-bottom: 4px; }
+  .ofd-overview .pw-lbl { font-size: 10px; }
+  .ofd-overview .pw-track { height: 6px; }
+  .ofd-overview .pw-val { font-size: 10px; }
+
+  /* focus panel with tabs ----------------------------------------- */
+  .ofd-focus { padding: 0; }
+  .ofd-focus-tabs { display: flex; border-bottom: 1px solid var(--line);
+    background: var(--bg); border-radius: 10px 10px 0 0; overflow: hidden; }
+  .ofd-focus-tabs button { flex: 1; background: transparent; border: none;
+    padding: 12px 14px; font: inherit; font-size: 12px; color: var(--ink-3);
+    font-weight: 600; cursor: pointer; border-bottom: 2px solid transparent;
+    letter-spacing: 0.02em; }
+  .ofd-focus-tabs button:hover { color: var(--ink-2); }
+  .ofd-focus-tabs button.active { color: var(--accent);
+    border-bottom-color: var(--accent); background: var(--panel); }
+  .ofd-focus-body { flex: 1; overflow: hidden; display: flex;
+    flex-direction: column; padding: 12px; }
+
+  /* focus-hypotheses list (compact rank rows within focus panel) --- */
+  .ofd-focus .hyp-rank-row { margin-bottom: 6px; }
+  .ofd-focus .hyp-rank-name { font-size: 11px; }
+  .ofd-focus .hyp-rank-fit { font-size: 10px; margin-left: 28px; }
+  .ofd-focus .hyp-rank-fit .hyp-rank-fit-lbl { display: none; }
+
+  /* detail panel (chain + lede + toggle) --------------------------- */
+  .ofd-detail { padding: 12px; }
+  .ofd-detail .hyp-chain-h { margin-bottom: 8px; padding-bottom: 6px;
+    border-bottom: 1px solid var(--line); }
+  .ofd-detail .hyp-lede { font-size: 12px; }
+
+  /* chat inside focus panel --------------------------------------- */
+  .ofd-focus .chat-panel { border: none; border-radius: 0;
+    margin-top: 0; flex: 1; display: flex; flex-direction: column;
+    overflow: hidden; min-height: 0; }
+  .ofd-focus .chat-header { border-bottom: none; padding: 0 0 10px 0;
+    background: transparent; }
+  .ofd-focus .chat-suggestions { padding: 8px 0; border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line); background: transparent; }
+  .ofd-focus .chat-suggest { font-size: 10px; padding: 3px 8px; }
+  .ofd-focus .chat-suggest-lbl { display: none; }
+  .ofd-focus .chat-turns { max-height: none; flex: 1; padding: 10px 0; }
+  .ofd-focus .chat-input-row { padding: 8px 0 0 0; border-top: 1px solid var(--line);
+    background: transparent; }
+  .ofd-focus .chat-input { font-size: 12px; }
+  .ofd-focus .chat-send { padding: 6px 12px; font-size: 12px; }
+  .ofd-focus .chat-empty { padding: 16px 8px; font-size: 11px; }
+
+  /* chain-view toggle (Flow vs. Biological Layers) ----------------- */
+  .chain-view-toggle { display: inline-flex; margin-left: 8px;
+    border: 1px solid var(--line-2); border-radius: 6px; overflow: hidden;
+    background: var(--bg); }
+  .chain-view-toggle button { background: transparent; border: none;
+    padding: 4px 10px; font-size: 11px; color: var(--ink-3); cursor: pointer;
+    font-family: inherit; font-weight: 600; }
+  .chain-view-toggle button.active { background: var(--accent); color: white; }
+  .chain-view-toggle button:hover:not(.active) { color: var(--ink-2); }
+
+  /* layered biological chain -------------------------------------- */
+  .lc-container { position: relative; padding: 8px 0 8px 0; }
+  .lc-stack { display: flex; flex-direction: column; gap: 0;
+    padding-right: 170px; /* room for loop-back arc */ }
+  .lc-row { display: grid; grid-template-columns: 120px 1fr;
+    align-items: stretch; gap: 10px; }
+  .lc-tag { display: flex; align-items: center; justify-content: flex-end;
+    font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em;
+    color: var(--ink-3); font-weight: 700; padding-right: 4px;
+    border-right: 2px solid var(--line-2); }
+  .lc-row.variant     .lc-tag { color: var(--accent);  border-right-color: var(--accent); }
+  .lc-row.protein     .lc-tag { color: var(--violet);  border-right-color: var(--violet); }
+  .lc-row.pathway     .lc-tag { color: var(--teal);    border-right-color: var(--teal); }
+  .lc-row.subcellular .lc-tag { color: var(--sky);     border-right-color: var(--sky); }
+  .lc-row.cellType    .lc-tag { color: var(--warn);    border-right-color: var(--warn); }
+  .lc-row.tissueType  .lc-tag { color: var(--pink);    border-right-color: var(--pink); }
+  .lc-row.phenotype   .lc-tag { color: var(--bad);     border-right-color: var(--bad); }
+
+  .lc-box { padding: 10px 14px; border: 1px solid var(--line-2);
+    border-radius: 8px; background: var(--panel); margin: 6px 0;
+    position: relative; }
+  .lc-row.variant     .lc-box { border-color: var(--accent);  background: #eaf1fb; }
+  .lc-row.protein     .lc-box { border-color: var(--violet);  background: #f3ecfb; }
+  .lc-row.pathway     .lc-box { border-color: var(--teal);    background: #e6f4f4; }
+  .lc-row.subcellular .lc-box { border-color: var(--sky);     background: #eaf1fa; }
+  .lc-row.cellType    .lc-box { border-color: var(--warn);    background: #fbf1e2; }
+  .lc-row.tissueType  .lc-box { border-color: var(--pink);    background: #f9e9f0; }
+  .lc-row.phenotype   .lc-box { border-color: var(--bad);     background: #fbe6e6; }
+
+  .lc-title { font-size: 13px; font-weight: 700; color: var(--ink); line-height: 1.3; }
+  .lc-meta  { font-size: 11px; color: var(--ink-3); margin-top: 2px; }
+
+  .lc-arrow { grid-column: 2; height: 14px; display: flex;
+    align-items: center; justify-content: flex-start; padding-left: 30px; }
+  .lc-arrow svg { display: block; }
+
+  .lc-loopback { position: absolute; top: 8px; right: 0; width: 170px;
+    height: calc(100% - 16px); pointer-events: none; }
+  .lc-therapy-label { position: absolute; right: 6px; top: 50%;
+    transform: translateY(-50%); background: var(--good-soft);
+    border: 1px solid var(--good); border-radius: 8px; padding: 8px 10px;
+    width: 150px; text-align: center; }
+  .lc-therapy-lbl-h { font-size: 9px; text-transform: uppercase;
+    letter-spacing: 0.06em; color: var(--good); font-weight: 700;
+    margin-bottom: 3px; }
+  .lc-therapy-lbl-title { font-size: 11px; font-weight: 700; color: var(--ink);
+    line-height: 1.3; }
+  .lc-therapy-lbl-sub { font-size: 10px; color: var(--ink-3);
+    margin-top: 3px; line-height: 1.3; }
+
+  /* edge-evidence modal ------------------------------------------- */
+  .edge-modal-backdrop { position: fixed; inset: 0; background: rgba(26,34,51,0.45);
+    display: flex; align-items: center; justify-content: center; z-index: 1000;
+    padding: 20px; animation: fadeIn 0.12s ease-out; }
+  @keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } }
+  .edge-modal { background: var(--panel); border: 1px solid var(--line);
+    border-radius: 12px; padding: 20px 22px; max-width: 640px; width: 100%;
+    max-height: 80vh; overflow-y: auto; box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+    animation: slideUp 0.14s ease-out; }
+  @keyframes slideUp { from { transform: translateY(8px); opacity: 0 }
+                       to   { transform: translateY(0);   opacity: 1 } }
+  .edge-modal-h { display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 12px; margin-bottom: 12px; }
+  .edge-modal-title { font-size: 11px; text-transform: uppercase;
+    letter-spacing: 0.06em; color: var(--ink-3); font-weight: 600;
+    margin-bottom: 4px; }
+  .edge-modal-arrow { font-size: 15px; color: var(--ink); line-height: 1.35; }
+  .edge-modal-arrow b { color: var(--accent); font-weight: 700; }
+  .edge-modal-arrow .arrow-sep { color: var(--ink-3); margin: 0 8px;
+    font-weight: 500; }
+  .edge-modal-close { background: var(--bg); border: 1px solid var(--line-2);
+    border-radius: 6px; padding: 4px 10px; font-size: 16px; line-height: 1;
+    color: var(--ink-2); cursor: pointer; font-family: inherit; flex-shrink: 0; }
+  .edge-modal-close:hover { background: var(--line); color: var(--ink); }
+  .edge-modal-eid { font-family: "SF Mono", Menlo, monospace; font-size: 10px;
+    color: var(--ink-3); margin-top: 2px; }
+  .edge-modal-body { border-top: 1px solid var(--line); padding-top: 12px; }
+  .edge-modal-body ul.evi { margin: 0; padding: 0; list-style: none; }
+  .edge-modal-body ul.evi li { display: flex; gap: 10px; padding: 10px 0;
+    font-size: 13px; line-height: 1.5; color: var(--ink-2);
+    border-bottom: 1px solid var(--line); }
+  .edge-modal-body ul.evi li:last-child { border-bottom: none; }
+  .edge-modal-body ul.evi .tick { color: var(--good); font-weight: 800;
+    flex: 0 0 16px; }
+  .edge-modal-body ul.evi li.warn .tick { color: var(--warn); }
+  .edge-modal-body ul.evi li.warn { color: var(--warn); }
+  .edge-modal-body ul.evi .cite { color: var(--ink-3); font-size: 11px;
+    margin-left: 8px; font-style: italic; }
+  .edge-modal-empty { color: var(--ink-3); font-size: 12px; padding: 10px 0;
+    font-style: italic; }
+
+  /* patient-scoped chat panel ------------------------------------- */
+  .chat-panel { background: var(--panel); border: 1px solid var(--line);
+    border-radius: 10px; margin-top: 12px; overflow: hidden; }
+  .chat-header { padding: 12px 16px; border-bottom: 1px solid var(--line);
+    display: flex; align-items: center; gap: 10px; background: var(--bg); }
+  .chat-header-title { font-size: 11px; text-transform: uppercase;
+    letter-spacing: 0.06em; color: var(--ink-3); font-weight: 600; }
+  .chat-header-sub { font-size: 11px; color: var(--ink-3); margin-left: auto; }
+  .chat-header-clear { background: transparent; border: none;
+    color: var(--ink-3); cursor: pointer; font-size: 11px; padding: 2px 6px;
+    font-family: inherit; }
+  .chat-header-clear:hover { color: var(--bad); }
+
+  .chat-suggestions { padding: 10px 16px; border-bottom: 1px solid var(--line);
+    display: flex; gap: 6px; flex-wrap: wrap; background: var(--panel); }
+  .chat-suggest-lbl { font-size: 10px; text-transform: uppercase;
+    letter-spacing: 0.05em; color: var(--ink-3); font-weight: 700;
+    align-self: center; margin-right: 4px; }
+  .chat-suggest { background: var(--bg); border: 1px solid var(--line-2);
+    border-radius: 12px; padding: 4px 10px; font-size: 11px; color: var(--ink-2);
+    cursor: pointer; font-family: inherit; }
+  .chat-suggest:hover { border-color: var(--accent); color: var(--accent); }
+
+  .chat-turns { padding: 12px 16px; max-height: 480px; overflow-y: auto;
+    display: flex; flex-direction: column; gap: 12px; }
+  .chat-turn { display: flex; flex-direction: column; gap: 6px; }
+  .chat-turn.user { align-items: flex-end; }
+  .chat-turn.user .chat-bubble { background: var(--accent); color: white;
+    max-width: 78%; }
+  .chat-turn.assistant .chat-bubble { background: var(--bg);
+    border: 1px solid var(--line); color: var(--ink); max-width: 90%; }
+  .chat-bubble { padding: 10px 14px; border-radius: 12px; font-size: 13px;
+    line-height: 1.5; }
+  .chat-bubble b { font-weight: 700; color: inherit; }
+  .chat-bubble .chat-widget { margin-top: 10px; padding: 10px;
+    background: var(--panel); border-radius: 8px; border: 1px solid var(--line-2); }
+  .chat-turn.assistant .chat-actions { margin-top: 6px; display: flex; gap: 6px;
+    flex-wrap: wrap; }
+  .chat-action { background: var(--accent-soft); border: 1px solid var(--accent);
+    color: var(--accent); border-radius: 6px; padding: 4px 10px; font-size: 11px;
+    font-weight: 600; cursor: pointer; font-family: inherit; }
+  .chat-action:hover { background: var(--accent); color: white; }
+
+  .chat-input-row { padding: 10px 12px; border-top: 1px solid var(--line);
+    display: flex; gap: 8px; background: var(--panel); }
+  .chat-input { flex: 1; padding: 8px 12px; border: 1px solid var(--line-2);
+    border-radius: 8px; font-size: 13px; font-family: inherit; color: var(--ink);
+    background: white; }
+  .chat-input:focus { outline: none; border-color: var(--accent); }
+  .chat-send { padding: 8px 16px; background: var(--accent); color: white;
+    border: none; border-radius: 8px; font-size: 13px; font-weight: 600;
+    cursor: pointer; font-family: inherit; }
+  .chat-send:hover:not(:disabled) { background: #245cb5; }
+  .chat-send:disabled { background: var(--line-2); cursor: not-allowed; }
+
+  .chat-empty { color: var(--ink-3); font-size: 12px; text-align: center;
+    padding: 24px 12px; font-style: italic; }
+
+  .chat-cursor { display: inline-block; width: 6px; height: 12px;
+    background: var(--accent); animation: blink 0.9s infinite; vertical-align: middle;
+    margin-left: 2px; }
+  @keyframes blink { 0%, 50% { opacity: 1 } 51%, 100% { opacity: 0 } }
+</style>
+</head>
+<body>
+
+<div class="app" id="app"><!-- rendered by renderPage() --></div>
+
+<script src="widget_palette.js"></script>
+<script>
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g,
+  c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+
+let DATA = null;         // patient_data.json
+let MECH_DATA = null;    // mechanism_data.json — for hypothesis defs + pathway rows
+let currentPatientId = null;
+let currentHypId    = null;  // which hypothesis's chain is on-screen (null = top-ranked)
+let currentEdgeId   = null;  // which chain edge is selected (null = none)
+let chatTurns       = [];    // [{role:'user'|'assistant', text, widget?, actions?}]
+let chatStreaming   = false; // guard against concurrent streams
+let chainView       = 'flow'; // 'flow' (cause→effect SVG) | 'layers' (biological organization)
+let focusTab        = 'hypotheses'; // 'hypotheses' | 'chat' — which focus-panel tab is on
+let expandedTiles   = new Set();    // tile ids currently expanded in the Overview (empty = all collapsed)
+
+function wrapCollapsibleTile(id, titleText, summaryHtml, bodyHtml, extraClass) {
+  const isOpen = expandedTiles.has(id);
+  return `
+    <div class="tile collapsible-tile ${isOpen ? 'expanded' : 'collapsed'} ${extraClass || ''}"
+         data-tile-id="${esc(id)}">
+      <button class="tile-toggle" data-tile-toggle="${esc(id)}">
+        <span class="tile-h">${esc(titleText)}</span>
+        ${summaryHtml || ''}
+        <span class="tile-chevron">${isOpen ? '▾' : '▸'}</span>
+      </button>
+      ${isOpen ? `<div class="tile-body">${bodyHtml}</div>` : ''}
+    </div>`;
+}
+
+// Curated per-hypothesis mapping of biological layers. Not sourced from
+// the DB — it's a rendering-time projection of the chain nodes onto the
+// standard biological hierarchy (variant → protein → pathway →
+// subcellular localization → cell type → tissue type → phenotype) plus
+// a therapy edge that loops back from phenotype to variant.
+const HYPOTHESIS_LAYERS = {
+  '01': {
+    variant:     { title: 'Out-of-frame deletion',              meta: 'e.g. Δexon 45; frameshift → PTC' },
+    protein:     { title: 'Truncated dystrophin (or absent)',   meta: 'no C-terminal DGC anchor' },
+    pathway:     { title: 'Ca²⁺ / calpain signaling cascade',   meta: 'activated by contraction stress' },
+    subcellular: { title: 'Sarcolemma decouples from ECM',      meta: 'DGC disassembly · membrane micro-tears' },
+    cellType:    { title: 'Myofiber necrosis',                  meta: 'CK release · satellite exhaustion' },
+    tissueType:  { title: 'Skeletal + cardiac muscle',          meta: 'fibro-fatty replacement' },
+    phenotype:   { title: 'DMD (Duchenne)',                     meta: 'wheelchair ~10–12 y · cardiomyopathy' },
+    therapy:     { title: 'Exon-skipping ASO · µ-dystrophin AAV', meta: 'restores in-frame Dp427m' },
+  },
+  '02': {
+    variant:     { title: 'In-frame central-rod deletion',      meta: 'e.g. Δexons 45–47; ≡0 mod 3' },
+    protein:     { title: 'Shortened but functional dystrophin', meta: 'N-terminal + DGC preserved' },
+    pathway:     { title: 'Attenuated Ca²⁺ / calpain leak',     meta: 'gradual, not acute' },
+    subcellular: { title: 'Partial DGC assembly at sarcolemma', meta: 'membrane anchored, weaker' },
+    cellType:    { title: 'Slow myofiber loss',                 meta: 'regeneration keeps pace longer' },
+    tissueType:  { title: 'Skeletal + cardiac muscle',          meta: 'milder cardiac course' },
+    phenotype:   { title: 'BMD (Becker)',                       meta: 'ambulation to 30–40 y · late onset' },
+    therapy:     { title: 'Utrophin upregulation · exon-skip → in-frame', meta: 'convert DMD → BMD state' },
+  },
+  '03': {
+    variant:     { title: 'Nonsense or canonical splice-site',  meta: 'creates PTC in mRNA' },
+    protein:     { title: 'NMD-mediated transcript loss',       meta: 'protein absent (<5% WT)' },
+    pathway:     { title: 'Ca²⁺ / calpain cascade',             meta: 'downstream identical to H01' },
+    subcellular: { title: 'Sarcolemmal DGC loss',               meta: 'tissue-graded NMD escape' },
+    cellType:    { title: 'Myofiber necrosis',                  meta: 'brain/cardiac partial isoform rescue' },
+    tissueType:  { title: 'Muscle > brain > cardiac',           meta: 'graded severity by NMD efficiency' },
+    phenotype:   { title: 'DMD, milder if PTC escape',          meta: 'ataluren-eligible subset' },
+    therapy:     { title: 'Ataluren readthrough · NMD inhibitors', meta: 'restore partial protein from PTC mRNA' },
+  },
+  '04': {
+    variant:     { title: 'Distal 5′ variant (exon ≥45)',       meta: 'or internal promoter (Dp140/Dp71)' },
+    protein:     { title: 'Dp140 / Dp116 / Dp71 ablated',       meta: 'Dp427m preserved in muscle' },
+    pathway:     { title: 'Isoform-scoped signaling loss',      meta: 'podocyte · glial · retinal' },
+    subcellular: { title: 'Dystrophin lost at synapse · podocyte foot process', meta: 'muscle DGC intact' },
+    cellType:    { title: 'Cortical astrocytes · rod/cone · podocytes', meta: 'myofibers preserved' },
+    tissueType:  { title: 'CNS + retina + kidney',              meta: 'skeletal muscle spared' },
+    phenotype:   { title: 'Cognitive deficits · ERG anomalies · proteinuria risk', meta: 'motor function preserved' },
+    therapy:     { title: 'Isoform-selective AAV (Dp140 / Dp71 mini-genes)', meta: 'tissue-restricted promoter' },
+  },
+};
+
+const LAYERS = [
+  ['variant',     'Variant'],
+  ['protein',     'Protein'],
+  ['pathway',     'Pathway'],
+  ['subcellular', 'Subcellular loc.'],
+  ['cellType',    'Cell type'],
+  ['tissueType',  'Tissue type'],
+  ['phenotype',   'Phenotype'],
+];
+
+function renderLayeredChain(hypId) {
+  const L = HYPOTHESIS_LAYERS[hypId];
+  if (!L) {
+    return `<div style="color:var(--ink-3);font-size:12px;padding:8px 0">
+      No layered mapping curated for H${esc(hypId)} yet.
+    </div>`;
+  }
+  const rows = LAYERS.map(([key, label], i) => {
+    const node = L[key] || { title: '(unclassified)', meta: '' };
+    const arrow = (i < LAYERS.length - 1) ? `
+      <div class="lc-arrow">
+        <svg width="16" height="14" viewBox="0 0 16 14">
+          <path d="M 8 0 L 8 10 M 4 6 L 8 10 L 12 6" fill="none" stroke="var(--ink-3)" stroke-width="1.5"/>
+        </svg>
+      </div>` : '';
+    return `
+      <div class="lc-row ${key}">
+        <div class="lc-tag">${esc(label)}</div>
+        <div class="lc-box">
+          <div class="lc-title">${esc(node.title)}</div>
+          <div class="lc-meta">${esc(node.meta || '')}</div>
+        </div>
+      </div>
+      ${arrow}`;
+  }).join('');
+
+  // Loop-back arc: from phenotype (bottom) around the right, back up to
+  // variant (top). Rendered as SVG with a therapy label overlaid at the
+  // midpoint of the arc.
+  const therapy = L.therapy || { title: '(therapy not curated)', meta: '' };
+  const loopback = `
+    <svg class="lc-loopback" viewBox="0 0 170 600" preserveAspectRatio="none">
+      <defs>
+        <marker id="lcArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--good)"/>
+        </marker>
+      </defs>
+      <path d="M 4 590 C 160 590, 160 10, 4 10"
+            fill="none" stroke="var(--good)" stroke-width="2"
+            stroke-dasharray="4 3" marker-end="url(#lcArrow)"/>
+    </svg>
+    <div class="lc-therapy-label">
+      <div class="lc-therapy-lbl-h">Therapy · closes the loop</div>
+      <div class="lc-therapy-lbl-title">${esc(therapy.title)}</div>
+      <div class="lc-therapy-lbl-sub">${esc(therapy.meta || '')}</div>
+    </div>`;
+
+  return `
+    <div class="lc-container">
+      <div class="lc-stack">${rows}</div>
+      ${loopback}
+    </div>`;
+}
+
+// ---- header + patient selector strip -------------------------------
+const patientLabel = (p) => `Patient ${p.seqNum}`;
+
+function renderSelector(patients, featured, currentId) {
+  const featChips = featured.map(fid => {
+    const p = patients.find(x => x.id === fid);
+    if (!p) return '';
+    const active = p.id === currentId ? 'active' : '';
+    return `<button class="pat-chip ${active}" data-pid="${esc(p.id)}">
+      <span>${esc(patientLabel(p))}</span>
+      <span class="pat-chip-badge">${esc(p.phenotype)}</span>
+    </button>`;
+  }).join('');
+
+  const opts = patients.map(p =>
+    `<option value="${esc(p.id)}" ${p.id === currentId ? 'selected' : ''}>` +
+    `${esc(patientLabel(p))} · ${esc(p.phenotype)} · exon ${esc(p.variant.exon || '?')} · ` +
+    `${esc(p.variant.consequence || '?')}</option>`
+  ).join('');
+
+  return `
+    <div class="pat-strip">
+      <div class="pat-strip-h">Patient</div>
+      <div class="pat-chips">
+        ${featChips}
+        <div class="pat-more">
+          <label for="pat-picker">or pick from cohort:</label>
+          <select id="pat-picker">${opts}</select>
+        </div>
+      </div>
+    </div>`;
+}
+
+// ---- identity strip (now includes nested Genotype block) ----------
+function renderIdentity(p) {
+  const v = p.variant;
+  const amb = p.ambulatory ? p.ambulatory : '—';
+  const age = (p.age !== null && p.age !== undefined) ? `${p.age} yr` : '—';
+  return `
+    <div class="pat-id">
+      <div class="pat-id-uid">
+        ${esc(patientLabel(p))}
+        <span class="pat-uid-sub">${esc(p.cohort)} #${esc(p.cohortPatientId)}</span>
+      </div>
+      <span class="pat-badge ${esc(p.phenotype)}">${esc(p.phenotype)}</span>
+      <div class="pat-id-meta">
+        <span><span class="k">age</span><b>${esc(age)}</b></span>
+        <span><span class="k">ambulatory</span><b>${esc(amb)}</b></span>
+      </div>
+      <div class="pat-geno">
+        <div class="pat-geno-item"><span class="g-k">Exon</span>
+          <span class="g-v plain">${esc(v.exon || '—')}</span></div>
+        <div class="pat-geno-item"><span class="g-k">Consequence</span>
+          <span class="g-v plain">${esc(v.consequence || '—')}</span></div>
+        <div class="pat-geno-item"><span class="g-k">ACMG</span>
+          <span class="g-v plain">${esc(v.acmg || '—')}</span></div>
+        <div class="pat-geno-item"><span class="g-k">Nucleotide (c.)</span>
+          <span class="g-v">${esc(v.nucleotide || '—')}</span></div>
+        <div class="pat-geno-item"><span class="g-k">Protein (p.)</span>
+          <span class="g-v">${esc(v.aaChange || '—')}</span></div>
+        <div class="pat-geno-item"><span class="g-k">Source</span>
+          <span class="g-v plain">Zhang 2024 · ${esc(p.cohort)} #${esc(p.cohortPatientId)}</span></div>
+      </div>
+    </div>`;
+}
+
+// ---- clinical labs tile (for Overview), grouped by biological layer -
+const LAB_GROUPS = [
+  { layer: 'cellType',   label: 'Cell type · myofibers' },
+  { layer: 'tissueType', label: 'Tissue type', tissue: 'skeletal',    tissueLbl: 'skeletal muscle' },
+  { layer: 'tissueType', label: 'Tissue type', tissue: 'cardiac',     tissueLbl: 'cardiac' },
+  { layer: 'tissueType', label: 'Tissue type', tissue: 'respiratory', tissueLbl: 'respiratory' },
+  { layer: 'tissueType', label: 'Tissue type', tissue: 'CNS',         tissueLbl: 'CNS (H04)' },
+  { layer: 'tissueType', label: 'Tissue type', tissue: 'retina',      tissueLbl: 'retina (H04)' },
+  { layer: 'tissueType', label: 'Tissue type', tissue: 'kidney',      tissueLbl: 'kidney (H04)' },
+  { layer: 'phenotype',  label: 'Phenotype · motor function' },
+];
+
+function _fmtLabVal(l) {
+  if (l.unit === 'presence') return l.value ? 'present' : 'absent';
+  if (l.value >= 1000) return Number(l.value).toLocaleString('en-US');
+  return String(l.value);
+}
+
+function renderLabsTile(p) {
+  if (!p.labs || !p.labs.length) return '';
+
+  const groupsHtml = LAB_GROUPS.map(g => {
+    const rows = p.labs.filter(l =>
+      l.layer === g.layer && (!g.tissue || l.tissue === g.tissue)
+    );
+    if (!rows.length) return '';
+    const label = g.tissueLbl ? `Tissue · ${g.tissueLbl}` : g.label;
+    const rowHtml = rows.map(l => `
+      <div class="lab-row" title="${esc(l.label)} · ref ${l.refLow}-${l.refHigh} ${esc(l.unit)}">
+        <span class="lab-lbl">${esc(l.label)}</span>
+        <span class="lab-val">${esc(_fmtLabVal(l))}${l.unit && l.unit !== 'presence' ? ' ' + esc(l.unit === '% predicted' ? '%' : l.unit) : ''}</span>
+        <span class="lab-flag ${esc(l.flag)}">${esc(l.flag)}</span>
+      </div>`).join('');
+    return `
+      <div class="labs-group">
+        <div class="labs-group-h">${esc(label)}</div>
+        ${rowHtml}
+      </div>`;
+  }).join('');
+
+  const abnormalN = p.labs.filter(l => l.flag !== 'normal').length;
+  const summary = `<span class="tile-summary"><span class="warn">${abnormalN}</span>/<b>${p.labs.length}</b> abnormal</span>`;
+  const body = groupsHtml + `<div class="tile-foot">synthetic; deterministic per patient</div>`;
+  return wrapCollapsibleTile('labs', 'Clinical Labs', summary, body, 'labs-tile');
+}
+
+// ---- compact variant × isoform coverage tile (for Overview) --------
+function renderExonTile(p, isoforms, nExons) {
+  const W = 220, pad = 6;
+  const trackY = 14, trackH = 6;
+  const laneY0 = trackY + trackH + 5;
+  const laneH = 3, laneGap = 1;
+  const totalH = laneY0 + isoforms.length * (laneH + laneGap) + 8;
+  const xForExon = (e) => pad + ((e - 1) / (nExons - 1)) * (W - 2 * pad);
+
+  const laneBars = isoforms.map((iso, i) => {
+    const impact = p.isoformImpact.find(x => x.id === iso.id);
+    const hit = impact && impact.hit;
+    const x1 = xForExon(iso.firstSharedExon);
+    const x2 = xForExon(nExons);
+    const y  = laneY0 + i * (laneH + laneGap);
+    const fill = hit ? 'var(--bad)' : 'var(--good)';
+    return `<rect x="${x1}" y="${y}" width="${x2 - x1}" height="${laneH}"
+              fill="${fill}" opacity="0.85"/>`;
+  }).join('');
+
+  const vE = p.variant.exonNum;
+  let mark = '';
+  if (vE) {
+    const vx = xForExon(vE);
+    mark = `
+      <line x1="${vx}" y1="${trackY - 3}" x2="${vx}" y2="${laneY0 + isoforms.length * (laneH + laneGap)}"
+            stroke="var(--bad)" stroke-width="1" stroke-dasharray="1.5 1.5"/>
+      <circle cx="${vx}" cy="${trackY - 4}" r="2.5" fill="var(--bad)" stroke="white" stroke-width="0.8"/>`;
+  }
+
+  const track = `
+    <rect x="${pad}" y="${trackY}" width="${W - 2 * pad}" height="${trackH}"
+          fill="var(--line)" stroke="var(--line-2)"/>
+    <text x="${pad}" y="${totalH - 1}" font-size="7.5" fill="var(--ink-3)">exon 1</text>
+    <text x="${W - pad}" y="${totalH - 1}" text-anchor="end" font-size="7.5"
+          fill="var(--ink-3)">${nExons}</text>
+    <text x="${W / 2}" y="${totalH - 1}" text-anchor="middle" font-size="7.5"
+          fill="var(--ink-3)">variant at exon ${esc(String(vE || '?'))}</text>`;
+
+  const hitN = p.isoformImpact.filter(i => i.hit).length;
+  const totN = p.isoformImpact.length;
+  const summary = `<span class="tile-summary">exon <b>${esc(String(vE || '?'))}</b> · ${hitN}/${totN} iso hit</span>`;
+  const body = `<svg class="exon-svg" viewBox="0 0 ${W} ${totalH}" preserveAspectRatio="xMidYMid meet">
+      ${track}${laneBars}${mark}
+    </svg>`;
+  return wrapCollapsibleTile('exon', 'Variant × Isoform Coverage', summary, body, 'exon-tile');
+}
+
+// ---- isoform impact tile -------------------------------------------
+function renderIsoformTile(p) {
+  const rows = p.isoformImpact.map(iso => {
+    const cls = iso.hit ? 'hit' : 'spared';
+    const tag = iso.hit ? 'hit' : 'spared';
+    return `
+      <div class="iso-row">
+        <div class="iso-lbl">${esc(iso.id)}</div>
+        <div class="iso-track"><div class="iso-fill ${cls}" style="width:100%"></div></div>
+        <div class="iso-tag ${cls}">${tag}</div>
+        <div class="iso-meta" title="${esc(iso.reason)}">
+          first shared exon ${iso.firstSharedExon} · ${esc(iso.promoterTissue)}
+        </div>
+      </div>`;
+  }).join('');
+  const hitN = p.isoformImpact.filter(i => i.hit).length;
+  const totN = p.isoformImpact.length;
+  const summary = `<span class="tile-summary"><b>${hitN}</b>/<b>${totN}</b> iso hit</span>`;
+  const body = rows +
+    `<div class="tile-foot">${hitN}/${totN} isoforms affected · rule: first-shared-exon ≤ variant exon</div>`;
+  return wrapCollapsibleTile('iso', 'Isoform Impact', summary, body);
+}
+
+// ---- cell type tile ------------------------------------------------
+function renderCellTile(p) {
+  const maxScore = Math.max(...p.cellTypeImpact.map(c => c.score), 1);
+  const rows = p.cellTypeImpact.map(c => {
+    const cls = c.status;
+    const pct = Math.round((c.score / maxScore) * 100);
+    return `
+      <div class="cell-row" title="${esc(c.reason)}">
+        <div>
+          <div class="cell-lbl">${esc(c.name)}</div>
+          <div class="cell-track"><div class="cell-fill ${cls}" style="width:${pct}%"></div></div>
+        </div>
+        <div class="cell-status ${cls}">${cls}</div>
+      </div>`;
+  }).join('');
+  const hitN = p.cellTypeImpact.filter(c => c.status === 'hit').length;
+  const summary = `<span class="tile-summary"><b>${hitN}</b>/<b>${p.cellTypeImpact.length}</b> cell types hit</span>`;
+  const body = rows +
+    `<div class="tile-foot">${hitN}/${p.cellTypeImpact.length} cell types hit · HPA cell types (bar = expression score)</div>`;
+  return wrapCollapsibleTile('cell', 'Cell Types Affected', summary, body);
+}
+
+// ---- tissue tile ---------------------------------------------------
+function renderTissueTile(p) {
+  const hitChips = p.tissuesHit.map(t =>
+    `<span class="tis-chip hit">${esc(t)}</span>`).join('');
+  const sparedChips = p.tissuesSpared.map(t =>
+    `<span class="tis-chip spared">${esc(t)}</span>`).join('');
+  const summary = `<span class="tile-summary"><span class="warn">${p.tissuesHit.length}</span> hit · <b>${p.tissuesSpared.length}</b> spared</span>`;
+  const body = `
+    <div class="tis-group">
+      <div class="tis-group-h" style="color:var(--bad)">Hit (${p.tissuesHit.length})</div>
+      <div class="tis-chips">${hitChips || '<span style="color:var(--ink-3);font-size:11px">none</span>'}</div>
+    </div>
+    <div class="tis-group">
+      <div class="tis-group-h" style="color:var(--good)">Spared (${p.tissuesSpared.length})</div>
+      <div class="tis-chips">${sparedChips || '<span style="color:var(--ink-3);font-size:11px">none</span>'}</div>
+    </div>
+    <div class="tile-foot">from isoforms.primary_expression_tissues</div>`;
+  return wrapCollapsibleTile('tissue', 'Tissues Affected', summary, body);
+}
+
+// ---- pathway implications tile (gene-level, unchanged per-patient) -
+function renderPathwayTile() {
+  if (!MECH_DATA) {
+    return wrapCollapsibleTile('pw', 'Pathway Implications',
+      `<span class="tile-summary">unavailable</span>`,
+      `<div style="color:var(--ink-3);font-size:11px;padding:6px 0">
+        pathway data unavailable — run <code>hydrate_mechanism_view.py</code>
+       </div>`);
+  }
+  const rows = (MECH_DATA.tiles?.pathways?.rows || []).slice(0, 5);
+  const maxV = MECH_DATA.tiles?.pathways?.max || 10;
+  const rowsHtml = rows.map(r => {
+    const pct = Math.round((r.value / maxV) * 100);
+    return `
+      <div class="pw-row">
+        <div>
+          <div class="pw-lbl" title="${esc(r.label)}">${esc(r.label)}</div>
+          <div class="pw-track"><div class="pw-fill" style="width:${pct}%"></div></div>
+        </div>
+        <div class="pw-val">${r.value.toFixed(1)}</div>
+      </div>`;
+  }).join('');
+  const summary = `<span class="tile-summary"><b>${rows.length}</b> pathways · gene-level</span>`;
+  const body = rowsHtml + `<div class="tile-foot">gene-level (Reactome memberships) — not variant-specific</div>`;
+  return wrapCollapsibleTile('pw', 'Pathway Implications', summary, body);
+}
+
+// ---- focus panel: ranked hypotheses list ---------------------------
+function renderHypRankPanel(p) {
+  if (!MECH_DATA || !MECH_DATA.hypotheses) return '';
+  const byId = Object.fromEntries(MECH_DATA.hypotheses.map(h => [h.id, h]));
+  const ranking = p.hypothesisRanking || [];
+  if (!ranking.length) return '<div style="color:var(--ink-3);font-size:11px">No ranking available.</div>';
+  const maxScore = 10;
+  const topId = ranking[0].id;
+  const selectedId = currentHypId || topId;
+
+  return ranking.map((r, i) => {
+    const h = byId[r.id];
+    if (!h) return '';
+    const isTop = i === 0;
+    const isSel = r.id === selectedId;
+    const cls = [isTop ? 'top' : '', isSel ? 'selected' : ''].filter(Boolean).join(' ');
+    const pct = Math.round((r.score / maxScore) * 100);
+    const pe = r.patientEvidence || [];
+    // Only render the patient-evidence subpanel on the currently-selected
+    // rank row — keeps the focus panel compact for the other three.
+    const peBlock = (isSel && pe.length) ? `
+      <div class="patient-evi">
+        <div class="patient-evi-h">Patient-specific evidence
+          <span class="hyp-rank-fit-lbl"></span>
+          <span style="float:right;font-weight:500;color:var(--ink-3)">
+            ${pe.length} bullet${pe.length === 1 ? '' : 's'}
+          </span>
+        </div>
+        ${pe.map(e => `
+          <div class="patient-evi-item">
+            <span class="pe-tick">✓</span>
+            <span>${esc(e.text)}</span>
+          </div>`).join('')}
+      </div>` : '';
+    return `
+      <div class="hyp-rank-row ${cls}" data-hid="${esc(r.id)}">
+        <div class="hyp-rank-head">
+          <span class="hyp-rank-badge">${r.rank}</span>
+          <span class="hyp-rank-name">${esc(h.name)}</span>
+          <span class="hyp-rank-score">${r.score.toFixed(1)}</span>
+        </div>
+        <div class="hyp-rank-bar"><div class="hyp-rank-fill" style="width:${pct}%"></div></div>
+        <div class="hyp-rank-fit">${esc(r.fit)}
+          ${pe.length ? `<span class="patient-evi-count">· ${pe.length} lab bullet${pe.length === 1 ? '' : 's'}</span>` : ''}
+        </div>
+        ${peBlock}
+      </div>`;
+  }).join('');
+}
+
+// ---- detail panel: selected hypothesis's chain ---------------------
+function renderChainPanel(p) {
+  if (!MECH_DATA || !MECH_DATA.hypotheses) return '';
+  const byId = Object.fromEntries(MECH_DATA.hypotheses.map(h => [h.id, h]));
+  const ranking = p.hypothesisRanking || [];
+  if (!ranking.length) return '';
+  const topId = ranking[0].id;
+  const selectedId = currentHypId || topId;
+  const selHyp = byId[selectedId];
+
+  let chainHtml = '';
+  if (chainView === 'layers') {
+    chainHtml = renderLayeredChain(selectedId);
+  } else if (selHyp && selHyp.detail && selHyp.detail.chain && window.WIDGETS) {
+    chainHtml = window.WIDGETS.reasoningChain.render({
+      chain: selHyp.detail.chain,
+      selectedEdgeId: currentEdgeId,
+    });
+  } else if (selHyp) {
+    chainHtml = `<div style="color:var(--ink-3);font-size:12px;padding:8px 0">
+      No reasoning chain curated for hypothesis H${esc(selectedId)}.
+    </div>`;
+  }
+
+  const lede = (selHyp && selHyp.detail && selHyp.detail.lede)
+    ? `<div class="hyp-lede">${esc(selHyp.detail.lede)}</div>` : '';
+
+  // Patient-specific evidence panel — sits above lede, weighted higher
+  // than the generic literature evidence because it's this-patient data.
+  const selRank = ranking.find(r => r.id === selectedId);
+  const pe = (selRank && selRank.patientEvidence) || [];
+  const peBlock = `
+    <div class="hyp-patient-evi-panel">
+      <div class="hyp-patient-evi-h">
+        <span class="pe-badge">PATIENT</span>
+        Evidence from this patient's labs
+        <span class="pe-hint">${pe.length} bullet${pe.length === 1 ? '' : 's'} · weighted above literature</span>
+      </div>
+      ${pe.length
+        ? `<ul class="hyp-patient-evi-list">
+             ${pe.map(e => `<li><span class="tick">✓</span><span>${esc(e.text)}</span></li>`).join('')}
+           </ul>`
+        : `<div class="hyp-patient-evi-empty">No labs from this patient argue for or against H${esc(selectedId)} directly.</div>`}
+    </div>`;
+
+  const chainSubtitle = (selectedId === topId)
+    ? `top-ranked: H${esc(selectedId)}`
+    : `viewing H${esc(selectedId)}`;
+
+  return `
+    <div class="hyp-chain-h">
+      Reasoning chain
+      <span class="chain-view-toggle" role="tablist">
+        <button data-view="flow"   class="${chainView === 'flow'   ? 'active' : ''}">Cause → Effect</button>
+        <button data-view="layers" class="${chainView === 'layers' ? 'active' : ''}">Biological Layers</button>
+      </span>
+      <span class="hyp-chain-h-sub">— ${chainSubtitle}: ${esc(selHyp ? selHyp.name : '')}</span>
+    </div>
+    ${peBlock}
+    ${lede}
+    <div style="overflow-x:auto">${chainHtml}</div>`;
+}
+
+// ---- OFD (overview-focus-detail) layout ----------------------------
+function renderOFDLayout(p) {
+  const tiles = [
+    renderExonTile(p, DATA.isoforms, DATA.gene.nExons),
+    renderLabsTile(p),
+    renderIsoformTile(p),
+    renderCellTile(p),
+    renderTissueTile(p),
+    renderPathwayTile(),
+  ].join('');
+
+  return `
+    <div class="ofd-layout">
+      <div class="ofd-panel ofd-overview">
+        <div class="ofd-panel-h">Overview <span class="ofd-panel-h-sub">this patient</span></div>
+        ${tiles}
+      </div>
+      <div class="ofd-panel ofd-focus">
+        <div class="ofd-focus-tabs" role="tablist">
+          <button data-focus="hypotheses" class="${focusTab === 'hypotheses' ? 'active' : ''}">
+            Hypotheses
+          </button>
+          <button data-focus="chat" class="${focusTab === 'chat' ? 'active' : ''}">
+            Chat
+          </button>
+        </div>
+        <div class="ofd-focus-body">
+          ${focusTab === 'hypotheses' ? renderHypRankPanel(p) : renderChatBody(p)}
+        </div>
+      </div>
+      <div class="ofd-panel ofd-detail">
+        ${renderChainPanel(p)}
+      </div>
+    </div>`;
+}
+
+// ---- patient-scoped chat --------------------------------------------
+// Canned pattern-matching for the workbench mock. Every entry answers a
+// question about the CURRENTLY loaded patient, reading from `p` and the
+// hypothesis defs in MECH_DATA. First match wins — order matters.
+function planPatientQuery(query, p) {
+  if (!MECH_DATA) return null;
+  const byHyp = Object.fromEntries((MECH_DATA.hypotheses || []).map(h => [h.id, h]));
+  const q = (query || '').toLowerCase();
+  const top = (p.hypothesisRanking && p.hypothesisRanking[0]) || null;
+  const topHyp = top ? byHyp[top.id] : null;
+  const hitIso = p.isoformImpact.filter(i => i.hit).map(i => i.id);
+  const sparedIso = p.isoformImpact.filter(i => !i.hit).map(i => i.id);
+
+  // 1. why is this the top hypothesis?
+  if (/why.*(top|rank|hypothesis|first)|why is h?\d/.test(q)) {
+    return {
+      text: `The top-ranked hypothesis is <b>H${top.id} — ${topHyp ? topHyp.name : ''}</b> ` +
+            `(score ${top.score.toFixed(1)}). The scoring rule that fired: <i>${escNoTag(top.fit)}</i>. ` +
+            `Below that: ` + p.hypothesisRanking.slice(1).map(r =>
+              `H${r.id} (${r.score.toFixed(1)})`).join(' · ') + '.',
+      actions: [{ label: `Open H${top.id} chain`, hypId: top.id }],
+    };
+  }
+
+  // 2. show/explain reasoning chain
+  if (/reasoning|chain|mechanism|how does.*work|how does.*cause/.test(q)) {
+    if (!topHyp || !topHyp.detail || !topHyp.detail.chain) {
+      return { text: `No reasoning chain curated for H${top.id} yet.` };
+    }
+    const n = topHyp.detail.chain.nodes.length;
+    const e = topHyp.detail.chain.edges.length;
+    return {
+      text: `The reasoning chain for <b>H${top.id}</b> has ${n} nodes across cause → mechanism → phenotype tiers, ` +
+            `connected by ${e} edges. Every edge carries citation evidence — click an arrow to open the modal. ` +
+            (topHyp.detail.lede ? `<br><br><i>${escNoTag(topHyp.detail.lede)}</i>` : ''),
+      actions: [{ label: 'Open reasoning chain', hypId: top.id, scrollTo: 'hyp' }],
+    };
+  }
+
+  // 3. tissues / cell types
+  if (/tissue|spared|which tissue|what tissue/.test(q)) {
+    return {
+      text: `Given the variant at exon ${p.variant.exon}, ` +
+            `<b>${p.tissuesHit.length} tissues are hit</b> ` +
+            `(${p.tissuesHit.slice(0,5).join(', ')}${p.tissuesHit.length > 5 ? '…' : ''}) and ` +
+            `<b>${p.tissuesSpared.length} are spared</b> ` +
+            `(${p.tissuesSpared.slice(0,5).join(', ')}${p.tissuesSpared.length > 5 ? '…' : ''}). ` +
+            `The projection uses the ` +
+            `<code>first_shared_exon</code> rule per isoform — an isoform is hit iff ` +
+            `its promoter fires at or before exon ${p.variant.exonNum || '?'}.`,
+    };
+  }
+
+  if (/cell type|cells|myonuclei|photoreceptor|cardiomyocyte/.test(q)) {
+    const hits = p.cellTypeImpact.filter(c => c.status === 'hit').map(c => c.name);
+    const spared = p.cellTypeImpact.filter(c => c.status === 'spared').map(c => c.name);
+    return {
+      text: `<b>${hits.length}/${p.cellTypeImpact.length} HPA cell types are hit</b>. ` +
+            `Hit: ${hits.join(', ') || 'none'}. Spared: ${spared.join(', ') || 'none'}. ` +
+            `Mapping is curated from Muntoni 2003, Pillers 1993, and Lidov 1995 (see hydrator source).`,
+    };
+  }
+
+  // 4. isoform-specific — why is Dp71 spared, why is Dp427m hit, etc.
+  const isoMatch = q.match(/dp\s?(427[mcp]?|260|140|116|71)/);
+  if (isoMatch) {
+    const target = 'Dp' + isoMatch[1].replace(/\s/g, '');
+    const iso = p.isoformImpact.find(i => i.id.toLowerCase() === target.toLowerCase());
+    if (iso) {
+      return {
+        text: `<b>${iso.id}</b> is <b>${iso.hit ? 'hit' : 'spared'}</b> for this patient. ` +
+              `Reason: ${escNoTag(iso.reason)}. ` +
+              `Its promoter tissue is <i>${iso.promoterTissue}</i> and it normally expresses in ` +
+              `${(iso.tissues || []).slice(0, 4).join(', ')}${(iso.tissues || []).length > 4 ? '…' : ''}.`,
+      };
+    }
+  }
+
+  // 5. therapy / treatment
+  if (/therap|treatment|drug|skipping|ataluren|elevidys|micro.*dystrophin/.test(q)) {
+    if (!topHyp) return { text: 'No hypothesis available to reason from.' };
+    const th = topHyp.detail?.chain?.therapeutic;
+    const short = topHyp.therapeutic;
+    return {
+      text: `Therapeutic strategy for the top hypothesis (H${top.id}): <b>${escNoTag(short || '')}</b>. ` +
+            (th ? `More specifically: <i>${escNoTag(th.label1)}</i> — ${escNoTag(th.label2)}.`
+                : `(No therapeutic node curated on the chain diagram.)`) +
+            ` Real prescribing decisions require variant confirmation and exon-skipping compatibility ` +
+            `analysis — this is a mechanism-level pointer, not a clinical recommendation.`,
+    };
+  }
+
+  // 6. phenotype / prognosis
+  if (/phenotype|dmd|becker|bmd|prognosis|severity|progression|ambulator/.test(q)) {
+    const amb = p.ambulatory || 'not recorded';
+    return {
+      text: `This patient is labeled <b>${p.phenotype}</b>` +
+            (p.age ? ` at age ${p.age}` : '') +
+            (p.ambulatory ? `, ${p.ambulatory === 'Yes' ? 'still ambulant' : 'non-ambulant'}` : '') +
+            `. Zhang 2024 cohort overall: DMD ${DATA.phenoBreakdown.DMD || 0}, ` +
+            `BMD ${DATA.phenoBreakdown.BMD || 0}, IMD ${DATA.phenoBreakdown.IMD || 0}, ` +
+            `pending ${DATA.phenoBreakdown.pending || 0}. ` +
+            `The label is clinical (age at ambulation loss, muscle biopsy) — the variant does not determine ` +
+            `the label on its own (Monaco rule holds ~90%, not 100%).`,
+    };
+  }
+
+  // 7. variant / genotype details
+  if (/variant|mutation|exon|c\.|p\.|nucleotide|amino acid|consequence/.test(q)) {
+    const v = p.variant;
+    return {
+      text: `Variant details for <b>${patientLabel(p)}</b>: ` +
+            `<code>${escNoTag(v.nucleotide || '?')}</code> ` +
+            (v.aaChange ? `→ <code>${escNoTag(v.aaChange)}</code>` : '') +
+            ` in exon ${escNoTag(v.exon || '?')}. ` +
+            `Consequence: <b>${escNoTag(v.consequence)}</b>. ACMG: <b>${escNoTag(v.acmg || 'not classified')}</b>. ` +
+            `Source: Zhang 2024 supplementary tables (${p.cohort}, cohort id ${p.cohortPatientId}).`,
+    };
+  }
+
+  // 8. compare / differences
+  if (/compare|difference|vs|versus|typical/.test(q)) {
+    return {
+      text: `A typical DMD case has a truncating variant (frameshift, nonsense, or splice-site) causing ` +
+            `total Dp427m loss. This patient: <b>${p.variant.consequence}</b> at exon ${p.variant.exon}, ` +
+            `hitting ${hitIso.length} isoform${hitIso.length === 1 ? '' : 's'} ` +
+            `(${hitIso.join(', ')}) and sparing ${sparedIso.length} ` +
+            `(${sparedIso.join(', ') || 'none'}). ` +
+            (p.phenotype === 'BMD'
+              ? `BMD suggests in-frame rescue keeps some functional dystrophin — atypical for a truncating variant.`
+              : p.phenotype === 'IMD'
+              ? `IMD is a boundary label — this variant produces intermediate severity, possibly via partial NMD escape.`
+              : `The full ${p.tissuesHit.length}-tissue impact makes this a classical severe presentation.`),
+    };
+  }
+
+  // fallthrough
+  return null;
+}
+
+function escNoTag(s) { return esc(s); }
+
+function renderChatBody(p) {
+  const suggestions = [
+    'Why is this the top hypothesis?',
+    'Show me the reasoning chain',
+    'Which tissues are spared?',
+    'Which cell types are affected?',
+    p.isoformImpact.find(i => !i.hit)
+      ? `Why is ${p.isoformImpact.find(i => !i.hit).id} spared?`
+      : `Why is ${p.isoformImpact[0].id} hit?`,
+    'What therapies apply?',
+    'Compare to a typical DMD patient',
+  ];
+
+  const suggestChips = suggestions.map(s =>
+    `<button class="chat-suggest" data-q="${esc(s)}">${esc(s)}</button>`).join('');
+
+  const turnsHtml = chatTurns.length ? chatTurns.map((t, i) => {
+    const actions = (t.actions || []).map((a, j) =>
+      `<button class="chat-action" data-action-turn="${i}" data-action-idx="${j}">${esc(a.label)}</button>`
+    ).join('');
+    return `
+      <div class="chat-turn ${t.role}">
+        <div class="chat-bubble">
+          ${t.role === 'assistant' ? t.text : esc(t.text)}
+          ${(t.streaming) ? '<span class="chat-cursor"></span>' : ''}
+        </div>
+        ${actions ? `<div class="chat-actions">${actions}</div>` : ''}
+      </div>`;
+  }).join('') : `<div class="chat-empty">
+    Ask about ${esc(patientLabel(p))}: variant, isoforms, cell types, hypotheses, or therapies.
+  </div>`;
+
+  return `
+    <div class="chat-panel">
+      <div class="chat-header">
+        <span class="chat-header-title">${esc(patientLabel(p))} · chat</span>
+        <span class="chat-header-sub">${chatTurns.length} turn${chatTurns.length === 1 ? '' : 's'}</span>
+        ${chatTurns.length ? `<button class="chat-header-clear" id="chat-clear">clear</button>` : ''}
+      </div>
+      <div class="chat-suggestions">
+        <span class="chat-suggest-lbl">Try:</span>
+        ${suggestChips}
+      </div>
+      <div class="chat-turns" id="chat-turns">${turnsHtml}</div>
+      <form class="chat-input-row" id="chat-form">
+        <input class="chat-input" id="chat-input" placeholder="Ask about ${esc(patientLabel(p))}…"
+               autocomplete="off" ${chatStreaming ? 'disabled' : ''}/>
+        <button class="chat-send" type="submit" ${chatStreaming ? 'disabled' : ''}>Send</button>
+      </form>
+    </div>`;
+}
+
+// Stream a chat response into a target text container (word-by-word).
+function streamProse(text, done) {
+  const words = text.split(/(\s+)/);
+  let i = 0;
+  chatStreaming = true;
+  const timer = setInterval(() => {
+    const bubble = document.querySelector('.chat-turn.assistant:last-child .chat-bubble');
+    if (!bubble) { clearInterval(timer); chatStreaming = false; return; }
+    const cursor = '<span class="chat-cursor"></span>';
+    const partial = words.slice(0, ++i).join('');
+    bubble.innerHTML = partial + cursor;
+    const turns = document.getElementById('chat-turns');
+    if (turns) turns.scrollTop = turns.scrollHeight;
+    if (i >= words.length) {
+      clearInterval(timer);
+      chatStreaming = false;
+      bubble.innerHTML = text;  // final: strip cursor
+      done && done();
+    }
+  }, 18);
+}
+
+function askThisPatient(query) {
+  if (chatStreaming || !query.trim()) return;
+  const p = DATA.patients.find(x => x.id === currentPatientId);
+  if (!p) return;
+
+  chatTurns.push({ role: 'user', text: query });
+
+  const plan = planPatientQuery(query, p);
+  const reply = plan || {
+    text: `I don't have a canned answer for "<i>${esc(query)}</i>". ` +
+          `Try one of the suggestion chips — the workbench planner recognizes questions about ` +
+          `hypotheses, reasoning chains, tissues, cell types, specific isoforms (Dp427m/Dp71/etc.), ` +
+          `therapies, or phenotype comparisons.`,
+  };
+
+  chatTurns.push({ role: 'assistant', text: '', actions: reply.actions, streaming: true });
+  renderPage();
+  // After DOM update, stream the answer word-by-word.
+  requestAnimationFrame(() => {
+    streamProse(reply.text, () => {
+      // Mark as no longer streaming for future re-renders.
+      const last = chatTurns[chatTurns.length - 1];
+      if (last) { last.text = reply.text; last.streaming = false; }
+      renderPage();
+    });
+  });
+}
+
+// ---- edge-evidence modal (rendered at page root) --------------------
+function renderEdgeModal(p) {
+  if (!currentEdgeId || !MECH_DATA) return '';
+  const byId = Object.fromEntries(MECH_DATA.hypotheses.map(h => [h.id, h]));
+  const ranking = p.hypothesisRanking || [];
+  const selectedId = currentHypId || (ranking[0] && ranking[0].id);
+  const selHyp = byId[selectedId];
+  if (!selHyp || !selHyp.detail || !selHyp.detail.chain) return '';
+  const chain = selHyp.detail.chain;
+  const edge = chain.edges.find(e => (e.id || `${e.from}-${e.to}`) === currentEdgeId);
+  if (!edge) return '';
+  const byNode = Object.fromEntries(chain.nodes.map(n => [n.id, n]));
+  const fn = byNode[edge.from], tn = byNode[edge.to];
+  const fromLabel = fn ? `${fn.label1} ${fn.label2 || ''}`.trim() : edge.from;
+  const toLabel   = tn ? `${tn.label1} ${tn.label2 || ''}`.trim() : edge.to;
+
+  const rows = (edge.evidence || []).map(e => `
+    <li class="${e.tone === 'warn' ? 'warn' : ''}">
+      <span class="tick">${e.tone === 'warn' ? '!' : '✓'}</span>
+      <span>${esc(e.text)}<span class="cite">${esc(e.cite || '')}</span></span>
+    </li>`).join('');
+  const body = rows
+    ? `<ul class="evi">${rows}</ul>`
+    : `<div class="edge-modal-empty">No curated evidence for this edge yet.</div>`;
+
+  return `
+    <div class="edge-modal-backdrop" id="edge-modal-backdrop">
+      <div class="edge-modal" role="dialog" aria-modal="true" aria-labelledby="edge-modal-label">
+        <div class="edge-modal-h">
+          <div>
+            <div class="edge-modal-title" id="edge-modal-label">Edge Evidence</div>
+            <div class="edge-modal-arrow">
+              <b>${esc(fromLabel)}</b><span class="arrow-sep">→</span><b>${esc(toLabel)}</b>
+            </div>
+            <div class="edge-modal-eid">
+              H${esc(selectedId)} · ${esc(currentEdgeId)}
+              · ${(edge.evidence || []).length} citation${(edge.evidence || []).length === 1 ? '' : 's'}
+            </div>
+          </div>
+          <button class="edge-modal-close" id="edge-modal-close" aria-label="Close">×</button>
+        </div>
+        <div class="edge-modal-body">${body}</div>
+      </div>
+    </div>`;
+}
+
+function sectionLbl(title, note) {
+  return `<div class="section-lbl">${esc(title)}` +
+    (note ? `<span class="section-count">${esc(note)}</span>` : '') + `</div>`;
+}
+
+// ---- main render ---------------------------------------------------
+function renderPage() {
+  const p = DATA.patients.find(x => x.id === currentPatientId) || DATA.patients[0];
+  currentPatientId = p.id;
+
+  document.getElementById('app').innerHTML = [
+    renderSelector(DATA.patients, DATA.featured, currentPatientId),
+    renderIdentity(p),
+    renderOFDLayout(p),
+    renderEdgeModal(p),
+  ].join('');
+
+  // rewire selector — patient change resets hypothesis + edge + chat
+  document.querySelectorAll('.pat-chip').forEach(btn => {
+    btn.addEventListener('click', () => {
+      currentPatientId = btn.dataset.pid;
+      currentHypId = null;
+      currentEdgeId = null;
+      chatTurns = [];
+      renderPage();
+    });
+  });
+  const picker = document.getElementById('pat-picker');
+  if (picker) picker.addEventListener('change', () => {
+    currentPatientId = picker.value;
+    currentHypId = null;
+    currentEdgeId = null;
+    chatTurns = [];
+    renderPage();
+  });
+
+  // hypothesis rank rows — click swaps which chain is displayed
+  document.querySelectorAll('.hyp-rank-row').forEach(row => {
+    row.addEventListener('click', () => {
+      const hid = row.dataset.hid;
+      if (hid && hid !== currentHypId) {
+        currentHypId = hid;
+        currentEdgeId = null;  // reset edge when hypothesis changes
+        renderPage();
+      }
+    });
+  });
+
+  // chain-view toggle (Cause→Effect vs. Biological Layers)
+  document.querySelectorAll('.chain-view-toggle button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const v = btn.dataset.view;
+      if (v && v !== chainView) {
+        chainView = v;
+        currentEdgeId = null;  // clear edge (layered view has no edges to click)
+        renderPage();
+      }
+    });
+  });
+
+  // focus-panel tab switcher (Hypotheses ↔ Chat)
+  document.querySelectorAll('.ofd-focus-tabs button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const t = btn.dataset.focus;
+      if (t && t !== focusTab) {
+        focusTab = t;
+        renderPage();
+      }
+    });
+  });
+
+  // Overview: click a tile header to expand/collapse
+  document.querySelectorAll('[data-tile-toggle]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.dataset.tileToggle;
+      if (expandedTiles.has(id)) expandedTiles.delete(id);
+      else expandedTiles.add(id);
+      renderPage();
+    });
+  });
+
+  // reasoning-chain edges — open the edge-evidence modal
+  document.querySelectorAll('[data-edge-id]').forEach(hit => {
+    hit.addEventListener('click', (ev) => {
+      ev.stopPropagation();
+      currentEdgeId = hit.dataset.edgeId;
+      renderPage();
+    });
+  });
+
+  // chat: submit form + suggestion chips + clear + action buttons
+  const chatForm = document.getElementById('chat-form');
+  const chatInput = document.getElementById('chat-input');
+  if (chatForm) chatForm.addEventListener('submit', (ev) => {
+    ev.preventDefault();
+    const q = (chatInput.value || '').trim();
+    if (q) { chatInput.value = ''; askThisPatient(q); }
+  });
+  document.querySelectorAll('.chat-suggest').forEach(btn => {
+    btn.addEventListener('click', () => askThisPatient(btn.dataset.q));
+  });
+  const chatClear = document.getElementById('chat-clear');
+  if (chatClear) chatClear.addEventListener('click', () => {
+    chatTurns = [];
+    renderPage();
+  });
+  document.querySelectorAll('.chat-action').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const turnIdx   = parseInt(btn.dataset.actionTurn, 10);
+      const actionIdx = parseInt(btn.dataset.actionIdx,  10);
+      const turn = chatTurns[turnIdx];
+      const action = turn && turn.actions && turn.actions[actionIdx];
+      if (!action) return;
+      if (action.hypId) {
+        currentHypId = action.hypId;
+        currentEdgeId = null;
+      }
+      renderPage();
+      if (action.scrollTo === 'hyp') {
+        const el = document.querySelector('.hyp-section');
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // modal close — backdrop click OR close button
+  const backdrop = document.getElementById('edge-modal-backdrop');
+  if (backdrop) {
+    backdrop.addEventListener('click', (ev) => {
+      if (ev.target === backdrop) {
+        currentEdgeId = null;
+        renderPage();
+      }
+    });
+    const closeBtn = document.getElementById('edge-modal-close');
+    if (closeBtn) closeBtn.addEventListener('click', () => {
+      currentEdgeId = null;
+      renderPage();
+    });
+  }
+}
+
+// global Escape → close modal (bound once on load, not per-render)
+document.addEventListener('keydown', (ev) => {
+  if (ev.key === 'Escape' && currentEdgeId) {
+    currentEdgeId = null;
+    renderPage();
+  }
+});
+
+// ---- load ----------------------------------------------------------
+document.addEventListener('DOMContentLoaded', async () => {
+  try {
+    const [patResp, mechResp] = await Promise.all([
+      fetch('patient_data.json',   { cache: 'no-store' }),
+      fetch('mechanism_data.json', { cache: 'no-store' }),
+    ]);
+    if (!patResp.ok) throw new Error(`patient_data.json HTTP ${patResp.status}`);
+    DATA = await patResp.json();
+    if (mechResp.ok) {
+      MECH_DATA = await mechResp.json();
+    } else {
+      console.warn('[patient] mechanism_data.json missing — hypotheses + pathways will render empty');
+    }
+    const qp = new URLSearchParams(location.search).get('patient');
+    currentPatientId = (qp && DATA.patients.some(x => x.id === qp))
+      ? qp
+      : (DATA.featured[0] || DATA.patients[0].id);
+    console.info(`[patient] loaded ${DATA.patients.length} patients, showing ${currentPatientId}`);
+    renderPage();
+  } catch (e) {
+    document.getElementById('app').innerHTML =
+      `<div style="padding:40px;color:var(--bad);font-size:14px">
+        Failed to load <code>patient_data.json</code>: ${esc(e.message)}<br>
+        <span style="color:var(--ink-3);font-size:12px">Run
+        <code>python3 -m prototype.ingest.hydrate_patient_view</code> first.</span>
+       </div>`;
+  }
+});
+</script>
+</body>
+</html>

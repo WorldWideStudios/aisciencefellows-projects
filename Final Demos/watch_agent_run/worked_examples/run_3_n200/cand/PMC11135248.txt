@@ -1,0 +1,14 @@
+L23|Bone marrow-derived MSC (BMSC), a type of MSC, play a crucial role in osteogenesis and tissue repair[ 5 ].
+L55|Figure 1 Characterization of bone marrow-derived mesenchymal stem cell- and HEK293-derived exosomes.
+L55|A: Particle size distribution of bone marrow-derived mesenchymal stem cell (BMSC)-derived and HEK293-derived exosomes (BMSC-exo and HEK293-exo, respectively) detected by NanoSight; the mean diameter is 150 nm;
+L55|BMSC-exo: Bone marrow-derived mesenchymal stem cell-derived exosome.
+L58|Figure 2 Bone marrow-derived mesenchymal stem cell-derived exosome and HEK293-derived exosome promoted migration and angiogenesis of mouse osteoblast progenitor cells.
+L58|A: Mouse osteoblast progenitor cells (mOPCSs) with bone marrow-derived mesenchymal stem cell (BMSC)-derived exosome (BMSC-exo) or HEK293-exo stained by crystal violet in Transwell assays.
+L58|BMSC-exo: Bone marrow-derived mesenchymal stem cell-derived exosome;
+L64|Figure 4 Fabrication and efficacy of bone marrow-derived mesenchymal stem cell-derived exosome-treated hydrogel.
+L64|B: mOPCSs with hydrogel or bone marrow-derived mesenchymal stem cell (BMSC)-derived exosome (BMSC-exo)-treated hydrogel stained by crystal violet in Transwell assays.
+L67|Figure 5 Bone marrow-derived mesenchymal stem cell-derived exosome hydrogels effectively suppressed the inflammatory response of macrophages while facilitating angiogenesis.
+L67|A: Quantitative real-time polymerase chain reaction assessment of mRNA expression of tumor necrosis factor (TNF)-α, interleukin (IL)-1β, monocyte chemoattractant protein-1, CD16, arginase-1, CD206, transforming growth factor (TGF)-β, and IL-10 in RAW264.7 cells cultured on hydrogels with or without bone marrow-derived mesenchymal stem cell (BMSC)-derived exosome (BMSC-exo) for 24 h;
+L70|Figure 6 Bone marrow-derived mesenchymal stem cell-derived exosome hydrogel promoted fracture healing and angiogenesis  in vivo .
+L70|A: Alcian blue and orange G staining of regenerated bone sections treated by hydrogels with or without bone marrow-derived mesenchymal stem cell (BMSC)-derived exosome (BMSC-exo) on week 2 and week 4 after fracture;
+L78|The interaction between angiogenic factors and bone marrow-derived MSCs (BMSCs) regulates downstream osteogenesis; for example, vascular endothelial growth factor A can stimulate platelet-derived growth factor receptors to modulate the migration and proliferation of BMSCs.

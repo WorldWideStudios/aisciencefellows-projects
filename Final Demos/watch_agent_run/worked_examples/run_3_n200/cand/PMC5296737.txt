@@ -1,0 +1,4 @@
+L8|Specifically, we study the early response of bone marrow-derived mouse macrophages and cell line J774 to infection with live and γ-irradiated (killed)  M. tuberculosis .
+L43|In conclusion, comparison of the response of bone marrow-derived primary macrophages and the macrophage-like cell line J774 has highlighted differences in the timing and strength of the response.
+L48|Bone marrow cells were flushed from the femur and tibia of 8 to 10 week old female C57BL/6 mice and differentiated into macrophages for 7 days in DMEM (Sigma) supplemented with 10% heat-inactivated fetal bovine serum (Biosera) and 20 ng/ml M-CSF (PeproTech).
+L50|Lastly, 6 ml of complete DMEM (J774), or DMEM supplemented with 10 ng/ml M-CSF (BMDMs), was added to each flask.

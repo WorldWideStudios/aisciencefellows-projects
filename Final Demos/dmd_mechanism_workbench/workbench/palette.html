@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DMD Widget Palette</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  /* palette-only chrome; individual widgets use theme.css */
+  .page-h { font-size: 22px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 4px; }
+  .page-sub { color: var(--ink-2); margin-bottom: 4px; }
+  .page-meta { color: var(--ink-3); font-size: 12px; margin-bottom: 4px; }
+  .page-meta a { color: var(--accent); text-decoration: none; }
+  .page-meta a:hover { text-decoration: underline; }
+
+  .toc { background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+    padding: 12px 16px; margin: 12px 0 20px;
+    display: flex; flex-wrap: wrap; gap: 12px 20px; }
+  .toc a { color: var(--accent); text-decoration: none;
+    font-family: "SF Mono", Menlo, monospace; font-size: 12px; }
+  .toc a.todo { color: var(--warn); }
+
+  .card { background: var(--panel); border: 1px solid var(--line);
+    border-radius: 10px; padding: 18px 20px; margin-bottom: 16px; }
+  .card-h { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; }
+  .card-h .type { font-family: "SF Mono", Menlo, monospace; font-size: 15px;
+    font-weight: 700; color: var(--ink); }
+  .card-h .badge { font-size: 10px; padding: 2px 8px; border-radius: 10px;
+    background: var(--good-soft); color: var(--good); font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.05em; }
+  .card-h .badge.todo { background: var(--warn-soft); color: var(--warn); }
+  .card-desc { color: var(--ink-2); margin-bottom: 10px; }
+  .card-hint { color: var(--ink-3); font-size: 11px; margin-bottom: 10px;
+    font-family: "SF Mono", Menlo, monospace; }
+  .card-hint b { color: var(--ink-2); font-weight: 600; font-family: inherit; }
+
+  .split { display: grid; grid-template-columns: 1fr 1.4fr; gap: 20px; margin-top: 12px; }
+  .split-h { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em;
+    color: var(--ink-3); font-weight: 600; margin-bottom: 8px; }
+
+  table.schema { width: 100%; border-collapse: collapse; font-size: 12px; }
+  table.schema td { padding: 4px 8px; vertical-align: top;
+    border-bottom: 1px solid var(--line); }
+  table.schema td:first-child { font-family: "SF Mono", Menlo, monospace;
+    font-weight: 600; width: 130px; color: var(--ink); }
+  table.schema .type { color: var(--ink-3); font-size: 11px; }
+  table.schema .req { color: var(--bad); font-size: 10px; margin-left: 4px; }
+
+  pre.example { background: #f0f2f6; border-radius: 6px; padding: 10px 12px;
+    font-size: 11px; line-height: 1.4; overflow: auto; max-height: 200px;
+    margin: 8px 0 12px; color: var(--ink-2); }
+
+  .preview { border: 1px dashed var(--line-2); border-radius: 8px;
+    padding: 14px; background: #fafbfd; }
+  .preview.tile-preview { max-width: 260px; }
+
+  .todo-list { background: var(--warn-soft); border: 1px solid #eecfa5;
+    border-radius: 10px; padding: 14px 20px; }
+  .todo-list h3 { margin: 0 0 6px; font-size: 13px; color: var(--warn); }
+  .todo-list ul { margin: 0; padding-left: 20px; }
+  .todo-list li { margin-bottom: 8px; color: var(--ink-2); font-size: 12px; }
+  .todo-list li b { font-family: "SF Mono", Menlo, monospace; color: var(--ink); }
+  .todo-list li .block { color: var(--ink-3); font-style: italic; font-size: 11px; }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <div class="page-h">DMD Widget Palette</div>
+  <div class="page-sub">Reusable primitives the mechanism dashboard renders — and that a generative-UI composer can pick from.</div>
+  <div class="page-meta">
+    Source: <code>workbench/widget_palette.js</code> · Preview only — each widget renders here in isolation with its example props.
+    &nbsp;·&nbsp; <a href="mechanism.html">mechanism dashboard</a> · <a href="status.html">substrate status</a>
+  </div>
+
+  <div class="toc" id="toc"></div>
+
+  <div id="cards"></div>
+
+  <div class="section-lbl">Missing / Planned</div>
+  <div class="todo-list" id="todo"></div>
+
+</div>
+
+<script src="widget_palette.js"></script>
+<script>
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g,
+  c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+
+function renderSchema(schema) {
+  const rows = Object.entries(schema).map(([k, v]) => `
+    <tr>
+      <td>${esc(k)}${v.required ? '<span class="req">*</span>' : ''}
+        <div class="type">${esc(v.type)}</div></td>
+      <td>${esc(v.desc || '')}</td>
+    </tr>`).join('');
+  return `<table class="schema">${rows}</table>`;
+}
+
+function renderCard(w) {
+  // A few widgets fill full width (hypothesisTable, hypothesisDetail, reasoningChain, geneHeader);
+  // tiles are boxed to a narrower preview so they don't stretch weird.
+  const isTile = ['stackedBar','donutBreakdown','hbarList'].includes(w.type);
+  const previewCls = 'preview' + (isTile ? ' tile-preview' : '');
+  return `
+    <div class="card" id="w-${w.type}">
+      <div class="card-h">
+        <span class="type">${esc(w.type)}</span>
+        <span class="badge">registered</span>
+      </div>
+      <div class="card-desc">${esc(w.desc)}</div>
+      <div class="card-hint"><b>data_hint:</b> ${esc(w.data_hint)}</div>
+      <div class="split">
+        <div>
+          <div class="split-h">Props schema</div>
+          ${renderSchema(w.props_schema)}
+          <div class="split-h" style="margin-top:14px;">Example props</div>
+          <pre class="example">${esc(JSON.stringify(w.example, null, 2))}</pre>
+        </div>
+        <div>
+          <div class="split-h">Rendered</div>
+          <div class="${previewCls}">${w.render(w.example)}</div>
+        </div>
+      </div>
+    </div>`;
+}
+
+function renderTodo(list) {
+  return `<ul>${list.map(t => `
+    <li><b>${esc(t.type)}</b> — ${esc(t.desc)}
+      <div class="block">data_hint: ${esc(t.data_hint)}</div>
+      <div class="block">blocking: ${esc(t.blocking)}</div>
+    </li>`).join('')}</ul>`;
+}
+
+function renderToc() {
+  const reg = Object.values(WIDGETS).map(w =>
+    `<a href="#w-${w.type}">${w.type}</a>`).join('');
+  const todo = WIDGETS_TODO.map(t =>
+    `<a href="#" class="todo">${t.type} <span style="font-size:10px;">(todo)</span></a>`).join('');
+  document.getElementById('toc').innerHTML = reg + todo;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  renderToc();
+  document.getElementById('cards').innerHTML =
+    Object.values(WIDGETS).map(renderCard).join('');
+  document.getElementById('todo').innerHTML = renderTodo(WIDGETS_TODO);
+});
+</script>
+</body>
+</html>

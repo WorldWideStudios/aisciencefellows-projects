@@ -1,0 +1,6 @@
+L12|Flt3 was abundantly expressed in DC precursors and bone marrow-derived DCs (BMDCs) differentiated via Flt3 ligand stimulation, whereas it was undetectable in monocyte-derived DCs or BMDCs differentiated via GM-CSF supplementation [ 25 ].
+L12|Porcine DC-pathogen interactions have been extensively studied using DCs differentiated in vitro from bone marrow cells (BMCs) using the granulocyte–macrophage colony-stimulating factor (GM-CSF) [ 28 ].
+L12|Therefore, this study aimed to develop monoclonal antibodies (mAbs) capable of identifying porcine BMDCs differentiated using the GM-CSF.
+L38|In most studies investigating DCs, monocytes or BMCs were cultured with GM-CSF, with or without IL-4, to induce DC differentiation in vitro.
+L39|In a previous study, porcine BMDCs were differentiated with GM-CSF on day 10 to distinguish between immature (MHCII low ) and mature (MHCII high ) DCs based on differential MHC II expression [ 30 ].
+L40|This study generated PD9-9 mAb against porcine BMDCs differentiated with GM-CSF using hybridoma technology.

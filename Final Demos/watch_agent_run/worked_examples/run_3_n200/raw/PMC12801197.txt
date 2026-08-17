@@ -1,0 +1,150 @@
+L1:3D  In Vitro  Models of the Bone Marrow
+L15:The bone marrow niche
+L24:components of the bone marrow niche, highlighting their coordinated
+L26:then critically examine current approaches for 3D  in vitro  bone marrow models, including scaffold-based methods, decellularized
+L35:relevance. Advances like bone marrow-on-a-chip, computational models,
+L38:chimeric antigen receptor expression. Bone marrow models have evolved
+L43:3D cultures; bone marrow; niche; tissue
+L54:mesenchymal stem cells (MSCs), bone marrow adipocytes (BMAd), fibroblasts,
+L58:uncharacterized system is known as bone marrow hematopoietic niche.  The term “niche” refers to a local
+L68:  Under physiological conditions, mature cells leave the bone marrow
+L71:in the bone marrow.  The osteoblastic niche
+L85:diseases, bone marrow niche architecture and composition are completely
+L93:bone marrow areas, to ensure stemness maintenance or promote mature
+L104:to culture medium are interleukin (IL)-3, granulocyte-macrophage colony-stimulating
+L105:factor (GM-CSF), erythropoietin (EPO), stem cell factor (SCF), IL-16,
+L115:bone marrow niche and current 3D  in vitro  models
+L120:Bone Marrow
+L122:The bone marrow niche is divided into two
+L126:1 Bone marrow
+L127:niche composition. The bone marrow niche is mainly
+L132:2 (NG2+) pericytes, bone marrow adipocytes (BMAd), and mesenchymal
+L137:innervations in the bone marrow. Once released from the endosteal
+L196:conditions, the bone marrow niche is a hypoxic tissue, with an approximate
+L198:and it decreases from the vascular to the endosteal niche.  Granulocyte colony-stimulating factor (G-CSF)
+L221:combined with computational modeling using mouse bone marrow tissues,
+L248:macrophage colony-stimulating factor (M-CSF), and play a role in bone
+L250:bone marrow CD169 +  macrophages can maintain HSC quiescence
+L256:finely tune osteoclast differentiation through M-CSF and RANKL, which
+L257:are also expressed by bone marrow-associated stromal cells.
+L258:Bone marrow-derived mesenchymal stem cells
+L262:they localize in the bone marrow niche.  In the perivascular regions, MSCs express SDF-1, Leptin receptor
+L301:The bone marrow
+L315:in the bone marrow matrix. 
+L327:types are present in the bone marrow, including COL1, COL3, COL4,
+L329:abundant collagen in the bone marrow matrix and is produced by osteoblasts
+L342:toward HSCs. Moreover, perlecan can bind GM-CSF and regulate HSC differentiation.
+L344:Bone marrow
+L351:cultures.  For bone marrow cells, HSCs
+L357:bone regions where bone marrow components are hosted. Moreover, 3D
+L359:diseases and their related bone marrow niche impairment.  Indeed, the entire bone marrow niche contributes
+L372:neoplastic cells and the bone marrow microenvironment. 
+L374:  Early bone marrow niche models were reproduced in 2D culture, where
+L384:or the bone marrow niche.  3D  in vitro  models are divided based on the methodology used
+L392:can be obtained from various sources, such as bone marrow, peripheral
+L397:blood-derived stem cells are easier to collect compared to bone marrow-derived
+L402:between sources, while proliferation capacity is higher in bone marrow-
+L404:Recent advancements in 3D  in vitro  bone marrow
+L410:3D  in vitro  models for bone marrow niche reproduction.
+L420:1 3D Bone Marrow Niche
+L426:system for 3D bone marrow niche model, and they can be natural, synthetic,
+L433:bone marrow matrix. Conversely, natural scaffolds from decellularized
+L445:maintenance, and other characteristics of scaffold-based 3D bone marrow
+L472:hydrogels with bone marrow mononuclear cells/peripheral blood stem
+L493:employed for  in vitro  bone marrow models, resulting
+L510:bone marrow cultures, as HSC stemness is maintained over time in a
+L511:coculture system of bone marrow mesenchymal stem cells and osteoblasts
+L529:scaffold is a promising system for reproducing the  in vitro  bone marrow niche. Silk fibroin produced by native  B. mori  is composed of heavy and light chains linked by
+L543:3D bone marrow niche can also be obtained using
+L561:a 3D  in vitro  coculture model of leukemic bone marrow,
+L582:Another prefabricated scaffold for the 3D  in vitro  bone marrow model is GelMA, composed of gelatin (Gel) and methacrylic
+L625:materials, such as alginate and collagens, and bone marrow cryogel
+L629:vitro  bone marrow models, as some of them are easy to assemble
+L634:do not mimic normal bone marrow structure. Conversely, these scaffolds
+L645:do not allow them to reproduce in vitro the normal bone marrow architecture.
+L653:do not assume precise locations, as in normal bone marrow structure.
+L662:the normal bone marrow architecture, in which HSCs can be seeded.
+L719:or bone marrow-derived MSCs into decellularized bone matrix scaffolds,
+L725:metastatic colonization of human bone marrow and to study pathological
+L727:the bone marrow of myeloid neoplasms, an alternate-direction perfusion
+L728:system composed by pores of 3D hydroxyapatite scaffolds and bone marrow-derived
+L744:bone marrow model example is the natural scaffold from decellularized
+L745:bovine bone marrow with conserved native 3D-architecture, including
+L754:normal spatial distribution in the bone marrow. However, the decellularization
+L778:in ossicles with bone marrow architecture, vascular structures resembling
+L781:in a bone marrow-like organoid (BMO) system, where embryoid bodies
+L791:mimicking the bone marrow niche with a well-vascularized architecture.
+L798:  Human iPSC-derived bone marrow
+L815:with VEGFA, VEGFC, FGF2, BMP4, FLT3, SCF, granulocyte colony-stimulating
+L847:and they can be disassembled. However, bone marrow architecture is
+L864:bone marrow niche’s anatomical structure. A more advanced approach
+L880:matrix can also be employed, to better mimic bone marrow extracellular
+L892:bloodstream.  Developed bone marrow organ-on-a-chip
+L912:Moreover, although more similar to the physiological bone marrow niche,
+L924:or to mimic bone marrow defects in the Shwachman–Diamond Syndrome.  A multicompartment model can be achieved using
+L930:bone marrow niche conditions can also be represented in an organ-on-chip
+L963:The bone marrow niche is a highly
+L972:properties of the bone marrow niche, providing a more physiological
+L981:3D bone marrow models into powerful tools for  in vitro  studies on mechanisms of normal and pathological hematopoiesis,
+L984:optimizing bone marrow-on-a-chip models
+L1005:matches and related graft rejection. The major challenge for 3D  in vitro  bone marrow models remains the replication of the
+L1011:bone marrow models have evolved from standard 2D
+L1022:Stem Cells and Their Niche in Bone Marrow Int.
+L1024:Xiao Y. McGuinness C. S. Doherty-Boyd W. S. Salmeron-Sanchez M. Donnelly H. Dalby M. J. Current insights into the bone marrow
+L1029:Huang Z. Iqbal Z. Zhao Z. Liu J. Alabsi A. M. Shabbir M. Mahmood A. Liang Y. Li W. Deng Z. Cellular crosstalk in the bone marrow niche J. Translational Med. 2024 22 1 1096 10.1186/s12967-024-05900-6
+L1041:recovery after bone marrow suppression Cell
+L1044:of stem and progenitor cells from the bone marrow niche requires MMP-9
+L1046:Pimenta D. B. Varela V. A. Datoguia T. S. Caraciolo V. B. Lopes G. H. Pereira W. O. The Bone Marrow Microenvironment
+L1050:blood and beyond: the growing field of bone marrow niche model development Experiment. Hematol. 2024 135 104232 10.1016/j.exphem.2024.104232
+L1053:vitro biomimetic co-culture model of bone marrow niche Heliyon 2022 8 12 e11998 10.1016/j.heliyon.2022.e11998 36478848
+L1058:adult stromal bone marrow cells: enhanced development of mineralized
+L1077:Stem Cells with Bone Marrow Niche Methods Mol.
+L1082:heterogeneity in bone marrow: insights across development, adult life
+L1118:Protrusions across the Bone Marrow Sinusoid Wall Cells 2021 10 4 722 10.3390/cells10040722 33804965
+L1119:He N. Zhang L. Cui J. Li Z. Bone marrow vascular
+L1149:A in bone marrow Stem Cells 2007 25 8 1954 1965 10.1634/stemcells.2006-0688 17478585
+L1153:Itkin T. Gur-Cohen S. Spencer J. A. Schajnovitz A. Ramasamy S. K. Kusumbe A. P. Ledergor G. Jung Y. Milo I. Poulos M. G. Kalinkovich A. Ludin A. Kollet O. Shakhar G. Butler J. M. Rafii S. Adams R. H. Scadden D. T. Lin C. P. Lapidot T. Distinct bone marrow blood vessels differentially regulate
+L1155:Cordeiro-Spinetti E. Taichman R. S. Balduino A. The bone marrow endosteal
+L1161:Winkler I. G. Barbier V. Wadley R. Zannettino A. C. Williams S. Lévesque J. P. Positioning of bone marrow hematopoietic
+L1172:and the osteoblast lineage in bone marrow hematopoietic niches Curr. Osteoporosis Rep. 2014 12 1 22 32 10.1007/s11914-014-0190-7
+L1184:Chow A. Lucas D. Hidalgo A. Méndez-Ferrer S. Hashimoto D. Scheiermann C. Battista M. Leboeuf M. Prophete C. van Rooijen N. Tanaka M. Merad M. Frenette P. S. Bone marrow CD169+
+L1194:factor/RANKL but not macrophage colony-stimulating factor: receptor
+L1196:Marino L. Charlier B. Giudice V. Remondelli P. Paladino S. Vitolo R. Dal Piaz F. Izzo B. Zeppa P. Izzo V. Filippelli A. Selleri C. Bone marrow mesenchymal stem cells as a possible ruxolitinib
+L1197:reservoir in the bone marrow niche eJHaem 2020 1 1 356 360 10.1002/jha2.6 35847746
+L1205:Nobre A. R. Risson E. Singh D. K. Di Martino J. S. Cheung J. F. Wang J. Johnson J. Russnes H. G. Bravo-Cordero J. J. Birbrair A. Naume B. Azhar M. Frenette P. S. Aguirre-Ghiso J. A. Bone marrow NG2+/Nestin+ mesenchymal
+L1212:Stone A. P. Nascimento T. F. Barrachina M. N. The bone marrow niche from the inside
+L1214:Piotrowska K. Tarnowski M. Bone Marrow Adipocytes-Role in Physiology
+L1217:Fan Y. Elkhalek M. Zhang Y. Liu L. Tian Q. Chueakula N. Ramasamy S. K. Dalan R. Habib S. J. Kusumbe A. P. Bone marrow adipocytes: key players in vascular niches,
+L1231:adhesion molecules in the homeostatic and regenerative bone marrow
+L1239:human bone marrow Br. J. Hamaetol. 1981 48 2 287 291 10.1111/j.1365-2141.1981.tb02714.x
+L1242:matrix of the bone marrow in normal hematopoiesis and leukemia Experiment. Hematol. 2020 89 13 25 10.1016/j.exphem.2020.07.010
+L1249:Raic A. Naolou T. Mohra A. Chatterjee C. Lee-Thedieck C. 3D models of the bone marrow in health and disease:
+L1254:matters: In vitro 3D bone marrow niches differentially modulate survival,
+L1261:Bone Marrow Niches: Cellular Senescence Contribution to Leukemia Induction
+L1264:matters: In vitro 3D bone marrow niches differentially modulate survival,
+L1338:using a 3D silk-based bone marrow model that generates erythroblastic
+L1380:bone marrow-like scaffold enhances T cell immunity after hematopoietic
+L1411:Torisawa Y. S. Spina C. S. Mammoto T. Mammoto A. Weaver J. C. Tat T. Collins J. J. Ingber D. E. Bone marrow-on-a-chip
+L1418:colonization of human bone marrow reveals breast cancer cell remodeling
+L1427:multicomponent bone marrow niche for the recapitulation of hematopoiesis
+L1432:Coated Acellular Matrices Prepared from Bone Marrow Stromal Cells Stem Cells Int. 2016 2016 7231567 10.1155/2016/7231567 26981135
+L1437:of a novel decellularized bone marrow scaffold as an inductive environment
+L1453:human bone marrow mesenspheres promote hematopoietic stem cell expansion Cell Rep. 2013 3 5 1714 1724 10.1016/j.celrep.2013.03.041 23623496
+L1459:bone marrow organoids from human induced pluripotent stem cells Nat. Methods 2024 21 5 868 881 10.1038/s41592-024-02172-2 38374263
+L1463:Olijnik A. A. Rodriguez-Romera A. Wong Z. C. Shen Y. Reyat J. S. Jooss N. J. Rayes J. Psaila B. Khan A. O. Generating human bone marrow organoids for disease
+L1466:human bone marrow organoid for autonomous hematopoiesis and patient-derived
+L1470:bone marrow organoids from human induced pluripotent stem cells Nat. Methods 2024 21 5 868 881 10.1038/s41592-024-02172-2 38374263
+L1475:Bone Marrow Organoids Established from Patient-Derived Xenografts
+L1485:in a 3D Bone Marrow Model for Multiple Myeloma Tissue Eng. Part C: Methods 2018 24 5 300 312 10.1089/ten.tec.2017.0467 29652626
+L1486:Ghoshal D. Petersen I. Ringquist R. Kramer L. Bhatia E. Hu T. Richard A. Park R. Corbin J. Agarwal S. Thomas A. Ramirez S. Tharayil J. Downey E. Ketchum F. Ochal A. Sonthi N. Lonial S. Kochenderfer J. N. Tran R. Zhu M. Lam W. A. Coskun A. F. Roy K. Multi-Niche Human Bone Marrow On-A-Chip for Studying the Interactions
+L1488:Bourgine P. E. Human bone marrow organoids: emerging progress but
+L1493:used to mimic bone marrow PLoS One 2020 15 12 e0243840 10.1371/journal.pone.0243840 33306749
+L1496:human bone marrow niches Biomaterials 2022 280 121245 10.1016/j.biomaterials.2021.121245 34810038
+L1497:Sharipol A. Lesch M. L. Soto C. A. Frisch B. J. Bone Marrow
+L1505:bone marrow toxicities and patient-specific pathophysiology Nat. Biomed. Eng. 2020 4 4 394 406 10.1038/s41551-019-0495-z 31988457
+L1507:human bone marrow (hBM) on-a-chip elucidates key roles of the endosteal
+L1511:B cell acute lymphoblastic leukemia bone marrow niche Sci. Adv. 2020 6 44 eaba5536 10.1126/sciadv.aba5536 33127669
+L1518:sinusoidal niche of bone marrow Sci. Rep. 2022 12 1 1439 10.1038/s41598-022-05520-4 35087109
+L1521:the Bone Marrow Microenvironment Cancers 2024 16 5 889 10.3390/cancers16050889 38473251
+L1522:Bottaro A. Nasso M. E. Stagno F. Fazio M. Allegra A. Modeling the Bone Marrow Niche in
+[113ms]

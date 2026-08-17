@@ -1,0 +1,8 @@
+L10|We found that  Enterococcus faecalis  translocated to the bone marrow following DSS treatment and induced trained immunity (TI) hallmarks in bone-marrow-derived mouse macrophages and human monocytes.
+L19|Figure 1 Gut microbiota translocation induces trained immunity in myeloid bone marrow progenitors (A and B) (A) Mice were treated or not with DSS and antibiotics (ABX) as indicated in the outline; bone marrow (BM) extracted and BM-derived macrophages (BMDMs) generated and stimulated for 24 h with the following pathogen-associated molecular patterns: LPS, CpG, or Pam3CSK4 (P3C4).
+L77|The L929 cell line (ATCC® CCL-1TM), used to produce M-CSF supernatant, was grown on 175 cm 2  cell culture flasks (Stemcell) and resuspended in Complete RPMI minus HEPES.
+L77|Supernatants were obtained by filtering L929 culture supernatant at day 15 through 0.22 μm Stericup Filter units (Merck Millipore) and were used to subsequently supplement the medium for the generation of bone marrow derived macrophages.
+L81|-/- ,  Rag1 -/- , or C57BL/6J Germ-free mice, were cultured in Complete RPMI supplemented with 30% M-CSF (obtained from L929 cell supernatants) during 5 days in sterile, but not tissue-culture treated, 10cm Petri dishes.
+L1575|The L929 cell line (ATCC� CCL-1TM), used to produce M-CSF supernatant, was grown on 175 cm [2] cell culture flasks (Stemcell) and
+L1576|Supernatants were obtained by filtering L929 culture supernatant at day 15 through
+L1585|or C57BL/6J Germ-free mice, were cultured in Complete RPMI supplemented with 30% M-CSF (obtained from L929 cell supernatants) during 5 days in sterile, but not tissue-culture treated, 10cm Petri dishes.

@@ -1,0 +1,16 @@
+## Per-variant ESM3 protein-impact scores for the Zhang cohort.
+## Source model:  esm3-open-2024-03 via Forge / biohub.ai
+## Baked at:      2026-08-11 05:05:06 · window ±128aa
+## Metric:        impact = (1 - residue/3685) * mean_pLDDT/100
+##                fraction of dystrophin truncated × structural quality of cut region
+patient_id	cohort	hgvsc	hgvsp	consequence	residue	window_start	window_end	mean_wt_plddt	wt_ptm	truncation_fraction	impact_score	uniprot	status	notes
+2	S1_novel	c.6540del	p.(Leu2181Tyrfs*8)	Frameshift	2181	2053	2309	95.63	0.819	0.4081	0.3903	P11532	ok	window ±128aa · fold 18.7s
+5	S1_novel	c.10654dup	p.(Ser3552Lysfs*6)	Frameshift	3552	3424	3680	58.25	0.243	0.0361	0.021	P11532	ok	window ±128aa · fold 4.2s
+11	S1_novel	c.2510del	p.(Asn837Ilefs*9)	Frameshift	837	709	965	96.63	0.842	0.7729	0.7468	P11532	ok	window ±128aa · fold 4.2s
+30	S1_novel	c.982A>T	p.(Lys328*)	Nonsense	328	200	456	88.37	0.517	0.911	0.8051	P11532	ok	window ±128aa · fold 4.2s
+49	S1_novel	c.7745C>G	p.(Ser2582*)	Nonsense	2582	2454	2710	94.53	0.842	0.2993	0.2829	P11532	ok	window ±128aa · fold 4.2s
+57	S1_novel	c.717dup	p.(Pro240Alafs*7)	Frameshift	240	112	368	82.63	0.567	0.9349	0.7725	P11532	ok	window ±128aa · fold 4.2s
+202	S2_reported	c.6577C>T	p.(Gln2193*)	Nonsense	2193	2065	2321	95.87	0.828	0.4049	0.3881	P11532	ok	window ±128aa · fold 4.1s
+225	S2_reported	c.7817G>A	p.(Trp2606*)	Nonsense	2606	2478	2734	95.97	0.819	0.2928	0.281	P11532	ok	window ±128aa · fold 4.2s
+258	S2_reported	c.9248G>A	p.(Trp3083*)	Nonsense	3083	2955	3211	78.56	0.437	0.1634	0.1283	P11532	ok	window ±128aa · fold 4.2s
+266	S2_reported	c.9361+1G>C		Splice-site	None	None	None	None		None	None	P11532	skipped_no_residue	consequence=splice-site; no residue parsed from HGVSp

@@ -1,0 +1,8 @@
+paper_id	species	strain	cell_source	growth_factor	conc_value	conc_unit	culture_days	base_medium	line
+PMC3003694	Mus musculus	C57BL/6	bone marrow flushed from femurs	L929-cell conditioned medium (LCCM)	30	% (v/v)	7	RPMI-1640 + 20% FBS (R20/30)	18
+PMC3574850	Mus musculus	BALB/c	bone marrow from pelvic and femoral bones	M-CSF (recombinant, R&D Systems)	10	ng/mL	7	NR for differentiation phase; complete RPMI-1640 + 10% FBS used post-sort	58
+PMC7047825	Mus musculus	C57BL/6 (also FcgammaRI-only, VG1505)	bone marrow extruded from femurs and pelvises	L-cell conditioned media	20	% (v/v)	7-10	DMEM + 10% FBS, 0.2% sodium bicarbonate, gentamycin	93
+PMC11302253	Mus musculus	C57BL/6J	bone marrow	M-CSF	NR	NR	7	complete DMEM + 10% heat-inactivated FCS	42
+PMC11417223	Mus musculus	C57BL/6NCrl	bone marrow flushed from tibias and femurs	M-CSF (recombinant, R&D Systems)	20	ng/mL	7	DMEM GlutaMax + 10% FBS	72
+PMC12234436	Mus musculus	C57BL/6J	bone marrow flushed from femur	L-929 cell-conditioned medium	30	% (v/v)	5-7	DMEM + 20% FBS	30
+PMC12234436	Mus musculus	C57BL/6J	bone marrow flushed from femur	recombinant murine M-CSF (Peprotech 315-02)	20	ng/mL	5-7	DMEM + 20% FBS	30

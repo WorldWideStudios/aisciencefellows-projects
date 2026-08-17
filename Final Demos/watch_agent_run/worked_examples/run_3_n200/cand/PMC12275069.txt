@@ -1,0 +1,13 @@
+L8|In  in vitro  culture of mouse bone marrow cells, TNFα added simultaneously with receptor activator of nuclear factor kappa-B ligand (RANKL) and macrophage colony-stimulating factor (M-CSF) from the initiation of culture significantly inhibited osteoclast formation.
+L8|By contrast, TNFα stimulation from 7 days after prior stimulation with RANKL and M-CSF significantly promoted osteoclastogenesis.
+L14|Osteoclast differentiation also requires receptor activator of nuclear factor-κB ligand (RANKL) secreted by osteoblasts in addition to macrophage colony-stimulating factor (M-CSF) [ [12] ,  [13] ,  [14] ].
+L22|After 24 h, half of the medium was replaced and supplemented with 20 ng/mL M-CSF and 100 ng/mL RANKL for osteoclast culture.
+L24|After stimulation of osteoclast differentiation using RANKL and M-CSF, the cells were rinsed once with phosphate-buffered saline (PBS) and fixed by incubation in 10 % formaldehyde for 10 min.
+L26|After 9 days of culture with M-CSF and RANKL to induce osteoclast differentiation, two distinct cell populations were separated based on differential adherence to the culture dish following pronase treatment.
+L32|TNFα induced osteoclast formation at the late culture time point in the presence of RANKL and M-CSF
+L33|1 TNFα induced osteoclast formation at the late culture time point in the presence of RANKL and M-CSF.
+L33|(A) Cultured bone marrow cells were treated with 100 ng/mL RANKL, 20 ng/mL M-CSF, and indicated doses of TNFα (1, 3, or 10 ng/mL) for 10 days.
+L33|(B) Cultured bone marrow cells were treated with 100 ng/mL RANKL and 20 ng/mL M-CSF for 10 days.
+L36|Cultured bone marrow cells were treated with 100 ng/mL RANKL and 20 ng/mL M-CSF for 9 days.
+L42|(A) Cultured bone marrow cells were treated with 100 ng/mL RANKL and 20 ng/mL M-CSF for 9 days.
+L45|In this study, we demonstrated that the addition of TNFα together with RANKL and M-CSF inhibits osteoclast formation, whereas TNFα stimulation initiated 7 days after pre-stimulation with RANKL and M-CSF induces osteoclast formation.

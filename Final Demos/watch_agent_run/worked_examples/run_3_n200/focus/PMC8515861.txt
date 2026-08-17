@@ -1,0 +1,8 @@
+L20|Cells were cultured in six-well tissue culture plates with RPMI supplemented with 10 % FCS (Fisher Scientific, USA), 50 µg ml −1  gentamycin and 20 % supernatant from GM-CSF-secreting X63Ag8 cells or 20 % supernatant from M-CSF-secreting L929 fibroblasts.
+L20|After 3 days, non-adherent cells were removed from both GM-CSF- and M-CSF-conditioned media.
+L24|Flow cytometry analyses of M-CSF MФ and GM-CSF MФ were performed after 7 days in culture.
+L34|Cells were differentiated with either M-CSF or GM-CSF for 7 days in RPMI with 10 % FBS.
+L35|The data show that LCMV infected 93.3 % of M-CSF MФ ( Fig.
+L35|MED MFI: 6950, LCMV MFI: 9600), compared to 66.1 % of the GM-CSF MФ ( Fig.
+L39|Murine bone marrow-derived MФ cultured in M-CSF or GM-CSF for 7 days were exposed to media conditions, mock infection, or LCMV infection for 1, 3, or 6 h before the supernatants were harvested.
+L48|Murine bone marrow-derived MФ were differentiated in M-CSF- or GM-CSF-enriched media for 7 days before infection.

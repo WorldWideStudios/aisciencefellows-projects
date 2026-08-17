@@ -1,0 +1,8 @@
+L1|Distinct bone marrow-derived and tissue resident macrophage-lineages proliferate at key stages during inflammation
+L8|Here we show that proliferation of both bone marrow-derived inflammatory and tissue resident macrophage lineage branches is a key feature of the inflammatory process with major implications for the mechanisms underlying recovery from inflammation.
+L19|To identify the factors governing their turnover, we first examined the importance of M-CSF, a monocytic differentiation/survival factor, which is detectable at substantial levels in the peritoneal cavity of both naïve and inflammatory-challenged mice ( Supplementary Fig.
+L27|In addition, Inf MØ numbers were reduced in all subsets following M-CSF neutralization, suggesting that M-CSF is necessary for the normal recruitment/differentiation/survival/proliferation of inflammatory MØ.
+L34|Exogenous M-CSF (Peprotec) was administered i.p. in 250 μl total volume in a solution of 0.05% BSA in PBS and control mice received this vehicle alone.
+L84|34 Wiktor-Jedrzejczak W Ratajczak MZ Ptasznik A Sell KW Ahmed-Ansari A Ostertag W CSF-1 deficiency in the op/op mouse has differential effects on macrophage populations and differentiation stages Exp Hematol 1992 20 1004 1010 1505635
+L93|### **Distinct bone marrow-derived and tissue resident macrophage** lineages proliferate at key stages during inflammation .
+L170|**Supplementary Figure S2.** _Measurement of M-CSF in naïve and intraperitoneally_

@@ -1,0 +1,6 @@
+L17|The day before sorting, cells were starved of CSF1 overnight.
+L34|(D) Primary bone marrow macrophages were treated with 50 ng/ml IL4 for 48 h and starved overnight of CSF1 using DMEM plus 10% FBS.
+L48|Cells were washed and cultured on non-tissue culture–treated plates in 5% CO 2  and 37°C in bone marrow medium (BMM) consisting of DMEM, 20% heat-inactivated FBS, 30% L-cell Supernatant as a source CSF1( Stanley and Heard, 1977 ), 10,000 IU penicillin, 10 mg/ml streptomycin, and 0.0004% 2-mercaptoethanol.
+L54|For the whole-genome screen dextran uptake assays, cells were starved overnight in CSF1-free medium (DMEM plus 10% FBS) and subsequently exposed to 300 µg/ml dextran conjugated to Dylight 594 or A555 40 kDa for 15 min in the presence (CSF1 stim), or absence (unstim) of 200 ng/ml CSF1 in DMEM plus 10% FBS preequilibrated to pH 7.4 ( Figure 1 ).
+L60|BMDMs cultured overnight in CSF-1-starvation medium (DMEM + 10% FBS) were stimulated with 200 ng/ml CSF1 in the presence of 100 or 500 µg/ml dextran and 500 µg/ml Lucifer yellow with the indicated inhibitors in HBSS.
+L72|For experiments involving CSF1 starvation, cells were stimulated with 50 ng/ml IL4 in BMM for 24 h, and then the BMM was replaced with 50 ng/ml IL4 in 10% FBS plus DMEM for another 24 h.

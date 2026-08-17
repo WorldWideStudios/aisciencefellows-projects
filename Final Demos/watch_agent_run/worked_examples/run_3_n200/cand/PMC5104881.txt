@@ -1,0 +1,50 @@
+L1|GM-CSF Grown Bone Marrow Derived Cells Are Composed of Phenotypically Different Dendritic Cells and Macrophages
+L6|Although GM-CSF generated murine bone marrow derived cells have been widely used as macrophages or dendritic cells in research, the exact characteristics of each cell population have not yet been defined.
+L6|Here we discriminated GM-CSF grown bone marrow derived macrophages (GM-BMMs) from dendritic cells (GM-BMDCs) in several criteria.
+L6|After C57BL/6J mice bone marrow cell culture for 7 days with GM-CSF supplementation, two main populations were observed in the attached cells based on MHCII and F4/80 marker expressions.
+L6|Taken together, our study shows the heterogeneicity of GM-CSF derived cell populations, and specifically characterizes GM-CSF derived macrophages compared to dendritic cells.
+L10|As one can easily suppose from its name, GM-CSF helps form hematopoietic progenitor colonies, which can differentiate into granulocytes or macrophages.
+L11|Therefore the majority of applications currently rely on the in vitro generation of macrophages from murine bone marrow (BM) cells with the appropriate haematopoietic growth factor M-CSF ( Xu et al., 2007 ).
+L11|M-CSF grown BM-derived macrophages (M-BMMs) are used commonly because of their resemblance to resident homeostatic macrophages, and M-CSF can produce relatively homogenous macrophage populations  in vitro .
+L11|In contrast, although GM-CSF grown BM-derived macrophages (GM-BMM) are also accepted as source of macrophages, ( Murray et al., 2014 ) they are contaminated with other cell types, predominantly DCs.
+L11|However, general experimental protocols produce GM-CSF grown BM-derived dendritic cells (GM-GMDCs) as well as GM-BMMs.
+L15|Isolated bone marrow cells from femurs and tibiae were cultured for 7 days at a density of 10 6 /ml in RPMI medium (Thermo, USA) supplemented with 10% FBS (Gibco, Carlsbad, California, USA), 10 units/ml penicillin, 10 μg/ml streptomycin, 2 mM L-glutamine (Gibco, USA) (hereafter termed complete medium) and 25 ng/ml murine GM-CSF (Miltenyi Biotech, Germany) at 37°C in a humidified atmosphere with 5% CO 2 .
+L15|On day 3, floating cells were discarded and fresh medium containing 25 ng/ml GM-CSF was added.
+L15|Cells were further differentiated for 4 days with GM-CSF containing complete medium.
+L23|For M-CSF grown macrophages, C57BL/6J bone marrow cells were differentiated with 20% L929 culture supernatant for 7 days and sorted for the F4/80 + CD11b +  population.
+L30|GM-CSF generates various cell populations from bone marrow cells
+L31|As GM-CSF is known to induce the expansion of various myeloid lineages, we cultured bone marrow cells in the presence of GM-CSF for 7 days to examine the exact cell populations derived from GM-CSF  in vitro  culture.
+L31|These GM-CSF grown, bone marrow cell derived DCs (GM-BMDCs) comprised up to 18% of total attached cells.
+L31|In contrast, GM-CSF grown bone marrow cell derived macrophages (GM-BMMs) were the main cells (57% of the attaching cells) of the mixed populations.
+L31|From these results, we revealed that attached cells isolated from GM-CSF grown bone marrow cell cultures were heterogenous and were relatively favored into differentiation of MHCII low F4/80 high  macrophages.
+L32|GM-CSF derived DCs and macrophages have distinct surface marker expressions
+L33|Taken together, we show that GM-CSF differentiates mixed DC and macrophage populations with distinct marker expressions in that GM-BMDC has MHCII high F4/80 low CD11c high CD8α − CD11b + CD80 + CD64 − MerTK low  phenotype and GM-BMM has MHCII low F4/80 high CD11c + CD11b low CD80 −  CD64 + MerTK +  phenotype.
+L35|Because GM-CSF can induce different signaling pathways depending on the extracellular concentration ( Hercus et al., 2009 ), we investigated dose dependent effects of GM-CSF on the ratio of DCs and macrophages differentiation in  in vitro  culture conditions.
+L35|We treated bone marrow cells with 5, 10, 25 and 100 ng/ml of GM-CSF and cultured them for 7 days.
+L35|Two populations were distinguished with treatment of 10 ng/ml of GM-CSF.
+L35|At the usual concentration (25 ng/ml) of GM-CSF, the DC:macrophage ratio increased to 1:3~1:4 as already shown in  Figs.
+L35|From this results, we can see that high dose of GM-CSF favors macrophage differentiation.
+L37|Collectively, these results demonstrated that GM-CSF derived macrophages have sufficient phagocytic ability but DCs do not.
+L39|LPS induced comparable effects on cytokine production, however PolyI:C did not, demonstrating that the effects of the Myd88 dependent pathway might be different in GM-CSF derived DCs and macrophages.
+L41|CD11b + F4/80 +  M-CSF grown bone marrow derived macrophages (M-BMMs) were also examined to compare T cell proliferation ability.
+L43|Collectively, our results indicated that GM-CSF generates mixed DC and macrophage populations in  in vitro  culture conditions, and these share some degree of similarities to their corresponding  in vivo  populations.
+L45|It was recently suggested that GM-CSF grown bone marrow derived macrophages are still acceptable as macrophage sources ( Murray et al., 2014 ), however the authors worried about the contamination with DC populations.
+L45|Consequently, we sought to distinguish amongst the heterogenous populations of GM-CSF derived cells and especially focused on characteristics of GM-BMMs compared to GM-BMDCs in this study.
+L47|(2007)  had reported that DCs derived  in vitro  with GM-CSF/IL-4 are the equivalents of induced inflammatory Tip-DCs  in vivo,  we also found that GM-BMDCs extensively produced TNFα upon LPS stimulation in this study, indicating their inflammatory DC phenotype.
+L48|Standard 25 ng/ml of GM-CSF concentration resulted in a domination of MHCII low F4/80 high  GM-BMMs among attached cells.
+L50|Although they showed sufficient data supporting the existence of two populations in GM-CSF mouse bone marrow cultures, they originally focused on the methods of  in vitro  expansion of DCs thus examined on non-adherent as well as loosely adherent cells harvested by gentle washing with PBS.
+L50|In this study, we aimed to focus on the characteristics of macrophages and showed contaminated DC population in attached GM-CSF derived bone marrow cells.
+L50|Our data will give relevant information to readers having interests in using GM-CSF derived macrophages.
+L51|Collectively, our results clarify the characteristics of GM-CSF grown, bone marrow derived murine macrophages.
+L51|This study might give useful information for researchers using bone marrow derived macrophages.
+L53|1 Population composition of GMCSF derived bone marrow cells.
+L53|On day 3, fresh medium containing GM-CSF was added.
+L53|(B) A table describing the population percentages and phenotypes of GM-BMDCs, GM-BMMs, basophils, eosinophils and monocytes in GM-CSF derived bone marrow cells.
+L55|(A) Dot plots of MHCII and F4/80 expressions on cultured bone marrow cells with varying concentrations of GM-CSF.
+L55|Bone marrow cells were differentiated with 5, 10, 25 or 100 ng/ml of GM-CSF for 7 days.
+L56|Alexa 350-tagged latex beads were incubated with differentiated GM-CSF derived bone marrow cells for 2 h, washed twice and labeled with IA/IE and F4/80 antibodies.
+L58|(A) Histograms showing CFSE-labeled CD4 +  T cells after MLR mixed with C57BL/6J bone marrow derived cells.
+L58|GM-BMDCs and GM-BMMs were sorted into MHCII high F4/80 low  and MHCII low F4/80 high  populations after 7 days of differentiation of bone marrow cells with GM-CSF.
+L63|2011 GM-CSF-induced, bone-marrow-derived dendritic cells can expand natural Tregs and induce adaptive Tregs by different mechanisms J.
+L66|2015 Distinct role of FoxO1 in M-CSF- and GM-CSF-differentiated macrophages contributes LPS-mediated IL-10: implication in hyperglycemia J.
+L73|2015 GMCSF mouse bone marrow cultures comprise a heterogeneous population of CD11c(+)MHCII(+) macrophages and dendritic cells Immunity 42 1197 1211 26084029

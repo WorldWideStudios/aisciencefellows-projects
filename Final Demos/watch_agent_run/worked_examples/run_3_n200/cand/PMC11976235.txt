@@ -1,0 +1,7 @@
+L11|Under inflammatory conditions, such as infections or tumorigenic processes, bone marrow-derived macrophages invade the inflamed tissue to restore homeostasis.
+L18|• Prepare recombinant mouse M-CSF protein by dissolving 10 μg of M-CSF powder in 1 mL PBS supplemented with 0.1% bovine serum albumin (BSA) to obtain a final solution of 10 μg/mL.
+L37|The following section describes the steps to generate bone marrow-derived macrophages (BMDMs) and determine the effect of drug treatment on their differentiation ( Figure 1 ).
+L37|Supplement the cell suspension with 40 ng/mL of M-CSF.
+L37|Replenish the media by adding 1 mL complete DMEM supplemented with 20 ng/mL M-CSF and the compound at the desired concentration.
+L38|Quality control of bone marrow-derived macrophage differentiation by multicolor flow cytometry
+L80|If bone marrow cells did not differentiate completely or they died overtime in all the conditions, including the untreated control, it may be caused by inappropriate cell culture plate or inefficient activity of the differentiating agent M-CSF.

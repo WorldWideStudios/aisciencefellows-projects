@@ -1,0 +1,6 @@
+L236|maintained with 50ng/ml M-CSF until required up to a further 4 weeks.
+L240|Prolong-cultured macrophages were maintained with only 50ng/ml M-CSF in Magec
+L242|2 mls of Magec medium supplemented with 50ng/ml M-CSF.
+L261||**1**|VEGF 20ng/ml|VEGF 20ng/ml|VEGF 20ng/ml|MCSF 50ng/ml<br>|
+L264||**4**|BMP4 10 ng/ml|BMP4 10ng/ml|M-CSF 25ng/ml||
+L304|infection in of Magec medium supplemented with 5ng/ml M-CSF.

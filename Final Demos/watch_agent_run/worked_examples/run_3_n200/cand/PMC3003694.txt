@@ -1,0 +1,25 @@
+L1|A Method for Generation of Bone Marrow-Derived Macrophages from Cryopreserved Mouse Bone Marrow Cells
+L6|The broad use of transgenic and gene-targeted mice has established bone marrow-derived macrophages (BMDM) as important mammalian host cells for investigation of the macrophages biology.
+L6|Over the last decade, extensive research has been done to determine how to freeze and store viable hematopoietic human cells; however, there is no information regarding generation of BMDM from frozen murine bone marrow (BM) cells.
+L6|Although further investigation are required to support the use of the method for generation of dendritic cells, preliminary experiments indicate that bone marrow-derived dendritic cells can also be generated from cryopreserved BM cells.
+L10|Currently, the three major choices for primary mouse macrophages are peritoneal macrophages (PM), alveolar macrophages (AM) and bone marrow-derived macrophages (BMDM).
+L10|In contrast, BMDM are fully differentiated  in vitro  from bone marrow (BM) stem cells and therefore are naïve regardless of the health conditions of the donor mice.
+L17|Differentiation of bone marrow-derived macrophages
+L18|Fresh or frozen bone marrow cells were used to generate BMDM as previously described  [8] , using L929-cell conditioned medium (LCCM) as a source of granulocyte/macrophage colony stimulating factor  [9] .
+L26|Briefly, femurs and tibias were flushed with RPMI-1640 (Gibco-BRL Life Technologies, Grand Island, NY) to release the BM cells that were cultured in 24-well-culture plates in RPMI-1640 (Gibco) supplemented with 10% heat-inactivated FCS, 100 µg/ml of penicillin, 100 µg/ml of streptomycin, 5×10 −5  M 2-mercaptoethanol (all from Sigma), 20 ng/ml murine granulocyte-macrophage colony-stimulating factor (GM-CSF, Invitrogen).
+L29|Because the DMSO concentrations vary among the protocols for freezing immortalized cell lines, we first investigated the optimal DMSO concentration to be used in a protocol to freeze bone marrow cells, which should remain viable to allow further generation of BMDM.
+L29|We further used these thawed cells to generate bone marrow derived macrophages and found that the highest recovery of differentiated BMDM was obtained when 10% DMSO was used to freeze the bone marrow cells ( Fig.
+L30|After 7 days of differentiation, the cultures were washed with ice cold PBS to remove undifferentiated cells and the bone marrow derived macrophages (BMDM) were detached from the plates and counted (black bars).
+L33|Figure 3 Numbers of frozen bone marrow cells per differentiated bone marrow-derived macrophages.
+L33|The cultures were washed with ice cold PBS to remove undifferentiated cells and the bone marrow derived macrophages (BMDM) were detached from the plates and counted.
+L39|Figure 5 Bone marrow-derived macrophage obtained from fresh or cryopreserved bone marrow cells similarly express CD80 and CD86 in response to LPS and  Legionella pneumophila .
+L41|Although the aim of our study was to evaluate generation and functions of BMDMs from cryopreserved BM cells, we also preformed preliminary studies to assess the application of the method for generation of bone marrow-derived dendritic cells (BMDCs).
+L41|We found that cryopreserved BM can effectively be differentiated to DCs in presence of GM-CSF.
+L42|Figure 6 Bone marrow-derived dendritic cells obtained from fresh or cryopreserved bone marrow cells showed similar expression of CD40, CD86 and MHC-II in response to LPS.
+L42|Bone marrow-derived dendritic cells (BMDCs) obtained from fresh or cryopreserved (frozen) bone marrow cells were either left untreated or stimulated with 1 µg/ml LPS for 24 h.
+L45|Figure 7 Bone marrow-derived macrophages obtained from fresh or frozen bone marrow cells respond similarly to infection with  Legionella pneumophila .
+L45|(A) Bone marrow-derived macrophages (BMDM) obtained from fresh (open squares) or cryopreserved (frozen; closed circles) bone marrow (BM) cells were infected with wild type  L. pneumophila  (Lp01, continuous lines) or with flagellin-deficient  L. pneumophila  ( flaA
+L47|Figure 8 Bone marrow-derived macrophage obtained from fresh or cryopreserved bone marrow cells respond similarly to the infection with  Leishmania amazonensis .
+L47|Bone marrow-derived macrophages (BMDM) obtained from fresh or cryopreserved (frozen) bone marrow cells were infected with  L. amazonensis  promastigotes constitutively expressing the GFP at an MOI of 10 parasites per cell.
+L50|Preliminary investigation preformed herein indicates that bone marrow-derived dendritic cells can be obtained from cryopreserved BM cells ( Fig.
+L119|Granulocyte/macrophage colony-stimulating factor is expressed and secreted in cultures of murine L929 cells.

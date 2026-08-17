@@ -1,0 +1,12 @@
+L1|Protocol for analyzing BCG-induced trained immunity in murine bone marrow-derived macrophages
+L5|Here, we present a protocol for analyzing BCG-induced trained immunity in murine bone marrow-derived macrophages (BMDMs).
+L20|REAGENT or RESOURCE SOURCE IDENTIFIER Chemicals, peptides, and recombinant proteins Fetal bovine serum (FBS) Gibco 16000-044 Red blood cell lysis buffer Beyotime C3702-120 mL Phosphate-buffered saline (PBS) Absin Abs962 Gentamycin Sangon Biotech A506614-0005 Dulbecco’s modified Eagle’s medium/nutrient mixture F12 Ham (DMEM/F12) VivaCell Biosciences C3130-0500 Recombinant murine M-CSF PeproTech Z02930 0.25% trypsin-EDTA NCM Biotech C100C1 Middlebrook 7H9 broth BD Difco 271310 Middlebrook oleic albumin dextrose catalase supplement (OADC) BD Difco 212351 Tween 80 Sangon Biotech A100442-0500 Glycerin Sangon Biotech A501745-0500 Lipopolysaccharide (LPS) Beyotime S1732-0.5mg Hygromycin B Sangon Biotech A600230-0001 Critical commercial assays TNF-α mouse ELISA kit Invitrogen 88-7324-88 IL-6 mouse ELISA kit Invitrogen 88-7064-88 IL-1β mouse ELISA kit Invitrogen 88-7013A-88 Other Insulin syringe Kindly Medical Instruments C20230920 10 cm cell culture-treated dish JET BIOFIL TCD010100 48-well cell culture plate YUEYIBIO 20230420 Culture square flask (30 mL) SORFA 277110 0.22 μm syringe filter JET BIOFIL FPE204030 70 μm cell strainer Falcon 352350
+L38|Prepare a suspension of 10 6  cells per mL in medium containing M-CSF (50 ng/mL) and gentamicin (20 μg/mL).
+L41|Supplement with 5 mL of cell culture medium containing M-CSF (50 ng/mL) and continue incubation.
+L47|Prepare a suspension of 3×10 5  cells per mL in medium containing M-CSF (50 ng/mL).
+L57|Prepare a BCG suspension of 3 × 10 5  CFU per mL in medium containing M-CSF (50 ng/mL) ( Figure 3 A).
+L57|The control group (Con) was added 300 μL of medium containing M-CSF (50 ng/mL).
+L60|Add 300 μL cell culture medium containing M-CSF (50 ng/mL).
+L63|Discard the culture medium, add 300 μL fresh medium containing M-CSF (50 ng/mL).
+L72|Then, a standard murine BMDM differentiation method was used to obtain naïve macrophages derived from the bone marrow ( Figure 2 ).
+L109|Preparation and culture of bone marrow-derived macrophages from mice for functional analysis STAR Protoc.

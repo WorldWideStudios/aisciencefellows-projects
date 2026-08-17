@@ -1,0 +1,10 @@
+   3 l20:mouse
+   1 l85:mouse
+   1 l74:mouse
+   1 l36:mouse
+   1 l36:balb/c
+   1 l32:mice
+   1 l20:bovine
+   1 l110:mouse
+   1 l109:mice
+   1 l10:human

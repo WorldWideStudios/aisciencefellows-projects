@@ -1,0 +1,23 @@
+L1|Dysregulated cholesterol uptake and efflux of bone marrow-derived α-SMA +  macrophages contribute to atherosclerotic plaque formation
+L12|By performing partial carotid ligation (PCL) on monocyte/macrophage lineage-tracked mice, we observed bone marrow-derived α-SMA +  macrophages in the subendothelium and atherosclerotic plaques under disturbed flow conditions.
+L12|Mechanistically, using  Acta2 -overexpressing Raw264.7 cells ( Acta2 hi  cells) and bone marrow-derived macrophages (BMDMs) from  Acta2 MKO  mice ( Acta2 MKO  BMDMs), we showed that macrophage α-SMA increased the expression of the scavenger receptor SR-A, induced Ox-LDL binding and uptake, and reduced the level of the cholesterol transporter ABCA1, potentially via the AKT pathway.
+L12|Together, our results indicate that bone marrow-derived α-SMA +  macrophages contribute to atherosclerotic plaque formation due to dysregulated cholesterol uptake and efflux, providing potential targets for the prevention and treatment of atherosclerosis.
+L18|In this study, we performed PCL on monocyte/macrophage lineage tracing mice and identified bone marrow-derived α-SMA +  macrophages in the disturbed flow-induced inflamed vascular wall.
+L18|Further analysis revealed that dysregulated cholesterol uptake and efflux via the AKT pathway in bone marrow-derived α-SMA +  macrophages contributed to the progression of atherosclerotic plaque formation.
+L30|The cytoskeleton of the bone marrow-derived macrophages (BMDMs) was visualized with rhodamine-labeled phalloidin (R415, Thermo Fisher, USA).
+L38|Bone Marrow-Derived Macrophages (BMDMs): For BMDMs, bone marrow was isolated from the tibiae and femurs of 8–12-week-old mice.
+L38|The bone marrow cells were washed several times and cultured in DMEM complete medium with 20% L929 conditioned medium (source of macrophage colony-stimulating factor, M-CSF) for 4–7 days to allow differentiation into BMDMs.
+L54|Bone marrow-derived α-SMA +  macrophages accumulate in the subendothelium under disturbed flow conditions
+L55|However, it remains unclear whether these bone marrow derived α-SMA +  macrophages infiltrate the endothelium under disturbed flow conditions.
+L56|1 Bone marrow-derived α-SMA +  macrophages accumulate in the subendothelium under disturbed flow conditions.
+L60|Our analysis indicated that bone marrow-derived macrophages in the carotid arteries expressed α-SMA, comprising 11.157% of the total vascular wall cells (Fig.
+L60|1 K), confirming that the majority of the α-SMA +  macrophages originated from bone marrow-derived macrophages.
+L61|Bone marrow-derived α-SMA +  macrophages accumulate in the atherosclerotic plaques
+L63|Building on this, we sought to investigate whether bone marrow-derived α-SMA +  macrophages are present in atherosclerotic plaques.
+L64|Together, these results demonstrate that disturbed flow promotes accumulation of bone marrow-derived α-SMA +  macrophages in atherosclerotic plaques.
+L87|6 Schematic diagram illustrating the role of bone marrow-derived α-SMA +  macrophages in atherosclerotic plaque formation.
+L88|We demonstrated that bone marrow-derived α-SMA +  macrophages accumulated in the subendothelium of the d-flow inflamed vascular wall and in atherosclerotic plaques.
+L89|First, although it is known that macrophages in plaques originate from both bone marrow-derived and resident populations [ 18 ], it remains unclear whether bone marrow-derived α-SMA +  macrophages infiltrate the endothelium.
+L89|Using monocyte/macrophage lineage-tracked mice and two atherosclerosis models, we demonstrated that bone marrow-derived α-SMA +  macrophages accumulated in both the subendothelium and atherosclerotic plaques.
+L90|We identified a new subset of bone marrow-derived α-SMA +  macrophages that do not fit the traditional M1/M2 classification.
+L94|In conclusion, our study revealed that bone marrow-derived α-SMA +  macrophages accumulate in the subendothelium and atherosclerotic plaques. α-SMA expression in macrophages promotes plaque formation by enhancing the expression of SR-A, increasing Ox-LDL uptake, and inhibiting lipid efflux via the AKT pathway.

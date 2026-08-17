@@ -1,0 +1,15 @@
+   5 l46:mice
+   2 l54:mouse
+   1 l88:mouse
+   1 l84:human
+   1 l64:mouse
+   1 l52:mouse
+   1 l50:mouse
+   1 l46:human
+   1 l36:mouse
+   1 l36:mice
+   1 l35:human
+   1 l33:mouse
+   1 l126:mouse
+   1 l126:human
+   1 l10:human

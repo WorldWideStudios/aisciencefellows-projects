@@ -1,0 +1,12 @@
+L15|A variety of cells and/or progenitors are utilized to differentiate anti-inflammatory macrophages  in vitro , including embryonic stem cells [ 14–17 ], peripheral blood mononuclear cells [ 17 ], induced pluripotent stem cells [ 18 , 19 ], and certainly bone marrow mononuclear cells [ 20–23 ] (BMNCs) stimulated with colony-stimulating factors and cytokines.
+L15|Most of the existing protocols for macrophage differentiation rely on treatment with macrophage colony-stimulating factor (Mcsf), often followed by stimulation with interleukin-4 (Il4), Il10, and Il13 to enhance anti-inflammatory properties.
+L34|Preparation: sterile gloves, cell culture dishes, DMEM, mouse/rat recombinant macrophage colony stimulating factor (Mcsf), L-ascorbic acid, and an incubator.
+L63|Because the initial induction in the first 3 days was based on Mcsf alone, the total number of cells may have decreased during this period (data not shown), and there were still many floating cells ( Figs.
+L63|However, supplementation of the cell culture medium with Il4 not only induced Mcsf-treated cells toward the M2 phenotype but also directly or indirectly stimulated cell proliferation, as the cell yield was approximately 200% ( Figs.
+L75|This study revealed that the use of Mcsf for the first 3 days and the addition of Il4 for the other two days produced CD11b + /CD206 + /F4/80 +  and  Fizz1 -overexpressing [ 20 ] mBMNCs-M2 and CD68 +  [ 25 ] and  Arg1 -overexpressing [ 26 ] rBMNCs-M2 cells from mice and rats BMNCs.
+L75|Although this strategy raises concerns for resident bone marrow-derived macrophages, it allowed us to harvest a broader population of BMNCs, including potential progenitor cells that may contribute to the differentiation of M2-like macrophages.
+L77|To investigate whether Il4 could promote the proliferation of M2-like macrophages by itself, without Mcsf, cells treated with Mcsf alone for the first 72 h were induced with Il4 alone for another two days.
+L77|Interestingly, Il4 could stimulate cell proliferation only in the presence of Mcsf in the culture medium; otherwise, cell number declined sharply, with a cell yield of approximately 10.2% by day 6.
+L77|Unlike mBMNCs-M2, rBMNCs-M2 once differentiated do not require exogenous Mcsf for survival [ 17 ].
+L157|,  Boucherit N ,  Gorvel L    et al    Bone marrow-derived macrophage production .
+L173|,  Wang SN ,  Wu Y    et al    Transcriptome profile of rat genes in bone marrow-derived macrophages at different activation statuses by RNA-sequencing .

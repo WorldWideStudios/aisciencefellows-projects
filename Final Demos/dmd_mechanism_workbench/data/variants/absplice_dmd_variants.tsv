@@ -1,0 +1,30 @@
+## AbSplice scores for the 10 patient variants.
+##
+## Source model:      AbSplice-DNA v1.0.4 (Wagner et al., Nat Genet 2023)
+##                    https://github.com/gagneurlab/absplice
+## Compute location:  off-box (this host is 1 vCPU / 1.9 GB — AbSplice needs
+##                    SpliceAI + MMSplice + GTEx tissue expression matrices).
+## Values below:      model-behavior-consistent estimates keyed off variant
+##                    category (canonical splice / near-splice / exonic).
+##                    Each row must be REPLACED with the real per-tissue
+##                    output from an AbSplice run on a bigger host — the
+##                    emitter downstream reads whatever is in this file.
+##
+## Score interpretation (Wagner 2023):
+##   > 0.20   high    (top 5% of aberrant-splicing effects)
+##   0.05-0.20 medium
+##   < 0.05   low
+##
+## Tissue columns are per-GTEx AbSplice tissue score (0-1).
+## `max_score` and `max_tissue` reflect the highest across all 49 GTEx tissues.
+variant_key	hgvsc	category	muscle_skeletal	heart_lv	brain_cortex	retina_proxy	max_score	max_tissue	notes	confidence
+S2_reported#266:c.9361+1G>C	c.9361+1G>C	canonical_splice_donor_+1	0.86	0.87	0.85	0.83	0.88	Heart_Atrial_Appendage	G>C at donor +1 abolishes U1 recognition; canonical exon 65 skipping expected	estimated
+S1_novel#2:c.6540del	c.6540del	frameshift_exonic	0.02	0.02	0.02	0.02	0.03	Muscle_Skeletal	1bp deletion mid-exon; not near a splice boundary	estimated
+S1_novel#5:c.10654dup	c.10654dup	frameshift_exonic	0.02	0.02	0.02	0.02	0.03	Muscle_Skeletal	1bp duplication in Dp71-shared region; not near a splice boundary	estimated
+S1_novel#11:c.2510del	c.2510del	frameshift_exonic	0.02	0.02	0.02	0.02	0.03	Muscle_Skeletal	1bp deletion mid-exon; not near a splice boundary	estimated
+S1_novel#30:c.982A>T	c.982A>T	exonic_nonsense_or_missense	0.02	0.02	0.02	0.02	0.04	Muscle_Skeletal	single-nucleotide change mid-exon; low cryptic-splice signal	estimated
+S1_novel#49:c.7745C>G	c.7745C>G	exonic_nonsense_or_missense	0.03	0.03	0.03	0.03	0.05	Nerve_Tibial	single-nucleotide change; moderate SRE-disruption prior	estimated
+S1_novel#57:c.717dup	c.717dup	frameshift_exonic	0.02	0.02	0.02	0.02	0.03	Muscle_Skeletal	1bp duplication in early exon; not near a splice boundary	estimated
+S2_reported#202:c.6577C>T	c.6577C>T	exonic_nonsense_or_missense	0.02	0.02	0.02	0.02	0.04	Muscle_Skeletal	CGA>TGA nonsense; not near a splice boundary	estimated
+S2_reported#225:c.7817G>A	c.7817G>A	exonic_nonsense_or_missense	0.02	0.02	0.02	0.02	0.04	Muscle_Skeletal	CGA>CAA missense; not near a splice boundary	estimated
+S2_reported#258:c.9248G>A	c.9248G>A	exonic_nonsense_or_missense	0.02	0.02	0.02	0.02	0.04	Muscle_Skeletal	nonsense G>A; not near a splice boundary	estimated

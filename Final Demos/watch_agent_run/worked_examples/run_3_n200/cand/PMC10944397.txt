@@ -1,0 +1,13 @@
+L28|Bone marrow cells were flushed from femur and tibiae and seeded in α-MEM/10% FCS containing 30 ng/ml mouse M-CSF on plastic suspension culture dishes to which stromal cells and lymphocytes do not adhere [ 21 ,  23 ].
+L28|After 2 days, the adhering cells (bone marrow macrophages (BMM)) were detached, and then, 5000 cells in 5 µl α-MEM/10% FBS were spot seeded at the center of 96-well plates and left to adhere for 10 min.
+L28|Subsequently, 200 µl medium was added containing either 30 ng/ml of M-CSF (controls) or 30 ng/ml M-CSF + 4 ng/ml of RANKL, without and with ODX or ZOL.
+L49|To further assess if ODX can directly target osteoclast progenitor cells, we used purified bone marrow macrophage (BMM) cultures, which were stimulated by M-CSF and RANKL to induce osteoclastogenesis.
+L50|4 Osteodex (ODX) and zoledronic acid (ZOL) do not affect osteoclast formation in bone marrow macrophage (BMM) cultures but enhance mature osteoclast cell death and inhibit late stages of bone resorption.
+L51|In BMM cultures stimulated by M-CSF (30 ng/ml) and RANKL (4 ng/ml) for 3 days, most of the mononucleated cells were TRAP + , and some of them had formed TRAP + MuOCL (Fig.
+L51|After 4 days, very many of the BMM stimulated by M-CSF/RANKL had formed mature TRAP + MuOCL (Fig.
+L51|Treatment of the M-CSF/RANKL-stimulated BMM with ODX (2 × 10 −7  M) did not affect the appearance of mononucleated TRAP +  cells or mature TRAP + MuOCL at day 3 or 4 (Fig.
+L51|At day 4, the numbers of mature TRAP + MuOCL were fewer in ZOL-treated cultures than in M-CSF/RANKL-stimulated BMM with or without ODX (Fig.
+L52|To investigate if ODX can inhibit bone resorption when BMM cells were cultured on bone slices, we incubated BMM on bovine bone slices for 14 days in the presence of M-CSF/RANKL with or without ODX or ZOL.
+L54|At day 5, ODX at 1 × 10 −7  and 2 × 10 −7  M clearly had enhanced the number of dead osteoclasts compared to M-CSF/RANKL without bisphosphonates, a difference which was more modest at 1 × 10 −8  and absent at 1 × 10 −9  M (Fig.
+L66|To investigate if ODX inhibited osteoclast formation in the cell cultures by interfering with osteoclast differentiation or by enhancing mature osteoclast cell death, we next purified macrophages from bone marrow (BMM) and used them as osteoclast progenitor cells [ 23 ,  33 ].
+L66|Similar to the findings in bone marrow cell cultures, ODX robustly decreased the number of osteoclasts in the BMM cultures as demonstrated in TRAP-stained cultures and by staining of the characteristic actin ring in mature osteoclasts.

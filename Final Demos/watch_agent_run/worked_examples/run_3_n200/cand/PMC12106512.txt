@@ -1,0 +1,9 @@
+L1|Diabetic wound healing via a co-delivery system for bone marrow derived stem cells and euphorbia hirta extract: an in vitro and in vivo study
+L7|In the current study, a nanofibrous scaffold was developed for the co-delivery of bone marrow-derived stem cells and Euphorbia hirta extract into the diabetic wound beds.
+L7|A wound healing study showed that scaffolds loaded with both bone marrow-derived stem cells and euphorbia hirta extract had the highest wound healing activity, as shown by significantly higher wound closure percentage, collagen deposition, and epithelial thickness.
+L10|This study concentrates on devising a sophisticated co-delivery system that employs electrospun PCL/collagen scaffolds to concurrently incorporate bone marrow-derived stem cells (BMSCs) and Euphorbia hirta extract, with the aim of enhancing diabetic wound healing.
+L18|Subsequently, L929 cells (Pasteur Institute, Tehran, Iran) were seeded onto the scaffolds at a density of 10,000 cells/cm 2  and cultured for a duration of 8 days.
+L20|L929 cells were seeded on the ExtractPCLCOL and PCLCOL scaffolds at 40,000 cells/cm 2  density in 96-well plates and cultured for 48 hours.
+L57|2 Alamar blue assay with L929 cells cultured on ExtractPCLCOL and PCLCOL scaffolds under normal ( A ) and oxidative stress ( B ) conditions, * shows  p -value < 0.05.
+L72|5 In vitro wound closure study with L929 cells cultured with the extract of ExtractPCLCOL and PCLCOL scaffolds, * shows  p -value < 0.05.
+L73|5 ) showed that L929 cells cultured with the extract of ExtractPCLCOL scaffolds had a significantly higher percentage of wound closure compared with the cells cultured with PCLCOL scaffolds extract or the control group.

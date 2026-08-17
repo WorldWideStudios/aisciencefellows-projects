@@ -1,0 +1,16 @@
+   4 l13:mice
+   3 l18:mouse
+   3 l14:mice
+   2 l16:mouse
+   1 l7:mice
+   1 l53:mice
+   1 l49:mouse
+   1 l49:mice
+   1 l41:mice
+   1 l30:mouse
+   1 l28:mouse
+   1 l28:mice
+   1 l18:rat
+   1 l16:mice
+   1 l12:mice
+   1 l1:mice

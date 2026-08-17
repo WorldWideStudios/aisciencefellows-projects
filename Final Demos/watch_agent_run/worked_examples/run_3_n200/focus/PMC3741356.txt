@@ -1,0 +1,8 @@
+L15|After 4 days of EB culture, EBs are transferred to regular tissue culture plates and differentiated in X-VIVO™ 15 media, supplemented with M-CSF and IL-3.
+L15|Non-adherent PSC-MC can be harvested from the supernatant of cultures and plated in X-VIVO™ 15 media+M-CSF without serum, or in RPMI media +10% serum+M-CSF, to generate PSC-MDM.
+L17|Harvested PSC-MC were cultured in M-CSF for 5–7 days to allow the differentiation into PSC-MDM.
+L27|To test whether PSC-MC can differentiate into MDM similar to b-MC, MCs were harvested and differentiated for 7 days in the presence of M-CSF, and their morphology and phenotype were assessed ( Figure 4 ).
+L69|Culture medium consisted of X-VIVO TM 15 (Lonza), supplemented with 100 ng/mL M-CSF (Invitrogen), 25 ng/mL IL-3 (R&D), 2 mM glutamax (Invitrogen), 100 U/mL penicillin and 100 µg/mL streptomycin (Invitrogen), and 0.055 mM β-mercaptoethanol (Invitrogen).
+L73|1.7×10 4  units/mL) recombinant human M-CSF (R&D Systems), as well as, 2 mM glutamine (PAA), 100 U/mL penicillin and 100 µg/mL streptomycin (PAA).
+L91|The inoculum was removed and replaced with RPMI +10% FCS +100 ng/mL M-CSF.
+L104|B) PSC-MDM were generated xenofree by culturing PSC-MC for 7 days in X-VIVO TM 15 supplemented with M-CSF.

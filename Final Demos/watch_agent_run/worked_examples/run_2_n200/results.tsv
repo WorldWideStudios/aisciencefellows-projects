@@ -1,0 +1,95 @@
+paper_id	species	strain	cell_source	growth_factor	conc_value	conc_unit	culture_days	base_medium	line
+PMC10518780	mouse	NA	bone marrow monocytes (co-culture with lung ECs + ILC2s)	GM-CSF (produced by co-cultured lung ILC2s)	NA	NA	NA	NA	L14
+PMC10689348	mouse	NA	bone marrow (femora)	M-CSF	2	ng/mL	6-10	DMEM + 10% FBS	L37
+PMC10712694	mouse	C57BL/6	bone marrow	M-CSF	30	ng/mL	4	alpha-MEM + 10% FBS	L24
+PMC10844594	mouse	C57BL/6	bone marrow (hips/hind limbs)	M-CSF	20	ng/mL	7	IMDM + 20% FBS	L66
+PMC10906463	mouse	C57BL/6	bone marrow	M-CSF	1	ng/mL	6	DMEM high glucose + 10% FBS	L68
+PMC10944397	mouse	C57BL/6	bone marrow (femur/tibiae)	M-CSF	30	ng/mL	2	alpha-MEM + 10% FCS	L28
+PMC11008274	mouse	C57BL/6	bone marrow (tibia/femur)	L929 conditioned medium	10	%	7	DMEM + 10% FBS	L54
+PMC11033405	mouse	C57BL/6	bone marrow	M-CSF	25	ng/mL	7	DMEM + 10% FCS	L31
+PMC11070510	mouse	BALB/c	bone marrow	GM-CSF + M-CSF	40; 20	ng/mL	10	RPMI-1640 + 10% FBS	L22
+PMC11220744	mouse	C57BL/6NCrl	bone marrow	L cell conditioned medium	30	%	7	RPMI-1640 + 10% Nu-Serum IV	L19
+PMC11245975	mouse	C57BL/6J	bone marrow	CSF-1	20	ng/mL	7	DMEM + 5% FCS	L22
+PMC11253027	mouse	C57BL/6 background (ASIC2-/-, betaENaC m/m)	bone marrow monocytes (MACS-isolated)	CSF1	20	ng/mL	7	Opti-MEM + 10% HI-FBS	L38
+PMC11297156	mouse	C57BL/6J	bone marrow (femur/tibia)	M-CSF	25	ng/mL	10	DMEM + 10% FBS	L81
+PMC11302253	mouse	C57BL/6J	bone marrow	M-CSF	NA	NA	7	DMEM + 10% FCS	L42
+PMC11326603	mouse	C57BL/6	bone marrow (femora/tibiae)	L929 conditioned medium	30	%	7	RPMI-1640 + 10% FBS	L70
+PMC11352128	mouse	C57BL/6	bone marrow	M-CSF	1	ug/mL	5	medium + 10% FBS, 1% Pen/Strep	L19
+PMC11381776	mouse	BALB/c	bone marrow (femur/tibia)	M-CSF	50	ng/mL	NA	DMEM/F12 + 10% FBS	L38
+PMC11395440	mouse	C57BL/6J x sv129	bone marrow	L929 cell culture supernatant	NA	NA	10	DMEM + 10% FBS	L62
+PMC11417223	mouse	C57BL/6N	bone marrow (femurs/tibia)	M-CSF	20	ng/mL	7	DMEM GlutaMax + 10% FBS	L72
+PMC11492788	mouse	C57BL/6	bone marrow	M-CSF	5; 10	ng/mL	8	DMEM + 10% FBS	L35
+PMC11507697	mouse	Hif1a-fl/fl LysM-Cre (Hif1a-/- and Hif1a+/+)	bone marrow (femur/tibia)	M-CSF	40	ng/mL	7	RPMI-1640 + 10% FBS	L46
+PMC11577564	mouse	C57BL/6	bone marrow	L929 conditioned medium	30	%	7	RPMI-1640 + 10% FBS	L20
+PMC11656472	mouse	C57BL/6 (Cas9-EGFP)	bone marrow	CSF1	NA	NA	NA	NA	L48
+PMC11734715	mouse	C57BL/6	bone marrow	M-CSF	20	ng/mL	NA	DMEM + 10% HI-FBS	L67
+PMC11770371	mouse	NA	bone marrow (femurs)	NA	NA	NA	6	DMEM + 10% FBS	L56
+PMC11804269	mouse	C57BL/6J	bone marrow (femur/tibia)	GM-CSF	20	ng/mL	7	DMEM high-glucose + 10% FBS	L36
+PMC11804269	mouse	C57BL/6J	bone marrow (femur/tibia)	M-CSF	50	ng/mL	7	DMEM high-glucose + 10% FBS	L37
+PMC11818227	mouse	BALB/c	bone marrow (femurs/tibias)	L929-conditioned medium	20	%	7	DMEM/F12 + 10% FBS	L49
+PMC11832192	mouse	C57BL/6J	bone marrow	L929 supernatant (M-CSF)	30	%	5	RPMI complete	L81
+PMC11955436	mouse	C57BL/6J	bone marrow (tibiae/femurs)	L929 conditioned medium	20	%	4-7	DMEM complete	L38
+PMC11964487	mouse	C57BL/6J	bone marrow mononuclear cells	M-CSF (72 h) then M-CSF + IL-4 (48 h), with L-ascorbic acid	NA	NA	5	DMEM	L17
+PMC11971270	mouse	Hif1a-/- (LysM-Cre) and Hif1a+/+	bone marrow (femur/tibia)	M-CSF	40	ng/mL	7	RPMI-1640 + 10% FBS	L66
+PMC11976235	mouse	C57BL/6NCrl	bone marrow (femur/tibia)	M-CSF	40; 20	ng/mL	7	complete DMEM (10% FBS, 1% P/S, 1% HEPES)	L37
+PMC11988637	mouse	NA	bone marrow	M-CSF	30	ng/mL	NA	alpha-MEM + 10% FBS	L39
+PMC12105080	mouse	BALB/c	bone marrow	GM-CSF	NA	NA	NA	NA	L29
+PMC12159446	mouse	C57BL/6	bone marrow (long-term expanded M-CSF-dependent lines)	M-CSF	100	ng/mL	NA	NA	L74
+PMC12191351	mouse	C57BL/6	bone marrow (tibias/femurs)	M-CSF	20	ng/mL	2	DMEM + 10% FBS + 50 uM 2-ME	L19
+PMC12234436	mouse	C57BL/6J	bone marrow	L-929 conditioned medium	30	%	5-7	DMEM + 20% FBS	L30
+PMC12234436	mouse	C57BL/6J	bone marrow	M-CSF	20	ng/mL	5-7	DMEM + 20% FBS	L30
+PMC12289490	mouse	C57BL/6	bone marrow (femurs/tibias)	M-CSF	10	ng/mL	7	DMEM + 10% FBS	L30
+PMC12320229	mouse	C57BL/6J	bone marrow (femurs/tibias)	M-CSF	20	ng/mL	7	DMEM + 10% FBS	L21
+PMC12368546	mouse	C57BL/6	bone marrow	M-CSF	20	ng/mL	7	high-glucose DMEM + 10% FBS	L81
+PMC12462494	mouse	C57BL/6	bone marrow (femurs/tibias)	L929 cell-conditioned medium	30	%	7	RPMI-1640 + 10% FBS	L114
+PMC12462494	mouse	C57BL/6	bone marrow (femurs/tibias)	M-CSF	20	ng/mL	7	RPMI-1640 + 10% FBS	L114
+PMC12478242	mouse	C57BL/6	bone marrow (tibia/femur)	M-CSF	30	ng/mL	6-7	DMEM + 10% FBS	L33
+PMC12514155	mouse	BALB/c	bone marrow (femurs/tibias)	M-CSF	20	ng/mL	5-7	RPMI-1640 + 10% FBS	L23
+PMC12597883	mouse	C57BL/6J	bone marrow (femur/tibia)	M-CSF	50	ng/mL	6	RPMI-1640 + 10% FBS	L68
+PMC12851398	mouse	NA	bone marrow	GM-CSF	0.5	ug/mL	7	Hibernate media	L28
+PMC12851398	mouse	NA	bone marrow	M-CSF	0.5	ug/mL	7	Hibernate media	L28
+PMC12851398	mouse	NA	bone marrow	M-CSF + IL-4 + IL-10 (in 1:1 glioma tumor-conditioned media)	0.5	ug/mL	7	Hibernate media + 10% FBS (1:1 with TCM)	L28
+PMC2134957	mouse	129SvEvTac	bone marrow (femurs/humeri)	GM-CSF	10	ng/mL	6	DMEM + 10% FBS	L50
+PMC2186468	mouse	NA	bone marrow	L cell-conditioned medium	NA	NA	NA	NA	L3
+PMC3003694	mouse	C57BL/6	bone marrow (femurs)	L929-cell conditioned medium (LCCM)	30	%	7	RPMI-1640 + 20% FBS	L18
+PMC3424254	mouse	BALB/c	bone marrow (femurs/tibias)	M-CSF	80	ng/mL	7	RPMI-1640 + 10% FCS	L24
+PMC3511392	mouse	C57BL/6N	bone marrow	M-CSF	6	ng/mL	14	RPMI-1640 + 5% FCS	L23
+PMC3574850	mouse	BALB/c	bone marrow (pelvic/femoral)	M-CSF	10	ng/mL	7	complete RPMI-1640 + 10% FBS	L58
+PMC3743904	mouse	BALB/c	bone marrow (femurs/tibias)	L-cell conditioned medium	20	%	NA	supplemented RPMI-1640	L253
+PMC3750618	mouse	C57BL/6	bone marrow (femur/tibia)	L-929 conditioned medium	20	%	7	RPMI-1640 + 10% FBS	L21
+PMC3790761	mouse	C57BL/6N	bone marrow	GM-CSF-conditioned medium (CHO)	10	%	10	RPMI-1640 + 10% FBS + 50 uM 2-ME	L15
+PMC4061056	mouse	BALB/c	bone marrow	L929-conditioned medium	30	%	6	complete RPMI-1640 or advanced DMEM + 5% FBS	L20
+PMC4121081	mouse	C57BL/6	bone marrow	L929 cell conditioned medium	20	%	6-7	complete RPMI-1640	L26
+PMC4354151	mouse	NA	bone marrow (tibia/femurs)	L929 conditioned medium	15	%	7	RPMI-1640 + 10% FBS	L53
+PMC4620243	mouse	A/J and B10.A	bone marrow	GM-CSF	20	ng/mL	7	RPMI-1640 + 10% FBS	L21
+PMC4620243	mouse	A/J and B10.A	bone marrow	L929 cell-conditioned medium	30	%	7	RPMI-1640 + 10% FBS	L21
+PMC4640705	mouse	BALB/cByJ	bone marrow (femora/tibiae)	L929 conditioned medium + M-CSF	30; 10	%; ng/mL	6	RPMI-1640 + 10% FBS	L17
+PMC4834433	mouse	BALB/c, C57BL/6, DBA/2	bone marrow	L929 cell supernatant	30	%	4	RPMI-1640 + 10% FBS	L18
+PMC5062347	mouse	C57BL/6	bone marrow (femur/tibia)	M-CSF	100	ng/mL	10	RPMI-1640 + 20% FBS	L47
+PMC5104881	mouse	C57BL/6J	bone marrow (femurs/tibiae)	GM-CSF	25	ng/mL	7	RPMI + 10% FBS	L15
+PMC5296737	mouse	C57BL/6	bone marrow (femur/tibia)	M-CSF	20	ng/mL	7	DMEM + 10% HI-FBS	L48
+PMC5344453	mouse	C57BL/6J	bone marrow (femurs/tibia)	L-929 cell-conditioned medium	10	%	6	DMEM + GlutaMAX + 10% HI-FBS	L28
+PMC5344453	mouse	C57BL/6J	bone marrow (femurs/tibia)	rmM-CSF	20	ng/mL	6	DMEM + GlutaMAX + 10% HI-FBS	L28
+PMC6279884	mouse	C57BL/6	bone marrow (tibia/femur)	none (20% FBS only, no exogenous CSF)	NA	NA	14	RPMI-1640 + 20% FBS	L12
+PMC6579556	mouse	C57BL/6	bone marrow (femurs/tibias)	M-CSF supernatant (3T3-MCSF)	10	%	NA	DMEM + 10% FBS	L15
+PMC7047825	mouse	C57BL/6	bone marrow	L-cell conditioned medium	NA	NA	7	NA	L15
+PMC7119896	mouse	C57BL/6 and A/J	bone marrow	NA	NA	NA	10	NA	L6
+PMC7284309	mouse	C57BL/6J	bone marrow	L929 conditioned medium (LCM)	10	%	7	DMEM/F12 + 10% FBS	L52
+PMC7284309	mouse	C57BL/6J	bone marrow	M-CSF (+ GM-CSF on day 6)	25; 50	ng/mL	7	DMEM/F12 + 5% FBS	L53
+PMC7378060	mouse	C57BL/6	bone marrow	rhM-CSF	100	ng/mL	NA	NA	L22
+PMC7591151	mouse	C57BL/6J	bone marrow	L929 conditioned media	30	%	NA	DMEM (50%) + 20% FBS	L170
+PMC7797923	mouse	C57BL/6J	bone marrow	M-CSF (CSF-1)	1	ng/mL	7	DMEM high glucose + 10% FBS	L20
+PMC8034741	mouse	C57BL/6	bone marrow (femurs/tibia)	GM-CSF HEK293T supernatant (supGM-CSF)	5-10	%	7-14	complete DMEM + 10% FCS	L20
+PMC8034741	mouse	C57BL/6	bone marrow (femurs/tibia)	M-CSF from L929 cells	10	%	7-14	complete DMEM + 10% FCS	L20
+PMC8034741	mouse	C57BL/6	bone marrow (femurs/tibia)	recombinant mouse GM-CSF	10-25	ng/mL	7-14	complete DMEM + 10% FCS	L20
+PMC8091624	mouse	C57BL/6J	bone marrow (femurs/tibiae)	L929 conditioned media	20	%	7	IMDM + 10% FBS	L55
+PMC8091624	mouse	C57BL/6J	bone marrow (femurs/tibiae)	M-CSF	10	ng/mL	7	IMDM + 10% FBS	L55
+PMC8091624	mouse	C57BL/6J	bone marrow (femurs/tibiae)	M-CSF + MIF	10; 10	ng/mL	7	IMDM + 10% FBS	L55
+PMC8515861	mouse	C57BL/6	bone marrow	GM-CSF-secreting X63Ag8 supernatant	20	%	7	RPMI + 10% FBS	L20
+PMC8515861	mouse	C57BL/6	bone marrow	M-CSF-secreting L929 supernatant	20	%	7	RPMI + 10% FBS	L20
+PMC8669096	mouse	C57BL/6J	bone marrow	L929 conditioned medium	30	%	7	RPMI-1640 complete (70%)	L41
+PMC8699930	mouse	C57BL/6 (ER-Hoxb8-immortalized BM progenitors)	bone marrow	M-CSF	10	ng/mL	5	RPMI-1640 + 10% FCS + 30 uM 2-ME	L34
+PMC9299442	mouse	C57BL/6J	bone marrow (femurs)	GM-CSF	20	ng/mL	7	DMEM + 10% FBS	L28
+PMC9299442	mouse	C57BL/6J	bone marrow (femurs)	M-CSF	50	ng/mL	7	DMEM + 10% FBS	L28
+PMC9421540	mouse	C57BL/6J	bone marrow	M-CSF	20	ng/mL	7	DMEM (4.5 g/L glucose) + 10% FCS	L92
+PMC9498385	mouse	C57BL/6J	bone marrow (femur/tibia)	L929 conditioned medium	30	%	10	RPMI-1640 complete (70%)	L17

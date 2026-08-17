@@ -1,0 +1,13 @@
+L1|CD14-Dependent Monocyte Isolation Enhances Phagocytosis of  Listeria monocytogenes  by Proinflammatory, GM-CSF-Derived Macrophages
+L13|Human primary monocytes were isolated by either positive or negative immunomagnetic selection and differentiated in the presence of granulocyte macrophage colony-stimulating factor (GM-CSF) or macrophage colony-stimulating factor (M-CSF) into pro- or anti-inflammatory macrophages, respectively.
+L13|Regardless of the isolation method, GM-CSF-derived macrophages (GM-Mφ) stained positive for CD206 and M-CSF-derived macrophages (M-Mφ) for CD163.
+L17|In vivo , macrophage differentiation is driven by GM- and M-CSF  [7] ,  [8] .
+L17|During infections, GM-CSF levels are increased stimulating the generation and release of monocyte/macrophage precursors in the bone marrow and skewing the macrophage population towards a pro-inflammatory phenotype  [8] ,  [12] .
+L18|Pro- and anti-inflammatory macrophage populations can be differentiated  ex vivo  from human blood monocytes stimulated by either GM-CSF or M-CSF  [13] – [16] .
+L18|GM-CSF monocyte-derived macrophages (GM-Mφ) or M-CSF monocyte-derived macrophages (M-Mφ) have distinct morphology, pathogen susceptibility, and effector functions  [8] ,  [9] ,  [15] – [17] , which phenotypically correspond to M1 and M2 macrophages, respectively.
+L29|For differentiation, 50 ng ml −1  recombinant M-CSF (R&D Systems, Germany) or GM-CSF (Leukine®, Genzyme Corporation, UK) were added to the dishes.
+L50|Human macrophages were generated from primary human monocytes following positive or negative immunomagnetic selection and differentiated for 7 days in the presence of either GM-CSF (GM-Mφ) or M-CSF (M-Mφ).
+L52|Figure 2 Surface expression of CD14, CD163 and CD206 on untreated THP-1 cells (mock) or after differentiation into macrophage-like cells by stimulation with PMA alone (PMA) or in combination with 50 ng ml −1  M-CSF (M+PMA) or GM-CSF (GM+PMA).
+L79|Also, CD14 has been shown to interact with complement receptor 3 to mediate phagocytosis of  Borrelia burgdorferi  by murine bone marrow-derived macrophages in a process independent of TLR2  [43] .
+L80|GM- and M-CSF are important mediators of macrophage differentiation.
+L80|GM-CSF is abundantly expressed at sites of inflammation resulting in recruitment of circulating monocytes and their differentiation into pro-inflammatory Mφ.

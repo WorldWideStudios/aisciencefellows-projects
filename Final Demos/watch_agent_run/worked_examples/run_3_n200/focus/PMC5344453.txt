@@ -1,0 +1,6 @@
+L28|Progenitor cells were isolated from femurs and tibia, and cultured in Dulbecco’s modified Eagle’s Medium (DMEM) + GlutaMAX (Gibco) containing 10% heat-inactivated fetal bovine serum (FBS), 1 mM sodium pyruvate (Corning), 20 ng/ml rmM-CSF (Peprotech), and penicillin/streptomycin (pen/strep) (Thermo Fisher Scientific) in 75-cm 2  flasks.
+L28|Adherent cells were collected after 4 days and replated in 24 or 6-well plates in fresh medium containing rmM-CSF.
+L28|For differentiation with L-929 cell-conditioned medium, rmM-CSF was replaced with 10% conditioned medium in BMDM growth medium.
+L31|Plates were centrifuged for 90 min at 1,500 x  g , then 3 ml of Mac-Pro medium (RPMI + GlutaMAX, 10% FBS, pen/strep, 20 ng/ml murine granulocyte-macrophage colony-stimulating factor [GM-CSF, Peprotech], 30 μM beta-mercaptoethanol, and 1 μM beta-estradiol [Sigma]) were added to each well and the plate was incubated at 37°C in 5% CO 2 .
+L33|The cells were then resuspended in Mac-Diff medium (RPMI + GlutaMax, 10% FBS, and 20 ng/ml rmM-CSF without beta-estradiol), seeded in 75-cm 2  flasks, and cultured for 6 days at 37°C in 5% CO 2 .
+L49|At 5 days post-infection, large  Coxiella -containing vacuoles were evident in macrophages treated with rmM-CSF, but not L-929 cell-conditioned medium ( S1 Fig ).

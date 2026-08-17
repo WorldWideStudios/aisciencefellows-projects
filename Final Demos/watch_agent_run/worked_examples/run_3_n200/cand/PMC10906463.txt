@@ -1,0 +1,5 @@
+L32|To examine how BMP signaling modulation affects myeloid memory, trained immunity in bone marrow–derived macrophages (BMDM) was examined.
+L32|B6 mice were treated with β - glucan 7 days prior to bone marrow collection and plating to differentiate into BMDM ( Figure 5A ).
+L66|After 7 days, mice were injected with B6 MMTV-PyMT Bone clone cells for mammary fat pad and intratibial tumor studies, injected i.p. with 35 μg LPS (Invivogen, tlr1-eblps) in 100 μL PBS for 24 hours before sacrifice, or mice were sacrificed for isolation of BMDM.
+L68|Bone marrow was then resuspended in bone marrow culture medium containing DMEM high glucose with sodium pyruvate medium, 10% FBS, 1% Triple Antibiotics (Thermo Fisher Scientific), and 1 ng/mL mouse M-CSF1 with carrier (R&D, 416-ML-010).
+L280|Bone marrow–derived macrophages (BMM): isolation and applications CSH Protoc 2008 2008 pdb.prot5080 21356739
