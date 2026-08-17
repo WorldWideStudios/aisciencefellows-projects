@@ -1,0 +1,17 @@
+   4 l20:mice
+   2 l71:mice
+   2 l16:mice
+   1 l97:mouse
+   1 l96:mouse
+   1 l94:human
+   1 l70:mice
+   1 l7:mice
+   1 l6:human
+   1 l44:mice
+   1 l38:mouse
+   1 l34:mice
+   1 l25:mice
+   1 l22:mouse
+   1 l22:mice
+   1 l20:c57bl/6
+   1 l110:mouse

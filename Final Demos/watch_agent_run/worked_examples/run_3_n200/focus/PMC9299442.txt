@@ -1,0 +1,2 @@
+L28|The cell suspensions were passed through 100 μm cell strainer, collected by centrifugation at 300 g for 10 minutes, and resuspended in DMEM containing 10% FBS, 100 U/ml penicillin, 100 μg/ml streptomycin, either with 50 ng/ml M-CSF or 20 ng/ml GM-CSF.
+L28|Cells (0.5×10 6  per ml for M-CSF and 1×10 6  per ml for GM-CSF) were seeded on TC or noTC dishes respectively and cultured at 37°C with 5% CO2 for 7 days without changing the media throughout the maturation process.

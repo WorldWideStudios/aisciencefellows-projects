@@ -1,0 +1,9 @@
+L27|L-929 cells (ATCC CCL-1) were cultured in DMEM +10% heat-inactivated FBS.
+L30|During the third passage, the L-929 culture was allowed to reach >80% confluency, and 2 days after achieving 80% density, the cell culture supernatant was collected and frozen at −20°C for later use as conditioned media for murine BMDM differentiation.
+L30|Murine progenitors were cultured on 100 × 15 mm 2  plastic Petri dishes for 5–7 days in DMEM supplemented with 30% L-929 cell-conditioned medium and 20% FBS.
+L30|Alternative differentiation was carried out with 20 ng/mL recombinant murine M-CSF (Peprotech, #315–02) in DMEM +20% FBS.
+L31|To generate  P. leucopus  M-CSF, transduced HEK293T cells were passaged to approximately 50% confluence in the presence of 1 µg/mL puromycin and allowed to reach 80% confluency.
+L31|Bone marrow from  P. leucopus  was differentiated in DMEM supplemented with 30% HEK293T M-CSF  cell supernatant and 20% heat-inactivated FBS in 100 × 15 mm 2  sterile dishes or in 6-well plates.
+L50|Amino acid sequence identity between  M. musculus  and  P. leucopus  M-CSF is quite high (81.9% Identity) ( Fig.
+L50|P. leucopus  bone marrow was incubated with media enriched with the supernatant derived from  P. leucopus  M-CSF-expressing HEK293T cells (HEK293T M-CSF ) over 6 days.
+L51|( A )  P. leucopus Csf1  shares substantial amino acid identity (81.9%) with  M. musculus  M-CSF.

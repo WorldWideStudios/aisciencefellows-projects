@@ -1,0 +1,4 @@
+L14|Phagocytosis of early or late  Plasmodium falciparum  gametocytes was evaluated through methanol fixed cytospin preparations of immortalized mouse C57Bl/6 bone marrow-derived macrophages treated for 2 h with  P. falciparum  and stained with Giemsa, and it was confirmed through a standardized bioluminescent method using the transgenic  P. falciparum  3D7elo1-pfs16-CBG99 strain.
+L14|Activation was evaluated by measuring nitric oxide or cytokine levels in the supernatants of immortalized mouse C57Bl/6 bone marrow-derived macrophages treated with early or late gametocytes.
+L16|The results showed that murine bone marrow-derived macrophages can phagocytose both early and late gametocytes, but only the latter were able to induce the production of inflammatory mediators, specifically nitric oxide and the cytokines tumour necrosis factor and macrophage inflammatory protein 2.
+L20|Immortalized mouse C57Bl/6 bone marrow-derived macrophages;

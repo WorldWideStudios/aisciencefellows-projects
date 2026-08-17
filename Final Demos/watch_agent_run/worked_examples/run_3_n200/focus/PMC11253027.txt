@@ -1,0 +1,4 @@
+L38|For differentiation to macrophages, 1 × 10 6  freshly isolated monocytes were plated on T75 flasks (Fisher #FB012937) in Opti‐MEM (Gibco, Cat # 31985–070) plus 10% heat inactivated FBS (30 min at 50°C), 1% penicillin–streptomycin (Corning, Cat # 30‐002‐CI), and 20 ng/mL macrophage colony‐stimulating factor 1 (CSF1, R&D Systems, Cat # 486‐ML‐50).
+L57|The lower chamber contained 500 μL Opti‐MEM, 10% standard FBS (non‐heat inactivated) plus 10 ng/mL CSF1.
+L65|Macrophages were cultured in the presence of 20 ng/mL of CSF1.
+L68|Cells (female) were grown in the presence of CSF1 for 7 days.

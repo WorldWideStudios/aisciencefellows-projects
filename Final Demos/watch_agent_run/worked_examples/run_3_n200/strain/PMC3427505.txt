@@ -1,0 +1,5 @@
+   3 l83:mouse
+   2 l83:rat
+   1 l82:rat
+   1 l27:mouse
+   1 l174:mice

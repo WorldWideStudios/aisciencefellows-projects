@@ -1,0 +1,5 @@
+L24|Thermo Fisher Scientific, Inc.), 100 U/ml penicillin and 100  μ g/ml streptomycin, and incubated at 37°C for 24 h in the presence of 10 ng/ml macrophage colony-stimulating factor (M-CSF;
+L24|Non-adherent cells were collected and cultured with 30 ng/ml M-CSF for 3 days to generate bone marrow-derived macrophages (BMDMs).
+L24|To generate pre-osteoclast lineage cells and osteoclast lineage cells, BMDMs (50,000/cm 2 ) were cultured in complete α-MEM containing 30 ng/ml M-CSF and 75 ng/ml WT RANKL at 37°C for 72 h.
+L26|After transfection, the BMDMs were cultured with M-CSF (30 ng/ml) and RANKL (75 ng/ml) for 3 days to induce differentiation into osteoclasts.
+L30|The BMDMs were incubated with 30 ng/ml M-CSF and 75 ng/ml WT RANKL, or 75 ng/ml WT RANKL plus 75 ng/ml MT RANKL at 37.5°C for the indicated times (0, 1 and 2 days) in 6-well plates.

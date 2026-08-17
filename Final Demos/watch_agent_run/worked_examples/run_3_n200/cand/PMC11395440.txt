@@ -1,0 +1,11 @@
+L7|Additionally, DKO macrophages were isolated from mice bone marrow (BMDMs) and showed significant variations in the transcription of iron genes and protein amounts in targeted mice compared to controls.
+L17|Our data show the indispensable role of Hfe and TfR2 in the regulation of hepatic hepcidin production and in iron homeostasis in the spleen and bone marrow-derived macrophages (BMDMs), which are crucial for iron management during aging.
+L19|Transcription of both  Hfe  and  Tfr2  genes resulted significantly reduced in Bone Marrow-Derived Macrophages (BMDMs) of DKO mice ( p  = 0.0309 and  p  = 0.0433) ( Figure S1 ).
+L29|Iron Metabolism in Bone Marrow-Derived Macrophages Is Compromised by the Lack of Hfe/TfR2
+L30|Since macrophages exert an important role in providing iron for erythropoiesis, the effect of Hfe/TfR2 deficiency was analyzed in isolated bone marrow-derived macrophages (BMDMs) from adult and aged DKO mice to evaluate if  Hfe  and  TfR2  silencing could compromise RBC production.
+L43|Considering that this novel mouse model presents macrophage-specific  Hfe  and  TfR2  deletion, iron metabolism in Bone Marrow-Derived Macrophages (BMDMs) was examined as they play a pivotal role in iron supply for erythropoiesis [ 27 , 28 ].
+L61|Isolation of Bone Marrow-Derived Macrophages (BMDMs)
+L62|The supernatant was discarded and the pellet was suspended in a culture medium containing DMEM with 400 mg/L glucose, 100 mM L-glutamine (Invitrogen, Waltham, MA, USA), 100 mM sodium pyruvate (Sigma, Steinheim, Germany), penicillin/streptomycin 100x (Sigma, Steinheim, Germany), 10x FBS (Sigma, Steinheim, Germany), and the culture supernatant of L929 cells, obtained via the standard culture protocol [ 40 ].
+L70|Macrophages isolated from bone marrow (BMDMs) were collected and plated in culture in 6-well plates with slides for 1–2 days to allow engraftment.
+L79|BMDM: Bone marrow-Derived Macrophages;
+L312|Growing Murine Bone Marrow-Derived Macrophages Methods Mol.

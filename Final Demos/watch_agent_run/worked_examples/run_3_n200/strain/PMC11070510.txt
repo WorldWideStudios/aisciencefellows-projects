@@ -1,0 +1,11 @@
+   3 l169:mice
+   2 l22:mice
+   2 l165:mice
+   1 l37:mouse
+   1 l34:mice
+   1 l26:mouse
+   1 l232:human
+   1 l22:balb/c
+   1 l205:mouse
+   1 l14:human
+   1 l10:mouse

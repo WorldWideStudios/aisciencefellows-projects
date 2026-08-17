@@ -1,0 +1,17 @@
+L32|Figure 4 Proliferation of expanded macrophages (A) BM, FL, or YS lines ( n  = 3 for each group) were seeded at 1 × 10 5  cells/mL and cultured in the presence of 100 ng/mL M-CSF, and the number of viable cells was counted on day 2, 3, or 4, by trypan blue dye exclusion method (mean ± SD).  n.s. , not significant.  ∗ p  < 0.05. [two-way ANOVA with Tukey’s multiple comparisons test].
+L32|(B) BM, FL, or YS lines ( n  = 3 for each group) were seeded at 1 × 10 5  cells/mL and cultured for 3 days in the absence or presence of the indicated concentrations of M-CSF (10, 30, or 70 ng/mL), and the number of cells was monitored by the MTT assay.
+L32|The number of cells shown is the percentage to that of the culture containing 100 ng/mL M-CSF (mean ± SD).  n.s. , not significant.  ∗ p  < 0.05. [two-way ANOVA with Tukey’s multiple comparisons test].
+L32|(C) BM line #1, FL line #1, or YS line #1 was M-CSF-depleted for 3 h, left untreated or treated with 100 ng/mL M-CSF for the indicated periods (1, 5, or 15 min), and analyzed for the phosphorylated (=activated) M-CSF receptor by western blotting using antibody specific for tyrosine-809-phosphorylated M-CSF receptor 24  (pTyr809 M-CSFR).
+L33|Although all the lines proliferated in the presence of the optimal concentration of M-CSF (100 ng/mL), YS lines showed the fastest proliferation ( Figure 4 A).
+L33|The fastest proliferation of YS lines was the case at suboptimal concentrations of M-CSF (10, 30, or 70 ng/mL) ( Figures 4 B and  S8 ).
+L36|In the proliferation assay, the number of YS lines that survived without M-CSF for 3 days was higher than that of FL or BM lines (see  Figure 4 B, M-CSF “0”), suggesting that YS lines are relatively resistant to cell death.
+L39|Figure 6 Survival of expanded macrophages under M-CSF-free culture (A) BM, FL, or YS lines ( n  = 3 for each group) were seeded without (w/o) M-CSF (left), or without M-CSF but with GM-CSF (right), cultured for 1, 2 or 3 days, and analyzed for their survival by the MTT assay.
+L39|(D) BM line #1 was cultured in the presence or absence of M-CSF for 24 h, or seeded with media containing the supernatants collected from YS line #1 (50% v/v, "YS-sup"), and cultured in the presence or absence of M-CSF for 24 h.
+L39|The YS-sup was prepared by culturing with M-CSF-free media for 3 days.
+L41|However, when assessed by ELISA, the concentration of M-CSF in media conditioned by YS lines was <10 pg/m, the level of which was lower than that required to support the proliferation or survival of YS lines (>1 ng/mL).
+L74|Those cells were suspended into RPMI1640 media supplemented with 10% FCS and 100 ng/mL recombinant human (rh)M-CSF (complete media).
+L81|rhM-CSF was provided by Morinaga Milk Industry (Kanagawa, Japan), and added to the culture at a final concentration of 100 ng/mL.
+L81|Recombinant mouse (rm)IFN-γ and rmGM-CSF were purchased from BioLegend and Miltenyi Biotec, respectively, and added to the culture at a final concentration of 10 ng/mL.
+L224|and cultured in the presence of 100 ng/mL M-CSF for up to day 14.
+L257|and cultured for 4 or 5 days in the presence of 10 or 30 ng/mL of M-CSF.
+L283|cultured in the presence of GM-CSF for 1, 2 or 3 days, and analyzed for their

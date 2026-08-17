@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+*.egg-info/
+
+# Env / secrets
+.env
+.env.local
+
+# Run artifacts
+state.json
+run_output.log
+*.log
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+substack/
+
+# UI / generated artifacts
+notebooks/generated/
+check_geneformer.py
+
+# Local-only user data
+data/geneformer/*.csv
+data/depmap/*.csv
+!data/depmap/gene_effect_summary.csv
+*.pdf
+
+# Internal-only docs / decks / images (keep off GitHub)
+*.docx
+*.pptx
+*.jpg
+*.jpeg
+*.png
+.benchmate_run.log
+benchmark/live_*_scores.json
+runs/
+data/literature/

@@ -1,0 +1,6 @@
+L26|Generation of Yolk Sac and Bone Marrow Derived ER-Hoxb8 Progenitors
+L34|BM ER-Hoxb8 progenitor cells and 5 × 10 5  YS were seeded per 10 cm tissue culture dish in 5 ml of differentiation medium (RPMI 1640 with 10% FCS (BIO-SELL S0615), 1% penicillin–streptomycin (Sigma P 4333), 30 μM 2-Mercapto-Ethanol (Sigma M3148) and supernatant containing 6% SCF or FLT3, respectively, and 10 ng/mL M-CSF (Immuno Tools 12343115, Friesoythe, Germany)) at 37 °C/5% CO 2 .
+L46|Cells were pre-differentiated with M-CSF (Immuno Tools 12343115) for three days with M-CSF (as described above) prior to injection.
+L73|Upon estrogen removal, both cell lines differentiated to mature macrophages in the presence of macrophage colony-stimulating factor (M-CSF) ( Figure 1 a).
+L80|After 5–6 days of progenitor differentiation in the presence of M-CSF, macrophages represented the most prominent cell populations in YS- as well as BM-derived Hoxb8 cells ( Figure 2 a,b).
+L92|We generated three independent clones each from mouse BM and E9.5 YS, and differentiated them into mature macrophages in the presence of M-CSF, as performed for Hoxb8-SCF cells.

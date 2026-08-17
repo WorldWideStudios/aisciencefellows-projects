@@ -1,0 +1,4 @@
+L25:Figure 6 PAX5 expression in bone marrow metastases of a B-cell lymphoma induced by RAW 264.7-MuLV (IHC, hematoxylin, ×100).
+L30:Ecotropic MuLV infection of adult mice has been shown to increase B-cell proliferation, serum immunoglobulin M levels and expression of transcripts associated with B cell activation [ 23 ]. Further, infection of bone marrow cells with MoMuLV or bone marrow and primary B cells by Abelson MuLV induces expression of activation-induced cytidine deaminase (AID) by activating NFκB [ 29 , 30 ]. Ectopic expression of AID can result in generalized somatic hypermutation [ 31 ].
+L61:Rosenberg N Baltimore D A quantitative assay for transformation of bone marrow cells by Abelson leukemia virus J Exp Med 1976 143 1453 1463 178822 10.1084/jem.143.6.1453
+[41ms]

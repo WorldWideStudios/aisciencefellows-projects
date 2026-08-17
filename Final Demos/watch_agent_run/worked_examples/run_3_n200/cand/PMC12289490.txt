@@ -1,0 +1,4 @@
+L16|To understand how macrophages, the host cells that defend against infection and process antigens for presentation to immune cells, respond to these vaccine strains, we performed transcriptomic analyses of mouse bone marrow-derived macrophages (BMDMs) infected with these strains.
+L29|Isolation of bone marrow-derived macrophages
+L30|Briefly, the BMDMs were cultured from the femurs and tibias of mice in DMEM medium (DMEM, 10% fetal bovine serum, 10 ng/ml of M-CSF) and incubated at 37°C in 5% CO 2  for 7 days, with the addition of new medium containing M-CSF every 2–3 days.
+L257|Human Macrophages Exhibit GM-CSF Dependent Restriction of Mycobacterium tuberculosis Infection via Regulating Their Self-Survival, Differentiation and Metabolism .

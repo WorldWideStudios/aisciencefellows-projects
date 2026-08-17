@@ -1,0 +1,15 @@
+   2 l54:human
+   2 l119:mouse
+   1 l35:mouse
+   1 l33:mouse
+   1 l33:human
+   1 l33:bovine
+   1 l29:mouse
+   1 l29:human
+   1 l23:mice
+   1 l186:chicken
+   1 l133:mice
+   1 l130:mice
+   1 l116:mice
+   1 l113:mice
+   1 l10:human

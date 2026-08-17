@@ -1,0 +1,6 @@
+L7|In vitro , human primary macrophages are derived from peripheral blood CD14 +  monocytes in the presence of macrophage colony-stimulating factor (M-CSF) or granulocyte macrophage colony-stimulating factor (GM-CSF).
+L7|Distinct phenotypes of macrophage subsets under the influence of M-CSF and GM-CSF raise the question of optimal conditions for culturing primary macrophages to study host-pathogen interaction.
+L13|While macrophage colony-stimulating factor (M-CSF) has been applied to induce monocyte differentiation into macrophages for host-pathogen interaction, recent studies reveal that granulocyte macrophage colony-stimulating factor (GM-CSF) is influential in skewing macrophage differentiation into distinct phenotypes.
+L17|To address this important issue, cytokines optimal for macrophage differentiation is discussed and the current strategy of using human M-CSF to drive monocyte differentiation  in vitro  models to study host-pathogen interaction is re-visited.
+L19|Monocytes differentiate into resting or inflammatory macrophages under the influence of M-CSF and GM-CSF, respectively [ 9 ], or into M1 and M2 by interferon-gamma (IFN-γ) and IL-4 priming, respectively [ 10 - 12 ].
+L21|Role of M-CSF and GM-CSF in macrophage differentiation

@@ -1,0 +1,14 @@
+L13|A diverse range of  in vitro  culture systems have been developed to decipher TRM functions, including bone marrow-derived macrophages (BMDMs), induced pluripotent stem cell (iPSC)-derived TRMs, or immortalized cell lines.
+L15|Kupffer cells; microglia; alveolar macrophages; peritoneal macrophages; bone marrow-derived macrophages; tissue-resident macrophages
+L18|Thus far, many studies have relied on bone marrow-derived macrophages (BMDMs), which do not per se represent TRM heterogeneity ( Bailey et al., 2020 ;
+L25|The medium was supplemented with growth factors in a tissue-specific manner: macrophage colony-stimulating factor (M-CSF) for KC- and PM-LCs, M-CSF and interleukin (IL)-34 for MG-LCs, and granulocyte-macrophage colony-stimulating factor (GM-CSF) for AM-LCs ( Figure 1 A) ( Greter et al., 2012 ;
+L34|CD115 or colony-stimulating factor 1 receptor (Csf1r) is expressed on cultured and freshly isolated MG, KCs, and PMs, but was lost in AM-LCs ( Figure S2 B).
+L48|We treated TRM-LCs and BMDMs (M-CSF, 21% O 2 ) with lipopolysaccharides (LPS), poly(I:C), and zymosan and analyzed the gene expression of  C-C motif chemokine ligand 2  ( Ccl2 ),  Interleukin-1 β ( Il1b ),  Interleukin-6  ( Il6 ), and  tumor necrosis factor alpha  ( Tnfa ) after 24 h.
+L56|Supplementation of the cultures with growth factors such as M-CSF, IL-34, or GM-CSF—depending on their host tissue—further promoted the partial preservation of the unique TRM phenotypes  in vitro , confirming the importance of host tissue-derived growth factors for the survival of cultured macrophages ( Busch et al., 2019 ;
+L92|Adult MG-LCs and BMDMs (hypoxia M-CSF & IL-34) were cultured in DMEM containing 4.5 g/L D-Glucose and L-Glutamine (Thermo Fisher Scientific) and supplemented with 10% heat inactivated FCS, 1% Penicillin-Streptomycin (P/S, Sigma-Aldrich), 20 ng/mL recombinant murine M-CSF (Peprotech) and 20 ng/mL recombinant murine IL-34 (BioLegend).
+L92|PM-LCs, KC-LCs and BMDMs (hypoxia & normoxia M-CSF) were cultured in DMEM containing 4.5 g/L D-Glucose and 4.5 g/L L-Glutamine and supplemented with 10% FCS, 1% P/S, 20 ng/mL recombinant murine M-CSF.
+L92|AM-LCs were cultured in DMEM containing 4.5 g/L L-Glutamine (Thermo Fisher Scientific) and supplemented with 10% FCS, 1% P/S, 20 ng/mL recombinant murine GM-CSF (Peprotech).
+L92|BMDMs (normoxia GM-CSF) were cultured in DMEM containing 4.5 g/L D-Glucose and L-Glutamine and supplemented with 10% FCS, 1% P/S, 20 ng/mL recombinant murine GM-CSF.
+L134|Isolation and culture of murine bone marrow-derived macrophages for nitric oxide and redox biology Nitric Oxide.
+L153|Alveolar macrophages develop from fetal monocytes that differentiate into long-lived cells in the first week of life via GM-CSF J.
+L175|Bone marrow-derived monocytes give rise to self-renewing and fully differentiated Kupffer cells Nat.

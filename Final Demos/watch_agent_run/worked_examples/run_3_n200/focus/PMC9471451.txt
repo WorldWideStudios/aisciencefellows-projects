@@ -1,0 +1,4 @@
+L22|GM-CSF 20 ng/mL needs to be added freshly directly before cells are seeded into the 6 well plate.
+L45|Day 0: Seed bone marrow cells of one mouse in one 6 well plate, using 3 mL per well with 10–25 ng/mL of GM-CSF in a 37°C and humidified 5% CO 2  incubator.
+L47|Day 2, 4, 6: Gently wash cells with pre-warmed PBS and supply them with 3 mL of new, pre-warmed DC-medium (GM-CSF freshly added 20 ng/mL).
+L50|CRITICAL:  The optimal culture period to generate BMDC with GMCSF was reported to be 7–8 days ( Inaba et al., 1992 ).

@@ -1,0 +1,112 @@
+L1|Generation and utilization of a HEK-293T murine GM-CSF expressing cell line
+L6|In vitro  cultures of bone marrow-derived macrophages (BMDMs) and dendritic cells (BMDCs) are well-established and valuable methods for immunological studies.
+L6|Typically, commercially available recombinant GM-CSF is utilized to generate BMDCs and is also used to culture alveolar macrophages.
+L6|We have generated a new HEK-293T cell line expressing murine GM-CSF that secretes high levels of GM-CSF (~180 ng/ml) into complete media as an alternative to commercial GM-CSF.
+L6|Differentiation of dendritic cells and expression of various markers were kinetically assessed using the GM-CSF HEK293T cell line, termed supGM-CSF and compared directly to purified commercial GMCSF.
+L6|After 7–9 days of cell culture the supGM-CSF yielded twice as many viable cells compared to the commercial purified GM-CSF.
+L6|In addition to differentiating BMDCs, the supGM-CSF can be utilized to culture functionally active alveolar macrophages.
+L6|Collectively, our results show that supernatant from our GM-CSF HEK293T cell line supports the differentiation of mouse BMDCs or alveolar macrophage culturing, providing an economical alternative to purified GM-CSF.
+L9|Colony-stimulating factors (CSF) including macrophage colony-stimulating factor (M-CSF), granulocyte colony-stimulating factor (G-CSF), and granulocyte-macrophage colony stimulating factor (GM-CSF also known as colony stimulating factor 2, CSF2) are crucial for survival, proliferation, differentiation and functional activation of hematopoietic cells, including macrophages and dendritic cells (DCs) [ 1 ].
+L9|Due to cell number limitations from harvesting cDCs and AMs directly from mice, well-established  in vitro  culturing of bone marrow and bronchoalveolar lavage fluid for dendritic cells and alveolar macrophages, respectively, using GM-CSF have become invaluable for immunological and molecular biology studies [ 2 ].
+L9|One of the most widely adapted cell lines, utilized for differentiating and culturing murine bone-marrow derived macrophages (BMDMs) is the NCTC clone 929 strain L line, also known as L929 [ 7 ].
+L9|Supernatant from cultured L929 can be utilized, in lieu of purified M-CSF, to culture and differentiate BMDMs because it secretes murine M-CSF [ 7 ].
+L11|We utilized GM-CSF to generate and culture BMDCs and alveolar macrophages (AMs).
+L11|We have found that our line is very stable, producing GM-CSF at a concentration of ~200 ng/ml even following freeze thaw cycles.
+L11|We differentiated BMDCs and cultured AMs using our supGM-CSF and compared them to commercially available purified GM-CSF (pGM-CSF) and found that our supGM-CSF yields a higher number of cells, purity of DCs is not altered, and the cells show intact immune signaling cascades.
+L18|Once mCherry expression exceeded 85%, puromycin was removed, and cell-line was expanded and used to produce GM-CSF.
+L20|1e6-3e6 BM cells were plated per well of a 6-well tissue culture plate (353046, Corning) in complete DMEM supplemented with either 10% M-CSF from L929 cells, 5–10% supernatant from the mGM-CSF 293T cell line, or 10–25 ng/ml of recombinant mGM-CSF [PMC2015, Thermo Fisher].
+L26|supGM-CSF (25 ng/ml) or recGM-CSF (25 ng/ml) differentiated BMDCs were plated at 2e5cells/well in a 96 well plate with complete DMEM media.
+L28|Cells were plated in sterile 12 well plates at 5e5/well (total of 8 wells) and use complete DMEM with 25 ng/ml supGM-CSF.
+L30|24 hr post-BALF isolation, media was removed and fresh complete DMEM with 25 ng/ml supGM-CSF is added.
+L37|Lentivirus containing mGM-CSF, or a control construct was generated and transduced into HEK293Ts and monitored using flow cytometry ( S2 Fig ).
+L37|Post puromycin selection for 7 days, our control and mGM-CSF constructs were incorporated into the genomes of HEK293T cells (at a rate of >85%) ( Fig 1B ).
+L37|In order to determine how much GM-CSF was being produced by the HEK293T line we plated and grew 2x10 6  cells for 3 days, isolated the supernatant and performed an ELISA to measure the concentration which was found to be 181.7 ng/ml ( S2 File ).
+L37|Protein secretion was assessed again, by ELISA, and the stock secreted mGM-CSF at 181.9±ng/ml ( Fig 1C ).
+L38|Fig 1 Generation of mouse GM-CSF secreting HEK293T cell line.
+L38|(A)  Schematic of lentiviral plasmid construct used to generate the stable HEK293T mGM-CSF expressing cell line.
+L39|Bone-marrow cells differentiated with supGM-CSF yield a higher number of dendritic cells compared to pGM-CSF
+L40|To assess the efficacy of the mGM-CSF-rich supernatant (supGM-CSF), bone marrow (BM) cells were treated with 10 ng/ml or 25 ng/ml of supGM-CSF and compared to the same concentrations of a commercially obtained purified GM-CSF (pGM-CSF) [ 12 – 14 ].
+L40|As a control for differentiation, we also generated bone-marrow derived macrophages (BMDMs) using supM-CSF obtained from L929 cells [ 15 ] ( Fig 2A ).
+L41|Fig 2 Generation of primary dendritic cells using purified GM-CSF or supernatant GM-CSF.
+L41|(A)  Schematic of differentiation of primary bone marrow-derived macrophages (BMMs) or primary bone marrow-derived dendritic cells (BMDCs).
+L41|(C)  Total number of live cells generated from using one of 5 conditions: M-CSF, purified GM-CSF (pGM-CSF) at 10 ng/ml, pGM-CSF at 25 ng/ml, supernatant GM-CSF (supGM-CSF) at 10 ng/ml or supGM-CSF at 25 ng/ml.
+L41|(D)  Gating of CD45+ and CD11b+ M-CSF differentiated cells are represented in a quadrant contour plot to determine the expression of F4/80 and CD11c.
+L41|Same gating strategy is used for  (E)  pGM-CSF at 10 ng/ml,  (F)  pGM-CSF at 25 ng/ml,  (G)  supGM-CSF at 10 ng/ml and  (H)  supGM-CSF at 25 ng/ml.
+L41|(I)  Graphical representation for the percentage of M-CSF or GM-CSF differentiated cells that are F4/80+ and CD11c+ (Q2).
+L42|Cells incubated with M-CSF, pGM-CSF and supGM-CSF were fully differentiated by day 7 and could be cultured until day 14 ( Fig 2A ).
+L42|Morphologically, BM differentiated with supGM-CSF and pGM-CSF, at either 10 ng/ml or 25 ng/ml, have a more stellate morphology as is expected in dendritic cells compared to M-CSF differentiated macrophage cells.
+L42|There is no morphological difference between pGM-CSF or supGM-CSF differentiated cells, at either 10 ng/ml or 25 ng/ml ( Fig 2B ).
+L42|After culture with M-CSF, pGM-CSF or supGM-CSF, cells were assessed for purity by flow cytometry based on previously published panels [ 16 ,  17 ].
+L42|While supGM-CSF is able to generate more viable cells than pGM-CSF, there is no significant difference in cellular purity between supGM-CSF and pGM-CSF (both at ~85% purity).
+L43|BMDCs generated using supGM-CSF function as efficiently as BMDCs generated using pGM-CSF
+L44|In order to test the ability of our supGM-CSF to generate functional DCs we measured their levels of MHC-Class II (MHCII) expression using flow cytometry [ 18 ].
+L44|M-CSF differentiated cells express little MHCII, while pGM-CSF and supGM-CSF express robust levels of MHCII, when differentiated with 10 ng/ml or 25ng/ml concentration of GM-CSF ( Fig 3A and 3B ,  S4A and S4B Fig ).
+L44|Dendritic cells differentiated with 10 ng/ml GM-CSF show statistically higher mean fluorescence intensity for MHCII for supGM-CSF in comparison to pGM-CSF ( S5C Fig ).
+L44|Interestingly, dendritic cells differentiated with 25 ng/ml of either pGM-CSF or supGM-CSF exhibit no significant difference in overall MHCII protein expression when evaluated by mean fluorescence intensity ( Fig 3C ).
+L44|On a more granular level, supGM-CSF appears to have a single population expressing high levels of MHCII in comparison to the two populations of cells generated by the pGM-CSF expressing low and high MHCII ( Fig 3A and 3B ).
+L44|Both pGM-CSF and supGM-CSF BMDCs were stimulated with LPS (200 ng/ml) for the indicated time course and IL6 mRNA expression was measured by quantitative PCR (qPCR) ( Fig 3C ).
+L44|Thus, determining that the supGM-CSF derived cells maintain their inflammatory activity.
+L44|Here we observe that supGM-CSF produces significantly higher expression of IL6 at a protein level, but not transcriptionally ( Fig 3D and 3E ) suggesting that these dendritic cells are more sensitive to inflammatory activation compared to DCs generated using pGM-CSF.
+L45|Fig 3 Dendritic cells differentiated with supGM-CSF retain dendritic cell activity and are more inflammatory in comparison to pGM-CSF.
+L45|(A)  Histogram overlay of CD45+ and CD11b+ M-CSF (grey) and pGM-CSF (pink) or  (B)  supGM-CSF (orange) differentiated cells expressing MHCII.
+L45|(C)  Graphical representation of MHCII mean fluorescence intensity (MFI) of M-CSF, pGM-CSF, or supGM-CSF differentiated cells.
+L45|(E) Dendritic cells differentiated with pGM-CSF (pink) or sup-GM-CSF (orange) were treated with lipofectamine, LPS (24 hr) or LPS (2 hr) and polydA:dT (6 hr) secreted IL-6 or IL-1β  (E)  was measured by ELISA.
+L47|mGM-CSF is a critical protein factor that is not only necessary for driving primary dendritic cell differentiation, but also for maintaining primary alveolar macrophages (AM) in culture [ 19 ,  20 ].
+L47|To test the ability of supGM-CSF to maintain AM in culture, we harvested bronchiolar lavage fluid (BALF) from 40 WT wild-type mice.
+L47|We pooled these cells, counted and then plated them in 25 ng/ml supGM-CSF supplemented media.
+L47|Our data indicate that supGM-CSF does not negatively affect the cell culture, while the controls indicate there are healthy cultured cells not resistant to apoptosis ( Fig 4B ).
+L47|Inflammatory inducible proteins are significantly upregulated in AMs cultured in supGM-CSF media, including proteins IL6, TNFa, MDC, MCP-1, IP10, KC and Rantes ( Fig 4C–4I ). supGM-CSF cultured primary alveolar macrophages maintain their pro-inflammatory activation programming.
+L48|Fig 4 supGM-CSF can differentiate functional alveolar macrophages.
+L48|(A)  Schematic of alveolar macrophage supGM-CSF harvesting and differentiating experiment.
+L48|(C)  Secreted IL6 protein was measured from supGM-CSF differentiated alveolar macrophages treated with and without LPS for 6hr, as well as  (D)  TNFa,  (E)  MDC,  (F)  MCP-1,  (G)  IP10,  (H)  KC and  (I)  Rantes.
+L50|Flt3L is often utilized as a factor for BMDC differentiation, it is now appreciated that Flt3L DCs are representative of steady-state resident DCs, while GM-CSF BMDCs mirror the transcriptional programing of pro-inflammatory recruited cells [ 22 ,  23 ].
+L50|Granulocyte-macrophage colony-stimulating factor (GM-CSF), differentiated bone marrow cells are widely used as a model system for conventional DC development [ 24 ,  25 ], as well as sustaining primary alveolar macrophages in culture [ 26 ].
+L50|Current strategies for the generation of murine BMDCs or culturing of primary alveolar macrophages utilize store bought purified recombinant GM-CSF or a stable cell-line expressing recGM-CSF called J558L [ 10 ].
+L50|J558L, a murine GM-CSF, secreting cell-line is utilized for both BMDC and alveolar macrophage culturing, however it is an immune cell that also secretes IL-10 which can alter the transcriptional programing of the cells when culturing and only secretes 80 ng/ml [ 10 ,  19 ,  20 ].
+L51|We have successfully cloned and stably integrated murine GM-CSF into HEK293T cells, which consistently secrete 180 ng/ml of GM-CSF ( Fig 1 ).
+L51|Bone marrow differentiated with our supGM-CSF produces more cells by day 9 compared to pGM-CSF, but both GM-CSF sources generate an equal percentage of pure dendritic cells based on previously published gating strategies [ 16 ,  17 ] ( Fig 1C and 1I ).
+L51|Commercial GM-CSF can be used instead of our HEK293T supGM-CSF, but it is expensive, and GM-CSF has to be added every 2 days to cells during the differentiation process.
+L51|From one harvest of supGM-CSF you can generate ~10 μg, which will be the cost of 50 ml of complete media ( S2 File ), while 10 μg of purified GM-CSF from Thermo Fisher will cost $276.
+L51|The purity of BMDCs generated from pGM-CSF and supGM-CSF does not differ when assessed by flow cytometry based on previously published panels [ 16 ,  17 ] ( S3 Fig ,  Fig 2D–2H ).
+L52|BMDCs differentiated with either Flt3L or GM-CSF have comparable T cell activation, and therefore MHC II expression [ 23 ].
+L52|BMDCs differentiated using 25 ng/ml with either pGM-CSF or supGM-CSF express MHC-II at a comparable level ( Fig 3C ), when measured by mean fluorescence intensity (MFI) through flow cytometry, while on a more granule level it appears that the supGM-CSF has a purer population of cell expressing high MHCII compared to the pGM-CSF which has two distinct populations ( Fig 3A and 3B ).
+L52|Interestingly, BMDCs differentiated with 10 ng/ml GM-CSF show statistically higher MFI for MHCII for supGM-CSF in comparison to pGM-CSF ( S4A–S4C Fig ).
+L52|Based on previously reported data from Helft  et al . we hypothesize that our supGM-CSF differentiates pure BMDCs because of the MHCII high expression, while the pGM-CSF generates a mixed population of BMDCs and BMDMs represented by the MHCII intermediate and high populations [ 28 ].
+L53|By performing a time-course stimulation or overnight LPS stimulation, our study indicates supGM-CSF does not inhibit the inflammatory program transcriptionally when measuring the transcript or protein level of IL6 ( Fig 3D and 3E ). supGM-CSF and pGM-CSF differentiated BMDCs both retain the ability to activate the inflammasome pathway, leading to the secretion of IL1b ( Fig 3D–3F ).
+L53|While there has been published reports that it is macrophages within the population of cells that arise from the GM-CSF model of differentiation and not the DCs that are responsible for the inflammasome activation we can show here that our CD11c + /MHC hi  DC cells possess a functional AIM2 inflammasome [ 29 ].
+L54|Not only does our study provide data to support the use of supGM-CSF compared to pGM-CSF for BMDCs, but we also show that supGM-CSF can be utilized to sustain the culturing of primary alveolar macrophages from murine bronchoalveolar lavage fluid (BALF) [ 10 ,  19 ].
+L54|After 48 hr of supGM-CSF cultured BALF, the adhered alveolar macrophages (AMs) were >95% viable ( Fig 4B ).
+L54|Thus, supGM-CSF maintains AMs in culture and does not inhibit the pro-inflammatory programming of the immune cells.
+L55|Taken together our results show that a pure BMDC population and inflammatory inducible DCs or AMs can be established by culturing BM cells or BALF with a crude supernatant from our GM-CSF HEK293T cell line.
+L60|M-CSF and GM-CSF differentiated cells were both put through the same gating strategy.
+L60|The 5 gating plots are for the  (A)  M-CSF,  (B)  pGM-CSF (10 ng/ml),  (C)  pGM-CSF (25 ng/ml),  (D)  supGM-CSF (10 ng/ml),  (E)  supGM-CSF (25 ng/ml) differentiated cells.
+L61|S5 Fig Expression of MHC II on dendritic cell populations differentiated with 10ng/ml pGM-CSF or supGM-CSF.
+L61|(C)  Graphical representation of MHC II mean fluorescence of M-CSF, pGM-CSF, or supGM-CSF differentiated cells.
+L81|Differentiation of rat bone marrow cells into macrophages under the influence of mouse L929 cell supernatant .
+L89|GM-CSF Grown Bone Marrow Derived Cells Are Composed of Phenotypically Different Dendritic Cells and Macrophages .
+L91|Bone marrow-derived dendritic cells .
+L93|Culture and Identification of Mouse Bone Marrow-Derived Dendritic Cells and Their Capability to Induce T Lymphocyte Proliferation .
+L95|Bone Marrow-Derived Macrophages (BMM): Isolation and Applications .
+L105|GM-CSF regulates alveolar macrophage differentiation and innate immunity in the lung through PU.1 .
+L109|Estradiol acts directly on bone marrow myeloid progenitors to differentially regulate GM-CSF or Flt3 ligand-mediated dendritic cell differentiation .
+L116|Generation and Identification of GM-CSF Derived Alveolar-like Macrophages and Dendritic Cells From Mouse Bone Marrow .
+L120|GM-CSF Mouse Bone Marrow Cultures Comprise a Heterogeneous Population of CD11c(+)MHCII(+) Macrophages and Dendritic Cells .
+L126|Comprehensive Methods in the Creation of an mGM-CSF-Producing HEK293T Cell Line, Collection of mGM-CSF-rich Supernatant, and Using Cell Line Supernatant to Generate Dendritic Cells From Myeloid Progenitors
+L133|Purify/isolate mGM-CSF gene (450 bp)
+L139|Extract and isolate GM-CSF plasmid construct
+L154|If needed to confirm the concentration of mGM-CSF in the supernatant, perform ELISA (~200 ng/ml)
+L202|This 293T derived cell line that expresses high levels of GM-CSF in the media, is a cheap and efficient alternate source of GM-CSF that is usually bought commercially at high cost.
+L202|They provide an array of experiments that show their supGM-CSF is as potent in the differentiation of BMDCs and AMs as the commercially acquired GM-CSF.
+L209|PONE-D-20-18789 “Generation and utilization of a HEK-293T murine GM-CSF expressing cell line”
+L278|biolegend generated a slightly shorter version of the protein or that GMCSF generated in our cell line contains
+L279|modifications that increase its molecular weight that are not observed in the pGM-CSF that was generated in
+L298|Line 81-82: “…supplemented with either 10% M-CSF from L929 cells, 5-10% supernatant, or 10-25ng/ml of
+L299|recombinant mGM-CSF” To what cells does “5-10% supernatant” refer? I presume it is the 293T cells, but this
+L302|“10% M-CSF from L929 cells, 5-10% supernatant from the mGM-CSF 293T cell line, or 10-25 ng/ml of
+L317|Line 164-165: “Dendritic cells differentiated with 10ng/ml GM-CSF show statistically higher mean
+L334|the GM-CSF model of differentiation and not the DCs that are responsible for the inflammasome activation we
+L353|However, an alternative cell line, J558L-GM-CSF, is available and still in use today for**
+L358|The recombinant GM-CSF is the gold standard when it comes to both culturing bone
+L363|line is derived from a lymphoid (immune cell) and therefore can secrete more than just mGM-CSF into the
+L389|Microbe study by the Nice group does utilize J588L mGM-CSF to generate DCs
+L396|was a 2019 study, our reference 19, showing the use of J558L mGM-CSF to culture alveolar macrophages

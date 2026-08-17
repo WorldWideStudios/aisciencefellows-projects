@@ -1,0 +1,14 @@
+L1|Protocol for isolating and characterizing extracellular vesicles by ultracentrifugation from bone marrow-derived macrophages
+L5|Here, we present a protocol for the direct isolation of EVs from bone marrow-derived macrophages (BMDMs) using ultracentrifugation.
+L9|Extracellular vesicles (EVs) from bone marrow-derived macrophages (BMDMs) are considered crucial carriers that mediate the immunoregulatory functions of macrophages, influence the microenvironment, and participate in intercellular communication.
+L9|Here, we provide a comprehensive protocol for isolating EVs by ultracentrifugation from mouse bone marrow-derived macrophages, followed by further characterization of the isolated EVs using transmission electron microscopy, western blotting, and nanoparticle tracking analysis.
+L26|Here, we describe the media components used to culture bone marrow-derived macrophages.
+L33|This step details how to generate bone marrow-derived macrophages (BMDMs) ( Figure 1 ).
+L33|Note:  The final concentration of M-CSF in the centrifuge tube should be 30 ng/mL.
+L33|Add 10 mL DMEM medium (10% FBS and 30 ng/mL M-CSF) to the cells.
+L33|Note:  After 6–7 days of differentiation, one side of the tibia and femur from a mouse can yield approximately 0.5–1.5 × 10 7  BMDMs.
+L36|Aspirate and discard the medium (containing 10% FBS and 30 ng/mL M-CSF) from the 10 cm cell culture dish. c.
+L36|Add 10 mL DMEM medium (without FBS) supplemented with either M1 polarization agents (30 ng/mL M-CSF and 100 ng/mL LPS) or M2 polarization agents (30 ng/mL M-CSF and 2 ng/mL TGFβ1).
+L48|Here, a detailed experimental protocol for the isolation and characterization of extracellular vesicles from mouse bone marrow-derived macrophages (BMDMs).
+L51|The quantity of bone marrow-derived macrophages (BMDMs) correlates with the number of leg bones, thereby restricting the application of ultracentrifugation.
+L56|In Step 8, when perfusing the bone marrow cavity with a 1 mL syringe, the cavity should be repeatedly flushed until the bone gradually turns white to fully collect bone marrow-derived cells.

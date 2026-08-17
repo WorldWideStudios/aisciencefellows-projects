@@ -1,0 +1,10 @@
+   2 l8:feline
+   2 l6:feline
+   1 l8:human
+   1 l27:feline
+   1 l23:human
+   1 l22:human
+   1 l20:feline
+   1 l12:feline
+   1 l10:feline
+   1 l1:feline

@@ -1,0 +1,4 @@
+L11|A murine silicosis model was analyzed by single-cell RNA sequencing, bronchoalveolar lavage fluid (BALF) cytokine assays, and human Bone Marrow-Derived Mesenchymal Stem Cells (hBMSCs) transcriptomics after BALF exposure.
+L23|In our previous study, we utilized a novel gold nanoparticle suitable for CT/NIRF dual-modal imaging to label and track bone marrow-derived mesenchymal stem cells (BMSCs).
+L40|In the SiO₂ + SD BMSCs group, 1 × 10⁶ bone marrow-derived mesenchymal stem cells (BMSCs) suspended in 100 μL of saline were administered via intratracheal instillation on day 7 post-silica exposure.
+L71|To further elucidate how this inflammatory environment affects the function of transplanted stem cells at the molecular level, we conducted transcriptomic profiling of human Bone Marrow-Derived Mesenchymal Stem Cells (hBMSCs) exposed to early-stage inflammatory conditions.

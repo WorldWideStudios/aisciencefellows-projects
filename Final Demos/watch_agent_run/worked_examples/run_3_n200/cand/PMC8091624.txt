@@ -1,0 +1,65 @@
+L1|Proteomics characterisation of the L929 cell supernatant and its role in BMDM differentiation
+L5|L929 cell supernatant is commonly used to differentiate murine macrophages from bone marrow.
+L8|In the last 50 yr, two macrophage differentiation practices have been extensively used: the addition of recombinant macrophage colony-stimulating factor-1 (M-CSF or CSF1) or the addition of L929 cell-conditioned medium (LCCM) ( 4 ,  5 ,  6 ,  7 ,  8 ).
+L8|L929 is a fibroblast cell line derived from a clone of normal subcutaneous areolar and adipose tissue of a male C3H/An mouse ( 9 ,  10 ).
+L9|In many laboratories, LCCM is preferred over the addition of recombinant M-CSF as it is cheaper and generates considerably higher numbers of differentiated macrophages, reducing the number of euthanized animals by 5- to 10-fold ( 1 ).
+L9|However, there remains scepticism in the field over BMDM differentiation using L929-supplemented media.
+L10|The classification and phenotype of M-CSF differentiated macrophages has been well described with respect to their adhesion and cell surface marker expression; however, they have not been compared with alternative differentiation methods ( 11 ,  12 ).
+L22|Within this data set, M-CSF was expectedly identified as being a highly abundant secreted protein; however, other immunomodulatory proteins such as MIF were also identified as a highly secreted protein, which may influence subsequent BMDM differentiation.
+L24|Next, we evaluated how proteomes of BMDMs changed when they were differentiated with 20% LCCM or recombinant M-CSF.
+L24|Therefore, three culture conditions were defined: 10 ng/ml of M-CSF, 10 ng/ml of MIF + 10 ng/ml of M-CSF, and 20% LCCM.
+L24|The concentration of 10 ng/ml was chosen for M-CSF as this is the most widely reported differentiation concentration ( 24 ,  25 ).
+L25|Interestingly, there were no significant differences in protein expression between BMDMs cultured with M-CSF ± MIF, thus implying that there is little impact of MIF on M-CSF differentiated macrophages.
+L26|Proteomics data of macrophages differentiated with L929 or M-CSF.
+L27|Proteome analysis of BMDMs differentiated with LCCM, M-CSF or M-CSF + MIF.
+L27|Biological triplicates of BMDMs differentiated with LCCM or M-CSF or MCSF + MIF were lysed, and proteins were digested and labelled with isotopic tandem mass tag labels.
+L27|(C)  Heat map of the Log 2  fold change of LCCM versus M-CSF + MIF conditions for all of the proteins that were identified as significantly changing between LCCM versus M-CSF + MIF culturing conditions.
+L27|M1-3: replicates differentiated with M-CSF).
+L27|(D)  Biological processes gene ontology enrichment of proteins that were up- or down-regulated in LCCM-differentiated BMDMs with respect to M-CSF + MIF.
+L28|Interestingly, these data indicate that BMDMs grown in L929-supplemented media have a heightened interferon and innate immune response compared with M-CSF ± MIF cultured BMDMs.
+L28|These differential proteins were plotted using Log 2  fold change of the TMT reporter ion intensities and hierarchical clustering using Euclidean distancing between L929 and M-CSF + MIF culture conditions showing good clustering of up and down-regulated proteins that were highly consistent over three biological replicates.
+L30|Measurement of CD11c showed that there were about twice as many CD11c-positive cells in BMDMs cultured with M-CSF compared with LCCM.
+L31|Characterisation of BMDMs differentiated by L929 supernatant and M-CSF.
+L31|(A)  Flow cytometry analysis of CD11b as well as F4/80 and CD11c markers in BMDM cells cultured with L929 conditioned media and M-CSF.
+L31|(B)  ELISAs of TNF-α, interleukin-6 (IL-6), and interferon-β (IFN-β) of different macrophage populations in response to treatment with 100 ng/ml LPS for 6 h show that LCCM-differentiated macrophages have enhanced immune responses compared with M-CSF–differentiated macrophages.
+L33|BMDMs cultured with M-CSF presented a significant reduction in TNF-α, IL-6, and IFN-β compared with L929 conditioned media ( Fig 3B ).
+L36|BMDMs are primary cells derived from the isolation of haemopoietic stem cells from mammalian femurs and tibia and differentiated in vitro.
+L37|Initially, M-CSF was identified as the main driver of primary macrophage differentiation and was introduced in vitro as an active differentiation agent.
+L37|However, in more recent years the supplementation of differentiation media with the cell-free supernatant of L929 fibroblasts has become favourable as it is cheaper and relatively simple to produce in-house.
+L37|L929 fibroblasts were isolated from connective tissue and have been shown to produce and secrete high levels of M-CSF.
+L37|A recent article showed that LCCM changed the metabolism of macrophages to a higher glycolytic state compared with macrophages differentiated with M-CSF ( 31 ).
+L37|In contrast to our data, they also showed that M-CSF differentiation was leading to more TNF-α secretion upon LPS activation, whereas IL-6 was strongly enhanced in LCCM-differentiated BMDMs.
+L38|Interestingly, the top 100 iBAQ proteins contributed towards more than 60% of the total protein content with M-CSF being highly expressed.
+L38|This may indicate that the L929 supernatant may induce a specific activation state during the differentiation on BMDMs.
+L40|The total proteome of BMDMs differentiated using L929 supplementation had a distinct phenotype compared with recombinant M-CSF or M-CSF + MIF.
+L40|L929-differentiated BMDMs showed much higher expression of proteins involved in the interferon and immune response such as interferon induced proteins IFIT1, IFIT3, IFITM2, IFITM3, and ISG15.
+L40|As well as this, L929-differentiated BMDMs show decreased protein expression of cell division and cell cycle proteins such as cyclin-A2, spindle and centromere proteins SPDLY and INCE compared with pure M-CSF differentiation.
+L40|Consequently, this implies that factors in the L929 supernatant may affect the cell cycle, perhaps through faster terminal differentiation.
+L40|It also implies that differentiation with LCCM generates a population of macrophages that are more mature than those differentiated purely with M-CSF.
+L41|Whereas all populations showed high surface expression levels of F4/80 and CD11b, the marker CD11c, which is traditionally used for dendritic cells, was more highly expressed on macrophages differentiated with M-CSF.
+L41|The high levels of CD11c indicate that M-CSF differentiated macrophages are possibly more dendritic cell-like.
+L43|Overall, our data shows that differentiation with L929 supplemented media generates a population of cells that is less naïve than M-CSF or M-CSF + MIF alone.
+L44|Taken together, it is possible to conclude that M-CSF is a driving component of BMDM differentiation, but other factors secreted by L929 fibroblasts influence the resulting cellular phenotype.
+L51|L929 cells were seeded in six-well plates for secretomics analysis at ∼6,500 cells per cm 2  cell density and 1 ml of supplemented DMEM media.
+L55|BMDMs were isolated from femurs and tibiae of wild-type (WT) C57BL/6J mice of 3–5 mo of age.
+L55|Next, BM cells were transferred into one of three different culture conditions of IMDM supplemented with 10% FBS, 1% L-glutamine, 1% pen/strep, and either ( 1 ) 20% L929 conditioned media ( 2 ), 10 ng/ml of M-CSF or ( 3 ) 10 ng/ml of M-CSF and 10 ng/ml of MIF (Invitrogen).
+L59|BMDMs cultured in either M-CSF or L929 supernatant were treated with 100 ng/ml of LPS.
+L62|Precipitated L929 secretions were resuspended in 8 M Urea, 50 mM triethyl ammonium bicarbonate (TEAB), pH 8.5, whereas BMDM cell pellets were lysed in 5% SDS, 50 mM TEAB, pH 7.55.
+L99|O  ( 1987 )  Differentiation of rat bone marrow cells into macrophages under the influence of mouse L929 cell supernatant .
+L104|G  ( 2018 )  Growing murine bone marrow-derived macrophages .
+L108|B  ( 2008 )  Bone marrow-derived macrophages (BMM): Isolation and applications .
+L115|DS  ( 2010 )  A method for generation of bone marrow-derived macrophages from cryopreserved mouse bone marrow cells .
+L119|J  ( 2013 )  Cell density during differentiation can alter the phenotype of bone marrow-derived macrophages .
+L134|JG  ( 1988 )  Induction of class I and class II MHC antigen expression on murine bone marrow-derived macrophages by IL-4 (B cell stimulatory factor 1) .
+L141|K  ( 1995 )  Reciprocal regulation of the nitric oxide synthase/arginase balance in mouse bone marrow-derived macrophages by TH 1 and TH 2 cytokines .
+L146|M  ( 1984 )  Stimulation of phagocytosis in bone marrow-derived mouse macrophages by bacterial lipopolysaccharide: Correlation with biochemical and functional parameters .
+L166|E  ( 2013 )  Bone marrow-derived macrophage production .
+L293|PM  ( 2020 )  M-CSF- and L929-derived macrophages present distinct metabolic profiles with similar inflammatory outcomes .
+L584|# **Proteomics characterisation of the L929 cell** **supernatant and its role in BMDM** **differentiation**
+L675|comparative proteomic analysis of bone marrow-derived macrophages using L929 secretome or MCSF as the differentiating agent.
+L680|L929 secretome induces slightly stronger anti-inflammatory M1 phenotype that those differentiated
+L708|2.Line 450: "L929 differentiated BMDMs"
+L709|This expression is inconsistent with "l929-differentiated BMDMs" in line 447.
+L712|4.Line 460: This indicates that M-CSF differentiated macrophages are possibly more dendritic celllike.
+L737|This expression is inconsistent with "l929-differentiated BMDMs" in line 447. - Done
+L740|4.Line 460: This indicates that M-CSF differentiated macrophages are possibly more dendritic

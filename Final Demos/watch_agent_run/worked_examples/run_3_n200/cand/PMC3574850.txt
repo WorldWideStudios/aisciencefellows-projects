@@ -1,0 +1,13 @@
+L10|We found that peritoneal macrophages (PMs) appear to be more mature than bone marrow derived macrophages (BMs) and splenic macrophages (SPMs) based on their morphology and surface molecular characteristics.
+L32|Under culture with 2 ng/ml M-CSF (Figure  3 A), BMs showed a much stronger proliferative capability than SPMs and PMs.
+L33|BM, SPM and PM were cultured with M-CSF in concentrations of 2 ng/ml  (A)  or 10 ng/ml  (B)  for 0, 4, 7 and 14 days.
+L34|In response to 10 ng/ml of M-CSF (Figure  3 B), the proliferation of the three macrophage populations showed similar patterns to those with 2 ng/ml M-CSF.
+L34|However, an increase of M-CSF concentration up to 10 ng/ml did not enhance proliferation capability of PMs.
+L50|M-CSF has been shown to induce differentiation of BMs from bone marrow progenitors [ 45 ] and also to induce human macrophages into a M2 phenotype [ 46 ].
+L50|Compared to an only 1 day  in vitro  incubation time of SPMs and PMs, the requirement of 7 days stimulation of bone marrow cells with M-CSF may push them towards M2 differentiation.
+L57|FACS sorting was performed to obtain F4/80 positive and CD11c negative cells; then the harvested cells (0.5-1x10 6 ) were cultured for 24 hours with complete RPMI1640 supplemented with 10% FBS, 2 mM L-glutamine, 50 U/ml penicillin, 50 μg/ml streptomycin, 10 mM HEPES (N-2-hydroxyethylpiperazine-N’-2-ethanesulfoinc acid) and 0.1 mM nonessential amino acids (all from Life Technologies) and 10 ng/ml M-CSF (R&D Systems) in 6-well plates (BD Bioscience), at 37°C.
+L58|Cells from bone marrow were cultured for 7 days with 10 ng/ml M-CSF; medium was changed every two days.
+L60|To obtain dendritic cells, cells from bone marrow were cultured for 7 days with 10 ng/ml GM-CSF and 10 ng/ml IL-4; medium was changed every two days.
+L68|Medium used was complete RPMI 1640 with M-CSF in two concentrations (10 ng/ml and 2 ng/ml).
+L106|Weischenfeldt J Porse B Bone Marrow-Derived Macrophages (BMM): Isolation and Applications CSH Protoc 2008 2008 pdb prot5080 21356739
+L107|Marim FM Silveira TN Lima DS Jr Zamboni DS A method for generation of bone marrow-derived macrophages from cryopreserved mouse bone marrow cells PLoS One 2010 5 e15263 10.1371/journal.pone.0015263 21179419

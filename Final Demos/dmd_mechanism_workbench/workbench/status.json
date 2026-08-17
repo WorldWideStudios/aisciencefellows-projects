@@ -1,0 +1,227 @@
+{
+  "generated_at": "2026-08-09T18:10:11+00:00",
+  "db_path": "data/mechanism.sqlite",
+  "db_size_mb": 13.78,
+  "tables": [
+    {
+      "name": "lovd_variants",
+      "powers": "genetic evidence tile \u00b7 variantsAnalyzed header",
+      "source": "LOVD DMD atom feed (databases.lovd.nl)",
+      "rows": 41566,
+      "by_source": {
+        "lovd": 41566
+      },
+      "is_stub": false
+    },
+    {
+      "name": "isoforms",
+      "powers": "isoform impact tile (labels)",
+      "source": "curated from UniProt P11532 + RefSeq NM_004006.2",
+      "rows": 7,
+      "by_source": {
+        "curated": 7
+      },
+      "is_stub": false
+    },
+    {
+      "name": "exon_usage",
+      "powers": "isoform impact tile (per-isoform exon coverage)",
+      "source": "curated from Monaco 1988 + UMD-DMD exon phasing map",
+      "rows": 553,
+      "by_source": {
+        "curated": 553
+      },
+      "is_stub": false
+    },
+    {
+      "name": "clinvar_phenotype",
+      "powers": "variant-level phenotype lookup (per-variation records)",
+      "source": "NCBI ClinVar variant_summary.txt.gz \u2014 DMD gene subset",
+      "rows": 11790,
+      "by_source": {
+        "clinvar": 11790
+      },
+      "is_stub": false
+    },
+    {
+      "name": "patient_phenotype",
+      "powers": "per-patient genotype\u2194phenotype records",
+      "source": "Zhang et al. 2024 (Orphanet J Rare Dis, PMC11344408) supp S1+S2 \u2014 CC-BY",
+      "rows": 418,
+      "by_source": {
+        "zhang2024": 418
+      },
+      "is_stub": false
+    },
+    {
+      "name": "patient_labs",
+      "powers": "clinical labs tile \u00b7 per-hypothesis patient evidence",
+      "source": "synthetic_v1 \u2014 deterministic per patient (bake_synthetic_labs.py); correlated with phenotype \u00d7 age \u00d7 variant position; refs Birnkrant 2018, Ricotti 2016, Pillers 1993",
+      "rows": 6270,
+      "by_source": {
+        "synthetic_v1": 6270
+      },
+      "is_stub": false
+    },
+    {
+      "name": "phenotype_summary",
+      "powers": "phenotype distribution tile \u00b7 phenotyped header",
+      "source": "Zhang et al. 2024 cohort counts (N=2,097 patients)",
+      "rows": 4,
+      "by_source": {
+        "zhang2024": 4
+      },
+      "is_stub": false
+    },
+    {
+      "name": "celltype_expression",
+      "powers": "cell types tile",
+      "source": "Human Protein Atlas \u2014 'RNA single cell type specific nCPM' (CC-BY-SA)",
+      "rows": 7,
+      "by_source": {
+        "hpa": 7
+      },
+      "is_stub": false
+    },
+    {
+      "name": "pathway_enrichment",
+      "powers": "pathways tile",
+      "source": "Reactome human pathways GMT \u2014 DMD memberships, specificity-scored",
+      "rows": 5,
+      "by_source": {
+        "reactome": 5
+      },
+      "is_stub": false
+    },
+    {
+      "name": "hypotheses",
+      "powers": "hypotheses table",
+      "source": "curated seed set (4 mechanisms)",
+      "rows": 4,
+      "by_source": {
+        "curated": 4
+      },
+      "is_stub": false
+    },
+    {
+      "name": "hypothesis_evidence",
+      "powers": "hypothesis detail card \u00b7 evidence bullets",
+      "source": "curated with paper citations",
+      "rows": 22,
+      "by_source": {
+        "curated": 22
+      },
+      "is_stub": false
+    },
+    {
+      "name": "hypothesis_chain_nodes",
+      "powers": "hypothesis detail card \u00b7 reasoning chain nodes",
+      "source": "curated",
+      "rows": 36,
+      "by_source": {
+        "curated": 36
+      },
+      "is_stub": false
+    },
+    {
+      "name": "hypothesis_chain_edges",
+      "powers": "hypothesis detail card \u00b7 reasoning chain edges",
+      "source": "curated",
+      "rows": 32,
+      "by_source": {
+        "curated": 32
+      },
+      "is_stub": false
+    },
+    {
+      "name": "hypothesis_chain_edge_evidence",
+      "powers": "edge evidence bar (click an arrow in the reasoning chain)",
+      "source": "curated with paper citations",
+      "rows": 40,
+      "by_source": {
+        "curated": 40
+      },
+      "is_stub": false
+    },
+    {
+      "name": "hypothesis_therapeutic_node",
+      "powers": "hypothesis detail card \u00b7 therapeutic node",
+      "source": "curated",
+      "rows": 4,
+      "by_source": {
+        "curated": 4
+      },
+      "is_stub": false
+    },
+    {
+      "name": "gene_meta",
+      "powers": "header (gene symbol, isoform list, exon count)",
+      "source": "curated from UniProt + Ensembl",
+      "rows": 1,
+      "by_source": {
+        "curated": 1
+      },
+      "is_stub": false
+    },
+    {
+      "name": "settings",
+      "powers": "header \u00b7 mechanismConfidence",
+      "source": "curated placeholder (score_mechanism_confidence.py pending)",
+      "rows": 1,
+      "by_source": {
+        "curated": 1
+      },
+      "is_stub": false
+    },
+    {
+      "name": "premise_source",
+      "powers": "world-model premise registry \u00b7 source metadata",
+      "source": "curated (Zhang, ClinVar-NMD, HPA, Reactome, isoform arch, synthetic labs, ESM3)",
+      "rows": 7,
+      "by_source": {
+        "curated": 7
+      },
+      "is_stub": false
+    },
+    {
+      "name": "premise",
+      "powers": "world-model input premises (cohort + patient + variant scope)",
+      "source": "populated by bake_hypotheses_and_premises.py from existing baked substrate",
+      "rows": 96,
+      "by_source": {
+        "curated": 96
+      },
+      "is_stub": false
+    },
+    {
+      "name": "patient_hypothesis",
+      "powers": "per-patient stored hypotheses (\u22653 per variant) with generator provenance",
+      "source": "HYP-MODEL v0-scored \u2014 will be replaced by real world-model generator in later phases",
+      "rows": 40,
+      "by_source": {
+        "curated": 40
+      },
+      "is_stub": false
+    },
+    {
+      "name": "hypothesis_premise",
+      "powers": "audit trail: which premises supported which hypothesis (weighted)",
+      "source": "computed by the same bake step; joins premise \u2194 patient_hypothesis",
+      "rows": 209,
+      "by_source": {
+        "curated": 209
+      },
+      "is_stub": false
+    },
+    {
+      "name": "patient_therapeutic",
+      "powers": "per-hypothesis AAV design candidates with modality + eligibility",
+      "source": "AAV-MODEL v0-curated \u2014 placeholder for the AAV design world model",
+      "rows": 14,
+      "by_source": {
+        "curated": 14
+      },
+      "is_stub": false
+    }
+  ]
+}

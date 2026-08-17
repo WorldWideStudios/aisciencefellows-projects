@@ -1,0 +1,5 @@
+L65|Cells were also supplemented with a physiological growth factor cocktail consisting of 0.2 ng/mL stem cell factor (SCF) (Cat# 573902, BioLegend), 0.2 ng/mL granulocyte macrophage colony-stimulating factor (GM-CSF) (Cat# 578602, BioLegend), 1 ng/mL interleukin-6 (IL-6) (Cat# 570802, BioLegend), 0.2 ng/mL macrophage inflammatory protein (Cat# 300-08, MIPα) (PeproTech) and 0.05 ng/mL leukaemia inhibitory factor (LIF) (Cat# 300-05, PeproTech).
+L66|BMDM were generated with addition of mouse M-CSF (20 ng/mL) (Cat# 315-02, Peprotech) in Iscove’s Modified Dulbecco’s Medium (IMDM) containing 20% FBS, 100 IU/mL penicillin/streptomycin for 7 days culture at 37 °C, 5% CO 2 .
+L67|To generate BMDM, the mononuclear cell layer was then suspended in Dulbecco’s modified Eagle medium (DMEM) containing 10% FBS, 100 IU/mL penicillin/streptomycin and 20 ng/mL recombinant human M-CSF (Cat# 300-25, Peprotech) for 7 days culture at 37 °C, 5% CO 2.
+L1060|What is the phenotype of BMDM after exposure to M-CSF and culture for 4 days?
+L1611|**Response: Below are pictures of murine BMDM after exposure to 20ng/mL M-CSF for 4 days.**

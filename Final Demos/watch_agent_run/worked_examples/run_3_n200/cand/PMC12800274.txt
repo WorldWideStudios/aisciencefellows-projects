@@ -1,0 +1,18 @@
+L1|Bone marrow-derived CD169 +  macrophages promote autoimmune hepatitis by recruiting CCR2 +  monocytes via secreting CCL12
+L8|Bone marrow-derived Ly6C hi CD169 +  macrophages were further identified as the crucial subset in AIH.
+L8|Our results suggest that bone marrow-derived CD169 +  macrophages, the key subset of macrophages in AIH, actively secrete CCL12 in response to IFNγ to recruit CCR2 +  monocytes and macrophages, thus exacerbating AIH.
+L13|KCs replenish relying on self-renewal under homeostatic conditions, independent of bone marrow-derived macrophages (BMDMs) 13 .
+L16|Rather than liver-resident CD169 +  macrophages, bone marrow-derived CD169 +  macrophages macrophages were shown to be the key subset in AIH.
+L35|Bone marrow-derived CD169 +  macrophages are a key subset in AIH progression
+L36|According to our present results, there are at least two distinct populations of CD169 +  macrophages in the liver: one is yolk sac-derived CD11b + F4/80 + TIM4 + CD169 +  KCs, and the other is bone marrow-derived CD11b + F4/80 + Ly6C + CD169 +  infiltrating macrophages.
+L36|When WT bone marrow cells were transplanted into CD169-DTR mice and DT was applied, the bone marrow-derived WT CD169 +  cells remained, while the liver resident CD169 +  KCs of CD169-DTR mice were depleted.
+L37|Together, our results suggest that the bone marrow-derived CD169 +  macrophages are the vital subset of macrophages in ConA-induced liver injury.
+L58|Our results suggest that there are at least two different populations of CD169 +  macrophages in the liver of AIH: bone marrow-derived Ly6C hi  infiltrating macrophages and tissue-resident CD169 +  macrophages.
+L58|Our results indicated that bone marrow-derived CD169 +  macrophages are the key macrophage subset in the progression of ConA, suggesting that, in addition to tissue-resident KCs, non-tissue-resident macrophages can also play an important role in acute liver injury.
+L62|Although bone marrow-derived CD169 +  macrophages play a crucial role in AIH, it is undeniable that the depletion of CD169 +  KCs may also contribute to the alleviation of acute liver injury.
+L63|In summary, we found that CD169 +  macrophages infiltrate the livers of both mice and humans with AIH, and that bone marrow-derived CD169 +  macrophages represent a crucial subset driving AIH progression.
+L63|In the future, targeting bone marrow-derived CD169 +  macrophages may be a potential strategy for the treatment of AIH.
+L114|## **Bone marrow-derived CD169 [+] macrophages promote autoimmune** **hepatitis by recruiting CCR2 [+] monocytes via secreting CCL12**
+L205|**Bone marrow-derived macrophages (BMDM) preparation and stimulation**
+L209|1640 medium with 10% FBS, 1% penicillin/streptomycin, and 40ng/ml M-CSF
+L211|as M-CSF was removed and 100ng/ml IFNγ (PeproTech) was added.

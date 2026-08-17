@@ -1,0 +1,33 @@
+## Mouse BMDM differentiation protocols across the 8 papers
+
+Six of the eight papers describe a mouse BMDM protocol; **PMC11144798** (porcine ribs) and **PMC12041772** (human PB/BM) contain none — neither paper reports any mouse-derived macrophage work.
+
+| # | Paper | Mouse / bone source | Growth factor source | Base medium + supplements | Vessel | Duration & feeding | Harvest / downstream |
+|---|---|---|---|---|---|---|---|
+| 1 | **PMC3003694** — fresh BM **[1]** | C57BL/6, 6–12 wk; femurs flushed with RPMI-1640 | **30% L929-cell conditioned medium (LCCM)** | RPMI-1640 + 20% FBS + 30% LCCM + 100 U/mL pen, 100 µg/mL strep + 2 mM L-glutamine ("R20/30") | Non-TC-treated Optilux Petri dishes, 10 mL, 37°C/5% CO₂ | **7 d**; +10 mL fresh R20/30 on day 4, then 3 more days | Wash; ice-cold PBS 10 min at 4°C, pipette off; replate in "R10/5" (RPMI + 10% FBS + 5% LCCM + 2 mM Gln) 12 h before use |
+| 2 | **PMC3003694** — cryopreserved BM **[1]** | Same as #1, but BM frozen first | Same (30% LCCM) | Freeze at 4–6×10⁶ cells/mL in **90% FBS + 10% DMSO**; 1 mL/cryovial, −80°C 24 h → liquid N₂. Thaw at 37°C into 10 mL 37°C PBS, spin 200×g 5 min, resuspend in R20/30 | As #1 | As #1 (7 d) | As #1. Viable for >6 years frozen; 10% DMSO optimal; yield saturates above ~5×10⁶ cells/vial |
+| 3 | **PMC3574850** **[2]** | BALB/c, 6–8 wk male; pelvic + femoral bones, ends cut, marrow expelled | **10 ng/mL recombinant M-CSF** (R&D Systems) | Complete RPMI-1640 + 10% FBS (+ 2 mM Gln, 50 U/mL pen, 50 µg/mL strep, 10 mM HEPES, 0.1 mM NEAA) | 6-well plates, 37°C | **7 d**; medium changed **every 2 days** | 0.5% trypsin detachment → **FACS sort F4/80⁺CD11c⁻** → 0.5–1×10⁶ cells cultured 24 h in RPMI/10% FBS (±100 ng/mL LPS 24 h) |
+| 4 | **PMC7047825** **[3]** | C57BL/6 (and FcγRI-only VG1505), 12–16 wk, both sexes; femurs + pelvises | **20% L-cell conditioned medium** (as M-CSF source) | DMEM + 20% L-cell CM + 10% FBS + 0.2% sodium bicarbonate + 50 µg/mL gentamicin | (ACK lysis buffer used in prep) | Cells used **7–10 d** after harvest | Switch to macrophage medium (DMEM + 10% FBS + gentamicin). Polarization: 1×10⁶ adherent cells, 100 ng/mL IFN-γ (M1) or IL-4 + IL-13 (25 ng/mL each, M2), 24 h |
+| 5 | **PMC11302253** **[4]** | C57BL/6J, 6–14 wk male (naïve or LVS-vaccinated); bone marrow | **M-CSF** (concentration not stated) | Complete DMEM: 10% heat-inactivated FCS, 0.2 mM L-glutamine, 0.1 mM NEAA, 10 mM HEPES, 1 mM sodium pyruvate, 1 mM sodium bicarbonate | 24-well plates | **7 d**, to confluent monolayers | Used in situ for LVS infection (MOI 1:50) and splenocyte co-culture |
+| 6 | **PMC11417223** **[5]** | C57BL/6NCrl, female, 2–6 mo; **tibias + femurs** flushed, **RBC lysis** | **20 ng/mL M-CSF** (R&D Systems) | DMEM GlutaMax + 10% FBS + 1% HEPES + 100 U/mL pen-strep | **Low-attachment** conditions | **7 d**; additional complete medium added on day 4 | Metformin added during differentiation (or 72/48/24/6 h before its end); mature BMDMs stimulated with 10 ng/mL LPS or 20 ng/mL TGF-β |
+| 7 | **PMC12234436** — L929 route **[6]** | C57BL/6J (Jackson #000664); femur flushed with sterile DMEM | **30% L-929 conditioned medium** (harvested at 3rd passage, 2 d after >80% confluency) | DMEM + 30% L-929 CM + 20% FBS | Non-TC-treated 100×15 mm Petri dishes (1×10⁶ cells/10 mL) or 6-well plates (2 mL/well) | **5–7 d**; +0.5 volumes of original plating volume on **days 2 and 4** | **Day 6**: lifted with a cell scraper into DMEM + 10% FBS; phase-contrast imaging on days 0, 3, 6 |
+| 8 | **PMC12234436** — recombinant route **[6]** | Same as #7 | **20 ng/mL recombinant murine M-CSF** (Peprotech #315-02) | DMEM + 20% FBS | As #7 | As #7 | As #7 |
+
+**Notes on grouping.** Rows 1 and 2 share one differentiation procedure and differ only in starting material (fresh vs. cryopreserved marrow) — that comparison is the paper's subject, so they are listed separately. Rows 7 and 8 are explicitly offered by the authors as alternatives to each other ("Alternative differentiation was carried out with 20 ng/mL recombinant murine M-CSF" **[6]**). PMC7047825 gives medium composition and duration but defers the mechanics to prior published procedures **[3]**; PMC11302253 likewise cites an earlier method and does not state an M-CSF concentration or source **[4]**.
+
+Across the six papers there are effectively two families: **L929/L-cell conditioned medium** at 20–30% in DMEM or RPMI with 10–20% FBS (rows 1, 2, 4, 7), and **defined recombinant M-CSF** at 10–20 ng/mL (rows 3, 6, 8; row 5 unspecified). Differentiation is 5–10 days in every case, with a mid-course feed on day 4 (rows 1, 2, 6) or days 2 and 4 (rows 7, 8).
+
+--------
+REFERENCES
+[1] Marim FM, Silveira TN, Lima DS, Zamboni DS. "A Method for Generation of Bone Marrow-Derived Macrophages from Cryopreserved Mouse Bone Marrow Cells." *PLoS ONE* 5, e15263 (2010). doi:10.1371/journal.pone.0015263
+    https://paperclip.gxl.ai/citations/papers/PMC3003694#L13,L15,L17,L28,L31
+[2] Wang C, Yu X, Cao Q, et al. "Characterization of murine macrophages from bone marrow, spleen and peritoneum." *BMC Immunol* 14, 6 (2013). doi:10.1186/1471-2172-14-6
+    https://paperclip.gxl.ai/citations/papers/PMC3574850#L54,L57
+[3] Zajd CM, Ziemba AM, Miralles GM, et al. "Bone Marrow-Derived and Elicited Peritoneal Macrophages Are Not Created Equal: The Questions Asked Dictate the Cell Type Used." *Front Immunol* 11, 269 (2020). doi:10.3389/fimmu.2020.00269
+    https://paperclip.gxl.ai/citations/papers/PMC7047825#L80,L90,L92,L105
+[4] Khan H, Bhargava V, Elkins KL. "*Francisella tularensis* Live Vaccine Strain training of murine alveolar and bone marrow-derived macrophages." *Microbiol Spectr* 12, e00028-24 (2024). doi:10.1128/spectrum.00028-24
+    https://paperclip.gxl.ai/citations/papers/PMC11302253#L35,L42
+[5] Scafidi A, Mogensen FL-H, Campus E, et al. "Metformin impacts the differentiation of mouse bone marrow cells into macrophages affecting tumour immunity." *Heliyon* 10, e37792 (2024). doi:10.1016/j.heliyon.2024.e37792
+    https://paperclip.gxl.ai/citations/papers/PMC11417223#L71
+[6] Wells CC, Petnicki-Ocwieja T, Tan S, et al. "Differentiating *Peromyscus leucopus* bone marrow-derived macrophages for characterization of responses to *Borrelia burgdorferi* and lipopolysaccharide." *Infect Immun* 93, e00581-24 (2025). doi:10.1128/iai.00581-24
+    https://paperclip.gxl.ai/citations/papers/PMC12234436#L20,L28,L29,L31

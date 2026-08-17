@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DMD Substrate Status</title>
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --panel: #ffffff;
+    --ink: #1a2233;
+    --ink-2: #465066;
+    --ink-3: #8892a6;
+    --line: #e6e9ef;
+    --good: #2b9d6c;
+    --good-soft: #e6f4ec;
+    --warn: #d78a2b;
+    --warn-soft: #fbf1e2;
+    --slate: #6b7a94;
+    --accent: #2f6fd8;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink);
+    font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 13px; line-height: 1.45; }
+
+  .app { max-width: 1240px; margin: 0 auto; padding: 20px; }
+
+  .header {
+    background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+    padding: 18px 22px; margin-bottom: 16px;
+  }
+  .h-title { font-size: 22px; font-weight: 700; letter-spacing: -0.01em; }
+  .h-desc { color: var(--ink-2); margin-top: 4px; }
+  .h-meta { color: var(--ink-3); font-size: 12px; margin-top: 10px; display: flex; gap: 16px; }
+  .h-meta b { color: var(--ink-2); font-weight: 600; }
+  .h-meta a { color: var(--accent); text-decoration: none; }
+  .h-meta a:hover { text-decoration: underline; }
+
+  .summary {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 16px;
+  }
+  .stat {
+    background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+    padding: 14px 16px;
+  }
+  .stat-lbl { color: var(--ink-3); font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .stat-val { font-size: 26px; font-weight: 700; margin-top: 4px; }
+  .stat-sub { color: var(--ink-3); font-size: 12px; }
+
+  .panel {
+    background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+    padding: 4px 0; overflow: hidden;
+  }
+  table.tbl { width: 100%; border-collapse: collapse; }
+  table.tbl th, table.tbl td { padding: 10px 16px; text-align: left; }
+  table.tbl thead th {
+    background: #f0f2f6; color: var(--ink-2); font-size: 11px;
+    font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;
+    border-bottom: 1px solid var(--line);
+  }
+  table.tbl tbody tr { border-bottom: 1px solid var(--line); }
+  table.tbl tbody tr:last-child { border-bottom: none; }
+  table.tbl tbody tr.stub { background: var(--warn-soft); }
+  table.tbl td.name { font-family: "SF Mono", Menlo, monospace; font-size: 12px; font-weight: 600; }
+  table.tbl td.rows { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
+  table.tbl td.powers { color: var(--ink-2); }
+  table.tbl td.source { color: var(--ink-2); font-size: 12px; }
+  .chip { display: inline-block; padding: 2px 8px; border-radius: 10px;
+    font-size: 11px; font-weight: 600; margin-right: 4px; }
+  .chip.real   { background: var(--good-soft); color: var(--good); }
+  .chip.lovd   { background: #e6eefb;        color: var(--accent); }
+  .chip.curated{ background: #eef1f6;        color: var(--slate); }
+  .chip.stub   { background: var(--warn-soft); color: var(--warn); }
+
+  .section-title {
+    font-size: 12px; font-weight: 700; color: var(--ink-2);
+    text-transform: uppercase; letter-spacing: 0.08em;
+    margin: 20px 0 8px 4px;
+  }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <div class="header">
+    <div class="h-title">DMD Mechanism Substrate — Status</div>
+    <div class="h-desc">Per-table snapshot of <code>data/mechanism.sqlite</code>. Rows highlighted amber are still stubs; others are real ingest or curated.</div>
+    <div class="h-meta">
+      <span>Generated: <b id="genAt">—</b></span>
+      <span>DB: <b id="dbPath">—</b> · <span id="dbSize">—</span></span>
+      <span><a href="mechanism.html">→ mechanism dashboard</a></span>
+    </div>
+  </div>
+
+  <div class="summary" id="summary"></div>
+
+  <div class="section-title">Tables</div>
+  <div class="panel">
+    <table class="tbl">
+      <thead>
+        <tr>
+          <th>Table</th>
+          <th style="text-align:right;">Rows</th>
+          <th>Data source</th>
+          <th>Powers</th>
+          <th>Provenance</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<script>
+function fmt(n) { return n.toLocaleString(); }
+
+function renderSummary(payload) {
+  const tables = payload.tables;
+  const total = tables.reduce((a,t)=>a+t.rows, 0);
+  const stubTables = tables.filter(t => t.is_stub).length;
+  const realTables = tables.length - stubTables;
+  const realRows = tables.filter(t => !t.is_stub).reduce((a,t)=>a+t.rows, 0);
+  const stubRows = tables.filter(t =>  t.is_stub).reduce((a,t)=>a+t.rows, 0);
+  const el = document.getElementById('summary');
+  el.innerHTML = `
+    <div class="stat"><div class="stat-lbl">Tables</div>
+      <div class="stat-val">${tables.length}</div>
+      <div class="stat-sub">${realTables} real · ${stubTables} stub</div></div>
+    <div class="stat"><div class="stat-lbl">Total rows</div>
+      <div class="stat-val">${fmt(total)}</div>
+      <div class="stat-sub">across all substrate tables</div></div>
+    <div class="stat"><div class="stat-lbl">Real rows</div>
+      <div class="stat-val" style="color:var(--good);">${fmt(realRows)}</div>
+      <div class="stat-sub">ingested + curated</div></div>
+    <div class="stat"><div class="stat-lbl">Stub rows</div>
+      <div class="stat-val" style="color:var(--warn);">${fmt(stubRows)}</div>
+      <div class="stat-sub">placeholder — see amber rows below</div></div>`;
+}
+
+function renderRows(payload) {
+  const tbody = document.getElementById('tbody');
+  tbody.innerHTML = payload.tables.map(t => {
+    const chips = Object.entries(t.by_source).map(([src, n]) => {
+      const cls = ['real','lovd','curated','stub'].includes(src) ? src : 'curated';
+      return `<span class="chip ${cls}">${src}: ${fmt(n)}</span>`;
+    }).join('');
+    return `<tr class="${t.is_stub ? 'stub' : ''}">
+      <td class="name">${t.name}</td>
+      <td class="rows">${fmt(t.rows)}</td>
+      <td>${chips}</td>
+      <td class="powers">${t.powers}</td>
+      <td class="source">${t.source}</td>
+    </tr>`;
+  }).join('');
+}
+
+async function main() {
+  const resp = await fetch('status.json', { cache: 'no-store' });
+  const payload = await resp.json();
+  document.getElementById('genAt').textContent = payload.generated_at.replace('T',' ').replace('+00:00',' UTC');
+  document.getElementById('dbPath').textContent = payload.db_path;
+  document.getElementById('dbSize').textContent = payload.db_size_mb + ' MB';
+  renderSummary(payload);
+  renderRows(payload);
+}
+document.addEventListener('DOMContentLoaded', main);
+</script>
+</body>
+</html>

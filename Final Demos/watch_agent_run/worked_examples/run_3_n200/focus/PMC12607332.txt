@@ -1,0 +1,13 @@
+L22|Cells were plated at a density of 1 × 10 6  cells/mL in 100 mm tissue culture-treated dishes containing 10 mL of DC culture medium [RPMI-1640 supplemented with 10% heat-inactivated FBS, 2 mM L-glutamine, 50 µM β-mercaptoethanol, 1× penicillin/streptomycin, 20 ng/mL GM-CSF, and 20 ng/mL IL-4] and incubated at 37 °C in a humidified 5% CO 2  atmosphere.
+L24|To determine optimal cytokine conditions, four regimens were tested over 10 days: GM-CSF (20 ng/mL, days 0, 3, 6, 8).
+L24|GM-CSF (20 ng/mL, days 0, 3) followed by GM-CSF (10 ng/mL) + IL-4 (10 ng/mL, days 6, 8).
+L24|GM-CSF (20 ng/mL, days 0, 3) followed by GM-CSF (10 ng/mL, days 6, 8).
+L24|Step-down GM-CSF: 20 → 10 → 5 → 2.5 ng/mL on days 0, 3, 6, and 8.
+L43|Flow cytometric analysis revealed that GM-CSF (10 ng/mL) combined with IL-4 (10 ng/mL) produced the highest proportion of CD11c +  cells (84.7%) and increased MHC II expression (34.1%) compared with GM-CSF alone (26–27%).
+L45|To assess whether STING pathway activation promotes dendritic cell (DC) maturation, bone marrow-derived DCs (BMDCs) were cultured for 9 days in the presence of 10 ng/mL GM-CSF and 10 ng/mL IL-4.
+L58|Bone marrow cells were cultured for 10 days in four different cytokine conditions to evaluate dendritic cell (DC) differentiation and maturation: ( i ) Condition 1—Stepwise reduction of GM-CSF, starting at 20 ng/mL on day 0, then decreasing to 10 ng/mL (day 3), 5 ng/mL (day 6), and 2.5 ng/mL (day 8);
+L58|( ii ) Condition 2—20 ng/mL GM-CSF (day 0, 3);
+L58|10 ng/mL GM-CSF (day 6, 8);
+L58|( iii ) Condition 3—20 ng/mL GM-CSF;
+L58|( iv ) Condition 4—20 ng/mL GM-CSF (day 0, 3), followed by 10 ng/mL GM-CSF + 10 ng/mL IL-4 (day 6, 8).
+L59|Bone-marrow-derived dendritic cells (BMDCs) were cultured for 9 days in the presence of 10 ng/mL GM-CSF and 10 ng/mL IL-4.

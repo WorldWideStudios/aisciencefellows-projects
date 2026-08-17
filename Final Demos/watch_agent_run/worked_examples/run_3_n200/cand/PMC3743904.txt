@@ -1,0 +1,6 @@
+L68|Non-polarized bone marrow derived macrophages (BMDM) showed very little difference in the expression of key M1 or M2 genes upon infection compared to the large differences shown in polarized macrophages ( Figure 1B ).
+L253|Bone marrow was differentiated into macrophages using supplemented RPMI and 20% L-cell conditioned media as previously described [ 43 ].
+L254|Bone marrow derived macrophage (BMDM) polarization, infection and repolarization
+L379|43 Weischenfeldt J ,  Porse B  ( 2008 )  Bone marrow-derived macrophages (BMM): Isolation and applications.
+L401|Figure S1: Bone marrow derived macrophages (BMDM) are polarized after 12 hr exposure to M1 or M2 conditions.
+L401|Bone marrow was harvest from 8-12 week old male Balb/c mice and differentiated to macrophages (CD11b+F4/80+) using L-cell conditioned media.

@@ -1,0 +1,13 @@
+   4 l47:mouse
+   4 l47:human
+   2 l23:human
+   1 l97:mice
+   1 l80:human
+   1 l45:human
+   1 l23:mouse
+   1 l140:mice
+   1 l130:human
+   1 l125:rats
+   1 l121:human
+   1 l103:mice
+   1 l102:mice

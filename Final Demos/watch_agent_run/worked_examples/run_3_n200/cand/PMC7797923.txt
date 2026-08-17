@@ -1,0 +1,9 @@
+L1|Preparation and culture of bone marrow-derived macrophages from mice for functional analysis
+L7|This protocol describes the collection of bone marrow cells from the femur and tibia of mice, differentiation into bone marrow-derived macrophages (BMDM cells), and sampling from cultures.
+L16|Add CSF-1 to obtain bone marrow culture medium after collection of bone marrow cells.
+L20|Bone marrow culture medium Final concentration (mM or μM) DMEM N/A FBS 10% Penicillin streptomycin 1% M-CSF1 1 ng/mL (test multiple concentrations)
+L28|This step prepares the bone marrow cells including progenitors which will differentiate into bone marrow-derived macrophages after culture.
+L29|Differentiation into bone marrow-derived macrophages
+L34|Sampling from bone marrow-derived macrophage cultures
+L49|Additionally, some mouse models may have smaller amounts of bone marrow cells than others, and may require isolation of more bone marrow to acquire the same amount of BMDM cells as wild type mice.
+L74|Bone marrow-derived macrophages (BMM): isolation and applications CSH Protoc.

@@ -1,0 +1,28 @@
+L1|In Vitro Maturation of Bone Marrow-Derived Dendritic Cells via STING Activation for T Cell Priming
+L11|bone marrow-derived dendritic cells;
+L13|The differentiation of DCs from hematopoietic stem cells in the bone marrow can be induced in vitro using cytokines such as granulocyte–macrophage colony-stimulating factor (GM-CSF) and interleukin-4 (IL-4) [ 8 , 9 , 10 ].
+L14|GM-CSF and IL-4 are widely employed to induce DC differentiation; however, the optimal cytokine concentrations required to achieve the highest level of antigen-presenting function remain unclear [ 12 , 16 ].
+L16|Therefore, this study aims to investigate the effects of varying GM-CSF and IL-4 concentrations on DC differentiation, focusing on the expression of key surface markers (CD11c, CD80, and MHC II).
+L16|In this study, bone marrow–derived DCs were generated using GM-CSF and IL-4 and subsequently exposed to different concentrations of a STING agonist and tumor-derived DNA.
+L18|Isolation and Differentiation of Bone Marrow-Derived Dendritic Cells (BMDCs)
+L22|Cells were plated at a density of 1 × 10 6  cells/mL in 100 mm tissue culture-treated dishes containing 10 mL of DC culture medium [RPMI-1640 supplemented with 10% heat-inactivated FBS, 2 mM L-glutamine, 50 µM β-mercaptoethanol, 1× penicillin/streptomycin, 20 ng/mL GM-CSF, and 20 ng/mL IL-4] and incubated at 37 °C in a humidified 5% CO 2  atmosphere.
+L22|Fresh medium containing GM-CSF and/or IL-4 was added to the remaining cells to maintain differentiation.
+L24|To determine optimal cytokine conditions, four regimens were tested over 10 days: GM-CSF (20 ng/mL, days 0, 3, 6, 8).
+L24|GM-CSF (20 ng/mL, days 0, 3) followed by GM-CSF (10 ng/mL) + IL-4 (10 ng/mL, days 6, 8).
+L24|GM-CSF (20 ng/mL, days 0, 3) followed by GM-CSF (10 ng/mL, days 6, 8).
+L24|Step-down GM-CSF: 20 → 10 → 5 → 2.5 ng/mL on days 0, 3, 6, and 8.
+L43|Bone marrow-derived cells were cultured under four cytokine supplementation regimens to optimize dendritic cell differentiation.
+L43|Flow cytometric analysis revealed that GM-CSF (10 ng/mL) combined with IL-4 (10 ng/mL) produced the highest proportion of CD11c +  cells (84.7%) and increased MHC II expression (34.1%) compared with GM-CSF alone (26–27%).
+L45|To assess whether STING pathway activation promotes dendritic cell (DC) maturation, bone marrow-derived DCs (BMDCs) were cultured for 9 days in the presence of 10 ng/mL GM-CSF and 10 ng/mL IL-4.
+L45|We speculate that the continuous presence of GM-CSF and IL-4 throughout the culture period may influence the degree of CD80 upregulation upon STING stimulation.
+L49|In this study, we demonstrated that bone marrow-derived dendritic cells (BMDCs) can be efficiently generated in vitro using GM-CSF and IL-4, and subsequently matured through STING pathway activation.
+L56|In this study, we established an in vitro model for the maturation of murine bone marrow-derived dendritic cells (BMDCs) via STING pathway activation and evaluated their ability to prime T cells.
+L58|Figure 1 Phenotypic characterization of bone marrow-derived dendritic cells (BMDCs) cultured under different cytokine conditions.
+L58|Bone marrow cells were cultured for 10 days in four different cytokine conditions to evaluate dendritic cell (DC) differentiation and maturation: ( i ) Condition 1—Stepwise reduction of GM-CSF, starting at 20 ng/mL on day 0, then decreasing to 10 ng/mL (day 3), 5 ng/mL (day 6), and 2.5 ng/mL (day 8);
+L58|( ii ) Condition 2—20 ng/mL GM-CSF (day 0, 3);
+L58|10 ng/mL GM-CSF (day 6, 8);
+L58|( iii ) Condition 3—20 ng/mL GM-CSF;
+L58|( iv ) Condition 4—20 ng/mL GM-CSF (day 0, 3), followed by 10 ng/mL GM-CSF + 10 ng/mL IL-4 (day 6, 8).
+L59|Bone-marrow-derived dendritic cells (BMDCs) were cultured for 9 days in the presence of 10 ng/mL GM-CSF and 10 ng/mL IL-4.
+L108|Dendritic Cells and Myeloid Derived Suppressor Cells Fully Responsive to Stimulation via Toll-Like Receptor 4 Are Rapidly Induced from Bone-Marrow Cells by Granulocyte-Macrophage Colony-Stimulating Factor Vaccines 2020 8 522 10.3390/vaccines8030522 32932705
+L114|Optimizing the Generation of Mature Bone Marrow-Derived Dendritic Cells In Vitro: A Factorial Study Design J.

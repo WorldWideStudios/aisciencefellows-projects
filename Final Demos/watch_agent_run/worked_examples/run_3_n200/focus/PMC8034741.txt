@@ -1,0 +1,35 @@
+L6|We have generated a new HEK-293T cell line expressing murine GM-CSF that secretes high levels of GM-CSF (~180 ng/ml) into complete media as an alternative to commercial GM-CSF.
+L6|After 7–9 days of cell culture the supGM-CSF yielded twice as many viable cells compared to the commercial purified GM-CSF.
+L11|We have found that our line is very stable, producing GM-CSF at a concentration of ~200 ng/ml even following freeze thaw cycles.
+L18|Once mCherry expression exceeded 85%, puromycin was removed, and cell-line was expanded and used to produce GM-CSF.
+L20|1e6-3e6 BM cells were plated per well of a 6-well tissue culture plate (353046, Corning) in complete DMEM supplemented with either 10% M-CSF from L929 cells, 5–10% supernatant from the mGM-CSF 293T cell line, or 10–25 ng/ml of recombinant mGM-CSF [PMC2015, Thermo Fisher].
+L26|supGM-CSF (25 ng/ml) or recGM-CSF (25 ng/ml) differentiated BMDCs were plated at 2e5cells/well in a 96 well plate with complete DMEM media.
+L28|Cells were plated in sterile 12 well plates at 5e5/well (total of 8 wells) and use complete DMEM with 25 ng/ml supGM-CSF.
+L30|24 hr post-BALF isolation, media was removed and fresh complete DMEM with 25 ng/ml supGM-CSF is added.
+L37|Post puromycin selection for 7 days, our control and mGM-CSF constructs were incorporated into the genomes of HEK293T cells (at a rate of >85%) ( Fig 1B ).
+L37|In order to determine how much GM-CSF was being produced by the HEK293T line we plated and grew 2x10 6  cells for 3 days, isolated the supernatant and performed an ELISA to measure the concentration which was found to be 181.7 ng/ml ( S2 File ).
+L40|To assess the efficacy of the mGM-CSF-rich supernatant (supGM-CSF), bone marrow (BM) cells were treated with 10 ng/ml or 25 ng/ml of supGM-CSF and compared to the same concentrations of a commercially obtained purified GM-CSF (pGM-CSF) [ 12 – 14 ].
+L41|(C)  Total number of live cells generated from using one of 5 conditions: M-CSF, purified GM-CSF (pGM-CSF) at 10 ng/ml, pGM-CSF at 25 ng/ml, supernatant GM-CSF (supGM-CSF) at 10 ng/ml or supGM-CSF at 25 ng/ml.
+L41|Same gating strategy is used for  (E)  pGM-CSF at 10 ng/ml,  (F)  pGM-CSF at 25 ng/ml,  (G)  supGM-CSF at 10 ng/ml and  (H)  supGM-CSF at 25 ng/ml.
+L42|Morphologically, BM differentiated with supGM-CSF and pGM-CSF, at either 10 ng/ml or 25 ng/ml, have a more stellate morphology as is expected in dendritic cells compared to M-CSF differentiated macrophage cells.
+L42|There is no morphological difference between pGM-CSF or supGM-CSF differentiated cells, at either 10 ng/ml or 25 ng/ml ( Fig 2B ).
+L42|While supGM-CSF is able to generate more viable cells than pGM-CSF, there is no significant difference in cellular purity between supGM-CSF and pGM-CSF (both at ~85% purity).
+L44|M-CSF differentiated cells express little MHCII, while pGM-CSF and supGM-CSF express robust levels of MHCII, when differentiated with 10 ng/ml or 25ng/ml concentration of GM-CSF ( Fig 3A and 3B ,  S4A and S4B Fig ).
+L44|Dendritic cells differentiated with 10 ng/ml GM-CSF show statistically higher mean fluorescence intensity for MHCII for supGM-CSF in comparison to pGM-CSF ( S5C Fig ).
+L44|Interestingly, dendritic cells differentiated with 25 ng/ml of either pGM-CSF or supGM-CSF exhibit no significant difference in overall MHCII protein expression when evaluated by mean fluorescence intensity ( Fig 3C ).
+L44|Both pGM-CSF and supGM-CSF BMDCs were stimulated with LPS (200 ng/ml) for the indicated time course and IL6 mRNA expression was measured by quantitative PCR (qPCR) ( Fig 3C ).
+L47|We pooled these cells, counted and then plated them in 25 ng/ml supGM-CSF supplemented media.
+L50|J558L, a murine GM-CSF, secreting cell-line is utilized for both BMDC and alveolar macrophage culturing, however it is an immune cell that also secretes IL-10 which can alter the transcriptional programing of the cells when culturing and only secretes 80 ng/ml [ 10 ,  19 ,  20 ].
+L51|We have successfully cloned and stably integrated murine GM-CSF into HEK293T cells, which consistently secrete 180 ng/ml of GM-CSF ( Fig 1 ).
+L51|Commercial GM-CSF can be used instead of our HEK293T supGM-CSF, but it is expensive, and GM-CSF has to be added every 2 days to cells during the differentiation process.
+L52|BMDCs differentiated using 25 ng/ml with either pGM-CSF or supGM-CSF express MHC-II at a comparable level ( Fig 3C ), when measured by mean fluorescence intensity (MFI) through flow cytometry, while on a more granule level it appears that the supGM-CSF has a purer population of cell expressing high MHCII compared to the pGM-CSF which has two distinct populations ( Fig 3A and 3B ).
+L52|Interestingly, BMDCs differentiated with 10 ng/ml GM-CSF show statistically higher MFI for MHCII for supGM-CSF in comparison to pGM-CSF ( S4A–S4C Fig ).
+L53|By performing a time-course stimulation or overnight LPS stimulation, our study indicates supGM-CSF does not inhibit the inflammatory program transcriptionally when measuring the transcript or protein level of IL6 ( Fig 3D and 3E ). supGM-CSF and pGM-CSF differentiated BMDCs both retain the ability to activate the inflammasome pathway, leading to the secretion of IL1b ( Fig 3D–3F ).
+L54|After 48 hr of supGM-CSF cultured BALF, the adhered alveolar macrophages (AMs) were >95% viable ( Fig 4B ).
+L60|The 5 gating plots are for the  (A)  M-CSF,  (B)  pGM-CSF (10 ng/ml),  (C)  pGM-CSF (25 ng/ml),  (D)  supGM-CSF (10 ng/ml),  (E)  supGM-CSF (25 ng/ml) differentiated cells.
+L61|S5 Fig Expression of MHC II on dendritic cell populations differentiated with 10ng/ml pGM-CSF or supGM-CSF.
+L154|If needed to confirm the concentration of mGM-CSF in the supernatant, perform ELISA (~200 ng/ml)
+L298|Line 81-82: “…supplemented with either 10% M-CSF from L929 cells, 5-10% supernatant, or 10-25ng/ml of
+L299|recombinant mGM-CSF” To what cells does “5-10% supernatant” refer? I presume it is the 293T cells, but this
+L302|“10% M-CSF from L929 cells, 5-10% supernatant from the mGM-CSF 293T cell line, or 10-25 ng/ml of
+L317|Line 164-165: “Dendritic cells differentiated with 10ng/ml GM-CSF show statistically higher mean

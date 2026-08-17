@@ -1,0 +1,4 @@
+L33|Note:  The final concentration of M-CSF in the centrifuge tube should be 30 ng/mL.
+L33|Add 10 mL DMEM medium (10% FBS and 30 ng/mL M-CSF) to the cells.
+L36|Aspirate and discard the medium (containing 10% FBS and 30 ng/mL M-CSF) from the 10 cm cell culture dish. c.
+L36|Add 10 mL DMEM medium (without FBS) supplemented with either M1 polarization agents (30 ng/mL M-CSF and 100 ng/mL LPS) or M2 polarization agents (30 ng/mL M-CSF and 2 ng/mL TGFβ1).

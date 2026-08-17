@@ -1,0 +1,22 @@
+L15|BM cells (3 x 10 6 ) from C57BL/6N mice were cultured on 100 mm diameter non-coated plastic culture dishes using RPMI-1640 (Sigma) supplemented with penicillin, streptomycin (Invitrogen), 50 µM 2-mercaptoethanol, 10% heat-inactivated FBS (Gibco) and 10% medium conditioned by murine GM-CSF-producing Chinese hamster ovary (CHO) cells (GM-CSF-CM), a gift from Dr.
+L15|GM-IMs were continuously cultured with 10% GM-CSF-CM.
+L33|To assess bacterial survival, cells were cultured (5 x 10 4  cells/well) in 96-well plates and infected with five-fold serially diluted  E. coli  (DH5, 4.8x10 5 /well) or  S. aureus  (FDA209, ATCC 6538) in 100 µL RPMI medium containing 10% FBS and 3% GM-CSF-CM at 37°C for 16 hr.
+L44|Both were collected after six to 12 days of GM-CSF culture for these experiments.
+L44|When these cells were continuously cultured in 10% GM-CSF-CM over the long-term, cells had a round shape and were loosely attached to the non-coated dish ( Figure 1A ).
+L45|They were cultured in RPMI-1640 supplemented with 10% GM-CSF-CM and 10% FBS.
+L45|Lower panel shows phase contrast photograph of BM cultured with 10% GM-CSF-CM for six days or six months.
+L45|BM cells cultured with 10% GM-CSF-CM for the indicated times, during which cells became GM-IMs.
+L45|(C) SA-β-gal staining of BM cells cultured with 10% GM-CSF-CM for the indicated times, during which cells became GM-IMs.
+L45|Five months cultured GM-IMs was compared with days zero and six of BM culture in 10% GM-CSF-CM, BMMφ and peritoneal macrophages (PMφ).
+L47|They were cultured in RPMI-1640 supplemented with 10% FBS with or without 10% GM-CSF-CM.
+L47|(C) Comparison of the average telomere length ratios (ATLR) between BM cells cultured in 10% GM-CSF-CM for the indicated times during which cells became GM-IMs and indicated cells or murine tails.
+L51|Comparison of gene expression levels between ten months cultured GM-IMs and BMDCs cultured for six days, both in 10% GM-CSF-CM.
+L52|Furthermore, the sorted cells obtained in the narrow gate proliferated well in 10% GM-CSF-CM and gradually became a single population with characteristics of GM-IMs (data not shown).
+L53|(A) GM-IMs cultured for more than nine months in 10% GM-CSF-CM were compared with BMMφ or BMDCs cultured for ten days in 10% GM-CSF-CM.
+L53|(B) BM cells, blood nucleated cells and splenocytes were collected from control mice and mice that had been injected intraperitoneally twice (once per week) with three mL of 10% GM-CSF-CM and were analyzed after two weeks.
+L53|(C) C57BL/6 mice were injected once with three mL of 10% GM-CSF-CM.
+L55|They were mixed with 5 x 10 4  PMφ or GM-IMs and cultured overnight in 100 µL RPMI-1640 and 10% FCS and 3% GM-CSF-CM.
+L57|(E) GM-IMs or BMMφ (1 x 10 6 ) were cultured in six-well plastic plates with RPMI-1640 containing 10% FBS and 3% GM-CSF-CM.
+L69|BM cells were cultured with 10% GM-CSF-CM for the indicated times, during which cells became GM-IMs.
+L69|RNA was extracted from BM cells cultured in 10% GM-CSF-CM for the indicated times, during which cells became GM-IMs, BMMφ or MEF.
+L77|(A) GM-IMs or BMMφ (1 x 10 6 ) were cultured in six-well plates with RPMI-1640 containing 10% FBS and 3% GM-CSF-CM.

@@ -1,0 +1,16 @@
+   4 l24:mouse
+   2 l33:mice
+   1 l9:mouse
+   1 l85:human
+   1 l84:bovine
+   1 l56:mouse
+   1 l48:mouse
+   1 l48:mice
+   1 l33:mouse
+   1 l33:c57bl/6
+   1 l26:bovine
+   1 l24:rat
+   1 l24:c57bl/6
+   1 l24:bovine
+   1 l14:bovine
+   1 l12:bovine

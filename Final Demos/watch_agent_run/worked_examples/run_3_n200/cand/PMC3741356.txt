@@ -1,0 +1,14 @@
+L6|Differentiation with M-CSF produces macrophages that are highly phagocytic, HIV-1-infectable, and upon activation produce a pro-inflammatory cytokine profile similar to blood monocyte-derived macrophages.
+L11|This method utilises the spontaneous differentiation of hESC into embryoid bodies (comprising ectoderm, mesoderm and endoderm), followed by directed differentiation along the myeloid lineage by IL-3 and M-CSF, to produce a homogeneous population of monocytes (esMC), which can be further differentiated into macrophages (esMDM).
+L14|EBs were further differentiated by seeding approximately 20 EBs into a well of a 6-well plate cultured in X-VIVO™ 15 media supplemented with IL-3 and M-CSF.
+L15|After 4 days of EB culture, EBs are transferred to regular tissue culture plates and differentiated in X-VIVO™ 15 media, supplemented with M-CSF and IL-3.
+L15|Non-adherent PSC-MC can be harvested from the supernatant of cultures and plated in X-VIVO™ 15 media+M-CSF without serum, or in RPMI media +10% serum+M-CSF, to generate PSC-MDM.
+L17|Harvested PSC-MC were cultured in M-CSF for 5–7 days to allow the differentiation into PSC-MDM.
+L27|To test whether PSC-MC can differentiate into MDM similar to b-MC, MCs were harvested and differentiated for 7 days in the presence of M-CSF, and their morphology and phenotype were assessed ( Figure 4 ).
+L47|PSC-MC were CD14 + ,CD16 low  CD163 + , and differentiated into functionally relevant macrophages similar to M-CSF-differentiated b-MDM  [13] ,  [30] ,  [31] ,  [32] .
+L69|Culture medium consisted of X-VIVO TM 15 (Lonza), supplemented with 100 ng/mL M-CSF (Invitrogen), 25 ng/mL IL-3 (R&D), 2 mM glutamax (Invitrogen), 100 U/mL penicillin and 100 µg/mL streptomycin (Invitrogen), and 0.055 mM β-mercaptoethanol (Invitrogen).
+L73|1.7×10 4  units/mL) recombinant human M-CSF (R&D Systems), as well as, 2 mM glutamine (PAA), 100 U/mL penicillin and 100 µg/mL streptomycin (PAA).
+L91|The inoculum was removed and replaced with RPMI +10% FCS +100 ng/mL M-CSF.
+L104|B) PSC-MDM were generated xenofree by culturing PSC-MC for 7 days in X-VIVO TM 15 supplemented with M-CSF.
+L121|8 Karlsson KR ,  Cowley S ,  Martinez FO ,  Shaw M ,  Minger SL ,  et al  ( 2008 )  Homogeneous monocytes and macrophages from human embryonic stem cells following coculture-free differentiation in M-CSF and IL-3 .
+L177|37 Karlsson K ,  Cowley S ,  Martinez F ,  Shaw M ,  Minger S ,  et al  ( 2008 )  Homogeneous monocytes and macrophages from human embryonic stem cells following coculture-free differentiation in M-CSF and IL-3 .

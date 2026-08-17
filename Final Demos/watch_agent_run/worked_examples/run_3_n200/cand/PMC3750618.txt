@@ -1,0 +1,17 @@
+L1|Cell density during differentiation can alter the phenotype of bone marrow-derived macrophages
+L7|Bone marrow-derived macrophages (BMDMs) are widely used primary cells for studying macrophage function.
+L9|With reference to previously published methods, bone marrow cells from wild type C57BL/6 mice were plated at either 4 × 10 5  cells or 5 × 10 6  cells per 10 cm and cultured in 20% L-cell conditioned media for 7 days, after which they were analyzed for cell surface markers, production of proinflammatory cytokines, and responsiveness to polarizing signals.
+L13|Bone marrow-derived macrophages;
+L15|Bone marrow-derived macrophages (BMDMs) are commonly used but methods are not conformed
+L17|As a model system to study the function of this highly diversified and complex cell type, bone marrow-derived macrophages (BMDM) differentiated  in vitro  from bone marrow myeloid progenitors have enabled gene function studies in macrophages in general, as well as providing an abundant source of primary cells that are otherwise difficult to obtain.
+L19|To generate BMDMs, the myeloid progenitor cells isolated from the bone marrow are cultured in the presence of macrophage colony-stimulating factor (M-CSF), which signals through its receptor M-CSFR (= c-Fms) to mediate monocytic lineage proliferation and differentiation
+L21|[ 4 - 7 ]), bone marrow (BM) was flushed from femur and tibia of wild-type 9–12 week-old C57BL/6 mice, dispersed into single cell suspension after red blood cell (RBC) lysis and were plated at either 4 × 10 5  cells or 5 × 10 6  cells per 10 cm non-tissue culture-treated petri dishes in 10 mL of 20% L-929-conditioned media (20% L-cell conditioned media, 10% FBS, 2 mM L-glutaMAX, 10 IU/mL penicillin and 10 μg/mL streptomycin in 1× RPMI).
+L23|Flow cytometric analysis of monocytic/macrophage maturation markers of BMDMs generated under low (4 × 10 5 ) or high (5 × 10 6 ) plating concentrations revealed that the same bone marrow cells grown under different densities can give rise to phenotypically distinct populations (Figure
+L29|Figure 1 Differentiation of bone marrow cells at different densities results in phenotypically distinct BMDM populations.
+L41|However, the M-CSF:BM cell ratio required for full BMDM maturation is currently unknown, and published studies typically use 10-30% L929-conditioned media or 20–100 ng/mL recombinant M-CSF over a period of 5–8 days.
+L41|The possibility that M-CSF fell short during differentiation of cells cultured at 5 × 10 6  density may be tested by growing a fixed number of BM cells under different known concentrations of recombinant M-CSF.
+L42|One way to test the effect of stromal cells in BMDM maturation would be to co-culture bone marrow stromal cell line such as M2-10B4 with the myeloid progenitor cells at different ratios and characterizing the final BMDM population.
+L46|BMDM: Bone marrow-derived macrophages;
+L56|Manzanero S Anonymous Generation of mouse bone marrow-derived macrophages Methods in Molecular Biology 2012 844 177 181
+L57|Weischenfeldt J Porse B Bone marrow-derived macrophages (BMM): Isolation and applications Cold Spring Harb Protoc 2008 3 12 1 6
+L58|Zanoni I Ostuni R Granucci F Generation of mouse bone marrow-derived macrophages (BM-MFs) Protoc Exch 2009 10.1038/nprot.2009.136

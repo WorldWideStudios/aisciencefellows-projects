@@ -1,0 +1,4 @@
+L31|To further differentiate EMPs into pMacs and immature TRMs, we dissociated differentiating cultures at D8 and replated cells onto Matrigel-coated tissue culture plates in serum-free media containing M-CSF and IL-34, growth factors that both signal through the CSF1 receptor (CSF1R) to stimulate TRM differentiation and proliferation during embryonic development ( Fig.
+L60|Macrophage media consisted of 75% IMDM with GlutaMAX, 25% F12 with GlutaMAX, 1:100 B27 supplement without vitamin A, 100 μg/mL penicillin-streptomycin, 100 ng/mL mouse M-CSF, and 100 ng/mL mouse IL-34.
+L577||Immature TRM<br>medium|Macrophage base medium containing 100<br>ng/mL mouse M-CSF and 100 ng/mL<br>mouse IL-34|Immature TRM differentiation<br>and expansion medium.|
+L871||Immature TRM<br>medium|Macrophage base medium containing 100 ng/mL mouse<br>M-CSF and 100 ng/mL mouse IL-34|Immature TRM differentiation<br>and expansion medium.|

@@ -1,0 +1,7 @@
+L1|B cells induced regulatory T cells attenuated the classical M1 polarization of mouse bone marrow-derived macrophages
+L10|In the present study, Treg-of-B cells downregulated proinflammatory M1-like markers and partially induced M2-associated genes in unpolarized bone marrow-derived macrophages (BMDMs), as evidenced by RNA expression of  Nos2 ,  Arg1 ,  Retnla ,  Mrc1 , and  Egr2 .
+L18|In the present study, the modulatory capacity of Treg-of-B cells on macrophage polarization was investigated using bone marrow-derived macrophages (BMDMs).
+L23|A total of 6 × 10 6  cells were seeded in 10 mL medium in a petri dish and supplemented with 20 ng/ml M-CSF (576406, BioLegend).
+L23|On Day 3, 5 mL of medium containing 20 ng/ml M-CSF was carefully added.
+L48|BMDMs were induced with high viability and over 90% purity using macrophage colony-stimulating factor (M-CSF) (Supplementary Fig.
+L145|14 **Supplementary Figure 1.** Characterization of bone marrow-derived macrophages (BMDMs).

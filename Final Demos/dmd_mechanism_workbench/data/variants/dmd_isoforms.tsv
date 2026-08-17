@@ -1,0 +1,8 @@
+isoform_id	refseq_transcript	uniprot_base	first_shared_exon	promoter_tissue	primary_expression_tissues	unique_5prime_exon_label
+Dp427m	NM_004006	P11532	1	muscle	skeletal_muscle;cardiac_muscle	1M
+Dp427c	NM_000109	P11532	1	cortical	cortical_neurons;hippocampus	1C
+Dp427p	NM_004009	P11532	1	Purkinje	cerebellar_Purkinje_cells	1P
+Dp260	NM_004010	P11532	30	retinal	retinal_photoreceptors	1R
+Dp140	NM_004012	P11532	45	brain_kidney	brain_glia;kidney	1B3
+Dp116	NM_004014	P11532	56	Schwann	peripheral_nerve_Schwann_cells	1S
+Dp71	NM_004015	P11532	63	ubiquitous	retina;brain;kidney;liver;blood	1G

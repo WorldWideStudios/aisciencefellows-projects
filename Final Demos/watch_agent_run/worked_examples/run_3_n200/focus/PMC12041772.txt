@@ -1,0 +1,15 @@
+L28|The cells were then incubated overnight in complete alpha MEM media (alpha MEM + 1% P/S + 10% FCS), where 100 ng/ml of M-CSF (made in-house using published sequences) was then added, and the macrophages were differentiated for 7 days.
+L28|The resulting monocytes (containing both classical and nonclassical) were cultured at 1 × 10 6  cells/ml in complete alpha MEM + M-CSF for 7 days.
+L38|Adherent cells from PBMC or bone marrow suspensions were cultured for 7 days with M-CSF before being analyzed by flow cytometry.
+L39|Adherent cells were isolated and differentiated with M-CSF for 7 days.
+L40|To identify differences in response to polarization, macrophages were differentiated for 7 days with M-CSF, then polarized for a further 48 hours with IFNγ and LPS (M1) or IL-4 and IL-13 (M2) before being analyzed by flow cytometry.
+L41|Adherent cells were isolated and differentiated with M-CSF for 7 days before being polarized for a further 48 hours, with either IFN-γ and LPS (M1), or IL-4 and IL-13 (M2).
+L44|These CD14 positive cells (similar average purity >90% obtained from both sources) were then incubated for 7 days with M-CSF, and their morphology and phenotype compared.
+L45|CD14 cells from PBMCs or bone marrow suspensions were isolated using magnetic cell sorting, then differentiated with M-CSF for 7 days.
+L47|Cells were isolated from PBMC or bone marrow suspensions and differentiated with M-CSF for 7 days before being polarized for a further 48 hours.
+L49|Overall, CD14-isolated M0 macrophages derived from PBMCs and bone marrow cells (pMDM and bMDM respectively) showed a similar phenotype after 7-days differentiation with M-CSF, but some nonsignificant trends were observed after M1 and M2-like polarization.
+L50|CD14 positive cells were isolated using magnetic isolation from PBMCs or bone marrow suspensions, then incubated for 7 days with M-CSF.
+L53|CD14 positive cells were isolated from PBMCs and human bone marrow suspensions and cultured for 7 days with M-CSF to generate pMDM and bMDM, respectively.
+L55|CD14 positive cells were isolated from PBMCs or bone marrow suspensions and cultured for 7 days with M-CSF, then polarized for 48 hours with IFNγ and LPS (M1) or IL-4 and IL-13 (M2).
+L217|_(hBM), and after two hours adherent cells were cultured with M-CSF for 5 days, showing both macrophages_
+L221|_without M-CSF for 14 days.

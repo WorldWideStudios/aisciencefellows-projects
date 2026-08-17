@@ -1,0 +1,21 @@
+L7|Single-cell sequencing analysis following intracerebroventricular ABCs injection, combined with in vitro microglial culture studies, demonstrated that bone marrow-derived ABCs directly augment microglial reactivity, ultimately exacerbating Aβ neuropathology and cognitive deficits in AD models.
+L7|Our findings reveal the potential involvement of bone marrow-derived B cells in the early cerebral amyloid pathology in two mouse AD models and suggest that these B cells may serve as potential therapeutic candidates for patients with AD.
+L14|In this study, we uncover skull bone marrow-derived B-cell that accelerates early AD pathogenesis.
+L14|These findings suggest that bone marrow-derived B cells are potential therapeutic targets for patients with AD.
+L26|Bone marrow-derived B lymphocytes infiltrate the brain parenchyma in the early AD stage
+L27|3 Skull bone marrow-derived B cells, particularly ABCs, invade the brain parenchyma of 3-month-old 5 × FAD mice.  a ,  b  Schematic diagram depicting dye tracing of bone marrow ( a ).
+L27|The histogram represents the frequency of APC +  and FITC +  ABCs in brain tissue (bottom).  n  = 6 5 × FAD mice.  g  Flow cytometry analysis of ABCs in the brain tissue of 3-month-old 5 × FAD mice and WT counterparts.  n  = 8 mice per group.  h  Bulk RNA sequencing analysis of bone marrow-derived ABCs from 5 × FAD mice and WT counterparts.  n  = 3 mice per group.
+L30|Bone marrow-derived age-associated B cells infiltrate the brain parenchyma in the early AD stage
+L32|To characterize the features of ABCs, we further performed bulk RNA-sequencing analysis of bone marrow-derived ABCs (Fig.
+L37|Bone marrow-derived ABCs accelerate early Aβ pathology and augment microglial reactivity in 5×FAD mice
+L38|5 Bone marrow-derived ABCs augment Aβ pathology, microglial reactivity and cognitive impairment.  a  Schematic diagram of lateral ventricle injection of ABCs in 5×FAD mice.
+L38|5×FAD mice aged 2.5 months were intubated in the lateral ventricle and allowed to recover for 2 weeks, and bone marrow-derived ABCs were injected into the bilateral ventricles once a month until 5 months of age.
+L39|To test the impact of ABC infiltration into the brain parenchyma on Aβ pathology, we sorted bone marrow-derived ABCs (CD19 +  CD11c + ) from 10-month-old 5×FAD mice and injected them into the bilateral ventricles of 3-month-old 5×FAD mice once a month until 5 months of age.
+L43|Blockade of IL-6 signaling reduces the number of bone marrow-derived ABCs, cerebral Aβ pathology and cognitive impairments
+L48|Altogether, these data demonstrate that the blockade of IL-6 signaling can reduce the number of bone marrow-derived ABCs, restrain cerebral Aβ pathology and decrease microglial reactivity during AD progression.
+L52|55  We show that bone marrow-derived ABCs from AD mice overexpress interferon-stimulated genes, cytokines, adhesion molecules, etc., which likely confers greater damage to the AD brain.
+L55|Our study revealed that bone marrow-derived B cells accelerate Aβ pathology and exacerbate microglial reactivity and that immune therapy targeting bone marrow-derived B cells via IL-6R blockade may benefit early AD patients.
+L55|Further investigations are warranted to test whether APOE4 and TREM2 can accelerate the pathological process of AD involving bone marrow-derived B cells.
+L215|This results in augmented output of age-associated B cells that accelerate Aβ neuropathology, suggesting that bone marrow-derived B cells may be a target for the future design of immune therapy for Alzheimer’s disease.
+L232|The bone marrow derived ABCs from 18-month-old APP/PS1 mice were injected into the bilateral ventricles of 10-month-old APP/PS1 mice, then pathological analysis were performed 1-month post-intervention. f Representative images of TS staining in the DG region (left).
+L619|"Bone marrow-derived naïve B lymphocytes

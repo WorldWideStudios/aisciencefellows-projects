@@ -1,0 +1,6 @@
+L26|(A) Protocol for generating gTAMs by culturing healthy murine bone marrow in sterility with tumor-conditioned media (TCM) from different glioma cell lines (GL261, U87, CT2A, and U251) with cytokines M-CSF, IL-4, and IL-10 for 7 d.
+L28|Two million cells per well were plated in 2 mL of a 1:1 ratio of TCM and Hibernate media (ThermoFisher A1247501) supplemented with 10% FBS and 1% P/S, as well as 0.5 µg/mL of M-CSF (Biolegend 576406), 0.5 µg/mL of IL-4 (Biolegend 574306), and 0.5 µg/mL of IL-10 (Biolegend 575806) in a 6-well cell culture plate (Thermo 140675) ( Figure 1A ).
+L28|27 , 34  For M1 macrophage controls, 2 million bone marrow cells were plated in 2 mL of Hibernate media supplemented with 0.5 µg/mL GM-CSF (Biolegend 576304).
+L28|For M2 control macrophages, 2 million bone marrow cells were plated in 2 mL of Hibernate media supplemented with 0.5 µg/mL M-CSF.
+L36|The control medium was the supernatant from bone marrow cells cultured in Hibernate media supplemented with 0.5 µg/mL M-CSF for 7 d.
+L68|We cultured the GL261 cell line in control media (bone marrow cells cultured in Hibernate media with M-CSF for 7 d), GL261_gTAMs_MCM, M1_MCM, or M2_MCM for 24 h and assessed the proliferation rate of the glioma cells via the EdU incorporation assay ( Figure 7A ).

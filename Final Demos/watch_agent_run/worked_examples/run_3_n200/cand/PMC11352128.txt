@@ -1,0 +1,30 @@
+L1|Delta-9-Tetrahydrocannabinol Blocks Bone Marrow-Derived Macrophage Differentiation through Elimination of Reactive Oxygen Species
+L5|Macrophage colony-stimulating factor (M-CSF) induces macrophage differentiation from bone marrow-derived cells (BMDCs). Δ9-tetrahydrocannabiol (THC), a phytocannabinoid from the  Cannabis  plant, has profound anti-inflammatory properties with significant effects on myeloid cells.
+L5|To investigate the effect of THC on macrophage differentiation, we cultured BMDCs with M-CSF in the presence of THC.
+L5|Together, these studies demonstrated that THC blocks M-CSF-induced macrophage differentiation by inhibiting ROS production through both the induction of NRF2-ARE-related gene expression and the prevention of ROS formation via the Fenton Reaction.
+L9|Macrophage colony-stimulating factor (M-CSF) is one such growth factor that drives the differentiation and proliferation of macrophages from HSCs without altering their activation status [ 2 ].
+L9|M-CSF binds to CSFR1, a G-protein-coupled receptor (GPCR), which results in the activation of PU.1 transcription factor and subsequently induces macrophage differentiation [ 7 , 8 ].
+L9|The M-CSF/CSFR1 axis is currently the focal point for drug development targeting M-CSF differentiation in disease states [ 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 ].
+L9|Outside of transcriptional regulation of this system, studies have shown that reactive oxygen species (ROS) are also required for M-CSF-induced macrophage differentiation [ 10 , 11 ].
+L10|The reliance of macrophage differentiation upon the M-CSF/CSFR1 axis and iron-dependent intracellular ROS production sets the stage for Δ9-Tetrahydrocannabinol (THC) as a potential target molecule for the interruption of this physiological process.
+L11|M-CSF-induced macrophage differentiation from bone marrow-derived cells (BMDCs) is classically used as an in vitro model for macrophage studies.
+L30|To investigate any potential THC-mediated effects on macrophage differentiation, THC was added to bone marrow-derived cells (BMDCs) along with M-CSF, and the differentiation status was examined over a 120 h period.
+L30|To confirm THC’s effect on macrophage differentiation, a dose-dependent response assay was run utilizing 3 µM, 15 µM, and 30 µM THC under the same M-CSF and LPS culture conditions ( Figure 1 C,D).
+L30|To rule out the possibility that THC was causing changes in cell viability, we measured the cell viability at different time points and found that while untreated cells showed a decrease in viability at 120 h when compared to 48 h, cells cultured with M-CSF showed an increase in cell viability, while cells cultured with M-CSF + THC showed similar cell viability at 120 h when compared to 48 h of culture ( Figure 1 E).
+L32|We used the same culture conditions as used for BMDCs from wild-type C57BL/6 mice (30 µM THC and 1 µg/mL M-CSF at 0 h, 100 ng/mL LPS at 96 h), and the flow cytometry was run at 120 h.
+L35|To that end, we analyzed Veh + M-CSF- or THC + M-CSF-treated cultures for macrophage differentiation at 48 and 72 h ( Figure 3 A,B).
+L35|At 48 h, the cells cultured with Veh + M-CSF showed early signs of macrophage differentiation while THC + M-CSF cultures showed decreased macrophage differentiation.
+L35|The VEH + M-CSF group saw a significant increase in genes that have been shown to be upregulated during M-CSF-induced macrophage differentiation [ 30 ], such as  Irf4 ,  Irf7 ,  Plau , and  Nrg1  ( Figure 3 L) while THC + M-CSF-treated cells showed a decreased expression of these genes.
+L35|In all, the VEH + M-CSF group displayed an expression profile expected for M-CSF-induced macrophage differentiation from murine bone marrow [ 30 ].
+L36|Overall, the mRNA signature of the VEH group matched that of an M-CSF-induced differentiating macrophage, while the THC group saw an upregulation in a significant number of ARE and iron-related genes.
+L39|BHA, a synthetic antioxidant, has previously been shown to block M-CSF-induced macrophage differentiation by preventing the production of ROS [ 10 ].
+L40|To further study the role of iron in macrophage differentiation in relation to ROS, the iron chelator, Deferoxamine (DFO), was added to the VEH + M-CSF and THC + M-CSF groups, and ROS levels and macrophage differentiation were examined.
+L40|At 120 h, 50 uM DFO blocked macrophage differentiation, with macrophage percentages similar to THC + M-CSF and THC + M-CSF + DFO ( Figure 4 E).
+L42|Our study demonstrated that when THC was added to BMDCs prior to the addition of M-CSF, macrophage differentiation was inhibited in a dose-dependent manner.
+L44|These results suggested that THC’s ability to block ROS production may lead to the halting of macrophage differentiation, as ROS is essential to M-CSF-induced macrophage differentiation.
+L44|A previous study by Zhang et al. showed that adding an antioxidant alongside M-CSF leads to blockage of macrophage differentiation and that ROS is necessary for proper M-CSF-mediated macrophage differentiation [ 10 ].
+L44|Xie et al. have shown that the addition of iron can induce a macrophage-like phenotype in osteoclast precursor cells, as well as showing the effects DFO has on M-CSF and RANKL differentiation osteoclasts [ 60 ].
+L44|Our study has further shown that the chelation of iron can prevent the M-CSF-induced differentiation of macrophages.
+L45|In summary, this study has shown that THC, through both the induction of NRF2-ARE-related gene expression and its ability to block the Fenton reaction, attenuates ROS production, thus preventing M-CSF-induced macrophage differentiation.
+L46|( A ) Representative flow cytometry pseudocolor plots for BMDCs following culture with M-CSF and the addition of LPS at 96 h.
+L48|Figure 3 Analysis of BMDCs 48 h after culture with M-CSF.

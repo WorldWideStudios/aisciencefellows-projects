@@ -1,0 +1,15 @@
+L1|Isolation of porcine circovirus 3 using primary porcine bone marrow-derived cells
+L7|In this study, we aimed to isolate PCV3 using primary porcine bone marrow-derived cells.
+L7|These results reflect that primary porcine bone marrow-derived mesenchymal cells are permissive to PCV3 and continuously replicate a high copy number of the PCV3 genome.
+L7|These findings regarding the high replication rate of PCV3 in bone marrow-derived mesenchymal cells could enhance our understanding of PCV3 pathogenicity.
+L13|Given the limited knowledge about isolating PCV3 in cell cultures, we attempted to isolate PCV3 using primary porcine bone marrow-derived cells and conducted comprehensive analyses to explore the growth of this virus in these cells.
+L13|Here, we, for the first time, demonstrate that porcine bone marrow-derived mesenchymal cells are permissive to PCV3 and can highly replicate the PCV3 genome.
+L27|1 Morphology of the primary porcine bone marrow-derived cells.
+L29|3 IFA of porcine bone marrow-derived cells.
+L35|In this study, we, for the first time, isolated PCV3 using primary porcine bone marrow-derived mesenchymal cells, which effectively supported PCV3 replication.
+L35|In porcine bone marrow-derived mesenchymal cells, PCV3 exhibited a decline in the growth curve for 10 days post-infection, followed by increased growth.
+L35|PCV3 Cap was detected in the cytoplasm and nuclei of the infected cells through IFA.These outcomes reflect that primary porcine bone marrow-derived mesenchymal cells are useful tools for isolating and replicating PCV3.
+L36|Using long-term in vitro cultivation of bone marrow-derived porcine MSCs for 20 passages, Zimmermann et al. demonstrated that the expression of surface markers varied with the passage number [ 11 ].
+L36|These data suggest that the cells we used have mesenchymal characteristics and that PCV3 is likely to replicate in bone marrow-derived mesenchymal cells.
+L39|In conclusion, for the first time, we demonstrated that PCV3 persistently infects and replicates in porcine bone marrow-derived mesenchymal cells.
+L39|Establishing a cell line from porcine bone marrow-derived mesenchymal cells could considerably advance future PCV3 research.

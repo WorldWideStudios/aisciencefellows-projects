@@ -1,0 +1,13 @@
+L1|B10 Promotes Polarization and Pro-Resolving Functions of Bone Marrow Derived Macrophages (BMDM) Through PD-1 Activation
+L5|To investigate this, B-10 cells derived from mouse spleens were co-cultured with bone marrow-derived macrophages (BMDMs) from either wild-type (WT) or PD-1 knockout (PD-1 KO) mice, using both direct contact and Transwell setups.
+L18|Bone Marrow-Derived Macrophage Isolation and Culture
+L19|Bone marrow cells were collected by flushing the femoral and tibial bones and were cultured in DMEM (Gibco, Grand Island, NY, USA) containing 10% FBS, 1% Anti-Anti, 50 μM 2-ME (Medium A) with the addition of m-CSF (20 ng/mL, Biolegend, San Diego, CA, USA) for 2 days.
+L19|After this period, the attached cells were collected as bone marrow-derived macrophages (BMDMs) and utilized for the subsequent co-culture procedure.
+L64|In summary, this study demonstrated that PD-L1/PD-1 engagement increased the population of PD-1+ M2 macrophages and enhanced their phagocytic activity and production of specific SPMs (RvD2 and 15-epi LXA4) in primary bone marrow-derived macrophages from mice.
+L64|In the current study, we utilized primary bone marrow-derived macrophages.
+L64|However, we consistently demonstrated how B-10 cells influence bone marrow-derived macrophages to alleviate inflammatory responses, as mentioned above.
+L67|Bone marrow-derived macrophages (BMDMs) were harvested for 48 h with either naïve-B cells (B) or B-10 at a 1:5 ratio, either in direct contact or separated by a Transwell system (Tr).
+L68|Bone marrow-derived macrophages (BMDMs) were incubated with naïve-B lymphocytes (B) or B-10 (B-10) at a 1:5 ratio, either in direct contact or separated by a Transwell system (Tr), for 48 h.
+L70|Bone marrow-derived macrophages (BMDM) were incubated with either naïve-B lymphocyte (B) or B-10 at a 1:5 ratio, either in direct contact or separated by a Transwell (Tr) system, for 48 h.
+L72|Bone marrow-derived macrophages (BMDMs) from wild-type C57BL/6 mice (WT M0) or PD-1 knockout mice (B6.Cg-Pdcd1tm1.1Shr/J;
+L73|Bone marrow-derived macrophages (BMDMs) from wild-type C57BL/6 mice (WT M0) or PD-1 knockout mice (B6.Cg-Pdcd1^tm1.1Shr^/J;

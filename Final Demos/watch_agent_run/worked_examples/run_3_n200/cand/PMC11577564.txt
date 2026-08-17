@@ -1,0 +1,7 @@
+L1|G protein-coupled receptor 91 promotes the inflammatory response to  Porphyromonas gingivalis  in bone marrow-derived macrophages
+L7|This study aimed to investigate the role of G protein-coupled receptor 91(GPR91) during the inflammatory response to  Porphyromonas gingivalis  ( P. gingivalis ) in bone marrow-derived macrophages (BMDMs).
+L9|Bone marrow-derived macrophages;
+L20|The bone marrow cells were differentiated into murine bone marrow-derived macrophages (BMDMs) as previously described [ 17 ] by using 1640 conditioned medium for 7 days.
+L20|The culture medium was composed of RPMI 1640 medium (Gibco, USA) with 10 % fetal bovine serum (FBS) (Gibco, Australia), 1 % penicillin/streptomycin solution, and 30 % L929 conditioned medium.
+L26|BMDMs differentiated from the bone marrow cells were seeded at a density of 1 × 10 6  cells in a 6-well cell culture plate and treated with  P.gingivalis  for 24 h.
+L47|In this study, bone marrow-derived macrophages (BMDMs) were initially cultured with  P. gingivalis  at multiplicities of infection (MOI) of 10, 50, and 250 for 4 h.

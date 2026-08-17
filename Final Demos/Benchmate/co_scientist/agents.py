@@ -1,0 +1,507 @@
+"""The seven Co-Scientist agents, implemented as LangGraph nodes.
+
+Each node takes the shared state, does its thing, and returns updates.
+LangGraph merges them back into state.
+"""
+from __future__ import annotations
+
+import random
+import re
+from typing import Any
+
+from .elo import schedule_matches, update_elo
+from .llm import call, call_json
+from .state import (
+    CoScientistState, Hypothesis, MetaCritique, INITIAL_ELO,
+)
+from .tools import (
+    pubmed_search, embed, cosine,
+    available_geneformer_genes, geneformer_neighbors,
+)
+from .ontology import (
+    ontology_context_for, ontology_similarity, ontology_query_terms,
+)
+from .assay import available_assays, assay_evidence, summarize as _assay_summarize
+
+
+SYSTEM_BASE = (
+    "You are a domain expert biomedical scientist participating in a "
+    "structured hypothesis-generation system. Be precise, cite evidence "
+    "when asked, and flag uncertainty explicitly."
+)
+
+
+def _addendum(state: CoScientistState) -> str:
+    """Inject Meta-review feedback into every agent's prompt — this is the
+    'learning without backprop' mechanism from the paper."""
+    crit = state.get("meta_critique")
+    return crit.as_prompt_addendum() if crit else ""
+
+
+MAX_UNPROMPTED_GENES = 6      # above this, list names instead of full blocks
+
+
+def _gf_block(sym: str, top_n: int) -> str:
+    r = geneformer_neighbors(sym, top_n=top_n)
+    if "error" in r or not r.get("affected_genes"):
+        return ""
+    lines = [
+        f"  {ag['symbol']:>10}  Δcos={ag['cosine_shift']:.3f}  N={ag['n_detections']}"
+        for ag in r["affected_genes"]
+    ]
+    return (f"In-silico KO of {sym} — top {len(lines)} affected genes "
+            f"(Δcos = predicted embedding shift, larger = bigger effect):\n"
+            + "\n".join(lines))
+
+
+def _geneformer_context_for(text: str, top_n: int = 10) -> str:
+    """Cached perturbation evidence, as a prompt-ready block.
+
+    Genes NAMED in `text` get their full affected-gene table. But the cache is
+    also *always advertised*, because a goal like "what ERAD-pathway genes drive
+    bortezomib resistance?" is obviously about SYVN1/MARCHF6/TXNDC15 without
+    ever spelling them out — and the old literal-match-only behaviour silently
+    ignored the user's own data in exactly that case.
+
+    So: mentioned genes → full tables; the rest of the cache → a shorter table
+    each (small caches) or just the names (large ones), clearly labelled as
+    available-but-unrequested so the agent can use them if they're relevant.
+    """
+    available = available_geneformer_genes()
+    if not available:
+        return ""
+
+    mentioned = [g for g in available if re.search(rf"\b{re.escape(g)}\b", text)]
+    others = [g for g in available if g not in mentioned]
+
+    blocks = [b for b in (_gf_block(s, top_n) for s in mentioned) if b]
+
+    if others:
+        if len(others) <= MAX_UNPROMPTED_GENES:
+            extra = [b for b in (_gf_block(s, 5) for s in others) if b]
+            if extra:
+                blocks.append(
+                    "ALSO IN THE CACHE — the user has run these perturbations "
+                    "too. They were not named in the text above, but use them if "
+                    "they bear on the question:\n\n" + "\n\n".join(extra))
+        else:
+            blocks.append(
+                "ALSO IN THE CACHE (not named above, but available as evidence "
+                "if relevant): " + ", ".join(others))
+
+    return "\n\n".join(blocks)
+
+
+def _assay_keywords(rec: dict) -> set[str]:
+    """Normalised keywords that tie a bench-assay record to hypothesis text:
+    the label parts (e.g. p97, CB5083) and the drug's leading token."""
+    kws = set()
+    for part in re.split(r"[_\W]+", rec.get("hypothesis_label", "")):
+        if len(part) >= 3:
+            kws.add(part.lower().replace("-", ""))
+    m = re.match(r"\s*([A-Za-z0-9\-]{3,})", rec.get("drug", ""))
+    if m:
+        kws.add(m.group(1).lower().replace("-", ""))
+    return kws
+
+
+def _text_has(text: str, kw: str) -> bool:
+    return kw in re.sub(r"[\W_]+", "", text.lower())
+
+
+_ASSAY_MATCH_CACHE: dict[str, list[dict]] = {}
+
+
+def _match_assays(text: str) -> list[dict]:
+    """Bench-assay records that bear on `text`. Keyword prefilter (fast, free)
+    UNION a semantic pass (an LLM decides which results share the drug, target,
+    mechanism, or cell system — catching matches a substring search misses).
+    Cached per text so a run doesn't re-ask. Degrades to keyword-only on error."""
+    if text in _ASSAY_MATCH_CACHE:
+        return _ASSAY_MATCH_CACHE[text]
+    recs = [r for r in (assay_evidence(l) for l in available_assays()) if r]
+    if not recs:
+        _ASSAY_MATCH_CACHE[text] = []
+        return []
+
+    matched = {r["hypothesis_label"]: r
+               for r in recs if any(_text_has(text, k) for k in _assay_keywords(r))}
+    try:
+        listing = "\n".join(
+            f"{i}: {r['drug']} — target/label {r['hypothesis_label']}, "
+            f"{r['cell_line']} ({r['viability']['verdict']})"
+            for i, r in enumerate(recs))
+        out = call_json(
+            f"Hypothesis:\n{text}\n\nBench results on record:\n{listing}\n\n"
+            "Return JSON {\"relevant\": [indices]} listing ONLY the bench results "
+            "that directly bear on this hypothesis — same drug, molecular target, "
+            "mechanism, or cell system. Empty list if none apply.",
+            role="ranking", max_tokens=200, temperature=0.0)
+        for i in out.get("relevant", []):
+            i = int(i)
+            if 0 <= i < len(recs):
+                matched[recs[i]["hypothesis_label"]] = recs[i]
+    except Exception:
+        pass  # keyword matches stand on their own
+
+    result = list(matched.values())
+    _ASSAY_MATCH_CACHE[text] = result
+    return result
+
+
+def _assay_context_for(text: str) -> str:
+    """Matched bench-assay evidence as a prompt-ready block. Empty if none."""
+    matched = _match_assays(text)
+    return "\n\n".join(_assay_summarize(r) for r in matched) if matched else ""
+
+
+# Deterministic Elo nudge from a bench result — a real ranking effect, not just
+# a persuasive prompt. A refuting assay pushes a hypothesis down; a supporting
+# one lifts it. Applied once per (hypothesis, assay) pair — see the marker guard.
+BENCH_ELO_ADJ = {"down-weight": -60.0, "up-weight": 40.0}
+
+
+def apply_bench_adjustments(hypotheses: list) -> list:
+    """After the tournament, shift each hypothesis's Elo by any matching bench
+    result. Idempotent: a `[bench:<label>]` note records that a given assay was
+    already applied, so re-running Ranking each cycle won't compound it."""
+    for h in hypotheses:
+        for r in _match_assays(f"{h.statement} {h.rationale} {h.experiment}"):
+            marker = f"[bench:{r['hypothesis_label']}]"
+            if any(marker in n for n in h.review_notes):
+                continue
+            adj = BENCH_ELO_ADJ.get(r["direction_for_benchmate"], 0.0)
+            if adj:
+                h.elo += adj
+                h.review_notes.append(
+                    f"{marker} Elo {adj:+.0f}: {r['drug']} → "
+                    f"{r['viability']['verdict']} ({r['direction_for_benchmate']}).")
+    return hypotheses
+
+
+def _assay_bulletin() -> str:
+    """Compact one-line summary of every bench result on record — injected into
+    Generation so new hypotheses account for what the bench has already shown."""
+    recs = [assay_evidence(l) for l in available_assays()]
+    recs = [r for r in recs if r]
+    if not recs:
+        return ""
+    lines = [
+        f"  - {r['hypothesis_label']}: {r['drug']} on {r['cell_line']} → "
+        f"{r['viability']['verdict']} (action: {r['direction_for_benchmate']})"
+        for r in recs
+    ]
+    return ("\n\nBENCH RESULTS ON RECORD — real assay outcomes; weight hypotheses "
+            "accordingly (down-weight ideas the bench has already refuted, and do "
+            "not simply re-propose them):\n" + "\n".join(lines) + "\n")
+
+
+def _ontology_block(text: str) -> str:
+    """Canonical ontology grounding for the entities in `text`, as a prompt
+    block. Empty string when nothing resolves or OntoMCP is unreachable, so it
+    can be concatenated into any prompt unconditionally."""
+    ctx = ontology_context_for(text)
+    if not ctx:
+        return ""
+    return ("\n\nKNOWN-BIOLOGY GROUNDING — entities resolved to canonical ontology "
+            "terms. Flag any claim that CONTRADICTS one of these facts (e.g. wrong "
+            "molecular role/type) as a flaw; but do NOT penalize a hypothesis just "
+            "because an entity is missing — absence is not evidence against "
+            "novelty:\n" + ctx + "\n")
+
+
+# ============================================================
+# 1. Supervisor — parses goal, picks next action
+# ============================================================
+
+def supervisor(state: CoScientistState) -> dict[str, Any]:
+    if "plan_config" not in state:
+        plan = call_json(
+            f"Research goal: {state['research_goal']}"
+            f"{_ontology_block(state['research_goal'])}\n\n"
+            "Extract a research-plan configuration. Output JSON with keys:\n"
+            "  evaluation_criteria: list of 3-5 criteria for judging hypotheses\n"
+            "  constraints:        any explicit constraints from the goal\n"
+            "  initial_search_terms: 3-5 PubMed search queries to seed the work "
+            "(prefer the canonical ontology terms above where they fit)",
+            system=SYSTEM_BASE, role="supervisor",
+        )
+        return {"plan_config": plan, "iteration": 0,
+                "hypotheses": [], "meta_critique": MetaCritique(),
+                "next_action": "generation"}
+
+    # Decide what to do next based on system state.
+    n = len(state.get("hypotheses", []))
+    it = state.get("iteration", 0)
+
+    if n < 6:
+        action = "generation"
+    elif it % 4 == 1:
+        action = "reflection"
+    elif it % 4 == 2:
+        action = "ranking"
+    elif it % 4 == 3:
+        action = "evolution"
+    else:
+        action = "meta_review"
+
+    return {"next_action": action, "iteration": it + 1}
+
+
+# ============================================================
+# 2. Generation — proposes new hypotheses
+# ============================================================
+
+def generation(state: CoScientistState) -> dict[str, Any]:
+    goal = state["research_goal"]
+    plan = state["plan_config"]
+
+    # Pull literature context. Expand the seed queries with canonical ontology
+    # terms for the goal so retrieval keys off standard names, not just phrasing.
+    queries = list(plan.get("initial_search_terms", [goal])[:3])
+    for t in ontology_query_terms(goal, max_terms=2):
+        if t not in queries:
+            queries.append(t)
+    lit_blocks = []
+    for q in queries:
+        try:
+            papers = pubmed_search(q, max_results=3)
+            lit_blocks.extend(p.short() for p in papers)
+        except Exception as e:
+            lit_blocks.append(f"(PubMed error for '{q}': {e})")
+    lit = "\n\n".join(lit_blocks) or "(no literature retrieved)"
+
+    # Papers the user pinned in Add evidence. Added to the agent's own search
+    # rather than replacing it: the agent's queries find things the user would
+    # not have looked for, and the pinned set says what the user already knows
+    # matters.
+    try:
+        from .literature import prompt_block as _pinned_block
+        lit += _pinned_block()
+    except Exception:
+        pass
+
+    # Geneformer evidence if the goal mentions any gene we have data for.
+    gf = _geneformer_context_for(goal, top_n=10)
+    gf_block = (f"\n\nCached Geneformer in-silico perturbation evidence "
+                f"(use to ground hypotheses in real perturbation data):\n{gf}\n"
+                if gf else "")
+
+    # Canonical ontology grounding for the goal's entities.
+    onto_block = _ontology_block(goal)
+
+    # Bench results on record — the "learn" arrow of the loop.
+    assay_block = _assay_bulletin()
+
+    existing = state.get("hypotheses", [])
+    existing_summary = "\n".join(
+        f"- {h.statement[:120]}" for h in sorted(existing, key=lambda h: -h.elo)[:5]
+    ) or "(none yet)"
+
+    out = call_json(
+        f"Research goal: {goal}\n\n"
+        f"Relevant literature:\n{lit}"
+        f"{gf_block}"
+        f"{onto_block}"
+        f"{assay_block}\n"
+        f"Existing top hypotheses (do NOT duplicate):\n{existing_summary}\n\n"
+        "Propose 3 NOVEL, testable hypotheses that address the goal. For each, "
+        "output an object with keys: statement, rationale, experiment, citations "
+        "(list of PMIDs from the literature above, if applicable). Return a JSON "
+        "object: {\"hypotheses\": [..., ..., ...]}."
+        + _addendum(state),
+        system=SYSTEM_BASE, role="generation",
+        temperature=0.9, max_tokens=3000,
+    )
+
+    new = [Hypothesis.new(**h) for h in out["hypotheses"]]
+    return {"hypotheses": existing + new}
+
+
+# ============================================================
+# 3. Reflection — critically reviews hypotheses
+# ============================================================
+
+def reflection(state: CoScientistState) -> dict[str, Any]:
+    hypotheses = state["hypotheses"]
+    # Review the most under-reviewed hypotheses first.
+    targets = sorted(hypotheses, key=lambda h: len(h.review_notes))[:3]
+    for h in targets:
+        joined = f"{h.statement} {h.rationale} {h.experiment}"
+        gf = _geneformer_context_for(joined, top_n=8)
+        gf_block = (f"\n\nGeneformer perturbation evidence for genes "
+                    f"mentioned above:\n{gf}\n"
+                    f"Use this to check whether the hypothesis's mechanism "
+                    f"is consistent with the predicted affected genes."
+                    if gf else "")
+        onto_block = _ontology_block(joined)
+        assay = _assay_context_for(joined)
+        assay_block = (f"\n\nBENCH ASSAY EVIDENCE for this hypothesis — weigh it "
+                       f"heavily; a bench result outranks a plausible story:\n{assay}\n"
+                       if assay else "")
+        critique = call(
+            f"Critically review this hypothesis as a peer reviewer.\n\n"
+            f"Statement: {h.statement}\n"
+            f"Rationale: {h.rationale}\n"
+            f"Proposed experiment: {h.experiment}"
+            f"{gf_block}"
+            f"{onto_block}"
+            f"{assay_block}\n\n"
+            "In 4 sentences max, identify: (a) the strongest objection, "
+            "(b) whether the experiment as designed could falsify it, "
+            "(c) one concrete improvement. If the hypothesis names an entity "
+            "that did not resolve to a canonical term above, or asserts a link "
+            "the grounding doesn't support, note it — but do not penalise "
+            "genuinely novel biology merely for being absent from the ontology."
+            + _addendum(state),
+            system=SYSTEM_BASE, role="reflection",
+            temperature=0.4, max_tokens=400,
+        )
+        h.review_notes.append(critique.strip())
+    return {"hypotheses": hypotheses}
+
+
+# ============================================================
+# 4. Ranking — Elo tournament via LLM-as-judge scientific debate
+# ============================================================
+
+def ranking(state: CoScientistState) -> dict[str, Any]:
+    hypotheses = state["hypotheses"]
+    matches = schedule_matches(hypotheses, n_matches=state.get("n_matches", 8))
+    criteria = state["plan_config"].get("evaluation_criteria",
+                                        ["novelty", "plausibility", "testability"])
+    crit_str = ", ".join(criteria)
+
+    for a, b in matches:
+        verdict = call_json(
+            f"Two competing hypotheses. Judge which is better.\n\n"
+            f"A: {a.statement}\n   rationale: {a.rationale}\n\n"
+            f"B: {b.statement}\n   rationale: {b.rationale}\n\n"
+            f"Evaluation criteria: {crit_str}\n\n"
+            "Output JSON: {\"winner\": \"A\" | \"B\" | \"draw\", "
+            "\"reason\": \"one sentence under 40 words\"}"
+            + _addendum(state),
+            system=SYSTEM_BASE, role="ranking",
+            temperature=0.2, max_tokens=500,
+        )
+        if verdict["winner"] == "A":
+            update_elo(a, b)
+        elif verdict["winner"] == "B":
+            update_elo(b, a)
+        else:
+            update_elo(a, b, draw=True)
+
+    # Bench evidence gets a deterministic say in the ranking, not just a prompt.
+    apply_bench_adjustments(hypotheses)
+    return {"hypotheses": hypotheses}
+
+
+# ============================================================
+# 5. Proximity — clusters similar hypotheses (de-dup hint for Ranking)
+# ============================================================
+
+def proximity(state: CoScientistState) -> dict[str, Any]:
+    """Flag near-duplicate hypotheses (a de-dup / diversity hint for Ranking).
+
+    Two hypotheses are "the same idea" when they target the same biology, even
+    if worded differently. So we prefer **ontology similarity** — the Jaccard
+    overlap of the canonical entities (genes / pathways / diseases) each one
+    resolves to — and fall back to the placeholder hash embedding only when a
+    pair has nothing resolvable (or OntoMCP is down). Logged, not mutating.
+    """
+    hyps = state["hypotheses"]
+    texts = [f"{h.statement} {h.rationale} {h.experiment}" for h in hyps]
+    embeds = [embed(h.statement) for h in hyps]
+
+    onto_dupes: list[tuple[str, str, float]] = []
+    emb_dupes: list[tuple[str, str, float]] = []
+    for i in range(len(hyps)):
+        for j in range(i + 1, len(hyps)):
+            osim = ontology_similarity(texts[i], texts[j])
+            if osim is not None:
+                if osim > 0.6:
+                    onto_dupes.append((hyps[i].id, hyps[j].id, osim))
+            else:
+                if cosine(embeds[i], embeds[j]) > 0.85:
+                    emb_dupes.append((hyps[i].id, hyps[j].id, 0.0))
+
+    if onto_dupes or emb_dupes:
+        print(f"[proximity] {len(onto_dupes)} near-duplicate pairs by shared "
+              f"ontology entities; {len(emb_dupes)} more by text-embedding "
+              f"fallback (unresolved pairs)")
+    return {}
+
+
+# ============================================================
+# 6. Evolution — refines the top hypotheses into new variants
+# ============================================================
+
+def evolution(state: CoScientistState) -> dict[str, Any]:
+    hyps = state["hypotheses"]
+    if not hyps:
+        return {}
+    top = sorted(hyps, key=lambda h: -h.elo)[:3]
+
+    strategies = [
+        "Sharpen this hypothesis by making the proposed experiment more falsifiable.",
+        "Combine the strongest elements of this with another top hypothesis "
+        "below it in the ranking.",
+        "Generate a more parsimonious version that makes a stronger commitment.",
+    ]
+    new_hyps: list[Hypothesis] = []
+    for h, strategy in zip(top, strategies):
+        out = call_json(
+            f"Improve this hypothesis. Strategy: {strategy}\n\n"
+            f"Original statement: {h.statement}\n"
+            f"Original rationale: {h.rationale}\n"
+            f"Original experiment: {h.experiment}\n"
+            f"Reviewer critiques: {' | '.join(h.review_notes[-2:]) or 'none'}\n\n"
+            "Output a JSON object with keys: statement, rationale, experiment. "
+            "Keep the experiment field under 1500 words so the JSON closes."
+            + _addendum(state),
+            system=SYSTEM_BASE, role="evolution",
+            temperature=0.6, max_tokens=4000,
+        )
+        new = Hypothesis.new(
+            statement=out["statement"], rationale=out["rationale"],
+            experiment=out["experiment"], parent_ids=[h.id],
+            generation=h.generation + 1,
+        )
+        new_hyps.append(new)
+    return {"hypotheses": hyps + new_hyps}
+
+
+# ============================================================
+# 7. Meta-review — synthesises patterns into prompt-level feedback
+# ============================================================
+
+def meta_review(state: CoScientistState) -> dict[str, Any]:
+    hyps = state["hypotheses"]
+    if not hyps:
+        return {}
+
+    top = sorted(hyps, key=lambda h: -h.elo)[:5]
+    bottom = sorted(hyps, key=lambda h: h.elo)[:5]
+
+    sample = "TOP-RANKED HYPOTHESES:\n" + "\n".join(
+        f"- ({h.elo:.0f}) {h.statement[:200]}" for h in top
+    ) + "\n\nBOTTOM-RANKED HYPOTHESES:\n" + "\n".join(
+        f"- ({h.elo:.0f}) {h.statement[:200]}" for h in bottom
+    )
+
+    out = call_json(
+        f"You are conducting a meta-review across this tournament's results.\n\n"
+        f"{sample}\n\nSelected reviewer critiques across hypotheses:\n"
+        + "\n".join(f"- {n}" for h in hyps for n in h.review_notes[:1])
+        + "\n\nIdentify recurring issues that pulled bottom hypotheses down, "
+        "and successful patterns that lifted top hypotheses up. "
+        "Output JSON: {\"recurring_issues\": [str, ...], "
+        "\"successful_patterns\": [str, ...]} with at most 4 of each, "
+        "phrased as actionable rules.",
+        system=SYSTEM_BASE, role="meta_review",
+        temperature=0.3, max_tokens=900,
+    )
+    return {"meta_critique": MetaCritique(
+        recurring_issues=out.get("recurring_issues", []),
+        successful_patterns=out.get("successful_patterns", []),
+    )}

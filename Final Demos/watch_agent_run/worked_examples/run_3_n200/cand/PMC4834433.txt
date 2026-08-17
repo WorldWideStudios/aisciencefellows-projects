@@ -1,0 +1,8 @@
+L6|To examine whether these susceptibility differences between inbred mouse strains are due to the insufficient production of effector molecules in the early stage of innate immunity, we investigated mycobacteriostatic function of bone marrow-derived macrophages (BMDMs) in resistant (BALB/c and C57BL/6) and susceptible strains (DBA/2) that were infected with virulent  M. tuberculosis  (H37Rv) or attenuated  M. tuberculosis  (H37Ra).
+L11|In this report, to verify the hypothesis that innate differences in the function of macrophages amongst inbred mouse strains could influence susceptibility to  M. tuberculosis  infection, we examined bone marrow-derived macrophages (BMDMs) in three strains that were infected with either low or very low levels of  M. tuberculosis .
+L14|All mice were sacrificed when they were 8–10 weeks-old to isolate bone marrow-derived cells.
+L18|Cells were grown in culture dishes in the presence of 30% of the supernatant obtained from L929 cells as a source of M-CSF for 4 days.
+L20|Bone marrow-derived macrophages were infected with the  M. tuberculosis  H37Rv or H37Ra strain at an infection ratio of 0.1:1, 1:1, or 5:1.
+L30|Bone marrow-derived macrophages (1 × 10 5  cells) were infected with H37Rv  M. tuberculosis  at an MOI of 1 for 4 h, washed with PBS, and cultured for 12 or 72 h in 6-well plates at 37°C with 5% CO 2 .
+L32|Bone marrow-derived macrophages were incubated in 96-well plate and infected with H37Rv or H37Ra at MOI of 1 for 4 h.
+L36|Bone marrow-derived macrophages were allowed to adhere to coverslips in 12-well plates and the cells were then infected with fluorescein (FITC)-labeled  M. tuberculosis  H37Rv or H37Ra at an MOI of 5 for 4 h.

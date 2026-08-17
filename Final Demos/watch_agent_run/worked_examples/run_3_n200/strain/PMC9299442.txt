@@ -1,0 +1,16 @@
+   2 l50:mouse
+   2 l28:mouse
+   1 l40:mouse
+   1 l38:rat
+   1 l301:human
+   1 l299:human
+   1 l277:human
+   1 l269:mouse
+   1 l267:human
+   1 l266:human
+   1 l261:mouse
+   1 l26:mice
+   1 l26:c57bl/6j
+   1 l24:rat
+   1 l24:mouse
+   1 l1:mouse

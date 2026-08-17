@@ -1,0 +1,17 @@
+L1|A simple method to increase the proportion of bone marrow-derived macrophages positive for M-CSFR using the reducing agent dithiothreitol (DTT)
+L8|Bone marrow-derived macrophages;
+L10|Isolated bone marrow cells and isolated peritoneal cells were stained with phycoerythrin (PE)-conjugated anti-macrophage colony-stimulating factor receptor (M-CSFR) antibody and fluorescein isothiocyanate (FITC)-conjugated anti-F4/80 antibody and were analyzed by flow cytometry.
+L10|(Bottom) The proportion of macrophages that are positive for M-CSFR (%) is shown. n = 5.
+L11|It has been reported that only 2.4 ± 0.4% of spleen-derived cultured macrophages, 3.6 ± 0.2% of peritoneal cultured macrophages, and 65.4 ± 3.0% of bone marrow (BM)-cultured macrophages (MΦ) express macrophage colony-stimulating factor receptor (M-CSFR, CSF-1R, c-fms, CD115) on the plasma membrane [ 1 ], indicating that only a small proportion of macrophages is positive for M-CSFR.
+L11|In our experiment, 95.3 ± 0.8% of isolated peritoneal macrophages expressed M-CSFR and 37.8 ± 2.7% of isolated BM-MΦ expressed M-CSFR ( Fig.
+L11|Thus, we have used BM-cultured MΦ and explored a method to increase the number of M-CSFR-positive macrophages.
+L15|(Bottom) The proportion of BM-MΦ that was positive for M-CSFR (A, %;
+L16|Procedure: measurement of M-CSFR expression on BM-MΦ 1 Bone marrow adherent cells were treated with 400 ng/mL of Ac-LDL (Biomedical Technologies, Inc., Madrid, Spain) labeled with 3,3′-dioctadecyloxacarbocyanine perchlorate (Dio) for 4 h at 37 °C.
+L16|4 24.4 ± 4.6% of the BM-MΦ (bone marrow adherent cells that took up Ac-LDL) were positive for M-CSFR ( Fig.
+L18|Treatment with a reducing agent dithiothreitol (DTT, 1 mM) for 24 h increased the proportion of BM-MΦ that were positive for M-CSFR to 51.7 ± 7.3% ( Fig.
+L23|The cells were then incubated with 400 ng/mL of Dio-conjugated Ac-LDL for 4 h, stained with PE-conjugated anti-M-CSFR antibody, and analyzed by flow cytometry.
+L27|M-CSF (CSF-1) regulates monocyte/macrophage survival, proliferation, differentiation, and migration via the activation of its receptor (M-CSFR) [ [11] ,  [12] ,  [13] ].
+L31|Discrepancy of the M-CSFR expression between this report and previous report: It was reported that 65.4 ± 3.0% of BM-cultured MΦ express M-CSFR [ 1 ], and we showed that 24.4 ± 4.6% of BM-cultured MΦ express M-CSFR.
+L31|It was also reported that 3.6 ± 0.2% of peritoneal cultured macrophages express M-CSFR [ 1 ], and we showed that 95.3 ± 0.8% of isolated peritoneal macrophages express M-CSFR in this report.
+L31|Thus, differences in the culture condition (especially serum differences) might cause the difference in M-CSFR expression in BM-cultured MΦ.
+L31|The discrepancy in peritoneal macrophages is consistent with our data that the proportion of macrophages positive for M-CSFR is higher in isolated cells (37.8 ± 2.7% of isolated BM-MΦ;

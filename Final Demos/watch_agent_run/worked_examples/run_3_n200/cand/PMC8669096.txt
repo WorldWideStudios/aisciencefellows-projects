@@ -1,0 +1,11 @@
+L6|Here, we describe a protocol that combines the depletion of resident macrophages with the reconstitution of the mice with  in vitro  differentiated, lentivirus-transduced bone marrow-derived macrophages (BMDMs) in the context of an experimental sepsis model.
+L12|The depletion/reconstitution protocol that we describe here has several steps, including bone marrow (BM) cell preparation, lentiviral transduction of the BM cells , in vitro  differentiation of the BM cells into BMDMs, liposome-induced macrophage depletion in mice, reconstitution of the mice with lentivirus-transduced BMDMs, and lipopolysaccharide (LPS) challenge of the reconstituted mice.
+L22|L929 is a mouse fibroblast line that secretes macrophage colony stimulating factor (M-CSF), which is required for the differentiation of BMDMs from hematopoietic stem cells.
+L22|Thus, L929 cell conditioned media are used to differentiate BMDMs (see  BMDM differentiation  step).
+L22|Culture L929 cells in complete DMEM ( Table 1 ) in 10-cm cell culture dishes at 37°C and 5% CO 2 .
+L23|The concentration of M-CSF in the conditioned medium is critical for the successful differentiation of BMDMs in the following steps.
+L33|Figure 1 Preparation of bone marrow derived macrophages (BMDMs) (A) Mouse long bones before and after the marrow is flushed out.
+L41|Table 3 BMDM differentiation medium Reagent Final concentration Amount for 500 mL Complete RPMI 1640 Medium 70% 350 mL L929 conditioned medium 30% 150 mL Store at 4°C for up to 1 month
+L62|If the quality of the L929 conditioned media is good, differentiation of BMDMs is expected to be achieved within 7 days.
+L71|Cell contamination (Bone marrow isolations and  BMDM differentiation  steps)
+L111|Reliable and inexpensive expression of large, tagged, exogenous proteins in murine bone marrow-derived macrophages using a second generation lentiviral system J.

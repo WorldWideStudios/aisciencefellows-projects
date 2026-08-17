@@ -1,0 +1,13 @@
+L21:Recombinant murine M-CSF (rmM-CSF) (Peprotech, catalog number: 315–02)
+L24:L929 fibroblasts (ATCC® CLL-1)
+L75:Bone marrow differentiation media (see Recipes)
+L93:Grow L929 fibroblasts to confluency in two T75 flasks using L cell media (Recipe 9). Incubate at 37 °C 5% CO2 for approximately 2 days.
+L107:Transfer tubes to −20 °C for long-term storage. Thaw media at 37 °C when needed for bone marrow macrophage differentiation.
+L108:Note: Protocol can be performed using J774A.1 macrophage (ATCC® TIB-67), if bone marrow derived macrophages are unavailable. If performing EEA-1 staining, do not allow cells to fix for more than 7 min or antibody will not stain well.
+L110:Remove femurs from mouse in a biosafety cabinet.Note: Keep bones intact and clean bones of any excess tissue.
+L111:For each femur, cut each end using sterile scissors. Cut approximately 1 mm off of each head of the bone or until you see an opening large enough for a 26G needle.
+L112:With forceps, hold the femur over a 50 ml conical tube.
+L115:Flush femur with 5 ml of DMEM into the 50 ml conical tube.Note: Be sure to stick the needle into each opening of the femur. If needle cannot enter the femur, cut more off of the end.
+L116:Repeat Steps B6 and B7 with second femur.
+L170:Bone marrow differentiation media (150 ml for 1 mouse)75 ml of DMEM30 ml of heat inactivated FBS45 ml L929 conditional media (can be substituted with M-CSF, Griffin et al., 2013)1.5 ml of 100 mM L-glutamine (or GlutaMax)1.5 ml of 100 mM sodium pyruvate1.5 ml of 7.5% sodium bicarbonate solutionMix and filter sterilize
+[33ms]

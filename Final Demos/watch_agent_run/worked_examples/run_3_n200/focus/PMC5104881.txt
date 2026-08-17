@@ -1,0 +1,14 @@
+L6|After C57BL/6J mice bone marrow cell culture for 7 days with GM-CSF supplementation, two main populations were observed in the attached cells based on MHCII and F4/80 marker expressions.
+L15|Isolated bone marrow cells from femurs and tibiae were cultured for 7 days at a density of 10 6 /ml in RPMI medium (Thermo, USA) supplemented with 10% FBS (Gibco, Carlsbad, California, USA), 10 units/ml penicillin, 10 μg/ml streptomycin, 2 mM L-glutamine (Gibco, USA) (hereafter termed complete medium) and 25 ng/ml murine GM-CSF (Miltenyi Biotech, Germany) at 37°C in a humidified atmosphere with 5% CO 2 .
+L15|On day 3, floating cells were discarded and fresh medium containing 25 ng/ml GM-CSF was added.
+L15|Cells were further differentiated for 4 days with GM-CSF containing complete medium.
+L23|For M-CSF grown macrophages, C57BL/6J bone marrow cells were differentiated with 20% L929 culture supernatant for 7 days and sorted for the F4/80 + CD11b +  population.
+L31|As GM-CSF is known to induce the expansion of various myeloid lineages, we cultured bone marrow cells in the presence of GM-CSF for 7 days to examine the exact cell populations derived from GM-CSF  in vitro  culture.
+L31|These GM-CSF grown, bone marrow cell derived DCs (GM-BMDCs) comprised up to 18% of total attached cells.
+L31|In contrast, GM-CSF grown bone marrow cell derived macrophages (GM-BMMs) were the main cells (57% of the attaching cells) of the mixed populations.
+L35|We treated bone marrow cells with 5, 10, 25 and 100 ng/ml of GM-CSF and cultured them for 7 days.
+L35|Two populations were distinguished with treatment of 10 ng/ml of GM-CSF.
+L35|At the usual concentration (25 ng/ml) of GM-CSF, the DC:macrophage ratio increased to 1:3~1:4 as already shown in  Figs.
+L48|Standard 25 ng/ml of GM-CSF concentration resulted in a domination of MHCII low F4/80 high  GM-BMMs among attached cells.
+L55|Bone marrow cells were differentiated with 5, 10, 25 or 100 ng/ml of GM-CSF for 7 days.
+L58|GM-BMDCs and GM-BMMs were sorted into MHCII high F4/80 low  and MHCII low F4/80 high  populations after 7 days of differentiation of bone marrow cells with GM-CSF.

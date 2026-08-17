@@ -1,0 +1,17 @@
+   5 l45:mouse
+   4 l45:mice
+   2 l27:mouse
+   2 l27:bovine
+   1 l97:bovine
+   1 l93:mouse
+   1 l71:mouse
+   1 l7:mouse
+   1 l44:mouse
+   1 l29:bovine
+   1 l27:mice
+   1 l27:c57bl/6j
+   1 l19:bovine
+   1 l15:mice
+   1 l114:mouse
+   1 l113:mouse
+   1 l1:mouse

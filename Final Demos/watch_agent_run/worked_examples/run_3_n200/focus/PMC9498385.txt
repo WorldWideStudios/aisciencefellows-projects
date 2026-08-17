@@ -1,0 +1,4 @@
+L17|(1) Plate 10 6  L929 cells (M-CSF producing cell line, CCL-1, was purchased from ATCC) in 20 mL of DMEM (Gibco, # 11995-065) supplemented with 10% heat inactivated fetal bovine serum (FBS), and 1% penicillin/streptomycin (Lonza, #17-602E) in a T75 cell culture flask.
+L17|(5) L929-conditioned macrophage media is then prepared by mixing L-929 medium (30%) and RPMI 1640 (Caisson Labs, #RPL09-500 mL) complete medium (70%).
+L19|Resuspend the cell pellet in 20 mL of L929-conditioned macrophage medium and plate in T25 cell culture flask for overnight incubation.
+L19|Switch L929-conditioned macrophage medium at 3-day intervals (7 mL per dish).

@@ -1,0 +1,9 @@
+L1|Protocol to isolate and analyze mouse bone marrow derived dendritic cells (BMDC)
+L22|GM-CSF 20 ng/mL needs to be added freshly directly before cells are seeded into the 6 well plate.
+L42|The following steps provide the procedure of collection and differentiation of bone marrow-derived cells into BMDCs.
+L45|Day 0: Seed bone marrow cells of one mouse in one 6 well plate, using 3 mL per well with 10–25 ng/mL of GM-CSF in a 37°C and humidified 5% CO 2  incubator.
+L47|Day 2, 4, 6: Gently wash cells with pre-warmed PBS and supply them with 3 mL of new, pre-warmed DC-medium (GM-CSF freshly added 20 ng/mL).
+L50|CRITICAL:  The optimal culture period to generate BMDC with GMCSF was reported to be 7–8 days ( Inaba et al., 1992 ).
+L53|Figure 3 Uptake of acLDL by CD11c +  bone marrow derived cells BM derived CD11c +  cells were loaded with fluorescently labeled acLDL.
+L54|Figure 4 Secretion of ApoE upon uptake of acLDL by CD11c +  bone marrow derived cells BM derived CD11c +  cells were loaded with 10 μg/mL acLDL.
+L113|GM-CSF mouse bone marrow cultures comprise a heterogeneous population of CD11c(+)MHCII(+) macrophages and dendritic cells Immunity 42 2015 1197 1211 26084029
