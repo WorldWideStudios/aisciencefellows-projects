@@ -1,0 +1,67 @@
+{
+  "current_successor_root": "NOT_COMPUTED_IN_THIS_RECEIPT",
+  "events": [
+    {
+      "error": "SyntaxError in new test_final_site_publish.py; missing terminal close parenthesis.",
+      "resolution": "corrected Python test source, predecessor failure retained here",
+      "state": "FAILED",
+      "step": "initial focused pytest"
+    },
+    {
+      "failed": 0,
+      "passed": 23,
+      "state": "OBSERVED",
+      "step": "focused tests"
+    },
+    {
+      "expected_failures": 1,
+      "failed": 0,
+      "passed": 150,
+      "skipped": 1,
+      "state": "OBSERVED",
+      "step": "complete regression suite",
+      "warnings": 6
+    },
+    {
+      "http200": 7,
+      "javascript_errors": 0,
+      "mobile_horizontal_overflow": false,
+      "route_count": 7,
+      "state": "OBSERVED",
+      "step": "local production-like browser check",
+      "video_assets": 4
+    },
+    {
+      "project_source_pinned": true,
+      "public_routes": [
+        "/",
+        "/review/",
+        "/story/",
+        "/demo/",
+        "/protocols/",
+        "/board/",
+        "/lab/"
+      ],
+      "src_media_present": true,
+      "state": "OBSERVED",
+      "step": "local derived packaging"
+    }
+  ],
+  "excluded_private_source_photos": true,
+  "explicit_rights_gate": {
+    "pr": 34,
+    "reason": "proposed self-playing deck contains identifiable team photos; user-origin statement in PR is not verified consent from every participant",
+    "status": "HOLD_FOR_PUBLICATION_RIGHTS_REVIEW"
+  },
+  "mmr_committed": false,
+  "next_action": "Commit tested publisher, merge with review, deploy pinned SHA, verify every remote file exact digest",
+  "parent_commit": "cc8cfc2725058d7ced2ff8cf78a95257ba05b84a",
+  "parent_mvp_root": "b9a1af53ddea37975b620e02b3be166c7778ca258f00a4ed02d1714d0aeeb591",
+  "physical_robot_execution": "NOT_TESTED",
+  "project": "biobitworks/baebugs",
+  "schema": "baebugs.ReleaseCheckFCO.v1",
+  "scientific_truth": "NOT_ESTABLISHED",
+  "signed": "NOT_SIGNED",
+  "source_story_preserved": true,
+  "title": "Verifiable workcell public-release audit"
+}

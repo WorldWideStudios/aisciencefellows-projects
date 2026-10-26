@@ -1,0 +1,28 @@
+{
+  "valid_solid": true,
+  "single_solid": true,
+  "watertight_mesh": true,
+  "bbox_mm": [
+    162.0,
+    104.01,
+    25.0
+  ],
+  "fits_bed": true,
+  "volume_cm3": 52.7,
+  "cavity_mm": [
+    132.0,
+    96.0
+  ],
+  "open_centre_mm": [
+    122.0,
+    82.0
+  ],
+  "ledge_mm": {
+    "short_ends": 5.0,
+    "long_sides": 7.0
+  },
+  "working_values": [
+    "WALL",
+    "LEDGE_T"
+  ]
+}

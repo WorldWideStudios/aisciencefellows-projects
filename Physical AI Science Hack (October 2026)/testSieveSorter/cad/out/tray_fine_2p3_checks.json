@@ -1,0 +1,18 @@
+{
+  "valid_solid": true,
+  "single_solid": true,
+  "watertight_mesh": true,
+  "bbox_mm": [
+    127.78,
+    85.47,
+    20.27
+  ],
+  "fits_bed": true,
+  "volume_cm3": 36.82,
+  "opening": "round",
+  "top_size_mm": 2.3,
+  "bottom_size_mm": 2.86,
+  "openings": 599,
+  "open_area_pct": 32.2,
+  "headroom_above_floor_mm": 15.27
+}

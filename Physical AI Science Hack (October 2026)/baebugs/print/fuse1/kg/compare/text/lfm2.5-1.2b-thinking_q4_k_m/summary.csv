@@ -1,0 +1,25 @@
+protocol,step,tier,n,valid,obs_consistent,exact_hash,topology_ok,tray_ok,family_ok,triage_ok,edge_negatives,edge_negatives_rejected,median_abs_len_err_mm
+lomo,all,logic,91,91,91,86,87,91,68,88,33,14,0.0
+lomo,all,local,91,24,0,0,0,4,2,15,33,3,5.15
+lofo,all,logic,91,91,91,86,87,91,0,65,33,25,0.0
+lofo,all,local,91,55,0,0,1,14,0,27,33,12,4.7
+s2l,all,logic,78,78,78,77,78,78,41,66,20,4,0.0
+s2l,all,local,78,40,1,1,2,15,2,19,20,1,3.6500000000000004
+s2l,1: train 1-3mm -> test 3-6mm,logic,9,9,9,9,9,9,3,6,0,0,0.0
+s2l,1: train 1-3mm -> test 3-6mm,local,9,9,0,0,0,5,1,2,0,0,3.0
+s2l,2: train 1-3mm+3-6mm -> test 6-12mm,logic,32,32,32,31,32,32,13,25,5,1,0.0
+s2l,2: train 1-3mm+3-6mm -> test 6-12mm,local,32,16,1,1,2,9,0,4,5,1,2.65
+s2l,3: train 1-3mm+3-6mm+6-12mm -> test 12-20mm,logic,21,21,21,21,21,21,13,20,6,1,0.0
+s2l,3: train 1-3mm+3-6mm+6-12mm -> test 12-20mm,local,21,15,0,0,0,1,1,13,6,0,5.2
+s2l,4: train 1-3mm+3-6mm+6-12mm+12-20mm -> test 20-30mm,logic,16,16,16,16,16,16,12,15,9,2,0.0
+s2l,4: train 1-3mm+3-6mm+6-12mm+12-20mm -> test 20-30mm,local,16,0,0,0,0,0,0,0,9,0,
+l2s,all,logic,75,75,75,70,71,75,34,66,24,12,0.0
+l2s,all,local,75,74,0,0,1,33,1,40,24,7,7.3
+l2s,1: train 20-30mm -> test 12-20mm,logic,21,21,21,21,21,21,7,16,6,0,0.0
+l2s,1: train 20-30mm -> test 12-20mm,local,21,21,0,0,1,13,1,8,6,0,8.1
+l2s,2: train 20-30mm+12-20mm -> test 6-12mm,logic,32,32,32,31,32,32,13,29,5,0,0.0
+l2s,2: train 20-30mm+12-20mm -> test 6-12mm,local,32,32,0,0,0,20,0,20,5,0,7.55
+l2s,3: train 20-30mm+12-20mm+6-12mm -> test 3-6mm,logic,9,9,9,9,9,9,5,8,0,0,0.0
+l2s,3: train 20-30mm+12-20mm+6-12mm -> test 3-6mm,local,9,9,0,0,0,0,0,4,0,0,7.5
+l2s,4: train 20-30mm+12-20mm+6-12mm+3-6mm -> test 1-3mm,logic,13,13,13,9,9,13,9,13,13,12,0.0
+l2s,4: train 20-30mm+12-20mm+6-12mm+3-6mm -> test 1-3mm,local,13,12,0,0,0,0,0,8,13,7,4.7

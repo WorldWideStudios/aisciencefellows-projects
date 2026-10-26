@@ -1,0 +1,5 @@
+method,n,median_rel_dev,p90_rel_dev
+teacher,2617,0.0164,0.1927
+student,2552,0.0218,0.2105
+fastsam,2582,0.0227,0.2274
+skimage,2617,0.3131,1.0

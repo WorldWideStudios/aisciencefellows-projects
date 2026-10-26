@@ -1,0 +1,197 @@
+{
+ "models": {
+  "yoloe": "yoloe-11s-seg.pt",
+  "owlv2": "google/owlv2-base-patch16-ensemble",
+  "order": {
+   "file": "ORDER_best.pt",
+   "sha256": "8a9dcb7af1252a6346dcb151717e5c3cb55078e7d4737c64913c8d015eac8f02"
+  },
+  "vlm": "qwen2.5vl:3b"
+ },
+ "prompts": [
+  "toy insect",
+  "insect",
+  "beetle",
+  "fly",
+  "bee"
+ ],
+ "photos": [
+  {
+   "photo": "pa12_toys_two_on_floor.jpg",
+   "sha256": "ce17c7f7fdd8c11d9b19c4301fab5a937b2105ca580ae0eded7cf54d00958187",
+   "frame_root": "5b066407149e4a66646fc156fc7f6df22a06ad764dbf98a1cd63f7f1e1596924",
+   "yoloe": [
+    {
+     "label": "toy insect",
+     "conf": 0.45,
+     "bbox": [
+      653,
+      1139,
+      1178,
+      1762
+     ]
+    },
+    {
+     "label": "toy insect",
+     "conf": 0.268,
+     "bbox": [
+      575,
+      626,
+      1187,
+      1187
+     ]
+    },
+    {
+     "label": "toy insect",
+     "conf": 0.227,
+     "bbox": [
+      647,
+      577,
+      865,
+      837
+     ]
+    }
+   ],
+   "owlv2": [
+    {
+     "label": "toy insect",
+     "conf": 0.307,
+     "bbox": [
+      735,
+      1228,
+      1167,
+      1641
+     ],
+     "order": {
+      "label": "Coleoptera",
+      "conf": 0.568
+     }
+    },
+    {
+     "label": "insect",
+     "conf": 0.278,
+     "bbox": [
+      584,
+      624,
+      1194,
+      1173
+     ],
+     "order": {
+      "label": "Hemiptera",
+      "conf": 0.943
+     }
+    },
+    {
+     "label": "insect",
+     "conf": 0.267,
+     "bbox": [
+      601,
+      578,
+      872,
+      884
+     ],
+     "order": {
+      "label": "Lepidoptera",
+      "conf": 0.886
+     }
+    },
+    {
+     "label": "toy insect",
+     "conf": 0.158,
+     "bbox": [
+      469,
+      941,
+      576,
+      1191
+     ],
+     "order": {
+      "label": "Lepidoptera",
+      "conf": 0.998
+     }
+    }
+   ],
+   "owlv2_raw_n": 5,
+   "vlm": {
+    "count": 2,
+    "toys": [
+     {
+      "order": "Lepidoptera",
+      "confidence": 0.95
+     },
+     {
+      "order": "Coleoptera",
+      "confidence": 0.98
+     }
+    ]
+   }
+  },
+  {
+   "photo": "pa12_toys_box.jpg",
+   "sha256": "9d819a7ac5271eaa71b803d37fcf7f7911a4cfc986556debd0b19d110b1eca4e",
+   "frame_root": "a4594ab440f23178ef6dde650097ce8fcb464975ee06dec0f6fc4759a6157709",
+   "yoloe": [],
+   "owlv2": [
+    {
+     "label": "toy insect",
+     "conf": 0.16,
+     "bbox": [
+      289,
+      501,
+      1293,
+      1824
+     ],
+     "order": {
+      "label": "Lepidoptera",
+      "conf": 0.445
+     }
+    }
+   ],
+   "owlv2_raw_n": 1,
+   "vlm": {
+    "count": 10,
+    "toys": [
+     {
+      "order": "Hymenoptera",
+      "confidence": 0.95
+     },
+     {
+      "order": "Hymenoptera",
+      "confidence": 0.9
+     },
+     {
+      "order": "Hymenoptera",
+      "confidence": 0.85
+     },
+     {
+      "order": "Hymenoptera",
+      "confidence": 0.8
+     },
+     {
+      "order": "Hymenoptera",
+      "confidence": 0.75
+     },
+     {
+      "order": "Hymenoptera",
+      "confidence": 0.7
+     },
+     {
+      "order": "Hymenoptera",
+      "confidence": 0.65
+     },
+     {
+      "order": "Hymenoptera",
+      "confidence": 0.6
+     },
+     {
+      "order": "Hymenoptera",
+      "confidence": 0.55
+     },
+     {
+      "order": "Hymenoptera",
+      "confidence": 0.5
+     }
+    ]
+   }
+  }
+ ]
+}

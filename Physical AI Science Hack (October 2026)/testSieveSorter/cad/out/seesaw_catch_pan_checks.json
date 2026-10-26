@@ -1,0 +1,32 @@
+{
+  "valid_solid": true,
+  "single_solid": true,
+  "watertight_mesh": true,
+  "bbox_mm": [
+    140.0,
+    116.0,
+    46.45
+  ],
+  "fits_bed": true,
+  "volume_cm3": 143.88,
+  "pivot_mm": [
+    0.0,
+    0.0,
+    32.5
+  ],
+  "height_mm": 45.0,
+  "catch_depth_below_box_mm": 20.0,
+  "floor_t_mm": 3.0,
+  "floor_top_below_rim_mm": 42.0,
+  "lip_mm": {
+    "t": 2.0,
+    "underside_deg": 45,
+    "in_at_ends": 5.0,
+    "in_at_sides": 7.0,
+    "opening": [
+      122.0,
+      82.0
+    ]
+  },
+  "note": "rim and pivot sit as on a box (pivot 12.5 under the rim), so it hangs at the same pitch"
+}

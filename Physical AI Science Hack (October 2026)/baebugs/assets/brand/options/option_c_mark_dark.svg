@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="BaeBugs mark C"><defs><path id="ringd" d="M60 60m-47 0a47 47 0 1 1 94 0a47 47 0 1 1 -94 0"/></defs>
+    <circle cx="60" cy="60" r="57" fill="none" stroke="#F4ECF1" stroke-width="3"/>
+    <circle cx="60" cy="60" r="38" fill="#F0566B" fill-opacity=".1" stroke="#F4ECF1" stroke-opacity=".35" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <text font-family="Fredoka,Nunito,sans-serif" font-weight="600" font-size="10" letter-spacing="2.2" fill="#F4ECF1"><textPath href="#ringd" startOffset="2%">OPEN SCIENCE · VIRTUAL LAB · BAEBUGS ·</textPath></text>
+    <g transform="translate(31 30) scale(.48)"><path d="M53 30C48 19 42 14 33 14M67 30C72 19 78 14 87 14" stroke="#F4ECF1" stroke-width="4" fill="none" stroke-linecap="round"/><path transform="translate(25 8) scale(0.15)" d="M50 86C22 68 4 52 4 32C4 17 15 6 29 6C38 6 45 11 50 19C55 11 62 6 71 6C85 6 96 17 96 32C96 52 78 68 50 86Z" fill="#F0566B"/><path transform="translate(80 8) scale(0.15)" d="M50 86C22 68 4 52 4 32C4 17 15 6 29 6C38 6 45 11 50 19C55 11 62 6 71 6C85 6 96 17 96 32C96 52 78 68 50 86Z" fill="#F0566B"/><path d="M20 64L8 58M100 64L112 58" stroke="#F4ECF1" stroke-width="4.5" stroke-linecap="round"/><path d="M14 80L3 82M106 80L117 82" stroke="#F4ECF1" stroke-width="4.5" stroke-linecap="round"/><path d="M24 96L13 104M96 96L107 104" stroke="#F4ECF1" stroke-width="4.5" stroke-linecap="round"/>
+    <path transform="translate(10 32) scale(1)" d="M50 86C22 68 4 52 4 32C4 17 15 6 29 6C38 6 45 11 50 19C55 11 62 6 71 6C85 6 96 17 96 32C96 52 78 68 50 86Z" fill="#F0566B"/>
+    <path d="M60 56V110" stroke="#2A1F2D" stroke-opacity=".28" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="35" cy="64" r="7.5" fill="#2A1F2D"/><circle cx="85" cy="64" r="7.5" fill="#2A1F2D"/>
+    <circle cx="44" cy="90" r="5.5" fill="#2A1F2D"/><circle cx="76" cy="90" r="5.5" fill="#2A1F2D"/>
+    <circle cx="60" cy="42" r="17" fill="#3A2A42"/>
+  <circle cx="52.86" cy="39.96" r="5.1" fill="#FFFFFF"/><circle cx="67.14" cy="39.96" r="5.1" fill="#FFFFFF"/>
+  <circle cx="53.66" cy="40.98" r="2.55" fill="#2A1F2D"/><circle cx="67.94" cy="40.98" r="2.55" fill="#2A1F2D"/>
+  <circle cx="54.46" cy="38.6" r="0.9179999999999999" fill="#FFFFFF"/><circle cx="68.74" cy="38.6" r="0.9179999999999999" fill="#FFFFFF"/>
+  <circle cx="48.44" cy="48.12" r="2.55" fill="#FF9AAB" opacity=".75"/><circle cx="71.56" cy="48.12" r="2.55" fill="#FF9AAB" opacity=".75"/>
+  <path d="M55.58 48.12Q60 52.54 64.42 48.12" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round"/></g></svg>

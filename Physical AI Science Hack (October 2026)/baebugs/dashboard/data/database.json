@@ -1,0 +1,273 @@
+{
+ "width_edges_mm": [
+  0,
+  0.5,
+  1,
+  1.32,
+  2,
+  2.42,
+  3,
+  4.4,
+  5.5,
+  8,
+  12,
+  20,
+  30
+ ],
+ "museum_width_hist": [
+  0,
+  0,
+  0,
+  11,
+  11,
+  23,
+  235,
+  271,
+  627,
+  827,
+  582,
+  42
+ ],
+ "museum_n": 2629,
+ "museum_width_pct": [
+  4.36,
+  8.61,
+  15.12
+ ],
+ "museum_length_pct": [
+  7.22,
+  12.44,
+  23.79
+ ],
+ "synthetic_width_hist": [
+  1,
+  85,
+  502,
+  712,
+  277,
+  158,
+  251,
+  90,
+  40,
+  21,
+  15,
+  3
+ ],
+ "synthetic_n": 2155,
+ "kit_classes": [
+  {
+   "name": "tiny",
+   "width_mm": [
+    0.2,
+    1.32
+   ],
+   "sieve": "TRAY",
+   "examples": [
+    "mites",
+    "springtails",
+    "midges",
+    "chia"
+   ]
+  },
+  {
+   "name": "small",
+   "width_mm": [
+    1.32,
+    2.42
+   ],
+   "sieve": "SCREEN-1",
+   "examples": [
+    "ants",
+    "small flies",
+    "rice"
+   ]
+  },
+  {
+   "name": "medium",
+   "width_mm": [
+    2.42,
+    4.4
+   ],
+   "sieve": "HEX-2",
+   "examples": [
+    "small beetles",
+    "bees",
+    "fideo"
+   ]
+  },
+  {
+   "name": "large",
+   "width_mm": [
+    4.4,
+    5.5
+   ],
+   "sieve": "GRID-4",
+   "examples": [
+    "large flies",
+    "small moths"
+   ]
+  },
+  {
+   "name": "xlarge",
+   "width_mm": [
+    5.5,
+    30.0
+   ],
+   "sieve": "PERF-5",
+   "examples": [
+    "large beetles",
+    "cicadas",
+    "ditalini"
+   ]
+  }
+ ],
+ "analog_estimates_mm": [
+  {
+   "analog": "chia",
+   "width": [
+    1.0,
+    1.3
+   ]
+  },
+  {
+   "analog": "couscous",
+   "width": [
+    1.0,
+    1.5
+   ]
+  },
+  {
+   "analog": "fideo",
+   "width": [
+    1.0,
+    1.5
+   ]
+  },
+  {
+   "analog": "white rice",
+   "width": [
+    1.8,
+    2.2
+   ]
+  },
+  {
+   "analog": "brown/red/wild rice",
+   "width": [
+    1.5,
+    2.6
+   ]
+  },
+  {
+   "analog": "ditalini",
+   "width": [
+    7,
+    8
+   ]
+  },
+  {
+   "analog": "campanelle",
+   "width": [
+    10,
+    15
+   ]
+  },
+  {
+   "analog": "farfalle",
+   "width": [
+    18,
+    22
+   ]
+  }
+ ],
+ "essig_top_families": [
+  [
+   "Halictidae",
+   113458
+  ],
+  [
+   "Carabidae",
+   46526
+  ],
+  [
+   "Apidae",
+   40965
+  ],
+  [
+   "Crabronidae",
+   19872
+  ],
+  [
+   "Syrphidae",
+   11073
+  ],
+  [
+   "Aphididae",
+   9288
+  ],
+  [
+   "Tephritidae",
+   9058
+  ],
+  [
+   "Coenagrionidae",
+   8427
+  ],
+  [
+   "Hesperiidae",
+   6679
+  ],
+  [
+   "Chloropidae",
+   6418
+  ],
+  [
+   "Chrysididae",
+   6203
+  ],
+  [
+   "Geometridae",
+   5729
+  ],
+  [
+   "Libellulidae",
+   5508
+  ],
+  [
+   "Curculionidae",
+   5018
+  ],
+  [
+   "Tortricidae",
+   4295
+  ]
+ ],
+ "essig_records": 423154,
+ "dataone_cib": {
+  "events": 1214,
+  "sites": 536,
+  "sample_types": {
+   "soil_edna": 485,
+   "bulk_soil": 378,
+   "insect": 239,
+   "litter": 96,
+   "insectmalaise": 8,
+   "insectother": 8
+  },
+  "habitats": {
+   "shrubland": 289,
+   "forest_woodland": 259,
+   "grassland": 241,
+   "riparian": 52,
+   "marine_coastal": 47,
+   "wetlands_inland": 35,
+   "artificial_terrestrial": 26,
+   "other": 25
+  },
+  "moisture": {
+   "dry_xeric": 522,
+   "moist": 413,
+   "saturated": 39,
+   "flooded": 1
+  }
+ }
+}

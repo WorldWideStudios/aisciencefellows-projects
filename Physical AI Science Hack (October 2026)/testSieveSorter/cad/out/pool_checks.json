@@ -1,0 +1,34 @@
+{
+  "valid_solid": true,
+  "single_solid": true,
+  "watertight_mesh": true,
+  "bbox_mm": [
+    127.77,
+    85.47,
+    20.27
+  ],
+  "fits_bed": true,
+  "volume_cm3": 70.62,
+  "shake_axis": "X; load the +X end, grains move toward -X",
+  "zones": [
+    {
+      "floor_z_mm": 8.0,
+      "length_mm": 45.0
+    },
+    {
+      "floor_z_mm": 5.0,
+      "length_mm": 40.0
+    },
+    {
+      "floor_z_mm": 2.0,
+      "length_mm": 33.76
+    }
+  ],
+  "drop_edges_x_mm": [
+    15.88,
+    -24.12
+  ],
+  "groove_width_mm": 2.3,
+  "groove_to_groove_mm": 82.47,
+  "dam_groove": "3 mm inside the open -X end"
+}

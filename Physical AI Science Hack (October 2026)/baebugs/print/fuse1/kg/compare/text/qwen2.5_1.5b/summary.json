@@ -1,0 +1,440 @@
+{
+ "lomo": {
+  "cases": 91,
+  "logic": {
+   "n": 91,
+   "valid": 91,
+   "obs_consistent": 91,
+   "exact_hash": 86,
+   "topology_ok": 87,
+   "tray_ok": 91,
+   "family_ok": 68,
+   "triage_ok": 88,
+   "median_abs_len_err_mm": 0.0,
+   "edge_negatives": 33,
+   "edge_negatives_rejected": 14
+  },
+  "local": {
+   "n": 91,
+   "valid": 89,
+   "obs_consistent": 3,
+   "exact_hash": 1,
+   "topology_ok": 8,
+   "tray_ok": 26,
+   "family_ok": 5,
+   "triage_ok": 76,
+   "median_abs_len_err_mm": 3.4,
+   "edge_negatives": 33,
+   "edge_negatives_rejected": 9
+  },
+  "cascade": {
+   "resolved_by": {
+    "STEP-IN (human)": 88,
+    "local": 3
+   },
+   "exact_hash": 1,
+   "triage_ok": 3
+  }
+ },
+ "lofo": {
+  "cases": 91,
+  "logic": {
+   "n": 91,
+   "valid": 91,
+   "obs_consistent": 91,
+   "exact_hash": 86,
+   "topology_ok": 87,
+   "tray_ok": 91,
+   "family_ok": 0,
+   "triage_ok": 65,
+   "median_abs_len_err_mm": 0.0,
+   "edge_negatives": 33,
+   "edge_negatives_rejected": 25
+  },
+  "local": {
+   "n": 91,
+   "valid": 82,
+   "obs_consistent": 2,
+   "exact_hash": 0,
+   "topology_ok": 5,
+   "tray_ok": 21,
+   "family_ok": 0,
+   "triage_ok": 6,
+   "median_abs_len_err_mm": 3.2,
+   "edge_negatives": 33,
+   "edge_negatives_rejected": 6
+  },
+  "cascade": {
+   "resolved_by": {
+    "STEP-IN (human)": 89,
+    "local": 2
+   },
+   "exact_hash": 0,
+   "triage_ok": 0
+  }
+ },
+ "s2l": {
+  "cases": 78,
+  "logic": {
+   "n": 78,
+   "valid": 78,
+   "obs_consistent": 78,
+   "exact_hash": 77,
+   "topology_ok": 78,
+   "tray_ok": 78,
+   "family_ok": 41,
+   "triage_ok": 66,
+   "median_abs_len_err_mm": 0.0,
+   "edge_negatives": 20,
+   "edge_negatives_rejected": 4
+  },
+  "local": {
+   "n": 78,
+   "valid": 77,
+   "obs_consistent": 0,
+   "exact_hash": 0,
+   "topology_ok": 0,
+   "tray_ok": 14,
+   "family_ok": 6,
+   "triage_ok": 56,
+   "median_abs_len_err_mm": 5.2,
+   "edge_negatives": 20,
+   "edge_negatives_rejected": 4
+  },
+  "cascade": {
+   "resolved_by": {
+    "STEP-IN (human)": 78
+   },
+   "exact_hash": 0,
+   "triage_ok": 0
+  },
+  "steps": {
+   "1: train 1-3mm -> test 3-6mm": {
+    "cases": 9,
+    "logic": {
+     "n": 9,
+     "valid": 9,
+     "obs_consistent": 9,
+     "exact_hash": 9,
+     "topology_ok": 9,
+     "tray_ok": 9,
+     "family_ok": 3,
+     "triage_ok": 6,
+     "median_abs_len_err_mm": 0.0,
+     "edge_negatives": 0,
+     "edge_negatives_rejected": 0
+    },
+    "local": {
+     "n": 9,
+     "valid": 8,
+     "obs_consistent": 0,
+     "exact_hash": 0,
+     "topology_ok": 0,
+     "tray_ok": 1,
+     "family_ok": 0,
+     "triage_ok": 7,
+     "median_abs_len_err_mm": 2.3,
+     "edge_negatives": 0,
+     "edge_negatives_rejected": 0
+    },
+    "cascade": {
+     "resolved_by": {
+      "STEP-IN (human)": 9
+     },
+     "exact_hash": 0,
+     "triage_ok": 0
+    }
+   },
+   "2: train 1-3mm+3-6mm -> test 6-12mm": {
+    "cases": 32,
+    "logic": {
+     "n": 32,
+     "valid": 32,
+     "obs_consistent": 32,
+     "exact_hash": 31,
+     "topology_ok": 32,
+     "tray_ok": 32,
+     "family_ok": 13,
+     "triage_ok": 25,
+     "median_abs_len_err_mm": 0.0,
+     "edge_negatives": 5,
+     "edge_negatives_rejected": 1
+    },
+    "local": {
+     "n": 32,
+     "valid": 32,
+     "obs_consistent": 0,
+     "exact_hash": 0,
+     "topology_ok": 0,
+     "tray_ok": 9,
+     "family_ok": 3,
+     "triage_ok": 21,
+     "median_abs_len_err_mm": 5.949999999999999,
+     "edge_negatives": 5,
+     "edge_negatives_rejected": 4
+    },
+    "cascade": {
+     "resolved_by": {
+      "STEP-IN (human)": 32
+     },
+     "exact_hash": 0,
+     "triage_ok": 0
+    }
+   },
+   "3: train 1-3mm+3-6mm+6-12mm -> test 12-20mm": {
+    "cases": 21,
+    "logic": {
+     "n": 21,
+     "valid": 21,
+     "obs_consistent": 21,
+     "exact_hash": 21,
+     "topology_ok": 21,
+     "tray_ok": 21,
+     "family_ok": 13,
+     "triage_ok": 20,
+     "median_abs_len_err_mm": 0.0,
+     "edge_negatives": 6,
+     "edge_negatives_rejected": 1
+    },
+    "local": {
+     "n": 21,
+     "valid": 21,
+     "obs_consistent": 0,
+     "exact_hash": 0,
+     "topology_ok": 0,
+     "tray_ok": 3,
+     "family_ok": 3,
+     "triage_ok": 18,
+     "median_abs_len_err_mm": 5.5,
+     "edge_negatives": 6,
+     "edge_negatives_rejected": 0
+    },
+    "cascade": {
+     "resolved_by": {
+      "STEP-IN (human)": 21
+     },
+     "exact_hash": 0,
+     "triage_ok": 0
+    }
+   },
+   "4: train 1-3mm+3-6mm+6-12mm+12-20mm -> test 20-30mm": {
+    "cases": 16,
+    "logic": {
+     "n": 16,
+     "valid": 16,
+     "obs_consistent": 16,
+     "exact_hash": 16,
+     "topology_ok": 16,
+     "tray_ok": 16,
+     "family_ok": 12,
+     "triage_ok": 15,
+     "median_abs_len_err_mm": 0.0,
+     "edge_negatives": 9,
+     "edge_negatives_rejected": 2
+    },
+    "local": {
+     "n": 16,
+     "valid": 16,
+     "obs_consistent": 0,
+     "exact_hash": 0,
+     "topology_ok": 0,
+     "tray_ok": 1,
+     "family_ok": 0,
+     "triage_ok": 10,
+     "median_abs_len_err_mm": 6.75,
+     "edge_negatives": 9,
+     "edge_negatives_rejected": 0
+    },
+    "cascade": {
+     "resolved_by": {
+      "STEP-IN (human)": 16
+     },
+     "exact_hash": 0,
+     "triage_ok": 0
+    }
+   }
+  }
+ },
+ "l2s": {
+  "cases": 75,
+  "logic": {
+   "n": 75,
+   "valid": 75,
+   "obs_consistent": 75,
+   "exact_hash": 70,
+   "topology_ok": 71,
+   "tray_ok": 75,
+   "family_ok": 34,
+   "triage_ok": 66,
+   "median_abs_len_err_mm": 0.0,
+   "edge_negatives": 24,
+   "edge_negatives_rejected": 12
+  },
+  "local": {
+   "n": 75,
+   "valid": 73,
+   "obs_consistent": 0,
+   "exact_hash": 0,
+   "topology_ok": 2,
+   "tray_ok": 18,
+   "family_ok": 3,
+   "triage_ok": 33,
+   "median_abs_len_err_mm": 7.8,
+   "edge_negatives": 24,
+   "edge_negatives_rejected": 1
+  },
+  "cascade": {
+   "resolved_by": {
+    "STEP-IN (human)": 75
+   },
+   "exact_hash": 0,
+   "triage_ok": 0
+  },
+  "steps": {
+   "1: train 20-30mm -> test 12-20mm": {
+    "cases": 21,
+    "logic": {
+     "n": 21,
+     "valid": 21,
+     "obs_consistent": 21,
+     "exact_hash": 21,
+     "topology_ok": 21,
+     "tray_ok": 21,
+     "family_ok": 7,
+     "triage_ok": 16,
+     "median_abs_len_err_mm": 0.0,
+     "edge_negatives": 6,
+     "edge_negatives_rejected": 0
+    },
+    "local": {
+     "n": 21,
+     "valid": 21,
+     "obs_consistent": 0,
+     "exact_hash": 0,
+     "topology_ok": 2,
+     "tray_ok": 5,
+     "family_ok": 2,
+     "triage_ok": 8,
+     "median_abs_len_err_mm": 5.4,
+     "edge_negatives": 6,
+     "edge_negatives_rejected": 0
+    },
+    "cascade": {
+     "resolved_by": {
+      "STEP-IN (human)": 21
+     },
+     "exact_hash": 0,
+     "triage_ok": 0
+    }
+   },
+   "2: train 20-30mm+12-20mm -> test 6-12mm": {
+    "cases": 32,
+    "logic": {
+     "n": 32,
+     "valid": 32,
+     "obs_consistent": 32,
+     "exact_hash": 31,
+     "topology_ok": 32,
+     "tray_ok": 32,
+     "family_ok": 13,
+     "triage_ok": 29,
+     "median_abs_len_err_mm": 0.0,
+     "edge_negatives": 5,
+     "edge_negatives_rejected": 0
+    },
+    "local": {
+     "n": 32,
+     "valid": 30,
+     "obs_consistent": 0,
+     "exact_hash": 0,
+     "topology_ok": 0,
+     "tray_ok": 12,
+     "family_ok": 1,
+     "triage_ok": 19,
+     "median_abs_len_err_mm": 8.3,
+     "edge_negatives": 5,
+     "edge_negatives_rejected": 0
+    },
+    "cascade": {
+     "resolved_by": {
+      "STEP-IN (human)": 32
+     },
+     "exact_hash": 0,
+     "triage_ok": 0
+    }
+   },
+   "3: train 20-30mm+12-20mm+6-12mm -> test 3-6mm": {
+    "cases": 9,
+    "logic": {
+     "n": 9,
+     "valid": 9,
+     "obs_consistent": 9,
+     "exact_hash": 9,
+     "topology_ok": 9,
+     "tray_ok": 9,
+     "family_ok": 5,
+     "triage_ok": 8,
+     "median_abs_len_err_mm": 0.0,
+     "edge_negatives": 0,
+     "edge_negatives_rejected": 0
+    },
+    "local": {
+     "n": 9,
+     "valid": 9,
+     "obs_consistent": 0,
+     "exact_hash": 0,
+     "topology_ok": 0,
+     "tray_ok": 1,
+     "family_ok": 0,
+     "triage_ok": 6,
+     "median_abs_len_err_mm": 11.8,
+     "edge_negatives": 0,
+     "edge_negatives_rejected": 0
+    },
+    "cascade": {
+     "resolved_by": {
+      "STEP-IN (human)": 9
+     },
+     "exact_hash": 0,
+     "triage_ok": 0
+    }
+   },
+   "4: train 20-30mm+12-20mm+6-12mm+3-6mm -> test 1-3mm": {
+    "cases": 13,
+    "logic": {
+     "n": 13,
+     "valid": 13,
+     "obs_consistent": 13,
+     "exact_hash": 9,
+     "topology_ok": 9,
+     "tray_ok": 13,
+     "family_ok": 9,
+     "triage_ok": 13,
+     "median_abs_len_err_mm": 0.0,
+     "edge_negatives": 13,
+     "edge_negatives_rejected": 12
+    },
+    "local": {
+     "n": 13,
+     "valid": 13,
+     "obs_consistent": 0,
+     "exact_hash": 0,
+     "topology_ok": 0,
+     "tray_ok": 0,
+     "family_ok": 0,
+     "triage_ok": 0,
+     "median_abs_len_err_mm": 10.7,
+     "edge_negatives": 13,
+     "edge_negatives_rejected": 1
+    },
+    "cascade": {
+     "resolved_by": {
+      "STEP-IN (human)": 13
+     },
+     "exact_hash": 0,
+     "triage_ok": 0
+    }
+   }
+  }
+ }
+}

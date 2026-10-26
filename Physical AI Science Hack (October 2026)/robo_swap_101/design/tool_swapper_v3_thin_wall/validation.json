@@ -1,0 +1,56 @@
+{
+  "watertight": true,
+  "winding_consistent": true,
+  "solid_count": 1,
+  "added_material_mm3": 58.81577179969281,
+  "original_surface_samples_outside_by_more_than_0p00001mm": 0,
+  "backing_wall_gauge_missing_material_mm3": 0.0,
+  "M3_shank_max_interference_mm3": 0.0,
+  "5p5mm_screw_head_access_max_interference_mm3": 0.0,
+  "6mm_screw_head_access_max_interference_mm3": 2.4071003754820595,
+  "insertion_max_interference_mm3": 0.0,
+  "turn_max_interference_mm3": 0.0,
+  "shaft_max_interference_mm3": 0.0,
+  "locked_1mm_withdrawal_interference_mm3": 2.636701870513163,
+  "dowel_sections": [
+    {
+      "angle_degrees": 0,
+      "tangential_diameter_mm": 3.0,
+      "vertical_diameter_mm": 3.0
+    },
+    {
+      "angle_degrees": 120,
+      "tangential_diameter_mm": 2.999999973018756,
+      "vertical_diameter_mm": 3.0
+    },
+    {
+      "angle_degrees": 240,
+      "tangential_diameter_mm": 2.999999973018755,
+      "vertical_diameter_mm": 3.0
+    }
+  ],
+  "parameters": {
+    "outer_wall_diameter_mm": 20.2,
+    "inner_wall_diameter_mm": 19.6,
+    "wall_thickness_mm": 0.3,
+    "wall_z_bounds_mm": [
+      4,
+      11
+    ],
+    "dowel_z_bounds_mm": [
+      6.5,
+      9.5
+    ],
+    "nominal_socket_radial_clearance_mm": 0.15,
+    "maximum_checked_screw_head_diameter_mm": 5.5,
+    "screw_head_clearance_at_wall_mm": 0.05,
+    "dowel_diameter_mm": 3,
+    "dowel_projection_from_new_wall_mm": 2.9,
+    "male_height_mm": 14,
+    "female_changed": false
+  },
+  "source_sha256": {
+    "male_v3_SO101_fitted.stl": "849885212b5751c30198a6fda0509c16952ce545732b83a4aad1f12da2cef9ba",
+    "pipette_collar_31mm_fitted.stl": "575a8e448cad8190950c39a49da96cbb6366e1a2074a42827ac89008a52ec8f3"
+  }
+}

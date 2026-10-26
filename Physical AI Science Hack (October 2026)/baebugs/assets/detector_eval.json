@@ -1,0 +1,24 @@
+[
+ {
+  "boxes_file": "assets/boxes.json",
+  "model": "yoloe-11s-seg.pt",
+  "image_level_precision": 0.324,
+  "image_level_recall": 0.193,
+  "f1": 0.242,
+  "tp": 11,
+  "fp": 23,
+  "fn": 46,
+  "n_boxes": 58
+ },
+ {
+  "boxes_file": "assets/boxes_owlv2.json",
+  "model": "google/owlv2-base-patch16-ensemble",
+  "image_level_precision": 0.42,
+  "image_level_recall": 0.649,
+  "f1": 0.51,
+  "tp": 37,
+  "fp": 51,
+  "fn": 20,
+  "n_boxes": 253
+ }
+]

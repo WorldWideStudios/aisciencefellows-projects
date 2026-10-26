@@ -1,0 +1,151 @@
+{
+ "baebugs_commit": "43daf61f49f2afc30f97ec2043fefdca4f9302fd",
+ "bundle": "baebugs-daisy-taxon",
+ "crops": 2627,
+ "data_root": "4d5f2831ed5ba2850aab468b63dbaf1d69d766da09558de4f5d2421eca63459e",
+ "decision": {
+  "margin": 0.1,
+  "metric": "test macro-F1 minus majority-class macro-F1"
+ },
+ "gates": {
+  "G0": "protocol sha",
+  "G1": "every crop + view file re-hashed; data root == frozen",
+  "G2": "init weights sha == pinned",
+  "G3a": "environment recorded",
+  "custody_check": "every weights hash resolves to an exported file",
+  "values_epoch": "losses finite every epoch"
+ },
+ "id": "DAISY-BB-004",
+ "licence_note": "trained weights fall under AGPL-3.0 (Ultralytics); crops CC0/CC BY 4.0 per record",
+ "licences": {
+  "http://creativecommons.org/licenses/by/4.0/legalcode": 14,
+  "http://creativecommons.org/publicdomain/zero/1.0/legalcode": 2613
+ },
+ "preregistration": {
+  "path": "daisy/DAISY-BB-004-prereg.md",
+  "sha256": "5bf758d73c657d54158557e64da7da0cc00481a7b685683d6c78eb1501b814c4"
+ },
+ "runs": [
+  {
+   "classes": [
+    "Coleoptera",
+    "Diptera",
+    "Hemiptera",
+    "Hymenoptera",
+    "Lepidoptera",
+    "other"
+   ],
+   "counts": {
+    "test": {
+     "Coleoptera": 18,
+     "Hemiptera": 2,
+     "Hymenoptera": 87,
+     "Lepidoptera": 118,
+     "other": 6
+    },
+    "train": {
+     "Coleoptera": 332,
+     "Diptera": 489,
+     "Hemiptera": 133,
+     "Hymenoptera": 887,
+     "Lepidoptera": 135,
+     "other": 39
+    },
+    "val": {
+     "Coleoptera": 49,
+     "Diptera": 85,
+     "Hemiptera": 24,
+     "Hymenoptera": 188,
+     "Lepidoptera": 23,
+     "other": 12
+    }
+   },
+   "name": "ORDER"
+  },
+  {
+   "classes": [
+    "Andrenidae",
+    "Apidae",
+    "Formicidae",
+    "Halictidae",
+    "Megachilidae",
+    "Vespidae",
+    "other"
+   ],
+   "counts": {
+    "test": {
+     "Andrenidae": 27,
+     "Apidae": 24,
+     "Formicidae": 1,
+     "Halictidae": 11,
+     "Megachilidae": 13,
+     "Vespidae": 3,
+     "other": 7
+    },
+    "train": {
+     "Andrenidae": 130,
+     "Apidae": 296,
+     "Formicidae": 22,
+     "Halictidae": 253,
+     "Megachilidae": 57,
+     "Vespidae": 30,
+     "other": 37
+    },
+    "val": {
+     "Andrenidae": 28,
+     "Apidae": 65,
+     "Formicidae": 4,
+     "Halictidae": 55,
+     "Megachilidae": 8,
+     "Vespidae": 4,
+     "other": 5
+    }
+   },
+   "name": "FAMILY_Hymenoptera"
+  },
+  {
+   "classes": [
+    "Bombyliidae",
+    "Syrphidae",
+    "Tachinidae",
+    "other"
+   ],
+   "counts": {
+    "test": {},
+    "train": {
+     "Bombyliidae": 278,
+     "Syrphidae": 81,
+     "Tachinidae": 44,
+     "other": 36
+    },
+    "val": {
+     "Bombyliidae": 48,
+     "Syrphidae": 13,
+     "Tachinidae": 8,
+     "other": 5
+    }
+   },
+   "name": "FAMILY_Diptera"
+  }
+ ],
+ "settings": {
+  "batch": 64,
+  "deterministic": false,
+  "epochs": 15,
+  "imgsz": 224,
+  "init_sha256": "c62d41bf9625777760018bf914d2e6cd472420ccd01706d97a61cb6c82502bd7",
+  "model": "yolo11n-cls.pt",
+  "pins": {
+   "ultralytics": "8.4.188"
+  },
+  "seed": 2026,
+  "ultralytics": "8.4.188",
+  "workers": 4
+ },
+ "status": "PROPOSED",
+ "variance": {
+  "map_reproducibility_abs": 0.03,
+  "note": "deterministic=false: run-to-run variance accepted; decisions and steps are hashed as evidence",
+  "smoke_loss_rel": 0.25
+ }
+}

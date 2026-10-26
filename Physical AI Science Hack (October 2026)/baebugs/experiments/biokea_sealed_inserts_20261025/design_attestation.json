@@ -1,0 +1,59 @@
+{
+  "capture": "EXACT_BYTES",
+  "files": {
+    "capture_receipt.py": {
+      "sha256": "b13092925e23d1528a8c8a8ccc9623df5e22491f4934ade34c3a7b48c19e3ba2",
+      "size_bytes": 6929
+    },
+    "index.html": {
+      "sha256": "a0cde4d98a83b7a2d2938281d8797a22bfdf65a7c3dfd6e5d20e78e628584e1e",
+      "size_bytes": 17555
+    },
+    "lomo_comparison_plan.json": {
+      "sha256": "2f97ab0fbbab73dcac773ba9266ef031bae27d465723c65f5f4b1195d4dce67c",
+      "size_bytes": 21004
+    },
+    "lomo_plan.py": {
+      "sha256": "c8c9c097d79f38771a647b38889087bfd4955ffe90033df4a85fb0046bd83d6d",
+      "size_bytes": 2817
+    },
+    "module_catalog.json": {
+      "sha256": "8a7c5c4c8d3524573d3bcfb3eea121a5ba15a1bce4d6a06d87aee00eec8eb1ac",
+      "size_bytes": 8051
+    },
+    "output/variable_flat_base.dxf": {
+      "sha256": "1ae8fe3267a5d2f66220198cd2eab0d6a070f5615c75219a0e4ed4316624c9bc",
+      "size_bytes": 4652
+    },
+    "output/variable_flat_retainer.dxf": {
+      "sha256": "c5366d97075da9e5be0f24e08246216096116deac82b5916e55371b4c32e0d0d",
+      "size_bytes": 821
+    },
+    "output/variable_flat_slider.dxf": {
+      "sha256": "1ae8fe3267a5d2f66220198cd2eab0d6a070f5615c75219a0e4ed4316624c9bc",
+      "size_bytes": 4652
+    },
+    "output/variable_overview.png": {
+      "sha256": "560a77a6c42c40eaf24472878b867e2b91397a06e43893405eb0425587876a1c",
+      "size_bytes": 27847
+    },
+    "sealed_insert_cassette.scad": {
+      "sha256": "2d6dd7a1b1ff918f065151de84edd71004b0c2afe6e07c375b97b6158a07892e",
+      "size_bytes": 6762
+    },
+    "source_inventory.json": {
+      "sha256": "e08e03078dad74f861b908f1986ee68086a776c1541643c010817bfa8c06cec4",
+      "size_bytes": 5766
+    },
+    "variable_aperture_cassette.scad": {
+      "sha256": "d5b37cc2cd9a8c5d6622a5755a04d356469acff3ad93f291b632f11fff564453",
+      "size_bytes": 3841
+    }
+  },
+  "original_file_mtime_not_authoritative": true,
+  "physical_sorting": "NOT_TESTED",
+  "previous_baebugs_mmr": "753c271e4672faf6294bd5c9b803a0ac77f53bdbd09442345e8a28b5e43ea2df",
+  "schema": "biokea.design-attestation.v1",
+  "signed": false,
+  "source_repo": "biobitworks/baebugs"
+}

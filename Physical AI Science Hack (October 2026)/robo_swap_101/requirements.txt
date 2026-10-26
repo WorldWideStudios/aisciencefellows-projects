@@ -1,0 +1,2 @@
+# Robot environment used for the recorded experiments.
+lerobot[feetech]==0.6.1

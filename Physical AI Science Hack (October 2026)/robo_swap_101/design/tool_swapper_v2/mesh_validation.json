@@ -1,0 +1,12 @@
+{
+  "male": {
+    "watertight": true,
+    "winding_consistent": true,
+    "bodies": 1
+  },
+  "female": {
+    "watertight": true,
+    "winding_consistent": true,
+    "bodies": 1
+  }
+}

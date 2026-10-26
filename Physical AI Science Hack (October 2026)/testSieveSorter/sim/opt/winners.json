@@ -1,0 +1,609 @@
+{
+ "study": "demo",
+ "title": "Demo set: surrogate grains (pasta + chickpea / rice / quinoa)",
+ "exploratory": false,
+ "generated": "2026-10-25 10:58",
+ "rule": "ranked by the worst robust score over every check run on the design (full runs; stiff-contact rerun; printer undersize 0.05 / 0.25 mm; stroke reversal 0.005 / 0.02 s for the firmware stroke); stress_tested says whether the stress checks were run. A flagged design that `verify` reran with stiffer contacts (dt 0.125 ms, timeconst 0.25 ms) with no failed or flagged run counts as clean. Otherwise: top 3 by robust full-run score (mean - 1 sd over 3 friction sets x 3 seeds, 30 s) among working sorters (robust >= 0.5, no failed run, meeting today's print constraints) with no penetration-flagged run; if fewer than 3 qualify, the rest are the best working flagged ones, marked flagged (see opt/LOG.md for how this rule came about)",
+ "caveat": "sim ranking only; uncalibrated; openings simulated at nominal - 0.15 mm (ASSUMED undersize)",
+ "undersize_mm_assumed": 0.15,
+ "winners": [
+  {
+   "rank": 1,
+   "id": "P-ae394887",
+   "family": "plinko",
+   "sim_spec": "plinko",
+   "sim_inject": {
+    "plinko_layers.LAYERS": [
+     [
+      "layer_1_rods",
+      "rods",
+      3.55,
+      2.75,
+      1.6,
+      12.0,
+      0.0
+     ],
+     [
+      "layer_2_rods",
+      "rods",
+      1.35,
+      1.95,
+      2.4,
+      8.0,
+      -35.0
+     ],
+     [
+      "layer_3_catch",
+      "solid",
+      null,
+      null,
+      2.0,
+      6.0,
+      35.0
+     ]
+    ]
+   },
+   "stroke": {
+    "profile": "sine",
+    "amp_mm": 0.2373,
+    "freq_hz": 48.0,
+    "angle_deg": 20.0
+   },
+   "stroke_human": "tool sine 48 Hz, 2.2 g (0.24 mm), 20 deg up",
+   "params_nominal": {
+    "g1": 3.7,
+    "b1": 2.6,
+    "h1": 1.6,
+    "g2": 1.5,
+    "b2": 1.8,
+    "h2": 2.4,
+    "drive": "tool",
+    "amp": 11.5,
+    "speed": 33.0,
+    "freq": 48.0,
+    "accel": 2.2,
+    "angle": 20.0
+   },
+   "cad": {
+    "file": "cad/plinko_layers.py",
+    "LAYERS": [
+     [
+      "layer_1_rods_3p7",
+      "rods",
+      3.7,
+      2.6,
+      1.6,
+      12.0,
+      0.0
+     ],
+     [
+      "layer_2_rods_1p5",
+      "rods",
+      1.5,
+      1.8,
+      2.4,
+      8.0,
+      -35.0
+     ],
+     [
+      "layer_3_catch",
+      "solid",
+      null,
+      null,
+      2.0,
+      6.0,
+      35.0
+     ]
+    ],
+    "note": "rows are (name, floor, gap, rod top width, rod height, wall height, tab x); walls and tabs unchanged"
+   },
+   "score": {
+    "robust": 0.9992,
+    "mean": 0.9994,
+    "sd": 0.0001,
+    "worst_friction_set": 0.9993
+   },
+   "per_class": [
+    {
+     "class": "big (pasta, chickpea)",
+     "purity": 1.0,
+     "recovery": 1.0
+    },
+    {
+     "class": "rice",
+     "purity": 1.0,
+     "recovery": 1.0
+    },
+    {
+     "class": "quinoa",
+     "purity": 1.0,
+     "recovery": 1.0
+    }
+   ],
+   "count_matrix": {
+    "rows": [
+     "big (pasta, chickpea)",
+     "rice",
+     "quinoa"
+    ],
+    "cols": [
+     "layer_1_rods",
+     "layer_2_rods",
+     "layer_3_catch",
+     "between",
+     "lost"
+    ],
+    "counts_over_9_runs": [
+     [
+      144,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      270,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      270,
+      0,
+      0
+     ]
+    ]
+   },
+   "jammed_per_run": 0.0,
+   "lost_per_run": 0.0,
+   "t90_s": 0.3780777777777778,
+   "flagged": false,
+   "flagged_runs": 1,
+   "gate_clearance_mm": 0.26,
+   "max_gate_overlap_mm": 0.1535,
+   "verified_stiff": {
+    "clean": true,
+    "robust": 0.9991,
+    "flagged_runs": 0,
+    "max_gate_overlap_mm": 0.07747,
+    "clearance_mm": 0.26
+   },
+   "stress_tested": true,
+   "worst_case_robust": 0.9775,
+   "replay": "sim/out/opt/demo/replay/P-ae394887/view.html"
+  },
+  {
+   "rank": 2,
+   "id": "P-b192da7c",
+   "family": "plinko",
+   "sim_spec": "plinko",
+   "sim_inject": {
+    "plinko_layers.LAYERS": [
+     [
+      "layer_1_rods",
+      "rods",
+      4.55,
+      2.75,
+      2.2,
+      12.0,
+      0.0
+     ],
+     [
+      "layer_2_rods",
+      "rods",
+      1.45,
+      2.4499999999999997,
+      3.2,
+      8.0,
+      -35.0
+     ],
+     [
+      "layer_3_catch",
+      "solid",
+      null,
+      null,
+      2.0,
+      6.0,
+      35.0
+     ]
+    ]
+   },
+   "stroke": {
+    "profile": "sine",
+    "amp_mm": 0.3812,
+    "freq_hz": 37.0,
+    "angle_deg": 25.0
+   },
+   "stroke_human": "tool sine 37 Hz, 2.1 g (0.38 mm), 25 deg up",
+   "params_nominal": {
+    "g1": 4.7,
+    "b1": 2.6,
+    "h1": 2.2,
+    "g2": 1.6,
+    "b2": 2.3,
+    "h2": 3.2,
+    "drive": "tool",
+    "amp": 10.0,
+    "speed": 37.0,
+    "freq": 37.0,
+    "accel": 2.1,
+    "angle": 25.0
+   },
+   "cad": {
+    "file": "cad/plinko_layers.py",
+    "LAYERS": [
+     [
+      "layer_1_rods_4p7",
+      "rods",
+      4.7,
+      2.6,
+      2.2,
+      12.0,
+      0.0
+     ],
+     [
+      "layer_2_rods_1p6",
+      "rods",
+      1.6,
+      2.3,
+      3.2,
+      8.0,
+      -35.0
+     ],
+     [
+      "layer_3_catch",
+      "solid",
+      null,
+      null,
+      2.0,
+      6.0,
+      35.0
+     ]
+    ],
+    "note": "rows are (name, floor, gap, rod top width, rod height, wall height, tab x); walls and tabs unchanged"
+   },
+   "score": {
+    "robust": 0.9996,
+    "mean": 0.9996,
+    "sd": 0.0001,
+    "worst_friction_set": 0.9996
+   },
+   "per_class": [
+    {
+     "class": "big (pasta, chickpea)",
+     "purity": 1.0,
+     "recovery": 1.0
+    },
+    {
+     "class": "rice",
+     "purity": 1.0,
+     "recovery": 1.0
+    },
+    {
+     "class": "quinoa",
+     "purity": 1.0,
+     "recovery": 1.0
+    }
+   ],
+   "count_matrix": {
+    "rows": [
+     "big (pasta, chickpea)",
+     "rice",
+     "quinoa"
+    ],
+    "cols": [
+     "layer_1_rods",
+     "layer_2_rods",
+     "layer_3_catch",
+     "between",
+     "lost"
+    ],
+    "counts_over_9_runs": [
+     [
+      144,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      270,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      270,
+      0,
+      0
+     ]
+    ]
+   },
+   "jammed_per_run": 0.0,
+   "lost_per_run": 0.0,
+   "t90_s": 0.21132222222222216,
+   "flagged": false,
+   "flagged_runs": 0,
+   "gate_clearance_mm": 0.24,
+   "max_gate_overlap_mm": 0.08408,
+   "verified_stiff": null,
+   "stress_tested": true,
+   "worst_case_robust": 0.9375,
+   "replay": "sim/out/opt/demo/replay/P-b192da7c/view.html"
+  },
+  {
+   "rank": 3,
+   "id": "G-a1ecf9bb",
+   "family": "gated_mid",
+   "sim_spec": "gated:2.7,t3p35,t1p45,tw=4.85,tooth=0.95,slot=8.1/7,gx=22.2/53,flip=0",
+   "sim_inject": {},
+   "stroke": {
+    "profile": "sine",
+    "amp_mm": 0.3991,
+    "freq_hz": 48.0,
+    "angle_deg": 30.0
+   },
+   "stroke_human": "tool sine 48 Hz, 3.7 g (0.40 mm), 30 deg up",
+   "params_nominal": {
+    "slope": 2.7,
+    "k1": "t",
+    "s1": 3.5,
+    "gh": 3.5,
+    "s2": 1.6,
+    "tw": 5.0,
+    "tooth": 0.8,
+    "gx1": 22.2,
+    "slot": 8.1,
+    "drive": "tool",
+    "amp": 12.0,
+    "speed": 35.0,
+    "freq": 48.0,
+    "accel": 3.7,
+    "angle": 30.0
+   },
+   "cad": {
+    "file": "cad/gated_container.py",
+    "constants": {
+     "FLOOR_SLOPE_DEG": 2.7,
+     "GATE_H": 8.0,
+     "TUNNEL_W": 5.0,
+     "TOOTH": 0.8,
+     "GATE_X": 53.0
+    },
+    "STRIPS": {
+     "gate_t3p5": [
+      "t",
+      3.5
+     ],
+     "gate_t1p6": [
+      "t",
+      1.6
+     ]
+    },
+    "tower": [
+     "L1 (top): gate_t3p5 at x 22.2, drop slot 8.1 mm, wedge beyond",
+     "L2 (NOT flipped): gate_t1p6 at x 53, standard slot and ramp",
+     "catch pan under L2"
+    ],
+    "note": "GATE_H applies to every w strip, TUNNEL_W to every t strip: build each winner with its own constants. GATE_X = OPEN_X - slot - STRIP_T / 2.",
+    "buildable_with_todays_cad": false,
+    "mid_slot_PROPOSAL": {
+     "L1_GATE_X": 22.2,
+     "L1_slot_mm": 8.1,
+     "L2_GATE_X": 53.0,
+     "L2_slot_mm": 7.0,
+     "flip_levels": false,
+     "description": "not in gated_container.py yet: L1 needs its strip rails at GATE_X = L1_GATE_X and its drop slot from the strip's downstream face for `slot` mm (|y| < OPEN_Y), then a solid wedge from the slot's far edge to the +X end wall, rising at 30 deg from a 0.4 mm lip and capped 2 mm under the wall top. L2 is the standard container. Levels are not flipped. Sim: sim/designs_gated.py gx= / slot= / flip=0."
+    }
+   },
+   "score": {
+    "robust": 0.9851,
+    "mean": 0.9882,
+    "sd": 0.0031,
+    "worst_friction_set": 0.9866
+   },
+   "per_class": [
+    {
+     "class": "big (pasta, chickpea)",
+     "purity": 1.0,
+     "recovery": 1.0
+    },
+    {
+     "class": "rice",
+     "purity": 1.0,
+     "recovery": 1.0
+    },
+    {
+     "class": "quinoa",
+     "purity": 1.0,
+     "recovery": 1.0
+    }
+   ],
+   "count_matrix": {
+    "rows": [
+     "big (pasta, chickpea)",
+     "rice",
+     "quinoa"
+    ],
+    "cols": [
+     "L1",
+     "L2",
+     "catch",
+     "between",
+     "lost"
+    ],
+    "counts_over_9_runs": [
+     [
+      144,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      270,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      270,
+      0,
+      0
+     ]
+    ]
+   },
+   "jammed_per_run": 0.0,
+   "lost_per_run": 0.0,
+   "t90_s": 7.0891777777777785,
+   "flagged": false,
+   "flagged_runs": 0,
+   "gate_clearance_mm": 0.24,
+   "max_gate_overlap_mm": 0.08954,
+   "verified_stiff": null,
+   "stress_tested": true,
+   "worst_case_robust": 0.9249,
+   "replay": "sim/out/opt/demo/replay/G-a1ecf9bb/view.html"
+  }
+ ],
+ "best_by_drive": {
+  "firmware (BioKEA's stage)": {
+   "id": "P-ba5dd6b3",
+   "family": "plinko",
+   "sim_spec": "plinko",
+   "stroke": {
+    "profile": "constant_speed",
+    "amp_mm": 9.5,
+    "speed_mm_s": 47.0,
+    "ramp_s": 0.01,
+    "angle_deg": 5.0
+   },
+   "stroke_human": "firmware 9.5 mm at 47 mm/s, 5 deg up",
+   "design": "rods L1 gap 5.6 (rod 1.8 wide, 2.6 tall) / L2 gap 1.6 (rod 2.2, 2.8)",
+   "cad": {
+    "file": "cad/plinko_layers.py",
+    "LAYERS": [
+     [
+      "layer_1_rods_5p6",
+      "rods",
+      5.6,
+      1.8,
+      2.6,
+      12.0,
+      0.0
+     ],
+     [
+      "layer_2_rods_1p6",
+      "rods",
+      1.6,
+      2.2,
+      2.8,
+      8.0,
+      -35.0
+     ],
+     [
+      "layer_3_catch",
+      "solid",
+      null,
+      null,
+      2.0,
+      6.0,
+      35.0
+     ]
+    ],
+    "note": "rows are (name, floor, gap, rod top width, rod height, wall height, tab x); walls and tabs unchanged"
+   },
+   "robust": 0.8701,
+   "per_class": [
+    {
+     "class": "big (pasta, chickpea)",
+     "purity": 0.9934640522875817,
+     "recovery": 1.0
+    },
+    {
+     "class": "rice",
+     "purity": 0.9719982078853047,
+     "recovery": 1.0
+    },
+    {
+     "class": "quinoa",
+     "purity": 1.0,
+     "recovery": 0.9666666666666666
+    }
+   ]
+  },
+  "vibrating tool (demo rig)": {
+   "id": "P-ae394887",
+   "family": "plinko",
+   "sim_spec": "plinko",
+   "stroke": {
+    "profile": "sine",
+    "amp_mm": 0.2373,
+    "freq_hz": 48.0,
+    "angle_deg": 20.0
+   },
+   "stroke_human": "tool sine 48 Hz, 2.2 g (0.24 mm), 20 deg up",
+   "design": "rods L1 gap 3.7 (rod 2.6 wide, 1.6 tall) / L2 gap 1.5 (rod 1.8, 2.4)",
+   "cad": {
+    "file": "cad/plinko_layers.py",
+    "LAYERS": [
+     [
+      "layer_1_rods_3p7",
+      "rods",
+      3.7,
+      2.6,
+      1.6,
+      12.0,
+      0.0
+     ],
+     [
+      "layer_2_rods_1p5",
+      "rods",
+      1.5,
+      1.8,
+      2.4,
+      8.0,
+      -35.0
+     ],
+     [
+      "layer_3_catch",
+      "solid",
+      null,
+      null,
+      2.0,
+      6.0,
+      35.0
+     ]
+    ],
+    "note": "rows are (name, floor, gap, rod top width, rod height, wall height, tab x); walls and tabs unchanged"
+   },
+   "robust": 0.9775,
+   "per_class": [
+    {
+     "class": "big (pasta, chickpea)",
+     "purity": 1.0,
+     "recovery": 1.0
+    },
+    {
+     "class": "rice",
+     "purity": 1.0,
+     "recovery": 1.0
+    },
+    {
+     "class": "quinoa",
+     "purity": 1.0,
+     "recovery": 1.0
+    }
+   ]
+  }
+ }
+}

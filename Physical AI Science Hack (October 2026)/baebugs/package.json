@@ -1,0 +1,10 @@
+{
+ "name": "baebugs",
+ "version": "0.1.0",
+ "description": "Read the baebugs knowledge graph (root to leaf, claims, licences, hashes) from the command line.",
+ "license": "MIT",
+ "bin": {"baebugs": "bin/baebugs.mjs"},
+ "files": ["bin/", "site/mvp/mvp.json"],
+ "engines": {"node": ">=18"},
+ "repository": {"type": "git", "url": "git+https://github.com/biobitworks/baebugs.git"}
+}

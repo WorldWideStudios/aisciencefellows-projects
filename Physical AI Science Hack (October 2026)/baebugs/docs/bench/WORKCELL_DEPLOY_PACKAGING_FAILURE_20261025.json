@@ -1,0 +1,21 @@
+{
+  "correction": "Exclude every dot-path from derived public manifest; preserve initial attempt",
+  "id": "BAEBUGS-PRODUCTION-PACKAGING-DEFECT-20261025-002",
+  "not_observed": "No assertion these hidden files were actually served to the public",
+  "observed": "Vercel deployment READY; manifest incorrectly lists three local metadata files",
+  "physical_sample_executed": false,
+  "previous_manifest_entries": 41,
+  "previous_manifest_sha256": "667090cc0e2537552764b05b4a6fc2ba8b4c4bf959a6d08e6c97048cb04fb176",
+  "previous_published_aok_root": "9081c2802b28ce2e0ebd98c85736e8e32295d8b1958891d38d7a8aa975452919",
+  "schema": "baebugs.deploy_failure_receipt.v1",
+  "signed": "NOT_SIGNED",
+  "source_commit": "4b49cd4430338db110b7a69e99262d7a18d83a3f",
+  "source_custody_changed": false,
+  "stage": "DEPLOYED_BUT_MANIFEST_ADMISSION_FAILED",
+  "unexpected_manifest_entries": [
+    ".gitignore",
+    ".vercel/README.txt",
+    ".vercel/project.json"
+  ],
+  "vercel_inspect_url": "https://vercel.com/biobitworks/baebugs-lab-workcell/DyBUjmNyqUAA64pwpFht4VHTwx7o"
+}

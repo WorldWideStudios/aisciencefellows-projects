@@ -1,0 +1,12 @@
+# Size classes for BioKEA Track A: bodies 1-30 mm long (from the track slides),
+# sorted with the LIMITED kit (PERF-5, GRID-4, HEX-2, SCREEN-1, TRAY).
+# Class boundaries sit at the kit's effective cuts (aperture x retention_margin),
+# so each class lands on exactly one frame. width_mm = narrow axis (governs passage).
+length_range_mm: [1.0, 30.0]
+retention_margin: 1.10
+classes:
+  - {name: tiny,   width_mm: [0.2, 1.32], sieve: TRAY,     examples: [mites, springtails, midges, chia]}
+  - {name: small,  width_mm: [1.32, 2.42], sieve: SCREEN-1, examples: [ants, small flies, rice]}
+  - {name: medium, width_mm: [2.42, 4.4],  sieve: HEX-2,    examples: [small beetles, bees, fideo]}
+  - {name: large,  width_mm: [4.4, 5.5],   sieve: GRID-4,   examples: [large flies, small moths]}
+  - {name: xlarge, width_mm: [5.5, 30.0],  sieve: PERF-5,   examples: [large beetles, cicadas, ditalini]}

@@ -1,0 +1,20 @@
+{
+  "valid_solid": true,
+  "single_solid": true,
+  "watertight_mesh": true,
+  "bbox_mm": [
+    121.46,
+    79.17,
+    18.03
+  ],
+  "fits_bed": true,
+  "volume_cm3": 39.19,
+  "rim_inner_diameter_mm": 66.0,
+  "tunnel_w_mm": 4.0,
+  "tunnel_h_mm": 1.4,
+  "tunnels": 34,
+  "post_mm": 2.1,
+  "slope_deg": 10.0,
+  "drop_mm": 8.0,
+  "top_z_mm": 9.32
+}

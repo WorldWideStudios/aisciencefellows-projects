@@ -1,0 +1,38 @@
+{
+  "schema": "baebugs.bench_image_observation.v1",
+  "observation_id": "BAEBUGS-PHOTO-OBS-20261025-01",
+  "source": {
+    "source_class": "USER_UPLOADED_IMAGE",
+    "display_name": "46939.jpg",
+    "sha256_exact_file_bytes": "a396a9b9f800733fed9e2750dda0fed2de49083df0760b8d9088b4ec51f2452c",
+    "width_px": 1536,
+    "height_px": 1152,
+    "public_source_bytes": "WITHHELD",
+    "public_byte_recomputation": "NOT_AVAILABLE",
+    "publication_consent": "UNKNOWN",
+    "license": "UNKNOWN"
+  },
+  "context": {
+    "project": "biobitworks/baebugs",
+    "date": "2026-10-25",
+    "scope": "single photographed bench configuration",
+    "repo_predecessor_pr13_sha": "0ce621068e826282fb95b4d47f0b7a5d0aa390d9",
+    "not_canonical_equipment_calibration": true
+  },
+  "observations": [
+    {"atom": "wooden_multi_level_rack", "status": "VISIBLE", "measurement": "NOT_COMPUTED"},
+    {"atom": "orange_upright_rack_or_fixture", "status": "VISIBLE", "measurement": "NOT_COMPUTED"},
+    {"atom": "gray_articulated_robot_arm", "status": "VISIBLE", "motion_executed": "UNKNOWN"},
+    {"atom": "two_blue_articulated_robot_assemblies", "status": "VISIBLE", "motion_executed": "UNKNOWN"},
+    {"atom": "white_loose_tray_components", "status": "VISIBLE", "dimensions": "UNKNOWN"},
+    {"atom": "food_analog_sample_cups", "status": "VISIBLE", "sample_identity": "UNKNOWN"}
+  ],
+  "not_supported": [
+    "end_to_end_automated_transfer",
+    "calibrated_robot_reach",
+    "quantitative_specimen_recovery",
+    "taxonomic_identification",
+    "operator_or_participant_identity"
+  ],
+  "publication_policy": "Do not redistribute the photo or identify any person without appropriate rights and consent. The hash identifies user-supplied bytes; this public derived observation cannot independently prove the withheld image."
+}

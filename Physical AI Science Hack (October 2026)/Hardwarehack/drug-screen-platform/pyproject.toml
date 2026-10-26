@@ -1,0 +1,38 @@
+[project]
+name = "drug-screen-platform"
+version = "0.3.0"
+description = "Design drug screening plates, generate Opentrons Flex protocols and drive the robot"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "httpx>=0.27",
+    "typer>=0.12",
+    "python-multipart>=0.0.9",
+    "opentrons==10.1.0",
+]
+
+[project.scripts]
+plate = "cli.plate:app"
+flex = "cli.flex:app"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+include = ["src/*.py", "api", "cli"]
+# src/*.py are flat top-level modules (`import plate_layout`), api/ and cli/ are packages.
+dev-mode-dirs = [".", "src"]
+
+[tool.hatch.build.targets.wheel.sources]
+"src" = ""
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "scripts", "."]
+testpaths = ["tests"]

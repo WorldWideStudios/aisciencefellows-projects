@@ -1,0 +1,46 @@
+{
+  "male_major_diameter": 10,
+  "male_core_diameter": 8,
+  "insertion": 10,
+  "initial_insertion": 8,
+  "twist_degrees": 90,
+  "draw_in": 2,
+  "equivalent_lead": 8.0,
+  "lug_centres": [
+    3,
+    7
+  ],
+  "lug_arc_degrees": 36,
+  "lug_axial_height": 1.2,
+  "female_core_diameter": 8.4,
+  "groove_outer_diameter": 10.6,
+  "groove_height": 1.8,
+  "mouth_diameter": 12,
+  "mouth_depth": 1.8,
+  "bore_depth": 11.2,
+  "mount_bolt_circle": 14,
+  "mount_holes": 3.2,
+  "mount_counterbores": 6.2,
+  "mount_square": 9.899494936611665,
+  "mount_web": 3,
+  "mount_diameter": 28,
+  "mount_thickness": 7,
+  "entry_slot_angle": 60,
+  "face_gasket_id": 21,
+  "face_gasket_od": 24,
+  "face_gasket_groove_depth": 0.3,
+  "female_body": [
+    32,
+    28,
+    22
+  ],
+  "tool_blank": [
+    24,
+    24,
+    18
+  ],
+  "latch_pin_diameter": 2,
+  "latch_hole_diameter": 2.3,
+  "latch_travel": 3,
+  "latch_engagement": 1.5
+}

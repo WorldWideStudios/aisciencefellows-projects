@@ -1,0 +1,41 @@
+{
+  "valid_solid": true,
+  "single_solid": false,
+  "watertight_mesh": true,
+  "bbox_mm": [
+    157.39,
+    104.01,
+    301.12
+  ],
+  "fits_bed": false,
+  "volume_cm3": 158.09,
+  "preview_only": true,
+  "pivot_mm": [
+    0.0,
+    0.0,
+    12.5
+  ],
+  "pivot_assumed": true,
+  "clearance_mm": 3.0,
+  "levels": 3,
+  "shown_tilt_deg": 25.0,
+  "shown_pitch_mm": 105.0,
+  "pitch_table": [
+    {
+      "tilt_deg": 20.0,
+      "min_pitch_mm_with_tab": 89.5,
+      "min_pitch_mm_tab_cut_off": 74.4
+    },
+    {
+      "tilt_deg": 25.0,
+      "min_pitch_mm_with_tab": 103.6,
+      "min_pitch_mm_tab_cut_off": 84.9
+    },
+    {
+      "tilt_deg": 30.0,
+      "min_pitch_mm_with_tab": 116.7,
+      "min_pitch_mm_tab_cut_off": 94.7
+    }
+  ],
+  "note": "pitch = pivot to pivot; neighbours tip opposite ways; boxes only, inserts sit inside them"
+}

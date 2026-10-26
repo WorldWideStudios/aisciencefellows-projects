@@ -1,0 +1,31 @@
+{
+  "valid_solid": true,
+  "single_solid": true,
+  "watertight_mesh": true,
+  "bbox_mm": [
+    131.4,
+    95.4,
+    21.01
+  ],
+  "fits_bed": true,
+  "volume_cm3": 22.35,
+  "spec": "breaker:open=11.4,bar=2.3,pin_d=1.4,pin_h=6.8,pitch=8,tip=round",
+  "grid_step_mm": 13.7,
+  "openings": [
+    8,
+    5
+  ],
+  "open_area_mm2": 5198,
+  "open_pct_of_box_bottom": 52.0,
+  "pins": 28,
+  "pin_every_nodes": 1,
+  "pin_pitch_mm": 13.7,
+  "pin_top_in_box_mm": 12.2,
+  "outside_mm": [
+    131.4,
+    95.4,
+    2.4
+  ],
+  "printability_flags": [],
+  "winner": 3
+}

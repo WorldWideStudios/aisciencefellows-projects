@@ -1,0 +1,26 @@
+{
+  "valid_solid": true,
+  "single_solid": true,
+  "watertight_mesh": true,
+  "bbox_mm": [
+    131.4,
+    95.4,
+    21.02
+  ],
+  "fits_bed": true,
+  "volume_cm3": 24.8,
+  "hole_mm": 2.0,
+  "bar_mm": 1.0,
+  "screen_t_mm": 1.4,
+  "holes": 726,
+  "open_area_of_windows_pct": 38.1,
+  "outside_mm": [
+    131.4,
+    95.4,
+    3.0
+  ],
+  "window_mm": [
+    35.1,
+    36.2
+  ]
+}

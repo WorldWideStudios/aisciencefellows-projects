@@ -1,0 +1,912 @@
+{
+ "note": "Geometry concepts, not tested on hardware. Layout positions are illustrative.",
+ "sbs_mm": [
+  127.76,
+  85.48
+ ],
+ "slot_pitch_mm": [
+  150.0,
+  105.0
+ ],
+ "slots": {
+  "D1": {
+   "x": 0.0,
+   "y": 315.0
+  },
+  "D2": {
+   "x": 150.0,
+   "y": 315.0
+  },
+  "D3": {
+   "x": 300.0,
+   "y": 315.0
+  },
+  "C1": {
+   "x": 0.0,
+   "y": 210.0
+  },
+  "C2": {
+   "x": 150.0,
+   "y": 210.0
+  },
+  "C3": {
+   "x": 300.0,
+   "y": 210.0
+  },
+  "B1": {
+   "x": 0.0,
+   "y": 105.0
+  },
+  "B2": {
+   "x": 150.0,
+   "y": 105.0
+  },
+  "B3": {
+   "x": 300.0,
+   "y": 105.0
+  },
+  "A1": {
+   "x": 0.0,
+   "y": 0.0
+  },
+  "A2": {
+   "x": 150.0,
+   "y": 0.0
+  },
+  "A3": {
+   "x": 300.0,
+   "y": 0.0
+  }
+ },
+ "modules": {
+  "bugsorter_trommel": {
+   "biokea": 1,
+   "stages": [
+    "sort"
+   ],
+   "platform": [
+    "bench"
+   ],
+   "status": "CONCEPT",
+   "materials": [
+    "PLA",
+    "PETG",
+    "PA12 powder (Fuse 1+)"
+   ],
+   "n_parts": 11
+  },
+  "vortex_sieve_kit": {
+   "biokea": 2,
+   "stages": [
+    "sort",
+    "disperse"
+   ],
+   "platform": [
+    "bench"
+   ],
+   "status": "CONCEPT",
+   "materials": [
+    "PETG",
+    "PA12 powder (Fuse 1+)"
+   ],
+   "n_parts": 6
+  },
+  "centrifuge_strainer": {
+   "biokea": 1,
+   "stages": [
+    "sort"
+   ],
+   "platform": [
+    "bench"
+   ],
+   "status": "CONCEPT",
+   "materials": [
+    "PETG",
+    "tough resin (post-cured)"
+   ],
+   "n_parts": 2
+  },
+  "flex_sieve_adapter": {
+   "biokea": 2,
+   "stages": [
+    "sort",
+    "disperse"
+   ],
+   "platform": [
+    "flex"
+   ],
+   "status": "SIMULATED",
+   "materials": [
+    "PETG",
+    "PA12 powder (Fuse 1+)"
+   ],
+   "n_parts": 1
+  },
+  "flex_mini_trommel": {
+   "biokea": 1,
+   "stages": [
+    "sort"
+   ],
+   "platform": [
+    "flex"
+   ],
+   "status": "SIMULATED",
+   "materials": [
+    "PETG",
+    "PA12 powder (Fuse 1+)"
+   ],
+   "n_parts": 2
+  },
+  "handoff_carrier": {
+   "biokea": 3,
+   "stages": [
+    "pick"
+   ],
+   "platform": [
+    "bench",
+    "flex"
+   ],
+   "status": "SIMULATED",
+   "materials": [
+    "PETG",
+    "PA12 powder (Fuse 1+)"
+   ],
+   "n_parts": 1
+  },
+  "bench_misc": {
+   "biokea": null,
+   "stages": [],
+   "platform": [
+    "bench"
+   ],
+   "status": "CONCEPT",
+   "materials": [],
+   "n_parts": 1
+  }
+ },
+ "parts": [
+  {
+   "name": "trommel_zone_2mm",
+   "modules": [
+    "bugsorter_trommel"
+   ],
+   "platform": "bench",
+   "stl": "lab/stl/trommel_zone_2mm.stl",
+   "bbox_mm": [
+    110.0,
+    110.0,
+    76.0
+   ],
+   "sha256": "cf07b0fd8a8a32ceed7ba8c1ecd2f949decebb54f184bc40d7ce0babfc2b3d5e",
+   "status": "CONCEPT",
+   "materials": [
+    "PA12 powder (Fuse 1+)",
+    "PETG",
+    "PLA"
+   ],
+   "stages": [
+    "sort"
+   ],
+   "triangles": 132996,
+   "watertight": true,
+   "pos": [
+    -65.0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "trommel_zone_4mm",
+   "modules": [
+    "bugsorter_trommel"
+   ],
+   "platform": "bench",
+   "stl": "lab/stl/trommel_zone_4mm.stl",
+   "bbox_mm": [
+    110.0,
+    110.0,
+    76.0
+   ],
+   "sha256": "bd67b2b875b79de37d12249457c99d84882991cd69ad9cd3b94030bf81e90e02",
+   "status": "CONCEPT",
+   "materials": [
+    "PA12 powder (Fuse 1+)",
+    "PETG",
+    "PLA"
+   ],
+   "stages": [
+    "sort"
+   ],
+   "triangles": 53748,
+   "watertight": true,
+   "pos": [
+    65.0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "trommel_zone_7mm",
+   "modules": [
+    "bugsorter_trommel"
+   ],
+   "platform": "bench",
+   "stl": "lab/stl/trommel_zone_7mm.stl",
+   "bbox_mm": [
+    110.0,
+    110.0,
+    76.0
+   ],
+   "sha256": "01fc906fa7e4a661d2922499e407b02d6371ec7e36547790bbfe914890d4b6b6",
+   "status": "CONCEPT",
+   "materials": [
+    "PA12 powder (Fuse 1+)",
+    "PETG",
+    "PLA"
+   ],
+   "stages": [
+    "sort"
+   ],
+   "triangles": 25792,
+   "watertight": true,
+   "pos": [
+    195.0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "trommel_cap_inlet",
+   "modules": [
+    "bugsorter_trommel"
+   ],
+   "platform": "bench",
+   "stl": "lab/stl/trommel_cap_inlet.stl",
+   "bbox_mm": [
+    114.0,
+    114.0,
+    22.0
+   ],
+   "sha256": "406b2927eb902b52cc3139696fcf89059be1d1bd0408bb5192d5bf8d00dfe80e",
+   "status": "CONCEPT",
+   "materials": [
+    "PA12 powder (Fuse 1+)",
+    "PETG",
+    "PLA"
+   ],
+   "stages": [
+    "sort"
+   ],
+   "triangles": 2384,
+   "watertight": true,
+   "pos": [
+    -195.0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "trommel_cap_outlet",
+   "modules": [
+    "bugsorter_trommel"
+   ],
+   "platform": "bench",
+   "stl": "lab/stl/trommel_cap_outlet.stl",
+   "bbox_mm": [
+    114.0,
+    114.0,
+    22.0
+   ],
+   "sha256": "fef87f7f0cc0d822815cdb27b5899773f223eec0b21087c9ebb4598af9ff812a",
+   "status": "CONCEPT",
+   "materials": [
+    "PA12 powder (Fuse 1+)",
+    "PETG",
+    "PLA"
+   ],
+   "stages": [
+    "sort"
+   ],
+   "triangles": 2192,
+   "watertight": true,
+   "pos": [
+    325.0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "trommel_stand_inlet",
+   "modules": [
+    "bugsorter_trommel"
+   ],
+   "platform": "bench",
+   "stl": "lab/stl/trommel_stand_inlet.stl",
+   "bbox_mm": [
+    90.0,
+    60.0,
+    134.1
+   ],
+   "sha256": "8ed1ad9ffc2a8b98c18b7a5bca34718a094c5da46e417f8246634ab98567592a",
+   "status": "CONCEPT",
+   "materials": [
+    "PA12 powder (Fuse 1+)",
+    "PETG",
+    "PLA"
+   ],
+   "stages": [
+    "sort"
+   ],
+   "triangles": 860,
+   "watertight": true,
+   "pos": [
+    -265.0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "trommel_stand_outlet",
+   "modules": [
+    "bugsorter_trommel"
+   ],
+   "platform": "bench",
+   "stl": "lab/stl/trommel_stand_outlet.stl",
+   "bbox_mm": [
+    90.0,
+    60.0,
+    122.0
+   ],
+   "sha256": "238768d4c6e607568d55f9d4002c9797dfc3c0f3c3eeff1a1d915e9577f4e933",
+   "status": "CONCEPT",
+   "materials": [
+    "PA12 powder (Fuse 1+)",
+    "PETG",
+    "PLA"
+   ],
+   "stages": [
+    "sort"
+   ],
+   "triangles": 860,
+   "watertight": true,
+   "pos": [
+    415.0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "trommel_crank_hand",
+   "modules": [
+    "bugsorter_trommel"
+   ],
+   "platform": "bench",
+   "stl": "lab/stl/trommel_crank_hand.stl",
+   "bbox_mm": [
+    78.0,
+    22.0,
+    47.0
+   ],
+   "sha256": "427d857804dc8d455404298e6879d2824375d8a12853c5ccf391bdba6aa12f1d",
+   "status": "CONCEPT",
+   "materials": [
+    "PA12 powder (Fuse 1+)",
+    "PETG",
+    "PLA"
+   ],
+   "stages": [
+    "sort"
+   ],
+   "triangles": 724,
+   "watertight": true,
+   "pos": [
+    -265.0,
+    90,
+    0
+   ]
+  },
+  {
+   "name": "trommel_crank_arm",
+   "modules": [
+    "bugsorter_trommel"
+   ],
+   "platform": "bench",
+   "stl": "lab/stl/trommel_crank_arm.stl",
+   "bbox_mm": [
+    81.0,
+    26.0,
+    47.0
+   ],
+   "sha256": "73a534bdfc183ae8f157022608c0794eb35a2702cb16c9d16d8b1bd54d6ae08e",
+   "status": "CONCEPT",
+   "materials": [
+    "PA12 powder (Fuse 1+)",
+    "PETG",
+    "PLA"
+   ],
+   "stages": [
+    "sort"
+   ],
+   "triangles": 580,
+   "watertight": true,
+   "pos": [
+    415.0,
+    90,
+    0
+   ]
+  },
+  {
+   "name": "trommel_bin",
+   "modules": [
+    "bugsorter_trommel"
+   ],
+   "platform": "bench",
+   "stl": "lab/stl/trommel_bin.stl",
+   "bbox_mm": [
+    70.0,
+    96.0,
+    40.0
+   ],
+   "sha256": "3e9ad073d8315628bb5bedb54bf287929d340444e76d0af5b6ab1f30ff358665",
+   "status": "CONCEPT",
+   "materials": [
+    "PA12 powder (Fuse 1+)",
+    "PETG",
+    "PLA"
+   ],
+   "stages": [
+    "sort"
+   ],
+   "triangles": 180,
+   "watertight": true,
+   "pos": [
+    -65.0,
+    -150,
+    0
+   ]
+  },
+  {
+   "name": "trommel_bin_oversize",
+   "modules": [
+    "bugsorter_trommel"
+   ],
+   "platform": "bench",
+   "stl": "lab/stl/trommel_bin_oversize.stl",
+   "bbox_mm": [
+    60.0,
+    96.0,
+    40.0
+   ],
+   "sha256": "0511940ac1cd44b56cc6cb45dbbf9fa6502259f8ed91173fcac78b46bc05ac01",
+   "status": "CONCEPT",
+   "materials": [
+    "PA12 powder (Fuse 1+)",
+    "PETG",
+    "PLA"
+   ],
+   "stages": [
+    "sort"
+   ],
+   "triangles": 180,
+   "watertight": true,
+   "pos": [
+    65.0,
+    -150,
+    0
+   ]
+  },
+  {
+   "name": "vortex_mini_sieve_1.5mm",
+   "modules": [
+    "vortex_sieve_kit"
+   ],
+   "platform": "bench",
+   "stl": "lab/stl/vortex_mini_sieve_1.5mm.stl",
+   "bbox_mm": [
+    50.0,
+    50.0,
+    18.0
+   ],
+   "sha256": "bb102c6a9f6579f16cf31b465bb6c53aced3edcdd90dd4089782e98a5ef79a13",
+   "status": "CONCEPT",
+   "materials": [
+    "PA12 powder (Fuse 1+)",
+    "PETG"
+   ],
+   "stages": [
+    "disperse",
+    "sort"
+   ],
+   "triangles": 13646,
+   "watertight": true,
+   "pos": [
+    -65.0,
+    -300,
+    0
+   ]
+  },
+  {
+   "name": "vortex_mini_sieve_3mm",
+   "modules": [
+    "vortex_sieve_kit"
+   ],
+   "platform": "bench",
+   "stl": "lab/stl/vortex_mini_sieve_3mm.stl",
+   "bbox_mm": [
+    50.0,
+    50.0,
+    18.0
+   ],
+   "sha256": "4a2cb3feeb31b0aead2a9323f47052baf34bbd74b96c180aaa71547be98f595f",
+   "status": "CONCEPT",
+   "materials": [
+    "PA12 powder (Fuse 1+)",
+    "PETG"
+   ],
+   "stages": [
+    "disperse",
+    "sort"
+   ],
+   "triangles": 6114,
+   "watertight": true,
+   "pos": [
+    65.0,
+    -300,
+    0
+   ]
+  },
+  {
+   "name": "vortex_mini_sieve_5mm",
+   "modules": [
+    "vortex_sieve_kit"
+   ],
+   "platform": "bench",
+   "stl": "lab/stl/vortex_mini_sieve_5mm.stl",
+   "bbox_mm": [
+    50.0,
+    50.0,
+    18.0
+   ],
+   "sha256": "9d6c24c7fd57e77bf2bf0f8aa8e1f8bc270c1f257a4f6d93d32b33a80fd063fd",
+   "status": "CONCEPT",
+   "materials": [
+    "PA12 powder (Fuse 1+)",
+    "PETG"
+   ],
+   "stages": [
+    "disperse",
+    "sort"
+   ],
+   "triangles": 3224,
+   "watertight": true,
+   "pos": [
+    195.0,
+    -300,
+    0
+   ]
+  },
+  {
+   "name": "vortex_mini_pan",
+   "modules": [
+    "vortex_sieve_kit"
+   ],
+   "platform": "bench",
+   "stl": "lab/stl/vortex_mini_pan.stl",
+   "bbox_mm": [
+    50.0,
+    50.0,
+    18.0
+   ],
+   "sha256": "c77e6554b771895552d88d659728cae46cd20f77f137985910a4e8f66ce1a4fe",
+   "status": "CONCEPT",
+   "materials": [
+    "PA12 powder (Fuse 1+)",
+    "PETG"
+   ],
+   "stages": [
+    "disperse",
+    "sort"
+   ],
+   "triangles": 1408,
+   "watertight": true,
+   "pos": [
+    325.0,
+    -300,
+    0
+   ]
+  },
+  {
+   "name": "vortex_mini_lid",
+   "modules": [
+    "vortex_sieve_kit"
+   ],
+   "platform": "bench",
+   "stl": "lab/stl/vortex_mini_lid.stl",
+   "bbox_mm": [
+    54.0,
+    50.0,
+    13.0
+   ],
+   "sha256": "af7dde03d618084770cdba8d9f7e55836de9ca7f5df465e3fc4c51ff649a829a",
+   "status": "CONCEPT",
+   "materials": [
+    "PA12 powder (Fuse 1+)",
+    "PETG"
+   ],
+   "stages": [
+    "disperse",
+    "sort"
+   ],
+   "triangles": 900,
+   "watertight": true,
+   "pos": [
+    455.0,
+    -300,
+    0
+   ]
+  },
+  {
+   "name": "vortex_puck_76",
+   "modules": [
+    "vortex_sieve_kit"
+   ],
+   "platform": "bench",
+   "stl": "lab/stl/vortex_puck_76.stl",
+   "bbox_mm": [
+    76.0,
+    76.0,
+    18.0
+   ],
+   "sha256": "eb9c9fbe49af0304317cf3ee6d391816acec2e8099e77bb34527e53d7c2502b2",
+   "status": "CONCEPT",
+   "materials": [
+    "PA12 powder (Fuse 1+)",
+    "PETG"
+   ],
+   "stages": [
+    "disperse",
+    "sort"
+   ],
+   "triangles": 700,
+   "watertight": true,
+   "pos": [
+    -195.0,
+    -300,
+    0
+   ]
+  },
+  {
+   "name": "centrifuge_tube_strainer_1.5mm",
+   "modules": [
+    "centrifuge_strainer"
+   ],
+   "platform": "bench",
+   "stl": "lab/stl/centrifuge_tube_strainer_1.5mm.stl",
+   "bbox_mm": [
+    42.2,
+    34.2,
+    27.0
+   ],
+   "sha256": "f89a64d4aaf01140826e8a8b8f38defabcbc68e724e2de157cb831aabc71b754",
+   "status": "CONCEPT",
+   "materials": [
+    "PETG",
+    "tough resin (post-cured)"
+   ],
+   "stages": [
+    "sort"
+   ],
+   "triangles": 3676,
+   "watertight": true,
+   "pos": [
+    -65.0,
+    -430,
+    0
+   ]
+  },
+  {
+   "name": "centrifuge_tube_strainer_3mm",
+   "modules": [
+    "centrifuge_strainer"
+   ],
+   "platform": "bench",
+   "stl": "lab/stl/centrifuge_tube_strainer_3mm.stl",
+   "bbox_mm": [
+    42.2,
+    34.2,
+    27.0
+   ],
+   "sha256": "c7c2ebee5975522d49dc03a710c90ff98a3bada2dd16e6660b1d153068b814ec",
+   "status": "CONCEPT",
+   "materials": [
+    "PETG",
+    "tough resin (post-cured)"
+   ],
+   "stages": [
+    "sort"
+   ],
+   "triangles": 1874,
+   "watertight": true,
+   "pos": [
+    65.0,
+    -430,
+    0
+   ]
+  },
+  {
+   "name": "arm_grip_handle",
+   "modules": [
+    "bench_misc"
+   ],
+   "platform": "bench",
+   "stl": "lab/stl/arm_grip_handle.stl",
+   "bbox_mm": [
+    40.0,
+    16.0,
+    26.0
+   ],
+   "sha256": "6652b4164eb529957733ee5835a1c85d94793e39befd25bab02076a9ee5ced9c",
+   "status": "CONCEPT",
+   "materials": [],
+   "stages": [],
+   "triangles": 188,
+   "watertight": true,
+   "pos": [
+    195.0,
+    -430,
+    0
+   ]
+  },
+  {
+   "name": "ot_sieve_adapter",
+   "modules": [
+    "flex_sieve_adapter"
+   ],
+   "platform": "flex",
+   "stl": "lab/stl/ot_sieve_adapter.stl",
+   "bbox_mm": [
+    127.76,
+    85.48,
+    18.0
+   ],
+   "sha256": "e106a865349ddb0efed2fc908e7b80f116c6d8958ed7233c3be75f14cff371df",
+   "status": "SIMULATED",
+   "materials": [
+    "PA12 powder (Fuse 1+)",
+    "PETG"
+   ],
+   "stages": [
+    "disperse",
+    "sort"
+   ],
+   "triangles": null,
+   "watertight": true,
+   "pos": [
+    150.0,
+    210.0,
+    0
+   ],
+   "slot": "C2"
+  },
+  {
+   "name": "ot_mini_trommel_base",
+   "modules": [
+    "flex_mini_trommel"
+   ],
+   "platform": "flex",
+   "stl": "lab/stl/ot_mini_trommel_base.stl",
+   "bbox_mm": [
+    127.76,
+    85.48,
+    45.1
+   ],
+   "sha256": "646029a31a25b3576adca0c58dc919c69f93382d287d10db45fcef57baf9ccf7",
+   "status": "SIMULATED",
+   "materials": [
+    "PA12 powder (Fuse 1+)",
+    "PETG"
+   ],
+   "stages": [
+    "sort"
+   ],
+   "triangles": null,
+   "watertight": true,
+   "pos": [
+    150.0,
+    315.0,
+    0
+   ],
+   "slot": "D2"
+  },
+  {
+   "name": "ot_mini_trommel_drum",
+   "modules": [
+    "flex_mini_trommel"
+   ],
+   "platform": "flex",
+   "stl": "lab/stl/ot_mini_trommel_drum.stl",
+   "bbox_mm": [
+    36.0,
+    36.0,
+    104.0
+   ],
+   "sha256": "e7df82352cbb5451c96c7ef0a6b44e29547297de2b6ca396e406f113c895cfc2",
+   "status": "SIMULATED",
+   "materials": [
+    "PA12 powder (Fuse 1+)",
+    "PETG"
+   ],
+   "stages": [
+    "sort"
+   ],
+   "triangles": null,
+   "watertight": true,
+   "pos": [
+    150.0,
+    315.0,
+    45.1
+   ],
+   "slot": "D2"
+  },
+  {
+   "name": "ot_handoff_plate",
+   "modules": [
+    "handoff_carrier"
+   ],
+   "platform": "flex",
+   "stl": "lab/stl/ot_handoff_plate.stl",
+   "bbox_mm": [
+    127.76,
+    85.48,
+    34.0
+   ],
+   "sha256": "643cce3b18dbbf11b343047bf115e7c72fbf09a369d95415025ae1caab143b47",
+   "status": "SIMULATED",
+   "materials": [
+    "PA12 powder (Fuse 1+)",
+    "PETG"
+   ],
+   "stages": [
+    "pick"
+   ],
+   "triangles": null,
+   "watertight": true,
+   "pos": [
+    150.0,
+    105.0,
+    0
+   ],
+   "slot": "B2"
+  },
+  {
+   "name": "ot_handoff_plate",
+   "modules": [
+    "handoff_carrier"
+   ],
+   "platform": "bench",
+   "stl": "lab/stl/ot_handoff_plate.stl",
+   "bbox_mm": [
+    127.76,
+    85.48,
+    34.0
+   ],
+   "sha256": "643cce3b18dbbf11b343047bf115e7c72fbf09a369d95415025ae1caab143b47",
+   "status": "SIMULATED",
+   "materials": [
+    "PA12 powder (Fuse 1+)",
+    "PETG"
+   ],
+   "stages": [
+    "pick"
+   ],
+   "triangles": null,
+   "watertight": true,
+   "pos": [
+    416.0,
+    -150,
+    0
+   ],
+   "view_copy": true
+  }
+ ]
+}

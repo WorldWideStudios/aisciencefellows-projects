@@ -1,0 +1,778 @@
+{
+ "status": "INFERRED (unconfirmed; not training labels)",
+ "model": "yoloe-11s-seg.pt",
+ "weights_sha256": "8e439445c87338b79d9ce21dec109f4621e26df67e94d26ea1a98c1e64dce3e3",
+ "prompts": [
+  "tube rack",
+  "pipette tip box",
+  "microplate",
+  "cryovial",
+  "conical tube",
+  "plastic tub",
+  "robot arm",
+  "orange 3D printed shelf rack",
+  "wooden post",
+  "breadboard",
+  "steel ruler",
+  "metal frame",
+  "vortex mixer",
+  "3D printer",
+  "printed tray frame",
+  "hexagonal grid",
+  "perforated metal sheet",
+  "plastic box"
+ ],
+ "prompts_sha256": "377c8239b3481888a074cabdd1f953025daf06db27febb13a46be2b88c92f4b9",
+ "conf_min": 0.25,
+ "photos": [
+  {
+   "photo_id": "tower_arm_side_1",
+   "published_sha256": "82f593b9a577d0340c40bef05d0605099fbccbcd8987b08f8673189d9cb31185",
+   "frame_root": "bac7c1cb9c3618a8dfcb606ab82f131cd910fefdbda02e73b7e42970412988de",
+   "pixel_root": "565ea0f0eadd9a1c4f2064ab61adbea626f3ea1bde1dad14342edbeeb8fa4fb2",
+   "objects_root": "b7a09d08e58e8842dd092a4d7092c5964c0764f774dbd0c36bd6fa4bd722a2ab",
+   "boxes": [
+    {
+     "prompt": "orange 3D printed shelf rack",
+     "conf": 0.551,
+     "bbox": [
+      535,
+      353,
+      1174,
+      1597
+     ]
+    },
+    {
+     "prompt": "orange 3D printed shelf rack",
+     "conf": 0.527,
+     "bbox": [
+      365,
+      1490,
+      1565,
+      2211
+     ]
+    }
+   ]
+  },
+  {
+   "photo_id": "tower_arm_side_2",
+   "published_sha256": "d3c2844e62da4a7e88583e4d2e7b582fc04bc7d1e12dd235129be5ec94904d47",
+   "frame_root": "8134dfbe9b540995b05b381e21cf4a41a544a215fa869d056995d0edd4263a15",
+   "pixel_root": "6479758e449028effbac30b7ef9a7c82e370f76bf0d5d884b2c9c9d2bcabd2ab",
+   "objects_root": "3f515de35c9dadcd26357ba4cf186925da199bcaa5039531ade645a27451a790",
+   "boxes": []
+  },
+  {
+   "photo_id": "tower_top",
+   "published_sha256": "7c7566eefeb1388ffa05551b935a62fba6bf179975cb3753f6c787788988162a",
+   "frame_root": "0b8a3e80a8c63a8cd90b2a91eb9f066370a5ec9fcc2b62f711825afadbcc70fe",
+   "pixel_root": "edf156b37cdb39098df2720d58b713b18a737faae8eb84a7ce70b0776110aa08",
+   "objects_root": "1c029ae162e330f3a02d8f15c04050316139315030389538c924af9760d42375",
+   "boxes": [
+    {
+     "prompt": "orange 3D printed shelf rack",
+     "conf": 0.746,
+     "bbox": [
+      628,
+      319,
+      1489,
+      1438
+     ]
+    },
+    {
+     "prompt": "orange 3D printed shelf rack",
+     "conf": 0.282,
+     "bbox": [
+      20,
+      840,
+      538,
+      1407
+     ]
+    }
+   ]
+  },
+  {
+   "photo_id": "tower_arm_side_3",
+   "published_sha256": "1c44664503c584cc43a303f5b223fc3a3599b6a95c6c7db8d0bb816fce6986e2",
+   "frame_root": "211cbbb345689ed2a21e51a5c8490ea83715edb61b68bda6330b22ee0d085827",
+   "pixel_root": "807ec4b7c772e2f758ddad5685c45b7c31b36dc19babe399605f0fdb913741c4",
+   "objects_root": "7cf7911ed2002e65d69618d86ac3177bdad2429ee8b1ac4999afdfc01a8fc584",
+   "boxes": [
+    {
+     "prompt": "plastic tub",
+     "conf": 0.371,
+     "bbox": [
+      447,
+      726,
+      537,
+      824
+     ]
+    },
+    {
+     "prompt": "orange 3D printed shelf rack",
+     "conf": 0.316,
+     "bbox": [
+      467,
+      211,
+      1212,
+      1474
+     ]
+    }
+   ]
+  },
+  {
+   "photo_id": "breadboard_ruler",
+   "published_sha256": "20f18c558202f08627d9f928bafc0e6b065eaef2d1779ee30786dde7602d6ad1",
+   "frame_root": "dde5762a911d16f667e8d4f88376c1a3190f2fafc88737cc07d66e33b3f6e0f1",
+   "pixel_root": "f06556dd14f8cb4cf689e999afcb5ee08105197c969e8282903eb38a250f3955",
+   "objects_root": "8123265cc178d676227e2d7688e669326db99656dfee2051a8720bd92a57e0da",
+   "boxes": [
+    {
+     "prompt": "hexagonal grid",
+     "conf": 0.423,
+     "bbox": [
+      1319,
+      1516,
+      1658,
+      2211
+     ]
+    },
+    {
+     "prompt": "steel ruler",
+     "conf": 0.33,
+     "bbox": [
+      881,
+      9,
+      1375,
+      2206
+     ]
+    },
+    {
+     "prompt": "orange 3D printed shelf rack",
+     "conf": 0.268,
+     "bbox": [
+      1222,
+      14,
+      1659,
+      1508
+     ]
+    }
+   ]
+  },
+  {
+   "photo_id": "plate384_ruler",
+   "published_sha256": "91fb1d1173d4251882a9f5f7db24a83d380e6f880766715603158225c1c5bf1d",
+   "frame_root": "f3d32abb8aae36e583b4112db9a1b534823120f172b626b72221ec4dc02abc3b",
+   "pixel_root": "8344bd37d562b35e4808a7cf01d7acb354de51f6776c518c1ba4eae725ce6054",
+   "objects_root": "04e5652ccb49448366310d6c56572ddb58c70a5079f064533fe15574b2ea4b6b",
+   "boxes": [
+    {
+     "prompt": "hexagonal grid",
+     "conf": 0.397,
+     "bbox": [
+      0,
+      1552,
+      576,
+      2212
+     ]
+    },
+    {
+     "prompt": "perforated metal sheet",
+     "conf": 0.384,
+     "bbox": [
+      413,
+      740,
+      1288,
+      1351
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.339,
+     "bbox": [
+      632,
+      0,
+      1499,
+      211
+     ]
+    }
+   ]
+  },
+  {
+   "photo_id": "plate384_top",
+   "published_sha256": "117c725af22a2c05fb895a576b7b59e8d25ff8fbcd2e5c3c7a555a47e3c41555",
+   "frame_root": "50c159e92193dbae109a9dcd35dcb9e3eb10115a2be0e567b0ef2027f2ba85cd",
+   "pixel_root": "28ac4102fdd5c71a6100ff6fc852ab897686734a891d63059764a4e455d0366a",
+   "objects_root": "d005c9d6a438f61080c61ce698c597f2926f2fc4a53cfb7d817b8e7c3b9ab468",
+   "boxes": [
+    {
+     "prompt": "hexagonal grid",
+     "conf": 0.469,
+     "bbox": [
+      449,
+      626,
+      1325,
+      1971
+     ]
+    }
+   ]
+  },
+  {
+   "photo_id": "lift_columns",
+   "published_sha256": "9501cca4880554de44a6894def68b61e3144215b7cbab771285a0ab306ae54fe",
+   "frame_root": "2010fcd0b0b7c4cdbba10cab4d479a00a385b876af8569c7660227b927968b76",
+   "pixel_root": "723de8c0ca9f026b9dc68a7744509208fd03463fb15e4c048d55af6279748dd4",
+   "objects_root": "733ed8f6506704e5362ac8eed00755da477c525ffa207d6b761ffcdccb0afc61",
+   "boxes": [
+    {
+     "prompt": "plastic box",
+     "conf": 0.375,
+     "bbox": [
+      1360,
+      1965,
+      1658,
+      2211
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.363,
+     "bbox": [
+      629,
+      1770,
+      922,
+      2167
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.33,
+     "bbox": [
+      932,
+      1965,
+      1336,
+      2210
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.324,
+     "bbox": [
+      0,
+      1283,
+      433,
+      1832
+     ]
+    }
+   ]
+  },
+  {
+   "photo_id": "formlabs_fuse",
+   "published_sha256": "d0cf3972f9bf9c842fe39f8ed2c2b936b86eb8f009a5c0dc29cca3e574357ffd",
+   "frame_root": "019d84163301cd8ce0526354955de5673cf05555dbb5a23b3e320955c45ecf36",
+   "pixel_root": "fc1e7fb280f5e8896dff0fea7c723ce42aaf62ad07971f7758b9431784f6ad21",
+   "objects_root": "384e054abf5b76d645c579fd8452b5eefbf9baa61213b13981be10f8bc4edee7",
+   "boxes": [
+    {
+     "prompt": "perforated metal sheet",
+     "conf": 0.307,
+     "bbox": [
+      842,
+      928,
+      1170,
+      1171
+     ]
+    }
+   ]
+  },
+  {
+   "photo_id": "rack_edge_ruler",
+   "published_sha256": "282cc0f2a2c9f23161c26fe44df7a0613739679d959bcc1e89524b6cf47c86fa",
+   "frame_root": "3a8a1db3e6c556c1bae2f33cf2bce30b4fcae656a77711b34ea3b3391a2202d4",
+   "pixel_root": "cd55f38c9f40aa7518dc88e880e9df259c92af260beddca439d9e48eaee63331",
+   "objects_root": "03631196b6af9df6ee4e07cc1a6a1f1bfc46d57ced93479ea69c7302a2f772ce",
+   "boxes": [
+    {
+     "prompt": "perforated metal sheet",
+     "conf": 0.364,
+     "bbox": [
+      1085,
+      1207,
+      2157,
+      1658
+     ]
+    },
+    {
+     "prompt": "tube rack",
+     "conf": 0.282,
+     "bbox": [
+      1268,
+      0,
+      2211,
+      842
+     ]
+    }
+   ]
+  },
+  {
+   "photo_id": "xtip4_box",
+   "published_sha256": "86e990548b4520cf3f0fa94822432808fa56e768b3461773524fb34159e5151e",
+   "frame_root": "98cd9586aa0b53fb8db6442a65f7f58ef6ccd03a26bd2e3381f6ad8c1260ef7b",
+   "pixel_root": "0f80392bb85592725578e1588cf95d6b5d1c28bf8c23f3fa2a05aa0847ecfdc9",
+   "objects_root": "770c10574655c8b79d847cf6bb7e05a7ce4df78409c06374e3a96ea9a6177f2a",
+   "boxes": [
+    {
+     "prompt": "steel ruler",
+     "conf": 0.811,
+     "bbox": [
+      0,
+      3,
+      780,
+      1649
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.303,
+     "bbox": [
+      1456,
+      17,
+      2211,
+      1264
+     ]
+    },
+    {
+     "prompt": "steel ruler",
+     "conf": 0.279,
+     "bbox": [
+      0,
+      0,
+      252,
+      951
+     ]
+    }
+   ]
+  },
+  {
+   "photo_id": "labware_overview_1",
+   "published_sha256": "22d1861d5faefa12be34b2840ff3c4556ca70d29e2890886d28f9d456a51c2fb",
+   "frame_root": "55aba1a0bd757050ed03fc072b90ac5e8a717895466abad7ca514eea514a3bee",
+   "pixel_root": "ef0006623b813b7f1709ae34658fd427c8f37ef23ca20c6c63c9465711f21372",
+   "objects_root": "e511d6bd80d908e5ca75971c9bed4ba0c2e7570a9a058889662468f00c823716",
+   "boxes": [
+    {
+     "prompt": "steel ruler",
+     "conf": 0.577,
+     "bbox": [
+      297,
+      780,
+      1286,
+      980
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.404,
+     "bbox": [
+      143,
+      940,
+      642,
+      1134
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.362,
+     "bbox": [
+      961,
+      972,
+      1269,
+      1263
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.331,
+     "bbox": [
+      328,
+      417,
+      541,
+      721
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.315,
+     "bbox": [
+      850,
+      575,
+      1040,
+      854
+     ]
+    },
+    {
+     "prompt": "orange 3D printed shelf rack",
+     "conf": 0.267,
+     "bbox": [
+      319,
+      1268,
+      1268,
+      1608
+     ]
+    },
+    {
+     "prompt": "orange 3D printed shelf rack",
+     "conf": 0.25,
+     "bbox": [
+      1264,
+      967,
+      1490,
+      1360
+     ]
+    }
+   ]
+  },
+  {
+   "photo_id": "labware_angle",
+   "published_sha256": "aa4e721ad06be52de4988d04612fb5e35646924c9fae743382a1465c1c1aa40c",
+   "frame_root": "6f3b72c41e54b417a1d42dea9a765f07e9694b13fa743aa458c77bac33cab4b3",
+   "pixel_root": "e4391c3ce2aaa6f9e214b1f302fa0a99b19cfa8ae39bd6dd69f2169b6f875cf3",
+   "objects_root": "0f718aa91b6545d2f07c2af79a281a0bcad198bed957842a4513d22fdef55325",
+   "boxes": [
+    {
+     "prompt": "plastic box",
+     "conf": 0.366,
+     "bbox": [
+      60,
+      0,
+      476,
+      285
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.304,
+     "bbox": [
+      1434,
+      304,
+      1925,
+      690
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.273,
+     "bbox": [
+      863,
+      725,
+      1472,
+      1417
+     ]
+    }
+   ]
+  },
+  {
+   "photo_id": "racks_closeup_ruler",
+   "published_sha256": "d6db1ce5191c037c3e2521b48e33431eaa060963833775c0536c4736a8b7ef3a",
+   "frame_root": "87ddb4ab60be237e44a86cdb72a44739705bc9048e773ba8103d252a119ac51a",
+   "pixel_root": "99df07413bb3852ae0920631487318910a449c2c3e85ee4bc570f9c66224409b",
+   "objects_root": "97c1c7c4f38b6e95c8119441e25b126ee5f8ac9f6dff6c5648574b718a9f1507",
+   "boxes": [
+    {
+     "prompt": "steel ruler",
+     "conf": 0.566,
+     "bbox": [
+      47,
+      538,
+      2209,
+      917
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.408,
+     "bbox": [
+      0,
+      1198,
+      1004,
+      1658
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.301,
+     "bbox": [
+      1778,
+      738,
+      2212,
+      1571
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.284,
+     "bbox": [
+      91,
+      926,
+      1005,
+      1268
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.259,
+     "bbox": [
+      1,
+      922,
+      1003,
+      1659
+     ]
+    }
+   ]
+  },
+  {
+   "photo_id": "labware_overview_2",
+   "published_sha256": "bde66bf80a02dd2b4559008545124e9996a49ca48154720a61862c76255590f2",
+   "frame_root": "c88bd133a6a787793c8443a5c6ea31ef4e66dfda8a58d88718ad8f6b157319bb",
+   "pixel_root": "261aaa0196dc1fcbfd9038b90ae38392946b1fd7e1c208faaf0baebfcc82c90b",
+   "objects_root": "9d35800b7c6fac604feadaec80e0314c75a6903c744ae4960837bbf0ebfdc307",
+   "boxes": [
+    {
+     "prompt": "metal frame",
+     "conf": 0.46,
+     "bbox": [
+      660,
+      515,
+      1254,
+      978
+     ]
+    },
+    {
+     "prompt": "hexagonal grid",
+     "conf": 0.339,
+     "bbox": [
+      369,
+      1432,
+      974,
+      1895
+     ]
+    },
+    {
+     "prompt": "metal frame",
+     "conf": 0.322,
+     "bbox": [
+      614,
+      1148,
+      1260,
+      1612
+     ]
+    }
+   ]
+  },
+  {
+   "photo_id": "biokea_frames_tub",
+   "published_sha256": "8355782a460fcf2dcf8334749c3c4edf466efcaeecd8bf6be5e381491b5a4baf",
+   "frame_root": "4c5324776a47391971564e1fee85a337f1c8b306ec69cb610819c1832e122c70",
+   "pixel_root": "39aafc75eabef658db721194e872a136bcc8bb3289807d466092d33c17561240",
+   "objects_root": "787a819f6498a7af3b15226bbb949c2696ab43f3a1f61eedb3f9f62ab551be5e",
+   "boxes": [
+    {
+     "prompt": "orange 3D printed shelf rack",
+     "conf": 0.545,
+     "bbox": [
+      989,
+      519,
+      1475,
+      773
+     ]
+    },
+    {
+     "prompt": "steel ruler",
+     "conf": 0.531,
+     "bbox": [
+      413,
+      351,
+      801,
+      523
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.458,
+     "bbox": [
+      721,
+      1088,
+      1027,
+      1309
+     ]
+    },
+    {
+     "prompt": "steel ruler",
+     "conf": 0.426,
+     "bbox": [
+      1050,
+      1051,
+      1245,
+      2032
+     ]
+    },
+    {
+     "prompt": "steel ruler",
+     "conf": 0.418,
+     "bbox": [
+      1084,
+      1290,
+      1230,
+      2018
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.354,
+     "bbox": [
+      1041,
+      782,
+      1402,
+      1123
+     ]
+    }
+   ]
+  },
+  {
+   "photo_id": "racks_diagonal_ruler",
+   "published_sha256": "3127b5d1e9772bd951139ef6031d8371cd684f34a83cfe42b3bb6ec567df6b37",
+   "frame_root": "f3731b3583e1b8e6f41f32dac1316591932c09c825783c3790dd5187ae5167d1",
+   "pixel_root": "9e316f026c56991f66daefb0c0a2a9905e2f290b0b84d3557f31cfaac66055cb",
+   "objects_root": "31c6ac048cc565b3e14505677cf84c3a0c352ce9e675c9f9226c3c69050987fb",
+   "boxes": [
+    {
+     "prompt": "steel ruler",
+     "conf": 0.782,
+     "bbox": [
+      98,
+      5,
+      1738,
+      1627
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.423,
+     "bbox": [
+      1356,
+      124,
+      2138,
+      1001
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.305,
+     "bbox": [
+      509,
+      0,
+      1146,
+      539
+     ]
+    }
+   ]
+  },
+  {
+   "photo_id": "labware_overview_3",
+   "published_sha256": "b462d854a0259a334f0b834d783752505f7de5491c392cec90ff2e24a7e6024b",
+   "frame_root": "aba4044c5a664a71a259445a57224296f1d13990b67bac78e93ce2db8076603a",
+   "pixel_root": "cf670fd108f81b45435af0e8391eaac4af53458eaa57eb14e411ced4a145f4cf",
+   "objects_root": "3018a180856eab96ca41de61e7f4588bc3119b7882f5d4ace1b748b678923a41",
+   "boxes": [
+    {
+     "prompt": "steel ruler",
+     "conf": 0.785,
+     "bbox": [
+      380,
+      683,
+      1387,
+      875
+     ]
+    },
+    {
+     "prompt": "plastic tub",
+     "conf": 0.717,
+     "bbox": [
+      413,
+      1507,
+      1348,
+      2211
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.587,
+     "bbox": [
+      421,
+      338,
+      623,
+      632
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.359,
+     "bbox": [
+      1033,
+      871,
+      1331,
+      1153
+     ]
+    },
+    {
+     "prompt": "orange 3D printed shelf rack",
+     "conf": 0.336,
+     "bbox": [
+      417,
+      1163,
+      1341,
+      1489
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.297,
+     "bbox": [
+      910,
+      456,
+      1119,
+      740
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.287,
+     "bbox": [
+      955,
+      80,
+      1144,
+      366
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.267,
+     "bbox": [
+      665,
+      539,
+      905,
+      678
+     ]
+    }
+   ]
+  },
+  {
+   "photo_id": "greiner_cryos_bag",
+   "published_sha256": "42edba7c1ed8181044941d6247eb2ca181ae2c4e2b4ef341d968b3fdfe8840a6",
+   "frame_root": "9f2843cafa2bd61630e0df559d12a78d5402036595031aabf073292e26756b0c",
+   "pixel_root": "2b5480482093381430429c9784218678b67f0338f22dea5f8c3d56f28ef51c14",
+   "objects_root": "3f515de35c9dadcd26357ba4cf186925da199bcaa5039531ade645a27451a790",
+   "boxes": []
+  }
+ ]
+}

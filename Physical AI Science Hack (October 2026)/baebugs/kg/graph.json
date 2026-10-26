@@ -1,0 +1,318 @@
+{
+ "graph_root": "d0cd397b6e9edf74130e969d89b414638ca44a73d70d1f39d9585aaba7f2e2b5",
+ "orders": {
+  "Blattodea": "65ab9ce3df641e4b4109376a4b065367723f3104af2b81d020952902b3656a28",
+  "Coleoptera": "8f9f19637798143beaa190284a2d11d6588bb167867fd53e03124537c51a3df3",
+  "Dermaptera": "4236b76a032ba369f54ee2af48b17b090ef8961cc74208d62a4df2cd8bdbff53",
+  "Diptera": "69a69f0e1733df9a09adcd756068e5986780c1b994d40ceef270540d69b3d568",
+  "Hemiptera": "e36d0a938e1db55372281f3de6d7a59941055fd7753f04299c70aa5adc17c2cb",
+  "Hymenoptera": "7e532f89d48b682d39f73674cd0cadb7c8fc8fea43c3c17b499a2fb88379b470",
+  "Lepidoptera": "c2e0671a25d9e7d8e7237769238de1ead5e01f1670584b2aca7b6f69d99c059a",
+  "Neuroptera": "c14c80dbfd655ec595fe857e5d3381a96fe2d2288238e8a49776c1af3063ef86",
+  "Odonata": "8998867b47123f755c895e6718ca72f479ea6e6a697bc53b276951f6078498fa",
+  "Orthoptera": "74f2de29261c6d8c5de4851b8555d3f6f93e56465908710df87e2cfa4723a962"
+ },
+ "families": {
+  "Blattodea/Kalotermitidae": {
+   "root": "d590ea6247fad37c592612479db0d083c14e875e916eacac99bdeb37ad8f9a43",
+   "n": 1
+  },
+  "Blattodea/?": {
+   "root": "82796a692a04253e51768fbe22052a6b28ad918573941c200052d7bfdfb780ed",
+   "n": 3
+  },
+  "Coleoptera/Buprestidae": {
+   "root": "05df714a1dacbf0b1f6b818404cc8e72deb01735ca87ed86eadc57605c3f5de8",
+   "n": 7
+  },
+  "Coleoptera/Cantharidae": {
+   "root": "2d3bb3fb28e5f56449ed93d12cf8444609cfcc79633c88816bb5cb056d7414e5",
+   "n": 5
+  },
+  "Coleoptera/Carabidae": {
+   "root": "23ca4d3f3c41863bf2345830b83ca1c2b110d6dbaa3127b08e688682282a78d9",
+   "n": 2
+  },
+  "Coleoptera/Cerambycidae": {
+   "root": "6541c14464982d9e27af13ab2b13f5d86d49762516fd2b1f61c71006b5088b5f",
+   "n": 3
+  },
+  "Coleoptera/Chrysomelidae": {
+   "root": "4602525a21be44f1b1e9029b24ea7d3e52f52b0cfa2ac822e9cf13e087164102",
+   "n": 5
+  },
+  "Coleoptera/Cleridae": {
+   "root": "cff4f09da6d06c4b128430ae8c223353d4e68470d409c0098ab74a4255da5b1d",
+   "n": 9
+  },
+  "Coleoptera/Coccinellidae": {
+   "root": "a6d60d0c7caf1c6c5995db0131061743b66bd8f3c1b4e7e73ae887b8d325655b",
+   "n": 55
+  },
+  "Coleoptera/Curculionidae": {
+   "root": "93c6889ee446e7387b953eaada3eda8d00d6d6f433dd478ed8892e8762d7aa7c",
+   "n": 3
+  },
+  "Coleoptera/Elateridae": {
+   "root": "d471fa998de26b0ee8b843c42b08321afd6ccf02e18ecad65f2cd3e43cbbbce2",
+   "n": 2
+  },
+  "Coleoptera/Meloidae": {
+   "root": "a96653d231cd69c280c7f3a257b927c546b3b589586cc538e02b1457ee783f64",
+   "n": 28
+  },
+  "Coleoptera/Melyridae": {
+   "root": "e72c682dcfb489dea8fe6f1b58442bfd8105c97cbc135d842c4edc8b95009672",
+   "n": 2
+  },
+  "Coleoptera/Scarabaeidae": {
+   "root": "288698c30bad7a65f6675dc317d93b3fb6316f43fc239caf251f44eba4ef7de9",
+   "n": 5
+  },
+  "Coleoptera/Tenebrionidae": {
+   "root": "955cbb93713d92e9b728dec52022e6cb199239f370ef0060ac0f9afe7187eb89",
+   "n": 2
+  },
+  "Coleoptera/Zopheridae": {
+   "root": "f9dce14b586dc3f5a577ed62adc59c2bf5fea9c476034e67e5f1dded70d8e808",
+   "n": 1
+  },
+  "Coleoptera/?": {
+   "root": "04dc4db17e8697d6d5e17a0dbaea36d32315093beccf6c0fefdbb9cc7feb37e3",
+   "n": 270
+  },
+  "Dermaptera/?": {
+   "root": "4236b76a032ba369f54ee2af48b17b090ef8961cc74208d62a4df2cd8bdbff53",
+   "n": 3
+  },
+  "Diptera/Asilidae": {
+   "root": "7ea48e0b604af0ece193cf1ee692745a75b5703c05b69069be7080606bf5b920",
+   "n": 3
+  },
+  "Diptera/Bombyliidae": {
+   "root": "80af89cf9714e9e5e4ef89f506e281f4d8b7244931d46439aeafb9aa540dcb4d",
+   "n": 326
+  },
+  "Diptera/Calliphoridae": {
+   "root": "68270b115edc97f3cac1bcaaf40046cfbfadf8dd0a89634a5ad17a0f42732df3",
+   "n": 5
+  },
+  "Diptera/Chironomidae": {
+   "root": "e2938f3c24ad2761a1cc6831292117c46d774aae5bfebc1649c09bce9634ba5d",
+   "n": 1
+  },
+  "Diptera/Conopidae": {
+   "root": "b992dc85edd8a370ee0e3f428daf6a6531aff85c163f64eb6db61cf7fdeeb7fa",
+   "n": 1
+  },
+  "Diptera/Muscidae": {
+   "root": "5c6ee4cc10be92771952a9118733e5853453b5a381ef89bf883c07761ba44260",
+   "n": 4
+  },
+  "Diptera/Mythicomyiidae": {
+   "root": "6daef4b29bdb2f8f0220464692a6232c695188d08737325122bacb0d3600d9bd",
+   "n": 1
+  },
+  "Diptera/Rhagionidae": {
+   "root": "6e0fa7f3e8dafdb09f8ea4b20e7d5d4863a31fa78c06ff01f61e9ff03ebb8b80",
+   "n": 2
+  },
+  "Diptera/Sarcophagidae": {
+   "root": "88bb6dec5cd28de7f4695b859292ee325a30d600fd52c8f40d8cc43495e9f9f9",
+   "n": 2
+  },
+  "Diptera/Stratiomyidae": {
+   "root": "3c3a022e4600524f075a4c36cd607b7cd42152551187e7864e4bed6d40f70211",
+   "n": 1
+  },
+  "Diptera/Syrphidae": {
+   "root": "481793bc7c91bcc90119fd930f7b475fcf534e19da217140f78a2caba7c548cd",
+   "n": 94
+  },
+  "Diptera/Tabanidae": {
+   "root": "fda8dd0a6d3974106f3c309ab110b911142af0d4eb693553381522c2aa985f82",
+   "n": 11
+  },
+  "Diptera/Tachinidae": {
+   "root": "69c5ccc8e8a0c01e964d8c6a602dc800611b73bcf3ca03604f550d29c66ce9a6",
+   "n": 52
+  },
+  "Diptera/Therevidae": {
+   "root": "76baa03d1217f4384b80408d3fe7b630ec0d9bc55d375f7e73c81504a63323ca",
+   "n": 1
+  },
+  "Diptera/Tipulidae": {
+   "root": "2c79e33e6cdf366d30fa66adb5112ed50fafcb789cc61899aebfc0a156adb708",
+   "n": 9
+  },
+  "Diptera/?": {
+   "root": "1950f45d06199088a6b7f11cb195024c3221faed7a6e5e54cccd554396b1ac02",
+   "n": 61
+  },
+  "Hemiptera/Belostomatidae": {
+   "root": "f7374dd849a4731c713a3dd75d2ef26b4fb532310c78df0ab8e2b9a5432721e7",
+   "n": 16
+  },
+  "Hemiptera/Cicadellidae": {
+   "root": "50737a0f018ab00c4ad7f0cc114ad0a52c77f71a7b6b4281f59f5eb194673014",
+   "n": 1
+  },
+  "Hemiptera/Cicadidae": {
+   "root": "af47ef913df7f3c08970198ce01d9875c68115c024d3d4cb68df0f04f255ca6a",
+   "n": 18
+  },
+  "Hemiptera/Gerridae": {
+   "root": "b1d78f8385bc350c41e6283f4a10e9c39115b6c4b573cc8dd74b9062299955e7",
+   "n": 44
+  },
+  "Hemiptera/Largidae": {
+   "root": "0a90eef74bbfa5311c3298ae6a0f1cd01020b2de06ee637c63b8ee39eea93345",
+   "n": 51
+  },
+  "Hemiptera/Membracidae": {
+   "root": "250d6c82a88537b5b73fbca23f8052c26ef1b18094145b17d922f5563fdcfd36",
+   "n": 1
+  },
+  "Hemiptera/Miridae": {
+   "root": "63dd29980281d32968e2d8c5a6e1414f0ed7e43640db9a1fb1dc3011b593dc05",
+   "n": 1
+  },
+  "Hemiptera/Notonectidae": {
+   "root": "9497a0feceb19285b7cd71f64943e8b195bbf3a2bc3e2dbfd1c92fec4482a31f",
+   "n": 1
+  },
+  "Hemiptera/?": {
+   "root": "e1b51350b6a3fb8213cc112e93aae1f941d30115a6193936197682f55c09ad38",
+   "n": 27
+  },
+  "Hymenoptera/Andrenidae": {
+   "root": "096a8dec26aae6acd70b5215dc73d35305067916857d2ad6b806c65cd6b56fe6",
+   "n": 185
+  },
+  "Hymenoptera/Apidae": {
+   "root": "e922cb51316df086a834e028fe66104c32dabaf2364cddbcb9cfd3764dde0f06",
+   "n": 385
+  },
+  "Hymenoptera/Chrysididae": {
+   "root": "ebc4aa529b42000aaa5f2fe1989c728d5af277bc4bee8d8b4ba8d10c7291a064",
+   "n": 1
+  },
+  "Hymenoptera/Colletidae": {
+   "root": "2bdcc9cfd5f560c3670df64cd21ea6b1a296e688615b1419baf5a329177d485d",
+   "n": 10
+  },
+  "Hymenoptera/Crabronidae": {
+   "root": "7ba78f75c191ae39abf789900429549e610840affef7196c6972aac35d73e003",
+   "n": 3
+  },
+  "Hymenoptera/Formicidae": {
+   "root": "e8b36131ed3c3a985c606ee915e4001b813e0ed502d8f44515be3329812fecb8",
+   "n": 27
+  },
+  "Hymenoptera/Halictidae": {
+   "root": "bdef3c805090cf223169f2ddf7b3bec8201340ed0b07c5fcdad69e7f9f3b9daa",
+   "n": 319
+  },
+  "Hymenoptera/Ichneumonidae": {
+   "root": "09c66b4ac33559fd8c5d967a9729e18b783c3fcfb00eba5b03584444b5e1a0a4",
+   "n": 4
+  },
+  "Hymenoptera/Megachilidae": {
+   "root": "c0a81d4a89a99ad1751b47662a4edd2e7d51ff474b3de56c6bd4935ff4ce1ea9",
+   "n": 78
+  },
+  "Hymenoptera/Melittidae": {
+   "root": "4b1149bd86512502c661babf4dc9493ee27378fa77c5074ccde37b2e3d910ada",
+   "n": 23
+  },
+  "Hymenoptera/Mutillidae": {
+   "root": "f35d14e747e82d9671ea72cc854cce827c1706332152caecf90cad3a977e58a9",
+   "n": 7
+  },
+  "Hymenoptera/Sphecidae": {
+   "root": "0bf6042be08ab1faeedb590c9d94e957c7e6c60153e920741bf39bb6cb722104",
+   "n": 1
+  },
+  "Hymenoptera/Vespidae": {
+   "root": "d179888a9ccaffd5f33f561ff2f37e865cf1f81c68bcd1b8235f4144649bb57e",
+   "n": 37
+  },
+  "Hymenoptera/?": {
+   "root": "29cba907eda4352a56be71756a87c1004726a753695e566ecb2eda1c0b7985ec",
+   "n": 82
+  },
+  "Lepidoptera/Elachistidae": {
+   "root": "ef7241f17650ce007bbe3c21c8e732c1fca0e981c6a35d267fcdd7fc8245a984",
+   "n": 2
+  },
+  "Lepidoptera/Erebidae": {
+   "root": "1bc5ec41a2a65ccfa158f48acb88f20a48b123bdcb2077472b32b750eb79263a",
+   "n": 3
+  },
+  "Lepidoptera/Geometridae": {
+   "root": "627f22f545f475a7cfe7827865d51d4666cdbafd79bd6a31855049e995b47024",
+   "n": 1
+  },
+  "Lepidoptera/Hesperiidae": {
+   "root": "6ead3c502e38a3b48e96ce70e5e217632bfd1e1d3df87cce9536f82adbcd7f3b",
+   "n": 80
+  },
+  "Lepidoptera/Lycaenidae": {
+   "root": "3c92c87c1ed2f4e44e298004962b197680b32e1d0515401907a9f97e6c7ba297",
+   "n": 47
+  },
+  "Lepidoptera/Noctuidae": {
+   "root": "bf69bb1ca7cc86f1250535dac143fdba4ee940d0995eb1b920eee894614f4dc4",
+   "n": 8
+  },
+  "Lepidoptera/Nymphalidae": {
+   "root": "ff5c7e13f9860082418c32a409ee7219aea9a6499746bb1474a932e8ef554f84",
+   "n": 22
+  },
+  "Lepidoptera/Pieridae": {
+   "root": "b4da86f939abe74fb924a06c7357bc17b7c352d1c4b385fecde1422a62f90d81",
+   "n": 12
+  },
+  "Lepidoptera/Prodoxidae": {
+   "root": "abd984c5658065d048d046be388e1fedf655a0b2bc111cec7e23b8848d34deeb",
+   "n": 1
+  },
+  "Lepidoptera/Riodinidae": {
+   "root": "24f238d6250a3ab40fa0923c24ae86dcad30840fad9ab12cf71a114fb65ad960",
+   "n": 8
+  },
+  "Lepidoptera/Sesiidae": {
+   "root": "8ffb5132d0406082f90ffdda422770d0f59a5a7faef26e5c3528c15fdd01683d",
+   "n": 17
+  },
+  "Lepidoptera/?": {
+   "root": "dc765fb5552b279710a9bb0dc9bc0249d1568e30fc3fcbce2c5ebc7460a211c4",
+   "n": 76
+  },
+  "Neuroptera/?": {
+   "root": "c14c80dbfd655ec595fe857e5d3381a96fe2d2288238e8a49776c1af3063ef86",
+   "n": 3
+  },
+  "Odonata/Coenagrionidae": {
+   "root": "87f2b8d6ee1c1eba0ab79d97b296676d0e27c5ed3154b895500b6d554466aa40",
+   "n": 4
+  },
+  "Odonata/?": {
+   "root": "4dc726ca42261b0b51e5d1b5bfd31fbf8043bbb1022221ddf6bdb58b394de5d7",
+   "n": 17
+  },
+  "Orthoptera/Gryllidae": {
+   "root": "04596cdfd6d30d478034feb970131e183657e31d20fbaf25a204392b9dfe0e35",
+   "n": 1
+  },
+  "Orthoptera/Rhaphidophoridae": {
+   "root": "73de226d1abc406091c220baf1bb3de3e31d7ff51f1d475ef3808b18525e8e21",
+   "n": 3
+  },
+  "Orthoptera/?": {
+   "root": "e88c2c5d593f9f740a059d1160fe66dabea9c890a6dd22aaa8b709d413c54013",
+   "n": 22
+  }
+ },
+ "n_insects": 2629
+}

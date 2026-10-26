@@ -1,0 +1,94 @@
+{
+ "package": "baebugs trommel (minimum, no bins)",
+ "merkle_root": "e4f896a0906736f230727ba5a1af503b028dccb792c661b8c496749da264e081",
+ "files": [
+  {
+   "file": "stl/trommel_cap_inlet.stl",
+   "sha256": "406b2927eb902b52cc3139696fcf89059be1d1bd0408bb5192d5bf8d00dfe80e",
+   "bbox_mm": [
+    114.0,
+    114.0,
+    22.0
+   ],
+   "watertight": true,
+   "volume_cm3": 31.9
+  },
+  {
+   "file": "stl/trommel_cap_outlet.stl",
+   "sha256": "fef87f7f0cc0d822815cdb27b5899773f223eec0b21087c9ebb4598af9ff812a",
+   "bbox_mm": [
+    114.0,
+    114.0,
+    22.0
+   ],
+   "watertight": true,
+   "volume_cm3": 36.2
+  },
+  {
+   "file": "stl/trommel_crank_hand.stl",
+   "sha256": "427d857804dc8d455404298e6879d2824375d8a12853c5ccf391bdba6aa12f1d",
+   "bbox_mm": [
+    78.0,
+    22.0,
+    47.0
+   ],
+   "watertight": true,
+   "volume_cm3": 15.7
+  },
+  {
+   "file": "stl/trommel_stand_inlet.stl",
+   "sha256": "8ed1ad9ffc2a8b98c18b7a5bca34718a094c5da46e417f8246634ab98567592a",
+   "bbox_mm": [
+    90.0,
+    60.0,
+    134.1
+   ],
+   "watertight": true,
+   "volume_cm3": 66.5
+  },
+  {
+   "file": "stl/trommel_stand_outlet.stl",
+   "sha256": "238768d4c6e607568d55f9d4002c9797dfc3c0f3c3eeff1a1d915e9577f4e933",
+   "bbox_mm": [
+    90.0,
+    60.0,
+    122.0
+   ],
+   "watertight": true,
+   "volume_cm3": 63.3
+  },
+  {
+   "file": "stl/trommel_zone_2mm.stl",
+   "sha256": "cf07b0fd8a8a32ceed7ba8c1ecd2f949decebb54f184bc40d7ce0babfc2b3d5e",
+   "bbox_mm": [
+    110.0,
+    110.0,
+    76.0
+   ],
+   "watertight": true,
+   "volume_cm3": 48.7
+  },
+  {
+   "file": "stl/trommel_zone_4mm.stl",
+   "sha256": "bd67b2b875b79de37d12249457c99d84882991cd69ad9cd3b94030bf81e90e02",
+   "bbox_mm": [
+    110.0,
+    110.0,
+    76.0
+   ],
+   "watertight": true,
+   "volume_cm3": 42.1
+  },
+  {
+   "file": "stl/trommel_zone_7mm.stl",
+   "sha256": "01fc906fa7e4a661d2922499e407b02d6371ec7e36547790bbfe914890d4b6b6",
+   "bbox_mm": [
+    110.0,
+    110.0,
+    76.0
+   ],
+   "watertight": true,
+   "volume_cm3": 35.7
+  }
+ ]
+}

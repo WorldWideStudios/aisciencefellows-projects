@@ -1,0 +1,14 @@
+{
+  "algorithm": "HYDRALAMP_MMR_V1",
+  "leaf_hashes": [
+    "222d82a818372e395c021ae9acbbf4e329dd8acc7315f759331aaf7564f6abba",
+    "3033539eca8e2f0d66714b1baee7cccf45d391be4ae410e4621ad0df826d5966",
+    "dee2ef0dbbdd74530867ad1d0a19b8a92315b4ca658b29b4650845f1f0ac0d9e",
+    "6fbcd1fbfe9bf25d528781053b15e1141dca6b36cfe5f16f39e156bfbb6b0292"
+  ],
+  "peaks": [
+    "3fd58751726333f104b2395b4bac84edda5a2e513e4ce7db9f61932c0afba00b"
+  ],
+  "root": "434275db4fd1be1791050a82460a3129e8e5eb0959616807401f1df7e25f77d7",
+  "size": 4
+}

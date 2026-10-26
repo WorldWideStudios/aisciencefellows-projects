@@ -1,0 +1,26 @@
+{
+  "valid_solid": true,
+  "single_solid": true,
+  "watertight_mesh": true,
+  "bbox_mm": [
+    91.0,
+    18.0,
+    2.01
+  ],
+  "fits_bed": true,
+  "volume_cm3": 2.82,
+  "kind": "tunnels",
+  "size_mm": 3.5,
+  "openings": 13,
+  "opening_mm": [
+    5.0,
+    3.5
+  ],
+  "strip_mm": [
+    91.0,
+    18.0,
+    2.0
+  ],
+  "winner": 3,
+  "printability_flags": []
+}

@@ -1,0 +1,59 @@
+# Insect example: first cut "fits a 96-well plate well" vs "too big", then split the fitting ones at
+# about 1.5 mm body width (EntoSieve's finest sieve). Field notes on what is assumed are inline.
+#   <venv python> .claude\skills\sieve-gate-design\scripts\gatecalc.py plan .claude\skills\sieve-gate-design\templates\malaise-spec.toml
+
+[sample]
+name = "malaise-placeholder"
+condition = "ethanol"        # preserved specimens; measure dims in the liquid you sort in
+notes = """Item sizes are drawn from the sim's specimen generator (sim/insects.py PLANS), whose medians and
+spreads are textbook ASSUMPTIONS, not a fit. Counts are an ASSUMED Malaise mix (Diptera-dominated).
+Replace both with caliper data of real specimens (sim/BENCH.md step 9) before printing anything."""
+
+[print]
+undersize_mm = 0.15          # ASSUMED until hole_gauge.py is printed and measured
+tolerance_mm = 0.10
+
+[rules]
+pass_clearance_mm = 0.25     # specimens: more room than grains (legs, hairs, fragile)
+block_margin_mm = 0.10
+p_roll = 0.5                 # ASSUMED
+gate_menu = ["w", "t"]       # buildable today; add "o" to see what a round-hole gate would do (proposal)
+samples = 1500               # sim-drawn specimens are slower to generate
+
+[well]
+plate = "std96_flat"         # BugPicker fills 96-well plates; which type is an open question
+require = "below_rim"        # use "submerged" + fill_ul if the specimen must sit in lysis buffer
+accept_lean = true
+margin_mm = 0.3
+
+[[item]]
+name = "compact"             # beetles, mites
+sim_kind = "insect_compact"
+source = "sim"
+count = 20
+
+[[item]]
+name = "elongate"            # flies, wasps, ants
+sim_kind = "insect_elongate"
+source = "sim"
+count = 60
+
+[[item]]
+name = "longleg"             # mosquitoes, midges, crane flies, spiders
+sim_kind = "insect_longleg"
+source = "sim"
+count = 20
+fragile = true
+
+[[class]]
+name = "too_big_for_well"
+well = "too_big"
+
+[[class]]
+name = "fits_wide"           # fits a well, body at least 1.5 mm wide
+well = "fits"
+min_width = 1.5
+
+[[class]]
+name = "fits_narrow"
+well = "fits"

@@ -1,0 +1,27 @@
+{
+  "_note": "Shelf layout and routines for teach.py. Slot names are free text; each slot needs two taught poses, '<slot>/front' (in front of the slot, far enough out that a held filter clears the shelf) and '<slot>/in' (gripper around the filter's handle, filter seated). Each side's 'carry' pose is where the arm turns between sides: pulled in close to the base, holding a filter level. Speeds are degrees per second (gripper: percent per second). missed_grab_at: if the gripper closes more than this fraction of the way from open to fully closed, it's holding nothing. wrist_camera: part of the wrist camera's name (see vision/cameras.py), or null for none. With it, routines read each filter's marker from in front of its slot (to check it's the right filter and keep inventory.json up to date) and save a photo each time a filter comes out. If the camera isn't plugged in, they carry on without it.",
+  "sides": {
+    "rig": {"carry": "rig/carry", "slots": ["rig/top", "rig/middle", "rig/bottom"]},
+    "storage": {"carry": "storage/carry", "slots": ["storage/top", "storage/middle", "storage/bottom"]}
+  },
+  "dump": [
+    ["open"],
+    ["move", "dish/above"],
+    ["move", "dish/grip", "slow"],
+    ["close"],
+    ["check_grip"],
+    ["move", "dish/lift", "slow"],
+    ["move", "pour/above"],
+    ["move", "pour/tilt", "slow"],
+    ["shake", "wrist_roll", 8, 4],
+    ["wait", 1],
+    ["move", "pour/above", "slow"],
+    ["move", "dish/lift"],
+    ["move", "dish/grip", "slow"],
+    ["open"],
+    ["move", "dish/above", "slow"]
+  ],
+  "speeds": {"normal": 40, "slow": 12, "gripper": 80},
+  "missed_grab_at": 0.9,
+  "wrist_camera": "CAM1"
+}

@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>BugSorter and the BioKEA line: module breakdown and interface spec</title>
+<style>
+:root { --ink:#1d232b; --muted:#5b6672; --line:#d9dee4; --soft:#f5f7f9; --accent:#1f6feb; --deck:#2f6f4f; --paper:#6a4fb3; --inf:#8a5a00; --ask:#b3261e; }
+* { box-sizing:border-box; }
+body { margin:0; font:15px/1.55 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color:var(--ink); background:#fff; }
+main { max-width:1060px; margin:0 auto; padding:32px 24px 72px; }
+h1 { font-size:26px; margin:0 0 4px; }
+h2 { font-size:20px; margin:44px 0 10px; padding-top:14px; border-top:1px solid var(--line); }
+h3 { font-size:16px; margin:26px 0 8px; }
+p, li { max-width:880px; }
+a { color:var(--accent); }
+.sub { color:var(--muted); margin:0 0 20px; }
+table { border-collapse:collapse; width:100%; margin:10px 0 18px; font-size:13.5px; }
+th, td { border:1px solid var(--line); padding:7px 9px; vertical-align:top; text-align:left; }
+th { background:var(--soft); font-weight:600; }
+td.n { white-space:nowrap; color:var(--muted); }
+.tag { display:inline-block; font-size:10.5px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; padding:0 5px; border-radius:3px; border:1px solid currentColor; margin:0 2px 2px 0; white-space:nowrap; vertical-align:1px; }
+.deck { color:var(--deck); } .paper { color:var(--paper); } .inf { color:var(--inf); } .ask { color:var(--ask); }
+.callout { background:var(--soft); border-left:4px solid var(--accent); padding:12px 16px; margin:16px 0; max-width:880px; }
+.callout.warn { border-left-color:var(--ask); }
+.callout p { margin:6px 0; }
+.toc { columns:2; max-width:700px; padding-left:20px; }
+.mod { border:1px solid var(--line); border-radius:6px; padding:4px 18px 10px; margin:18px 0; }
+.mod h3 { margin-top:14px; }
+dl { margin:6px 0; }
+dt { font-weight:600; margin-top:10px; }
+dd { margin:2px 0 0 0; max-width:880px; }
+svg { width:100%; height:auto; display:block; margin:10px 0 4px; }
+svg text { font-family:-apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+@media print { .mod, table { break-inside:avoid; } }
+</style>
+</head>
+<body><main>
+
+<h1>BugSorter and the BioKEA line</h1>
+<p class="sub">Module-by-module breakdown and the BugSorter → BugDisperser interface spec · Physical AI for Science, Track A · prepared 2026-10-24</p>
+
+<div class="callout">
+<p><strong>Correction first.</strong> The BugSorter's output goes to module 2, the <strong>BugDisperser</strong>, which spreads specimens out on a tray. Module 4 is the <strong>enzyme dispenser</strong>: a similar name, three steps further down. So the interface to spec is <strong>BugSorter output = BugDisperser input</strong>.</p>
+<p>The dispenser still matters to the sorter, because any liquid and debris the sorter passes on ends up in the dispenser's wells. Section 4 covers that.</p>
+</div>
+
+<p>Every claim below is tagged with where it comes from:</p>
+<ul>
+<li><span class="tag deck">Deck</span> BioKEA's Track A slides and speaker notes.</li>
+<li><span class="tag paper">Paper</span> The published EntoSieve paper (2025), which the BugSorter descends from, or the DiversityScanner paper (2022), a published robot that does the BugPicker's job.</li>
+<li><span class="tag inf">Inferred</span> Engineering reasoning or arithmetic. Not yet tested.</li>
+<li><span class="tag ask">Ask</span> An open question for Sean or Austin. The deck doesn't answer it.</li>
+</ul>
+
+<ol class="toc">
+<li><a href="#glance">The line at a glance</a></li>
+<li><a href="#spec">Interface spec: sorter → disperser</a></li>
+<li><a href="#sorter">Module 1: BugSorter, piece by piece</a></li>
+<li><a href="#down">Modules 2–5 and what they demand</a></li>
+<li><a href="#cross">Cross-cutting: rail, arms, software, provenance</a></li>
+<li><a href="#pantry">The pantry stand-ins</a></li>
+<li><a href="#direction">Direction and limitations</a></li>
+<li><a href="#ask">Questions to ask, in order</a></li>
+</ol>
+
+<!-- 1 -->
+<h2 id="glance">1. The line at a glance</h2>
+
+<svg viewBox="0 0 1000 160" role="img" aria-label="Line flow: bag, BugSorter, BugDisperser, BugPicker, enzyme dispenser, incubator, lysate plate">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5b6672"/></marker>
+  </defs>
+  <g font-size="12">
+    <rect x="18"  y="40" width="124" height="64" rx="6" fill="#f5f7f9" stroke="#c4ccd5"/>
+    <text x="80"  y="66" text-anchor="middle" font-weight="700" fill="#1d232b">Bag</text>
+    <text x="80"  y="84" text-anchor="middle" font-size="11" fill="#5b6672">preserved, in EtOH</text>
+
+    <rect x="158" y="40" width="124" height="64" rx="6" fill="#eef4ff" stroke="#1f6feb" stroke-width="2.5"/>
+    <text x="220" y="66" text-anchor="middle" font-weight="700" fill="#1d232b">1 BugSorter</text>
+    <text x="220" y="84" text-anchor="middle" font-size="11" fill="#5b6672">size classes</text>
+
+    <rect x="298" y="40" width="124" height="64" rx="6" fill="#eef4ff" stroke="#1f6feb" stroke-width="1.5"/>
+    <text x="360" y="66" text-anchor="middle" font-weight="700" fill="#1d232b">2 BugDisperser</text>
+    <text x="360" y="84" text-anchor="middle" font-size="11" fill="#5b6672">spread on a tray</text>
+
+    <rect x="438" y="40" width="124" height="64" rx="6" fill="#f5f7f9" stroke="#c4ccd5"/>
+    <text x="500" y="66" text-anchor="middle" font-weight="700" fill="#1d232b">3 BugPicker</text>
+    <text x="500" y="84" text-anchor="middle" font-size="11" fill="#5b6672">1 per well, imaged</text>
+
+    <rect x="578" y="40" width="124" height="64" rx="6" fill="#f5f7f9" stroke="#c4ccd5"/>
+    <text x="640" y="66" text-anchor="middle" font-weight="700" fill="#1d232b">4 Dispenser</text>
+    <text x="640" y="84" text-anchor="middle" font-size="11" fill="#5b6672">enzyme into wells</text>
+
+    <rect x="718" y="40" width="124" height="64" rx="6" fill="#f5f7f9" stroke="#c4ccd5"/>
+    <text x="780" y="66" text-anchor="middle" font-weight="700" fill="#1d232b">5 Incubator</text>
+    <text x="780" y="84" text-anchor="middle" font-size="11" fill="#5b6672">turnstile, lysis</text>
+
+    <rect x="858" y="40" width="124" height="64" rx="6" fill="#f5f7f9" stroke="#c4ccd5"/>
+    <text x="920" y="66" text-anchor="middle" font-weight="700" fill="#1d232b">Lysate plate</text>
+    <text x="920" y="84" text-anchor="middle" font-size="11" fill="#5b6672">to sequencer</text>
+  </g>
+  <g stroke="#5b6672" stroke-width="1.5" marker-end="url(#ah)">
+    <line x1="143" y1="72" x2="156" y2="72"/>
+    <line x1="283" y1="72" x2="296" y2="72"/>
+    <line x1="423" y1="72" x2="436" y2="72"/>
+    <line x1="563" y1="72" x2="576" y2="72"/>
+    <line x1="703" y1="72" x2="716" y2="72"/>
+    <line x1="843" y1="72" x2="856" y2="72"/>
+  </g>
+  <path d="M220 110 V122 H360 V110" fill="none" stroke="#1f6feb" stroke-width="2"/>
+  <text x="290" y="142" text-anchor="middle" font-size="12" font-weight="700" fill="#1f6feb">BugSorter output = BugDisperser input</text>
+  <text x="640" y="124" text-anchor="middle" font-size="11" fill="#5b6672">not the sorter's input</text>
+</svg>
+
+<table>
+<tr><th>Quantity</th><th>Value</th><th>Source</th></tr>
+<tr><td>Line target</td><td>12 plates/day = 1,152 wells/day, and ~300,000 specimens/yr. The two figures agree at about 260 working days a year. Control wells cut the real count slightly.</td><td><span class="tag deck">Deck</span> <span class="tag inf">Inferred</span></td></tr>
+<tr><td>Picker time per specimen</td><td>About 25 s if the line runs 8 h/day, or about 75 s if it runs 24 h.</td><td><span class="tag inf">Inferred</span></td></tr>
+<tr><td>Cost today</td><td>About $10 per specimen, roughly half of it labor. Removing that labor is the reason the line exists.</td><td><span class="tag deck">Deck</span></td></tr>
+<tr><td>Hardware budget</td><td>Under $100 per instrument on average and under $5,000 for the whole line. Track A winners get a $250 BOM.</td><td><span class="tag deck">Deck</span></td></tr>
+<tr><td>Specimens per bulk sample</td><td>8,370–12,482 per Malaise sample in the EntoSieve tests.</td><td><span class="tag paper">Paper</span></td></tr>
+<tr><td>One bag vs. line capacity</td><td>A 10,000-specimen bag is about 9 days of line capacity. Ask how big BioKEA's bags really are.</td><td><span class="tag inf">Inferred</span> <span class="tag ask">Ask</span></td></tr>
+<tr><td>Size mix of a Malaise sample</td><td>&lt;1.5 mm: 56–58% · 1.5–3 mm: 27–31% · 3–5 mm: 8–12% · &gt;5 mm: 2.9–5.5% (two Italian samples, so BioKEA's may differ).</td><td><span class="tag paper">Paper</span></td></tr>
+<tr><td>Sorting time</td><td>18–60 min per sample, plus 7–16 min of manual recovery.</td><td><span class="tag paper">Paper</span></td></tr>
+</table>
+
+<div class="callout">
+<p><strong>What these numbers say.</strong></p>
+<ul>
+<li><strong>The sorter is not the bottleneck.</strong> Sorting a bag takes under an hour, and picking it takes days. Running hands-off, handing over cleanly and leaving nothing behind matter far more than speed.</li>
+<li><strong>Almost all the work is at the fine end.</strong> 83–89% of a Malaise sample is under 3 mm, so the fine end of the sort carries nearly the whole load.</li>
+</ul>
+</div>
+
+<!-- 2 -->
+<h2 id="spec">2. Interface spec: BugSorter output = BugDisperser input</h2>
+<p>The deck doesn't spec this handoff anywhere. The table below pins it down as far as possible: what is known, what follows from the modules downstream, and what still needs asking.</p>
+
+<table>
+<tr><th>#</th><th>Property</th><th>What the disperser (and everything after it) needs</th><th>Why</th><th>Source</th></tr>
+<tr><td class="n">1</td><td>Physical handoff</td><td>A defined carrier. That's either the sieve tray itself, carried by a ReBot arm, or the fraction washed into a container.</td><td>The deck calls the printed square frames "the BugSorter tray format" and plans ReBot "tray handling on the rail". That hints the tray is the carrier, but the deck never says so.</td><td><span class="tag deck">Deck</span> <span class="tag ask">Ask</span></td></tr>
+<tr><td class="n">2</td><td>Liquid</td><td>Specimens arrive in the disperser's own liquid, probably water. Little ethanol and no detergent should come with them.</td><td>Flotation depends on surface tension, and ethanol and detergent both lower it, so specimens that should float will sink. A preserved specimen leaking ethanol may also skate across the surface. Any liquid carried along ends up in the well at module 4.</td><td><span class="tag inf">Inferred</span> <span class="tag ask">Ask</span></td></tr>
+<tr><td class="n">3</td><td>Size classes</td><td>Classes cut by width, with bounds set by the picker nozzle and the well size rather than by the food ladder.</td><td>Holes sort by the second-largest dimension. DiversityScanner's tip takes only specimens under 3 mm. Standard 96-well wells are about 6–7 mm across, and the kit's 48- and 12-well plates suggest big specimens go to bigger wells.</td><td><span class="tag paper">Paper</span> <span class="tag inf">Inferred</span></td></tr>
+<tr><td class="n">4</td><td>Purity (lopsided)</td><td>No oversized specimens in a small class. A few undersized ones in a bigger class are usually fine.</td><td>An oversized specimen can block a small nozzle or not fit its well. An undersized one mostly costs efficiency. EntoSieve reached 92–99% overall and 78% in its worst class.</td><td><span class="tag paper">Paper</span> <span class="tag inf">Inferred</span></td></tr>
+<tr><td class="n">5</td><td>Batch size</td><td>Portions sized to one disperser tray, not a whole fraction at once.</td><td>Worked example: a 100 × 100 mm usable area with specimens kept about 5 mm apart holds roughly 100–200 specimens at best. One fraction of a 10,000-specimen bag can hold 5,000+. Something has to split fractions into tray-sized portions and store the rest, and <strong>no module owns that step yet</strong>.</td><td><span class="tag inf">Inferred</span> <span class="tag ask">Ask</span></td></tr>
+<tr><td class="n">6</td><td>Singulated</td><td>Specimens loose, not clumped or tangled.</td><td>Flotation spreads loose specimens but can't untangle legs. DiversityScanner skips objects that sit too close together until they drift apart, so every clump costs picker time.</td><td><span class="tag paper">Paper</span> <span class="tag inf">Inferred</span></td></tr>
+<tr><td class="n">7</td><td>Debris and fragments</td><td>As little as possible, especially in the finest class.</td><td>Loose legs, wings, scales and plant bits drop through the finest mesh together with the smallest specimens. The camera has to reject each one, and a fragment picked by mistake becomes an empty or contaminated well. DiversityScanner's authors note that debris and insect parts show up in its dishes.</td><td><span class="tag paper">Paper</span> <span class="tag inf">Inferred</span></td></tr>
+<tr><td class="n">8</td><td>Damage</td><td>Sorting must not add breakage.</td><td>Every broken leg becomes a fragment (row 7) and spoils the voucher image. EntoSieve's vertical motion in water caused no significant damage, which sets the bar.</td><td><span class="tag paper">Paper</span></td></tr>
+<tr><td class="n">9</td><td>Floaters</td><td>Handled separately: either skimmed off as their own batch or sunk.</td><td>Floating leafhoppers dropped EntoSieve's finest class to 78%, and doubling the sieving time didn't help. A drop of detergent sinks floaters (the pan-trap trick), but that conflicts with row 2.</td><td><span class="tag paper">Paper</span> <span class="tag inf">Inferred</span></td></tr>
+<tr><td class="n">10</td><td>Label</td><td>Every portion carries its sample ID, size class and run parameters.</td><td>The record for each individual specimen starts at the picker's image. Until then, the batch label is the only thing tying a specimen to its collection site.</td><td><span class="tag deck">Deck</span> <span class="tag inf">Inferred</span></td></tr>
+<tr><td class="n">11</td><td>Carryover</td><td>Zero specimens left in the sorter between samples, and that has to be verified.</td><td>A specimen stuck in a screen turns up in the next sample, which means wrong DNA and a wrong site in the record. EntoSieve's cleaning routine: wash, 5–10% bleach, distilled water, 70% ethanol.</td><td><span class="tag paper">Paper</span> <span class="tag inf">Inferred</span></td></tr>
+<tr><td class="n">12</td><td>Timing</td><td>Not critical.</td><td>Sorting takes 18–60 min per sample, and the line needs days to work through one bag. Running hands-off matters more than speed.</td><td><span class="tag paper">Paper</span> <span class="tag inf">Inferred</span></td></tr>
+<tr><td class="n">13</td><td>Very large specimens</td><td>Removed or routed separately.</td><td>EntoSieve removed specimens over 30 mm by hand first: 0.3–0.6% of specimens, about 6 s each. Specimens over 5 mm made up 3–5% of the sample.</td><td><span class="tag paper">Paper</span></td></tr>
+</table>
+
+<div class="callout warn">
+<p><strong>Two gaps nobody owns yet.</strong></p>
+<ol>
+<li><strong>Splitting fractions into portions.</strong> A fraction holds thousands of specimens and a tray holds about a hundred, so something has to portion fractions and store what's waiting.</li>
+<li><strong>The liquid change.</strong> Sorting needs specimens submerged: EntoSieve sorts in water, and floaters are its main failure. Flotation dispersal needs high surface tension and specimens at the surface. Those two needs pull in opposite directions.</li>
+</ol>
+</div>
+
+<!-- 3 -->
+<h2 id="sorter">3. Module 1: BugSorter, piece by piece</h2>
+
+<h3>What the deck says</h3>
+<ul>
+<li><strong>Job:</strong> coarse size sorting using back-and-forth actuation plus water jets. It's the next iteration of the EntoSieve and "module 1 of the line." <span class="tag deck">Deck</span></li>
+<li><strong>Current hardware:</strong> stacked 3D-printed sieve trays in an acrylic enclosure. <span class="tag deck">Deck</span></li>
+<li><strong>Status:</strong> it "tentatively works." The challenge is to make it work on real preserved samples, run after run. <span class="tag deck">Deck</span></li>
+<li><strong>Kit on the bench:</strong>
+  <ul>
+  <li>T-slot extrusion in four lengths</li>
+  <li>Mesh sheets in three apertures</li>
+  <li>Stackable round sieve rings that key together with tabs, with three screen types: fine mesh (everything except chia stays on top), perforated plastic (separates rice from couscous) and hex-perforated steel (noodles stay on top)</li>
+  <li>3D-printed square tray frames in the BugSorter format</li>
+  <li>Perforated steel in two hole sizes, plus a printed honeycomb</li>
+  <li>12- and 48-well plates for the sorted output</li>
+  </ul>
+  <span class="tag deck">Deck</span></li>
+<li><strong>Open questions on the slide:</strong> What motion clears a clogged screen: shaking, tilting, water jets, or all three? How does the stack know it's done? <span class="tag deck">Deck</span></li>
+<li><strong>Target for today:</strong> three clean size classes from the pantry mix. <span class="tag deck">Deck</span></li>
+</ul>
+
+<h3>Lineage: from the published EntoSieve to the BugSorter</h3>
+<table>
+<tr><th></th><th>EntoSieve (published) <span class="tag paper">Paper</span></th><th>BioKEA budget rebuild <span class="tag deck">Deck</span></th><th>BugSorter today <span class="tag deck">Deck</span></th></tr>
+<tr><td>Motion</td><td>Vertical up-and-down stroke at 34–104 mm/s, maximum speed recommended, with adjustable stroke height</td><td>Same concept</td><td>"Back-and-forth actuation" plus water jets. Vertical or horizontal? <span class="tag ask">Ask</span></td></tr>
+<tr><td>Drive</td><td>NEMA 17 stepper and A4988 driver, 8 mm lead screw, Igus double rail, two end stops</td><td>MGN12H rail, T8 lead screw</td><td>Not stated</td></tr>
+<tr><td>Control</td><td>Arduino Nano, two knobs (speed and stroke)</td><td>ESP32 with web UI and OLED</td><td>ESP32 lineage implied</td></tr>
+<tr><td>Screens</td><td>Aluminium perforated plate, 1 mm thick, 138 mm diameter, holes of 1.5 / 3.0 / 5.0 mm. Used one at a time, smallest first, with a coffee filter catching the finest fraction.</td><td>Not stated <span class="tag ask">Ask</span></td><td>Stacked printed trays. The kit adds woven mesh, perforated plastic, hex steel, perforated steel and a printed honeycomb.</td></tr>
+<tr><td>Liquid</td><td>Water (cheaper than ethanol, no fire risk): 3.5–4 L, 30–50 mm above the screen, thrown away after each run. Samples stored in 96% ethanol.</td><td>Not stated <span class="tag ask">Ask</span></td><td>Water (for the jets)</td></tr>
+<tr><td>Collection</td><td>All manual: lift out, tap the filter, rinse into a dish with ethanol, flip sieves with clamps, and turn containers 45° by hand to break up clusters. Specimens over 30 mm removed by hand beforehand.</td><td>Not stated</td><td>Not stated</td></tr>
+<tr><td>Cost</td><td>About €400</td><td>About $100</td><td>Under $100 target</td></tr>
+<tr><td>Result</td><td>92–99% overall, 78% worst class, no significant damage, 18–60 min per sample</td><td>"Never sieved reliably enough for real samples"</td><td>Works tentatively, not yet robust</td></tr>
+</table>
+
+<div class="callout">
+<p><strong>The question that decides the weekend.</strong> The published EntoSieve sorts at 92–99%, but a person does the loading, the transfers between screens, the unloading and the cleaning. BioKEA's rebuild "never sieved reliably." The cause could be either of two things:</p>
+<ul>
+<li><strong>Sorting quality</strong> (budget parts, different screens, a different stroke). Then copy the paper's settings before inventing anything.</li>
+<li><strong>The handling around the sieve.</strong> Then the motion is already solved, and the real project is unloading, handoff and cleaning.</li>
+</ul>
+</div>
+
+<h3>Subsystems</h3>
+<table>
+<tr><th>Subsystem</th><th>Job</th><th>What's known</th><th>Limits and risks</th><th>Open question</th></tr>
+<tr><td>a. Intake</td><td>Get a bag's contents into the sorter and drain the storage ethanol.</td><td>Samples are stored in 96% ethanol, and EntoSieve sorts in water. <span class="tag paper">Paper</span></td><td>Long storage in 96% ethanol makes specimens brittle, and the paper notes that bubbles from transport increase damage. <span class="tag paper">Paper</span></td><td>Who removes specimens over 30 mm? What happens to the drained ethanol? <span class="tag ask">Ask</span></td></tr>
+<tr><td>b. Screens</td><td>Set the cut points.</td><td>Paper: aluminium perforated plate with 1.5 / 3 / 5 mm holes. Kit: see list above. <span class="tag paper">Paper</span> <span class="tag deck">Deck</span></td><td>Holes cut by width, so long, thin bodies slip through end-on; the paper found ichneumonid wasps pass by body height. The knuckles of woven mesh catch claws and leg spines. Printed screens have rough holes and less open area, so material passes more slowly. <span class="tag paper">Paper</span> <span class="tag inf">Inferred</span></td><td>Which cut points? The paper's 1.5 / 3 / 5 mm is a proven starting point. <span class="tag ask">Ask</span></td></tr>
+<tr><td>c. Motion</td><td>Bring every specimen to the holes, again and again.</td><td>Paper: vertical stroke at maximum speed. <span class="tag paper">Paper</span></td><td>In liquid, a vertical stroke lifts specimens off the screen on the way up and draws them through on the way down. Shaking sideways mostly just sloshes the liquid. <span class="tag inf">Inferred</span></td><td>Is "back-and-forth" vertical? <span class="tag ask">Ask</span></td></tr>
+<tr><td>d. Water jets</td><td>Clear clogged holes and break up clumps.</td><td>New in the BugSorter. <span class="tag deck">Deck</span></td><td>Jets from below lift stuck items out. Jets from above push them in and can snap legs. Every jet adds water to the output. <span class="tag inf">Inferred</span></td><td>Where do the jets point, and at what pressure? <span class="tag ask">Ask</span></td></tr>
+<tr><td>e. Stack vs. one screen at a time</td><td>Decide the order of the cuts.</td><td>The paper used one screen at a time, smallest first, flipping what stayed on top onto the next screen. The BugSorter stacks its trays. <span class="tag paper">Paper</span> <span class="tag deck">Deck</span></td><td>Stacking saves transfers, but big specimens on top block holes and tangle small ones (the paper reports this with extra-large specimens). <span class="tag paper">Paper</span></td><td></td></tr>
+<tr><td>f. Done detection</td><td>Stop when sorting has actually finished.</td><td>The slide lists this as open. In the paper, doubling the sieving time didn't improve the worst sample. <span class="tag deck">Deck</span> <span class="tag paper">Paper</span></td><td>Elapsed time is the wrong signal. Stop when the number of items passing per stroke drops to about zero, counted by a camera on the screen or the collector. <span class="tag inf">Inferred</span></td><td></td></tr>
+<tr><td>g. Floaters</td><td>Deal with specimens that ride on the surface.</td><td>Floating leafhoppers caused the 78% class, and aphids coated in honeydew stick. <span class="tag paper">Paper</span></td><td>Skim floaters off as their own batch, or sink them with a drop of detergent. Detergent then clashes with flotation dispersal downstream. <span class="tag inf">Inferred</span></td><td>Does BioKEA see many floaters? <span class="tag ask">Ask</span></td></tr>
+<tr><td>h. Unloading</td><td>Move each fraction off its screen into the handoff carrier.</td><td>In the paper this is fully manual, 7–16 min per sample. <span class="tag paper">Paper</span></td><td>This is the biggest manual step the paper leaves. Options: the tray itself is the carrier (moved by ReBot), a flip-and-rinse station, or tilting into a chute. <span class="tag inf">Inferred</span></td><td>Is the tray the carrier? <span class="tag ask">Ask</span></td></tr>
+<tr><td>i. Cleaning and empty check</td><td>Prevent carryover between samples.</td><td>Paper: wash, 5–10% bleach, distilled water, 70% ethanol, and keep spare sets of critical parts. <span class="tag paper">Paper</span></td><td>Before each new sample, a camera confirms every screen is empty and logs the result. <span class="tag inf">Inferred</span></td><td></td></tr>
+<tr><td>j. Control and software</td><td>Run the sort, report status, keep the log.</td><td>ESP32 with a web UI. The roadmap goes API → MCP server → agent-run protocol → provenance. <span class="tag deck">Deck</span></td><td>A minimal API: <code>start(sample_id, protocol)</code>, <code>status</code>, <code>done</code>, <code>unload(class)</code>, <code>clean</code>. Log every event with the sample ID and firmware version. <span class="tag inf">Inferred</span></td><td></td></tr>
+</table>
+
+<!-- 4 -->
+<h2 id="down">4. Modules 2–5 and what they demand of the sorter</h2>
+
+<div class="mod">
+<h3>Module 2: BugDisperser (the sorter's direct customer)</h3>
+<dl>
+<dt>What it does</dt>
+<dd>"Flotation spreads the sorted specimens across a tray so each one sits alone, ready for imaging on the BugPicker." The deck calls it the simplest module and one of the most important. <span class="tag deck">Deck</span></dd>
+<dt>What it needs from the sorter</dt>
+<dd>Rows 1, 2, 5, 6, 7 and 9 of the interface spec: a carrier, the right liquid, tray-sized portions, loose specimens, little debris, and floaters already dealt with.</dd>
+<dt>Limits</dt>
+<dd>
+<ul>
+<li><strong>Floating objects attract each other.</strong> The meniscus pulls them together and toward the walls (the "Cheerios effect"), which works against spreading. <span class="tag inf">Inferred</span></li>
+<li><strong>Edges may be out of reach.</strong> DiversityScanner can't reach anything within 10 mm of its dish edge. <span class="tag paper">Paper</span></li>
+<li><strong>Surface tension is fragile.</strong> Ethanol or detergent residue sinks specimens that should float. <span class="tag inf">Inferred</span></li>
+<li><strong>Sunk specimens don't spread.</strong> Anything that sinks stays where it lands. <span class="tag inf">Inferred</span></li>
+</ul>
+</dd>
+<dt>Capacity (worked example)</dt>
+<dd>With a 100 × 100 mm usable area, specimens about 2 mm long and about 5 mm of clear space around each, a tray fits roughly 100–200 specimens at best. Random spreading achieves fewer. At about 25 s per pick, a tray of 100 means a new portion is needed roughly every 40 minutes. <span class="tag inf">Inferred</span></dd>
+<dt>Ask</dt>
+<dd>Tray size and material; which liquid; what drives the spreading (agitation, flow, air); how many specimens go on a tray; whether the picker takes them off the surface or after they settle. <span class="tag ask">Ask</span></dd>
+</dl>
+</div>
+
+<div class="mod">
+<h3>Module 3: BugPicker</h3>
+<dl>
+<dt>What it does</dt>
+<dd>Vision-guided suction pick-and-place, borrowed from electronics assembly. It puts one specimen in each well of a 96-well plate and links each specimen to its image. <span class="tag deck">Deck</span></dd>
+<dt>Published analog: DiversityScanner (2022)</dt>
+<dd>
+<ul>
+<li>Handles only specimens under 3 mm, because larger ones don't fit through its pipette tip.</li>
+<li>Picks with a suction hose and pipette tip driven by a syringe pump.</li>
+<li>Skips objects that sit too close together until they separate, and re-images the dish after every pick.</li>
+<li>Classifies specimens into 14 insect groups at about 91% precision.</li>
+</ul>
+<span class="tag paper">Paper</span></dd>
+<dt>What it sets for the sorter</dt>
+<dd>
+<ul>
+<li><strong>The nozzle style decides the classes.</strong> If the specimen is sucked up through a tip, the class maximum is the tip's bore. If an electronics-style nozzle seals on the body, it needs a smooth surface, which hairy, winged flies don't have. <span class="tag inf">Inferred</span></li>
+<li><strong>One fine tip covers most of a sample.</strong> With a cut at 3 mm, a single tip handles 83–89% of a Malaise sample. <span class="tag paper">Paper</span> <span class="tag inf">Inferred</span></li>
+<li><strong>Time is tight.</strong> The budget is about 25 s per specimen, and every touching pair and every piece of debris uses some of it. <span class="tag inf">Inferred</span></li>
+<li><strong>Sorting by type belongs here.</strong> Any sorting by appearance happens at this camera, not in the sieve.</li>
+</ul>
+</dd>
+<dt>Ask</dt>
+<dd>Which nozzle style and bores; the minimum and maximum specimen size; what the 12- and 48-well plates in the kit are for. <span class="tag ask">Ask</span></dd>
+</dl>
+</div>
+
+<div class="mod">
+<h3>Module 4: Enzyme dispenser (not the sorter's input)</h3>
+<dl>
+<dt>What it does</dt>
+<dd>A custom liquid handler on a 3D-printer-style gantry with a syringe. It dispenses lysozyme into every well to start DNA extraction. Its input is filled 96-well plates from the picker. <span class="tag deck">Deck</span></dd>
+<dt>What it implies upstream</dt>
+<dd>
+<ul>
+<li><strong>Size-matched plates allow per-class volumes.</strong> When each plate holds one size class, the protocol can set a volume per class instead of giving a 1 mm and a 5 mm specimen the same amount. <span class="tag inf">Inferred</span></li>
+<li><strong>Carried-in liquid can interfere.</strong> Liquid arriving with each specimen dilutes the reagent. Ethanol is a known inhibitor of enzymes and PCR, and salt or detergent from flotation may be too. <span class="tag inf">Inferred</span></li>
+<li><strong>Check the lysis chemistry.</strong> Insect barcoding usually lyses with proteinase K, but the deck says lysozyme. Ask what the chemistry is and whether specimens are meant to survive extraction as vouchers. If they are, sorter damage matters even more. <span class="tag inf">Inferred</span> <span class="tag ask">Ask</span></li>
+</ul>
+</dd>
+</dl>
+</div>
+
+<div class="mod">
+<h3>Module 5: Turnstile incubator</h3>
+<dl>
+<dt>What it does</dt>
+<dd>Plywood and acrylic built around an off-the-shelf turnstile. Plates rotate through the lysis incubation. <span class="tag deck">Deck</span></dd>
+<dt>What it implies</dt>
+<dd>Its capacity is set by plate positions and incubation time. With overnight lysis, 12 plates a day needs 12 positions. It makes no direct demand on the sorter. <span class="tag inf">Inferred</span></dd>
+<dt>Ask</dt>
+<dd>Number of positions, temperature and time. <span class="tag ask">Ask</span></dd>
+</dl>
+</div>
+
+<!-- 5 -->
+<h2 id="cross">5. Cross-cutting: rail, arms, software, provenance</h2>
+<ul>
+<li><strong>Rail and ReBot arms.</strong> The red arrows on the slide mark the rail between stations. ReBot arms (Chris Anderson) handle plates and trays on that rail. <span class="tag deck">Deck</span> Whatever carries the sorter's output therefore has to be something an arm can grip and set down level without spilling: grip features, a splash wall, a known liquid depth. <span class="tag inf">Inferred</span></li>
+<li><strong>Software roadmap.</strong> Networked instrument → API/MCP server → agent runs the protocol → provenance written as it runs. <span class="tag deck">Deck</span> For the sorter, that means the API and log in subsystem j.</li>
+<li><strong>Provenance.</strong> The record for each individual specimen begins at the picker's image. Before that, the sorter's batch label is all there is. A specimen carried over between samples is a data error (wrong site), not just contamination. <span class="tag inf">Inferred</span></li>
+</ul>
+
+<!-- 6 -->
+<h2 id="pantry">6. The pantry stand-ins</h2>
+<p>The deck's ladder orders the foods by <em>length</em>, but sieves cut by <em>width</em>. Widths below are typical values, so measure yours with calipers.</p>
+<table>
+<tr><th>Item</th><th>Deck size</th><th>What a sieve sees</th><th>In water</th><th>Stands in for</th></tr>
+<tr><td>Chia seeds</td><td>~1 mm</td><td>~1 mm, round</td><td>Sinks, then turns to gel within minutes and can glue fine mesh shut</td><td>Tiny specimens</td></tr>
+<tr><td>Couscous</td><td>~2 mm</td><td>~1–2 mm, round</td><td>Swells as it absorbs water</td><td>Small specimens</td></tr>
+<tr><td>White rice</td><td>~6 mm</td><td>~2 mm wide</td><td>Sinks</td><td>Elongated small bodies</td></tr>
+<tr><td>Wild rice</td><td>~10 mm</td><td>~1.5–2 mm thick</td><td>Sinks</td><td>Long, thin bodies (ichneumonids, crane flies)</td></tr>
+<tr><td>Broken egg noodles</td><td>10–20 mm</td><td>Ribbon several mm wide, ~1 mm thick</td><td>Softens over time</td><td>Fragments, large flat items</td></tr>
+<tr><td>Whole egg noodles</td><td>~30 mm</td><td>Same as broken</td><td>Softens</td><td>Extra-large specimens</td></tr>
+</table>
+<ul>
+<li><strong>The rice won't sort where the ladder says.</strong> White and wild rice are about as wide as couscous, so by width they will likely land with or near it rather than between couscous and noodles. Three clean classes are achievable if you call them chia, rice and noodles and set the cuts by width. <span class="tag inf">Inferred</span></li>
+<li><strong>The pantry mix can't reproduce the real failures.</strong> It has no floaters, no legs and no wings, so it can't show the failure modes the paper actually found. Add pet-store fruit flies (sold as reptile feeder cultures, about $10): freeze them, then drop them into rubbing alcohol. <span class="tag inf">Inferred</span></li>
+<li><strong>Swap the chia.</strong> Poppy seeds are about 1 mm and don't gel. <span class="tag inf">Inferred</span></li>
+</ul>
+
+<!-- 7 -->
+<h2 id="direction">7. Direction and limitations</h2>
+
+<h3>What the BugSorter is for</h3>
+<ul>
+<li>Coarse classes by width, so each tray suits one nozzle, one camera setting and one plate format.</li>
+<li>Keeping small specimens away from big ones, which crush, hide and shed fragments onto them.</li>
+<li>Removing human handling, since half the cost per specimen is labor. <span class="tag deck">Deck</span></li>
+<li>Starting the batch record that links specimens to their sample.</li>
+</ul>
+
+<h3>What it cannot do</h3>
+<ul>
+<li><strong>Separate species.</strong> That happens at the picker's camera and the barcode.</li>
+<li><strong>Fix floaters by running longer.</strong> In the paper, doubling the time didn't help. <span class="tag paper">Paper</span></li>
+<li><strong>Keep fragments out of the finest class without losing real specimens.</strong> Some real specimens are under 1 mm (fairyfly wasps, for example), so a mesh fine enough to catch fragments also catches them. <span class="tag inf">Inferred</span></li>
+</ul>
+
+<h3>Where the real gap is</h3>
+<p>The published literature has largely solved the sieving motion. What nobody has automated publicly is the handling around it: loading, pulling out giants, moving material between screens, unloading, dealing with floaters, cleaning, and splitting fractions into tray-sized portions. The BugSorter adds value exactly where it removes those human steps.</p>
+
+<h3>Recommended order for the weekend</h3>
+<ol>
+<li><strong>Ask question 1 below</strong> (what failed in the rebuild) before building anything.</li>
+<li><strong>Build a baseline from the paper's settings</strong> on the BugSorter frame: vertical stroke in water, 30–50 mm of water over the screen, perforated metal with 1.5 / 3 / 5 mm holes, maximum speed. Score it with the paper's efficiency formula so your numbers compare directly to its 92–99%:
+  <ul>
+  <li>Per class: <em>100 − (intruders × 100 ÷ specimens that belong in that class)</em>.</li>
+  <li>Overall: the average across classes.</li>
+  </ul></li>
+<li><strong>Put the design effort into the handling:</strong> unloading into a labeled carrier an arm can move, done detection by counting what passes, a floater skim, and the empty check.</li>
+<li><strong>Prove "run after run":</strong> the same mix five times back to back, with only the automated cleaning in between. Report purity per class, recovery, broken appendages and items left in the machine.</li>
+</ol>
+
+<!-- 8 -->
+<h2 id="ask">8. Questions to ask Sean or Austin, in order</h2>
+<ol>
+<li>What exactly failed in the budget rebuild: sorting quality, clogging, damage, or the manual steps around it? (The published version reports 92–99%.)</li>
+<li>What does the BugDisperser take in: carrier, liquid, volume, tray size, specimens per tray?</li>
+<li>How many specimens are in a typical bag? Does every specimen get barcoded, or only a subsample?</li>
+<li>Does the BugPicker suck specimens up through a tip, or seal on them like an electronics nozzle? Which bores, and what size range per nozzle?</li>
+<li>What are the 12- and 48-well plates in the kit for: large specimens, or just collecting the demo fractions?</li>
+<li>Which cut points do you want? (The paper used 1.5 / 3 / 5 mm.)</li>
+<li>Is "back-and-forth" vertical or horizontal, and where do the water jets point?</li>
+<li>What is allowed to end up in a well: ethanol, salt, detergent? What is the lysis chemistry, and are specimens kept as vouchers?</li>
+<li>Which sample types dominate (Malaise traps? pan traps?), and how long have they sat in 96% ethanol?</li>
+</ol>
+
+<h2>Sources</h2>
+<ul>
+<li>BioKEA, "Physical AI for Science, Track A" deck and speaker notes: <a href="https://docs.google.com/presentation/d/1SxKytbrSBqIaxMuh4jCn2J_zIUmfZpnH/preview">Google Slides</a></li>
+<li>Ascenzi, Wührl, Feng, Klug, Pylatiuk, Cerretti and Meier (2025), "EntoSieve: Automated size-sorting of insect bulk samples to aid accurate megabarcoding and metabarcoding," <em>Molecular Ecology Resources</em>: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12225705/">PMC12225705</a>. Build files (code, circuits, 3D files, raw data): <a href="https://osf.io/6t25n/">osf.io/6t25n</a>. Demo video: <a href="https://youtu.be/n2pqZGBjDQA">youtu.be/n2pqZGBjDQA</a></li>
+<li>Wührl et al. (2022), "DiversityScanner: Robotic handling of small invertebrates with machine learning methods," <em>Molecular Ecology Resources</em> 22:1626–1638: <a href="https://www.biorxiv.org/content/10.1101/2021.05.17.444523v3.full">bioRxiv full text</a> · <a href="https://zsm.snsb.de/diversityscanner-ai-based-robotics-assist-with-the-discovery-of-small-invertebrates/?lang=en">ZSM overview</a></li>
+<li>Elbrecht, Peinert and Leese (2017), "Sorting things out: Assessing effects of unequal specimen biomass on DNA metabarcoding," <em>Ecology and Evolution</em>: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5587478/">PMC5587478</a></li>
+</ul>
+
+</main></body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "@biobitworks/baebugs-aok",
+  "version": "0.1.0",
+  "description": "Read-only source-bound AoK/FCG Merkle explorer; repository-local, not registry-published",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "baebugs-aok": "bin/baebugs-aok.mjs"
+  },
+  "files": [
+    "bin/",
+    "data/",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node bin/baebugs-aok.mjs verify"
+  }
+}

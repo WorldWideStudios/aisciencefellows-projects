@@ -1,0 +1,4 @@
+run,leaves,root,last_step
+r2_synth_1_30,36,738c21df8af7515a6d7a461a86a8f7f0f30469f7ff95706742bac1918381308b,bench
+r3_real,38,b0ca959fbbd25aa7120aa3cee80ee79e2e4b007544e9b62e2b1fa0ba8a2559cb,bench
+r4_multires,1,ed318287d460bb9a706a6dc232a62b6144e724093c1ddd78fe637bc8dc811e01,sweep_before

@@ -1,0 +1,83 @@
+{
+ "rejected_pseudo_v1/images": {
+  "manifest_root_matches": true,
+  "referenced_by_training": false,
+  "images": 1078,
+  "images_identical_to_raw_gbif": 1078,
+  "verdict": "VERIFIED_DROPPABLE",
+  "note": "labels/*.txt kept (the negative record); images only"
+ },
+ "daisy/kaggle (staging)": {
+  "files": 24484,
+  "hardlinks": 23759,
+  "verified_copies": 725,
+  "unverified": [],
+  "n_unverified": 0,
+  "kaggle_ready": {
+   "baebugs-daisy-train": true,
+   "baebugs-daisy-eval": true,
+   "baebugs-daisy-context": true
+  },
+  "verdict": "VERIFIED_DROPPABLE"
+ },
+ "runs/r4_multires": {
+  "weights": 0,
+  "verdict": "VERIFIED_DROPPABLE",
+  "note": "stopped in epoch 1; fit_start (incl. init weights hash) is in ledger/r4_multires.jsonl"
+ },
+ "work/r4_multires (sweep_before)": {
+  "files": 1212,
+  "sweep_results_in_repo": [
+   "/Users/byron/Projects/baebugs/dashboard/data/r4_multires_sweep_before.json"
+  ],
+  "verdict": "DROPPABLE_AFTER_RECORDING",
+  "note": "resampled truth images (not byte-reproducible like multires); record their manifest root first"
+ },
+ "daisy/kaggle_out3 (*.pt)": {
+  "weights": {
+   "yolo11n-seg.pt": {
+    "sha256": "55ed65c56c91713d23e8402371c6c49a6fd84f257f7dce452e8d70e41dcbe152",
+    "tensors": 471,
+    "nan_tensors": 0
+   },
+   "weights/yolo26n.pt": {
+    "sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+    "tensors": 594,
+    "nan_tensors": 0
+   },
+   "daisy/runs/A_synth/weights/last.pt": {
+    "sha256": "33f42b933ff3271f207a72f7d4204c986433572f68a3a99a4fab3115e2b72400",
+    "tensors": 0,
+    "nan_tensors": 0
+   },
+   "daisy/runs/A_synth/weights/best.pt": {
+    "sha256": "33f42b933ff3271f207a72f7d4204c986433572f68a3a99a4fab3115e2b72400",
+    "tensors": 0,
+    "nan_tensors": 0
+   }
+  },
+  "base_weights_match_pin": true,
+  "verdict": "DROPPABLE_AFTER_RECORDING",
+  "note": "keep baebugs-daisy-bb-001.log, summary.txt, events.jsonl (evidence)",
+  "ema_check": {
+   "ema_tensors": 471,
+   "nan_tensors": 0,
+   "epoch": 6,
+   "best_fitness": 0.0,
+   "verdict": "DROPPABLE_AFTER_RECORDING",
+   "correction": "weights are finite (NaN recovery rolled back); failed realization, not NaN-corrupt"
+  }
+ },
+ "runs/r2_synth_1_30/weights/last.pt": {
+  "sha256": "f5e0f6b3a3b409a4b6d736f8158793102d172a79ee6ad027a4b8f676944096a3",
+  "identical_to_best": false,
+  "verdict": "DROPPABLE_AFTER_RECORDING",
+  "note": "different realization (final epoch); record hash before dropping"
+ },
+ "runs/r3_real/weights/last.pt": {
+  "sha256": "545975974759ed56c2954590e7641e8951a8510562c729fb7faa0300af76a353",
+  "identical_to_best": false,
+  "verdict": "DROPPABLE_AFTER_RECORDING",
+  "note": "different realization (final epoch); record hash before dropping"
+ }
+}

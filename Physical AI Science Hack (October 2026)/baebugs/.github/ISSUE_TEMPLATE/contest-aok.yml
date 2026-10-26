@@ -1,0 +1,49 @@
+name: Contest AoK / FCO claim
+description: Submit evidence and a proposed typed relationship for review
+title: "AoK contest: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: "A proposal is not admitted into the canonical Merkle root. Please avoid sharing restricted specimens or credential material."
+  - type: input
+    id: node
+    attributes:
+      label: Existing AoK node ID and leaf hash
+      placeholder: "claim:photo / sha256..."
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Counterclaim and what changes
+    validations:
+      required: true
+  - type: input
+    id: evidence
+    attributes:
+      label: Primary source URL / DOI
+    validations:
+      required: true
+  - type: dropdown
+    id: edge
+    attributes:
+      label: Proposed FCG relation
+      options:
+        - CHALLENGES
+        - REFUTES
+        - SUPPORTS
+        - REFINES
+        - SUPERSEDES
+    validations:
+      required: true
+  - type: textarea
+    id: rights
+    attributes:
+      label: Attribution, license and permitted reuse
+      description: Unknown is allowed; do not guess.
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Protocol, raw observations, negative tests and identity receipts
+      description: Reference exact bytes and executable environment where possible.

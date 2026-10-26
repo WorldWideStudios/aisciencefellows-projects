@@ -1,0 +1,2 @@
+run_id,split,design,stroke_profile,amp_mm,freq_hz,speed_mm_s,ramp_s,duration_s,kind,zone,count,stroke_csv
+#example r01,fit,"inserts:mesh5,mesh2",constant_speed,10,,50,0.01,30,quinoa,catch,24,

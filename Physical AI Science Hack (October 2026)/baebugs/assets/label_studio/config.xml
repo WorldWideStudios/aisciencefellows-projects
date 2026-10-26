@@ -1,0 +1,18 @@
+<View>
+  <Image name="image" value="$image"/>
+  <RectangleLabels name="label" toName="image">
+    <Label value="rack"/>
+    <Label value="tip_box"/>
+    <Label value="plate"/>
+    <Label value="tube"/>
+    <Label value="tray"/>
+    <Label value="insert"/>
+    <Label value="arm"/>
+    <Label value="instrument"/>
+    <Label value="container"/>
+    <Label value="fixture"/>
+    <Label value="stage"/>
+    <Label value="electronics"/>
+    <Label value="reference"/>
+  </RectangleLabels>
+</View>

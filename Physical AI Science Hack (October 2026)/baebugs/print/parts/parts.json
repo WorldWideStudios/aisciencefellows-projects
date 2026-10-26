@@ -1,0 +1,302 @@
+{
+ "params": {
+  "drum_od": 110.0,
+  "drum_wall": 2.4,
+  "zone_len": 70.0,
+  "spigot_len": 6.0,
+  "fit": 0.25,
+  "zone_holes": [
+   2.0,
+   4.0,
+   7.0
+  ],
+  "hole_web": 1.6,
+  "rib_h": 2.5,
+  "rib_w": 2.0,
+  "n_ribs": 3,
+  "rod_d": 8.0,
+  "bearing_od": 22.0,
+  "bearing_w": 7.0,
+  "incline_deg": 3.0,
+  "axis_h": 105.0,
+  "jaw_gap": 20.0,
+  "vortex_platform_d": 76.0,
+  "mini_od": 50.0,
+  "mini_h": 15.0,
+  "mini_holes": [
+   1.5,
+   3.0,
+   5.0
+  ],
+  "tube_id": 27.0,
+  "tube_holes": [
+   1.5,
+   3.0
+  ],
+  "tag": 25.0,
+  "m3": 3.2,
+  "m3_pilot": 2.6
+ },
+ "parts": [
+  {
+   "part": "trommel_zone_2mm",
+   "stl": "stl/trommel_zone_2mm.stl",
+   "sha256": "cf07b0fd8a8a32ceed7ba8c1ecd2f949decebb54f184bc40d7ce0babfc2b3d5e",
+   "watertight": true,
+   "volume_cm3": 48.69,
+   "triangles": 132996,
+   "bbox_mm": [
+    110.0,
+    110.0,
+    76.0
+   ]
+  },
+  {
+   "part": "trommel_zone_4mm",
+   "stl": "stl/trommel_zone_4mm.stl",
+   "sha256": "bd67b2b875b79de37d12249457c99d84882991cd69ad9cd3b94030bf81e90e02",
+   "watertight": true,
+   "volume_cm3": 42.06,
+   "triangles": 53748,
+   "bbox_mm": [
+    110.0,
+    110.0,
+    76.0
+   ]
+  },
+  {
+   "part": "trommel_zone_7mm",
+   "stl": "stl/trommel_zone_7mm.stl",
+   "sha256": "01fc906fa7e4a661d2922499e407b02d6371ec7e36547790bbfe914890d4b6b6",
+   "watertight": true,
+   "volume_cm3": 35.69,
+   "triangles": 25792,
+   "bbox_mm": [
+    110.0,
+    110.0,
+    76.0
+   ]
+  },
+  {
+   "part": "trommel_cap_inlet",
+   "stl": "stl/trommel_cap_inlet.stl",
+   "sha256": "406b2927eb902b52cc3139696fcf89059be1d1bd0408bb5192d5bf8d00dfe80e",
+   "watertight": true,
+   "volume_cm3": 31.86,
+   "triangles": 2384,
+   "bbox_mm": [
+    114.0,
+    114.0,
+    22.0
+   ]
+  },
+  {
+   "part": "trommel_cap_outlet",
+   "stl": "stl/trommel_cap_outlet.stl",
+   "sha256": "fef87f7f0cc0d822815cdb27b5899773f223eec0b21087c9ebb4598af9ff812a",
+   "watertight": true,
+   "volume_cm3": 36.2,
+   "triangles": 2192,
+   "bbox_mm": [
+    114.0,
+    114.0,
+    22.0
+   ]
+  },
+  {
+   "part": "trommel_stand_inlet",
+   "stl": "stl/trommel_stand_inlet.stl",
+   "sha256": "8ed1ad9ffc2a8b98c18b7a5bca34718a094c5da46e417f8246634ab98567592a",
+   "watertight": true,
+   "volume_cm3": 66.48,
+   "triangles": 860,
+   "bbox_mm": [
+    90.0,
+    60.0,
+    134.1
+   ]
+  },
+  {
+   "part": "trommel_stand_outlet",
+   "stl": "stl/trommel_stand_outlet.stl",
+   "sha256": "238768d4c6e607568d55f9d4002c9797dfc3c0f3c3eeff1a1d915e9577f4e933",
+   "watertight": true,
+   "volume_cm3": 63.35,
+   "triangles": 860,
+   "bbox_mm": [
+    90.0,
+    60.0,
+    122.0
+   ]
+  },
+  {
+   "part": "trommel_crank_hand",
+   "stl": "stl/trommel_crank_hand.stl",
+   "sha256": "427d857804dc8d455404298e6879d2824375d8a12853c5ccf391bdba6aa12f1d",
+   "watertight": true,
+   "volume_cm3": 15.71,
+   "triangles": 724,
+   "bbox_mm": [
+    78.0,
+    22.0,
+    47.0
+   ]
+  },
+  {
+   "part": "trommel_crank_arm",
+   "stl": "stl/trommel_crank_arm.stl",
+   "sha256": "73a534bdfc183ae8f157022608c0794eb35a2702cb16c9d16d8b1bd54d6ae08e",
+   "watertight": true,
+   "volume_cm3": 29.73,
+   "triangles": 580,
+   "bbox_mm": [
+    81.0,
+    26.0,
+    47.0
+   ]
+  },
+  {
+   "part": "trommel_bin",
+   "stl": "stl/trommel_bin.stl",
+   "sha256": "3e9ad073d8315628bb5bedb54bf287929d340444e76d0af5b6ab1f30ff358665",
+   "watertight": true,
+   "volume_cm3": 37.53,
+   "triangles": 180,
+   "bbox_mm": [
+    70.0,
+    96.0,
+    40.0
+   ]
+  },
+  {
+   "part": "trommel_bin_oversize",
+   "stl": "stl/trommel_bin_oversize.stl",
+   "sha256": "0511940ac1cd44b56cc6cb45dbbf9fa6502259f8ed91173fcac78b46bc05ac01",
+   "watertight": true,
+   "volume_cm3": 34.09,
+   "triangles": 180,
+   "bbox_mm": [
+    60.0,
+    96.0,
+    40.0
+   ]
+  },
+  {
+   "part": "vortex_mini_sieve_1.5mm",
+   "stl": "stl/vortex_mini_sieve_1.5mm.stl",
+   "sha256": "bb102c6a9f6579f16cf31b465bb6c53aced3edcdd90dd4089782e98a5ef79a13",
+   "watertight": true,
+   "volume_cm3": 7.27,
+   "triangles": 13646,
+   "bbox_mm": [
+    50.0,
+    50.0,
+    18.0
+   ]
+  },
+  {
+   "part": "vortex_mini_sieve_3mm",
+   "stl": "stl/vortex_mini_sieve_3mm.stl",
+   "sha256": "4a2cb3feeb31b0aead2a9323f47052baf34bbd74b96c180aaa71547be98f595f",
+   "watertight": true,
+   "volume_cm3": 6.92,
+   "triangles": 6114,
+   "bbox_mm": [
+    50.0,
+    50.0,
+    18.0
+   ]
+  },
+  {
+   "part": "vortex_mini_sieve_5mm",
+   "stl": "stl/vortex_mini_sieve_5mm.stl",
+   "sha256": "9d6c24c7fd57e77bf2bf0f8aa8e1f8bc270c1f257a4f6d93d32b33a80fd063fd",
+   "watertight": true,
+   "volume_cm3": 6.81,
+   "triangles": 3224,
+   "bbox_mm": [
+    50.0,
+    50.0,
+    18.0
+   ]
+  },
+  {
+   "part": "vortex_mini_pan",
+   "stl": "stl/vortex_mini_pan.stl",
+   "sha256": "c77e6554b771895552d88d659728cae46cd20f77f137985910a4e8f66ce1a4fe",
+   "watertight": true,
+   "volume_cm3": 7.89,
+   "triangles": 1408,
+   "bbox_mm": [
+    50.0,
+    50.0,
+    18.0
+   ]
+  },
+  {
+   "part": "vortex_mini_lid",
+   "stl": "stl/vortex_mini_lid.stl",
+   "sha256": "af7dde03d618084770cdba8d9f7e55836de9ca7f5df465e3fc4c51ff649a829a",
+   "watertight": true,
+   "volume_cm3": 5.03,
+   "triangles": 900,
+   "bbox_mm": [
+    54.0,
+    50.0,
+    13.0
+   ]
+  },
+  {
+   "part": "vortex_puck_76",
+   "stl": "stl/vortex_puck_76.stl",
+   "sha256": "eb9c9fbe49af0304317cf3ee6d391816acec2e8099e77bb34527e53d7c2502b2",
+   "watertight": true,
+   "volume_cm3": 35.71,
+   "triangles": 700,
+   "bbox_mm": [
+    76.0,
+    76.0,
+    18.0
+   ]
+  },
+  {
+   "part": "centrifuge_tube_strainer_1.5mm",
+   "stl": "stl/centrifuge_tube_strainer_1.5mm.stl",
+   "sha256": "f89a64d4aaf01140826e8a8b8f38defabcbc68e724e2de157cb831aabc71b754",
+   "watertight": true,
+   "volume_cm3": 4.26,
+   "triangles": 3676,
+   "bbox_mm": [
+    42.2,
+    34.2,
+    27.0
+   ]
+  },
+  {
+   "part": "centrifuge_tube_strainer_3mm",
+   "stl": "stl/centrifuge_tube_strainer_3mm.stl",
+   "sha256": "c7c2ebee5975522d49dc03a710c90ff98a3bada2dd16e6660b1d153068b814ec",
+   "watertight": true,
+   "volume_cm3": 4.2,
+   "triangles": 1874,
+   "bbox_mm": [
+    42.2,
+    34.2,
+    27.0
+   ]
+  },
+  {
+   "part": "arm_grip_handle",
+   "stl": "stl/arm_grip_handle.stl",
+   "sha256": "6652b4164eb529957733ee5835a1c85d94793e39befd25bab02076a9ee5ced9c",
+   "watertight": true,
+   "volume_cm3": 9.16,
+   "triangles": 188,
+   "bbox_mm": [
+    40.0,
+    16.0,
+    26.0
+   ]
+  }
+ ]
+}

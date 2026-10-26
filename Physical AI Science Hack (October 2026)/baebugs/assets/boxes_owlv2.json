@@ -1,0 +1,2732 @@
+{
+ "status": "INFERRED (unconfirmed; not training labels)",
+ "model": "google/owlv2-base-patch16-ensemble",
+ "weights_sha256": "0492498d7ee4a7de1ce489d1f1b22232a3f88b952f9553707e11e42b9f72ca74",
+ "weights_note": "hash of the state-dict layout; HF revision recorded below",
+ "revision": null,
+ "prompts": [
+  "tube rack",
+  "pipette tip box",
+  "microplate",
+  "cryovial",
+  "conical tube",
+  "plastic tub",
+  "robot arm",
+  "orange 3D printed shelf rack",
+  "wooden post",
+  "breadboard",
+  "steel ruler",
+  "metal frame",
+  "vortex mixer",
+  "3D printer",
+  "printed tray frame",
+  "hexagonal grid",
+  "perforated metal sheet",
+  "plastic box"
+ ],
+ "prompts_sha256": "377c8239b3481888a074cabdd1f953025daf06db27febb13a46be2b88c92f4b9",
+ "conf_min": 0.2,
+ "photos": [
+  {
+   "photo_id": "tower_arm_side_1",
+   "published_sha256": "82f593b9a577d0340c40bef05d0605099fbccbcd8987b08f8673189d9cb31185",
+   "frame_root": "c2446fd859f244ad39812d24960266bf379b71127b5480613dd6b3ff9924fb7a",
+   "pixel_root": "565ea0f0eadd9a1c4f2064ab61adbea626f3ea1bde1dad14342edbeeb8fa4fb2",
+   "objects_root": "ea136fec3f3e859b9bc5ce63555e2ace1dde82bc16e14a280db1e63cb068c473",
+   "boxes": [
+    {
+     "prompt": "wooden post",
+     "conf": 0.288,
+     "bbox": [
+      722,
+      92,
+      935,
+      777
+     ]
+    },
+    {
+     "prompt": "orange 3D printed shelf rack",
+     "conf": 0.219,
+     "bbox": [
+      564,
+      84,
+      1036,
+      942
+     ]
+    },
+    {
+     "prompt": "3D printer",
+     "conf": 0.405,
+     "bbox": [
+      226,
+      569,
+      424,
+      805
+     ]
+    },
+    {
+     "prompt": "orange 3D printed shelf rack",
+     "conf": 0.492,
+     "bbox": [
+      528,
+      345,
+      1179,
+      1597
+     ]
+    },
+    {
+     "prompt": "3D printer",
+     "conf": 0.387,
+     "bbox": [
+      1157,
+      616,
+      1657,
+      1250
+     ]
+    },
+    {
+     "prompt": "3D printer",
+     "conf": 0.23,
+     "bbox": [
+      359,
+      335,
+      1646,
+      2190
+     ]
+    }
+   ]
+  },
+  {
+   "photo_id": "tower_arm_side_2",
+   "published_sha256": "d3c2844e62da4a7e88583e4d2e7b582fc04bc7d1e12dd235129be5ec94904d47",
+   "frame_root": "0e38d2d62b186f0ae7785fb3a54e06152d0c122a5855cd8a2f874183eb9f1455",
+   "pixel_root": "6479758e449028effbac30b7ef9a7c82e370f76bf0d5d884b2c9c9d2bcabd2ab",
+   "objects_root": "828f3df64619f8aebe1b44204a0c1023e4b61dfc426dcc1ba19775f9750b6911",
+   "boxes": [
+    {
+     "prompt": "wooden post",
+     "conf": 0.21,
+     "bbox": [
+      715,
+      219,
+      955,
+      991
+     ]
+    },
+    {
+     "prompt": "orange 3D printed shelf rack",
+     "conf": 0.352,
+     "bbox": [
+      562,
+      218,
+      1076,
+      1022
+     ]
+    },
+    {
+     "prompt": "orange 3D printed shelf rack",
+     "conf": 0.266,
+     "bbox": [
+      258,
+      559,
+      1082,
+      1842
+     ]
+    },
+    {
+     "prompt": "3D printer",
+     "conf": 0.442,
+     "bbox": [
+      1118,
+      750,
+      1654,
+      1429
+     ]
+    },
+    {
+     "prompt": "robot arm",
+     "conf": 0.203,
+     "bbox": [
+      1452,
+      1302,
+      1651,
+      1469
+     ]
+    }
+   ]
+  },
+  {
+   "photo_id": "tower_top",
+   "published_sha256": "7c7566eefeb1388ffa05551b935a62fba6bf179975cb3753f6c787788988162a",
+   "frame_root": "db8a3a5e3d91ec8b45ff77868f5a60b940f5da6942bdf0b17192eea36e69e157",
+   "pixel_root": "edf156b37cdb39098df2720d58b713b18a737faae8eb84a7ce70b0776110aa08",
+   "objects_root": "ed935b0d353c46a4b011d575adcf99ecf2ab8f911a19fe44fd69dbeaeced5905",
+   "boxes": [
+    {
+     "prompt": "3D printer",
+     "conf": 0.343,
+     "bbox": [
+      618,
+      314,
+      1499,
+      1443
+     ]
+    }
+   ]
+  },
+  {
+   "photo_id": "tower_arm_side_3",
+   "published_sha256": "1c44664503c584cc43a303f5b223fc3a3599b6a95c6c7db8d0bb816fce6986e2",
+   "frame_root": "c848b656b47243905760e9d10a4d763b391fa93d4aad5f465800735c3dbf0c2f",
+   "pixel_root": "807ec4b7c772e2f758ddad5685c45b7c31b36dc19babe399605f0fdb913741c4",
+   "objects_root": "63efa9b491b3507cd8f4acf14cc4210df5eafa3e705fcc1074250698d5c66a63",
+   "boxes": [
+    {
+     "prompt": "wooden post",
+     "conf": 0.306,
+     "bbox": [
+      837,
+      3,
+      1070,
+      853
+     ]
+    },
+    {
+     "prompt": "orange 3D printed shelf rack",
+     "conf": 0.468,
+     "bbox": [
+      743,
+      5,
+      1197,
+      887
+     ]
+    },
+    {
+     "prompt": "3D printer",
+     "conf": 0.308,
+     "bbox": [
+      406,
+      511,
+      519,
+      733
+     ]
+    },
+    {
+     "prompt": "3D printer",
+     "conf": 0.434,
+     "bbox": [
+      1254,
+      489,
+      1659,
+      1135
+     ]
+    },
+    {
+     "prompt": "hexagonal grid",
+     "conf": 0.237,
+     "bbox": [
+      393,
+      968,
+      592,
+      1154
+     ]
+    },
+    {
+     "prompt": "orange 3D printed shelf rack",
+     "conf": 0.369,
+     "bbox": [
+      459,
+      207,
+      1209,
+      1463
+     ]
+    }
+   ]
+  },
+  {
+   "photo_id": "breadboard_ruler",
+   "published_sha256": "20f18c558202f08627d9f928bafc0e6b065eaef2d1779ee30786dde7602d6ad1",
+   "frame_root": "7b42a3e08931c2478fd634738e042f02709e4d4b39f8cfeff559cd0e0f5332fe",
+   "pixel_root": "f06556dd14f8cb4cf689e999afcb5ee08105197c969e8282903eb38a250f3955",
+   "objects_root": "be0c84893b2f340c2a894fa121ed0070c5e9da47733621594be898510d9859eb",
+   "boxes": [
+    {
+     "prompt": "microplate",
+     "conf": 0.302,
+     "bbox": [
+      0,
+      1,
+      580,
+      116
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.282,
+     "bbox": [
+      277,
+      0,
+      585,
+      104
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.41,
+     "bbox": [
+      1197,
+      0,
+      1653,
+      1470
+     ]
+    },
+    {
+     "prompt": "pipette tip box",
+     "conf": 0.339,
+     "bbox": [
+      1237,
+      204,
+      1419,
+      416
+     ]
+    },
+    {
+     "prompt": "conical tube",
+     "conf": 0.305,
+     "bbox": [
+      0,
+      371,
+      162,
+      553
+     ]
+    },
+    {
+     "prompt": "pipette tip box",
+     "conf": 0.322,
+     "bbox": [
+      1281,
+      421,
+      1464,
+      629
+     ]
+    },
+    {
+     "prompt": "cryovial",
+     "conf": 0.516,
+     "bbox": [
+      1514,
+      602,
+      1659,
+      1105
+     ]
+    },
+    {
+     "prompt": "steel ruler",
+     "conf": 0.285,
+     "bbox": [
+      339,
+      739,
+      962,
+      1596
+     ]
+    },
+    {
+     "prompt": "steel ruler",
+     "conf": 0.219,
+     "bbox": [
+      345,
+      772,
+      472,
+      1591
+     ]
+    },
+    {
+     "prompt": "breadboard",
+     "conf": 0.33,
+     "bbox": [
+      8,
+      0,
+      1147,
+      2177
+     ]
+    },
+    {
+     "prompt": "steel ruler",
+     "conf": 0.533,
+     "bbox": [
+      873,
+      2,
+      1400,
+      2165
+     ]
+    },
+    {
+     "prompt": "steel ruler",
+     "conf": 0.253,
+     "bbox": [
+      609,
+      747,
+      863,
+      1584
+     ]
+    },
+    {
+     "prompt": "steel ruler",
+     "conf": 0.211,
+     "bbox": [
+      789,
+      743,
+      958,
+      1566
+     ]
+    },
+    {
+     "prompt": "steel ruler",
+     "conf": 0.247,
+     "bbox": [
+      418,
+      757,
+      648,
+      1596
+     ]
+    },
+    {
+     "prompt": "pipette tip box",
+     "conf": 0.313,
+     "bbox": [
+      1488,
+      1163,
+      1659,
+      1321
+     ]
+    },
+    {
+     "prompt": "breadboard",
+     "conf": 0.205,
+     "bbox": [
+      8,
+      21,
+      1659,
+      2203
+     ]
+    },
+    {
+     "prompt": "hexagonal grid",
+     "conf": 0.272,
+     "bbox": [
+      1312,
+      1519,
+      1659,
+      2212
+     ]
+    },
+    {
+     "prompt": "hexagonal grid",
+     "conf": 0.201,
+     "bbox": [
+      1386,
+      1579,
+      1659,
+      2210
+     ]
+    }
+   ]
+  },
+  {
+   "photo_id": "plate384_ruler",
+   "published_sha256": "91fb1d1173d4251882a9f5f7db24a83d380e6f880766715603158225c1c5bf1d",
+   "frame_root": "962438e41970d38734a18923dd2dccb93ddadbf3e74644002135326e4f6edc25",
+   "pixel_root": "8344bd37d562b35e4808a7cf01d7acb354de51f6776c518c1ba4eae725ce6054",
+   "objects_root": "b24ef6ea8741b1b6ef326e18b28fc35ebc1fd23ab3e398c0cb2a3dbe9e347a21",
+   "boxes": [
+    {
+     "prompt": "cryovial",
+     "conf": 0.389,
+     "bbox": [
+      639,
+      1,
+      1493,
+      203
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.504,
+     "bbox": [
+      1,
+      0,
+      528,
+      708
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.506,
+     "bbox": [
+      410,
+      725,
+      1299,
+      1362
+     ]
+    },
+    {
+     "prompt": "steel ruler",
+     "conf": 0.28,
+     "bbox": [
+      570,
+      1295,
+      1656,
+      1563
+     ]
+    },
+    {
+     "prompt": "steel ruler",
+     "conf": 0.455,
+     "bbox": [
+      7,
+      1279,
+      1658,
+      1570
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.286,
+     "bbox": [
+      0,
+      1538,
+      610,
+      2211
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.465,
+     "bbox": [
+      582,
+      1493,
+      1659,
+      2212
+     ]
+    }
+   ]
+  },
+  {
+   "photo_id": "plate384_top",
+   "published_sha256": "117c725af22a2c05fb895a576b7b59e8d25ff8fbcd2e5c3c7a555a47e3c41555",
+   "frame_root": "5e9b1b608cc7360e1220b29d4696af99d66b4a1bd46b74a58375019c9bee270e",
+   "pixel_root": "28ac4102fdd5c71a6100ff6fc852ab897686734a891d63059764a4e455d0366a",
+   "objects_root": "854c43ce0cb6581bd5ba4d98a969f2bd039b4d6ba5978b4ed023fe3d4c57126b",
+   "boxes": [
+    {
+     "prompt": "hexagonal grid",
+     "conf": 0.2,
+     "bbox": [
+      482,
+      972,
+      1283,
+      1935
+     ]
+    }
+   ]
+  },
+  {
+   "photo_id": "lift_columns",
+   "published_sha256": "9501cca4880554de44a6894def68b61e3144215b7cbab771285a0ab306ae54fe",
+   "frame_root": "c001ae40bb9d8bfe516ebaf4d0f273d8f7175805b7581cb17b56090ccc89302c",
+   "pixel_root": "723de8c0ca9f026b9dc68a7744509208fd03463fb15e4c048d55af6279748dd4",
+   "objects_root": "20e5e09a8690ce03389d3925afa135a4541a7c25d5012e1e43f21cebafa324e0",
+   "boxes": [
+    {
+     "prompt": "3D printer",
+     "conf": 0.239,
+     "bbox": [
+      543,
+      565,
+      1223,
+      1848
+     ]
+    },
+    {
+     "prompt": "vortex mixer",
+     "conf": 0.211,
+     "bbox": [
+      836,
+      543,
+      1226,
+      1797
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.268,
+     "bbox": [
+      0,
+      1271,
+      406,
+      1463
+     ]
+    },
+    {
+     "prompt": "3D printer",
+     "conf": 0.288,
+     "bbox": [
+      491,
+      929,
+      874,
+      1695
+     ]
+    },
+    {
+     "prompt": "cryovial",
+     "conf": 0.256,
+     "bbox": [
+      1338,
+      1252,
+      1546,
+      1673
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.299,
+     "bbox": [
+      0,
+      1379,
+      196,
+      1639
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.474,
+     "bbox": [
+      0,
+      1305,
+      447,
+      1855
+     ]
+    },
+    {
+     "prompt": "pipette tip box",
+     "conf": 0.295,
+     "bbox": [
+      1596,
+      1664,
+      1659,
+      1770
+     ]
+    },
+    {
+     "prompt": "pipette tip box",
+     "conf": 0.337,
+     "bbox": [
+      1272,
+      1705,
+      1452,
+      1765
+     ]
+    },
+    {
+     "prompt": "pipette tip box",
+     "conf": 0.438,
+     "bbox": [
+      1266,
+      1706,
+      1521,
+      1770
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.296,
+     "bbox": [
+      91,
+      1762,
+      245,
+      1891
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.429,
+     "bbox": [
+      196,
+      1739,
+      421,
+      1953
+     ]
+    },
+    {
+     "prompt": "3D printer",
+     "conf": 0.213,
+     "bbox": [
+      849,
+      1073,
+      1159,
+      1948
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.455,
+     "bbox": [
+      435,
+      1708,
+      690,
+      1933
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.515,
+     "bbox": [
+      1180,
+      1800,
+      1355,
+      2054
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.339,
+     "bbox": [
+      334,
+      1852,
+      522,
+      2005
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.304,
+     "bbox": [
+      331,
+      1855,
+      758,
+      2211
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.288,
+     "bbox": [
+      625,
+      1763,
+      924,
+      2170
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.274,
+     "bbox": [
+      957,
+      1963,
+      1215,
+      2204
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.377,
+     "bbox": [
+      911,
+      1959,
+      1312,
+      2209
+     ]
+    },
+    {
+     "prompt": "pipette tip box",
+     "conf": 0.226,
+     "bbox": [
+      627,
+      1762,
+      917,
+      2083
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.296,
+     "bbox": [
+      930,
+      1971,
+      1426,
+      2212
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.394,
+     "bbox": [
+      427,
+      1907,
+      755,
+      2208
+     ]
+    },
+    {
+     "prompt": "hexagonal grid",
+     "conf": 0.213,
+     "bbox": [
+      1056,
+      1997,
+      1262,
+      2198
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.402,
+     "bbox": [
+      0,
+      1832,
+      536,
+      2211
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.383,
+     "bbox": [
+      1354,
+      1971,
+      1659,
+      2212
+     ]
+    }
+   ]
+  },
+  {
+   "photo_id": "formlabs_fuse",
+   "published_sha256": "d0cf3972f9bf9c842fe39f8ed2c2b936b86eb8f009a5c0dc29cca3e574357ffd",
+   "frame_root": "ae4ccb246155fd4047a99bfc387d5c07b20da4a88bca740c1a001d0e11ebfad4",
+   "pixel_root": "fc1e7fb280f5e8896dff0fea7c723ce42aaf62ad07971f7758b9431784f6ad21",
+   "objects_root": "f471fd50bc002f9fd93823e577834d0f6f98f3ba0b9a1e35e394304065a761f0",
+   "boxes": [
+    {
+     "prompt": "plastic box",
+     "conf": 0.22,
+     "bbox": [
+      995,
+      2,
+      1659,
+      570
+     ]
+    },
+    {
+     "prompt": "3D printer",
+     "conf": 0.442,
+     "bbox": [
+      388,
+      2,
+      1090,
+      970
+     ]
+    },
+    {
+     "prompt": "3D printer",
+     "conf": 0.23,
+     "bbox": [
+      417,
+      0,
+      1078,
+      786
+     ]
+    },
+    {
+     "prompt": "3D printer",
+     "conf": 0.285,
+     "bbox": [
+      223,
+      0,
+      1077,
+      1135
+     ]
+    },
+    {
+     "prompt": "perforated metal sheet",
+     "conf": 0.228,
+     "bbox": [
+      1152,
+      510,
+      1653,
+      1079
+     ]
+    },
+    {
+     "prompt": "3D printer",
+     "conf": 0.392,
+     "bbox": [
+      443,
+      212,
+      1659,
+      1858
+     ]
+    },
+    {
+     "prompt": "3D printer",
+     "conf": 0.317,
+     "bbox": [
+      256,
+      182,
+      1659,
+      2040
+     ]
+    },
+    {
+     "prompt": "vortex mixer",
+     "conf": 0.289,
+     "bbox": [
+      1063,
+      1146,
+      1227,
+      1287
+     ]
+    }
+   ]
+  },
+  {
+   "photo_id": "rack_edge_ruler",
+   "published_sha256": "282cc0f2a2c9f23161c26fe44df7a0613739679d959bcc1e89524b6cf47c86fa",
+   "frame_root": "a52ee10b48ad6c3f0cbd4876b7ee0acf7ca6083952fb87622fabf99a863041d3",
+   "pixel_root": "cd55f38c9f40aa7518dc88e880e9df259c92af260beddca439d9e48eaee63331",
+   "objects_root": "14c968a2a238a6616bf6711c994d466bd1bc9ad5364018387c45ede24cbc36f7",
+   "boxes": [
+    {
+     "prompt": "plastic box",
+     "conf": 0.289,
+     "bbox": [
+      1261,
+      1,
+      2210,
+      878
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.345,
+     "bbox": [
+      2,
+      9,
+      2198,
+      1659
+     ]
+    },
+    {
+     "prompt": "pipette tip box",
+     "conf": 0.251,
+     "bbox": [
+      361,
+      737,
+      1736,
+      997
+     ]
+    },
+    {
+     "prompt": "steel ruler",
+     "conf": 0.541,
+     "bbox": [
+      17,
+      850,
+      2200,
+      1153
+     ]
+    },
+    {
+     "prompt": "steel ruler",
+     "conf": 0.212,
+     "bbox": [
+      1083,
+      925,
+      2212,
+      1159
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.491,
+     "bbox": [
+      0,
+      1069,
+      1044,
+      1654
+     ]
+    },
+    {
+     "prompt": "tube rack",
+     "conf": 0.355,
+     "bbox": [
+      1086,
+      1202,
+      2181,
+      1658
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.268,
+     "bbox": [
+      16,
+      855,
+      2210,
+      1659
+     ]
+    }
+   ]
+  },
+  {
+   "photo_id": "xtip4_box",
+   "published_sha256": "86e990548b4520cf3f0fa94822432808fa56e768b3461773524fb34159e5151e",
+   "frame_root": "751adc53252a9e32e7f65fa04ec5a8ea8c85562cc6fbc8809daaa563fe68c3fb",
+   "pixel_root": "0f80392bb85592725578e1588cf95d6b5d1c28bf8c23f3fa2a05aa0847ecfdc9",
+   "objects_root": "644b4d5c40ae13c2457c74ff6d927f6f0a4a476bf5524b70f5dc6dabf613a6da",
+   "boxes": [
+    {
+     "prompt": "pipette tip box",
+     "conf": 0.392,
+     "bbox": [
+      1064,
+      0,
+      1287,
+      319
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.367,
+     "bbox": [
+      1243,
+      0,
+      2034,
+      442
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.399,
+     "bbox": [
+      1455,
+      31,
+      2212,
+      852
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.364,
+     "bbox": [
+      0,
+      55,
+      264,
+      906
+     ]
+    },
+    {
+     "prompt": "steel ruler",
+     "conf": 0.571,
+     "bbox": [
+      6,
+      3,
+      775,
+      1649
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.527,
+     "bbox": [
+      1448,
+      17,
+      2206,
+      1262
+     ]
+    },
+    {
+     "prompt": "pipette tip box",
+     "conf": 0.226,
+     "bbox": [
+      591,
+      730,
+      1435,
+      905
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.283,
+     "bbox": [
+      498,
+      24,
+      2199,
+      1659
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.392,
+     "bbox": [
+      553,
+      422,
+      1566,
+      1313
+     ]
+    },
+    {
+     "prompt": "hexagonal grid",
+     "conf": 0.203,
+     "bbox": [
+      626,
+      529,
+      1415,
+      1182
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.334,
+     "bbox": [
+      1737,
+      499,
+      2210,
+      1279
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.446,
+     "bbox": [
+      533,
+      427,
+      1790,
+      1659
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.384,
+     "bbox": [
+      787,
+      959,
+      1799,
+      1659
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.414,
+     "bbox": [
+      4,
+      862,
+      499,
+      1653
+     ]
+    },
+    {
+     "prompt": "breadboard",
+     "conf": 0.221,
+     "bbox": [
+      0,
+      1,
+      2192,
+      1659
+     ]
+    }
+   ]
+  },
+  {
+   "photo_id": "labware_overview_1",
+   "published_sha256": "22d1861d5faefa12be34b2840ff3c4556ca70d29e2890886d28f9d456a51c2fb",
+   "frame_root": "6d9ab532157ab1c929a3392d149abca844cdf83cca3c8edb6f3cc3531fb5fd24",
+   "pixel_root": "ef0006623b813b7f1709ae34658fd427c8f37ef23ca20c6c63c9465711f21372",
+   "objects_root": "7c557fc6490fd374d420f22a28947b619cb6401315a025a513ed89b77cb1c378",
+   "boxes": [
+    {
+     "prompt": "plastic box",
+     "conf": 0.245,
+     "bbox": [
+      413,
+      4,
+      869,
+      364
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.454,
+     "bbox": [
+      416,
+      0,
+      654,
+      350
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.385,
+     "bbox": [
+      639,
+      13,
+      861,
+      361
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.287,
+     "bbox": [
+      1500,
+      1,
+      1659,
+      300
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.361,
+     "bbox": [
+      1128,
+      143,
+      1462,
+      468
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.239,
+     "bbox": [
+      891,
+      153,
+      1073,
+      454
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.221,
+     "bbox": [
+      1090,
+      140,
+      1278,
+      461
+     ]
+    },
+    {
+     "prompt": "pipette tip box",
+     "conf": 0.268,
+     "bbox": [
+      739,
+      388,
+      989,
+      559
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.261,
+     "bbox": [
+      1047,
+      485,
+      1275,
+      826
+     ]
+    },
+    {
+     "prompt": "hexagonal grid",
+     "conf": 0.335,
+     "bbox": [
+      327,
+      409,
+      549,
+      725
+     ]
+    },
+    {
+     "prompt": "hexagonal grid",
+     "conf": 0.321,
+     "bbox": [
+      844,
+      572,
+      1044,
+      861
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.362,
+     "bbox": [
+      575,
+      626,
+      840,
+      774
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.27,
+     "bbox": [
+      1059,
+      483,
+      1453,
+      837
+     ]
+    },
+    {
+     "prompt": "steel ruler",
+     "conf": 0.499,
+     "bbox": [
+      292,
+      783,
+      1246,
+      975
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.374,
+     "bbox": [
+      150,
+      950,
+      645,
+      1137
+     ]
+    },
+    {
+     "prompt": "hexagonal grid",
+     "conf": 0.283,
+     "bbox": [
+      980,
+      977,
+      1254,
+      1159
+     ]
+    },
+    {
+     "prompt": "hexagonal grid",
+     "conf": 0.236,
+     "bbox": [
+      999,
+      1061,
+      1251,
+      1232
+     ]
+    },
+    {
+     "prompt": "hexagonal grid",
+     "conf": 0.296,
+     "bbox": [
+      960,
+      1048,
+      1225,
+      1309
+     ]
+    },
+    {
+     "prompt": "metal frame",
+     "conf": 0.545,
+     "bbox": [
+      306,
+      1261,
+      1262,
+      1624
+     ]
+    },
+    {
+     "prompt": "3D printer",
+     "conf": 0.41,
+     "bbox": [
+      315,
+      1258,
+      1303,
+      2212
+     ]
+    },
+    {
+     "prompt": "orange 3D printed shelf rack",
+     "conf": 0.288,
+     "bbox": [
+      331,
+      1593,
+      1279,
+      2212
+     ]
+    },
+    {
+     "prompt": "hexagonal grid",
+     "conf": 0.22,
+     "bbox": [
+      428,
+      1716,
+      666,
+      1932
+     ]
+    },
+    {
+     "prompt": "metal frame",
+     "conf": 0.223,
+     "bbox": [
+      566,
+      1724,
+      812,
+      2088
+     ]
+    },
+    {
+     "prompt": "metal frame",
+     "conf": 0.203,
+     "bbox": [
+      901,
+      1752,
+      1141,
+      2071
+     ]
+    }
+   ]
+  },
+  {
+   "photo_id": "labware_angle",
+   "published_sha256": "aa4e721ad06be52de4988d04612fb5e35646924c9fae743382a1465c1c1aa40c",
+   "frame_root": "7e5d92fef1520e9898195c4cb6804104471d0eecf8637b587de6f10f7cde3d60",
+   "pixel_root": "e4391c3ce2aaa6f9e214b1f302fa0a99b19cfa8ae39bd6dd69f2169b6f875cf3",
+   "objects_root": "f9e465de3e15b2e9f32853dd3fcb5b775a34f5cae8433c8dfaf974b0663acdbb",
+   "boxes": [
+    {
+     "prompt": "plastic box",
+     "conf": 0.248,
+     "bbox": [
+      658,
+      0,
+      874,
+      69
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.316,
+     "bbox": [
+      487,
+      0,
+      1562,
+      174
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.266,
+     "bbox": [
+      491,
+      2,
+      1566,
+      398
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.235,
+     "bbox": [
+      876,
+      71,
+      1193,
+      155
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.26,
+     "bbox": [
+      587,
+      0,
+      1504,
+      171
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.378,
+     "bbox": [
+      52,
+      0,
+      482,
+      288
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.404,
+     "bbox": [
+      457,
+      124,
+      846,
+      397
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.441,
+     "bbox": [
+      812,
+      147,
+      1257,
+      393
+     ]
+    },
+    {
+     "prompt": "pipette tip box",
+     "conf": 0.235,
+     "bbox": [
+      974,
+      189,
+      1117,
+      244
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.344,
+     "bbox": [
+      1248,
+      136,
+      1879,
+      319
+     ]
+    },
+    {
+     "prompt": "pipette tip box",
+     "conf": 0.226,
+     "bbox": [
+      857,
+      302,
+      1194,
+      383
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.204,
+     "bbox": [
+      2,
+      268,
+      329,
+      569
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.467,
+     "bbox": [
+      9,
+      233,
+      652,
+      773
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.212,
+     "bbox": [
+      964,
+      335,
+      1384,
+      485
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.398,
+     "bbox": [
+      962,
+      336,
+      1389,
+      569
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.317,
+     "bbox": [
+      577,
+      382,
+      958,
+      631
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.514,
+     "bbox": [
+      1416,
+      301,
+      1929,
+      694
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.277,
+     "bbox": [
+      4,
+      230,
+      665,
+      1290
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.416,
+     "bbox": [
+      243,
+      227,
+      654,
+      754
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.222,
+     "bbox": [
+      2,
+      446,
+      362,
+      889
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.353,
+     "bbox": [
+      0,
+      287,
+      384,
+      859
+     ]
+    },
+    {
+     "prompt": "pipette tip box",
+     "conf": 0.47,
+     "bbox": [
+      635,
+      580,
+      1146,
+      790
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.509,
+     "bbox": [
+      843,
+      722,
+      1480,
+      1417
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.355,
+     "bbox": [
+      267,
+      748,
+      792,
+      1280
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.614,
+     "bbox": [
+      1343,
+      655,
+      2134,
+      1356
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.416,
+     "bbox": [
+      3,
+      677,
+      430,
+      1290
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.209,
+     "bbox": [
+      856,
+      637,
+      2123,
+      1405
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.241,
+     "bbox": [
+      0,
+      8,
+      2109,
+      1393
+     ]
+    }
+   ]
+  },
+  {
+   "photo_id": "racks_closeup_ruler",
+   "published_sha256": "d6db1ce5191c037c3e2521b48e33431eaa060963833775c0536c4736a8b7ef3a",
+   "frame_root": "e0bb5c5122483fbc41c5c00e37121ea3d178cae5a30cc03e1ff38232b0f5fffd",
+   "pixel_root": "99df07413bb3852ae0920631487318910a449c2c3e85ee4bc570f9c66224409b",
+   "objects_root": "f7feb1ed9bd20b249d379c3fbf2e68687513be8f38f52b9b5bff58f432db3524",
+   "boxes": [
+    {
+     "prompt": "plastic box",
+     "conf": 0.253,
+     "bbox": [
+      1734,
+      2,
+      2045,
+      418
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.379,
+     "bbox": [
+      1731,
+      3,
+      2212,
+      427
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.418,
+     "bbox": [
+      789,
+      134,
+      1354,
+      581
+     ]
+    },
+    {
+     "prompt": "tube rack",
+     "conf": 0.366,
+     "bbox": [
+      1319,
+      2,
+      1793,
+      563
+     ]
+    },
+    {
+     "prompt": "pipette tip box",
+     "conf": 0.273,
+     "bbox": [
+      1858,
+      433,
+      2212,
+      513
+     ]
+    },
+    {
+     "prompt": "breadboard",
+     "conf": 0.265,
+     "bbox": [
+      0,
+      0,
+      2168,
+      1615
+     ]
+    },
+    {
+     "prompt": "steel ruler",
+     "conf": 0.561,
+     "bbox": [
+      169,
+      548,
+      2212,
+      901
+     ]
+    },
+    {
+     "prompt": "pipette tip box",
+     "conf": 0.228,
+     "bbox": [
+      1105,
+      830,
+      1198,
+      907
+     ]
+    },
+    {
+     "prompt": "pipette tip box",
+     "conf": 0.422,
+     "bbox": [
+      1177,
+      813,
+      1451,
+      969
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.388,
+     "bbox": [
+      1075,
+      773,
+      1812,
+      1594
+     ]
+    },
+    {
+     "prompt": "steel ruler",
+     "conf": 0.203,
+     "bbox": [
+      1679,
+      843,
+      1770,
+      1394
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.492,
+     "bbox": [
+      1753,
+      733,
+      2212,
+      1563
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.364,
+     "bbox": [
+      74,
+      913,
+      1005,
+      1280
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.547,
+     "bbox": [
+      6,
+      909,
+      1034,
+      1648
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.264,
+     "bbox": [
+      0,
+      1179,
+      1007,
+      1649
+     ]
+    },
+    {
+     "prompt": "pipette tip box",
+     "conf": 0.262,
+     "bbox": [
+      1056,
+      1271,
+      1157,
+      1379
+     ]
+    },
+    {
+     "prompt": "conical tube",
+     "conf": 0.429,
+     "bbox": [
+      1284,
+      1372,
+      1579,
+      1486
+     ]
+    },
+    {
+     "prompt": "pipette tip box",
+     "conf": 0.258,
+     "bbox": [
+      1271,
+      1446,
+      1361,
+      1527
+     ]
+    },
+    {
+     "prompt": "cryovial",
+     "conf": 0.216,
+     "bbox": [
+      1256,
+      1369,
+      1565,
+      1528
+     ]
+    }
+   ]
+  },
+  {
+   "photo_id": "labware_overview_2",
+   "published_sha256": "bde66bf80a02dd2b4559008545124e9996a49ca48154720a61862c76255590f2",
+   "frame_root": "d475aff99eab26a099fcdcb3ac0606b0389399551621f7cf850bc19cef8959f7",
+   "pixel_root": "261aaa0196dc1fcbfd9038b90ae38392946b1fd7e1c208faaf0baebfcc82c90b",
+   "objects_root": "849550d8a97f1421e319ad0e423321c1d2cb08bbcda6208c625bd685fd230161",
+   "boxes": [
+    {
+     "prompt": "printed tray frame",
+     "conf": 0.251,
+     "bbox": [
+      653,
+      507,
+      1261,
+      950
+     ]
+    },
+    {
+     "prompt": "hexagonal grid",
+     "conf": 0.266,
+     "bbox": [
+      769,
+      749,
+      1328,
+      1133
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.673,
+     "bbox": [
+      24,
+      126,
+      1649,
+      2210
+     ]
+    },
+    {
+     "prompt": "hexagonal grid",
+     "conf": 0.205,
+     "bbox": [
+      357,
+      591,
+      790,
+      1126
+     ]
+    },
+    {
+     "prompt": "printed tray frame",
+     "conf": 0.338,
+     "bbox": [
+      610,
+      1150,
+      1260,
+      1620
+     ]
+    },
+    {
+     "prompt": "hexagonal grid",
+     "conf": 0.208,
+     "bbox": [
+      133,
+      1432,
+      321,
+      1857
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.265,
+     "bbox": [
+      371,
+      1435,
+      985,
+      1899
+     ]
+    }
+   ]
+  },
+  {
+   "photo_id": "biokea_frames_tub",
+   "published_sha256": "8355782a460fcf2dcf8334749c3c4edf466efcaeecd8bf6be5e381491b5a4baf",
+   "frame_root": "05a29ba4e92ca22142ce0d75df2c11ba5037f973c3b8f974d0fd5630a87f2462",
+   "pixel_root": "39aafc75eabef658db721194e872a136bcc8bb3289807d466092d33c17561240",
+   "objects_root": "54ebd90c5500245157c59faa7e0a7965208e3b544ad3538afd050d694433324d",
+   "boxes": [
+    {
+     "prompt": "plastic box",
+     "conf": 0.351,
+     "bbox": [
+      3,
+      0,
+      139,
+      480
+     ]
+    },
+    {
+     "prompt": "steel ruler",
+     "conf": 0.313,
+     "bbox": [
+      412,
+      349,
+      814,
+      531
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.367,
+     "bbox": [
+      0,
+      551,
+      479,
+      893
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.418,
+     "bbox": [
+      593,
+      529,
+      975,
+      808
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.292,
+     "bbox": [
+      1044,
+      517,
+      1464,
+      774
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.404,
+     "bbox": [
+      571,
+      535,
+      1004,
+      1092
+     ]
+    },
+    {
+     "prompt": "metal frame",
+     "conf": 0.255,
+     "bbox": [
+      1382,
+      747,
+      1659,
+      1107
+     ]
+    },
+    {
+     "prompt": "tube rack",
+     "conf": 0.237,
+     "bbox": [
+      1105,
+      731,
+      1659,
+      1186
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.389,
+     "bbox": [
+      60,
+      784,
+      549,
+      1115
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.35,
+     "bbox": [
+      1104,
+      793,
+      1424,
+      1133
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.52,
+     "bbox": [
+      1,
+      552,
+      553,
+      1124
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.422,
+     "bbox": [
+      579,
+      772,
+      1010,
+      1100
+     ]
+    },
+    {
+     "prompt": "steel ruler",
+     "conf": 0.209,
+     "bbox": [
+      982,
+      823,
+      1085,
+      1167
+     ]
+    },
+    {
+     "prompt": "metal frame",
+     "conf": 0.279,
+     "bbox": [
+      1379,
+      813,
+      1659,
+      1511
+     ]
+    },
+    {
+     "prompt": "steel ruler",
+     "conf": 0.348,
+     "bbox": [
+      970,
+      796,
+      1116,
+      1420
+     ]
+    },
+    {
+     "prompt": "hexagonal grid",
+     "conf": 0.317,
+     "bbox": [
+      723,
+      1089,
+      1020,
+      1278
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.343,
+     "bbox": [
+      1136,
+      1155,
+      1481,
+      1540
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.304,
+     "bbox": [
+      91,
+      1066,
+      566,
+      1400
+     ]
+    },
+    {
+     "prompt": "pipette tip box",
+     "conf": 0.434,
+     "bbox": [
+      554,
+      1174,
+      714,
+      1561
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.395,
+     "bbox": [
+      832,
+      1330,
+      1078,
+      1700
+     ]
+    },
+    {
+     "prompt": "steel ruler",
+     "conf": 0.388,
+     "bbox": [
+      1390,
+      1085,
+      1659,
+      1812
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.359,
+     "bbox": [
+      16,
+      1396,
+      560,
+      1877
+     ]
+    },
+    {
+     "prompt": "steel ruler",
+     "conf": 0.439,
+     "bbox": [
+      1109,
+      1523,
+      1234,
+      2017
+     ]
+    },
+    {
+     "prompt": "steel ruler",
+     "conf": 0.213,
+     "bbox": [
+      1118,
+      1077,
+      1659,
+      1811
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.272,
+     "bbox": [
+      1227,
+      1497,
+      1550,
+      2150
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.301,
+     "bbox": [
+      691,
+      1714,
+      1120,
+      2177
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.396,
+     "bbox": [
+      12,
+      1378,
+      642,
+      2208
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.423,
+     "bbox": [
+      81,
+      1720,
+      642,
+      2212
+     ]
+    }
+   ]
+  },
+  {
+   "photo_id": "racks_diagonal_ruler",
+   "published_sha256": "3127b5d1e9772bd951139ef6031d8371cd684f34a83cfe42b3bb6ec567df6b37",
+   "frame_root": "7504cb8957f8cba665ebedb3e1470fcc3fcc2b7058d09bbf7ced1eb0c9d9df39",
+   "pixel_root": "9e316f026c56991f66daefb0c0a2a9905e2f290b0b84d3557f31cfaac66055cb",
+   "objects_root": "56378d456e69a11f9fa60a68c489330ef52d9ef1cc340f718029be7ddb0ade15",
+   "boxes": [
+    {
+     "prompt": "pipette tip box",
+     "conf": 0.264,
+     "bbox": [
+      1204,
+      1,
+      1384,
+      160
+     ]
+    },
+    {
+     "prompt": "pipette tip box",
+     "conf": 0.285,
+     "bbox": [
+      936,
+      4,
+      1382,
+      252
+     ]
+    },
+    {
+     "prompt": "pipette tip box",
+     "conf": 0.355,
+     "bbox": [
+      1232,
+      48,
+      1541,
+      254
+     ]
+    },
+    {
+     "prompt": "tube rack",
+     "conf": 0.363,
+     "bbox": [
+      490,
+      1,
+      1123,
+      543
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.373,
+     "bbox": [
+      124,
+      312,
+      790,
+      951
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.534,
+     "bbox": [
+      1347,
+      114,
+      2155,
+      999
+     ]
+    },
+    {
+     "prompt": "breadboard",
+     "conf": 0.266,
+     "bbox": [
+      0,
+      0,
+      2185,
+      1659
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.355,
+     "bbox": [
+      0,
+      779,
+      259,
+      1348
+     ]
+    },
+    {
+     "prompt": "pipette tip box",
+     "conf": 0.216,
+     "bbox": [
+      871,
+      926,
+      972,
+      1028
+     ]
+    },
+    {
+     "prompt": "steel ruler",
+     "conf": 0.601,
+     "bbox": [
+      14,
+      2,
+      1683,
+      1659
+     ]
+    },
+    {
+     "prompt": "pipette tip box",
+     "conf": 0.476,
+     "bbox": [
+      1208,
+      925,
+      1393,
+      1151
+     ]
+    },
+    {
+     "prompt": "steel ruler",
+     "conf": 0.432,
+     "bbox": [
+      1330,
+      601,
+      2212,
+      1659
+     ]
+    },
+    {
+     "prompt": "pipette tip box",
+     "conf": 0.305,
+     "bbox": [
+      1307,
+      1107,
+      1547,
+      1332
+     ]
+    },
+    {
+     "prompt": "steel ruler",
+     "conf": 0.293,
+     "bbox": [
+      1443,
+      625,
+      2212,
+      1659
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.25,
+     "bbox": [
+      819,
+      570,
+      1702,
+      1572
+     ]
+    },
+    {
+     "prompt": "cryovial",
+     "conf": 0.414,
+     "bbox": [
+      1167,
+      1105,
+      1548,
+      1507
+     ]
+    },
+    {
+     "prompt": "pipette tip box",
+     "conf": 0.213,
+     "bbox": [
+      1111,
+      1328,
+      1208,
+      1413
+     ]
+    },
+    {
+     "prompt": "pipette tip box",
+     "conf": 0.311,
+     "bbox": [
+      1169,
+      1308,
+      1367,
+      1504
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.372,
+     "bbox": [
+      375,
+      1209,
+      1106,
+      1659
+     ]
+    }
+   ]
+  },
+  {
+   "photo_id": "labware_overview_3",
+   "published_sha256": "b462d854a0259a334f0b834d783752505f7de5491c392cec90ff2e24a7e6024b",
+   "frame_root": "3645a0b6c30670a73ccd21e5656bc4649587aabef01408fc8e0fc4d582ef10fe",
+   "pixel_root": "cf670fd108f81b45435af0e8391eaac4af53458eaa57eb14e411ced4a145f4cf",
+   "objects_root": "04b8a4d19bfb1792bc52581e309799020883c7f3f9ffcf7a4c2be5a1399de22e",
+   "boxes": [
+    {
+     "prompt": "plastic box",
+     "conf": 0.386,
+     "bbox": [
+      705,
+      2,
+      923,
+      298
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.304,
+     "bbox": [
+      1314,
+      65,
+      1512,
+      373
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.291,
+     "bbox": [
+      1545,
+      0,
+      1659,
+      199
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.442,
+     "bbox": [
+      499,
+      0,
+      730,
+      300
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.403,
+     "bbox": [
+      1148,
+      56,
+      1512,
+      380
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.232,
+     "bbox": [
+      497,
+      2,
+      934,
+      306
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.296,
+     "bbox": [
+      963,
+      73,
+      1150,
+      364
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.343,
+     "bbox": [
+      1117,
+      376,
+      1366,
+      727
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.311,
+     "bbox": [
+      1330,
+      408,
+      1533,
+      719
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.384,
+     "bbox": [
+      659,
+      536,
+      911,
+      685
+     ]
+    },
+    {
+     "prompt": "hexagonal grid",
+     "conf": 0.328,
+     "bbox": [
+      911,
+      452,
+      1118,
+      744
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.333,
+     "bbox": [
+      417,
+      330,
+      629,
+      640
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.248,
+     "bbox": [
+      1095,
+      379,
+      1523,
+      735
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.276,
+     "bbox": [
+      1548,
+      416,
+      1659,
+      745
+     ]
+    },
+    {
+     "prompt": "steel ruler",
+     "conf": 0.478,
+     "bbox": [
+      387,
+      697,
+      1319,
+      896
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.371,
+     "bbox": [
+      229,
+      805,
+      713,
+      1039
+     ]
+    },
+    {
+     "prompt": "microplate",
+     "conf": 0.393,
+     "bbox": [
+      1043,
+      869,
+      1336,
+      1144
+     ]
+    },
+    {
+     "prompt": "metal frame",
+     "conf": 0.646,
+     "bbox": [
+      405,
+      1155,
+      1343,
+      1470
+     ]
+    },
+    {
+     "prompt": "plastic tub",
+     "conf": 0.636,
+     "bbox": [
+      416,
+      1490,
+      1352,
+      2209
+     ]
+    },
+    {
+     "prompt": "vortex mixer",
+     "conf": 0.25,
+     "bbox": [
+      579,
+      1620,
+      914,
+      1897
+     ]
+    }
+   ]
+  },
+  {
+   "photo_id": "greiner_cryos_bag",
+   "published_sha256": "42edba7c1ed8181044941d6247eb2ca181ae2c4e2b4ef341d968b3fdfe8840a6",
+   "frame_root": "222ed4a7cf4f002456d29d99ef010c059b93d51de8a2b931da9928599beaa730",
+   "pixel_root": "2b5480482093381430429c9784218678b67f0338f22dea5f8c3d56f28ef51c14",
+   "objects_root": "8cd8bc90666596b887d71f3ea2fe7f3de67ae6900d347875ebe788c47b22a1ca",
+   "boxes": [
+    {
+     "prompt": "plastic box",
+     "conf": 0.525,
+     "bbox": [
+      0,
+      3,
+      229,
+      665
+     ]
+    },
+    {
+     "prompt": "cryovial",
+     "conf": 0.338,
+     "bbox": [
+      372,
+      196,
+      1134,
+      1422
+     ]
+    },
+    {
+     "prompt": "pipette tip box",
+     "conf": 0.249,
+     "bbox": [
+      1021,
+      870,
+      1173,
+      1163
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.226,
+     "bbox": [
+      476,
+      0,
+      2189,
+      1591
+     ]
+    },
+    {
+     "prompt": "pipette tip box",
+     "conf": 0.242,
+     "bbox": [
+      1963,
+      955,
+      2151,
+      1259
+     ]
+    },
+    {
+     "prompt": "pipette tip box",
+     "conf": 0.314,
+     "bbox": [
+      685,
+      1444,
+      1152,
+      1659
+     ]
+    },
+    {
+     "prompt": "plastic box",
+     "conf": 0.225,
+     "bbox": [
+      0,
+      0,
+      2138,
+      1656
+     ]
+    }
+   ]
+  }
+ ]
+}

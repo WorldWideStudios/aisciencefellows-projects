@@ -1,0 +1,80 @@
+{
+ "params": {
+  "skirt_engage": 8.0,
+  "flat_adapter_h": 12.0,
+  "skirt_h": 8.0,
+  "plate_t": 4.0,
+  "drum_od": 36.0,
+  "drum_len": 90.0,
+  "zones": [
+   1.5,
+   3.0,
+   5.0
+  ],
+  "axle_d": 3.0,
+  "n20": [
+   12.2,
+   10.2,
+   24.0
+  ],
+  "axis_z": 37.0,
+  "well_depth": 14.0,
+  "tag": 14.0,
+  "pad_d": 20.0,
+  "grip_h": 8.0
+ },
+ "sbs_mm": [
+  127.76,
+  85.48
+ ],
+ "parts": [
+  {
+   "part": "ot_sieve_adapter",
+   "stl": "stl/ot_sieve_adapter.stl",
+   "sha256": "e106a865349ddb0efed2fc908e7b80f116c6d8958ed7233c3be75f14cff371df",
+   "watertight": true,
+   "bbox_mm": [
+    127.76,
+    85.48,
+    18.0
+   ],
+   "volume_cm3": 102.33
+  },
+  {
+   "part": "ot_mini_trommel_base",
+   "stl": "stl/ot_mini_trommel_base.stl",
+   "sha256": "646029a31a25b3576adca0c58dc919c69f93382d287d10db45fcef57baf9ccf7",
+   "watertight": true,
+   "bbox_mm": [
+    127.76,
+    85.48,
+    45.1
+   ],
+   "volume_cm3": 113.79
+  },
+  {
+   "part": "ot_mini_trommel_drum",
+   "stl": "stl/ot_mini_trommel_drum.stl",
+   "sha256": "e7df82352cbb5451c96c7ef0a6b44e29547297de2b6ca396e406f113c895cfc2",
+   "watertight": true,
+   "bbox_mm": [
+    36.0,
+    36.0,
+    104.0
+   ],
+   "volume_cm3": 12.16
+  },
+  {
+   "part": "ot_handoff_plate",
+   "stl": "stl/ot_handoff_plate.stl",
+   "sha256": "643cce3b18dbbf11b343047bf115e7c72fbf09a369d95415025ae1caab143b47",
+   "watertight": true,
+   "bbox_mm": [
+    127.76,
+    85.48,
+    34.0
+   ],
+   "volume_cm3": 50.04
+  }
+ ]
+}

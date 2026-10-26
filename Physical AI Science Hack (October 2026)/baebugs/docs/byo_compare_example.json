@@ -1,0 +1,80 @@
+{
+ "type": "baebugs-compare",
+ "claude": "93f50060d21e9294da2657f6662f7a2e6226c905b945c4beb41c090aced65e42",
+ "byo": "cdbe15aaad07e67f162cc6977670fa8a59304b3202bbad7b39b2cc928d5b1000",
+ "identical": false,
+ "break_points": [
+  "lab-parts"
+ ],
+ "modules": {
+  "custody-ledgers": {
+   "verdict": "SAME",
+   "root": "8f48e4f879b13375979db2f4aa0325b924dcd0e5b0e35cb0a8f36a8934b14acd"
+  },
+  "daisy-protocols": {
+   "verdict": "SAME",
+   "root": "401e52c7913d2c364ed14e3c4f13694a3ed0bbc670b50b718e57ad49ae55a313"
+  },
+  "daisy-results": {
+   "verdict": "SAME",
+   "root": "72b5fef9fe0e5078506220a89e6831cecdd6ba49b6aa5c3a4f03629e54130bd9"
+  },
+  "dashboards": {
+   "verdict": "SAME",
+   "root": "350619827ff691f4bdc86e8e3859c171ddbe4822d4a12f6cd918b1b29cff95f2"
+  },
+  "docs": {
+   "verdict": "SAME",
+   "root": "b36b5f07dd87945b029815485f311b47030ba602e89eb725b07b986d8dc83d60"
+  },
+  "kaggle-kernels": {
+   "verdict": "SAME",
+   "root": "ff1a3e54c36a7e6e7a6439cfeef410da81e3093be6b2f650eb4a4bb65fd72868"
+  },
+  "knowledge-graph": {
+   "verdict": "SAME",
+   "root": "f76004ad5e8e07ed1ebebbc89f62923c978738238700f7e2bd420d5e7e09d9a2"
+  },
+  "lab-parts": {
+   "verdict": "BREAK",
+   "root_claude": "a974e369a4d04726a4c9c501332d27f33a0c4598c977ac3985fb1e0589ee3430",
+   "root_byo": "05facd1a8555bc8441e3f97ef62bdf40b42a3f51b722aeadad7c0106da5edc29",
+   "MATCH": 105,
+   "DIFFERS": [
+    "print/parts/stl/arm_grip_handle.stl"
+   ],
+   "ONLY_claude": [],
+   "ONLY_byo": [
+    "print/parts/stl/byo_flat_tray.stl"
+   ]
+  },
+  "mvp-site": {
+   "verdict": "SAME",
+   "root": "e9559d478120870e80b787617cb88faf7cb1096f4d2aa0a0a2873d8b166a0dc5"
+  },
+  "notebooks": {
+   "verdict": "SAME",
+   "root": "a20c483ea79c65619f309898b225355d1615c80547d3174840bdcf8c9d2e4818"
+  },
+  "opentrons-modules": {
+   "verdict": "SAME",
+   "root": "40b680b50dba87eb664d7c79f7aaa9d33c5beefb72b3ab785b2f7afb478afbaf"
+  },
+  "python-package": {
+   "verdict": "SAME",
+   "root": "4a774dbb5b871f28b714464a1b6b3bf1ebd4a4fcbeda665a6f45a091d27dddbb"
+  },
+  "repo-meta": {
+   "verdict": "SAME",
+   "root": "4581a5c08f5c8ca985ed3f8d96edd176dd33b4163ab051aba86348d747cd2344"
+  },
+  "tests": {
+   "verdict": "SAME",
+   "root": "e1bcd696a8ee9d092ca8e41d051a2fe932f77e0bb4a1bc29dbe308e33ae9c360"
+  },
+  "toy-insects": {
+   "verdict": "SAME",
+   "root": "6f32a71b22cae43e69bd089d7dfd79588bf41bc88f31e724ec664e0121020a08"
+  }
+ }
+}

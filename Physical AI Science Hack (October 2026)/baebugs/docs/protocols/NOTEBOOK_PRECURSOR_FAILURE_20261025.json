@@ -1,0 +1,10 @@
+{
+  "schema": "baebugs.protocol_notebook_failure.v1",
+  "source_status": "FAILED",
+  "notebook_precursor_sha256": "3d0f4ec0b28116449329bf7a62c8b76cdf10d83bc01be424977e93b62619f94b",
+  "observed_error": "Initial Jupyter execution started in notebooks/ and asserted repository root; no source data was changed.",
+  "tool_behavior": "CLI stderr piped through tail without pipefail masked the failure in the shell status; error was observed in output.",
+  "correction": "Resolve repository root from notebook cwd, require pipefail and check actual nbconvert exit code.",
+  "next_notebook_execution": "NOT_TESTED_AT_THIS_RECEIPT",
+  "source_hash_conveys_identity_only": true
+}

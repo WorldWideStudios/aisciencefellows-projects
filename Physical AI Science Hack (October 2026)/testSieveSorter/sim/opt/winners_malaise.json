@@ -1,0 +1,541 @@
+{
+ "study": "malaise",
+ "exploratory": true,
+ "note": "EXPLORATORY: the sim ranks designs; it isn't calibrated against bench counts. The clump is the grain surrogate (insect clumps don't pack yet); bond strengths and the 5 mN damage line are assumed. Winners are verified on fresh clumps, ranked by winner_score = min(robust seed 0, robust over all seeds).",
+ "updated": "2026-10-25 13:29",
+ "clump": {
+  "kinds": {
+   "rice": 30,
+   "quinoa": 20,
+   "pasta": 4,
+   "leaf": 1,
+   "twig": 2,
+   "dirt": 6
+  }
+ },
+ "tower": {
+  "under": "5mm+2mm",
+  "pitch_mm": 85.0
+ },
+ "winners": [
+  {
+   "id": "B-164f355a",
+   "winner_score": 0.6298,
+   "robust": 0.6717,
+   "mean": 0.7477,
+   "design": "grid 11.3 mm (bars 1.6), pins 3.1 x 8 mm round every 12.9 mm; seesaw +/-7 deg, 1.1 s + 0.35 mm buzz at 40 Hz",
+   "cad": {
+    "file": "cad/breaker_layer.py",
+    "spec": "breaker:open=11.3,bar=1.6,pin_d=3.1,pin_h=8,pitch=8.5,tip=round",
+    "facts": {
+     "cad_file": "cad/breaker_layer.py",
+     "grid_top_z_mm": 260.4,
+     "pin_top_z_mm": 268.4,
+     "grid_step_mm": 12.9,
+     "openings": [
+      9,
+      6
+     ],
+     "pins": 40,
+     "pin_every_nodes": 1,
+     "pin_pitch_mm": 12.9,
+     "open_area_mm2": 6895.3
+    }
+   },
+   "sim_spec": "breaker:open=11.3,bar=1.6,pin_d=3.1,pin_h=8,pitch=8.5,tip=round,under=5mm+2mm,tower=85",
+   "stroke": {
+    "profile": "seesaw",
+    "deg": 7.0,
+    "period_s": 1.1,
+    "shape": "constant_speed",
+    "vib_mm": 0.35,
+    "vib_hz": 40.0
+   },
+   "params": {
+    "open": 11.3,
+    "bar": 1.6,
+    "pin_d": 3.1,
+    "pin_h": 8.0,
+    "pitch": 8.5,
+    "tip": "round",
+    "ss_deg": 7.0,
+    "ss_period": 1.1,
+    "vib_mm": 0.35
+   },
+   "metrics": {
+    "free": 0.9876666666666667,
+    "break": 0.958525,
+    "gentle": 0.26530104554191264,
+    "sort": 0.9444444444444445,
+    "largest": 1.3333333333333333,
+    "p90_mN": 341.51246666666674,
+    "over": 1.0
+   },
+   "by_bond": {
+    "weak": {
+     "score": 0.846361810838782,
+     "break": 0.99653125,
+     "free": 1.0,
+     "gentle": 0.5183329651416191,
+     "sort": 0.9629814814814815,
+     "t50": 0.0297,
+     "t90": 0.0555,
+     "largest": 1,
+     "p90_mN": 253.1851,
+     "over": 1.0,
+     "bonded_over": 0.1111,
+     "blind": {
+      "on_breaker": 0.0,
+      "on_5mm": 0.0067,
+      "on_2mm": 0.0
+     },
+     "debris": {
+      "leaf": {
+       "on_5mm": 1
+      },
+      "twig": {
+       "on_breaker": 1,
+       "on_2mm": 1
+      },
+      "dirt": {
+       "catch": 5,
+       "lost": 1
+      }
+     },
+     "lost": 2,
+     "between": 0,
+     "wall": 56.67
+    },
+    "medium": {
+     "score": 0.7355685440482727,
+     "break": 0.9864375,
+     "free": 1.0,
+     "gentle": 0.17821536287695855,
+     "sort": 0.944425925925926,
+     "t50": 0.055,
+     "t90": 0.217,
+     "largest": 1,
+     "p90_mN": 489.6757,
+     "over": 1.0,
+     "bonded_over": 0.6481,
+     "blind": {
+      "on_breaker": 0.0,
+      "on_5mm": 0.0267,
+      "on_2mm": 0.0
+     },
+     "debris": {
+      "leaf": {
+       "on_5mm": 1
+      },
+      "twig": {
+       "on_breaker": 1,
+       "on_2mm": 1
+      },
+      "dirt": {
+       "catch": 6
+      }
+     },
+     "lost": 1,
+     "between": 0,
+     "wall": 55.31
+    },
+    "strong": {
+     "score": 0.6612947527673333,
+     "break": 0.8926062499999999,
+     "free": 0.963,
+     "gentle": 0.0993548086071604,
+     "sort": 0.9259259259259259,
+     "t50": 0.1992,
+     "t90": 1.2743,
+     "largest": 2,
+     "p90_mN": 281.6766,
+     "over": 1.0,
+     "bonded_over": 0.9259,
+     "blind": {
+      "on_breaker": 0.0,
+      "on_5mm": 0.02,
+      "on_2mm": 0.0
+     },
+     "debris": {
+      "leaf": {
+       "on_5mm": 1
+      },
+      "twig": {
+       "on_breaker": 2
+      },
+      "dirt": {
+       "catch": 6
+      }
+     },
+     "lost": 1,
+     "between": 2,
+     "wall": 57.54
+    }
+   },
+   "verify": {
+    "seeds": [
+     1,
+     2
+    ],
+    "robust": 0.6121763518942488,
+    "robust_all_seeds": 0.6298243896523493,
+    "free": 0.9351999999999999,
+    "fails": 0,
+    "by_seed_bond": {
+     "1/weak": 0.843,
+     "1/medium": 0.773,
+     "1/strong": 0.542,
+     "2/weak": 0.845,
+     "2/medium": 0.782,
+     "2/strong": 0.597
+    }
+   }
+  },
+  {
+   "id": "B-87f42099",
+   "winner_score": 0.6052,
+   "robust": 0.6827,
+   "mean": 0.7558,
+   "design": "grid 8.9 mm (bars 1.2), pins 2 x 7.6 mm flat every 10.1 mm; seesaw +/-8 deg, 3.5 s + 0.35 mm buzz at 40 Hz",
+   "cad": {
+    "file": "cad/breaker_layer.py",
+    "spec": "breaker:open=8.9,bar=1.2,pin_d=2,pin_h=7.6,pitch=11.8,tip=flat",
+    "facts": {
+     "cad_file": "cad/breaker_layer.py",
+     "grid_top_z_mm": 260.4,
+     "pin_top_z_mm": 268.0,
+     "grid_step_mm": 10.1,
+     "openings": [
+      11,
+      8
+     ],
+     "pins": 70,
+     "pin_every_nodes": 1,
+     "pin_pitch_mm": 10.1,
+     "open_area_mm2": 6970.5
+    }
+   },
+   "sim_spec": "breaker:open=8.9,bar=1.2,pin_d=2,pin_h=7.6,pitch=11.8,tip=flat,under=5mm+2mm,tower=85",
+   "stroke": {
+    "profile": "seesaw",
+    "deg": 8.0,
+    "period_s": 3.5,
+    "shape": "constant_speed",
+    "vib_mm": 0.35,
+    "vib_hz": 40.0
+   },
+   "params": {
+    "open": 8.9,
+    "bar": 1.2,
+    "pin_d": 2.0,
+    "pin_h": 7.6,
+    "pitch": 11.8,
+    "tip": "flat",
+    "ss_deg": 8.0,
+    "ss_period": 3.5,
+    "vib_mm": 0.35
+   },
+   "metrics": {
+    "free": 1.0,
+    "break": 0.9672708333333334,
+    "gentle": 0.3063388457803731,
+    "sort": 0.9012283950617285,
+    "largest": 1.0,
+    "p90_mN": 274.78790000000004,
+    "over": 1.0
+   },
+   "by_bond": {
+    "weak": {
+     "score": 0.8312810466719925,
+     "break": 0.9966125,
+     "free": 1.0,
+     "gentle": 0.5173357419930616,
+     "sort": 0.8888703703703704,
+     "t50": 0.0222,
+     "t90": 0.0542,
+     "largest": 1,
+     "p90_mN": 234.6535,
+     "over": 1.0,
+     "bonded_over": 0.1296,
+     "blind": {
+      "on_breaker": 0.0,
+      "on_5mm": 0.0,
+      "on_2mm": 0.0
+     },
+     "debris": {
+      "leaf": {
+       "on_breaker": 1
+      },
+      "twig": {
+       "on_breaker": 1,
+       "on_5mm": 1
+      },
+      "dirt": {
+       "catch": 5,
+       "on_5mm": 1
+      }
+     },
+     "lost": 1,
+     "between": 1,
+     "wall": 53.25
+    },
+    "medium": {
+     "score": 0.779079334013689,
+     "break": 0.99234375,
+     "free": 1.0,
+     "gentle": 0.32572856708266684,
+     "sort": 0.9259444444444446,
+     "t50": 0.0612,
+     "t90": 0.1225,
+     "largest": 1,
+     "p90_mN": 295.1588,
+     "over": 1.0,
+     "bonded_over": 0.463,
+     "blind": {
+      "on_breaker": 0.0,
+      "on_5mm": 0.0,
+      "on_2mm": 0.0
+     },
+     "debris": {
+      "leaf": {
+       "on_breaker": 1
+      },
+      "twig": {
+       "on_breaker": 1,
+       "on_5mm": 1
+      },
+      "dirt": {
+       "catch": 6
+      }
+     },
+     "lost": 0,
+     "between": 1,
+     "wall": 54.64
+    },
+    "strong": {
+     "score": 0.6569878675536913,
+     "break": 0.9128562499999999,
+     "free": 1.0,
+     "gentle": 0.07595222826539083,
+     "sort": 0.8888703703703704,
+     "t50": 0.4375,
+     "t90": 1.3943,
+     "largest": 1,
+     "p90_mN": 294.5514,
+     "over": 1.0,
+     "bonded_over": 0.963,
+     "blind": {
+      "on_breaker": 0.0,
+      "on_5mm": 0.0,
+      "on_2mm": 0.0
+     },
+     "debris": {
+      "leaf": {
+       "on_breaker": 1
+      },
+      "twig": {
+       "on_5mm": 2
+      },
+      "dirt": {
+       "catch": 6
+      }
+     },
+     "lost": 1,
+     "between": 0,
+     "wall": 61.64
+    }
+   },
+   "verify": {
+    "seeds": [
+     1,
+     2
+    ],
+    "robust": 0.5748992916191827,
+    "robust_all_seeds": 0.6051995605762039,
+    "free": 0.9444333333333333,
+    "fails": 0,
+    "by_seed_bond": {
+     "1/weak": 0.831,
+     "1/medium": 0.772,
+     "1/strong": 0.487,
+     "2/weak": 0.837,
+     "2/medium": 0.752,
+     "2/strong": 0.569
+    }
+   }
+  },
+  {
+   "id": "B-32a7c82c",
+   "winner_score": 0.5541,
+   "robust": 0.6375,
+   "mean": 0.7256,
+   "design": "grid 11.4 mm (bars 2.3), pins 1.4 x 6.8 mm round every 13.7 mm; seesaw +/-12 deg, 2.5 s + 0.35 mm buzz at 40 Hz",
+   "cad": {
+    "file": "cad/breaker_layer.py",
+    "spec": "breaker:open=11.4,bar=2.3,pin_d=1.4,pin_h=6.8,pitch=8,tip=round",
+    "facts": {
+     "cad_file": "cad/breaker_layer.py",
+     "grid_top_z_mm": 260.4,
+     "pin_top_z_mm": 267.2,
+     "grid_step_mm": 13.7,
+     "openings": [
+      8,
+      5
+     ],
+     "pins": 28,
+     "pin_every_nodes": 1,
+     "pin_pitch_mm": 13.7,
+     "open_area_mm2": 5198.4
+    }
+   },
+   "sim_spec": "breaker:open=11.4,bar=2.3,pin_d=1.4,pin_h=6.8,pitch=8,tip=round,under=5mm+2mm,tower=85",
+   "stroke": {
+    "profile": "seesaw",
+    "deg": 12.0,
+    "period_s": 2.5,
+    "shape": "constant_speed",
+    "vib_mm": 0.35,
+    "vib_hz": 40.0
+   },
+   "params": {
+    "open": 11.4,
+    "bar": 2.3,
+    "pin_d": 1.4,
+    "pin_h": 6.8,
+    "pitch": 8.0,
+    "tip": "round",
+    "ss_deg": 12.0,
+    "ss_period": 2.5,
+    "vib_mm": 0.35
+   },
+   "metrics": {
+    "free": 0.9691333333333333,
+    "break": 0.9368208333333333,
+    "gentle": 0.29346813738133365,
+    "sort": 0.8456790123456791,
+    "largest": 1.6666666666666667,
+    "p90_mN": 236.97706666666667,
+    "over": 1.0
+   },
+   "by_bond": {
+    "weak": {
+     "score": 0.836776477417819,
+     "break": 0.998375,
+     "free": 1.0,
+     "gentle": 0.5450496778124834,
+     "sort": 0.8703703703703703,
+     "t50": 0.024,
+     "t90": 0.026,
+     "largest": 1,
+     "p90_mN": 153.2397,
+     "over": 1.0,
+     "bonded_over": 0.1667,
+     "blind": {
+      "on_breaker": 0.0,
+      "on_5mm": 0.0267,
+      "on_2mm": 0.0
+     },
+     "debris": {
+      "leaf": {
+       "on_5mm": 1
+      },
+      "twig": {
+       "on_5mm": 2
+      },
+      "dirt": {
+       "catch": 6
+      }
+     },
+     "lost": 0,
+     "between": 2,
+     "wall": 56.5
+    },
+    "medium": {
+     "score": 0.7185136192525682,
+     "break": 0.989425,
+     "free": 1.0,
+     "gentle": 0.19043582960732597,
+     "sort": 0.8333518518518519,
+     "t50": 0.0477,
+     "t90": 0.1692,
+     "largest": 1,
+     "p90_mN": 401.6305,
+     "over": 1.0,
+     "bonded_over": 0.6667,
+     "blind": {
+      "on_breaker": 0.0,
+      "on_5mm": 0.0,
+      "on_2mm": 0.0
+     },
+     "debris": {
+      "leaf": {
+       "on_5mm": 1
+      },
+      "twig": {
+       "on_5mm": 1,
+       "on_2mm": 1
+      },
+      "dirt": {
+       "catch": 6
+      }
+     },
+     "lost": 2,
+     "between": 1,
+     "wall": 51.74
+    },
+    "strong": {
+     "score": 0.6214698843802204,
+     "break": 0.8226625,
+     "free": 0.9074,
+     "gentle": 0.1449189047241915,
+     "sort": 0.8333148148148148,
+     "t50": 0.4153,
+     "t90": 1.7262,
+     "largest": 3,
+     "p90_mN": 156.061,
+     "over": 1.0,
+     "bonded_over": 0.963,
+     "blind": {
+      "on_breaker": 0.025,
+      "on_5mm": 0.0,
+      "on_2mm": 0.0
+     },
+     "debris": {
+      "leaf": {
+       "on_breaker": 1
+      },
+      "twig": {
+       "on_breaker": 1,
+       "on_2mm": 1
+      },
+      "dirt": {
+       "catch": 5,
+       "on_2mm": 1
+      }
+     },
+     "lost": 1,
+     "between": 0,
+     "wall": 52.29
+    }
+   },
+   "verify": {
+    "seeds": [
+     1,
+     2
+    ],
+    "robust": 0.5211540625188332,
+    "robust_all_seeds": 0.5540994857671272,
+    "free": 0.9105,
+    "fails": 0,
+    "by_seed_bond": {
+     "1/weak": 0.836,
+     "1/medium": 0.804,
+     "1/strong": 0.406,
+     "2/weak": 0.813,
+     "2/medium": 0.745,
+     "2/strong": 0.515
+    }
+   }
+  }
+ ]
+}

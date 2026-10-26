@@ -1,0 +1,123 @@
+{
+  "ordering": [
+    [
+      "A1",
+      "B1"
+    ],
+    [
+      "A2",
+      "B2"
+    ],
+    [
+      "A3",
+      "B3"
+    ]
+  ],
+  "brand": {
+    "brand": "BaeBugs (printed)",
+    "brandId": [
+      "print-conical-50"
+    ]
+  },
+  "metadata": {
+    "displayName": "BaeBugs 6 rack, 50 mL conical (printed)",
+    "displayCategory": "tubeRack",
+    "displayVolumeUnits": "µL",
+    "tags": [
+      "baebugs",
+      "3d-printed",
+      "estimated-dims"
+    ]
+  },
+  "dimensions": {
+    "xDimension": 127.76,
+    "yDimension": 85.48,
+    "zDimension": 111.5
+  },
+  "wells": {
+    "A1": {
+      "depth": 110.0,
+      "totalLiquidVolume": 50000,
+      "shape": "circular",
+      "diameter": 29.5,
+      "x": 28.88,
+      "y": 60.24,
+      "z": 1.5
+    },
+    "B1": {
+      "depth": 110.0,
+      "totalLiquidVolume": 50000,
+      "shape": "circular",
+      "diameter": 29.5,
+      "x": 28.88,
+      "y": 25.24,
+      "z": 1.5
+    },
+    "A2": {
+      "depth": 110.0,
+      "totalLiquidVolume": 50000,
+      "shape": "circular",
+      "diameter": 29.5,
+      "x": 63.88,
+      "y": 60.24,
+      "z": 1.5
+    },
+    "B2": {
+      "depth": 110.0,
+      "totalLiquidVolume": 50000,
+      "shape": "circular",
+      "diameter": 29.5,
+      "x": 63.88,
+      "y": 25.24,
+      "z": 1.5
+    },
+    "A3": {
+      "depth": 110.0,
+      "totalLiquidVolume": 50000,
+      "shape": "circular",
+      "diameter": 29.5,
+      "x": 98.88,
+      "y": 60.24,
+      "z": 1.5
+    },
+    "B3": {
+      "depth": 110.0,
+      "totalLiquidVolume": 50000,
+      "shape": "circular",
+      "diameter": 29.5,
+      "x": 98.88,
+      "y": 25.24,
+      "z": 1.5
+    }
+  },
+  "groups": [
+    {
+      "metadata": {
+        "wellBottomShape": "v"
+      },
+      "wells": [
+        "A1",
+        "B1",
+        "A2",
+        "B2",
+        "A3",
+        "B3"
+      ]
+    }
+  ],
+  "parameters": {
+    "format": "irregular",
+    "quirks": [],
+    "isTiprack": false,
+    "isMagneticModuleCompatible": false,
+    "loadName": "baebugs_conical_50"
+  },
+  "namespace": "custom_beta",
+  "version": 1,
+  "schemaVersion": 2,
+  "cornerOffsetFromSlot": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  }
+}

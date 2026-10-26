@@ -1,0 +1,222 @@
+{
+ "protocol": "DAISY-BB-001b",
+ "protocol_sha256": "118a435405defef1d31780f943a128b0caec9e460c60ec73f671d93d187f85cf",
+ "custody": {
+  "essig": {
+   "files": 2,
+   "bad_files": 0,
+   "root": "9470d0a7190a82c0208d36fe36381d6cde79bca201d9d359feaefc14f188deb3",
+   "expected": "9470d0a7190a82c0208d36fe36381d6cde79bca201d9d359feaefc14f188deb3",
+   "ok": true
+  },
+  "gbif_manifests": {
+   "files": 5,
+   "bad_files": 0,
+   "root": "8acf57fbccce49ba60246ea06b0e3dd49cb04267381a4eb435e02af33be99978",
+   "expected": "8acf57fbccce49ba60246ea06b0e3dd49cb04267381a4eb435e02af33be99978",
+   "ok": true
+  },
+  "teacher_check": {
+   "files": 48,
+   "bad_files": 0,
+   "root": "aa3cf75a6c128faa389631ecd6238906a2f4c7888e809ca2b3dae785400198d3",
+   "expected": "aa3cf75a6c128faa389631ecd6238906a2f4c7888e809ca2b3dae785400198d3",
+   "ok": true
+  },
+  "teacher_check2": {
+   "files": 36,
+   "bad_files": 0,
+   "root": "5fc4d500bc9230714334d74c44d26be53cd340ef28bdd7e4a651862b995304ec",
+   "expected": "5fc4d500bc9230714334d74c44d26be53cd340ef28bdd7e4a651862b995304ec",
+   "ok": true
+  },
+  "toy_renders": {
+   "files": 366,
+   "bad_files": 0,
+   "root": "9630bed9295ce2ade54c9e25bfa8c0d0df6b4b8dfc0f6c8d3a9fd51925187d8f",
+   "expected": "9630bed9295ce2ade54c9e25bfa8c0d0df6b4b8dfc0f6c8d3a9fd51925187d8f",
+   "ok": true
+  },
+  "pseudo_specimens_r3_real": {
+   "files": 5106,
+   "bad_files": 0,
+   "root": "bd664a429df494323232b73aaa0312d0e4567e2064e457cb29e50236e9c2fd29",
+   "expected": "bd664a429df494323232b73aaa0312d0e4567e2064e457cb29e50236e9c2fd29",
+   "ok": true
+  },
+  "multires_mp_0.3": {
+   "files": 5103,
+   "bad_files": 0,
+   "root": "3a6e4252bf7a05d3096632b560919969d5c79a78add7e7ecf3efe844c46a5086",
+   "expected": "3a6e4252bf7a05d3096632b560919969d5c79a78add7e7ecf3efe844c46a5086",
+   "ok": true
+  },
+  "multires_mp_1": {
+   "files": 5103,
+   "bad_files": 0,
+   "root": "fb675accb1407c1486a170456095ea60da27ccf3f56a2f740885903a6cd241b0",
+   "expected": "fb675accb1407c1486a170456095ea60da27ccf3f56a2f740885903a6cd241b0",
+   "ok": true
+  },
+  "multires_mp_3": {
+   "files": 5103,
+   "bad_files": 0,
+   "root": "5315e394a516180618884f3f0513bc5f5129584c0068c17285b68fce751cbacb",
+   "expected": "5315e394a516180618884f3f0513bc5f5129584c0068c17285b68fce751cbacb",
+   "ok": true
+  },
+  "synth_1_30_r2": {
+   "files": 1443,
+   "bad_files": 0,
+   "root": "fe8cf5e95f3e7dc91ecdeb8b7f69841f8640205b1abff1884add362db2b6af51",
+   "expected": "fe8cf5e95f3e7dc91ecdeb8b7f69841f8640205b1abff1884add362db2b6af51",
+   "ok": true
+  },
+  "synth_1_30_r3_real": {
+   "files": 1443,
+   "bad_files": 0,
+   "root": "7962a34d52350dabc33b6ffe816429ac4d69d139a0b445d5dba0ff172c605e3f",
+   "expected": "7962a34d52350dabc33b6ffe816429ac4d69d139a0b445d5dba0ff172c605e3f",
+   "ok": true
+  },
+  "synth_seg": {
+   "files": 723,
+   "bad_files": 0,
+   "root": "a6f8baef46c478cbfdd89b3a5e086eed53b3388bef484b15ff814565599c3676",
+   "expected": "a6f8baef46c478cbfdd89b3a5e086eed53b3388bef484b15ff814565599c3676",
+   "ok": true
+  }
+ },
+ "results": {
+  "A_synth": {
+   "train": [
+    "synth_1_30_r2",
+    "synth_1_30_r3_real",
+    "synth_seg"
+   ],
+   "val": [
+    "synth_1_30_r2",
+    "synth_1_30_r3_real",
+    "synth_seg"
+   ],
+   "status": "FAILED",
+   "error": "float() argument must be a string or a real number, not 'dict'",
+   "break_epoch": null,
+   "epoch_root": null,
+   "amp": false,
+   "weights_sha256": null,
+   "minutes": 2.3
+  },
+  "B_synth_pseudo": {
+   "train": [
+    "synth_1_30_r2",
+    "synth_1_30_r3_real",
+    "synth_seg",
+    "pseudo_specimens_r3_real"
+   ],
+   "val": [
+    "synth_1_30_r2",
+    "synth_1_30_r3_real",
+    "synth_seg",
+    "pseudo_specimens_r3_real"
+   ],
+   "status": "FAILED",
+   "error": "float() argument must be a string or a real number, not 'dict'",
+   "break_epoch": null,
+   "epoch_root": null,
+   "amp": false,
+   "weights_sha256": null,
+   "minutes": 5.1
+  },
+  "C_all": {
+   "train": [
+    "synth_1_30_r2",
+    "synth_1_30_r3_real",
+    "synth_seg",
+    "pseudo_specimens_r3_real",
+    "multires_mp_0.3",
+    "multires_mp_1",
+    "multires_mp_3"
+   ],
+   "val": [
+    "synth_1_30_r2",
+    "synth_1_30_r3_real",
+    "synth_seg",
+    "pseudo_specimens_r3_real",
+    "multires_mp_0.3",
+    "multires_mp_1",
+    "multires_mp_3"
+   ],
+   "status": "FAILED",
+   "error": "float() argument must be a string or a real number, not 'dict'",
+   "break_epoch": null,
+   "epoch_root": null,
+   "amp": false,
+   "weights_sha256": null,
+   "minutes": 9.8
+  },
+  "LODO_synth": {
+   "train": [
+    "pseudo_specimens_r3_real",
+    "multires_mp_0.3",
+    "multires_mp_1",
+    "multires_mp_3"
+   ],
+   "val": [
+    "synth_1_30_r2",
+    "synth_1_30_r3_real",
+    "synth_seg"
+   ],
+   "status": "FAILED",
+   "error": "float() argument must be a string or a real number, not 'dict'",
+   "break_epoch": null,
+   "epoch_root": null,
+   "amp": false,
+   "weights_sha256": null,
+   "minutes": 3.9
+  },
+  "LODO_pseudo": {
+   "train": [
+    "synth_1_30_r2",
+    "synth_1_30_r3_real",
+    "synth_seg",
+    "multires_mp_0.3",
+    "multires_mp_1",
+    "multires_mp_3"
+   ],
+   "val": [
+    "pseudo_specimens_r3_real"
+   ],
+   "status": "FAILED",
+   "error": "float() argument must be a string or a real number, not 'dict'",
+   "break_epoch": null,
+   "epoch_root": null,
+   "amp": false,
+   "weights_sha256": null,
+   "minutes": 3.8
+  },
+  "LODO_multires": {
+   "train": [
+    "synth_1_30_r2",
+    "synth_1_30_r3_real",
+    "synth_seg",
+    "pseudo_specimens_r3_real"
+   ],
+   "val": [
+    "multires_mp_0.3",
+    "multires_mp_1",
+    "multires_mp_3"
+   ],
+   "status": "FAILED",
+   "error": "float() argument must be a string or a real number, not 'dict'",
+   "break_epoch": null,
+   "epoch_root": null,
+   "amp": false,
+   "weights_sha256": null,
+   "minutes": 2.3
+  }
+ },
+ "events_root": "a393b9d8a1f510e0d691b818d0028b5895770b732fe3bd4e18506557534c9c4c",
+ "n_events": 11,
+ "admission": "no automatic promotion; best variant at most VALIDATION_CANDIDATE"
+}

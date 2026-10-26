@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict><key>CFBundleIdentifier</key><string>local.robo-swap.viaflo</string><key>CFBundleName</key><string>VIAFLO Diagnostic</string><key>NSBluetoothAlwaysUsageDescription</key><string>Connect to the selected VIAFLO pipette to test its communication and commands.</string></dict></plist>

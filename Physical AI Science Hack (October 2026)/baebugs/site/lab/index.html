@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BioKEA lab viewer</title>
+<meta name="description" content="Interactive 3D view of the modular BioKEA sample-prep lab, built from the repo's printable parts.">
+<style>
+  :root{--bg:#fff;--fg:#1b1f24;--mute:#5b6572}
+  @media (prefers-color-scheme:dark){:root{--bg:#0e1216;--fg:#e6e9ee;--mute:#9aa5b1}}
+  body{margin:0;padding:16px;background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+  main{max-width:1100px;margin:0 auto}
+  h1{font-size:1.3rem;margin:0 0 4px} p{margin:0 0 12px;color:var(--mute)}
+</style>
+<!-- Host pages need this import map; lab.js imports "three" and "three/addons/". -->
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<main>
+  <h1>BioKEA sample-prep lab</h1>
+  <p>Real printable parts from this repo (STL). Geometry concepts, not tested on hardware; positions are illustrative.</p>
+  <div id="lab" aria-live="polite">Loading the lab viewer... (needs JavaScript and WebGL)</div>
+</main>
+<script type="module">
+  import { mountLab } from './lab.js';
+  mountLab(document.getElementById('lab'), { partsUrl: 'parts.json' })
+    .catch((e) => { document.getElementById('lab').textContent = 'Could not start the viewer: ' + e.message; console.error(e); });
+</script>
+</body>
+</html>

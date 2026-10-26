@@ -1,0 +1,968 @@
+{
+ "schema": "baebugs.daisy.datasets.v1",
+ "created": "2026-10-25T08:00:38Z",
+ "datasets": {
+  "gbif_ca_2": {
+   "dataset": "gbif_ca_2",
+   "path": "/Volumes/magicBLACKbox/baebugs/datasets/gbif_ca_2",
+   "kind": "raw_images",
+   "role": "source",
+   "files": 5885,
+   "bytes": 7915508299,
+   "merkle_root": "fdee02b163cb26dfb7ee6eae76dde64360e0068b41e54c4808dae4583fbebc09",
+   "checks": {
+    "manifest_rows": 5884,
+    "missing_files": 0,
+    "sha_mismatch": 0,
+    "undecodable": 0,
+    "unlisted_files": 0,
+    "licences": {
+     "1.0/legalcode": 5865,
+     "4.0/legalcode": 19
+    },
+    "licence_missing": 0
+   },
+   "fails": [],
+   "derived_from": null,
+   "transform": null,
+   "synthetic": false,
+   "note": null,
+   "examples": {
+    "sha_mismatch": [],
+    "undecodable": [],
+    "unlisted": [],
+    "missing": []
+   },
+   "seconds": 9.0,
+   "status": "VERIFIED"
+  },
+  "gbif_az": {
+   "dataset": "gbif_az",
+   "path": "/Volumes/magicBLACKbox/baebugs/datasets/gbif_az",
+   "kind": "raw_images",
+   "role": "source",
+   "files": 2642,
+   "bytes": 1933731529,
+   "merkle_root": "1c85db2be4b8c4a4bb1bc839cdf290e73ff77e1ba11bb768516724669008d099",
+   "checks": {
+    "manifest_rows": 2641,
+    "missing_files": 0,
+    "sha_mismatch": 0,
+    "undecodable": 406,
+    "unlisted_files": 0,
+    "licences": {
+     "1.0/legalcode": 2637,
+     "4.0/legalcode": 4
+    },
+    "licence_missing": 0
+   },
+   "fails": [
+    "undecodable"
+   ],
+   "derived_from": null,
+   "transform": null,
+   "synthetic": false,
+   "note": null,
+   "examples": {
+    "sha_mismatch": [],
+    "undecodable": [
+     "4929399566.jpg",
+     "4929399448.jpg",
+     "4929399766.jpg",
+     "4929399685.jpg",
+     "4929399303.jpg"
+    ],
+    "unlisted": [],
+    "missing": []
+   },
+   "seconds": 2.6,
+   "status": "FAILED"
+  },
+  "gbif_nv": {
+   "dataset": "gbif_nv",
+   "path": "/Volumes/magicBLACKbox/baebugs/datasets/gbif_nv",
+   "kind": "raw_images",
+   "role": "source",
+   "files": 1251,
+   "bytes": 6546757801,
+   "merkle_root": "783dbb2b900000183b05db623e8a72d114f5723f656fa34b5c099221e1214a19",
+   "checks": {
+    "manifest_rows": 1250,
+    "missing_files": 0,
+    "sha_mismatch": 0,
+    "undecodable": 0,
+    "unlisted_files": 0,
+    "licences": {
+     "1.0/legalcode": 520,
+     "4.0/legalcode": 730
+    },
+    "licence_missing": 0
+   },
+   "fails": [],
+   "derived_from": null,
+   "transform": null,
+   "synthetic": false,
+   "note": null,
+   "examples": {
+    "sha_mismatch": [],
+    "undecodable": [],
+    "unlisted": [],
+    "missing": []
+   },
+   "seconds": 5.1,
+   "status": "VERIFIED"
+  },
+  "gbif_or": {
+   "dataset": "gbif_or",
+   "path": "/Volumes/magicBLACKbox/baebugs/datasets/gbif_or",
+   "kind": "raw_images",
+   "role": "source",
+   "files": 2932,
+   "bytes": 1928273184,
+   "merkle_root": "8479d035cdebbcfaa0e4768d53f64a8f38879c6d78eff5b98b764f5c77a8fc1a",
+   "checks": {
+    "manifest_rows": 2931,
+    "missing_files": 0,
+    "sha_mismatch": 0,
+    "undecodable": 0,
+    "unlisted_files": 0,
+    "licences": {
+     "4.0/legalcode": 258,
+     "1.0/legalcode": 2673
+    },
+    "licence_missing": 0
+   },
+   "fails": [],
+   "derived_from": null,
+   "transform": null,
+   "synthetic": false,
+   "note": null,
+   "examples": {
+    "sha_mismatch": [],
+    "undecodable": [],
+    "unlisted": [],
+    "missing": []
+   },
+   "seconds": 2.9,
+   "status": "VERIFIED"
+  },
+  "gbif_specimen_images": {
+   "dataset": "gbif_specimen_images",
+   "path": "/Volumes/magicLABbox/baebugs/datasets/gbif_specimen_images",
+   "kind": "raw_images",
+   "role": "source",
+   "files": 1912,
+   "bytes": 1373040516,
+   "merkle_root": "87c3cf5c26fe6098a07093ee5421ca62302958ad035219c3157b289f166907c9",
+   "checks": {
+    "manifest_rows": 1911,
+    "missing_files": 0,
+    "sha_mismatch": 0,
+    "undecodable": 0,
+    "unlisted_files": 0,
+    "licences": {
+     "1.0/legalcode": 1911
+    },
+    "licence_missing": 0
+   },
+   "fails": [],
+   "derived_from": null,
+   "transform": null,
+   "synthetic": false,
+   "note": null,
+   "examples": {
+    "sha_mismatch": [],
+    "undecodable": [],
+    "unlisted": [],
+    "missing": []
+   },
+   "seconds": 3.9,
+   "status": "VERIFIED"
+  },
+  "pseudo_specimens_r3_real": {
+   "dataset": "pseudo_specimens_r3_real",
+   "path": "/Volumes/magicBLACKbox/baebugs/datasets/pseudo_specimens_r3_real",
+   "kind": "yolo_seg",
+   "role": "train",
+   "files": 5106,
+   "bytes": 2147655209,
+   "merkle_root": "bd664a429df494323232b73aaa0312d0e4567e2064e457cb29e50236e9c2fd29",
+   "checks": {
+    "splits": {
+     "train": {
+      "images": 2152,
+      "labels": 2152,
+      "objects": 2214,
+      "orphan_labels": 0
+     },
+     "val": {
+      "images": 399,
+      "labels": 399,
+      "objects": 413,
+      "orphan_labels": 0
+     }
+    },
+    "bad_label_lines": 0,
+    "unpaired_images": 0,
+    "undecodable": 0,
+    "empty_labels": 0,
+    "identical_bytes_across_splits": 0
+   },
+   "fails": [],
+   "derived_from": [
+    "gbif_ca_2",
+    "gbif_az",
+    "gbif_nv",
+    "gbif_or",
+    "gbif_specimen_images"
+   ],
+   "transform": "YOLOE-11s-seg teacher pseudo-labels on ruler-scaled museum photos (train.pseudo_label_specimens)",
+   "synthetic": false,
+   "note": null,
+   "examples": {},
+   "seconds": 4.0,
+   "lineage": {
+    "derived_items": 2551,
+    "found_in_source": 2551,
+    "orphans": 0,
+    "orphan_examples": [],
+    "split_crossings": 0,
+    "crossing_examples": []
+   },
+   "status": "VERIFIED"
+  },
+  "multires_mp_0.3": {
+   "dataset": "multires_mp_0.3",
+   "path": "/Volumes/magicBLACKbox/baebugs/datasets/multires_r4_multires/mp_0.3",
+   "kind": "yolo_seg",
+   "role": "train",
+   "files": 5103,
+   "bytes": 180822266,
+   "merkle_root": "3a6e4252bf7a05d3096632b560919969d5c79a78add7e7ecf3efe844c46a5086",
+   "checks": {
+    "splits": {
+     "train": {
+      "images": 2152,
+      "labels": 2152,
+      "objects": 2214,
+      "orphan_labels": 0
+     },
+     "val": {
+      "images": 399,
+      "labels": 399,
+      "objects": 413,
+      "orphan_labels": 0
+     }
+    },
+    "bad_label_lines": 0,
+    "unpaired_images": 0,
+    "undecodable": 0,
+    "empty_labels": 0,
+    "identical_bytes_across_splits": 0
+   },
+   "fails": [],
+   "derived_from": [
+    "pseudo_specimens_r3_real"
+   ],
+   "transform": "resample to 0.3 MP (resolution.py)",
+   "synthetic": false,
+   "note": null,
+   "examples": {},
+   "seconds": 2.1,
+   "lineage": {
+    "derived_items": 2551,
+    "found_in_source": 2551,
+    "orphans": 0,
+    "orphan_examples": [],
+    "split_crossings": 0,
+    "crossing_examples": []
+   },
+   "status": "VERIFIED"
+  },
+  "multires_mp_1": {
+   "dataset": "multires_mp_1",
+   "path": "/Volumes/magicBLACKbox/baebugs/datasets/multires_r4_multires/mp_1",
+   "kind": "yolo_seg",
+   "role": "train",
+   "files": 5103,
+   "bytes": 456159276,
+   "merkle_root": "fb675accb1407c1486a170456095ea60da27ccf3f56a2f740885903a6cd241b0",
+   "checks": {
+    "splits": {
+     "train": {
+      "images": 2152,
+      "labels": 2152,
+      "objects": 2214,
+      "orphan_labels": 0
+     },
+     "val": {
+      "images": 399,
+      "labels": 399,
+      "objects": 413,
+      "orphan_labels": 0
+     }
+    },
+    "bad_label_lines": 0,
+    "unpaired_images": 0,
+    "undecodable": 0,
+    "empty_labels": 0,
+    "identical_bytes_across_splits": 0
+   },
+   "fails": [],
+   "derived_from": [
+    "pseudo_specimens_r3_real"
+   ],
+   "transform": "resample to 1 MP",
+   "synthetic": false,
+   "note": null,
+   "examples": {},
+   "seconds": 2.3,
+   "lineage": {
+    "derived_items": 2551,
+    "found_in_source": 2551,
+    "orphans": 0,
+    "orphan_examples": [],
+    "split_crossings": 0,
+    "crossing_examples": []
+   },
+   "status": "VERIFIED"
+  },
+  "multires_mp_3": {
+   "dataset": "multires_mp_3",
+   "path": "/Volumes/magicBLACKbox/baebugs/datasets/multires_r4_multires/mp_3",
+   "kind": "yolo_seg",
+   "role": "train",
+   "files": 5103,
+   "bytes": 1152765052,
+   "merkle_root": "5315e394a516180618884f3f0513bc5f5129584c0068c17285b68fce751cbacb",
+   "checks": {
+    "splits": {
+     "train": {
+      "images": 2152,
+      "labels": 2152,
+      "objects": 2214,
+      "orphan_labels": 0
+     },
+     "val": {
+      "images": 399,
+      "labels": 399,
+      "objects": 413,
+      "orphan_labels": 0
+     }
+    },
+    "bad_label_lines": 0,
+    "unpaired_images": 0,
+    "undecodable": 0,
+    "empty_labels": 0,
+    "identical_bytes_across_splits": 0
+   },
+   "fails": [],
+   "derived_from": [
+    "pseudo_specimens_r3_real"
+   ],
+   "transform": "resample to 3 MP",
+   "synthetic": false,
+   "note": null,
+   "examples": {},
+   "seconds": 2.8,
+   "lineage": {
+    "derived_items": 2551,
+    "found_in_source": 2551,
+    "orphans": 0,
+    "orphan_examples": [],
+    "split_crossings": 0,
+    "crossing_examples": []
+   },
+   "status": "VERIFIED"
+  },
+  "synth_1_30_r2": {
+   "dataset": "synth_1_30_r2",
+   "path": "/Volumes/magicBLACKbox/baebugs/datasets/synth_1_30_r2",
+   "kind": "yolo_seg",
+   "role": "train",
+   "files": 1443,
+   "bytes": 53275084,
+   "merkle_root": "fe8cf5e95f3e7dc91ecdeb8b7f69841f8640205b1abff1884add362db2b6af51",
+   "checks": {
+    "splits": {
+     "train": {
+      "images": 600,
+      "labels": 600,
+      "objects": 10351,
+      "orphan_labels": 0
+     },
+     "val": {
+      "images": 120,
+      "labels": 120,
+      "objects": 2160,
+      "orphan_labels": 0
+     }
+    },
+    "bad_label_lines": 0,
+    "unpaired_images": 0,
+    "undecodable": 0,
+    "empty_labels": 0,
+    "identical_bytes_across_splits": 0
+   },
+   "fails": [],
+   "derived_from": null,
+   "transform": "synth_seg.py 1-30 mm, ppm 6-40",
+   "synthetic": true,
+   "note": null,
+   "examples": {},
+   "seconds": 0.8,
+   "status": "VERIFIED"
+  },
+  "synth_1_30_r3_real": {
+   "dataset": "synth_1_30_r3_real",
+   "path": "/Volumes/magicBLACKbox/baebugs/datasets/synth_1_30_r3_real",
+   "kind": "yolo_seg",
+   "role": "train",
+   "files": 1443,
+   "bytes": 53721090,
+   "merkle_root": "7962a34d52350dabc33b6ffe816429ac4d69d139a0b445d5dba0ff172c605e3f",
+   "checks": {
+    "splits": {
+     "train": {
+      "images": 600,
+      "labels": 600,
+      "objects": 10387,
+      "orphan_labels": 0
+     },
+     "val": {
+      "images": 120,
+      "labels": 120,
+      "objects": 2155,
+      "orphan_labels": 0
+     }
+    },
+    "bad_label_lines": 0,
+    "unpaired_images": 0,
+    "undecodable": 0,
+    "empty_labels": 0,
+    "identical_bytes_across_splits": 0
+   },
+   "fails": [],
+   "derived_from": null,
+   "transform": "synth_seg.py 1-30 mm, ppm 6-40",
+   "synthetic": true,
+   "note": null,
+   "examples": {},
+   "seconds": 0.8,
+   "status": "VERIFIED"
+  },
+  "synth_seg": {
+   "dataset": "synth_seg",
+   "path": "/Volumes/magicLABbox/baebugs/datasets/synth_seg",
+   "kind": "yolo_seg",
+   "role": "train",
+   "files": 723,
+   "bytes": 25064591,
+   "merkle_root": "a6f8baef46c478cbfdd89b3a5e086eed53b3388bef484b15ff814565599c3676",
+   "checks": {
+    "splits": {
+     "train": {
+      "images": 300,
+      "labels": 300,
+      "objects": 2385,
+      "orphan_labels": 0
+     },
+     "val": {
+      "images": 60,
+      "labels": 60,
+      "objects": 487,
+      "orphan_labels": 0
+     }
+    },
+    "bad_label_lines": 0,
+    "unpaired_images": 0,
+    "undecodable": 0,
+    "empty_labels": 0,
+    "identical_bytes_across_splits": 0
+   },
+   "fails": [],
+   "derived_from": null,
+   "transform": "synth_seg.py r1",
+   "synthetic": true,
+   "note": null,
+   "examples": {},
+   "seconds": 0.5,
+   "status": "VERIFIED"
+  },
+  "teacher_check": {
+   "dataset": "teacher_check",
+   "path": "/Volumes/magicBLACKbox/baebugs/datasets/_teacher_check",
+   "kind": "yolo_seg",
+   "role": "eval",
+   "files": 48,
+   "bytes": 18758951,
+   "merkle_root": "aa3cf75a6c128faa389631ecd6238906a2f4c7888e809ca2b3dae785400198d3",
+   "checks": {
+    "splits": {
+     "train": {
+      "images": 17,
+      "labels": 17,
+      "objects": 44,
+      "orphan_labels": 0
+     },
+     "val": {
+      "images": 5,
+      "labels": 5,
+      "objects": 9,
+      "orphan_labels": 0
+     }
+    },
+    "bad_label_lines": 0,
+    "unpaired_images": 0,
+    "undecodable": 0,
+    "empty_labels": 0,
+    "identical_bytes_across_splits": 0
+   },
+   "fails": [],
+   "derived_from": [
+    "gbif_ca_2",
+    "gbif_az",
+    "gbif_nv",
+    "gbif_or",
+    "gbif_specimen_images"
+   ],
+   "transform": null,
+   "synthetic": false,
+   "note": null,
+   "examples": {},
+   "seconds": 0.0,
+   "lineage": {
+    "derived_items": 22,
+    "found_in_source": 22,
+    "orphans": 0,
+    "orphan_examples": [],
+    "split_crossings": 0,
+    "crossing_examples": []
+   },
+   "status": "VERIFIED"
+  },
+  "teacher_check2": {
+   "dataset": "teacher_check2",
+   "path": "/Volumes/magicBLACKbox/baebugs/datasets/_teacher_check2",
+   "kind": "yolo_seg",
+   "role": "eval",
+   "files": 36,
+   "bytes": 16662487,
+   "merkle_root": "5fc4d500bc9230714334d74c44d26be53cd340ef28bdd7e4a651862b995304ec",
+   "checks": {
+    "splits": {
+     "train": {
+      "images": 11,
+      "labels": 11,
+      "objects": 11,
+      "orphan_labels": 0
+     },
+     "val": {
+      "images": 5,
+      "labels": 5,
+      "objects": 5,
+      "orphan_labels": 0
+     }
+    },
+    "bad_label_lines": 0,
+    "unpaired_images": 0,
+    "undecodable": 0,
+    "empty_labels": 0,
+    "identical_bytes_across_splits": 0
+   },
+   "fails": [],
+   "derived_from": [
+    "gbif_ca_2",
+    "gbif_az",
+    "gbif_nv",
+    "gbif_or",
+    "gbif_specimen_images"
+   ],
+   "transform": null,
+   "synthetic": false,
+   "note": null,
+   "examples": {},
+   "seconds": 0.0,
+   "lineage": {
+    "derived_items": 16,
+    "found_in_source": 16,
+    "orphans": 0,
+    "orphan_examples": [],
+    "split_crossings": 0,
+    "crossing_examples": []
+   },
+   "status": "VERIFIED"
+  },
+  "rejected_pseudo_v1": {
+   "dataset": "rejected_pseudo_v1",
+   "path": "/Volumes/magicBLACKbox/baebugs/datasets/_rejected_pseudo_v1",
+   "kind": "yolo_seg",
+   "role": "negative",
+   "files": 2156,
+   "bytes": 713066426,
+   "merkle_root": "d95986b041b1fde7e1b215fa0b080b2ef9e0c2c5e6659b8514beb93bca37b541",
+   "checks": {
+    "splits": {
+     "train": {
+      "images": 886,
+      "labels": 886,
+      "objects": 1152,
+      "orphan_labels": 0
+     },
+     "val": {
+      "images": 192,
+      "labels": 192,
+      "objects": 264,
+      "orphan_labels": 0
+     }
+    },
+    "bad_label_lines": 0,
+    "unpaired_images": 0,
+    "undecodable": 0,
+    "empty_labels": 0,
+    "identical_bytes_across_splits": 0
+   },
+   "fails": [],
+   "derived_from": null,
+   "transform": null,
+   "synthetic": false,
+   "note": "v1 pseudo-labels marked barcodes/labels as insects; kept as a negative record",
+   "examples": {},
+   "seconds": 1.3,
+   "status": "REJECTED"
+  },
+  "dataone_cib_raw": {
+   "dataset": "dataone_cib_raw",
+   "path": "/Volumes/magicBLACKbox/baebugs/datasets/dataone_cib",
+   "kind": "tabular",
+   "role": "source",
+   "files": 2,
+   "bytes": 841869,
+   "merkle_root": "5ac2e7502057bfbbd44345603a5e525359e8698425e1e143124f58809cd6db5e",
+   "checks": {
+    "files": {
+     "Soil_Sampling_Survey_Public_08212025.csv": {
+      "pii_columns": [
+       "observers",
+       "email",
+       "phone_number",
+       "Creator",
+       "Editor"
+      ],
+      "email_cells": 1286,
+      "phone_cells": 64,
+      "columns": 35
+     }
+    },
+    "pii_found": true
+   },
+   "fails": [
+    "pii_present"
+   ],
+   "derived_from": null,
+   "transform": null,
+   "synthetic": false,
+   "note": "raw DataONE soil survey; contains observer PII -> never staged",
+   "seconds": 0.1,
+   "status": "QUARANTINED_PII"
+  },
+  "essig": {
+   "dataset": "essig",
+   "path": "/Volumes/magicLABbox/baebugs/datasets/essig",
+   "kind": "json",
+   "role": "context",
+   "files": 2,
+   "bytes": 430233,
+   "merkle_root": "9470d0a7190a82c0208d36fe36381d6cde79bca201d9d359feaefc14f188deb3",
+   "checks": {
+    "json_files": 2,
+    "jsonl_rows": 0,
+    "unparseable": 0
+   },
+   "fails": [],
+   "derived_from": null,
+   "transform": null,
+   "synthetic": false,
+   "note": null,
+   "seconds": 0.0,
+   "status": "VERIFIED"
+  },
+  "r3_ca": {
+   "dataset": "r3_ca",
+   "path": "/Volumes/magicBLACKbox/baebugs/datasets/r3_ca",
+   "kind": "yolo_seg",
+   "role": "train",
+   "files": 4682,
+   "bytes": 1910833487,
+   "merkle_root": "7f165212b10035e3dda9d099b59ce6da8ca2ea270c2d09f8d049ce9abf9e4fbe",
+   "checks": {
+    "splits": {
+     "train": {
+      "images": 1970,
+      "labels": 1970,
+      "objects": 2015,
+      "orphan_labels": 0
+     },
+     "val": {
+      "images": 369,
+      "labels": 369,
+      "objects": 381,
+      "orphan_labels": 0
+     }
+    },
+    "bad_label_lines": 0,
+    "unpaired_images": 0,
+    "undecodable": 0,
+    "empty_labels": 0,
+    "identical_bytes_across_splits": 0
+   },
+   "fails": [],
+   "derived_from": [
+    "gbif_ca_2",
+    "gbif_specimen_images"
+   ],
+   "transform": "subset of pseudo_specimens_r3_real whose photo is byte-identical to a gbif_ca_2 / gbif_specimen_images photo; r3 labels, ruler truth and split kept (domain_split.py)",
+   "synthetic": false,
+   "note": null,
+   "examples": {},
+   "seconds": 3.2,
+   "lineage": {
+    "derived_items": 2339,
+    "found_in_source": 2339,
+    "orphans": 0,
+    "orphan_examples": [],
+    "split_crossings": 0,
+    "crossing_examples": []
+   },
+   "status": "VERIFIED"
+  },
+  "holdout_az": {
+   "dataset": "holdout_az",
+   "path": "/Volumes/magicBLACKbox/baebugs/datasets/holdout_az",
+   "kind": "yolo_seg",
+   "role": "domain_holdout",
+   "files": 148,
+   "bytes": 61053118,
+   "merkle_root": "16187b8f389891c02a35085814e30240d0bd51cf6dc375d56d78a8acf49b26ec",
+   "checks": {
+    "splits": {
+     "val": {
+      "images": 72,
+      "labels": 72,
+      "objects": 74,
+      "orphan_labels": 0
+     }
+    },
+    "bad_label_lines": 0,
+    "unpaired_images": 0,
+    "undecodable": 0,
+    "empty_labels": 0,
+    "identical_bytes_across_splits": 0
+   },
+   "fails": [],
+   "derived_from": [
+    "gbif_az"
+   ],
+   "transform": "subset of pseudo_specimens_r3_real whose photo is byte-identical to a gbif_az photo; r3 labels + ruler truth, all photos in val (domain_split.py, 002 amendment 1)",
+   "synthetic": false,
+   "note": null,
+   "examples": {},
+   "seconds": 0.1,
+   "lineage": {
+    "derived_items": 72,
+    "found_in_source": 72,
+    "orphans": 0,
+    "orphan_examples": [],
+    "split_crossings": 0,
+    "crossing_examples": []
+   },
+   "status": "VERIFIED"
+  },
+  "holdout_nv": {
+   "dataset": "holdout_nv",
+   "path": "/Volumes/magicBLACKbox/baebugs/datasets/holdout_nv",
+   "kind": "yolo_seg",
+   "role": "domain_holdout",
+   "files": 20,
+   "bytes": 7769754,
+   "merkle_root": "c8169e2e0bd5b8e35ee8cbe523f943b2999a40ce5aadbd47d6095b08a1e88247",
+   "checks": {
+    "splits": {
+     "val": {
+      "images": 8,
+      "labels": 8,
+      "objects": 9,
+      "orphan_labels": 0
+     }
+    },
+    "bad_label_lines": 0,
+    "unpaired_images": 0,
+    "undecodable": 0,
+    "empty_labels": 0,
+    "identical_bytes_across_splits": 0
+   },
+   "fails": [],
+   "derived_from": [
+    "gbif_nv"
+   ],
+   "transform": "subset of pseudo_specimens_r3_real whose photo is byte-identical to a gbif_nv photo; r3 labels + ruler truth, all photos in val (domain_split.py, 002 amendment 1)",
+   "synthetic": false,
+   "note": null,
+   "examples": {},
+   "seconds": 0.0,
+   "lineage": {
+    "derived_items": 8,
+    "found_in_source": 8,
+    "orphans": 0,
+    "orphan_examples": [],
+    "split_crossings": 0,
+    "crossing_examples": []
+   },
+   "status": "VERIFIED"
+  },
+  "holdout_or": {
+   "dataset": "holdout_or",
+   "path": "/Volumes/magicBLACKbox/baebugs/datasets/holdout_or",
+   "kind": "yolo_seg",
+   "role": "domain_holdout",
+   "files": 268,
+   "bytes": 167317709,
+   "merkle_root": "7d7fddd381bdfaf514bcd83e8c3ea774951b29038abffe2780226b1fa5b3a486",
+   "checks": {
+    "splits": {
+     "val": {
+      "images": 132,
+      "labels": 132,
+      "objects": 148,
+      "orphan_labels": 0
+     }
+    },
+    "bad_label_lines": 0,
+    "unpaired_images": 0,
+    "undecodable": 0,
+    "empty_labels": 0,
+    "identical_bytes_across_splits": 0
+   },
+   "fails": [],
+   "derived_from": [
+    "gbif_or"
+   ],
+   "transform": "subset of pseudo_specimens_r3_real whose photo is byte-identical to a gbif_or photo; r3 labels + ruler truth, all photos in val (domain_split.py, 002 amendment 1)",
+   "synthetic": false,
+   "note": null,
+   "examples": {},
+   "seconds": 0.3,
+   "lineage": {
+    "derived_items": 132,
+    "found_in_source": 132,
+    "orphans": 0,
+    "orphan_examples": [],
+    "split_crossings": 0,
+    "crossing_examples": []
+   },
+   "status": "VERIFIED"
+  },
+  "dataone_cib_public": {
+   "dataset": "dataone_cib_public",
+   "path": "/Volumes/magicBLACKbox/baebugs/daisy/derived/dataone_cib_public",
+   "kind": "tabular",
+   "role": "context",
+   "files": 3,
+   "bytes": 554185,
+   "merkle_root": "29d56fff44ce9be3b6ea7a9faec7394cd69d3f0bcbcfc327436b38bbf769f580",
+   "checks": {
+    "files": {
+     "soil_sampling_survey_public_noPII.csv": {
+      "pii_columns": [],
+      "email_cells": 0,
+      "phone_cells": 0,
+      "columns": 27
+     }
+    },
+    "pii_found": false
+   },
+   "fails": [],
+   "derived_from": null,
+   "transform": "drop PII + free-text columns",
+   "synthetic": false,
+   "note": null,
+   "seconds": 0.1,
+   "status": "VERIFIED"
+  },
+  "toy_renders": {
+   "dataset": "toy_renders",
+   "path": "/Volumes/magicBLACKbox/baebugs/daisy/derived/toy_renders",
+   "kind": "yolo_seg",
+   "role": "eval",
+   "files": 366,
+   "bytes": 20547944,
+   "merkle_root": "9630bed9295ce2ade54c9e25bfa8c0d0df6b4b8dfc0f6c8d3a9fd51925187d8f",
+   "checks": {
+    "splits": {
+     "ppm10": {
+      "images": 91,
+      "labels": 91,
+      "objects": 91,
+      "orphan_labels": 0
+     },
+     "ppm20": {
+      "images": 91,
+      "labels": 91,
+      "objects": 91,
+      "orphan_labels": 0
+     }
+    },
+    "bad_label_lines": 0,
+    "unpaired_images": 0,
+    "undecodable": 0,
+    "empty_labels": 0,
+    "identical_bytes_across_splits": 0
+   },
+   "fails": [],
+   "derived_from": null,
+   "transform": "insect_kg toys rendered top-down at 10/20 px/mm",
+   "synthetic": true,
+   "note": null,
+   "examples": {},
+   "seconds": 0.1,
+   "status": "VERIFIED"
+  },
+  "gbif_manifests": {
+   "dataset": "gbif_manifests",
+   "path": "/Volumes/magicBLACKbox/baebugs/daisy/derived/gbif_manifests",
+   "kind": "json",
+   "role": "context",
+   "files": 5,
+   "bytes": 8162686,
+   "merkle_root": "8acf57fbccce49ba60246ea06b0e3dd49cb04267381a4eb435e02af33be99978",
+   "checks": {
+    "json_files": 5,
+    "jsonl_rows": 14617,
+    "unparseable": 0
+   },
+   "fails": [],
+   "derived_from": null,
+   "transform": null,
+   "synthetic": false,
+   "note": null,
+   "seconds": 0.1,
+   "status": "VERIFIED"
+  }
+ },
+ "global_leakage": {
+  "train_ids": 2162,
+  "val_ids": 582,
+  "train_val_overlap": 182,
+  "overlap_examples": [
+   "1317334061: train in ['multires_mp_0.3', 'multires_mp_1', 'multires_mp_3', 'pseudo_specimens_r3_real'], val in ['holdout_or']",
+   "1317671674: train in ['multires_mp_0.3', 'multires_mp_1', 'multires_mp_3', 'pseudo_specimens_r3_real'], val in ['holdout_or']",
+   "1319192920: train in ['multires_mp_0.3', 'multires_mp_1', 'multires_mp_3', 'pseudo_specimens_r3_real'], val in ['holdout_or']",
+   "1321915532: train in ['multires_mp_0.3', 'multires_mp_1', 'multires_mp_3', 'pseudo_specimens_r3_real'], val in ['holdout_or']",
+   "1932506537: train in ['multires_mp_0.3', 'multires_mp_1', 'multires_mp_3', 'pseudo_specimens_r3_real'], val in ['holdout_or']",
+   "1932510302: train in ['multires_mp_0.3', 'multires_mp_1', 'multires_mp_3', 'pseudo_specimens_r3_real'], val in ['holdout_or']",
+   "1932764354: train in ['multires_mp_0.3', 'multires_mp_1', 'multires_mp_3', 'pseudo_specimens_r3_real'], val in ['holdout_or']",
+   "1977822792: train in ['multires_mp_0.3', 'multires_mp_1', 'multires_mp_3', 'pseudo_specimens_r3_real'], val in ['holdout_or']"
+  ]
+ },
+ "root": "ab0c6de78eae7f38448bc711264ebdbcb334c2c390ac737d7c028286ef6bafa8"
+}

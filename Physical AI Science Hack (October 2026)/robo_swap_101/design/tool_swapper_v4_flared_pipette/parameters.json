@@ -1,0 +1,72 @@
+{
+  "mount_bolt_circle_mm": 14,
+  "mount_hole_centers_xy_mm": [
+    [
+      -4.949747468305833,
+      -4.949747468305833
+    ],
+    [
+      -4.949747468305833,
+      4.949747468305833
+    ],
+    [
+      4.949747468305833,
+      -4.949747468305833
+    ],
+    [
+      4.949747468305833,
+      4.949747468305833
+    ]
+  ],
+  "mount_shank_clearance_diameter_mm": 3.2,
+  "screw_head_access_diameter_mm": 6.2,
+  "mount_base_diameter_mm": 28,
+  "mount_base_thickness_mm": 4,
+  "horn_recess_diameter_mm": 20.4,
+  "horn_recess_depth_mm": 1,
+  "screw_bearing_web_mm": 3,
+  "screw_nominal": "M3 x 6",
+  "screw_projection_beyond_horn_bearing_plane_mm": 3,
+  "spacer_height_mm": 5,
+  "spacer_outer_diameter_mm": 27,
+  "spacer_inner_diameter_mm": 21,
+  "dowel_plate_diameter_mm": 40,
+  "dowel_plate_thickness_mm": 4,
+  "male_rear_to_dowel_plate_face_mm": 13,
+  "male_total_height_mm": 21,
+  "male_print_z_levels_mm": {
+    "rear": 0,
+    "horn_bearing": 1,
+    "screw_seat": 4,
+    "spacer_top_plate_underside": 9,
+    "dowel_face": 13,
+    "pin_tips": 21
+  },
+  "dowel_count": 3,
+  "dowel_stem_diameter_mm": 3.6,
+  "dowel_head_diameter_mm": 6,
+  "dowel_projection_mm": 8,
+  "dowel_circle_diameter_mm": 30,
+  "turn_degrees": 45.0,
+  "nominal_axial_draw_in_mm": 0.8,
+  "female_receiver_envelope_mm": [
+    41,
+    41,
+    12
+  ],
+  "female_receiver_shape": "circular upper body with rounded rectangular tapered base",
+  "receiver_base_mm": [
+    34,
+    28
+  ],
+  "receiver_base_corner_radius_mm": 5,
+  "receiver_blend_height_mm": 3.5,
+  "minimum_nominal_outer_wall_mm": 2.2,
+  "minimum_nominal_socket_floor_mm": 3.5,
+  "original_collar_trim_plane_z_mm": 15.65,
+  "female_entry_face_z_mm": 27.65,
+  "pipette_bore_nominal_diameter_mm": 31,
+  "pipette_bore_cutter_diameter_mm": 31.002,
+  "pin_lock": false,
+  "assembly_transform": "Male print mesh: translate Z -13, rotate local Z 0..45 deg, translate local Z -.8..0, rotate X 180 deg, translate global Z 27.65"
+}

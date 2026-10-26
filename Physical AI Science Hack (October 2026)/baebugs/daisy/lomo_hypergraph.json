@@ -1,0 +1,710 @@
+{
+ "root": "66b1f4ef912df5e66846dfb8c9cdcb8907c3884d1dc168775bb6316ce68cd6e1",
+ "module": {
+  "insect_lomo": {
+   "actors": 1,
+   "invalidated": {
+    "edges": 9,
+    "by_kind": {
+     "evaluation": 4,
+     "consensus": 4,
+     "hybrid": 1
+    }
+   },
+   "consensus_after": {
+    "exact": {
+     "UNVERIFIED_DISPUTED": 91
+    },
+    "tol_0.5mm": {
+     "UNVERIFIED_DISPUTED": 76,
+     "UNVERIFIED_SUPPORTED": 15
+    },
+    "plan_only": {
+     "UNVERIFIED_DISPUTED": 73,
+     "UNVERIFIED_SUPPORTED": 18
+    }
+   }
+  },
+  "model_compare.text": {
+   "actors": 2,
+   "invalidated": {
+    "edges": 13,
+    "by_kind": {
+     "evaluation": 8,
+     "consensus": 4,
+     "hybrid": 1
+    }
+   },
+   "consensus_after": {
+    "exact": {
+     "DISPUTED": 86,
+     "FAILED": 5
+    },
+    "tol_0.5mm": {
+     "DISPUTED": 66,
+     "SUPPORTED": 21,
+     "FAILED": 4
+    },
+    "plan_only": {
+     "DISPUTED": 65,
+     "SUPPORTED": 22,
+     "FAILED": 4
+    }
+   }
+  },
+  "model_compare.vision": {
+   "actors": 9,
+   "invalidated": {
+    "edges": 41,
+    "by_kind": {
+     "evaluation": 36,
+     "consensus": 4,
+     "hybrid": 1
+    }
+   },
+   "consensus_after": {
+    "exact": {
+     "DISPUTED": 86,
+     "FAILED": 5
+    },
+    "tol_0.5mm": {
+     "DISPUTED": 83,
+     "SUPPORTED": 4,
+     "FAILED": 4
+    },
+    "plan_only": {
+     "SUPPORTED": 28,
+     "DISPUTED": 59,
+     "FAILED": 4
+    }
+   }
+  },
+  "toy_triage": {
+   "actors": 2,
+   "invalidated": {
+    "edges": 4,
+    "by_kind": {
+     "evaluation": 4
+    }
+   },
+   "consensus_after": {
+    "exact": {
+     "DISPUTED": 86,
+     "FAILED": 5
+    },
+    "tol_0.5mm": {
+     "DISPUTED": 72,
+     "SUPPORTED": 15,
+     "FAILED": 4
+    },
+    "plan_only": {
+     "DISPUTED": 69,
+     "SUPPORTED": 18,
+     "FAILED": 4
+    }
+   }
+  }
+ },
+ "merkle": {
+  "dataset:dataone_cib_public": {
+   "edges": 151,
+   "by_kind": {
+    "datasets_root": 1,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 2
+   }
+  },
+  "dataset:dataone_cib_raw": {
+   "edges": 151,
+   "by_kind": {
+    "datasets_root": 1,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 2
+   }
+  },
+  "dataset:essig": {
+   "edges": 151,
+   "by_kind": {
+    "datasets_root": 1,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 2
+   }
+  },
+  "dataset:gbif_az": {
+   "edges": 172,
+   "by_kind": {
+    "datasets_root": 1,
+    "custody": 6,
+    "recipe": 15,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 2
+   }
+  },
+  "dataset:gbif_ca_2": {
+   "edges": 172,
+   "by_kind": {
+    "datasets_root": 1,
+    "custody": 6,
+    "recipe": 15,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 2
+   }
+  },
+  "dataset:gbif_manifests": {
+   "edges": 151,
+   "by_kind": {
+    "datasets_root": 1,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 2
+   }
+  },
+  "dataset:gbif_nv": {
+   "edges": 172,
+   "by_kind": {
+    "datasets_root": 1,
+    "custody": 6,
+    "recipe": 15,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 2
+   }
+  },
+  "dataset:gbif_or": {
+   "edges": 172,
+   "by_kind": {
+    "datasets_root": 1,
+    "custody": 6,
+    "recipe": 15,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 2
+   }
+  },
+  "dataset:gbif_specimen_images": {
+   "edges": 172,
+   "by_kind": {
+    "datasets_root": 1,
+    "custody": 6,
+    "recipe": 15,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 2
+   }
+  },
+  "dataset:multires_mp_0.3": {
+   "edges": 163,
+   "by_kind": {
+    "datasets_root": 1,
+    "recipe": 12,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 2
+   }
+  },
+  "dataset:multires_mp_1": {
+   "edges": 163,
+   "by_kind": {
+    "datasets_root": 1,
+    "recipe": 12,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 2
+   }
+  },
+  "dataset:multires_mp_3": {
+   "edges": 163,
+   "by_kind": {
+    "datasets_root": 1,
+    "recipe": 12,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 2
+   }
+  },
+  "dataset:pseudo_specimens_r3_real": {
+   "edges": 169,
+   "by_kind": {
+    "datasets_root": 1,
+    "custody": 3,
+    "recipe": 15,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 2
+   }
+  },
+  "dataset:rejected_pseudo_v1": {
+   "edges": 151,
+   "by_kind": {
+    "datasets_root": 1,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 2
+   }
+  },
+  "dataset:synth_1_30_r2": {
+   "edges": 170,
+   "by_kind": {
+    "datasets_root": 1,
+    "recipe": 18,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 3
+   }
+  },
+  "dataset:synth_1_30_r3_real": {
+   "edges": 170,
+   "by_kind": {
+    "datasets_root": 1,
+    "recipe": 18,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 3
+   }
+  },
+  "dataset:synth_seg": {
+   "edges": 170,
+   "by_kind": {
+    "datasets_root": 1,
+    "recipe": 18,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 3
+   }
+  },
+  "dataset:teacher_check": {
+   "edges": 151,
+   "by_kind": {
+    "datasets_root": 1,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 2
+   }
+  },
+  "dataset:teacher_check2": {
+   "edges": 151,
+   "by_kind": {
+    "datasets_root": 1,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 2
+   }
+  },
+  "dataset:toy_renders": {
+   "edges": 151,
+   "by_kind": {
+    "datasets_root": 1,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 2
+   }
+  },
+  "kgroot:ddbf08d2bf382a2dcf6fcb85afa2": {
+   "edges": 150,
+   "by_kind": {
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 2
+   }
+  },
+  "protocol:DAISY-BB-001": {
+   "edges": 22,
+   "by_kind": {
+    "recipe": 18,
+    "amendment": 2,
+    "execution": 1,
+    "hybrid": 1
+   }
+  },
+  "protocol:DAISY-BB-001a": {
+   "edges": 13,
+   "by_kind": {
+    "recipe": 12,
+    "amendment": 1
+   }
+  },
+  "protocol:DAISY-BB-001b": {
+   "edges": 6,
+   "by_kind": {
+    "recipe": 6
+   }
+  },
+  "truth:5d190ae6be4b3b6b4aaa5bf32ce0": {
+   "edges": 149,
+   "by_kind": {
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 2
+   }
+  },
+  "truth:5d190ae6be4b3b6b:b7ec9c58c59": {
+   "edges": 1,
+   "by_kind": {
+    "hybrid": 1
+   }
+  }
+ },
+ "custody_break": {
+  "datasets_root:81abcb94b5": {
+   "edges": 151,
+   "by_kind": {
+    "datasets_root": 1,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 2
+   }
+  },
+  "custody:b187f0c9d4": {
+   "edges": 173,
+   "by_kind": {
+    "datasets_root": 1,
+    "custody": 7,
+    "recipe": 15,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 2
+   }
+  },
+  "custody:1930b7f106": {
+   "edges": 173,
+   "by_kind": {
+    "datasets_root": 1,
+    "custody": 7,
+    "recipe": 15,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 2
+   }
+  },
+  "custody:470b9194d7": {
+   "edges": 173,
+   "by_kind": {
+    "datasets_root": 1,
+    "custody": 7,
+    "recipe": 15,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 2
+   }
+  },
+  "custody:c5f010bd64": {
+   "edges": 173,
+   "by_kind": {
+    "datasets_root": 1,
+    "custody": 7,
+    "recipe": 15,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 2
+   }
+  },
+  "custody:93c8be1bdc": {
+   "edges": 173,
+   "by_kind": {
+    "datasets_root": 1,
+    "custody": 7,
+    "recipe": 15,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 2
+   }
+  },
+  "custody:2b9fd3d22f": {
+   "edges": 170,
+   "by_kind": {
+    "datasets_root": 1,
+    "custody": 4,
+    "recipe": 15,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 2
+   }
+  },
+  "custody:d1aae3b6a5": {
+   "edges": 164,
+   "by_kind": {
+    "datasets_root": 1,
+    "custody": 1,
+    "recipe": 12,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 2
+   }
+  },
+  "custody:9fffd06e8b": {
+   "edges": 164,
+   "by_kind": {
+    "datasets_root": 1,
+    "custody": 1,
+    "recipe": 12,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 2
+   }
+  },
+  "custody:e2b95dd749": {
+   "edges": 164,
+   "by_kind": {
+    "datasets_root": 1,
+    "custody": 1,
+    "recipe": 12,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 2
+   }
+  },
+  "custody:9620d5c652": {
+   "edges": 171,
+   "by_kind": {
+    "datasets_root": 1,
+    "custody": 1,
+    "recipe": 18,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 3
+   }
+  },
+  "custody:2b6a639e95": {
+   "edges": 171,
+   "by_kind": {
+    "datasets_root": 1,
+    "custody": 1,
+    "recipe": 18,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 3
+   }
+  },
+  "custody:f3205b8cb8": {
+   "edges": 171,
+   "by_kind": {
+    "datasets_root": 1,
+    "custody": 1,
+    "recipe": 18,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 3
+   }
+  },
+  "custody:928e31da19": {
+   "edges": 152,
+   "by_kind": {
+    "datasets_root": 1,
+    "custody": 1,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 2
+   }
+  },
+  "custody:f26a63ac91": {
+   "edges": 152,
+   "by_kind": {
+    "datasets_root": 1,
+    "custody": 1,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 2
+   }
+  },
+  "custody:335e27a2c6": {
+   "edges": 152,
+   "by_kind": {
+    "datasets_root": 1,
+    "custody": 1,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 2
+   }
+  },
+  "custody:e82e42e41d": {
+   "edges": 152,
+   "by_kind": {
+    "datasets_root": 1,
+    "custody": 1,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 2
+   }
+  },
+  "custody:1d5e7f580d": {
+   "edges": 152,
+   "by_kind": {
+    "datasets_root": 1,
+    "custody": 1,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 2
+   }
+  },
+  "custody:fa32d59756": {
+   "edges": 152,
+   "by_kind": {
+    "datasets_root": 1,
+    "custody": 1,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 2
+   }
+  },
+  "custody:ecacac767f": {
+   "edges": 152,
+   "by_kind": {
+    "datasets_root": 1,
+    "custody": 1,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 2
+   }
+  },
+  "custody:3a4fae89ca": {
+   "edges": 152,
+   "by_kind": {
+    "datasets_root": 1,
+    "custody": 1,
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 2
+   }
+  },
+  "amendment:72b8751201": {
+   "edges": 15,
+   "by_kind": {
+    "amendment": 2,
+    "recipe": 12,
+    "hybrid": 1
+   }
+  },
+  "amendment:3a03c56b4c": {
+   "edges": 7,
+   "by_kind": {
+    "amendment": 1,
+    "recipe": 6
+   }
+  },
+  "truth:93391532d9": {
+   "edges": 150,
+   "by_kind": {
+    "truth": 1,
+    "toy": 91,
+    "evaluation": 52,
+    "consensus": 4,
+    "hybrid": 2
+   }
+  },
+  "execution:b18d7c299e": {
+   "edges": 2,
+   "by_kind": {
+    "execution": 1,
+    "hybrid": 1
+   }
+  },
+  "hybrid:6cdcc8cc24 (incident: failed execution x protocol am)": {
+   "edges": 1,
+   "by_kind": {
+    "hybrid": 1
+   }
+  },
+  "hybrid:f405544c3f (toy x filter passage)": {
+   "edges": 1,
+   "by_kind": {
+    "hybrid": 1
+   }
+  },
+  "hybrid:e69eb8fbb4 (consensus x leave-one-actor-out)": {
+   "edges": 1,
+   "by_kind": {
+    "hybrid": 1
+   }
+  }
+ }
+}

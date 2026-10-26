@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b191c">
+<meta name="description" content="Explore source-verified model bounding boxes on 3D printed insect toy photographs; compare YOLOE and OWLv2 predictions and inspect original evidence.">
+<title>Vision Lab · Bounding-box evidence · Baebugs</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#detector">Skip to object detection</a>
+<header class="topbar">
+  <a class="brand" href="../"><span class="brand-symbol">✳</span><span>baebugs.</span> <small>/ VISION LAB</small></a>
+  <nav aria-label="Website sections">
+    <a href="../">Home</a>
+    <a href="../protocols/">Protocols</a>
+    <a href="../board/">Workflow Board</a>
+    <a href="../review/">Evidence Review</a>
+    <a class="active" href="./" aria-current="page">Detection</a>
+  </nav>
+</header>
+<main>
+  <section class="hero" aria-labelledby="title">
+    <div class="eyebrow">SOURCE-BOUND COMPUTER VISION / V1</div>
+    <h1 id="title">Every box has a <em>source.</em></h1>
+    <p>Explore recorded bounding-box predictions on real photographs of 3D-printed insect toys. Compare models, inspect confidence and coordinates, and follow each image back to its immutable evidence leaf.</p>
+    <div class="scope-notice"><span class="scope-dot"></span> RECORDED INFERENCE · NOT LIVE CAMERA · NOT BIOLOGICAL GROUND TRUTH</div>
+  </section>
+  <section class="workbench" id="detector" aria-labelledby="bench-title">
+    <div class="section-label">01 / INSPECT PREDICTIONS</div>
+    <div class="bench-top"><div><h2 id="bench-title">Detection workbench</h2><p>Toggle the model layer, choose a photo, and select any box for its source identity.</p></div><a class="small-link" href="../review/">See validation boundaries ↗</a></div>
+    <div class="controls">
+      <label for="photo-select">Source photograph
+        <select id="photo-select" aria-label="Choose source photograph"><option>Loading photos…</option></select>
+      </label>
+      <fieldset><legend>Model overlays</legend>
+        <label class="toggle"><input id="show-yoloe" type="checkbox" checked><span class="mark yoloe"></span> YOLOE</label>
+        <label class="toggle"><input id="show-owlv2" type="checkbox" checked><span class="mark owlv2"></span> OWLv2</label>
+      </fieldset>
+      <label for="confidence">Minimum confidence: <output id="threshold-value">0.15</output>
+        <input id="confidence" type="range" min="0" max="0.95" step="0.05" value="0.15">
+      </label>
+      <button type="button" class="reset" id="reset">Reset filters</button>
+    </div>
+    <div class="viewer-grid">
+      <div class="photo-panel">
+        <div class="panel-header"><span><i class="signal"></i> ORIGINAL SOURCE PHOTO + LIVE SVG BOX OVERLAY</span><span id="resolution"></span></div>
+        <div id="photo-viewport" class="photo-viewport">
+          <div class="photo-stack" id="photo-stack">
+            <img id="source-photo" alt="3D printed insect toys used for visual detection comparison" decoding="async">
+            <svg id="boxes" class="overlay" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"></svg>
+          </div>
+        </div>
+        <div class="photo-footer"><span id="visible-count" role="status" aria-live="polite">Waiting for recorded predictions</span><span>Model scores ≠ calibrated probabilities</span></div>
+      </div>
+      <aside class="inspector">
+        <div class="inspector-heading">
+          <span class="section-label">02 / TRACE A BOX</span>
+          <h3>Detection inspector</h3>
+          <p>Select a model prediction to inspect pixel coordinates, classification and provenance.</p>
+        </div>
+        <div id="prediction-list" class="prediction-list" role="group" aria-label="Recorded model detections"></div>
+        <div id="selected-detail" class="selected-detail" aria-live="polite">Select a bounding box to view the evidence record.</div>
+      </aside>
+    </div>
+  </section>
+  <section class="receipts" aria-labelledby="receipts-title">
+    <div><span class="section-label">03 / RECOMPUTABLE EVIDENCE</span><h2 id="receipts-title">Inspect, then contest.</h2><p>Every published image and model proposal is bound to a source file hash. The viewer recomputes the derivative image and detection catalog digests when requested. Distinct hashes identify exact content; they do not establish accuracy or ownership of third-party models.</p></div>
+    <div class="receipt-card">
+      <dl>
+        <div><dt>Source image SHA-256</dt><dd id="photo-hash">—</dd></div>
+        <div><dt>Recorded prediction data</dt><dd id="results-hash">—</dd></div>
+        <div><dt>Published graph root</dt><dd id="graph-root">—</dd></div>
+        <div><dt>License / origin</dt><dd id="rights">—</dd></div>
+      </dl>
+      <div class="receipt-actions"><button type="button" id="verify-button" class="button primary">Verify public image and data hashes</button><a id="source-link" target="_blank" rel="noopener noreferrer" class="button outline" href="../">Open original source</a><a id="leaf-link" class="button outline" href="../">View graph leaf</a></div>
+      <p id="verify-result" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+  <section class="disclaimer">
+    <strong>What this demonstrates</strong>
+    <p>Two existing toy-photograph model comparisons, recorded YOLOE and OWLv2 boxes, a recorded ORDER classifier on some OWLv2 proposals, exact-byte image/source relationships and a human-inspectable interface. No detector weights are served; no new inference runs in the browser.</p>
+    <strong>What remains unknown</strong>
+    <p>No expert-confirmed taxonomy or independent accuracy benchmark for these images, no calibrated live-webcam pipeline at this website, no evidence that a robot recovered any specimen, and no new signed/Merkle Mountain Range commitment. Ultralytics weights and OWLv2 have separate upstream terms.</p>
+    <a href="../protocols/#protocol/calibrated-camera-intake">Remix the camera-intake protocol ↗</a>
+  </section>
+</main>
+<footer><span>BAEBUGS / OBJECT DETECTION / SOURCE-VERIFIED VIEW</span><span>PRECOMPUTED · NOT_TESTED AS LIVE ROBOTIC VISION</span><a href="https://github.com/biobitworks/baebugs">Public GitHub repository ↗</a></footer>
+</body>
+</html>

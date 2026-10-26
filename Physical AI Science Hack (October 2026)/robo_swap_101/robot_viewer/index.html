@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#10171f"><title>SO-101 · Sequence Studio</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand"><span class="brand-mark">S<span>01</span></span><div><h1>SO-101 <span>Sequence Studio</span></h1><p>TEACH · PLAN · PLAY</p></div></div>
+    <div class="header-actions"><span id="connection-badge" class="badge">Connecting…</span><button id="stop" class="stop" title="Stop motion and hold the follower (Escape)"><span>■</span> Stop</button></div>
+  </header>
+  <main class="workspace">
+    <aside class="control-panel">
+      <section>
+        <div class="section-heading"><h2>Arm connection</h2><span class="step-label">01</span></div>
+        <label class="field">Workspace<select id="mode"><option value="simulation">Simulation</option><option value="hardware">Physical follower</option></select></label>
+        <div id="hardware-controls" hidden>
+          <label class="check"><input type="checkbox" id="use-leader" checked> Connect leader for teleoperation</label>
+          <p class="micro" id="arm-identities"></p>
+          <p class="micro" id="usb-status" role="status">Checking USB adapters…</p>
+          <button id="refresh-usb" class="text-button">Refresh USB detection</button>
+          <button id="connect" class="full">Connect arms</button>
+          <p class="micro">Connect reads positions. Starting teleoperation or execution enables follower torque.</p>
+          <p class="micro" id="teleop-profile"></p>
+        </div>
+        <p id="connection-note" class="muted">Try the full workflow with a virtual follower.</p>
+        <button id="teleop" class="full" disabled>Start teleoperation</button>
+        <div class="connection-links"><button id="disconnect" class="text-button" disabled>Disconnect</button><button id="release" class="text-button danger-text" disabled>Release torque…</button></div>
+      </section>
+      <section>
+        <div class="section-heading"><h2 id="pose-heading">Simulated pose</h2><span id="pose-age" class="micro">—</span></div>
+        <p class="micro" id="joint-help">Move the sliders to teach a position.</p>
+        <div id="joints"></div>
+        <button id="zero" class="text-button">Reset simulated pose</button>
+      </section>
+      <section class="record-section">
+        <div class="section-heading"><h2>Capture position</h2><kbd>R</kbd></div>
+        <label class="field">Position name<input id="record-name" maxlength="80" placeholder="e.g. Pick up tip" value="Position 1"></label>
+        <button id="record" class="record full"><span class="record-dot"></span> Record position</button>
+        <p class="micro">Captures the follower’s measured joints during teleoperation. Every position is saved locally.</p>
+      </section>
+    </aside>
+    <section class="stage" aria-label="3D follower visualizer">
+      <div id="viewport"></div>
+      <div class="stage-top"><div><span class="eyebrow">FOLLOWER VIEW</span><h2 id="stage-title">Teach a movement.</h2><p id="stage-subtitle">Build a sequence, one position at a time.</p></div><span id="model-status" class="micro">Loading geometry…</span></div>
+      <div class="view-legend"><span><i class="live-dot"></i><span id="live-label">Simulated arm</span></span><span id="ghost-legend" hidden><i class="preview-dot"></i>Preview</span></div>
+      <div class="view-tools"><button id="fit" title="Fit the robot in view">Fit view</button><label class="check"><input id="path-toggle" type="checkbox" checked> Tool path</label><label class="check"><input id="grid" type="checkbox" checked> Grid</label></div>
+      <div class="transport">
+        <div class="transport-heading"><span id="preview-label">Plan a sequence to preview its motion</span><span id="preview-time">0:00 / 0:00</span></div>
+        <input id="timeline" type="range" min="0" max="1" step="0.01" value="0" aria-label="Preview timeline" disabled>
+        <div class="transport-bottom"><span class="micro">Drag to orbit · Right drag to pan · Scroll to zoom</span><button id="live-view" class="text-button">Return to live view</button></div>
+      </div>
+    </section>
+    <aside class="sequence-panel">
+      <section class="library-section">
+        <div class="section-heading"><h2>Your sequences</h2><span id="save-status" class="saved">Saved locally</span></div>
+        <div class="inline"><select id="sequence-select" aria-label="Saved sequence"></select><button id="new-sequence" class="square" title="New sequence" aria-label="New sequence">＋</button></div>
+        <input id="sequence-name" class="sequence-title" aria-label="Sequence name" maxlength="80" value="Untitled sequence">
+        <div class="sequence-meta"><span id="point-count">0 positions</span><div><button id="import" class="text-button">Import</button><button id="export" class="text-button">Export</button></div></div>
+        <p id="source-summary" class="micro" hidden></p>
+        <button id="pickup-tip" class="full pickup-button" title="Append a pickup step: from the preceding position, move 3 mm down and 3 mm up along base Z, holding X/Y and tool orientation.">＋ Pickup tip <span>Base Z · 3 mm ↓ / ↑</span></button>
+        <input id="import-file" type="file" accept="application/json,.json" hidden>
+      </section>
+      <section class="steps-section">
+        <div class="section-heading"><h2>Position sequence</h2><span class="step-label">02</span></div>
+        <p class="micro">Drag to reorder. Pickup follows the preceding pose.</p>
+        <ol id="sequence-list"></ol>
+        <div id="empty-sequence" class="empty-state"><span class="empty-symbol">◎</span><h3>Your first move starts here.</h3><p>Pose the arm, give the position a name, and press Record.</p></div>
+      </section>
+      <section class="planner-section">
+        <div class="section-heading"><h2>Motion plan</h2><span class="step-label">03</span></div>
+        <div class="planner-settings"><label class="field">Speed <span class="input-unit">°/s · %/s</span><input id="speed" type="number" value="20" min="1" max="60" step="1"></label><label class="field">Acceleration <span class="input-unit">°/s² · %/s²</span><input id="acceleration" type="number" value="60" min="1" max="120" step="1"></label></div>
+        <div id="plan-summary" class="plan-summary">No plan yet</div>
+        <div class="plan-actions"><button id="plan" class="primary">Plan sequence</button><button id="preview" disabled>▶ Preview</button></div>
+        <button id="execute" class="execute full" disabled>Execute in simulation <span>↗</span></button>
+        <p class="micro planner-note">Stops at each position. No collision checking. Review the path and clear the workspace before moving hardware.</p>
+      </section>
+    </aside>
+  </main>
+  <footer class="status-bar"><span id="status" role="status" aria-live="polite">Starting local studio…</span><a href="/model-viewer.html" target="_blank" rel="noreferrer">Model explorer ↗</a></footer>
+  <div id="toast" role="alert" hidden></div>
+  <dialog id="release-dialog"><h2>Release follower torque?</h2><p>Support the arm first. It can fall when the motors stop holding.</p><div class="dialog-actions"><button id="cancel-release">Keep holding</button><button id="confirm-release" class="stop">Release torque</button></div></dialog>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

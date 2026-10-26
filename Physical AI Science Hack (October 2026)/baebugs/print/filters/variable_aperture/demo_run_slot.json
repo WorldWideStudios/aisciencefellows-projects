@@ -1,0 +1,133 @@
+{
+ "pair": {
+  "w0_mm": 6.0,
+  "length_mm": 19.05,
+  "pitch_mm": 9.0,
+  "thickness_mm": 0.5,
+  "lead_mm": 1.25,
+  "steps_per_rev": 3200,
+  "material": "316L stainless (304 as cost comparator)",
+  "mode": "slot"
+ },
+ "widths": [
+  6.0,
+  3.0,
+  1.5
+ ],
+ "trays": {
+  "T1 >= 6 mm": [
+   "ditalini#0",
+   "ditalini#1",
+   "ditalini#2",
+   "campanelle#0",
+   "campanelle#1",
+   "campanelle#2",
+   "farfalle#0",
+   "farfalle#1",
+   "farfalle#2"
+  ],
+  "T2 >= 3 mm": [],
+  "T3 >= 1.5 mm": [
+   "couscous#0",
+   "couscous#1",
+   "couscous#2",
+   "white_rice#0",
+   "white_rice#1",
+   "white_rice#2"
+  ],
+  "pass-through < 1.5 mm": [
+   "chia_seed#0",
+   "chia_seed#1",
+   "chia_seed#2",
+   "wild_rice#0",
+   "wild_rice#1",
+   "wild_rice#2",
+   "fideo#0",
+   "fideo#1",
+   "fideo#2",
+   "egg_noodle#0",
+   "egg_noodle#1",
+   "egg_noodle#2"
+  ]
+ },
+ "steps": [
+  {
+   "step": 0,
+   "action": "set_width",
+   "width_mm": 6.0,
+   "offset_mm": 0.0,
+   "travel_mm": 0.0,
+   "motor_steps": 0,
+   "mode": "slot",
+   "G_empty": true,
+   "load": [],
+   "measured_mm": 6.0,
+   "G_measured": true,
+   "retained": [
+    "ditalini#0",
+    "ditalini#1",
+    "ditalini#2",
+    "campanelle#0",
+    "campanelle#1",
+    "campanelle#2",
+    "farfalle#0",
+    "farfalle#1",
+    "farfalle#2"
+   ],
+   "capture_tray": "T1 >= 6 mm",
+   "G_capture": true,
+   "passed_n": 18,
+   "result": "OK",
+   "leaf": "5f4c0d0025aad3aa25f789395c453859d08d84bb18f3cf2ada43eca4753ac135"
+  },
+  {
+   "step": 1,
+   "action": "set_width",
+   "width_mm": 3.0,
+   "offset_mm": 3.0,
+   "travel_mm": 3.0,
+   "motor_steps": 7680,
+   "mode": "slot",
+   "G_empty": true,
+   "load": [],
+   "measured_mm": 3.0,
+   "G_measured": true,
+   "retained": [],
+   "capture_tray": "T2 >= 3 mm",
+   "G_capture": true,
+   "passed_n": 18,
+   "result": "OK",
+   "leaf": "a2e719564672550c835b413b0a9e7591dca1ad814678ec539142941b8aff79ec"
+  },
+  {
+   "step": 2,
+   "action": "set_width",
+   "width_mm": 1.5,
+   "offset_mm": 4.5,
+   "travel_mm": 4.5,
+   "motor_steps": 11520,
+   "mode": "slot",
+   "G_empty": true,
+   "load": [],
+   "measured_mm": 1.5,
+   "G_measured": true,
+   "retained": [
+    "couscous#0",
+    "couscous#1",
+    "couscous#2",
+    "white_rice#0",
+    "white_rice#1",
+    "white_rice#2"
+   ],
+   "capture_tray": "T3 >= 1.5 mm",
+   "G_capture": true,
+   "passed_n": 12,
+   "result": "OK",
+   "leaf": "e8eee5529bec67654f7694769426e994eb9dc38dfad5474d16078a3d6acb24f2"
+  }
+ ],
+ "status": "COMPLETED",
+ "break_at": null,
+ "mmr_root": "1e53e0a6b3fd701c53a2c3a45dcef6d4f7ccd91449160f0592faadb4be9ad1f0",
+ "accounted": true
+}

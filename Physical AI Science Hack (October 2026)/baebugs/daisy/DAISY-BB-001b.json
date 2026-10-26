@@ -1,0 +1,173 @@
+{
+ "amends": {
+  "change": "deterministic -> false; amp decided by gate G3b; gates G2/G3a/G3b/G3c added; variance policy declared",
+  "protocol": "DAISY-BB-001a",
+  "reason": "user decision: steps conditional and hashed as evidence, variance accepted",
+  "sha256": "4fabf9d6fff145032d60c0dbfbe607033f4d83b0351574287b54357b8602153e"
+ },
+ "baebugs_commit": "b81ba0f84e4155ec1297c00d0cf23a3004a4003b",
+ "bundles": {
+  "baebugs-daisy-context": [
+   "essig",
+   "gbif_manifests"
+  ],
+  "baebugs-daisy-eval": [
+   "teacher_check",
+   "teacher_check2",
+   "toy_renders"
+  ],
+  "baebugs-daisy-train": [
+   "pseudo_specimens_r3_real",
+   "multires_mp_0.3",
+   "multires_mp_1",
+   "multires_mp_3",
+   "synth_1_30_r2",
+   "synth_1_30_r3_real",
+   "synth_seg"
+  ]
+ },
+ "datasets_root": "ed85205278a19f7f3b68892a93a1fb7b3d2d4d177ccc11f6108c028974055125",
+ "gates": {
+  "G0": "protocol sha256 == embedded",
+  "G1": "custody: every file + member Merkle root == frozen",
+  "G2": "init weights sha256 == pinned",
+  "G3a": "environment recorded; pin mismatches flagged",
+  "G3b": "AMP used only if AMP and fp32 smoke losses are finite and agree within variance",
+  "G3c": "every epoch: all losses finite (first failure = break point, stops that run)",
+  "smoke_fraction": 0.05
+ },
+ "global_leakage": {
+  "overlap_examples": [],
+  "train_ids": 2162,
+  "train_val_overlap": 0,
+  "val_ids": 400
+ },
+ "id": "DAISY-BB-001b",
+ "roots": {
+  "essig": "9470d0a7190a82c0208d36fe36381d6cde79bca201d9d359feaefc14f188deb3",
+  "gbif_manifests": "8acf57fbccce49ba60246ea06b0e3dd49cb04267381a4eb435e02af33be99978",
+  "multires_mp_0.3": "3a6e4252bf7a05d3096632b560919969d5c79a78add7e7ecf3efe844c46a5086",
+  "multires_mp_1": "fb675accb1407c1486a170456095ea60da27ccf3f56a2f740885903a6cd241b0",
+  "multires_mp_3": "5315e394a516180618884f3f0513bc5f5129584c0068c17285b68fce751cbacb",
+  "pseudo_specimens_r3_real": "bd664a429df494323232b73aaa0312d0e4567e2064e457cb29e50236e9c2fd29",
+  "synth_1_30_r2": "fe8cf5e95f3e7dc91ecdeb8b7f69841f8640205b1abff1884add362db2b6af51",
+  "synth_1_30_r3_real": "7962a34d52350dabc33b6ffe816429ac4d69d139a0b445d5dba0ff172c605e3f",
+  "synth_seg": "a6f8baef46c478cbfdd89b3a5e086eed53b3388bef484b15ff814565599c3676",
+  "teacher_check": "aa3cf75a6c128faa389631ecd6238906a2f4c7888e809ca2b3dae785400198d3",
+  "teacher_check2": "5fc4d500bc9230714334d74c44d26be53cd340ef28bdd7e4a651862b995304ec",
+  "toy_renders": "9630bed9295ce2ade54c9e25bfa8c0d0df6b4b8dfc0f6c8d3a9fd51925187d8f"
+ },
+ "runs": [
+  {
+   "name": "A_synth",
+   "train": [
+    "synth_1_30_r2",
+    "synth_1_30_r3_real",
+    "synth_seg"
+   ],
+   "val": [
+    "synth_1_30_r2",
+    "synth_1_30_r3_real",
+    "synth_seg"
+   ]
+  },
+  {
+   "name": "B_synth_pseudo",
+   "train": [
+    "synth_1_30_r2",
+    "synth_1_30_r3_real",
+    "synth_seg",
+    "pseudo_specimens_r3_real"
+   ],
+   "val": [
+    "synth_1_30_r2",
+    "synth_1_30_r3_real",
+    "synth_seg",
+    "pseudo_specimens_r3_real"
+   ]
+  },
+  {
+   "name": "C_all",
+   "train": [
+    "synth_1_30_r2",
+    "synth_1_30_r3_real",
+    "synth_seg",
+    "pseudo_specimens_r3_real",
+    "multires_mp_0.3",
+    "multires_mp_1",
+    "multires_mp_3"
+   ],
+   "val": [
+    "synth_1_30_r2",
+    "synth_1_30_r3_real",
+    "synth_seg",
+    "pseudo_specimens_r3_real",
+    "multires_mp_0.3",
+    "multires_mp_1",
+    "multires_mp_3"
+   ]
+  },
+  {
+   "name": "LODO_synth",
+   "train": [
+    "pseudo_specimens_r3_real",
+    "multires_mp_0.3",
+    "multires_mp_1",
+    "multires_mp_3"
+   ],
+   "val": [
+    "synth_1_30_r2",
+    "synth_1_30_r3_real",
+    "synth_seg"
+   ]
+  },
+  {
+   "name": "LODO_pseudo",
+   "train": [
+    "synth_1_30_r2",
+    "synth_1_30_r3_real",
+    "synth_seg",
+    "multires_mp_0.3",
+    "multires_mp_1",
+    "multires_mp_3"
+   ],
+   "val": [
+    "pseudo_specimens_r3_real"
+   ]
+  },
+  {
+   "name": "LODO_multires",
+   "train": [
+    "synth_1_30_r2",
+    "synth_1_30_r3_real",
+    "synth_seg",
+    "pseudo_specimens_r3_real"
+   ],
+   "val": [
+    "multires_mp_0.3",
+    "multires_mp_1",
+    "multires_mp_3"
+   ]
+  }
+ ],
+ "settings": {
+  "batch": 16,
+  "deterministic": false,
+  "epochs": 15,
+  "imgsz": 640,
+  "init_sha256": "55ed65c56c91713d23e8402371c6c49a6fd84f257f7dce452e8d70e41dcbe152",
+  "model": "yolo11n-seg.pt",
+  "pins": {
+   "ultralytics": "8.4.188"
+  },
+  "seed": 2026,
+  "ultralytics": "8.4.188",
+  "workers": 4
+ },
+ "status": "PROPOSED",
+ "variance": {
+  "map_reproducibility_abs": 0.03,
+  "note": "deterministic=false: run-to-run variance accepted; decisions and steps are hashed as evidence",
+  "smoke_loss_rel": 0.25
+ }
+}

@@ -1,0 +1,470 @@
+{
+  "schema": "baebugs.protocol_library.v1",
+  "scope": "CURATED_REPOSITORY_REFERENCES",
+  "disclaimer": "Templates document existing Baebugs source; they do not authorize or attest physical lab execution. Public sharing exposes only curated template IDs.",
+  "recipes": [
+    {
+      "id": "calibrated-camera-intake",
+      "name": "See every specimen",
+      "subtitle": "Capture → measure → register a stable object identity.",
+      "category": "Imaging",
+      "stage": "intake",
+      "accent": "cyan",
+      "motif": "camera",
+      "scene": "Three outlined specimens beneath a camera viewfinder",
+      "fit": "Image and measurement planning",
+      "status": "IMPLEMENTED_SOFTWARE",
+      "hardware_gate": false,
+      "sources": [
+        "baebugs/camera.py",
+        "baebugs/measure.py",
+        "baebugs/triage.py"
+      ],
+      "steps": [
+        {
+          "title": "Define specimen context",
+          "detail": "Choose an accession or a toy-analog ID; do not infer species identity.",
+          "source": "baebugs/triage.py",
+          "gate": "REVIEW_ONLY"
+        },
+        {
+          "title": "Inspect image scale",
+          "detail": "Bind the imaging setup to a ruler or calibration target; record calibration uncertainty.",
+          "source": "baebugs/measure.py",
+          "gate": "REVIEW_ONLY"
+        },
+        {
+          "title": "Prepare observation receipt",
+          "detail": "Record image SHA-256, context ID, bounding geometry and human review state.",
+          "source": "baebugs/camera.py",
+          "gate": "REVIEW_ONLY"
+        }
+      ],
+      "tags": [
+        "vision",
+        "camera",
+        "specimen",
+        "measurement",
+        "identity"
+      ],
+      "rights_note": "Software sources are MIT-declared in the repository; specimen photos retain their own media rights.",
+      "access": "PUBLIC_TEMPLATE",
+      "reproducibility": "SOURCE_REFERENCED_NOT_PHYSICALLY_VALIDATED",
+      "duration": "NOT_MEASURED"
+    },
+    {
+      "id": "modular-filter-studio",
+      "name": "Design a gentler filter",
+      "subtitle": "Compare round, slotted and variable openings without sacrificing source traceability.",
+      "category": "Fabrication",
+      "stage": "sort",
+      "accent": "amber",
+      "motif": "filter",
+      "scene": "Interchangeable sieve disks and a sliding aperture plate",
+      "fit": "Printable/cuttable geometry",
+      "status": "DESIGN_NOT_VALIDATED",
+      "hardware_gate": true,
+      "sources": [
+        "baebugs/inserts.py",
+        "baebugs/punch_filters.py",
+        "baebugs/variable_aperture.py",
+        "site/lab/index.html"
+      ],
+      "steps": [
+        {
+          "title": "Choose a frame and material",
+          "detail": "Identify tray interface and candidate steel/printed insert; dimensions require measurement.",
+          "source": "baebugs/inserts.py",
+          "gate": "REVIEW_ONLY"
+        },
+        {
+          "title": "Select aperture geometry",
+          "detail": "Document nominal opening shape and mechanical capture assumptions.",
+          "source": "baebugs/punch_filters.py",
+          "gate": "REVIEW_ONLY"
+        },
+        {
+          "title": "Record mechanical risks",
+          "detail": "Examine seams, burrs, appendage trapping and a reversible tray release.",
+          "source": "baebugs/variable_aperture.py",
+          "gate": "OPERATOR_REVIEW"
+        }
+      ],
+      "tags": [
+        "OpenSCAD",
+        "filter",
+        "insert",
+        "manufacture",
+        "mesh",
+        "metal",
+        "sieve",
+        "stainless",
+        "steel"
+      ],
+      "rights_note": "Baebugs CAD files carry the repository declaration; imported vendor meshes, material certifications and fabrication rights require separate review.",
+      "access": "PUBLIC_TEMPLATE",
+      "reproducibility": "SOURCE_REFERENCED_NOT_PHYSICALLY_VALIDATED",
+      "duration": "NOT_MEASURED"
+    },
+    {
+      "id": "trommel-to-fraction",
+      "name": "One drum, several fractions",
+      "subtitle": "A modular hand-cranked trommel concept for observable analog sorting.",
+      "category": "Sorting",
+      "stage": "sort",
+      "accent": "orange",
+      "motif": "trommel",
+      "scene": "Three perforated drum zones feeding collection bins",
+      "fit": "Printed demo hardware",
+      "status": "PHYSICAL_RESULT_NOT_TESTED",
+      "hardware_gate": true,
+      "sources": [
+        "baebugs/print_parts.py",
+        "baebugs/analog_test.py",
+        "site/lab/stl/trommel_zone_2mm.stl",
+        "site/lab/stl/trommel_crank_hand.stl"
+      ],
+      "steps": [
+        {
+          "title": "Inspect source geometry",
+          "detail": "Select 2, 4 and 7 mm nominal drum zones and document material/fit.",
+          "source": "baebugs/print_parts.py",
+          "gate": "REVIEW_ONLY"
+        },
+        {
+          "title": "Define analog fractions",
+          "detail": "Identify dry proxy objects before sorting and photograph starting quantities.",
+          "source": "baebugs/analog_test.py",
+          "gate": "REVIEW_ONLY"
+        },
+        {
+          "title": "Request physical release review",
+          "detail": "Check guards, hand-drive torque, containment and specimen-damage boundaries before testing.",
+          "source": "site/lab/stl/trommel_crank_hand.stl",
+          "gate": "OPERATOR_REVIEW"
+        },
+        {
+          "title": "Record retained fractions",
+          "detail": "Only record OBSERVED once actual measured before/after fractions exist.",
+          "source": "baebugs/analog_test.py",
+          "gate": "REVIEW_ONLY"
+        }
+      ],
+      "tags": [
+        "hand-crank",
+        "trommel",
+        "3D print",
+        "sorting",
+        "analog"
+      ],
+      "rights_note": "STLs are design evidence only; not an independently certified material or commercially exclusive invention.",
+      "access": "PUBLIC_TEMPLATE",
+      "reproducibility": "SOURCE_REFERENCED_NOT_PHYSICALLY_VALIDATED",
+      "duration": "NOT_MEASURED"
+    },
+    {
+      "id": "smart-vortex-prep",
+      "name": "Choose a preprocessing path",
+      "subtitle": "Compare dispersal, settling and mesh stages in a clearly labeled virtual workflow.",
+      "category": "Preparation",
+      "stage": "disperse",
+      "accent": "teal",
+      "motif": "vortex",
+      "scene": "Wet-processing stations joined by specimen flow arrows",
+      "fit": "Virtual workcell stages",
+      "status": "MODEL_ONLY",
+      "hardware_gate": true,
+      "sources": [
+        "baebugs/bench_twin.py",
+        "baebugs/twin.py",
+        "baebugs/preservation.py"
+      ],
+      "steps": [
+        {
+          "title": "Document input preservation",
+          "detail": "Identify wet/dry state and note fragility, wings and appendages.",
+          "source": "baebugs/preservation.py",
+          "gate": "REVIEW_ONLY"
+        },
+        {
+          "title": "Review modeled stage alternatives",
+          "detail": "Explore hypothetical cross-flow, settling or dispersion without treating model output as measurement.",
+          "source": "baebugs/bench_twin.py",
+          "gate": "REVIEW_ONLY"
+        },
+        {
+          "title": "Escalate reagent and fluid settings",
+          "detail": "Require safety and specimen-preservation authorization before physical use.",
+          "source": "baebugs/twin.py",
+          "gate": "OPERATOR_REVIEW"
+        }
+      ],
+      "tags": [
+        "preprocessing",
+        "water",
+        "vortexer",
+        "flotation",
+        "fragile"
+      ],
+      "rights_note": "BioKEA instrument concepts require upstream attribution; no licensed chemical/process performance is asserted.",
+      "access": "PUBLIC_TEMPLATE",
+      "reproducibility": "SOURCE_REFERENCED_NOT_PHYSICALLY_VALIDATED",
+      "duration": "NOT_MEASURED"
+    },
+    {
+      "id": "robot-camera-handoff",
+      "name": "Track the handoff",
+      "subtitle": "Build a camera → filter → picker evidence route with explicit failure gates.",
+      "category": "Robotics",
+      "stage": "pick",
+      "accent": "violet",
+      "motif": "robot",
+      "scene": "Robot gripper approaching a labeled tray under a camera",
+      "fit": "Preflight and identity",
+      "status": "VIRTUAL_PREFLIGHT_ONLY",
+      "hardware_gate": true,
+      "sources": [
+        "baebugs/bugpicker_bridge.py",
+        "baebugs/tower_twin.py",
+        "baebugs/custody_watch.py"
+      ],
+      "steps": [
+        {
+          "title": "Check capture identity",
+          "detail": "Bind the target image and tray context to a single specimen candidate.",
+          "source": "baebugs/bugpicker_bridge.py",
+          "gate": "REVIEW_ONLY"
+        },
+        {
+          "title": "Review reach and collision gate",
+          "detail": "Preserve the previously observed virtual 316.7 mm vs 300 mm reach failure.",
+          "source": "baebugs/tower_twin.py",
+          "gate": "REVIEW_ONLY"
+        },
+        {
+          "title": "Request authorization",
+          "detail": "Do not drive the arm until an operator has approved and separately validated the motion.",
+          "source": "baebugs/custody_watch.py",
+          "gate": "OPERATOR_REVIEW"
+        }
+      ],
+      "tags": [
+        "robotics",
+        "arm",
+        "camera",
+        "custody",
+        "VIP"
+      ],
+      "rights_note": "Robotic assembly/integration is not evidence of exclusive BioKEA hardware ownership.",
+      "access": "PUBLIC_TEMPLATE",
+      "reproducibility": "SOURCE_REFERENCED_NOT_PHYSICALLY_VALIDATED",
+      "duration": "NOT_MEASURED"
+    },
+    {
+      "id": "opentrons-mini-sorter",
+      "name": "Make modules labware-ready",
+      "subtitle": "Select printed SBS adapters, tubes and a defined Flex protocol boundary.",
+      "category": "Labware",
+      "stage": "plate",
+      "accent": "sky",
+      "motif": "plate",
+      "scene": "Tubes, plates and a small sieve cassette on a Flex deck",
+      "fit": "Custom labware artifacts",
+      "status": "HARDWARE_NOT_TESTED",
+      "hardware_gate": true,
+      "sources": [
+        "baebugs/labware_twin.py",
+        "opentrons/labware/baebugs_mini_trommel_4bin.json",
+        "opentrons/protocols/baebugs_flex_line.py",
+        "print/labware/opentrons/baebugs_rack_96.json"
+      ],
+      "steps": [
+        {
+          "title": "Review labware definition",
+          "detail": "Inspect source geometry, SBS footprint and metadata against actual deck positions.",
+          "source": "baebugs/labware_twin.py",
+          "gate": "REVIEW_ONLY"
+        },
+        {
+          "title": "Review printed adapter",
+          "detail": "Record polymer, manufacturing method and sample-contact restrictions.",
+          "source": "opentrons/labware/baebugs_mini_trommel_4bin.json",
+          "gate": "REVIEW_ONLY"
+        },
+        {
+          "title": "Keep robot protocol gated",
+          "detail": "Inspect simulated method independently; physical dispensing requires qualified operators and hardware.",
+          "source": "opentrons/protocols/baebugs_flex_line.py",
+          "gate": "OPERATOR_REVIEW"
+        }
+      ],
+      "tags": [
+        "opentrons",
+        "flex",
+        "labware",
+        "pipette",
+        "3D print"
+      ],
+      "rights_note": "Opentrons interfaces have upstream Apache-2.0/trademark obligations; custom parts remain subject to contributor provenance.",
+      "access": "PUBLIC_TEMPLATE",
+      "reproducibility": "SOURCE_REFERENCED_NOT_PHYSICALLY_VALIDATED",
+      "duration": "NOT_MEASURED"
+    },
+    {
+      "id": "find-california-specimens",
+      "name": "Explore California collections",
+      "subtitle": "Trace specimens to their source, collecting event and rights context.",
+      "category": "Discovery",
+      "stage": "intake",
+      "accent": "lime",
+      "motif": "search",
+      "scene": "Magnifying glass over linked specimen collection cards",
+      "fit": "Dataset and provenance search",
+      "status": "SOURCE_ACCESS_VARIES",
+      "hardware_gate": false,
+      "sources": [
+        "baebugs/calbug.py",
+        "baebugs/essig_adapter.py",
+        "baebugs/dataone_adapter.py"
+      ],
+      "steps": [
+        {
+          "title": "Identify authoritative collection",
+          "detail": "Start from Calbug, Essig or DataONE without assuming each record is already ingested.",
+          "source": "baebugs/calbug.py",
+          "gate": "REVIEW_ONLY"
+        },
+        {
+          "title": "Resolve source restrictions",
+          "detail": "Separate specimen record metadata from image rights and collection terms.",
+          "source": "baebugs/essig_adapter.py",
+          "gate": "REVIEW_ONLY"
+        },
+        {
+          "title": "Create intake proposal",
+          "detail": "Export proposed atom and external relationship before dataset admission.",
+          "source": "baebugs/dataone_adapter.py",
+          "gate": "REVIEW_ONLY"
+        }
+      ],
+      "tags": [
+        "California",
+        "Calbug",
+        "Essig",
+        "DataONE",
+        "license",
+        "insects"
+      ],
+      "rights_note": "Source specimen photographs and databases carry separate rights and may not be redistributed.",
+      "access": "PUBLIC_TEMPLATE",
+      "reproducibility": "SOURCE_REFERENCED_NOT_PHYSICALLY_VALIDATED",
+      "duration": "NOT_MEASURED"
+    },
+    {
+      "id": "publish-evidence-graph",
+      "name": "Publish a contestable claim",
+      "subtitle": "From observation to atom, typed graph, inclusion proof and independent challenge.",
+      "category": "Evidence",
+      "stage": "evidence",
+      "accent": "pink",
+      "motif": "graph",
+      "scene": "Verified nodes and directed labeled connections",
+      "fit": "Source-bound research record",
+      "status": "SOFTWARE_IMPLEMENTED",
+      "hardware_gate": false,
+      "sources": [
+        "baebugs/aok.py",
+        "baebugs/hypergraph.py",
+        "baebugs/mvp.py",
+        "baebugs/fco.py"
+      ],
+      "steps": [
+        {
+          "title": "Identify evidence source",
+          "detail": "Record exact bytes and source/context identifiers; hashes alone do not prove truth.",
+          "source": "baebugs/aok.py",
+          "gate": "REVIEW_ONLY"
+        },
+        {
+          "title": "Declare typed relationships",
+          "detail": "Bind claims and evidence with a named FCG edge; never infer causality from linkage.",
+          "source": "baebugs/hypergraph.py",
+          "gate": "REVIEW_ONLY"
+        },
+        {
+          "title": "Generate and inspect proofs",
+          "detail": "Run the existing GitHub/CLI verification; do not invent an MMR commitment.",
+          "source": "baebugs/mvp.py",
+          "gate": "REVIEW_ONLY"
+        },
+        {
+          "title": "Open contest route",
+          "detail": "Preserve the predecessor claim, attach rebuttal as successor FCO/FCG.",
+          "source": "baebugs/fco.py",
+          "gate": "REVIEW_ONLY"
+        }
+      ],
+      "tags": [
+        "AoK",
+        "FCO",
+        "FCG",
+        "Merkle",
+        "reproducibility",
+        "license"
+      ],
+      "rights_note": "The project declares MIT software; each scientific source remains governed by its own rights.",
+      "access": "PUBLIC_TEMPLATE",
+      "reproducibility": "SOURCE_REFERENCED_NOT_PHYSICALLY_VALIDATED",
+      "duration": "NOT_MEASURED"
+    },
+    {
+      "id": "daisy-domain-holdout",
+      "name": "Audit the vision benchmark",
+      "subtitle": "Compare domain holdouts while keeping pseudo-labels and lost weights visible.",
+      "category": "Machine learning",
+      "stage": "intake",
+      "accent": "slate",
+      "motif": "model",
+      "scene": "Side-by-side predicted masks with a warning marker",
+      "fit": "Recorded training result",
+      "status": "EXPLORATORY_RESULTS",
+      "hardware_gate": false,
+      "sources": [
+        "daisy/results/DAISY-BB-002a/v2/DECISION.md",
+        "baebugs/domain_holdout.py",
+        "baebugs/daisy_data.py"
+      ],
+      "steps": [
+        {
+          "title": "Read frozen decision",
+          "detail": "Inspect AZ and OR exploratory teacher-agreement results and NV sample limitation.",
+          "source": "daisy/results/DAISY-BB-002a/v2/DECISION.md",
+          "gate": "REVIEW_ONLY"
+        },
+        {
+          "title": "Audit partitions",
+          "detail": "Verify source-group separation and media identity overlap.",
+          "source": "baebugs/domain_holdout.py",
+          "gate": "REVIEW_ONLY"
+        },
+        {
+          "title": "Gate trained weights and truth",
+          "detail": "Do not promote lost weights or YOLOE pseudo-label scores as independent biological validation.",
+          "source": "baebugs/daisy_data.py",
+          "gate": "HUMAN_EVIDENCE_REVIEW"
+        }
+      ],
+      "tags": [
+        "DAISY",
+        "segmentation",
+        "training",
+        "LODO",
+        "pseudo-label"
+      ],
+      "rights_note": "Model toolchain, pretrained weights and museum images have separate license/attribution obligations.",
+      "access": "PUBLIC_TEMPLATE",
+      "reproducibility": "SOURCE_REFERENCED_NOT_PHYSICALLY_VALIDATED",
+      "duration": "NOT_MEASURED"
+    }
+  ]
+}

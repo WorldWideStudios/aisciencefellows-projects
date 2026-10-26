@@ -1,0 +1,17 @@
+{
+  "canonical_predecessor_mutated": false,
+  "corrective_successor": "Exclude local Python compilation caches from copytree and public manifest.",
+  "failed_file": "protocols/__pycache__/build_catalog.cpython-313.pyc",
+  "failure": "Local Python .pyc file was erroneously included in bundle manifest, but Vercel returned HTTP 404 for it.",
+  "observed_file_readback_fail": 1,
+  "observed_file_readback_pass": 43,
+  "parent_aok_root": "8685bbe7f0fc69335f0d78f741e60ed06b0df22aa6711632b9f12d83f9fce471",
+  "parent_source_commit": "f9d22f5c1db7e79b160ea8cc71362492cbe82171",
+  "prior_manifest_sha256": "9414db10b97ae3b69a0d0b0a807daf927d63c3ab59868d4f5257ac9c6ac3c700",
+  "production_inspect_url": "https://vercel.com/biobitworks/baebugs-lab-workcell/9iR719YArHZeVxcSoR396RqQYt7R",
+  "release_note": "Static source website returned HTTP 200; this is a manifest completeness failure, not evidence of biological failure.",
+  "result": "FAILED_FULL_MANIFEST_RECONCILIATION",
+  "robot_actions": "NOT_TESTED",
+  "schema": "baebugs.ProtocolReleaseFailureFCO.v1",
+  "signature": "NOT_SIGNED"
+}

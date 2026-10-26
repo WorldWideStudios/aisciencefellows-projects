@@ -1,0 +1,270 @@
+{
+ "source": "/mnt/c/Users/ajfil/Documents/Github/testSieveSorter-bambu/sim/opt/winners.json",
+ "study": "demo",
+ "built": "2026-10-25 09:52",
+ "caveat": "sim ranking only; uncalibrated; openings simulated at nominal - 0.15 mm (ASSUMED undersize)",
+ "undersize_mm_assumed": 0.15,
+ "winners": [
+  {
+   "rank": 1,
+   "id": "P-ae394887",
+   "family": "plinko",
+   "sim_spec": "plinko",
+   "stroke": {
+    "profile": "sine",
+    "amp_mm": 0.2373,
+    "freq_hz": 48.0,
+    "angle_deg": 20.0
+   },
+   "stroke_human": "tool sine 48 Hz, 2.2 g (0.24 mm), 20 deg up",
+   "score": {
+    "robust": 0.9992,
+    "mean": 0.9994,
+    "sd": 0.0001,
+    "worst_friction_set": 0.9993
+   },
+   "params_nominal": {
+    "g1": 3.7,
+    "b1": 2.6,
+    "h1": 1.6,
+    "g2": 1.5,
+    "b2": 1.8,
+    "h2": 2.4,
+    "drive": "tool",
+    "amp": 11.5,
+    "speed": 33.0,
+    "freq": 48.0,
+    "accel": 2.2,
+    "angle": 20.0
+   },
+   "assembly": null,
+   "flags": [],
+   "parts": [
+    {
+     "name": "win1_layer_1_rods_3p7",
+     "print": true,
+     "checks_ok": true,
+     "bbox_mm": [
+      131.4,
+      95.4,
+      14.0
+     ],
+     "volume_cm3": 19.13
+    },
+    {
+     "name": "win1_layer_2_rods_1p5",
+     "print": true,
+     "checks_ok": true,
+     "bbox_mm": [
+      131.4,
+      95.4,
+      22.0
+     ],
+     "volume_cm3": 21.51
+    },
+    {
+     "name": "win1_layer_3_catch",
+     "print": true,
+     "checks_ok": true,
+     "bbox_mm": [
+      131.4,
+      95.4,
+      28.0
+     ],
+     "volume_cm3": 30.81
+    },
+    {
+     "name": "win1_tower",
+     "print": false,
+     "checks_ok": true,
+     "bbox_mm": [
+      162.0,
+      52.01,
+      31.0
+     ],
+     "volume_cm3": 62.07
+    }
+   ]
+  },
+  {
+   "rank": 2,
+   "id": "P-b192da7c",
+   "family": "plinko",
+   "sim_spec": "plinko",
+   "stroke": {
+    "profile": "sine",
+    "amp_mm": 0.3812,
+    "freq_hz": 37.0,
+    "angle_deg": 25.0
+   },
+   "stroke_human": "tool sine 37 Hz, 2.1 g (0.38 mm), 25 deg up",
+   "score": {
+    "robust": 0.9996,
+    "mean": 0.9996,
+    "sd": 0.0001,
+    "worst_friction_set": 0.9996
+   },
+   "params_nominal": {
+    "g1": 4.7,
+    "b1": 2.6,
+    "h1": 2.2,
+    "g2": 1.6,
+    "b2": 2.3,
+    "h2": 3.2,
+    "drive": "tool",
+    "amp": 10.0,
+    "speed": 37.0,
+    "freq": 37.0,
+    "accel": 2.1,
+    "angle": 25.0
+   },
+   "assembly": null,
+   "flags": [],
+   "parts": [
+    {
+     "name": "win2_layer_1_rods_4p7",
+     "print": true,
+     "checks_ok": true,
+     "bbox_mm": [
+      131.4,
+      95.4,
+      14.0
+     ],
+     "volume_cm3": 20.8
+    },
+    {
+     "name": "win2_layer_2_rods_1p6",
+     "print": true,
+     "checks_ok": true,
+     "bbox_mm": [
+      131.4,
+      95.4,
+      22.0
+     ],
+     "volume_cm3": 26.86
+    },
+    {
+     "name": "win2_layer_3_catch",
+     "print": true,
+     "checks_ok": true,
+     "bbox_mm": [
+      131.4,
+      95.4,
+      28.0
+     ],
+     "volume_cm3": 30.81
+    },
+    {
+     "name": "win2_tower",
+     "print": false,
+     "checks_ok": true,
+     "bbox_mm": [
+      162.0,
+      52.01,
+      31.0
+     ],
+     "volume_cm3": 65.58
+    }
+   ]
+  },
+  {
+   "rank": 3,
+   "id": "G-a1ecf9bb",
+   "family": "gated_mid",
+   "sim_spec": "gated:2.7,t3p35,t1p45,tw=4.85,tooth=0.95,slot=8.1/7,gx=22.2/53,flip=0",
+   "stroke": {
+    "profile": "sine",
+    "amp_mm": 0.3991,
+    "freq_hz": 48.0,
+    "angle_deg": 30.0
+   },
+   "stroke_human": "tool sine 48 Hz, 3.7 g (0.40 mm), 30 deg up",
+   "score": {
+    "robust": 0.9851,
+    "mean": 0.9882,
+    "sd": 0.0031,
+    "worst_friction_set": 0.9866
+   },
+   "params_nominal": {
+    "slope": 2.7,
+    "k1": "t",
+    "s1": 3.5,
+    "gh": 3.5,
+    "s2": 1.6,
+    "tw": 5.0,
+    "tooth": 0.8,
+    "gx1": 22.2,
+    "slot": 8.1,
+    "drive": "tool",
+    "amp": 12.0,
+    "speed": 35.0,
+    "freq": 48.0,
+    "accel": 3.7,
+    "angle": 30.0
+   },
+   "assembly": [
+    "L1 (top): gate_t3p5 at x 22.2, drop slot 8.1 mm, wedge beyond",
+    "L2 (NOT flipped): gate_t1p6 at x 53, standard slot and ramp",
+    "catch pan under L2"
+   ],
+   "flags": [],
+   "parts": [
+    {
+     "name": "win3_gated_container_L1",
+     "print": true,
+     "checks_ok": true,
+     "bbox_mm": [
+      131.4,
+      95.4,
+      21.0
+     ],
+     "volume_cm3": 76.11
+    },
+    {
+     "name": "win3_gated_container_L2",
+     "print": true,
+     "checks_ok": true,
+     "bbox_mm": [
+      131.4,
+      95.4,
+      21.0
+     ],
+     "volume_cm3": 68.41
+    },
+    {
+     "name": "win3_gate_t3p5",
+     "print": true,
+     "checks_ok": true,
+     "bbox_mm": [
+      91.0,
+      18.0,
+      2.01
+     ],
+     "volume_cm3": 2.82
+    },
+    {
+     "name": "win3_gate_t1p6",
+     "print": true,
+     "checks_ok": true,
+     "bbox_mm": [
+      91.0,
+      18.0,
+      2.01
+     ],
+     "volume_cm3": 3.06
+    },
+    {
+     "name": "win3_tower",
+     "print": false,
+     "checks_ok": true,
+     "bbox_mm": [
+      162.0,
+      52.01,
+      75.0
+     ],
+     "volume_cm3": 169.25
+    }
+   ]
+  }
+ ]
+}

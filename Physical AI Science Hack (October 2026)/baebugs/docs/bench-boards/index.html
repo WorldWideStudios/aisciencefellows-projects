@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BaeBugs Bench Boards</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: a design memo in one reading column, broken by a full-width masonry mockup of the board and a card detail pane. */
+:root{
+  --bg:#eef0ec; --paper:#fbfcf9; --ink:#1c211d; --muted:#5b645d; --line:#d3d9d2;
+  --accent:#2f5d8a; --accent-soft:#dbe6f1; --pin:#b03a48;
+  --ok:#2e7d4f; --ok-soft:#dcefe3; --warn:#9a6a00; --warn-soft:#f5ead0; --bad:#b03a48; --bad-soft:#f6dfe2;
+  --display:"Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
+  --body:"Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121614; --paper:#1a201d; --ink:#e3e8e3; --muted:#9aa59d; --line:#2e3833;
+  --accent:#8db6e0; --accent-soft:#1f3042; --pin:#e27a87;
+  --ok:#7fcf9c; --ok-soft:#1d3427; --warn:#e3b65a; --warn-soft:#3a3018; --bad:#e27a87; --bad-soft:#3d2228; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121614; --paper:#1a201d; --ink:#e3e8e3; --muted:#9aa59d; --line:#2e3833;
+  --accent:#8db6e0; --accent-soft:#1f3042; --pin:#e27a87;
+  --ok:#7fcf9c; --ok-soft:#1d3427; --warn:#e3b65a; --warn-soft:#3a3018; --bad:#e27a87; --bad-soft:#3d2228; color-scheme:dark}
+
+body{background:var(--bg);color:var(--ink);font:16px/1.6 var(--body)}
+[hidden]{display:none!important}
+.wrap{max-width:46rem;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:2.5rem 1rem}
+.wide{max-width:76rem;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:1rem}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.15;margin:0}
+h1{font-size:clamp(2rem,5vw,3rem);font-weight:700;letter-spacing:-.01em}
+h2{font-size:1.5rem;font-weight:700;margin-top:2.75rem}
+h3{font-size:1.1rem;font-weight:500}
+p{margin:.75rem 0}
+.eyebrow{font:600 .75rem/1 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.lede{font-size:1.15rem;color:var(--ink)}
+.meta{color:var(--muted);font-size:.9rem}
+code,.mono{font-family:var(--mono);font-size:.85em}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+ul,ol{padding-left:1.25rem} li{margin:.3rem 0}
+
+.callout{border-left:3px solid var(--pin);background:var(--paper);padding:.75rem 1rem;margin:1.25rem 0}
+
+/* ---- mockup shell ---- */
+.app{background:var(--paper);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.bar{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;padding:.75rem 1rem;border-bottom:1px solid var(--line)}
+.brand{font:700 1.05rem var(--display)}
+.search{flex:1 1 14rem;min-width:0;border:1px solid var(--line);border-radius:999px;padding:.45rem .9rem;background:var(--bg);color:var(--muted);font-size:.9rem}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;padding:.6rem 1rem;border-bottom:1px solid var(--line)}
+.chip{font:.78rem/1 var(--body);padding:.4rem .65rem;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--ink);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.body{display:grid;grid-template-columns:minmax(0,1fr) 21rem}
+@media (max-width:900px){.body{grid-template-columns:minmax(0,1fr)}}
+.feed{columns:3 13rem;column-gap:.9rem;padding:1rem}
+.card{break-inside:avoid;margin:0 0 .9rem;border:1px solid var(--line);border-radius:8px;background:var(--paper);overflow:hidden;cursor:pointer;display:block;width:100%;text-align:left;color:inherit;font:inherit;padding:0}
+.card:hover{border-color:var(--accent)}
+.card.sel{outline:2px solid var(--accent)}
+.vis{background:var(--bg);display:block}
+.vis svg{display:block;width:100%;height:auto}
+.cbody{padding:.65rem .75rem .75rem;display:grid;gap:.4rem}
+.kind{font:600 .68rem/1 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.ctitle{font:500 1rem/1.25 var(--display)}
+.row{display:flex;flex-wrap:wrap;gap:.35rem;align-items:center}
+.tag{font:.72rem/1 var(--mono);padding:.3rem .45rem;border-radius:4px;background:var(--bg);color:var(--muted)}
+.st{font:600 .7rem/1 var(--mono);padding:.3rem .45rem;border-radius:4px}
+.st.tested{background:var(--ok-soft);color:var(--ok)}
+.st.built{background:var(--accent-soft);color:var(--accent)}
+.st.frozen{background:var(--warn-soft);color:var(--warn)}
+.st.break{background:var(--bad-soft);color:var(--bad)}
+.lic{font:.72rem/1 var(--mono);padding:.3rem .45rem;border-radius:4px;border:1px solid var(--line)}
+.lic.third{border-color:var(--warn);color:var(--warn)}
+.hash{font:.7rem var(--mono);color:var(--muted)}
+.cost{font:600 .8rem var(--mono);margin-left:auto;font-variant-numeric:tabular-nums}
+
+.side{border-left:1px solid var(--line);padding:1rem;display:grid;gap:1rem;align-content:start;min-width:0}
+@media (max-width:900px){.side{border-left:0;border-top:1px solid var(--line)}}
+.side h3{font-size:1.15rem}
+.steps{list-style:none;padding:0;margin:0;display:grid;gap:.5rem;counter-reset:s}
+.steps li{display:grid;grid-template-columns:1.6rem minmax(0,1fr);gap:.5rem;margin:0;font-size:.88rem;line-height:1.4}
+.steps li::before{counter-increment:s;content:counter(s);font:600 .75rem/1.6rem var(--mono);text-align:center;border-radius:50%;background:var(--accent-soft);color:var(--accent);height:1.6rem}
+.steps li.pause::before{background:var(--warn-soft);color:var(--warn);content:"⏸"}
+.kv{display:grid;grid-template-columns:auto minmax(0,1fr);gap:.3rem .75rem;font-size:.82rem;margin:0}
+.kv dt{color:var(--muted)} .kv dd{margin:0;font-family:var(--mono);font-size:.78rem;overflow-wrap:anywhere}
+.btns{display:flex;flex-wrap:wrap;gap:.5rem}
+.btn{font:600 .85rem var(--body);padding:.5rem .8rem;border-radius:6px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.pf{font:.78rem/1.45 var(--mono);background:var(--bg);border-radius:6px;padding:.6rem .7rem;margin:0;white-space:pre-wrap;overflow-wrap:anywhere}
+.pf .x{color:var(--bad)} .pf .y{color:var(--ok)}
+.boards{display:grid;gap:.35rem;font-size:.85rem}
+.boards div{display:flex;justify-content:space-between;gap:.5rem;padding:.4rem .5rem;border-radius:5px;background:var(--bg)}
+.mocknote{font-size:.8rem;color:var(--muted);padding:.5rem 1rem;border-top:1px solid var(--line)}
+
+table{border-collapse:collapse;width:100%;font-size:.9rem}
+.tbl{overflow-x:auto;margin:1rem 0}
+th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:600 .75rem var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+td code{overflow-wrap:anywhere}
+pre.model{font:.8rem/1.5 var(--mono);background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:1rem;overflow-x:auto}
+.phase{display:grid;grid-template-columns:4.5rem minmax(0,1fr);gap:.75rem;padding:.75rem 0;border-bottom:1px solid var(--line)}
+.phase b{font:700 1rem var(--display)}
+footer{color:var(--muted);font-size:.85rem;padding-block:2rem 3rem}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="eyebrow">BaeBugs · design memo · draft 1 · 25 Oct 2026</div>
+  <h1 style="margin-top:.6rem">Bench Boards</h1>
+  <p class="lede">A visual, pin-and-fork feed for lab protocols and the parts they need, built as a view over the BaeBugs graph so every card carries its own hash, licence and twin check.</p>
+  <p class="meta">Scope: next feature after the hackathon MVP. Nothing here is built yet. Grounded in <code>mvp-kg</code> at <code>bffec50</code> and the bench-twin files in the project folder.</p>
+
+  <h2>The idea in one paragraph</h2>
+  <p>Protocol sites today are long text pages. Researchers actually choose a method the way people browse Pinterest: by looking at the rig, the deck layout and the result, then saving it for later. Bench Boards shows each protocol, printable part, labware definition, insect print and model as a card with a picture, a few visual steps, a cost, and a custody chip. You pin cards to boards ("Pollinator bag sort under $200"), fork a card to make your own version, and press <b>Check in twin</b> to see whether it would run on your bench before anything moves.</p>
+
+  <div class="callout"><b>Why BaeBugs can do this cheaply.</b> The hard part of such a site is trust: is this the file the author ran, under what licence, did it work? BaeBugs already answers that for every file. The AoK graph has 868 atoms, each with a sha256, a claim (799 OWN, 20 THIRD), a licence and a status (736 built, 83 tested, 17 frozen, 12 result, 20 reference). A card is just a nicer face on one or more of those leaves.</div>
+</div>
+
+<div class="wide">
+  <div class="app" role="region" aria-label="Static mockup of the Bench Boards feed">
+    <div class="bar">
+      <span class="brand">Bench Boards</span>
+      <span class="search">Search protocols, parts, taxa, hardware…</span>
+      <span class="meta mono">graph root 7c41…e09a</span>
+    </div>
+    <div class="chips" id="filters">
+      <button class="chip" aria-pressed="true" data-f="all" id="f-all">All</button>
+      <button class="chip" aria-pressed="false" data-f="protocol" id="f-protocol">Protocols</button>
+      <button class="chip" aria-pressed="false" data-f="part" id="f-part">Printable parts</button>
+      <button class="chip" aria-pressed="false" data-f="labware" id="f-labware">Labware</button>
+      <button class="chip" aria-pressed="false" data-f="bug" id="f-bug">Insect prints</button>
+      <button class="chip" aria-pressed="false" data-f="model" id="f-model">Models &amp; agents</button>
+      <button class="chip" aria-pressed="false" data-f="cheap" id="f-cheap">Kit under $200</button>
+    </div>
+    <div class="body">
+      <div class="feed" id="feed">
+
+        <button class="card sel" data-k="protocol cheap" data-id="flex" id="c-flex">
+          <span class="vis"><svg viewBox="0 0 240 170" aria-hidden="true">
+            <rect width="240" height="170" fill="var(--bg)"/>
+            <g font-family="JetBrains Mono, monospace" font-size="9" fill="var(--muted)">
+            <g fill="none" stroke="var(--line)" stroke-width="1.5">
+              <rect x="14" y="12" width="66" height="34" rx="3"/><rect x="87" y="12" width="66" height="34" rx="3"/><rect x="160" y="12" width="66" height="34" rx="3"/>
+              <rect x="14" y="51" width="66" height="34" rx="3"/><rect x="87" y="51" width="66" height="34" rx="3"/><rect x="160" y="51" width="66" height="34" rx="3"/>
+              <rect x="14" y="90" width="66" height="34" rx="3"/><rect x="87" y="90" width="66" height="34" rx="3"/><rect x="160" y="90" width="66" height="34" rx="3"/>
+              <rect x="14" y="129" width="66" height="34" rx="3"/><rect x="87" y="129" width="66" height="34" rx="3"/><rect x="160" y="129" width="66" height="34" rx="3"/>
+            </g>
+            <rect x="87" y="12" width="66" height="34" rx="3" fill="var(--accent-soft)"/><text x="92" y="32">A2 tips</text>
+            <rect x="160" y="12" width="66" height="34" rx="3" fill="var(--line)"/><text x="165" y="32">A3 trash</text>
+            <rect x="14" y="51" width="66" height="34" rx="3" fill="var(--accent-soft)"/><text x="19" y="71">B1 plate</text>
+            <rect x="87" y="51" width="66" height="34" rx="3" fill="var(--warn-soft)"/><text x="92" y="71">B2 hand-off</text>
+            <rect x="14" y="90" width="66" height="34" rx="3" fill="var(--accent-soft)"/><text x="19" y="110">C1 lysis</text>
+            <rect x="87" y="90" width="66" height="34" rx="3" fill="var(--warn-soft)"/><text x="92" y="110">C2 sieve</text>
+            <rect x="14" y="129" width="66" height="34" rx="3" fill="var(--ok-soft)"/><text x="19" y="149">D1 H-S</text>
+            <rect x="87" y="129" width="66" height="34" rx="3" fill="var(--warn-soft)"/><text x="92" y="149">D2 trommel</text>
+            <rect x="160" y="129" width="66" height="34" rx="3" fill="var(--ok-soft)"/><text x="165" y="149">D3 56 °C</text>
+            </g></svg></span>
+          <span class="cbody">
+            <span class="kind">Protocol · Opentrons Flex</span>
+            <span class="ctitle">BioKEA line on Flex: sort, image, pick, lyse, incubate</span>
+            <span class="row"><span class="st tested">simulated</span><span class="lic">OWN</span><span class="tag">8 specimens</span><span class="tag">5 modules</span></span>
+            <span class="row"><span class="hash">leaf opentrons/protocols/baebugs_flex_line.py</span></span>
+          </span>
+        </button>
+
+        <button class="card" data-k="part cheap" data-id="rack" id="c-rack">
+          <span class="vis"><svg viewBox="0 0 240 150" aria-hidden="true">
+            <rect width="240" height="150" fill="var(--bg)"/>
+            <rect x="20" y="22" width="200" height="106" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.5"/>
+            <g fill="var(--accent)" opacity=".75" id="g96"></g>
+          </svg></span>
+          <span class="cbody">
+            <span class="kind">Printable part · remix</span>
+            <span class="ctitle">SBS 96 tube rack, 9 mm pitch</span>
+            <span class="row"><span class="st built">built</span><span class="lic">OWN · open hw</span><span class="tag">PETG 50 g</span><span class="cost">$1.11</span></span>
+            <span class="row"><span class="hash">remix of 3 observed tip boxes</span></span>
+          </span>
+        </button>
+
+        <button class="card" data-k="bug" data-id="bug" id="c-bug">
+          <span class="vis"><svg viewBox="0 0 240 200" aria-hidden="true">
+            <rect width="240" height="200" fill="var(--bg)"/>
+            <g fill="none" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round">
+              <path d="M120 52 L102 30 M120 52 L138 30"/>
+              <path d="M104 92 L72 78 M104 112 L68 116 M106 132 L76 156 M136 92 L168 78 M136 112 L172 116 M134 132 L164 156"/>
+            </g>
+            <ellipse cx="120" cy="62" rx="12" ry="11" fill="var(--ink)"/>
+            <ellipse cx="120" cy="88" rx="17" ry="15" fill="var(--ink)"/>
+            <ellipse cx="120" cy="134" rx="24" ry="34" fill="var(--ink)"/>
+            <g stroke="var(--pin)" stroke-width="1.2"><line x1="200" y1="56" x2="200" y2="168"/><line x1="195" y1="56" x2="205" y2="56"/><line x1="195" y1="168" x2="205" y2="168"/></g>
+            <text x="186" y="186" font-family="JetBrains Mono, monospace" font-size="10" fill="var(--pin)">13.5 mm</text>
+          </svg></span>
+          <span class="cbody">
+            <span class="kind">Insect print · Fuse 1 toy</span>
+            <span class="ctitle">Apidae at family mean length</span>
+            <span class="row"><span class="st built">built</span><span class="lic">OWN</span><span class="tag">set of 5: ±1, ±2 SD</span></span>
+            <span class="row"><span class="hash">leaf print/fuse1/california/Apidae_mean_13.5mm.stl</span></span>
+          </span>
+        </button>
+
+        <button class="card" data-k="labware cheap" data-id="handoff" id="c-handoff">
+          <span class="vis"><svg viewBox="0 0 240 120" aria-hidden="true">
+            <rect width="240" height="120" fill="var(--bg)"/>
+            <rect x="24" y="30" width="192" height="64" rx="5" fill="var(--paper)" stroke="var(--line)" stroke-width="1.5"/>
+            <circle cx="120" cy="62" r="18" fill="var(--accent-soft)" stroke="var(--accent)"/>
+            <rect x="178" y="48" width="24" height="28" rx="2" fill="none" stroke="var(--warn)" stroke-dasharray="3 2"/>
+            <rect x="96" y="18" width="48" height="10" rx="2" fill="var(--line)"/>
+          </svg></span>
+          <span class="cbody">
+            <span class="kind">Labware · Opentrons JSON + STL</span>
+            <span class="ctitle">Hand-off carrier with 20 mm suction pad</span>
+            <span class="row"><span class="st built">built</span><span class="lic">OWN</span><span class="tag">SBS 127.76 × 85.48</span><span class="tag">50.0 cm³</span></span>
+            <span class="row"><span class="hash">sha 643cce3b…3b47</span></span>
+          </span>
+        </button>
+
+        <button class="card" data-k="model" data-id="yolo" id="c-yolo">
+          <span class="vis"><svg viewBox="0 0 240 110" aria-hidden="true">
+            <rect width="240" height="110" fill="var(--bg)"/>
+            <g fill="none" stroke-width="2"><rect x="30" y="24" width="56" height="44" stroke="var(--ok)"/><rect x="110" y="40" width="40" height="52" stroke="var(--ok)"/><rect x="170" y="20" width="46" height="34" stroke="var(--bad)"/></g>
+            <g font-family="JetBrains Mono, monospace" font-size="9"><text x="30" y="20" fill="var(--ok)">9.8 mm</text><text x="110" y="36" fill="var(--ok)">6.9 mm</text><text x="170" y="16" fill="var(--bad)">disagree</text></g>
+          </svg></span>
+          <span class="cbody">
+            <span class="kind">Bring your own model</span>
+            <span class="ctitle">YOLO sizer paired with classical contours</span>
+            <span class="row"><span class="st tested">tested</span><span class="lic third">THIRD · AGPL-3.0</span></span>
+            <span class="row"><span class="hash">Models trained or run with it are AGPL-3.0 unless an Ultralytics Enterprise licence is held</span></span>
+          </span>
+        </button>
+
+        <button class="card" data-k="part" data-id="slot" id="c-slot">
+          <span class="vis"><svg viewBox="0 0 240 140" aria-hidden="true">
+            <rect width="240" height="140" fill="var(--bg)"/>
+            <rect x="24" y="20" width="192" height="100" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="1.5"/>
+            <g fill="var(--ink)" id="gslot"></g>
+          </svg></span>
+          <span class="cbody">
+            <span class="kind">Filter tray · metal slot</span>
+            <span class="ctitle">SS-SLOT 3.2 × 19 mm tray</span>
+            <span class="row"><span class="st break">twin BREAK</span><span class="lic">OWN</span><span class="tag">1 of 31 hole types</span></span>
+            <span class="row"><span class="hash">reach 316.7 mm needed, arm has 300.0</span></span>
+          </span>
+        </button>
+
+        <button class="card" data-k="protocol" data-id="prereg" id="c-prereg">
+          <span class="vis"><svg viewBox="0 0 240 96" aria-hidden="true">
+            <rect width="240" height="96" fill="var(--bg)"/>
+            <g font-family="JetBrains Mono, monospace" font-size="10" fill="var(--muted)">
+              <rect x="20" y="22" width="56" height="26" rx="3" fill="var(--warn-soft)"/><text x="26" y="39" fill="var(--warn)">prereg</text>
+              <rect x="92" y="22" width="56" height="26" rx="3" fill="var(--warn-soft)"/><text x="102" y="39" fill="var(--warn)">amd 1–4</text>
+              <rect x="164" y="22" width="56" height="26" rx="3" fill="var(--ok-soft)"/><text x="170" y="39" fill="var(--ok)">v4 result</text>
+              <path d="M76 35h16M148 35h16" stroke="var(--muted)"/>
+              <text x="20" y="74">frozen: never edited, only amended</text>
+            </g></svg></span>
+          <span class="cbody">
+            <span class="kind">Study protocol · preregistered</span>
+            <span class="ctitle">DAISY-BB-004 with four amendments</span>
+            <span class="row"><span class="st frozen">frozen</span><span class="lic">OWN</span><span class="tag">DECISION + ADDENDUM</span></span>
+          </span>
+        </button>
+
+        <button class="card" data-k="part cheap" data-id="trommel" id="c-trommel">
+          <span class="vis"><svg viewBox="0 0 240 120" aria-hidden="true">
+            <rect width="240" height="120" fill="var(--bg)"/>
+            <rect x="40" y="42" width="160" height="36" rx="18" fill="var(--paper)" stroke="var(--ink)" stroke-width="1.5"/>
+            <g stroke="var(--ink)"><line x1="93" y1="42" x2="93" y2="78"/><line x1="146" y1="42" x2="146" y2="78"/></g>
+            <g font-family="JetBrains Mono, monospace" font-size="9" fill="var(--muted)"><text x="52" y="98">1.5 mm</text><text x="104" y="98">3.0 mm</text><text x="158" y="98">5.0 mm</text></g>
+          </svg></span>
+          <span class="cbody">
+            <span class="kind">Printable part · deck module</span>
+            <span class="ctitle">Mini trommel drum, 3 zones, 4 bins</span>
+            <span class="row"><span class="st built">built</span><span class="lic">OWN</span><span class="tag">Ø36 × 90 mm</span><span class="tag">N20 motor</span></span>
+          </span>
+        </button>
+
+      </div>
+
+      <aside class="side" aria-label="Card detail">
+        <div>
+          <div class="eyebrow">Card detail</div>
+          <h3 style="margin-top:.35rem">BioKEA line on Flex</h3>
+          <p class="meta" style="margin:.35rem 0 0">Five BioKEA modules translated onto one Opentrons deck. Simulation only, not run on hardware.</p>
+        </div>
+        <ol class="steps">
+          <li class="pause">Load sample into the mini trommel (D2), run its motor from the external controller</li>
+          <li><span>Sieve stack on Heater-Shaker D1, 200 rpm to spread specimens <span class="tag">⏱ 60 s</span></span></li>
+          <li class="pause">Image each fraction, pick into the hand-off carrier (B2)</li>
+          <li>Dispense 200 µL lysis buffer + proteinase K per well</li>
+          <li><span>Soak on Heater-Shaker D3 at 56 °C; exoskeleton kept as voucher <span class="tag">⏱ 60 min</span> <span class="st frozen">GHS: proteinase K</span></span></li>
+        </ol>
+        <dl class="kv">
+          <dt>Needs</dt><dd>3 printed parts · 2 Heater-Shakers · 1000 µL pipette</dd>
+          <dt>Printed kit</dt><dd>~$8 filament (bench-twin estimate)</dd>
+          <dt>Licence</dt><dd>OWN; Opentrons API Apache-2.0 (THIRD)</dd>
+          <dt>Card root</dt><dd>merkle(fragments) → 3f9a…c21d</dd>
+          <dt>Forks</dt><dd>0 · contests 0</dd>
+        </dl>
+        <div class="btns">
+          <button class="btn" id="b-twin">Check in twin</button>
+          <button class="btn ghost" id="b-fork">Fork</button>
+          <button class="btn ghost" id="b-pin">Pin to board</button>
+        </div>
+        <pre class="pf" id="pf" hidden></pre>
+        <div>
+          <div class="eyebrow" style="margin-bottom:.5rem">Your boards</div>
+          <div class="boards">
+            <div><span>Pollinator bag sort under $200</span><span class="mono">6</span></div>
+            <div><span>Flex deck parts to print</span><span class="mono">4</span></div>
+            <div><span>Novel-size candidates</span><span class="mono">3</span></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <div class="mocknote">Static mockup. Card facts are real values from the repo; hashes shown with “…” and the graph and card roots are placeholders.</div>
+  </div>
+</div>
+
+<div class="wrap">
+  <h2>What a card is</h2>
+  <p>Every card is a small bundle of fragments, hashed with the same rules the bench twin already uses: canonical JSON, leaf = SHA-256(<code>0x00</code> ‖ name ‖ <code>\n</code> ‖ JSON), node = SHA-256(<code>0x01</code> ‖ left ‖ right), fragments sorted by name. So <code>verify.py</code> logic carries over unchanged.</p>
+<pre class="model">card
+  kind        protocol | part | labware | bug_print | model | agent | study
+  leaves      [leaf:opentrons/protocols/baebugs_flex_line.py, ...]   # must resolve to stored bytes, else BREAK
+  media       preview image or SVG, rendered from the STL / deck / GLB
+  steps       [{text, kind: action|pause, module, params}]           # parsed from protocol.comment / pause
+  needs       [card roots of parts, labware, instruments]
+  cost        {usd, basis, est: true}                                # from bench-twin filament table
+  licence     {claim: OWN|THIRD, licence, effect}                    # copied from the AoK atom
+  derivation  [parent card roots]                                    # a fork; same as a remix today
+  status      built | tested | frozen | result | BREAK
+card_root = merkle(fragments)</pre>
+  <p><b>Boards</b> are an ordered list of card roots with a title. Each pin, unpin and fork is appended to an MMR log, the same structure as the existing <code>daisy/*_mmr.jsonl</code> logs, so a board's history replays and its root goes into the MVP root like every other log.</p>
+
+  <h2>How the four promises map to existing code</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Promise</th><th>What already exists</th><th>New work</th></tr></thead>
+    <tbody>
+      <tr><td>Visual steps</td><td><code>baebugs_flex_line.py</code> marks every off-deck action as <code>protocol.pause</code>; <code>opentrons_simulate</code> output is saved next to it</td><td>Parse the sim log into step rows; render deck SVG from <code>load_labware</code> calls</td></tr>
+      <tr><td>Custody per card</td><td>AoK leaves, MMR logs, bench-twin Merkle trees and custody log, contest issue form</td><td>Card and board fragments; a <code>card:</code> address level in <code>mvp.py</code></td></tr>
+      <tr><td>Bring your own licensing</td><td>Every AoK atom has claim, licence and an <code>effect</code> sentence (for example the AGPL note on YOLO)</td><td>Show the strictest effect across a card's <code>needs</code>; block “Fork” wording that drops a THIRD notice</td></tr>
+      <tr><td>Will it run here</td><td><code>twin.py</code> preflight and the tower emulator, which already stop at the first failed check</td><td>A “Check in twin” endpoint that takes a card plus a bench profile and returns the break point</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Against the AI Mode brief</h2>
+  <p>Byron's pasted architecture brief covers the generic version of this app. Most of it fits. Where it differs, the reason is the same each time: in BaeBugs a hash the graph references must resolve to stored bytes, so the database, the media store and the AI helpers can serve cards but can never be the record.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Brief proposes</th><th>BaeBugs already has</th><th>Call</th></tr></thead>
+    <tbody>
+      <tr><td>Protocol pin with <code>forked_from: pin_id</code></td><td>Remix <code>derivation</code> fragment holding parent roots</td><td><b>Adopt, content-addressed.</b> A fork points at the parent's card root, so lineage cannot be quietly rewritten.</td></tr>
+      <tr><td>Cover image or looping GIF on S3</td><td>STL, GLB and deck files as leaves; bench photos hashed by original JPEG</td><td><b>Adopt.</b> Store media anywhere (Vercel Blob is fine), but the card cites its sha256. Renders come from the real files first.</td></tr>
+      <tr><td>Boards, sections, shared PI lab boards</td><td>MMR logs per stream</td><td><b>Adopt.</b> Sections are ordered sub-lists; a shared board is one log with several signers.</td></tr>
+      <tr><td>Ratings and comments</td><td>Contest issue form, status field</td><td><b>Diverge on ratings.</b> Keep comments; rank by evidence (tested, twin passes, contests), not stars.</td></tr>
+      <tr><td>Click-to-execute: checkboxes, timers</td><td><code>protocol.pause</code> checkpoints in the Flex protocol, hash-chained provenance</td><td><b>Adopt and extend.</b> Each check-off is a custody event, so a bench run becomes a replayable run log. Timers come from the step params (60 s shake, 60 min soak).</td></tr>
+      <tr><td>PostgreSQL schema</td><td>JSON in git, MMR roots in the MVP root</td><td><b>Later, as an index.</b> Git is the source of truth through v1. Postgres (or Atlas) arrives in v2 as a rebuildable cache; drop it and rebuild from the repo.</td></tr>
+      <tr><td>PDF-to-pin parser with an LLM</td><td>Claude review and local Ollama lanes</td><td><b>Adopt, as drafts.</b> The source PDF is hashed as a leaf, the model and prompt are logged, and the card stays “parsed, unverified” until a person checks it. Small local models first.</td></tr>
+      <tr><td>AI-generated schematics for cards without images</td><td>Deck SVG and STL previews rendered from files</td><td><b>Diverge.</b> No generated pictures that look like results. Draw diagrams from the protocol's own <code>load_labware</code> calls; anything generated is labelled “illustration”.</td></tr>
+      <tr><td>Keyword + vector search</td><td>Facets in the AoK graph and insect KG</td><td><b>Adopt in v1.</b> Local embeddings are enough at this size. Vector hits feed the evidence ranking and never replace it.</td></tr>
+      <tr><td>CAS hazard alerts, flashing tags</td><td>Preservation and materials notes (ethanol, PLA heat limits)</td><td><b>Adopt, without flashing.</b> Static GHS tags from PubChem per reagent, plus a hardware tier for print risks: PLA softens near 55 °C, printed parts are never sterile, never print spinning parts.</td></tr>
+      <tr><td>Offline: service workers and IndexedDB</td><td>Nothing yet</td><td><b>Adopt for the real app.</b> Check-offs queue on the device and are sealed into the log on sync, marked with device time.</td></tr>
+      <tr><td>Next.js masonry feed</td><td>Static MVP page on Vercel</td><td><b>Not needed for v0.</b> A static page plus CSS columns does the feed; Vercel functions cover the v2 twin check with or without Next.js.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>First domain: insect sample prep and printable lab hardware</h2>
+  <p>The brief asks which field to start in. My proposal is entomology sample prep (“bags in, barcodes out”) together with fabrication of the hardware it needs. Every card in the mockup already exists in the repo for this field: the Flex protocol, 4 Opentrons parts, 8 bench-twin remixes, the Fuse 1 insect prints, 31 filter types and the DAISY studies. It is also the use case for the BioKEA novel-bug-finder submission and the preprint. Molecular biology follows naturally from the lysis and 56 °C soak steps, which are where the hazard tags and timers first matter.</p>
+
+  <h2>Discovery without a social network</h2>
+  <p>Ranking should reward evidence, not likes. Proposed order of signals:</p>
+  <ul>
+    <li><b>Status</b>: tested and result cards above built; any card with a BREAK is shown, but labelled and never ranked first.</li>
+    <li><b>Twin passes on other benches</b>: count of distinct bench profiles whose preflight passed, read from the custody log.</li>
+    <li><b>Forks that kept going</b>: a fork that later reaches tested counts for its parent.</li>
+    <li><b>Contests</b>: an open contest issue on any leaf lowers the card until it is answered.</li>
+    <li><b>Facets</b>: kind, BioKEA module (1 to 5), taxon family, hardware (Flex, Partabot, Fuse 1), and a “kit under $200” filter summed over <code>needs</code>.</li>
+  </ul>
+
+  <h2>Build plan</h2>
+  <div class="phase"><b>v0</b><div><b>Read-only gallery.</b> <code>python -m baebugs.cards</code> reads <code>site/mvp/mvp.json</code> and writes <code>site/cards/cards.json</code>; a static page renders the masonry feed and detail pane. Deploys on Vercel next to the MVP graph. Cards for the Flex protocol, 4 Opentrons parts, 8 bench-twin remixes, the Fuse 1 insect prints, 31 filter types and the DAISY preregs. Ships with a replay notebook that swaps in any <code>mvp.json</code>. About 2 days.</div></div>
+  <div class="phase"><b>v1</b><div><b>Boards and forks.</b> Boards stored as JSON in the repo and changed by pull request, so the git ledger is the write log. Fork creates a new card with a <code>derivation</code> fragment. About 3 days.</div></div>
+  <div class="phase"><b>v2</b><div><b>Check in twin.</b> A Vercel function runs the preflight against a saved bench profile and returns the break point, plus a 3D replay of the run over time from <code>print/bench/bench.glb</code> and <code>demo_run.json</code>. About 1 week.</div></div>
+  <div class="phase"><b>v3</b><div><b>Outside contributors.</b> Submit a card from a GitHub repo, a Hugging Face model or a protocols.io DOI; a hosted board for the BioKEA novel-bug-finder submission and the Heterodox Labs style use case in the preprint.</div></div>
+
+  <h2>Open questions for Byron</h2>
+  <ol>
+    <li><b>First domain.</b> Start with insect sample prep plus printable lab hardware, as proposed above?</li>
+    <li><b>Name and home.</b> Keep it inside baebugs (<code>site/cards/</code>) or split it into its own repo once outside groups submit cards? I would keep it inside until v2.</li>
+    <li><b>Where boards live.</b> JSON in git keeps custody simple but needs a GitHub login to pin. A database is friendlier but its writes would need their own MMR log. Git first?</li>
+    <li><b>Licence label for the remixes.</b> The bench-twin README in the project folder says CERN-OHL-W/S-2.0, while the labware PR relicensed the remixes MIT. Cards will show whatever the graph says, so the two should agree first.</li>
+    <li><b>Cost basis.</b> Show filament only (about $8 for the remix set), or the full kit with spool and calipers (still under $200 with a printer on hand)?</li>
+  </ol>
+</div>
+
+<div class="wrap"><footer>Sources: <code>kg/aok.json</code>, <code>opentrons/parts.json</code>, <code>opentrons/protocols/baebugs_flex_line.py</code>, <code>print/bench/demo_run.json</code>, <code>.github/ISSUE_TEMPLATE/contest.yml</code> on <code>mvp-kg</code>; <code>baebugs-twin/README.md</code> in the project folder. Draft for discussion; no code has been pushed.</footer></div>
+
+<script>
+(function(){
+  var g=document.getElementById('g96'),ns='http://www.w3.org/2000/svg';
+  for(var r=0;r<8;r++)for(var c=0;c<12;c++){var e=document.createElementNS(ns,'circle');e.setAttribute('cx',36+c*15.3);e.setAttribute('cy',36+r*11.2);e.setAttribute('r',4);g.appendChild(e);}
+  var s=document.getElementById('gslot');
+  for(var r2=0;r2<4;r2++)for(var c2=0;c2<11;c2++){var e2=document.createElementNS(ns,'rect');e2.setAttribute('x',36+c2*16);e2.setAttribute('y',30+r2*22);e2.setAttribute('width',4);e2.setAttribute('height',16);e2.setAttribute('rx',2);s.appendChild(e2);}
+
+  var chips=[].slice.call(document.querySelectorAll('#filters .chip')),cards=[].slice.call(document.querySelectorAll('.card'));
+  chips.forEach(function(ch){ch.addEventListener('click',function(){
+    chips.forEach(function(x){x.setAttribute('aria-pressed','false')});ch.setAttribute('aria-pressed','true');
+    var f=ch.dataset.f;cards.forEach(function(cd){cd.hidden=!(f==='all'||cd.dataset.k.split(' ').indexOf(f)>=0)});
+  })});
+  cards.forEach(function(cd){cd.addEventListener('click',function(){cards.forEach(function(x){x.classList.remove('sel')});cd.classList.add('sel')})});
+
+  var pf=document.getElementById('pf');
+  document.getElementById('b-twin').addEventListener('click',function(){
+    pf.hidden=false;
+    pf.innerHTML='preflight: bench profile "magicstudio tower v0"\n<span class="y">ok</span>  deck slots free (D1 D2 D3 C1 C2 B1 B2 A2)\n<span class="y">ok</span>  labware loads (-L opentrons/labware)\n<span class="y">ok</span>  liquid 8 × 200 µL ≤ 12 000 µL\n<span class="x">stop</span> hand-off to external arm: reach 316.7 mm &gt; 300.0 mm\nSTOPPED_AT_BREAK_POINT event 1 (example from print/bench/demo_run.json)';
+  });
+  document.getElementById('b-fork').addEventListener('click',function(){pf.hidden=false;pf.textContent='fork: new card with derivation = [3f9a…c21d]\nedit steps or parts, then the new card root is computed';});
+  document.getElementById('b-pin').addEventListener('click',function(){pf.hidden=false;pf.textContent='pinned to "Pollinator bag sort under $200"\nappended to boards_mmr.jsonl (board root changes)';});
+})();
+</script>
+</body>
+</html>

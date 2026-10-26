@@ -1,0 +1,18 @@
+{
+  "valid_solid": true,
+  "single_solid": true,
+  "watertight_mesh": true,
+  "bbox_mm": [
+    127.77,
+    85.47,
+    20.27
+  ],
+  "fits_bed": true,
+  "volume_cm3": 70.73,
+  "gap_mm": 5.0,
+  "posts": 9,
+  "step_mm": 5.0,
+  "shake_axis": "X (long side)",
+  "deck_mm": 60.9,
+  "pocket_mm": 57.9
+}

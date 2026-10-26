@@ -1,0 +1,39 @@
+{
+  "fco_id": "fco:sha256:0984e3878e07cf1179cc7919f669b88d53caf33b1501baf59420767abe06a9fc",
+  "record": {
+    "admitted_to_aok_root": false,
+    "change": "Successor records deterministic upstream license registry, portable across hosts",
+    "external_live_telemetry": "NOT_IMPLEMENTED",
+    "graph": {
+      "edges": 135,
+      "mcp_initialize_and_proof": "PASS",
+      "node_verify": "PASS",
+      "nodes": 112,
+      "python_verify": "PASS",
+      "source_files_rehashed": 31
+    },
+    "independent_biological_truth": "NOT_TESTED",
+    "physical_testing": "NOT_TESTED",
+    "preceding_cad_root": "c2292e38a40e789256cc0e14ee0565d032795ae5171fa88bdda6b9a05720c23f",
+    "predecessor_doctor_fco": "fco:sha256:0e2800962210119c97798b6cee7f96db102e27554024032257146ba8a467ae5c",
+    "project": "biobitworks/baebugs",
+    "reference_aok_root": "a44ed1482566a0279448e158c3fd6555a8cdf53df2459c71655949f5fc029d4d",
+    "rights_review": "NOT_SIGNED; legal/expert attribution UNKNOWN",
+    "schema": "baebugs.aok.doctor.v1",
+    "source_commit": "3a1806000ec4ca38e25f2749712d54b82ef612af",
+    "status": "DERIVED_TEST_RECEIPT_NOT_MERKLE_INCLUDED",
+    "tests": {
+      "axe_wcag": "PASS: 10/10 view-and-viewport scans with zero automated WCAG A/AA violations",
+      "gum_doctor": "PASS: gum v2.0.0 wrapper; gum itself has no doctor command",
+      "initial": "FAILED: pytest plugin auto-import Hydra; npm audit ENOLOCK; SVG nested role detected",
+      "npm_audit": "PASS: 0 vulnerabilities in dependency-free Node CLI snapshot",
+      "site_browser": "PASS: desktop and mobile root, search, selection, lab, rights and challenge FCO",
+      "successor_1": "FAILED: suite import path PYTHONPATH not set (25 collection errors)",
+      "successor_2": "FAILED: missing trimesh/manifold3d (3 collection errors)",
+      "successor_3": "FAILED: missing PyLabRobot (1 test failed; 73 passed, 1 skip, 1 xfail)",
+      "successor_final": "PASS: 74 passed, 1 skipped, 1 xfailed, 6 warnings; temporary isolated dependencies"
+    },
+    "time_utc": "2026-10-25T15:31:51.382086+00:00"
+  },
+  "signed": "NOT_SIGNED"
+}

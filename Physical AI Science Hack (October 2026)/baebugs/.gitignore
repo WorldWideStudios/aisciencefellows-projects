@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+runs/
+.ipynb_checkpoints/
+*.pt
+*.ts
+*.egg-info/
+.custody_watch/
+.claude/

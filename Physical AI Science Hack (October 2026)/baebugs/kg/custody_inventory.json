@@ -1,0 +1,50 @@
+{
+ "counts": {
+  "insect specimens (measured, kg/insects.jsonl)": 2629,
+  "taxa among them (scientificName)": 278,
+  "families": 66,
+  "orders": 10,
+  "GBIF media records (manifests)": 14617,
+  "frozen datasets (Merkle roots)": 24,
+  "taxon crops (DAISY-004 data)": 2627,
+  "toy insect designs (TRUTH-001 / print/fuse1)": 91,
+  "run events (hash-chained)": 269,
+  "weights checkpoints hashed per epoch (file + tensor sha)": 45,
+  "values hashed per epoch": 176,
+  "final weights stored and resolving": 3,
+  "MMR custody records": 130,
+  "custody breaks recorded": 25,
+  "hypergraph nodes / edges": "791 / 227",
+  "repo files as atoms (AoK leaves)": 1195,
+  "bench assets": 35,
+  "bench photos/videos": 31,
+  "upstream repos pinned by hash": 12,
+  "printable parts (STL) hashed": 211,
+  "custody breaks: result / withheld bench photo": "8 / 16",
+  "MMR custody logs": 7
+ },
+ "mmr_logs": {
+  "assets_mmr": 4,
+  "hybrids_mmr": 3,
+  "hypergraph_mmr": 4,
+  "impact_mmr": 105,
+  "labbox_mmr": 2,
+  "upstream_mmr": 12
+ },
+ "roots": {
+  "MVP graph root": "57eef1c1be1ce49faa9bfa477053ba499ea5dba71fafe8570280189845393b70",
+  "aok": "811dd5e50f9285fbc18cd09a02cdef1d70979dea4fa868dc4db8058d6a002c15",
+  "assets": "e573b35c3edc913fed4d3d313f673aca2351282a285672894606519903b02190",
+  "assets_mmr": "97d20c6b90e0385d7cbac87551f93381eba7eeb2e05cecb7ed9f352f349281b2",
+  "hybrids_mmr": "d7e422523f408c84c478bdb5d4dad978621c58d2c535653817bf535a04bf9ea4",
+  "hypergraph": "8cc197054b823ec77d6d536b6c0129a497d725458e07c67b88af099adfb3dcc7",
+  "hypergraph_mmr": "c20a893a164051e5ba7c0225bf029b41c0cd748b38fda32975d5638e4920c4e5",
+  "impact_mmr": "bbbf8f3daaac1f80cc418c20d1f096307195798f378383ab4807a69fd1dba359",
+  "labbox_mmr": "ee4a72209e017678efc3caa998c89d95d5b559e71aa9b6c7a321f5151c09284d",
+  "upstream_mmr": "38a4a379f5c6d0d5eb9b742eceb698f8cb4e72309bf1f2095cca9e7d87c85513"
+ },
+ "refreshed_from": {
+  "site/mvp/mvp.json": "5016a253b934526ac6183687cef63aafe2ff0f5471e9ee28ccea98b5e1067f4e",
+  "kg/aok.json": "76a091e983c0446ba834e1428a8decbf0be33b8668f233bf085592bf6dda2720"
+ }
+}

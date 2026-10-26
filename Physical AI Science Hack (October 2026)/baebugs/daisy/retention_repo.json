@@ -1,0 +1,123 @@
+{
+ "scope": "repo",
+ "items": [
+  {
+   "name": "toy STLs",
+   "class": "REGENERABLE",
+   "paths": [
+    "print/fuse1/california",
+    "print/fuse1/novel_outside_ca",
+    "print/fuse1/fill_in_1-3mm",
+    "print/fuse1/trees"
+   ],
+   "files": 93,
+   "bytes": 31104912,
+   "reclaimable_bytes": 31104912,
+   "proof": {
+    "compared": 93,
+    "missing_in_rebuild": [],
+    "n_missing": 0,
+    "mismatch": [],
+    "n_mismatch": 0,
+    "proven": true,
+    "root": "0f4b3b9f1fbb7d343325e0c5bec2fb724b245afd489e908ee730d91f2df2208e",
+    "what": "91 toy STLs + 2 trees"
+   }
+  },
+  {
+   "name": "filter STLs",
+   "class": "REGENERABLE",
+   "paths": [
+    "print/filters/stl"
+   ],
+   "files": 19,
+   "bytes": 31384396,
+   "reclaimable_bytes": 31384396,
+   "proof": {
+    "compared": 19,
+    "missing_in_rebuild": [],
+    "n_missing": 0,
+    "mismatch": [],
+    "n_mismatch": 0,
+    "proven": true,
+    "root": "7768c04193c7ac3a03b93392c35427cd5ede76737e58b593551907a5fe5c0cad",
+    "what": "filter plate STLs"
+   }
+  },
+  {
+   "name": "toy KG trees",
+   "class": "REGENERABLE",
+   "paths": [
+    "print/fuse1/kg/insects"
+   ],
+   "files": 91,
+   "bytes": 1663914,
+   "reclaimable_bytes": 1663914,
+   "proof": {
+    "compared": 91,
+    "missing_in_rebuild": [],
+    "n_missing": 0,
+    "mismatch": [],
+    "n_mismatch": 0,
+    "proven": true,
+    "root": "8ad6afbf0d440eb13548284113fbd60cdc04ba766e0a27fb61bc3da58ad7daaa",
+    "what": "toy Merkle KG trees"
+   }
+  },
+  {
+   "name": "frozen truth + protocols",
+   "class": "KEEP",
+   "paths": [
+    "daisy/TRUTH-001.json",
+    "daisy/DAISY-BB-001b.json",
+    "daisy/DAISY-BB-001a.json",
+    "daisy/DAISY-BB-001.json"
+   ],
+   "files": 4,
+   "bytes": 34739,
+   "reclaimable_bytes": 34739
+  },
+  {
+   "name": "MMRs + ledgers",
+   "class": "KEEP",
+   "paths": [
+    "daisy/hybrids_mmr.jsonl",
+    "daisy/impact_mmr.jsonl",
+    "daisy/hypergraph_mmr.jsonl",
+    "ledger"
+   ],
+   "files": 13,
+   "bytes": 554113,
+   "reclaimable_bytes": 554113
+  },
+  {
+   "name": "model answers (attestation sources)",
+   "class": "KEEP",
+   "paths": [
+    "print/fuse1/kg/compare",
+    "print/fuse1/kg/lomo",
+    "print/fuse1/kg/triage"
+   ],
+   "files": 38,
+   "bytes": 3268303,
+   "reclaimable_bytes": 3268303
+  }
+ ],
+ "summary": {
+  "REGENERABLE": {
+   "bytes": 64153222,
+   "reclaimable_bytes": 64153222,
+   "files": 203,
+   "GB": 0.064,
+   "reclaimable_GB": 0.064
+  },
+  "KEEP": {
+   "bytes": 3857155,
+   "reclaimable_bytes": 3857155,
+   "files": 55,
+   "GB": 0.004,
+   "reclaimable_GB": 0.004
+  }
+ },
+ "proof_root": "7b15591bc8736aac71fd326d35e977593f7815da1861deb350ef4e7e90c36c1d"
+}

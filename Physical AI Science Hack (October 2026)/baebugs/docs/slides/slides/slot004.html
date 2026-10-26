@@ -1,0 +1,26 @@
+<section id="slot004" data-transition="fade" style="background:#F4F1E8;color:#16211C;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:24px;letter-spacing:3px;text-transform:uppercase;color:#9C5414">DAISY-BB-004 v4 · custody intact, all weights resolve</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:64px;font-weight:700;line-height:1.1">The order router transfers; the family model does not yet</h2>
+</div>
+<div style="display:flex;flex-direction:column;background:#FBFAF5;border:1px solid #D9D4C4;border-radius:16px;padding:32px">
+<table style="font-size:28px;color:#16211C">
+<tr><th style="width:27%;text-align:left">Run</th><th style="width:13%;text-align:right">Val F1</th><th style="width:15%;text-align:right">Test F1</th><th style="width:15%;text-align:right">Baseline</th><th style="width:30%;text-align:left">Verdict</th></tr>
+<tr><td>ORDER (n=231)</td><td style="text-align:right">0.919</td><td style="text-align:right"><b>0.700</b></td><td style="text-align:right">0.135</td><td><b>Useful, +0.565</b></td></tr>
+<tr><td>Hymenoptera families (n=86)</td><td style="text-align:right">0.883</td><td style="text-align:right">0.167</td><td style="text-align:right">0.068</td><td>Null, +0.099</td></tr>
+<tr><td>Diptera families</td><td style="text-align:right">0.967</td><td style="text-align:right">none</td><td style="text-align:right">n/a</td><td>Undecided, no test crops</td></tr>
+</table>
+</div>
+<div style="display:flex;gap:24px">
+<div style="flex:1;display:flex;flex-direction:column;gap:8px;border-top:4px solid #16211C;padding:20px 0px 0px 0px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:700">Hemiptera test F1 is 0</h3>
+<p style="font-size:26px;line-height:1.4;color:#4A564F">Only 2 Hemiptera crops reach the test set, and no Diptera at all, so ORDER test covers 5 of 6 classes.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px;border-top:4px solid #16211C;padding:20px 0px 0px 0px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:700">Hymenoptera stays in California</h3>
+<p style="font-size:26px;line-height:1.4;color:#4A564F">0.88 in state, 0.17 out of state. In the ladder it hands off rather than decides.</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B756E">BaeBugs · BioKEA Track A · 7 · test = AZ, NV, OR · daisy/results/DAISY-BB-004/v4/DECISION.md</p>
+<aside>Decision rule frozen in the prereg: useful if test macro-F1 minus the majority-class macro-F1 is more than 0.10. ORDER clears it easily, with test top-1 accuracy 0.948. The Hymenoptera family model misses by 0.001, so it is NULL, and it is treated as California-only until retrained with out-of-state data. Diptera families cannot be judged because the holdouts contain no Diptera. All gates passed, 15 epochs per run on MPS, and the weights for all three runs are stored and re-verified. Attempts v1 to v3 were invalid and are kept as evidence under amendments 1 to 4.</aside>
+</section>

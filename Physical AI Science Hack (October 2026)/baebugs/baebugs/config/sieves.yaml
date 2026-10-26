@@ -1,0 +1,19 @@
+# BioKEA Track A kit (from bench photos, Oct 24 2026).
+# Apertures are ESTIMATES from photos. Run `baebugs calibrate-sieve` on a top-down
+# USB image of each mesh to replace them with measured values.
+# Each printed frame has 6 cells (2x3) -> cells can hold replicates or separate samples.
+water:
+  reservoir_l: 5.0
+  min_reserve_l: 0.5
+  flow_l_per_min_default: 1.0
+sieves:
+  - {id: PERF-5,   kind: perforated_round, aperture_mm: 5.0, slot: A1, in_use: false, cells: 1,
+     note: "metal plate, round holes; retained pasta, passed rice"}
+  - {id: GRID-4,   kind: printed_square,   aperture_mm: 4.0, slot: A2, in_use: false, cells: 6,
+     note: "coarse printed plastic grid; retained pasta/lasagna pieces"}
+  - {id: HEX-2,    kind: hex_wire,         aperture_mm: 2.2, slot: A3, in_use: false, cells: 6,
+     note: "hex wire mesh; most rice passed"}
+  - {id: SCREEN-1, kind: woven_screen,     aperture_mm: 1.2, slot: A4, in_use: false, cells: 6,
+     note: "fine window screen; retained rice, chia mostly passed"}
+  - {id: TRAY,     kind: catch_tray,       aperture_mm: 0.0, slot: B1, in_use: false, cells: 6,
+     note: "clear solid bottom; catches everything (BugDisperser hand-off)"}

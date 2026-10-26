@@ -1,0 +1,192 @@
+{
+ "amends": {
+  "protocol": "DAISY-BB-002",
+  "reason": "002 never ran; r3 photo identity widened to media id + pixels (amendment 2)",
+  "sha256": "9da4f03e2e0228ad6e086d1f1e9fc20a1634a8af8c043621c7a01ec56ab169a6"
+ },
+ "baebugs_commit": "d440a11ae39809518230741536dadb44c1cd9014",
+ "bundles": {
+  "baebugs-daisy-eval": [
+   "teacher_check",
+   "teacher_check2",
+   "toy_renders"
+  ],
+  "baebugs-daisy-holdout": [
+   "r3_ca",
+   "holdout_az",
+   "holdout_nv",
+   "holdout_or"
+  ],
+  "baebugs-daisy-train": [
+   "pseudo_specimens_r3_real",
+   "multires_mp_0.3",
+   "multires_mp_1",
+   "multires_mp_3",
+   "synth_1_30_r2",
+   "synth_1_30_r3_real",
+   "synth_seg"
+  ]
+ },
+ "datasets_root": "ab0c6de78eae7f38448bc711264ebdbcb334c2c390ac737d7c028286ef6bafa8",
+ "gates": {
+  "G0": "protocol sha256 == embedded",
+  "G1": "custody: every file + member Merkle root == frozen",
+  "G2": "init weights sha256 == pinned",
+  "G3a": "environment recorded; pin mismatches flagged",
+  "G3b": "AMP used only if AMP and fp32 smoke losses are finite and agree within variance",
+  "G3c": "every epoch: all losses finite (first failure = break point, stops that run)",
+  "smoke_fraction": 0.05
+ },
+ "global_leakage": {
+  "note": "includes r3 (not used by any 002 run) vs holdouts",
+  "overlap_examples": [
+   "1317334061: train in ['multires_mp_0.3', 'multires_mp_1', 'multires_mp_3', 'pseudo_specimens_r3_real'], val in ['holdout_or']",
+   "1317671674: train in ['multires_mp_0.3', 'multires_mp_1', 'multires_mp_3', 'pseudo_specimens_r3_real'], val in ['holdout_or']",
+   "1319192920: train in ['multires_mp_0.3', 'multires_mp_1', 'multires_mp_3', 'pseudo_specimens_r3_real'], val in ['holdout_or']",
+   "1321915532: train in ['multires_mp_0.3', 'multires_mp_1', 'multires_mp_3', 'pseudo_specimens_r3_real'], val in ['holdout_or']",
+   "1932506537: train in ['multires_mp_0.3', 'multires_mp_1', 'multires_mp_3', 'pseudo_specimens_r3_real'], val in ['holdout_or']",
+   "1932510302: train in ['multires_mp_0.3', 'multires_mp_1', 'multires_mp_3', 'pseudo_specimens_r3_real'], val in ['holdout_or']",
+   "1932764354: train in ['multires_mp_0.3', 'multires_mp_1', 'multires_mp_3', 'pseudo_specimens_r3_real'], val in ['holdout_or']",
+   "1977822792: train in ['multires_mp_0.3', 'multires_mp_1', 'multires_mp_3', 'pseudo_specimens_r3_real'], val in ['holdout_or']"
+  ],
+  "train_ids": 2162,
+  "train_val_overlap": 182,
+  "val_ids": 582
+ },
+ "id": "DAISY-BB-002a",
+ "predecessor": {
+  "protocol": "DAISY-BB-001b",
+  "sha256": "118a435405defef1d31780f943a128b0caec9e460c60ec73f671d93d187f85cf"
+ },
+ "preregistration": {
+  "amendment_1": {
+   "path": "daisy/DAISY-BB-002-prereg-amendment-1.md",
+   "sha256": "48e1b49442108d44268dae65b7097656b5619b86a520f0b12cc93dcc4f75794f"
+  },
+  "amendment_2": {
+   "path": "daisy/DAISY-BB-002-prereg-amendment-2.md",
+   "sha256": "d784181abc0f0d9a0d75ed78927b9d75c93415a112f74488ac16ea2f7abc4fca"
+  },
+  "path": "daisy/DAISY-BB-002-prereg.md",
+  "sha256": "4f858b053f42d856daad79e110aef80b1d9e77b216aa1b17f5e558e348fbf5fc"
+ },
+ "roots": {
+  "holdout_az": "16187b8f389891c02a35085814e30240d0bd51cf6dc375d56d78a8acf49b26ec",
+  "holdout_nv": "c8169e2e0bd5b8e35ee8cbe523f943b2999a40ce5aadbd47d6095b08a1e88247",
+  "holdout_or": "7d7fddd381bdfaf514bcd83e8c3ea774951b29038abffe2780226b1fa5b3a486",
+  "multires_mp_0.3": "3a6e4252bf7a05d3096632b560919969d5c79a78add7e7ecf3efe844c46a5086",
+  "multires_mp_1": "fb675accb1407c1486a170456095ea60da27ccf3f56a2f740885903a6cd241b0",
+  "multires_mp_3": "5315e394a516180618884f3f0513bc5f5129584c0068c17285b68fce751cbacb",
+  "pseudo_specimens_r3_real": "bd664a429df494323232b73aaa0312d0e4567e2064e457cb29e50236e9c2fd29",
+  "r3_ca": "7f165212b10035e3dda9d099b59ce6da8ca2ea270c2d09f8d049ce9abf9e4fbe",
+  "synth_1_30_r2": "fe8cf5e95f3e7dc91ecdeb8b7f69841f8640205b1abff1884add362db2b6af51",
+  "synth_1_30_r3_real": "7962a34d52350dabc33b6ffe816429ac4d69d139a0b445d5dba0ff172c605e3f",
+  "synth_seg": "a6f8baef46c478cbfdd89b3a5e086eed53b3388bef484b15ff814565599c3676",
+  "teacher_check": "aa3cf75a6c128faa389631ecd6238906a2f4c7888e809ca2b3dae785400198d3",
+  "teacher_check2": "5fc4d500bc9230714334d74c44d26be53cd340ef28bdd7e4a651862b995304ec",
+  "toy_renders": "9630bed9295ce2ade54c9e25bfa8c0d0df6b4b8dfc0f6c8d3a9fd51925187d8f"
+ },
+ "run_leakage": {
+  "CA_only": {
+   "id_overlap": 0,
+   "overlap": 0,
+   "train_files": 3470,
+   "train_ids": 1970,
+   "val_files": 881,
+   "val_ids": 581
+  },
+  "Synth_only": {
+   "id_overlap": 0,
+   "overlap": 0,
+   "train_files": 1500,
+   "train_ids": 0,
+   "val_files": 881,
+   "val_ids": 581
+  }
+ },
+ "runs": [
+  {
+   "name": "CA_only",
+   "train": [
+    "synth_1_30_r2",
+    "synth_1_30_r3_real",
+    "synth_seg",
+    "r3_ca"
+   ],
+   "val": [
+    "synth_1_30_r2",
+    "synth_1_30_r3_real",
+    "synth_seg",
+    "r3_ca",
+    "holdout_az",
+    "holdout_nv",
+    "holdout_or"
+   ]
+  },
+  {
+   "name": "Synth_only",
+   "train": [
+    "synth_1_30_r2",
+    "synth_1_30_r3_real",
+    "synth_seg"
+   ],
+   "val": [
+    "synth_1_30_r2",
+    "synth_1_30_r3_real",
+    "synth_seg",
+    "r3_ca",
+    "holdout_az",
+    "holdout_nv",
+    "holdout_or"
+   ]
+  }
+ ],
+ "settings": {
+  "batch": 16,
+  "deterministic": false,
+  "epochs": 15,
+  "imgsz": 640,
+  "init_sha256": "55ed65c56c91713d23e8402371c6c49a6fd84f257f7dce452e8d70e41dcbe152",
+  "model": "yolo11n-seg.pt",
+  "pins": {
+   "ultralytics": "8.4.188"
+  },
+  "seed": 2026,
+  "ultralytics": "8.4.188",
+  "workers": 4
+ },
+ "split_report": {
+  "az": {
+   "train": 0,
+   "val": 72
+  },
+  "ca": {
+   "train": 1970,
+   "val": 369
+  },
+  "n_unresolved": 0,
+  "nv": {
+   "train": 0,
+   "val": 8
+  },
+  "or": {
+   "train": 0,
+   "val": 132
+  },
+  "pixel_match_summary": {
+   "max_mean_abs_diff": 0.086,
+   "n": 428
+  },
+  "rules": {
+   "bytes": 2123,
+   "media_id_pixels": 428
+  },
+  "unresolved": []
+ },
+ "status": "PROPOSED",
+ "variance": {
+  "map_reproducibility_abs": 0.03,
+  "note": "deterministic=false: run-to-run variance accepted; decisions and steps are hashed as evidence",
+  "smoke_loss_rel": 0.25
+ }
+}

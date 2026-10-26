@@ -1,0 +1,2 @@
+run_id,design,stroke_profile,amp_mm,freq_hz,speed_mm_s,ramp_s,kind,n_loaded,zone,t_s,n_remaining,note
+#example c01,"inserts:5mm,2mm",constant_speed,10,,50,0.01,quinoa,30,on_5mm,30,12,counted from the video frame at 30 s

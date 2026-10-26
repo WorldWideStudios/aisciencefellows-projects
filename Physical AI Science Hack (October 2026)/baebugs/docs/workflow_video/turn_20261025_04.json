@@ -1,0 +1,72 @@
+{
+  "id": "BB-WORKFLOW-20261025-04",
+  "parent": "BB-WORKFLOW-20261025-03",
+  "repo_parent_commit": "558c8d542b5f62976239ad657d748012ba8f4717",
+  "lane": "lane/workflow-video-20261025",
+  "implemented": [
+    "OpenSCAD conceptual workcell",
+    "30-second original-versus-additions animation",
+    "renderer and notebook"
+  ],
+  "executed": [
+    "OpenSCAD mesh exports",
+    "Matplotlib offscreen rendering",
+    "FFmpeg encoding and full decode",
+    "ffprobe",
+    "sampled frame inspection"
+  ],
+  "observed": {
+    "duration_seconds": 30,
+    "width": 1280,
+    "height": 900,
+    "frames": 720,
+    "decode": "PASS",
+    "existing_website_tour_seconds": 44.64
+  },
+  "supported": "Illustrative comparison render, not hardware execution",
+  "failures": [
+    "Direct OpenSCAD PNG export failed without X server; mesh export fallback succeeded"
+  ],
+  "not_tested": [
+    "Real arm interaction",
+    "Kinematics and collision safety",
+    "Specimen recovery",
+    "Scientific novelty",
+    "Hardware end-to-end workflow"
+  ],
+  "unknown": [
+    "Whether an unreviewed external end-to-end hardware video exists"
+  ],
+  "sources": [
+    {
+      "repo": "BioKEA/BugPicker-arm-demo",
+      "commit": "bfd3be6ac8b5092f63824ccc656a3abb008a4f4a",
+      "path": "README.md"
+    }
+  ],
+  "files": [
+    {
+      "path": "docs/workflow_video/workcell.scad",
+      "sha256": "520beb824139eefe1d286bc76f59ca3f4e441a47efe23afd73a6d0b090315806"
+    },
+    {
+      "path": "docs/workflow_video/render.py",
+      "sha256": "87d751d06717e6e112e695cd544be92e32c2db91107f9f4132a775e891a3d80b"
+    },
+    {
+      "path": "docs/workflow_video/biokea_vs_baebugs.mp4",
+      "sha256": "fd733a5a904dd0cafe88b4a9a829595cf30690f50a6bd124e3646f234ff7525a"
+    },
+    {
+      "path": "docs/workflow_video/README.md",
+      "sha256": "a14e364faeb19b52b8bab844f42bf35639f8cb6958bea15bcca70a7d15c25d44"
+    },
+    {
+      "path": "docs/workflow_video/reproduce.ipynb",
+      "sha256": "4af667094c52ccce0a0e56f2b0ede785c075e05e3625699c772d4f1421065355"
+    }
+  ],
+  "mmr": "NOT_COMPUTED",
+  "signature": "NOT_SIGNED",
+  "next_action": "Teammates review animation, then bind synchronized real hardware footage and per-specimen receipts"
+}

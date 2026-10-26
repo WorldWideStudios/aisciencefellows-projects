@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1">
+ <meta name="theme-color" content="#09161c">
+ <meta name="description" content="Discover, bookmark and remix source-backed Baebugs laboratory workflow plans with explicit evidence and licensing context.">
+ <title>Find your protocol · Baebugs Lab</title>
+ <link rel="icon" href="data:,">
+ <link rel="stylesheet" href="styles.css">
+ <script src="app.js" defer></script>
+</head>
+<body>
+ <a class="skip" href="#protocol-results">Skip to protocols</a>
+ <header class="site-nav">
+  <a href="../" class="brand" aria-label="Baebugs lab home"><span class="brand-mark" aria-hidden="true">✳</span><span>baebugs<span class="brand-dot">.</span></span><small>LAB / DISCOVERY</small></a>
+  <nav aria-label="Site navigation">
+   <a href="../">Workcell</a>
+   <a href="../lab/">3D lab</a>
+   <a href="../#leaf:protocols/catalog.json">Evidence graph</a>
+   <a class="nav-current" href="./" aria-current="page">Protocols</a>
+  </nav>
+  <button id="nav-import" type="button" class="nav-add">+ Bring your own</button>
+ </header>
+ <main>
+  <section class="hero" aria-labelledby="hero-heading">
+   <div class="hero-content">
+    <div class="eyebrow"><span class="pulse"></span> EVIDENCE-GOVERNED LAB EXPLORER <span class="hero-divider">/</span> BIOKEA TRACK A</div>
+    <h1 id="hero-heading">Find your <em>next protocol.</em></h1>
+    <p>Discover research workflows you can inspect, collect and remix. Bring your own methods, or start from Baebugs templates—each connected to real source files, licensing and evidence.</p>
+    <div class="hero-actions">
+     <a href="#protocol-results" class="btn primary">Explore workflows <span aria-hidden="true">↗</span></a>
+     <button type="button" class="btn subtle" id="hero-import"><span aria-hidden="true">＋</span> Bring your own</button>
+    </div>
+    <div class="hero-metrics" role="group" aria-label="Library details">
+     <span><b id="count-templates">9</b> curated templates</span><i aria-hidden="true"></i>
+     <span>Source-bound atoms</span><i aria-hidden="true"></i>
+     <span>No hardware auto-run</span>
+    </div>
+   </div>
+   <div class="hero-art" aria-hidden="true">
+     <div class="art-grid"></div>
+     <div class="art-kicker">SPECIMEN-TO-EVIDENCE</div>
+     <svg class="art-lines" viewBox="0 0 540 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M42 181 C111 181 119 86 206 86 S321 205 397 204 S467 130 514 130" stroke="#539F98" stroke-width="1.3" stroke-dasharray="4 8"/>
+      <path d="M44 252 C130 252 171 288 243 261 S366 110 516 81" stroke="#B7C5C4" opacity=".27" stroke-width="1.2"/>
+      <circle cx="54" cy="181" r="5" fill="#5DDEC6"/><circle cx="210" cy="86" r="5" fill="#F3AD70"/><circle cx="396" cy="204" r="5" fill="#9F94ED"/>
+     </svg>
+     <div class="art-card card-main">
+       <span class="art-icon">▦</span><div class="art-title">Modular filter studio</div><div class="art-desc">Prints · calibration · evidence</div>
+       <div class="art-bars"><span></span><span></span><span></span></div>
+       <div class="art-foot"><span>MODULE 02</span><strong>DESIGN</strong></div>
+     </div>
+     <div class="art-card card-top"><div class="art-symbol">◎</div><span>Camera intake</span><small>Context preserved</small></div>
+     <div class="art-card card-bottom"><div class="art-symbol">⌁</div><span>Opentrons handoff</span><small>Human gate required</small></div>
+     <div class="art-status"><span class="status-flare"></span> SOURCE-LINKED · NOT A PHYSICAL RUN</div>
+   </div>
+  </section>
+
+  <section class="discovery" id="protocol-results" aria-labelledby="browse-title">
+   <div class="section-top">
+    <div><span class="eyebrow muted">WORKFLOW LIBRARY / SOURCE-BOUND</span><h2 id="browse-title">Explore by what you want to do.</h2><p>Less scrolling through documentation. More inspectable building blocks.</p></div>
+    <div class="search-field"><label for="protocol-search">Search protocols, tools or evidence</label><div class="search-input"><span aria-hidden="true">⌕</span><input id="protocol-search" type="search" placeholder="Try: camera, stainless, Opentrons…" autocomplete="off"><kbd>/</kbd></div></div>
+   </div>
+   <div class="discover-controls">
+    <div class="category-chips" id="category-chips" role="group" aria-label="Filter by category"></div>
+    <label class="compact-sort">Show
+      <select id="show-mode" aria-label="Which protocols to display">
+       <option value="all">All workflows</option>
+       <option value="saved">Bookmarked</option>
+       <option value="mine">My remixes &amp; imports</option>
+      </select>
+    </label>
+   </div>
+   <div class="result-note"><span id="result-count" role="status" aria-live="polite">Loading source-backed protocols…</span><button class="text-btn" type="button" id="reset-filters">Clear filters</button></div>
+   <div id="protocol-grid" class="protocol-grid" aria-label="Protocol discovery cards"></div>
+   <div id="empty-state" class="empty" hidden><span aria-hidden="true">◇</span><h3>No protocols in this view</h3><p>Try a different query, browse everything, or import your own method.</p><button type="button" id="empty-import" class="btn primary">Bring your own</button></div>
+  </section>
+  <section class="bottom-features" aria-labelledby="path-heading">
+   <div>
+    <span class="eyebrow muted">MAKE IT YOUR OWN</span>
+    <h2 id="path-heading">Your workflow. Your context.</h2>
+    <p>Every source-backed protocol exposes its referenced files, license context and predecessor. Remixes are local until you deliberately export or submit them for review.</p>
+    <div class="feature-actions"><button class="btn primary" type="button" id="bottom-import">Create a remix <span aria-hidden="true">↗</span></button><a class="btn subtle" href="../#leaf:protocols/catalog.json">Inspect source graph</a></div>
+   </div>
+   <div class="feature-trio">
+    <article><span class="feature-icon">▤</span><b>Collect</b><p>Bookmarks and named collections in this browser.</p></article>
+    <article><span class="feature-icon">◈</span><b>Remix</b><p>Track predecessor identity and attach notes.</p></article>
+    <article><span class="feature-icon">⌘</span><b>Review &amp; export</b><p>Guided checklist receipts, never automatic laboratory commands.</p></article>
+   </div>
+  </section>
+ </main>
+ <footer><span>BAEBUGS / OPEN RESEARCH WORKFLOWS</span><span>Evidence identity ≠ scientific truth · Human review required before hardware actions</span><a href="https://github.com/biobitworks/baebugs">GitHub ↗</a></footer>
+ <dialog id="protocol-dialog" class="detail-dialog" aria-labelledby="detail-heading">
+  <div class="dialog-head"><span class="eyebrow muted" id="detail-kicker">PROTOCOL / SOURCE-CONTEXT</span><button class="icon-button close-dialog" type="button" aria-label="Close protocol details">✕</button></div>
+  <div id="protocol-detail"></div>
+ </dialog>
+ <dialog id="edit-dialog" class="edit-dialog" aria-labelledby="edit-heading">
+  <form id="edit-form" method="dialog">
+   <div class="dialog-head"><span class="eyebrow muted">PRIVATE / YOUR WORKSPACE</span><button class="icon-button close-dialog" type="button" aria-label="Close editor">✕</button></div>
+   <h2 id="edit-heading">Bring your own protocol</h2>
+   <p id="editor-intro">Paste a method or import a JSON, Markdown or text document. Nothing is uploaded to a server.</p>
+   <label>Protocol name <input name="name" id="edit-name" maxlength="120" required placeholder="e.g. Capturing three beetle specimens"></label>
+   <label>Purpose / workflow notes <textarea name="notes" id="edit-notes" maxlength="14000" rows="7" placeholder="Steps, intent, source reference or changes…"></textarea></label>
+   <label>License / rights context <input name="rights" id="edit-rights" maxlength="250" placeholder="e.g. OWN / MIT; third-party rights UNKNOWN" value="RIGHTS_UNKNOWN — REVIEW_REQUIRED"></label>
+   <label>Optional local file <input id="edit-file" type="file" accept=".md,.txt,.json,text/plain,application/json,text/markdown"><small>Maximum 64 KB. Parsing is local; scripts are never executed.</small></label>
+   <p class="privacy-note">Private imports stay on this device. Shared links resolve only to public templates; downloaded files may contain your private notes. Lab steps remain review-only.</p>
+   <div class="dialog-actions"><button class="btn subtle close-dialog" type="button">Cancel</button><button class="btn primary" type="submit">Save to my library</button></div>
+   <div id="edit-status" role="status" aria-live="polite"></div>
+  </form>
+ </dialog>
+ <dialog id="session-dialog" class="session-dialog" aria-labelledby="session-heading">
+  <div class="dialog-head"><span class="eyebrow muted">GUIDED DESK REVIEW / NO DEVICE COMMANDS</span><button class="icon-button close-dialog" type="button" aria-label="Close review">✕</button></div>
+  <h2 id="session-heading">Review the workflow</h2>
+  <div class="session-banner">This records a <strong>local browser review</strong> only. Checking a step does not prove physical execution or expert authorization.</div>
+  <div id="session-steps"></div>
+  <div class="session-footer"><span id="session-count">0 checked</span><button class="btn subtle" type="button" id="session-export">Export review FCO</button><button class="btn primary" type="button" id="session-done">Close review</button></div>
+ </dialog>
+ <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>

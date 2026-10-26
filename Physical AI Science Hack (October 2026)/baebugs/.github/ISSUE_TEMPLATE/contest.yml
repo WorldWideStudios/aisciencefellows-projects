@@ -1,0 +1,30 @@
+name: Contest an atom
+description: Say which node of the baebugs graph you think is wrong, and attach the hashes that show it.
+title: "Contest leaf:"
+labels: [contest]
+body:
+  - type: input
+    id: address
+    attributes:
+      label: Address
+      description: "From the MVP page, e.g. leaf:print/fuse1/manifest.csv, module:daisy-results, or root"
+    validations: {required: true}
+  - type: input
+    id: graph_root
+    attributes:
+      label: Graph root you checked against
+      description: The MVP root shown at the top of the page (or `baebugs-graph get root`).
+    validations: {required: true}
+  - type: textarea
+    id: claim
+    attributes:
+      label: What is wrong
+      description: The hash, the licence or claim, the status, or the result itself.
+    validations: {required: true}
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence (attestation or your own FCO/FCG JSON)
+      description: Paste the attestation from the Prove tab, or your FCO/FCG with path + sha256 per leaf. Contests are settled by recomputing hashes.
+      render: json
+    validations: {required: true}

@@ -1,0 +1,182 @@
+{
+  "parameters_mm": {
+    "male_major_diameter": 10,
+    "male_core_diameter": 8,
+    "insertion": 10,
+    "initial_insertion": 8,
+    "twist_degrees": 90,
+    "draw_in": 2,
+    "equivalent_lead": 8.0,
+    "lug_centres": [
+      3,
+      7
+    ],
+    "lug_arc_degrees": 36,
+    "lug_axial_height": 1.2,
+    "female_core_diameter": 8.4,
+    "groove_outer_diameter": 10.6,
+    "groove_height": 1.8,
+    "mouth_diameter": 12,
+    "mouth_depth": 1.8,
+    "bore_depth": 11.2,
+    "mount_bolt_circle": 14,
+    "mount_holes": 3.2,
+    "mount_counterbores": 6.2,
+    "mount_square": 9.899494936611665,
+    "mount_web": 3,
+    "mount_diameter": 28,
+    "mount_thickness": 7,
+    "entry_slot_angle": 60,
+    "face_gasket_id": 21,
+    "face_gasket_od": 24,
+    "face_gasket_groove_depth": 0.3,
+    "female_body": [
+      32,
+      28,
+      22
+    ],
+    "tool_blank": [
+      24,
+      24,
+      18
+    ],
+    "latch_pin_diameter": 2,
+    "latch_hole_diameter": 2.3,
+    "latch_travel": 3,
+    "latch_engagement": 1.5
+  },
+  "checks": [
+    {
+      "angle_deg": 0,
+      "insertion_mm": 8.0,
+      "interference_mm3": 0.0
+    },
+    {
+      "angle_deg": 15,
+      "insertion_mm": 8.333333333333334,
+      "interference_mm3": 0.0
+    },
+    {
+      "angle_deg": 30,
+      "insertion_mm": 8.666666666666666,
+      "interference_mm3": 0.0
+    },
+    {
+      "angle_deg": 45,
+      "insertion_mm": 9.0,
+      "interference_mm3": 0.0
+    },
+    {
+      "angle_deg": 60,
+      "insertion_mm": 9.333333333333334,
+      "interference_mm3": 0.0
+    },
+    {
+      "angle_deg": 75,
+      "insertion_mm": 9.666666666666666,
+      "interference_mm3": 0.0
+    },
+    {
+      "angle_deg": 90,
+      "insertion_mm": 10.0,
+      "interference_mm3": 0.0
+    },
+    {
+      "straight_offset_mm": -10,
+      "interference_mm3": 0.0
+    },
+    {
+      "straight_offset_mm": -8,
+      "interference_mm3": 0.0
+    },
+    {
+      "straight_offset_mm": -6,
+      "interference_mm3": 0.0
+    },
+    {
+      "straight_offset_mm": -4,
+      "interference_mm3": 0.0
+    },
+    {
+      "straight_offset_mm": -2,
+      "interference_mm3": 0.0
+    },
+    {
+      "pair": "pin/male seated",
+      "interference_mm3": 0.0
+    },
+    {
+      "pair": "pin/female",
+      "interference_mm3": 0.0
+    },
+    {
+      "pair": "yoke/female",
+      "interference_mm3": 0.0
+    },
+    {
+      "pair": "rack/female",
+      "interference_mm3": 0.0
+    },
+    {
+      "pair": "rack/released_yoke",
+      "interference_mm3": 0.0
+    },
+    {
+      "pair": "rack/female",
+      "float_z_mm": -2,
+      "interference_mm3": 0.0
+    },
+    {
+      "pair": "rack/released_yoke",
+      "float_z_mm": -2,
+      "interference_mm3": 0.0
+    },
+    {
+      "pair": "rack/female",
+      "float_z_mm": -1,
+      "interference_mm3": 0.0
+    },
+    {
+      "pair": "rack/released_yoke",
+      "float_z_mm": -1,
+      "interference_mm3": 0.0
+    },
+    {
+      "pair": "rack/female",
+      "float_z_mm": 0,
+      "interference_mm3": 0.0
+    },
+    {
+      "pair": "rack/released_yoke",
+      "float_z_mm": 0,
+      "interference_mm3": 0.0
+    }
+  ],
+  "parts": {
+    "male": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 3902.851003331043
+    },
+    "female": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 29091.437318982462
+    },
+    "latch_yoke": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 1808.100005425984
+    },
+    "latch_pin_envelope": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 48.694686130641784
+    },
+    "rack_concept": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 9686.466961125407
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "valid_solid": true,
+  "single_solid": true,
+  "watertight_mesh": true,
+  "bbox_mm": [
+    82.07,
+    22.27,
+    2.03
+  ],
+  "fits_bed": true,
+  "volume_cm3": 3.65,
+  "length_mm": 82.07,
+  "height_mm": 22.27,
+  "groove_play_mm": 0.3,
+  "end_play_mm": 0.4
+}

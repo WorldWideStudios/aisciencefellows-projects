@@ -1,0 +1,10 @@
+{
+ "name": "baebugs-graph",
+ "version": "0.1.0",
+ "description": "Pull any node of the baebugs graph by address, check claims and licences, and compare your own FCO/FCG.",
+ "author": {"name": "biobitworks"},
+ "license": "MIT",
+ "repository": "https://github.com/biobitworks/baebugs",
+ "skills": "./skills/",
+ "mcpServers": {"baebugs-graph": {"command": "python", "args": ["-m", "baebugs.graph_mcp"]}}
+}

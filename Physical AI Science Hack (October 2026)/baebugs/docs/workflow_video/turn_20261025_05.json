@@ -1,0 +1,62 @@
+{
+  "id": "BB-WORKFLOW-20261025-05",
+  "parent": "BB-WORKFLOW-20261025-04",
+  "parent_commit": "56b9188a05306855f2f801092cb7d796810858d6",
+  "implemented": [
+    "Identical gray baseline meshes in both panels",
+    "Gold-only added inspection hardware",
+    "Explicit Stage 1 label",
+    "V2 still and video; predecessor retained"
+  ],
+  "executed": [
+    "OpenSCAD mesh export",
+    "render",
+    "full MP4 decode",
+    "ffprobe",
+    "Stage 1 visual inspection"
+  ],
+  "observed": {
+    "decode": "PASS",
+    "seconds": 30,
+    "frames": 720,
+    "resolution": [
+      1280,
+      900
+    ]
+  },
+  "not_tested": [
+    "Hardware execution",
+    "Kinematics",
+    "Scientific novelty"
+  ],
+  "failures": [],
+  "files": [
+    {
+      "path": "docs/workflow_video/workcell_v2.scad",
+      "sha256": "b04f45d6b039e792bdf4d703ccfcad1eff0b9502b807d287797b2226b0b67157"
+    },
+    {
+      "path": "docs/workflow_video/render_v2.py",
+      "sha256": "580972b34d35bdf100ddb74f811efad184f8205735eb913433bdaaadcb2fd79e"
+    },
+    {
+      "path": "docs/workflow_video/reproduce_v2.ipynb",
+      "sha256": "b972f05fdb9f79058d20455a3dc75da610d4a4c5dc467f7d5c57a6c4d32d988d"
+    },
+    {
+      "path": "docs/workflow_video/V2.md",
+      "sha256": "f6efae168cdba9ec6f8be0ed6fe44c5ce4b6d0a2ba2ff2e4ea7590a1655c30b6"
+    },
+    {
+      "path": "docs/workflow_video/stage_1_v2.png",
+      "sha256": "8b9d6305ddfa41c9faa751faf34c2cfa3b8257cc62c9e9a5679257c54f471355"
+    },
+    {
+      "path": "docs/workflow_video/biokea_vs_baebugs_v2.mp4",
+      "sha256": "d14dd5d6f0585daab3b4915f4bea661c4716ace5026b9ae6baa93d227cee931d"
+    }
+  ],
+  "mmr": "NOT_COMPUTED",
+  "signature": "NOT_SIGNED",
+  "next_action": "Review Stage 1 and V2 on PR #23"
+}

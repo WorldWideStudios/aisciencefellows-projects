@@ -1,0 +1,2296 @@
+{
+ "name": "bench",
+ "type": "Resource",
+ "size_x": 1200,
+ "size_y": 600,
+ "size_z": 20,
+ "location": {
+  "x": 0,
+  "y": 0,
+  "z": 0,
+  "type": "Coordinate"
+ },
+ "rotation": {
+  "x": 0,
+  "y": 0,
+  "z": 0,
+  "type": "Rotation"
+ },
+ "category": "bench",
+ "model": null,
+ "barcode": null,
+ "preferred_pickup_location": null,
+ "children": [
+  {
+   "name": "linear_rail",
+   "type": "Resource",
+   "size_x": 1000.0,
+   "size_y": 40,
+   "size_z": 30,
+   "location": {
+    "x": 0,
+    "y": 0,
+    "z": 20,
+    "type": "Coordinate"
+   },
+   "rotation": {
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "type": "Rotation"
+   },
+   "category": "rail",
+   "model": null,
+   "barcode": null,
+   "preferred_pickup_location": null,
+   "children": [
+    {
+     "name": "arm_carriage",
+     "type": "Resource",
+     "size_x": 80,
+     "size_y": 40,
+     "size_z": 60,
+     "location": {
+      "x": 0,
+      "y": 0,
+      "z": 30,
+      "type": "Coordinate"
+     },
+     "rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "type": "Rotation"
+     },
+     "category": "arm",
+     "model": null,
+     "barcode": null,
+     "preferred_pickup_location": null,
+     "children": [],
+     "parent_name": "linear_rail"
+    }
+   ],
+   "parent_name": "bench"
+  },
+  {
+   "name": "tower",
+   "type": "Resource",
+   "size_x": 258.0,
+   "size_y": 160.0,
+   "size_z": 580.0,
+   "location": {
+    "x": 371.0,
+    "y": 125.0,
+    "z": 20,
+    "type": "Coordinate"
+   },
+   "rotation": {
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "type": "Rotation"
+   },
+   "category": "tower",
+   "model": null,
+   "barcode": null,
+   "preferred_pickup_location": null,
+   "children": [
+    {
+     "name": "post",
+     "type": "Resource",
+     "size_x": 38,
+     "size_y": 89,
+     "size_z": 580.0,
+     "location": {
+      "x": 110.0,
+      "y": 35.5,
+      "z": 0,
+      "type": "Coordinate"
+     },
+     "rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "type": "Rotation"
+     },
+     "category": "post",
+     "model": null,
+     "barcode": null,
+     "preferred_pickup_location": null,
+     "children": [],
+     "parent_name": "tower"
+    },
+    {
+     "name": "storage_face_L0",
+     "type": "Resource",
+     "size_x": 90.0,
+     "size_y": 120.0,
+     "size_z": 14.0,
+     "location": {
+      "x": 18.0,
+      "y": 20,
+      "z": 90.0,
+      "type": "Coordinate"
+     },
+     "rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "type": "Rotation"
+     },
+     "category": "slot:storage",
+     "model": null,
+     "barcode": null,
+     "preferred_pickup_location": null,
+     "children": [
+      {
+       "name": "tray:PERF-5",
+       "type": "Resource",
+       "size_x": 90.0,
+       "size_y": 120.0,
+       "size_z": 14.0,
+       "location": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "type": "Coordinate"
+       },
+       "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "type": "Rotation"
+       },
+       "category": "tray",
+       "model": null,
+       "barcode": null,
+       "preferred_pickup_location": null,
+       "children": [
+        {
+         "name": "filter:PERF-5",
+         "type": "Resource",
+         "size_x": 82.0,
+         "size_y": 112.0,
+         "size_z": 1.6,
+         "location": {
+          "x": 4,
+          "y": 4,
+          "z": 2,
+          "type": "Coordinate"
+         },
+         "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "type": "Rotation"
+         },
+         "category": "filter",
+         "model": null,
+         "barcode": null,
+         "preferred_pickup_location": null,
+         "children": [],
+         "parent_name": "tray:PERF-5"
+        },
+        {
+         "name": "cell_r0c0:PERF-5",
+         "type": "Resource",
+         "size_x": 27.333333333333332,
+         "size_y": 56.0,
+         "size_z": 12.0,
+         "location": {
+          "x": 4.0,
+          "y": 4.0,
+          "z": 2,
+          "type": "Coordinate"
+         },
+         "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "type": "Rotation"
+         },
+         "category": "cell",
+         "model": null,
+         "barcode": null,
+         "preferred_pickup_location": null,
+         "children": [],
+         "parent_name": "tray:PERF-5"
+        },
+        {
+         "name": "cell_r0c1:PERF-5",
+         "type": "Resource",
+         "size_x": 27.333333333333332,
+         "size_y": 56.0,
+         "size_z": 12.0,
+         "location": {
+          "x": 31.3333,
+          "y": 4.0,
+          "z": 2,
+          "type": "Coordinate"
+         },
+         "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "type": "Rotation"
+         },
+         "category": "cell",
+         "model": null,
+         "barcode": null,
+         "preferred_pickup_location": null,
+         "children": [],
+         "parent_name": "tray:PERF-5"
+        },
+        {
+         "name": "cell_r0c2:PERF-5",
+         "type": "Resource",
+         "size_x": 27.333333333333332,
+         "size_y": 56.0,
+         "size_z": 12.0,
+         "location": {
+          "x": 58.6667,
+          "y": 4.0,
+          "z": 2,
+          "type": "Coordinate"
+         },
+         "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "type": "Rotation"
+         },
+         "category": "cell",
+         "model": null,
+         "barcode": null,
+         "preferred_pickup_location": null,
+         "children": [],
+         "parent_name": "tray:PERF-5"
+        },
+        {
+         "name": "cell_r1c0:PERF-5",
+         "type": "Resource",
+         "size_x": 27.333333333333332,
+         "size_y": 56.0,
+         "size_z": 12.0,
+         "location": {
+          "x": 4.0,
+          "y": 60.0,
+          "z": 2,
+          "type": "Coordinate"
+         },
+         "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "type": "Rotation"
+         },
+         "category": "cell",
+         "model": null,
+         "barcode": null,
+         "preferred_pickup_location": null,
+         "children": [],
+         "parent_name": "tray:PERF-5"
+        },
+        {
+         "name": "cell_r1c1:PERF-5",
+         "type": "Resource",
+         "size_x": 27.333333333333332,
+         "size_y": 56.0,
+         "size_z": 12.0,
+         "location": {
+          "x": 31.3333,
+          "y": 60.0,
+          "z": 2,
+          "type": "Coordinate"
+         },
+         "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "type": "Rotation"
+         },
+         "category": "cell",
+         "model": null,
+         "barcode": null,
+         "preferred_pickup_location": null,
+         "children": [],
+         "parent_name": "tray:PERF-5"
+        },
+        {
+         "name": "cell_r1c2:PERF-5",
+         "type": "Resource",
+         "size_x": 27.333333333333332,
+         "size_y": 56.0,
+         "size_z": 12.0,
+         "location": {
+          "x": 58.6667,
+          "y": 60.0,
+          "z": 2,
+          "type": "Coordinate"
+         },
+         "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "type": "Rotation"
+         },
+         "category": "cell",
+         "model": null,
+         "barcode": null,
+         "preferred_pickup_location": null,
+         "children": [],
+         "parent_name": "tray:PERF-5"
+        }
+       ],
+       "parent_name": "storage_face_L0"
+      }
+     ],
+     "parent_name": "tower"
+    },
+    {
+     "name": "storage_face_L1",
+     "type": "Resource",
+     "size_x": 90.0,
+     "size_y": 120.0,
+     "size_z": 14.0,
+     "location": {
+      "x": 18.0,
+      "y": 20,
+      "z": 190.0,
+      "type": "Coordinate"
+     },
+     "rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "type": "Rotation"
+     },
+     "category": "slot:storage",
+     "model": null,
+     "barcode": null,
+     "preferred_pickup_location": null,
+     "children": [
+      {
+       "name": "tray:GRID-4",
+       "type": "Resource",
+       "size_x": 90.0,
+       "size_y": 120.0,
+       "size_z": 14.0,
+       "location": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "type": "Coordinate"
+       },
+       "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "type": "Rotation"
+       },
+       "category": "tray",
+       "model": null,
+       "barcode": null,
+       "preferred_pickup_location": null,
+       "children": [
+        {
+         "name": "filter:GRID-4",
+         "type": "Resource",
+         "size_x": 82.0,
+         "size_y": 112.0,
+         "size_z": 1.6,
+         "location": {
+          "x": 4,
+          "y": 4,
+          "z": 2,
+          "type": "Coordinate"
+         },
+         "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "type": "Rotation"
+         },
+         "category": "filter",
+         "model": null,
+         "barcode": null,
+         "preferred_pickup_location": null,
+         "children": [],
+         "parent_name": "tray:GRID-4"
+        },
+        {
+         "name": "cell_r0c0:GRID-4",
+         "type": "Resource",
+         "size_x": 27.333333333333332,
+         "size_y": 56.0,
+         "size_z": 12.0,
+         "location": {
+          "x": 4.0,
+          "y": 4.0,
+          "z": 2,
+          "type": "Coordinate"
+         },
+         "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "type": "Rotation"
+         },
+         "category": "cell",
+         "model": null,
+         "barcode": null,
+         "preferred_pickup_location": null,
+         "children": [],
+         "parent_name": "tray:GRID-4"
+        },
+        {
+         "name": "cell_r0c1:GRID-4",
+         "type": "Resource",
+         "size_x": 27.333333333333332,
+         "size_y": 56.0,
+         "size_z": 12.0,
+         "location": {
+          "x": 31.3333,
+          "y": 4.0,
+          "z": 2,
+          "type": "Coordinate"
+         },
+         "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "type": "Rotation"
+         },
+         "category": "cell",
+         "model": null,
+         "barcode": null,
+         "preferred_pickup_location": null,
+         "children": [],
+         "parent_name": "tray:GRID-4"
+        },
+        {
+         "name": "cell_r0c2:GRID-4",
+         "type": "Resource",
+         "size_x": 27.333333333333332,
+         "size_y": 56.0,
+         "size_z": 12.0,
+         "location": {
+          "x": 58.6667,
+          "y": 4.0,
+          "z": 2,
+          "type": "Coordinate"
+         },
+         "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "type": "Rotation"
+         },
+         "category": "cell",
+         "model": null,
+         "barcode": null,
+         "preferred_pickup_location": null,
+         "children": [],
+         "parent_name": "tray:GRID-4"
+        },
+        {
+         "name": "cell_r1c0:GRID-4",
+         "type": "Resource",
+         "size_x": 27.333333333333332,
+         "size_y": 56.0,
+         "size_z": 12.0,
+         "location": {
+          "x": 4.0,
+          "y": 60.0,
+          "z": 2,
+          "type": "Coordinate"
+         },
+         "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "type": "Rotation"
+         },
+         "category": "cell",
+         "model": null,
+         "barcode": null,
+         "preferred_pickup_location": null,
+         "children": [],
+         "parent_name": "tray:GRID-4"
+        },
+        {
+         "name": "cell_r1c1:GRID-4",
+         "type": "Resource",
+         "size_x": 27.333333333333332,
+         "size_y": 56.0,
+         "size_z": 12.0,
+         "location": {
+          "x": 31.3333,
+          "y": 60.0,
+          "z": 2,
+          "type": "Coordinate"
+         },
+         "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "type": "Rotation"
+         },
+         "category": "cell",
+         "model": null,
+         "barcode": null,
+         "preferred_pickup_location": null,
+         "children": [],
+         "parent_name": "tray:GRID-4"
+        },
+        {
+         "name": "cell_r1c2:GRID-4",
+         "type": "Resource",
+         "size_x": 27.333333333333332,
+         "size_y": 56.0,
+         "size_z": 12.0,
+         "location": {
+          "x": 58.6667,
+          "y": 60.0,
+          "z": 2,
+          "type": "Coordinate"
+         },
+         "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "type": "Rotation"
+         },
+         "category": "cell",
+         "model": null,
+         "barcode": null,
+         "preferred_pickup_location": null,
+         "children": [],
+         "parent_name": "tray:GRID-4"
+        }
+       ],
+       "parent_name": "storage_face_L1"
+      }
+     ],
+     "parent_name": "tower"
+    },
+    {
+     "name": "storage_face_L2",
+     "type": "Resource",
+     "size_x": 90.0,
+     "size_y": 120.0,
+     "size_z": 14.0,
+     "location": {
+      "x": 18.0,
+      "y": 20,
+      "z": 290.0,
+      "type": "Coordinate"
+     },
+     "rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "type": "Rotation"
+     },
+     "category": "slot:storage",
+     "model": null,
+     "barcode": null,
+     "preferred_pickup_location": null,
+     "children": [
+      {
+       "name": "tray:HEX-2",
+       "type": "Resource",
+       "size_x": 90.0,
+       "size_y": 120.0,
+       "size_z": 14.0,
+       "location": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "type": "Coordinate"
+       },
+       "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "type": "Rotation"
+       },
+       "category": "tray",
+       "model": null,
+       "barcode": null,
+       "preferred_pickup_location": null,
+       "children": [
+        {
+         "name": "filter:HEX-2",
+         "type": "Resource",
+         "size_x": 82.0,
+         "size_y": 112.0,
+         "size_z": 1.6,
+         "location": {
+          "x": 4,
+          "y": 4,
+          "z": 2,
+          "type": "Coordinate"
+         },
+         "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "type": "Rotation"
+         },
+         "category": "filter",
+         "model": null,
+         "barcode": null,
+         "preferred_pickup_location": null,
+         "children": [],
+         "parent_name": "tray:HEX-2"
+        },
+        {
+         "name": "cell_r0c0:HEX-2",
+         "type": "Resource",
+         "size_x": 27.333333333333332,
+         "size_y": 56.0,
+         "size_z": 12.0,
+         "location": {
+          "x": 4.0,
+          "y": 4.0,
+          "z": 2,
+          "type": "Coordinate"
+         },
+         "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "type": "Rotation"
+         },
+         "category": "cell",
+         "model": null,
+         "barcode": null,
+         "preferred_pickup_location": null,
+         "children": [],
+         "parent_name": "tray:HEX-2"
+        },
+        {
+         "name": "cell_r0c1:HEX-2",
+         "type": "Resource",
+         "size_x": 27.333333333333332,
+         "size_y": 56.0,
+         "size_z": 12.0,
+         "location": {
+          "x": 31.3333,
+          "y": 4.0,
+          "z": 2,
+          "type": "Coordinate"
+         },
+         "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "type": "Rotation"
+         },
+         "category": "cell",
+         "model": null,
+         "barcode": null,
+         "preferred_pickup_location": null,
+         "children": [],
+         "parent_name": "tray:HEX-2"
+        },
+        {
+         "name": "cell_r0c2:HEX-2",
+         "type": "Resource",
+         "size_x": 27.333333333333332,
+         "size_y": 56.0,
+         "size_z": 12.0,
+         "location": {
+          "x": 58.6667,
+          "y": 4.0,
+          "z": 2,
+          "type": "Coordinate"
+         },
+         "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "type": "Rotation"
+         },
+         "category": "cell",
+         "model": null,
+         "barcode": null,
+         "preferred_pickup_location": null,
+         "children": [],
+         "parent_name": "tray:HEX-2"
+        },
+        {
+         "name": "cell_r1c0:HEX-2",
+         "type": "Resource",
+         "size_x": 27.333333333333332,
+         "size_y": 56.0,
+         "size_z": 12.0,
+         "location": {
+          "x": 4.0,
+          "y": 60.0,
+          "z": 2,
+          "type": "Coordinate"
+         },
+         "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "type": "Rotation"
+         },
+         "category": "cell",
+         "model": null,
+         "barcode": null,
+         "preferred_pickup_location": null,
+         "children": [],
+         "parent_name": "tray:HEX-2"
+        },
+        {
+         "name": "cell_r1c1:HEX-2",
+         "type": "Resource",
+         "size_x": 27.333333333333332,
+         "size_y": 56.0,
+         "size_z": 12.0,
+         "location": {
+          "x": 31.3333,
+          "y": 60.0,
+          "z": 2,
+          "type": "Coordinate"
+         },
+         "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "type": "Rotation"
+         },
+         "category": "cell",
+         "model": null,
+         "barcode": null,
+         "preferred_pickup_location": null,
+         "children": [],
+         "parent_name": "tray:HEX-2"
+        },
+        {
+         "name": "cell_r1c2:HEX-2",
+         "type": "Resource",
+         "size_x": 27.333333333333332,
+         "size_y": 56.0,
+         "size_z": 12.0,
+         "location": {
+          "x": 58.6667,
+          "y": 60.0,
+          "z": 2,
+          "type": "Coordinate"
+         },
+         "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "type": "Rotation"
+         },
+         "category": "cell",
+         "model": null,
+         "barcode": null,
+         "preferred_pickup_location": null,
+         "children": [],
+         "parent_name": "tray:HEX-2"
+        }
+       ],
+       "parent_name": "storage_face_L2"
+      }
+     ],
+     "parent_name": "tower"
+    },
+    {
+     "name": "storage_face_L3",
+     "type": "Resource",
+     "size_x": 90.0,
+     "size_y": 120.0,
+     "size_z": 14.0,
+     "location": {
+      "x": 18.0,
+      "y": 20,
+      "z": 390.0,
+      "type": "Coordinate"
+     },
+     "rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "type": "Rotation"
+     },
+     "category": "slot:storage",
+     "model": null,
+     "barcode": null,
+     "preferred_pickup_location": null,
+     "children": [
+      {
+       "name": "tray:SCREEN-1",
+       "type": "Resource",
+       "size_x": 90.0,
+       "size_y": 120.0,
+       "size_z": 14.0,
+       "location": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "type": "Coordinate"
+       },
+       "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "type": "Rotation"
+       },
+       "category": "tray",
+       "model": null,
+       "barcode": null,
+       "preferred_pickup_location": null,
+       "children": [
+        {
+         "name": "filter:SCREEN-1",
+         "type": "Resource",
+         "size_x": 82.0,
+         "size_y": 112.0,
+         "size_z": 1.6,
+         "location": {
+          "x": 4,
+          "y": 4,
+          "z": 2,
+          "type": "Coordinate"
+         },
+         "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "type": "Rotation"
+         },
+         "category": "filter",
+         "model": null,
+         "barcode": null,
+         "preferred_pickup_location": null,
+         "children": [],
+         "parent_name": "tray:SCREEN-1"
+        },
+        {
+         "name": "cell_r0c0:SCREEN-1",
+         "type": "Resource",
+         "size_x": 27.333333333333332,
+         "size_y": 56.0,
+         "size_z": 12.0,
+         "location": {
+          "x": 4.0,
+          "y": 4.0,
+          "z": 2,
+          "type": "Coordinate"
+         },
+         "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "type": "Rotation"
+         },
+         "category": "cell",
+         "model": null,
+         "barcode": null,
+         "preferred_pickup_location": null,
+         "children": [],
+         "parent_name": "tray:SCREEN-1"
+        },
+        {
+         "name": "cell_r0c1:SCREEN-1",
+         "type": "Resource",
+         "size_x": 27.333333333333332,
+         "size_y": 56.0,
+         "size_z": 12.0,
+         "location": {
+          "x": 31.3333,
+          "y": 4.0,
+          "z": 2,
+          "type": "Coordinate"
+         },
+         "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "type": "Rotation"
+         },
+         "category": "cell",
+         "model": null,
+         "barcode": null,
+         "preferred_pickup_location": null,
+         "children": [],
+         "parent_name": "tray:SCREEN-1"
+        },
+        {
+         "name": "cell_r0c2:SCREEN-1",
+         "type": "Resource",
+         "size_x": 27.333333333333332,
+         "size_y": 56.0,
+         "size_z": 12.0,
+         "location": {
+          "x": 58.6667,
+          "y": 4.0,
+          "z": 2,
+          "type": "Coordinate"
+         },
+         "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "type": "Rotation"
+         },
+         "category": "cell",
+         "model": null,
+         "barcode": null,
+         "preferred_pickup_location": null,
+         "children": [],
+         "parent_name": "tray:SCREEN-1"
+        },
+        {
+         "name": "cell_r1c0:SCREEN-1",
+         "type": "Resource",
+         "size_x": 27.333333333333332,
+         "size_y": 56.0,
+         "size_z": 12.0,
+         "location": {
+          "x": 4.0,
+          "y": 60.0,
+          "z": 2,
+          "type": "Coordinate"
+         },
+         "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "type": "Rotation"
+         },
+         "category": "cell",
+         "model": null,
+         "barcode": null,
+         "preferred_pickup_location": null,
+         "children": [],
+         "parent_name": "tray:SCREEN-1"
+        },
+        {
+         "name": "cell_r1c1:SCREEN-1",
+         "type": "Resource",
+         "size_x": 27.333333333333332,
+         "size_y": 56.0,
+         "size_z": 12.0,
+         "location": {
+          "x": 31.3333,
+          "y": 60.0,
+          "z": 2,
+          "type": "Coordinate"
+         },
+         "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "type": "Rotation"
+         },
+         "category": "cell",
+         "model": null,
+         "barcode": null,
+         "preferred_pickup_location": null,
+         "children": [],
+         "parent_name": "tray:SCREEN-1"
+        },
+        {
+         "name": "cell_r1c2:SCREEN-1",
+         "type": "Resource",
+         "size_x": 27.333333333333332,
+         "size_y": 56.0,
+         "size_z": 12.0,
+         "location": {
+          "x": 58.6667,
+          "y": 60.0,
+          "z": 2,
+          "type": "Coordinate"
+         },
+         "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "type": "Rotation"
+         },
+         "category": "cell",
+         "model": null,
+         "barcode": null,
+         "preferred_pickup_location": null,
+         "children": [],
+         "parent_name": "tray:SCREEN-1"
+        }
+       ],
+       "parent_name": "storage_face_L3"
+      }
+     ],
+     "parent_name": "tower"
+    },
+    {
+     "name": "filter_face_L0",
+     "type": "Resource",
+     "size_x": 90.0,
+     "size_y": 120.0,
+     "size_z": 14.0,
+     "location": {
+      "x": 150.0,
+      "y": 20,
+      "z": 140.0,
+      "type": "Coordinate"
+     },
+     "rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "type": "Rotation"
+     },
+     "category": "slot:filter",
+     "model": null,
+     "barcode": null,
+     "preferred_pickup_location": null,
+     "children": [
+      {
+       "name": "tray:TRAY",
+       "type": "Resource",
+       "size_x": 90.0,
+       "size_y": 120.0,
+       "size_z": 14.0,
+       "location": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "type": "Coordinate"
+       },
+       "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "type": "Rotation"
+       },
+       "category": "tray",
+       "model": null,
+       "barcode": null,
+       "preferred_pickup_location": null,
+       "children": [
+        {
+         "name": "cell_r0c0:TRAY",
+         "type": "Resource",
+         "size_x": 27.333333333333332,
+         "size_y": 56.0,
+         "size_z": 12.0,
+         "location": {
+          "x": 4.0,
+          "y": 4.0,
+          "z": 2,
+          "type": "Coordinate"
+         },
+         "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "type": "Rotation"
+         },
+         "category": "cell",
+         "model": null,
+         "barcode": null,
+         "preferred_pickup_location": null,
+         "children": [],
+         "parent_name": "tray:TRAY"
+        },
+        {
+         "name": "cell_r0c1:TRAY",
+         "type": "Resource",
+         "size_x": 27.333333333333332,
+         "size_y": 56.0,
+         "size_z": 12.0,
+         "location": {
+          "x": 31.3333,
+          "y": 4.0,
+          "z": 2,
+          "type": "Coordinate"
+         },
+         "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "type": "Rotation"
+         },
+         "category": "cell",
+         "model": null,
+         "barcode": null,
+         "preferred_pickup_location": null,
+         "children": [],
+         "parent_name": "tray:TRAY"
+        },
+        {
+         "name": "cell_r0c2:TRAY",
+         "type": "Resource",
+         "size_x": 27.333333333333332,
+         "size_y": 56.0,
+         "size_z": 12.0,
+         "location": {
+          "x": 58.6667,
+          "y": 4.0,
+          "z": 2,
+          "type": "Coordinate"
+         },
+         "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "type": "Rotation"
+         },
+         "category": "cell",
+         "model": null,
+         "barcode": null,
+         "preferred_pickup_location": null,
+         "children": [],
+         "parent_name": "tray:TRAY"
+        },
+        {
+         "name": "cell_r1c0:TRAY",
+         "type": "Resource",
+         "size_x": 27.333333333333332,
+         "size_y": 56.0,
+         "size_z": 12.0,
+         "location": {
+          "x": 4.0,
+          "y": 60.0,
+          "z": 2,
+          "type": "Coordinate"
+         },
+         "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "type": "Rotation"
+         },
+         "category": "cell",
+         "model": null,
+         "barcode": null,
+         "preferred_pickup_location": null,
+         "children": [],
+         "parent_name": "tray:TRAY"
+        },
+        {
+         "name": "cell_r1c1:TRAY",
+         "type": "Resource",
+         "size_x": 27.333333333333332,
+         "size_y": 56.0,
+         "size_z": 12.0,
+         "location": {
+          "x": 31.3333,
+          "y": 60.0,
+          "z": 2,
+          "type": "Coordinate"
+         },
+         "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "type": "Rotation"
+         },
+         "category": "cell",
+         "model": null,
+         "barcode": null,
+         "preferred_pickup_location": null,
+         "children": [],
+         "parent_name": "tray:TRAY"
+        },
+        {
+         "name": "cell_r1c2:TRAY",
+         "type": "Resource",
+         "size_x": 27.333333333333332,
+         "size_y": 56.0,
+         "size_z": 12.0,
+         "location": {
+          "x": 58.6667,
+          "y": 60.0,
+          "z": 2,
+          "type": "Coordinate"
+         },
+         "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "type": "Rotation"
+         },
+         "category": "cell",
+         "model": null,
+         "barcode": null,
+         "preferred_pickup_location": null,
+         "children": [],
+         "parent_name": "tray:TRAY"
+        }
+       ],
+       "parent_name": "filter_face_L0"
+      }
+     ],
+     "parent_name": "tower"
+    },
+    {
+     "name": "filter_face_L1",
+     "type": "Resource",
+     "size_x": 90.0,
+     "size_y": 120.0,
+     "size_z": 14.0,
+     "location": {
+      "x": 150.0,
+      "y": 20,
+      "z": 240.0,
+      "type": "Coordinate"
+     },
+     "rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "type": "Rotation"
+     },
+     "category": "slot:filter",
+     "model": null,
+     "barcode": null,
+     "preferred_pickup_location": null,
+     "children": [],
+     "parent_name": "tower"
+    },
+    {
+     "name": "filter_face_L2",
+     "type": "Resource",
+     "size_x": 90.0,
+     "size_y": 120.0,
+     "size_z": 14.0,
+     "location": {
+      "x": 150.0,
+      "y": 20,
+      "z": 340.0,
+      "type": "Coordinate"
+     },
+     "rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "type": "Rotation"
+     },
+     "category": "slot:filter",
+     "model": null,
+     "barcode": null,
+     "preferred_pickup_location": null,
+     "children": [],
+     "parent_name": "tower"
+    },
+    {
+     "name": "filter_face_L3",
+     "type": "Resource",
+     "size_x": 90.0,
+     "size_y": 120.0,
+     "size_z": 14.0,
+     "location": {
+      "x": 150.0,
+      "y": 20,
+      "z": 440.0,
+      "type": "Coordinate"
+     },
+     "rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "type": "Rotation"
+     },
+     "category": "slot:filter",
+     "model": null,
+     "barcode": null,
+     "preferred_pickup_location": null,
+     "children": [],
+     "parent_name": "tower"
+    }
+   ],
+   "parent_name": "bench"
+  },
+  {
+   "name": "bench_rack_R0",
+   "type": "Resource",
+   "size_x": 90.0,
+   "size_y": 120.0,
+   "size_z": 14.0,
+   "location": {
+    "x": 850.0,
+    "y": 205.0,
+    "z": 20,
+    "type": "Coordinate"
+   },
+   "rotation": {
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "type": "Rotation"
+   },
+   "category": "slot:rack",
+   "model": null,
+   "barcode": null,
+   "preferred_pickup_location": null,
+   "children": [
+    {
+     "name": "tray:SS-PERF-3.2",
+     "type": "Resource",
+     "size_x": 90.0,
+     "size_y": 120.0,
+     "size_z": 14.0,
+     "location": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "type": "Coordinate"
+     },
+     "rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "type": "Rotation"
+     },
+     "category": "tray",
+     "model": null,
+     "barcode": null,
+     "preferred_pickup_location": null,
+     "children": [
+      {
+       "name": "filter:SS-PERF-3.2",
+       "type": "Resource",
+       "size_x": 82.0,
+       "size_y": 112.0,
+       "size_z": 1.6,
+       "location": {
+        "x": 4,
+        "y": 4,
+        "z": 2,
+        "type": "Coordinate"
+       },
+       "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "type": "Rotation"
+       },
+       "category": "filter",
+       "model": null,
+       "barcode": null,
+       "preferred_pickup_location": null,
+       "children": [],
+       "parent_name": "tray:SS-PERF-3.2"
+      },
+      {
+       "name": "cell_r0c0:SS-PERF-3.2",
+       "type": "Resource",
+       "size_x": 27.333333333333332,
+       "size_y": 56.0,
+       "size_z": 12.0,
+       "location": {
+        "x": 4.0,
+        "y": 4.0,
+        "z": 2,
+        "type": "Coordinate"
+       },
+       "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "type": "Rotation"
+       },
+       "category": "cell",
+       "model": null,
+       "barcode": null,
+       "preferred_pickup_location": null,
+       "children": [],
+       "parent_name": "tray:SS-PERF-3.2"
+      },
+      {
+       "name": "cell_r0c1:SS-PERF-3.2",
+       "type": "Resource",
+       "size_x": 27.333333333333332,
+       "size_y": 56.0,
+       "size_z": 12.0,
+       "location": {
+        "x": 31.3333,
+        "y": 4.0,
+        "z": 2,
+        "type": "Coordinate"
+       },
+       "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "type": "Rotation"
+       },
+       "category": "cell",
+       "model": null,
+       "barcode": null,
+       "preferred_pickup_location": null,
+       "children": [],
+       "parent_name": "tray:SS-PERF-3.2"
+      },
+      {
+       "name": "cell_r0c2:SS-PERF-3.2",
+       "type": "Resource",
+       "size_x": 27.333333333333332,
+       "size_y": 56.0,
+       "size_z": 12.0,
+       "location": {
+        "x": 58.6667,
+        "y": 4.0,
+        "z": 2,
+        "type": "Coordinate"
+       },
+       "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "type": "Rotation"
+       },
+       "category": "cell",
+       "model": null,
+       "barcode": null,
+       "preferred_pickup_location": null,
+       "children": [],
+       "parent_name": "tray:SS-PERF-3.2"
+      },
+      {
+       "name": "cell_r1c0:SS-PERF-3.2",
+       "type": "Resource",
+       "size_x": 27.333333333333332,
+       "size_y": 56.0,
+       "size_z": 12.0,
+       "location": {
+        "x": 4.0,
+        "y": 60.0,
+        "z": 2,
+        "type": "Coordinate"
+       },
+       "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "type": "Rotation"
+       },
+       "category": "cell",
+       "model": null,
+       "barcode": null,
+       "preferred_pickup_location": null,
+       "children": [],
+       "parent_name": "tray:SS-PERF-3.2"
+      },
+      {
+       "name": "cell_r1c1:SS-PERF-3.2",
+       "type": "Resource",
+       "size_x": 27.333333333333332,
+       "size_y": 56.0,
+       "size_z": 12.0,
+       "location": {
+        "x": 31.3333,
+        "y": 60.0,
+        "z": 2,
+        "type": "Coordinate"
+       },
+       "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "type": "Rotation"
+       },
+       "category": "cell",
+       "model": null,
+       "barcode": null,
+       "preferred_pickup_location": null,
+       "children": [],
+       "parent_name": "tray:SS-PERF-3.2"
+      },
+      {
+       "name": "cell_r1c2:SS-PERF-3.2",
+       "type": "Resource",
+       "size_x": 27.333333333333332,
+       "size_y": 56.0,
+       "size_z": 12.0,
+       "location": {
+        "x": 58.6667,
+        "y": 60.0,
+        "z": 2,
+        "type": "Coordinate"
+       },
+       "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "type": "Rotation"
+       },
+       "category": "cell",
+       "model": null,
+       "barcode": null,
+       "preferred_pickup_location": null,
+       "children": [],
+       "parent_name": "tray:SS-PERF-3.2"
+      }
+     ],
+     "parent_name": "bench_rack_R0"
+    }
+   ],
+   "parent_name": "bench"
+  },
+  {
+   "name": "bench_rack_R1",
+   "type": "Resource",
+   "size_x": 90.0,
+   "size_y": 120.0,
+   "size_z": 14.0,
+   "location": {
+    "x": 950.0,
+    "y": 205.0,
+    "z": 20,
+    "type": "Coordinate"
+   },
+   "rotation": {
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "type": "Rotation"
+   },
+   "category": "slot:rack",
+   "model": null,
+   "barcode": null,
+   "preferred_pickup_location": null,
+   "children": [
+    {
+     "name": "tray:SS-SLOT-3.2x19",
+     "type": "Resource",
+     "size_x": 90.0,
+     "size_y": 120.0,
+     "size_z": 14.0,
+     "location": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "type": "Coordinate"
+     },
+     "rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "type": "Rotation"
+     },
+     "category": "tray",
+     "model": null,
+     "barcode": null,
+     "preferred_pickup_location": null,
+     "children": [
+      {
+       "name": "filter:SS-SLOT-3.2x19",
+       "type": "Resource",
+       "size_x": 82.0,
+       "size_y": 112.0,
+       "size_z": 1.6,
+       "location": {
+        "x": 4,
+        "y": 4,
+        "z": 2,
+        "type": "Coordinate"
+       },
+       "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "type": "Rotation"
+       },
+       "category": "filter",
+       "model": null,
+       "barcode": null,
+       "preferred_pickup_location": null,
+       "children": [],
+       "parent_name": "tray:SS-SLOT-3.2x19"
+      },
+      {
+       "name": "cell_r0c0:SS-SLOT-3.2x19",
+       "type": "Resource",
+       "size_x": 27.333333333333332,
+       "size_y": 56.0,
+       "size_z": 12.0,
+       "location": {
+        "x": 4.0,
+        "y": 4.0,
+        "z": 2,
+        "type": "Coordinate"
+       },
+       "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "type": "Rotation"
+       },
+       "category": "cell",
+       "model": null,
+       "barcode": null,
+       "preferred_pickup_location": null,
+       "children": [],
+       "parent_name": "tray:SS-SLOT-3.2x19"
+      },
+      {
+       "name": "cell_r0c1:SS-SLOT-3.2x19",
+       "type": "Resource",
+       "size_x": 27.333333333333332,
+       "size_y": 56.0,
+       "size_z": 12.0,
+       "location": {
+        "x": 31.3333,
+        "y": 4.0,
+        "z": 2,
+        "type": "Coordinate"
+       },
+       "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "type": "Rotation"
+       },
+       "category": "cell",
+       "model": null,
+       "barcode": null,
+       "preferred_pickup_location": null,
+       "children": [],
+       "parent_name": "tray:SS-SLOT-3.2x19"
+      },
+      {
+       "name": "cell_r0c2:SS-SLOT-3.2x19",
+       "type": "Resource",
+       "size_x": 27.333333333333332,
+       "size_y": 56.0,
+       "size_z": 12.0,
+       "location": {
+        "x": 58.6667,
+        "y": 4.0,
+        "z": 2,
+        "type": "Coordinate"
+       },
+       "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "type": "Rotation"
+       },
+       "category": "cell",
+       "model": null,
+       "barcode": null,
+       "preferred_pickup_location": null,
+       "children": [],
+       "parent_name": "tray:SS-SLOT-3.2x19"
+      },
+      {
+       "name": "cell_r1c0:SS-SLOT-3.2x19",
+       "type": "Resource",
+       "size_x": 27.333333333333332,
+       "size_y": 56.0,
+       "size_z": 12.0,
+       "location": {
+        "x": 4.0,
+        "y": 60.0,
+        "z": 2,
+        "type": "Coordinate"
+       },
+       "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "type": "Rotation"
+       },
+       "category": "cell",
+       "model": null,
+       "barcode": null,
+       "preferred_pickup_location": null,
+       "children": [],
+       "parent_name": "tray:SS-SLOT-3.2x19"
+      },
+      {
+       "name": "cell_r1c1:SS-SLOT-3.2x19",
+       "type": "Resource",
+       "size_x": 27.333333333333332,
+       "size_y": 56.0,
+       "size_z": 12.0,
+       "location": {
+        "x": 31.3333,
+        "y": 60.0,
+        "z": 2,
+        "type": "Coordinate"
+       },
+       "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "type": "Rotation"
+       },
+       "category": "cell",
+       "model": null,
+       "barcode": null,
+       "preferred_pickup_location": null,
+       "children": [],
+       "parent_name": "tray:SS-SLOT-3.2x19"
+      },
+      {
+       "name": "cell_r1c2:SS-SLOT-3.2x19",
+       "type": "Resource",
+       "size_x": 27.333333333333332,
+       "size_y": 56.0,
+       "size_z": 12.0,
+       "location": {
+        "x": 58.6667,
+        "y": 60.0,
+        "z": 2,
+        "type": "Coordinate"
+       },
+       "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "type": "Rotation"
+       },
+       "category": "cell",
+       "model": null,
+       "barcode": null,
+       "preferred_pickup_location": null,
+       "children": [],
+       "parent_name": "tray:SS-SLOT-3.2x19"
+      }
+     ],
+     "parent_name": "bench_rack_R1"
+    }
+   ],
+   "parent_name": "bench"
+  },
+  {
+   "name": "bench_rack_R2",
+   "type": "Resource",
+   "size_x": 90.0,
+   "size_y": 120.0,
+   "size_z": 14.0,
+   "location": {
+    "x": 1050.0,
+    "y": 205.0,
+    "z": 20,
+    "type": "Coordinate"
+   },
+   "rotation": {
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "type": "Rotation"
+   },
+   "category": "slot:rack",
+   "model": null,
+   "barcode": null,
+   "preferred_pickup_location": null,
+   "children": [
+    {
+     "name": "tray:SS-PERF-6.4",
+     "type": "Resource",
+     "size_x": 90.0,
+     "size_y": 120.0,
+     "size_z": 14.0,
+     "location": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "type": "Coordinate"
+     },
+     "rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "type": "Rotation"
+     },
+     "category": "tray",
+     "model": null,
+     "barcode": null,
+     "preferred_pickup_location": null,
+     "children": [
+      {
+       "name": "filter:SS-PERF-6.4",
+       "type": "Resource",
+       "size_x": 82.0,
+       "size_y": 112.0,
+       "size_z": 1.6,
+       "location": {
+        "x": 4,
+        "y": 4,
+        "z": 2,
+        "type": "Coordinate"
+       },
+       "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "type": "Rotation"
+       },
+       "category": "filter",
+       "model": null,
+       "barcode": null,
+       "preferred_pickup_location": null,
+       "children": [],
+       "parent_name": "tray:SS-PERF-6.4"
+      },
+      {
+       "name": "cell_r0c0:SS-PERF-6.4",
+       "type": "Resource",
+       "size_x": 27.333333333333332,
+       "size_y": 56.0,
+       "size_z": 12.0,
+       "location": {
+        "x": 4.0,
+        "y": 4.0,
+        "z": 2,
+        "type": "Coordinate"
+       },
+       "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "type": "Rotation"
+       },
+       "category": "cell",
+       "model": null,
+       "barcode": null,
+       "preferred_pickup_location": null,
+       "children": [],
+       "parent_name": "tray:SS-PERF-6.4"
+      },
+      {
+       "name": "cell_r0c1:SS-PERF-6.4",
+       "type": "Resource",
+       "size_x": 27.333333333333332,
+       "size_y": 56.0,
+       "size_z": 12.0,
+       "location": {
+        "x": 31.3333,
+        "y": 4.0,
+        "z": 2,
+        "type": "Coordinate"
+       },
+       "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "type": "Rotation"
+       },
+       "category": "cell",
+       "model": null,
+       "barcode": null,
+       "preferred_pickup_location": null,
+       "children": [],
+       "parent_name": "tray:SS-PERF-6.4"
+      },
+      {
+       "name": "cell_r0c2:SS-PERF-6.4",
+       "type": "Resource",
+       "size_x": 27.333333333333332,
+       "size_y": 56.0,
+       "size_z": 12.0,
+       "location": {
+        "x": 58.6667,
+        "y": 4.0,
+        "z": 2,
+        "type": "Coordinate"
+       },
+       "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "type": "Rotation"
+       },
+       "category": "cell",
+       "model": null,
+       "barcode": null,
+       "preferred_pickup_location": null,
+       "children": [],
+       "parent_name": "tray:SS-PERF-6.4"
+      },
+      {
+       "name": "cell_r1c0:SS-PERF-6.4",
+       "type": "Resource",
+       "size_x": 27.333333333333332,
+       "size_y": 56.0,
+       "size_z": 12.0,
+       "location": {
+        "x": 4.0,
+        "y": 60.0,
+        "z": 2,
+        "type": "Coordinate"
+       },
+       "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "type": "Rotation"
+       },
+       "category": "cell",
+       "model": null,
+       "barcode": null,
+       "preferred_pickup_location": null,
+       "children": [],
+       "parent_name": "tray:SS-PERF-6.4"
+      },
+      {
+       "name": "cell_r1c1:SS-PERF-6.4",
+       "type": "Resource",
+       "size_x": 27.333333333333332,
+       "size_y": 56.0,
+       "size_z": 12.0,
+       "location": {
+        "x": 31.3333,
+        "y": 60.0,
+        "z": 2,
+        "type": "Coordinate"
+       },
+       "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "type": "Rotation"
+       },
+       "category": "cell",
+       "model": null,
+       "barcode": null,
+       "preferred_pickup_location": null,
+       "children": [],
+       "parent_name": "tray:SS-PERF-6.4"
+      },
+      {
+       "name": "cell_r1c2:SS-PERF-6.4",
+       "type": "Resource",
+       "size_x": 27.333333333333332,
+       "size_y": 56.0,
+       "size_z": 12.0,
+       "location": {
+        "x": 58.6667,
+        "y": 60.0,
+        "z": 2,
+        "type": "Coordinate"
+       },
+       "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "type": "Rotation"
+       },
+       "category": "cell",
+       "model": null,
+       "barcode": null,
+       "preferred_pickup_location": null,
+       "children": [],
+       "parent_name": "tray:SS-PERF-6.4"
+      }
+     ],
+     "parent_name": "bench_rack_R2"
+    }
+   ],
+   "parent_name": "bench"
+  },
+  {
+   "name": "bench_rack_R3",
+   "type": "Resource",
+   "size_x": 90.0,
+   "size_y": 120.0,
+   "size_z": 14.0,
+   "location": {
+    "x": 850.0,
+    "y": 335.0,
+    "z": 20,
+    "type": "Coordinate"
+   },
+   "rotation": {
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "type": "Rotation"
+   },
+   "category": "slot:rack",
+   "model": null,
+   "barcode": null,
+   "preferred_pickup_location": null,
+   "children": [
+    {
+     "name": "tray:SS-MESH-1.0",
+     "type": "Resource",
+     "size_x": 90.0,
+     "size_y": 120.0,
+     "size_z": 14.0,
+     "location": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "type": "Coordinate"
+     },
+     "rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "type": "Rotation"
+     },
+     "category": "tray",
+     "model": null,
+     "barcode": null,
+     "preferred_pickup_location": null,
+     "children": [
+      {
+       "name": "filter:SS-MESH-1.0",
+       "type": "Resource",
+       "size_x": 82.0,
+       "size_y": 112.0,
+       "size_z": 1.6,
+       "location": {
+        "x": 4,
+        "y": 4,
+        "z": 2,
+        "type": "Coordinate"
+       },
+       "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "type": "Rotation"
+       },
+       "category": "filter",
+       "model": null,
+       "barcode": null,
+       "preferred_pickup_location": null,
+       "children": [],
+       "parent_name": "tray:SS-MESH-1.0"
+      },
+      {
+       "name": "cell_r0c0:SS-MESH-1.0",
+       "type": "Resource",
+       "size_x": 27.333333333333332,
+       "size_y": 56.0,
+       "size_z": 12.0,
+       "location": {
+        "x": 4.0,
+        "y": 4.0,
+        "z": 2,
+        "type": "Coordinate"
+       },
+       "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "type": "Rotation"
+       },
+       "category": "cell",
+       "model": null,
+       "barcode": null,
+       "preferred_pickup_location": null,
+       "children": [],
+       "parent_name": "tray:SS-MESH-1.0"
+      },
+      {
+       "name": "cell_r0c1:SS-MESH-1.0",
+       "type": "Resource",
+       "size_x": 27.333333333333332,
+       "size_y": 56.0,
+       "size_z": 12.0,
+       "location": {
+        "x": 31.3333,
+        "y": 4.0,
+        "z": 2,
+        "type": "Coordinate"
+       },
+       "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "type": "Rotation"
+       },
+       "category": "cell",
+       "model": null,
+       "barcode": null,
+       "preferred_pickup_location": null,
+       "children": [],
+       "parent_name": "tray:SS-MESH-1.0"
+      },
+      {
+       "name": "cell_r0c2:SS-MESH-1.0",
+       "type": "Resource",
+       "size_x": 27.333333333333332,
+       "size_y": 56.0,
+       "size_z": 12.0,
+       "location": {
+        "x": 58.6667,
+        "y": 4.0,
+        "z": 2,
+        "type": "Coordinate"
+       },
+       "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "type": "Rotation"
+       },
+       "category": "cell",
+       "model": null,
+       "barcode": null,
+       "preferred_pickup_location": null,
+       "children": [],
+       "parent_name": "tray:SS-MESH-1.0"
+      },
+      {
+       "name": "cell_r1c0:SS-MESH-1.0",
+       "type": "Resource",
+       "size_x": 27.333333333333332,
+       "size_y": 56.0,
+       "size_z": 12.0,
+       "location": {
+        "x": 4.0,
+        "y": 60.0,
+        "z": 2,
+        "type": "Coordinate"
+       },
+       "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "type": "Rotation"
+       },
+       "category": "cell",
+       "model": null,
+       "barcode": null,
+       "preferred_pickup_location": null,
+       "children": [],
+       "parent_name": "tray:SS-MESH-1.0"
+      },
+      {
+       "name": "cell_r1c1:SS-MESH-1.0",
+       "type": "Resource",
+       "size_x": 27.333333333333332,
+       "size_y": 56.0,
+       "size_z": 12.0,
+       "location": {
+        "x": 31.3333,
+        "y": 60.0,
+        "z": 2,
+        "type": "Coordinate"
+       },
+       "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "type": "Rotation"
+       },
+       "category": "cell",
+       "model": null,
+       "barcode": null,
+       "preferred_pickup_location": null,
+       "children": [],
+       "parent_name": "tray:SS-MESH-1.0"
+      },
+      {
+       "name": "cell_r1c2:SS-MESH-1.0",
+       "type": "Resource",
+       "size_x": 27.333333333333332,
+       "size_y": 56.0,
+       "size_z": 12.0,
+       "location": {
+        "x": 58.6667,
+        "y": 60.0,
+        "z": 2,
+        "type": "Coordinate"
+       },
+       "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "type": "Rotation"
+       },
+       "category": "cell",
+       "model": null,
+       "barcode": null,
+       "preferred_pickup_location": null,
+       "children": [],
+       "parent_name": "tray:SS-MESH-1.0"
+      }
+     ],
+     "parent_name": "bench_rack_R3"
+    }
+   ],
+   "parent_name": "bench"
+  },
+  {
+   "name": "bench_rack_R4",
+   "type": "Resource",
+   "size_x": 90.0,
+   "size_y": 120.0,
+   "size_z": 14.0,
+   "location": {
+    "x": 950.0,
+    "y": 335.0,
+    "z": 20,
+    "type": "Coordinate"
+   },
+   "rotation": {
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "type": "Rotation"
+   },
+   "category": "slot:rack",
+   "model": null,
+   "barcode": null,
+   "preferred_pickup_location": null,
+   "children": [],
+   "parent_name": "bench"
+  },
+  {
+   "name": "bench_rack_R5",
+   "type": "Resource",
+   "size_x": 90.0,
+   "size_y": 120.0,
+   "size_z": 14.0,
+   "location": {
+    "x": 1050.0,
+    "y": 335.0,
+    "z": 20,
+    "type": "Coordinate"
+   },
+   "rotation": {
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "type": "Rotation"
+   },
+   "category": "slot:rack",
+   "model": null,
+   "barcode": null,
+   "preferred_pickup_location": null,
+   "children": [],
+   "parent_name": "bench"
+  },
+  {
+   "name": "camera_station",
+   "type": "Resource",
+   "size_x": 60,
+   "size_y": 60,
+   "size_z": 80.0,
+   "location": {
+    "x": 150.0,
+    "y": 60,
+    "z": 20,
+    "type": "Coordinate"
+   },
+   "rotation": {
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "type": "Rotation"
+   },
+   "category": "camera",
+   "model": null,
+   "barcode": null,
+   "preferred_pickup_location": null,
+   "children": [],
+   "parent_name": "bench"
+  }
+ ],
+ "parent_name": null
+}

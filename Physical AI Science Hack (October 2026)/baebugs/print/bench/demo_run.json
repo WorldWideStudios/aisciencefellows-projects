@@ -1,0 +1,132 @@
+{
+ "summary": {
+  "initial_state_root": "ecca8f2c54e37d40becc177ac0f0015edddded63c9ad7a4fb6c6b4acfc48f055",
+  "status": "STOPPED_AT_BREAK_POINT",
+  "break_point": {
+   "event": 1,
+   "detail": "insert {'tray': 'SS-SLOT-3.2x19', 'slot': 'filter_face_L2'}: failed checks ['reach']",
+   "checks": {
+    "holding_this": {
+     "pass": true
+    },
+    "slot_free": {
+     "pass": true
+    },
+    "reach": {
+     "reach_needed_mm": 316.7,
+     "reach_mm": 300.0,
+     "z_ok": "True",
+     "pass": false
+    },
+    "fork": {
+     "hits": [],
+     "pass": true
+    },
+    "sweep": {
+     "hits": [],
+     "pass": true
+    },
+    "order": {
+     "pass": true,
+     "aperture_mm": 3.2
+    }
+   }
+  },
+  "actions": 2,
+  "final_state_root": "817d8347d695a8d353f04f2fc723c72d65aaaa5fe4b32172999273db9fc9f62c",
+  "event_root": "054e6499852d6d0e7d31fb41b3af124b6523ca01284758507858657ae41f6238",
+  "plan": [
+   "SS-SLOT-3.2x19",
+   "HEX-2"
+  ],
+  "mesh_evidence": {
+   "Designs/tray.stl": {
+    "sha256": "a0866e073e635557e82e0d90f2b2b51fc89a528cae85e99ab119dfc0c0d135de",
+    "extents_mm": [
+     103.0,
+     140.0,
+     12.5
+    ],
+    "license": "GPL-3.0 (BugPicker)"
+   },
+   "Designs/screentray.stl": {
+    "sha256": "854ba41667db29d9be7b53ca75eedf1c4a6b49386e59288ca976468febe010b3",
+    "extents_mm": [
+     113.6,
+     149.7,
+     10.0
+    ],
+    "license": "GPL-3.0 (BugPicker)"
+   }
+  },
+  "mmr_root": "5c2ad1bde9a8be82d390e3b5178499e919c5df4a8a524413ca1a5fb6d623be97",
+  "geometry_status": "PLACEHOLDER (MEASURE)"
+ },
+ "events": [
+  {
+   "action": "fetch",
+   "params": {
+    "tray": "SS-SLOT-3.2x19",
+    "slot": "bench_rack_R1"
+   },
+   "checks": {
+    "holding_free": {
+     "pass": true
+    },
+    "reach": {
+     "reach_needed_mm": 258.7,
+     "reach_mm": 300.0,
+     "z_ok": "True",
+     "pass": "True"
+    },
+    "fork": {
+     "hits": [],
+     "pass": true
+    },
+    "sweep": {
+     "hits": [],
+     "pass": true
+    }
+   },
+   "pass": true,
+   "state_root": "817d8347d695a8d353f04f2fc723c72d65aaaa5fe4b32172999273db9fc9f62c",
+   "leaf": "06203ac8bf6d2adef28b164f5008b0b394cd2bfc18f786c0ba126dfcfaebea8d"
+  },
+  {
+   "action": "insert",
+   "params": {
+    "tray": "SS-SLOT-3.2x19",
+    "slot": "filter_face_L2"
+   },
+   "checks": {
+    "holding_this": {
+     "pass": true
+    },
+    "slot_free": {
+     "pass": true
+    },
+    "reach": {
+     "reach_needed_mm": 316.7,
+     "reach_mm": 300.0,
+     "z_ok": "True",
+     "pass": false
+    },
+    "fork": {
+     "hits": [],
+     "pass": true
+    },
+    "sweep": {
+     "hits": [],
+     "pass": true
+    },
+    "order": {
+     "pass": true,
+     "aperture_mm": 3.2
+    }
+   },
+   "pass": false,
+   "state_root": null,
+   "leaf": "2d4e5e2afb7f98d9fefbb1ae0e7e5dd770f8e73ca90d1dfebcde2db8dac9b402"
+  }
+ ]
+}

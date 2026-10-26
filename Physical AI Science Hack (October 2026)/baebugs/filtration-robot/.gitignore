@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+vision/output/
+vision/captures/
+vision/models/
+arm/practice_poses.json
+arm/captures/
+arm/inventory.json
+arm/practice_inventory.json

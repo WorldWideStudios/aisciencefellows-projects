@@ -1,0 +1,4 @@
+{
+  "leader": {"usb_serial": "5A7A056103", "port": "/dev/cu.usbmodem5A7A0561031", "type": "so101_leader", "id": "so101_leader_5A7A056103"},
+  "follower": {"usb_serial": "5A7A055478", "port": "/dev/cu.usbmodem5A7A0554781", "type": "so101_follower", "id": "so101_follower_5A7A055478"}
+}

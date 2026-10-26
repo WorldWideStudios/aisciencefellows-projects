@@ -1,0 +1,145 @@
+{
+ "protocol": "DAISY-BB-004",
+ "protocol_sha256": "31b1b0a655f187e5d564d7ca6c1ecd1a9ddaf8d98576bb21cfaa07ecddd8b283",
+ "results": {
+  "ORDER": {
+   "status": "OBSERVED_EXPLORATORY",
+   "error": null,
+   "classes": [
+    "Coleoptera",
+    "Diptera",
+    "Hemiptera",
+    "Hymenoptera",
+    "Lepidoptera",
+    "other"
+   ],
+   "weights_sha256": "8a9dcb7af1252a6346dcb151717e5c3cb55078e7d4737c64913c8d015eac8f02",
+   "weights_tensor_sha256": "04cf5c6bcb0df793c7383a599c78b350a002132b50b31be46b2482f62908c174",
+   "weights_file": "ORDER_best.pt",
+   "eval": {
+    "val": {
+     "n": 381,
+     "top1": 0.9396,
+     "macro_f1": 0.9189,
+     "majority_macro_f1": 0.1101,
+     "per_class_f1": {
+      "Coleoptera": 0.9388,
+      "Diptera": 0.948,
+      "Hemiptera": 0.8846,
+      "Hymenoptera": 0.9462,
+      "Lepidoptera": 0.9778,
+      "other": 0.8182
+     }
+    },
+    "test": {
+     "n": 231,
+     "top1": 0.9481,
+     "macro_f1": 0.7004,
+     "majority_macro_f1": 0.1352,
+     "per_class_f1": {
+      "Coleoptera": 0.8947,
+      "Hemiptera": 0.0,
+      "Hymenoptera": 0.9667,
+      "Lepidoptera": 0.9739,
+      "other": 0.6667
+     }
+    }
+   },
+   "verdict": "USEFUL",
+   "minutes": 4.2,
+   "custody": "INTACT"
+  },
+  "FAMILY_Hymenoptera": {
+   "status": "OBSERVED_EXPLORATORY",
+   "error": null,
+   "classes": [
+    "Andrenidae",
+    "Apidae",
+    "Formicidae",
+    "Halictidae",
+    "Megachilidae",
+    "Vespidae",
+    "other"
+   ],
+   "weights_sha256": "002cc26e3872397af01089df57e9add6ca379d3da9026011cba52791b33c5047",
+   "weights_tensor_sha256": "09bc986b73ac205be7a57094ee0e8bc245bc1c6cd286ca0f8e1ded2b667e3607",
+   "weights_file": "FAMILY_Hymenoptera_best.pt",
+   "eval": {
+    "val": {
+     "n": 169,
+     "top1": 0.9349,
+     "macro_f1": 0.8825,
+     "majority_macro_f1": 0.0794,
+     "per_class_f1": {
+      "Andrenidae": 0.9474,
+      "Apidae": 0.9688,
+      "Formicidae": 0.8889,
+      "Halictidae": 0.9358,
+      "Megachilidae": 0.7143,
+      "Vespidae": 0.8889,
+      "other": 0.8333
+     }
+    },
+    "test": {
+     "n": 86,
+     "top1": 0.2674,
+     "macro_f1": 0.1673,
+     "majority_macro_f1": 0.0683,
+     "per_class_f1": {
+      "Andrenidae": 0.1951,
+      "Apidae": 0.2449,
+      "Formicidae": 0.0,
+      "Halictidae": 0.383,
+      "Megachilidae": 0.3478,
+      "Vespidae": 0.0,
+      "other": 0.0
+     }
+    }
+   },
+   "verdict": "NULL",
+   "minutes": 2.0,
+   "custody": "INTACT"
+  },
+  "FAMILY_Diptera": {
+   "status": "OBSERVED_EXPLORATORY",
+   "error": null,
+   "classes": [
+    "Bombyliidae",
+    "Syrphidae",
+    "Tachinidae",
+    "other"
+   ],
+   "weights_sha256": "cf0500dd436c2a862a1fd89b8dd5722eb27daa9241ee9ed1413c5227139a3243",
+   "weights_tensor_sha256": "0da6bf31bd3619c55577d2c3911b6522cb64d2bcccd7aaced0f07e62efcd3029",
+   "weights_file": "FAMILY_Diptera_best.pt",
+   "eval": {
+    "val": {
+     "n": 74,
+     "top1": 0.9865,
+     "macro_f1": 0.9673,
+     "majority_macro_f1": 0.1967,
+     "per_class_f1": {
+      "Bombyliidae": 1.0,
+      "Syrphidae": 0.96,
+      "Tachinidae": 1.0,
+      "other": 0.9091
+     }
+    }
+   },
+   "verdict": null,
+   "minutes": 1.1,
+   "custody": "INTACT"
+  }
+ },
+ "events_root": "d47ecaf16f4a00add0b7963af22e4e96e13f9c0f6991ee5cb4d2cf9e5ce11d8c",
+ "n_events": 104,
+ "artifacts": {
+  "FAMILY_Diptera_best.pt": "cf0500dd436c2a862a1fd89b8dd5722eb27daa9241ee9ed1413c5227139a3243",
+  "FAMILY_Hymenoptera_best.pt": "002cc26e3872397af01089df57e9add6ca379d3da9026011cba52791b33c5047",
+  "ORDER_best.pt": "8a9dcb7af1252a6346dcb151717e5c3cb55078e7d4737c64913c8d015eac8f02",
+  "events.jsonl": "d284d47745be6f7cd50609424bfdc0835b3974369f25a5a52ff2b9c6fae4d474"
+ },
+ "artifacts_root": "c25dc5f4e90a0acb29759ee1c4991f579b769aad58a3ba546e64a51e05928885",
+ "custody_status": "INTACT",
+ "custody_breaks": []
+}

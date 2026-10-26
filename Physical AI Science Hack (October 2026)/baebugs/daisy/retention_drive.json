@@ -1,0 +1,191 @@
+{
+ "scope": "drive",
+ "items": [
+  {
+   "name": "raw GBIF photos",
+   "class": "KEEP",
+   "reason": "source data (re-downloadable, not reproducible)",
+   "paths": [
+    "/Volumes/magicBLACKbox/baebugs/datasets/gbif_ca_2",
+    "/Volumes/magicBLACKbox/baebugs/datasets/gbif_az",
+    "/Volumes/magicBLACKbox/baebugs/datasets/gbif_nv",
+    "/Volumes/magicBLACKbox/baebugs/datasets/gbif_or",
+    "/Volumes/magicLABbox/baebugs/datasets/gbif_specimen_images"
+   ],
+   "files": 14622,
+   "bytes": 19697311329,
+   "reclaimable_bytes": 19697311329
+  },
+  {
+   "name": "teacher pseudo-labels",
+   "class": "KEEP",
+   "reason": "model outputs: costly to recompute",
+   "paths": [
+    "/Volumes/magicBLACKbox/baebugs/datasets/pseudo_specimens_r3_real"
+   ],
+   "files": 5108,
+   "bytes": 2173480781,
+   "reclaimable_bytes": 25825572
+  },
+  {
+   "name": "ruler truth sets",
+   "class": "KEEP",
+   "reason": "truth",
+   "paths": [
+    "/Volumes/magicBLACKbox/baebugs/datasets/_teacher_check",
+    "/Volumes/magicBLACKbox/baebugs/datasets/_teacher_check2"
+   ],
+   "files": 84,
+   "bytes": 35421438,
+   "reclaimable_bytes": 0
+  },
+  {
+   "name": "multires resamples",
+   "class": "KEEP",
+   "reason": "rebuild with resolution.at_megapixels from pseudo-labels",
+   "paths": [
+    "/Volumes/magicBLACKbox/baebugs/datasets/multires_r4_multires"
+   ],
+   "files": 15311,
+   "bytes": 1864541176,
+   "reclaimable_bytes": 74794582,
+   "proof": {
+    "compared": 75,
+    "n_mismatch": 75,
+    "mismatch": [
+     "multires_r4_multires/mp_0.3/images/train/1317334061.jpg",
+     "multires_r4_multires/mp_0.3/images/train/1317671674.jpg",
+     "multires_r4_multires/mp_0.3/images/train/1319192920.jpg",
+     "multires_r4_multires/mp_0.3/images/train/1321915532.jpg",
+     "multires_r4_multires/mp_0.3/images/train/1932506537.jpg"
+    ],
+    "proven": false,
+    "what": "multires resamples (sample 25/level)"
+   }
+  },
+  {
+   "name": "synthetic sets",
+   "class": "KEEP",
+   "reason": "seeded but not yet proven by full rebuild",
+   "paths": [
+    "/Volumes/magicBLACKbox/baebugs/datasets/synth_1_30_r2",
+    "/Volumes/magicBLACKbox/baebugs/datasets/synth_1_30_r3_real"
+   ],
+   "files": 2888,
+   "bytes": 116220834,
+   "reclaimable_bytes": 9224660
+  },
+  {
+   "name": "rejected pseudo v1",
+   "class": "DROPPABLE",
+   "reason": "negative record: keep its DAISY manifest + root, drop images",
+   "paths": [
+    "/Volumes/magicBLACKbox/baebugs/datasets/_rejected_pseudo_v1"
+   ],
+   "files": 2156,
+   "bytes": 713066426,
+   "reclaimable_bytes": 713066426
+  },
+  {
+   "name": "Kaggle staging bundles",
+   "class": "DROPPABLE",
+   "reason": "hardlinked/copied from verified datasets; re-stage from manifests",
+   "paths": [
+    "/Volumes/magicBLACKbox/baebugs/daisy/kaggle"
+   ],
+   "files": 24503,
+   "bytes": 4138285551,
+   "reclaimable_bytes": 29201321
+  },
+  {
+   "name": "toy renders",
+   "class": "REGENERABLE",
+   "reason": "model_compare.render is deterministic",
+   "paths": [
+    "/Volumes/magicBLACKbox/baebugs/daisy/derived/toy_renders",
+    "/Volumes/magicBLACKbox/baebugs/compare_renders"
+   ],
+   "files": 639,
+   "bytes": 41798070,
+   "reclaimable_bytes": 21250126,
+   "proof": {
+    "compared": 20,
+    "n_mismatch": 0,
+    "mismatch": [],
+    "proven": true,
+    "what": "toy renders (sample 20)"
+   }
+  },
+  {
+   "name": "stopped local round 4",
+   "class": "DROPPABLE",
+   "reason": "stopped at ~4% of epoch 1; no weights",
+   "paths": [
+    "/Volumes/magicBLACKbox/baebugs/runs/r4_multires",
+    "/Volumes/magicBLACKbox/baebugs/work/r4_multires"
+   ],
+   "files": 1217,
+   "bytes": 507370277,
+   "reclaimable_bytes": 507370277
+  },
+  {
+   "name": "failed Kaggle AMP realization",
+   "class": "DROPPABLE",
+   "reason": "NaN run; execution + hashes recorded in impact MMR",
+   "paths": [
+    "/Volumes/magicBLACKbox/baebugs/daisy/kaggle_out3"
+   ],
+   "files": 10,
+   "bytes": 70545072,
+   "reclaimable_bytes": 70545072
+  },
+  {
+   "name": "last.pt duplicates",
+   "class": "DROPPABLE",
+   "reason": "keep best.pt (one realization per run)",
+   "paths": [
+    "/Volumes/magicBLACKbox/baebugs/runs/r2_synth_1_30/weights/last.pt",
+    "/Volumes/magicBLACKbox/baebugs/runs/r3_real/weights/last.pt"
+   ],
+   "files": 2,
+   "bytes": 12074504,
+   "reclaimable_bytes": 12074504
+  },
+  {
+   "name": "weights (best.pt)",
+   "class": "KEEP",
+   "reason": "one realization per behaviour class",
+   "paths": [
+    "/Volumes/magicBLACKbox/baebugs/runs/r2_synth_1_30/weights/best.pt",
+    "/Volumes/magicBLACKbox/baebugs/runs/r3_real/weights/best.pt"
+   ],
+   "files": 2,
+   "bytes": 12074504,
+   "reclaimable_bytes": 12074504
+  }
+ ],
+ "summary": {
+  "KEEP": {
+   "bytes": 23899050062,
+   "reclaimable_bytes": 19819230647,
+   "files": 38015,
+   "GB": 23.899,
+   "reclaimable_GB": 19.819
+  },
+  "DROPPABLE": {
+   "bytes": 5441341830,
+   "reclaimable_bytes": 1332257600,
+   "files": 27888,
+   "GB": 5.441,
+   "reclaimable_GB": 1.332
+  },
+  "REGENERABLE": {
+   "bytes": 41798070,
+   "reclaimable_bytes": 21250126,
+   "files": 639,
+   "GB": 0.042,
+   "reclaimable_GB": 0.021
+  }
+ },
+ "proof_root": null
+}

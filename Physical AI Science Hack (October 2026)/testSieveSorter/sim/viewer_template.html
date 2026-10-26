@@ -1,0 +1,996 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>__TITLE__</title>
+<!-- Template for sim/viewer.py. The __NAME__ markers are filled in by viewer.py. -->
+<style>
+:root {
+  --surface: #fcfcfb; --plane: #eef1f5; --ink: #0b0b0b; --ink-2: #52514e; --muted: #898781;
+  --hair: #e1e0d9; --axis: #c3c2b7;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; font: 12px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--ink); background: var(--plane); }
+#app { display: flex; height: 100vh; }
+#view { position: relative; flex: 1; min-width: 0; background: #d5d9e0; }
+#stage { position: absolute; inset: 0; }
+#c { display: block; width: 100%; height: 100%; outline: none; }
+#labels { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+#rec-badge { position: absolute; top: 8px; left: 10px; display: none; color: #c62828; font-weight: 600; font-variant-numeric: tabular-nums; pointer-events: none; }
+.zlabel { position: absolute; transform: translate(-50%, 4px); font-size: 11px; color: var(--ink); background: rgba(252, 252, 251, 0.85); padding: 0 5px 0 4px; border-radius: 2px; border-left: 3px solid; white-space: nowrap; }
+#loading { position: absolute; inset: 0; display: grid; place-items: center; color: var(--ink-2); font-size: 13px; background: var(--plane); padding: 20px; text-align: center; }
+#hint { position: absolute; left: 10px; bottom: 8px; color: var(--muted); font-size: 11px; pointer-events: none; }
+#panel { width: 440px; flex: none; overflow-y: auto; background: var(--surface); border-left: 1px solid var(--hair); padding: 14px 16px 24px; }
+h1 { font-size: 15px; font-weight: 600; margin: 0 0 8px; word-break: break-word; }
+h2 { font-size: 11px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 6px; display: flex; align-items: center; gap: 8px; }
+h2 .sub { text-transform: none; letter-spacing: 0; font-weight: 400; color: var(--muted); }
+section { border-top: 1px solid var(--hair); padding: 10px 0; }
+dl.meta { display: grid; grid-template-columns: auto 1fr; gap: 1px 12px; margin: 0 0 10px; }
+dl.meta dt { color: var(--muted); }
+dl.meta dd { margin: 0; }
+.row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+button, select { font: inherit; color: var(--ink); background: #fff; border: 1px solid var(--axis); border-radius: 4px; padding: 3px 9px; cursor: pointer; }
+button:hover { background: #f0efec; }
+#play { min-width: 66px; font-weight: 600; }
+.seg { display: inline-flex; border: 1px solid var(--axis); border-radius: 4px; overflow: hidden; }
+.seg button { border: 0; border-radius: 0; border-left: 1px solid var(--axis); padding: 3px 8px; }
+.seg button:first-child { border-left: 0; }
+.seg button.on { background: var(--ink); color: #fff; }
+#scrub { width: 100%; margin: 10px 0 2px; }
+.readout { display: flex; justify-content: space-between; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+label.chk { display: flex; align-items: center; gap: 6px; margin: 2px 0; cursor: pointer; }
+table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+th, td { padding: 2px 3px; text-align: right; border-bottom: 1px solid var(--hair); }
+th { font-weight: 500; font-size: 10.5px; color: var(--ink-2); vertical-align: bottom; white-space: nowrap; }
+th:first-child, td:first-child { text-align: left; }
+#counts-wrap { overflow-x: auto; }
+td.kind label { display: flex; align-items: center; gap: 5px; cursor: pointer; white-space: nowrap; }
+td.kind input { margin: 0; }
+td.kind .n { color: var(--muted); font-size: 10.5px; }
+td.ideal { font-weight: 700; }
+td.zero { color: var(--muted); }
+td.rec { color: var(--ink-2); border-left: 1px solid var(--hair); }
+.swatch { display: inline-block; width: 10px; height: 10px; flex: none; border-radius: 2px; border: 1px solid rgba(0, 0, 0, 0.3); }
+.dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 3px; vertical-align: 1px; }
+.note { color: var(--muted); font-size: 11px; margin-top: 5px; }
+#chart-wrap { position: relative; }
+#chart { display: block; width: 100%; height: 170px; cursor: crosshair; }
+#tip { position: absolute; display: none; pointer-events: none; background: #fff; border: 1px solid var(--hair); border-radius: 4px; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12); padding: 4px 7px; font-size: 11px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+kbd { font: inherit; font-size: 10.5px; border: 1px solid var(--axis); border-radius: 3px; padding: 0 4px; background: #fff; }
+input[type=number] { font: inherit; width: 54px; color: var(--ink); background: #fff; border: 1px solid var(--axis); border-radius: 4px; padding: 2px 4px; }
+#cam-text { display: block; width: 100%; margin-top: 7px; font: 11px/1.4 ui-monospace, Consolas, monospace; color: var(--ink-2); background: var(--plane); border: 1px solid var(--hair); border-radius: 4px; padding: 3px 6px; }
+#record.on { background: #c62828; border-color: #c62828; color: #fff; }
+#rec-status { color: var(--ink-2); font-variant-numeric: tabular-nums; }
+</style>
+<script type="importmap">__IMPORTMAP__</script>
+</head>
+<body>
+<div id="app">
+  <div id="view">
+    <div id="stage">
+      <canvas id="c" tabindex="-1"></canvas>
+      <div id="labels"></div>
+    </div>
+    <div id="rec-badge"></div>
+    <div id="hint">Drag to orbit, right-drag to pan, wheel to zoom. <kbd>Space</kbd> play/pause, <kbd>&larr;</kbd> <kbd>&rarr;</kbd> step.</div>
+    <div id="loading">Loading recording...</div>
+  </div>
+  <aside id="panel">
+    <h1 id="design"></h1>
+    <dl class="meta" id="meta"></dl>
+    <section>
+      <div class="row">
+        <button id="play">Pause</button>
+        <div class="seg" id="speeds"></div>
+      </div>
+      <input type="range" id="scrub" min="0" max="1" step="any" value="0">
+      <div class="readout"><span id="time"></span><span id="frame"></span></div>
+    </section>
+    <section>
+      <h2>View</h2>
+      <label class="chk"><input type="checkbox" id="lock"> Lock camera to tray</label>
+      <label class="chk"><input type="checkbox" id="show-zones" checked> Zones</label>
+      <label class="chk"><input type="checkbox" id="show-jets" checked> Jets</label>
+      <label class="chk"><input type="checkbox" id="show-walls" checked> Walls</label>
+      <label class="chk" id="rig-row" hidden><input type="checkbox" id="show-rig" checked> Bench tower (display only)</label>
+      <label class="chk" id="rig-clear-row" hidden><input type="checkbox" id="rig-clear" checked> See-through frame</label>
+    </section>
+    <section>
+      <h2>Camera</h2>
+      <div class="row">
+        <button id="copy-cam" title="Copy this page's URL with the current camera in it">Copy camera</button>
+        <label>FOV <input type="number" id="fov" min="5" max="120" step="1"></label>
+        <label>Frame <select id="aspect"></select></label>
+      </div>
+      <input type="text" id="cam-text" readonly spellcheck="false" aria-label="Camera URL parameters">
+      <div class="note" id="cam-note">Open the copied URL to come back to this angle. FOV is vertical, in degrees; changing it dollies the camera so the target keeps its size on screen. Frame sets the view's aspect ratio, to match a photo.</div>
+    </section>
+    <section>
+      <h2>Record</h2>
+      <div class="row"><button id="record">Record</button><span id="rec-status"></span></div>
+      <div class="note">Plays the run once from the start at the selected speed and downloads a .webm of the 3D view, with the zone labels and the sim clock drawn in. Keep this tab in front while it records.</div>
+    </section>
+    <section>
+      <h2>Zone counts <span class="sub" id="counts-sub"></span></h2>
+      <div id="counts-wrap"><table id="counts"></table></div>
+      <div class="note" id="counts-note"></div>
+    </section>
+    <section>
+      <h2>Counts over time <select id="chart-kind"></select></h2>
+      <div id="chart-wrap"><canvas id="chart"></canvas><div id="tip"></div></div>
+      <div class="note">Click or drag on the chart to seek.</div>
+    </section>
+  </aside>
+</div>
+<script type="application/json" id="scene-json">__SCENE__</script>
+<script type="application/json" id="traj-meta">__META__</script>
+__DATA__
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/OrbitControls.js';
+
+const $ = (id) => document.getElementById(id);
+const SCENE = JSON.parse($('scene-json').textContent);
+const META = JSON.parse($('traj-meta').textContent);
+// Page options, from ?query or #hash (the hash wins): cam=x,y,z & target=x,y,z (mm, lab frame), fov (vertical
+// degrees), aspect=16:9, t (s from the start), play, lock, kind. Copy camera writes the first four.
+const params = new URLSearchParams(location.search);
+for (const [k, v] of new URLSearchParams(location.hash.slice(1))) params.set(k, v);
+const vecParam = (k) => {
+  const a = (params.get(k) ?? '').split(',').map(Number);
+  return a.length === 3 && a.every(Number.isFinite) ? new THREE.Vector3(...a) : null;
+};
+
+// Zone colours, in flow order (validated categorical palette); between and lost are greys.
+const ZONE_COLORS = ['#2a78d6', '#eb6834', '#1baf7a', '#eda100', '#e87ba4', '#008300', '#6250d6', '#e34948'];
+const FIXED_ZONE_COLORS = { between: '#898781', lost: '#3d3c39' };
+const ROLE_STYLE = {
+  floor: { color: '#bdc8d8', opacity: 1 },
+  wall: { color: '#9fb2cc', opacity: 0.16 },
+  gate: { color: '#36557f', opacity: 1 },
+  screen: { color: '#36557f', opacity: 0.85 },
+};
+const WET_BLUE = new THREE.Color('#1f6fe0');
+const WET_TINT = 0.85;          // how far a fully wet body is tinted towards WET_BLUE
+const SPEEDS = [0.1, 0.25, 1, 2];
+
+function decodeBase64(text) {
+  if (Uint8Array.fromBase64) return Uint8Array.fromBase64(text);
+  const s = atob(text), out = new Uint8Array(s.length);
+  for (let i = 0; i < s.length; i++) out[i] = s.charCodeAt(i);
+  return out;
+}
+
+// Inverse of viewer.py pack(): base64 -> inflate -> un-shuffle bytes -> undo the frame delta.
+async function decode(name) {
+  const m = META.arrays[name];
+  if (!m) return null;
+  const raw = decodeBase64($('d-' + name).textContent.trim());
+  const stream = new Blob([raw]).stream().pipeThrough(new DecompressionStream('deflate'));
+  const shuffled = new Uint8Array(await new Response(stream).arrayBuffer());
+  const Type = { int16: Int16Array, uint16: Uint16Array, uint8: Uint8Array, float32: Float32Array }[m.dtype];
+  const k = Type.BYTES_PER_ELEMENT, n = shuffled.length / k;
+  const bytes = new Uint8Array(shuffled.length);
+  for (let b = 0; b < k; b++) {
+    const off = b * n;
+    for (let i = 0; i < n; i++) bytes[i * k + b] = shuffled[off + i];
+  }
+  const out = new Type(bytes.buffer);
+  if (m.delta) {
+    const row = n / m.shape[0];
+    for (let i = row; i < n; i++) out[i] += out[i - row];
+  }
+  return out;
+}
+
+const srgb = (rgba) => new THREE.Color().setRGB(rgba?.[0] ?? 0.6, rgba?.[1] ?? 0.6, rgba?.[2] ?? 0.6, THREE.SRGBColorSpace);
+const v3 = (a) => new THREE.Vector3(a?.[0] ?? 0, a?.[1] ?? 0, a?.[2] ?? 0);
+const qwxyz = (q) => (q ? new THREE.Quaternion(q[1], q[2], q[3], q[0]).normalize() : new THREE.Quaternion());
+const fmt = (x, d = 2) => (Number.isFinite(x) ? x.toFixed(d) : '?');
+const num = (x) => (Number.isFinite(x) ? String(+x.toFixed(3)) : '?');     // 29.9666 -> 29.967, 10 -> 10
+const zoneNames = (SCENE.zones ?? []).map((z) => z.name);
+const zoneColor = (i) => FIXED_ZONE_COLORS[zoneNames[i]] ?? ZONE_COLORS[i] ?? '#b4b2a9';
+
+// ---------- header ----------
+function strokeText(s) {
+  if (!s) return '?';
+  const parts = [s.profile ?? '?'];
+  if (s.amp_mm != null) parts.push(`amp ${s.amp_mm} mm`);
+  if (s.freq_hz != null) parts.push(`${s.freq_hz} Hz`);
+  for (const [k, v] of Object.entries(s)) if (!['profile', 'amp_mm', 'freq_hz'].includes(k)) parts.push(`${k} ${JSON.stringify(v)}`);
+  return parts.join(', ');
+}
+function wallText(s) {
+  if (!Number.isFinite(s)) return '?';
+  return s < 120 ? `${s.toFixed(1)} s` : `${Math.floor(s / 60)} min ${Math.round(s % 60)} s`;
+}
+function fillHeader(nFrames) {
+  const cfg = SCENE.config ?? SCENE.results?.config ?? {};
+  const res = SCENE.results ?? {};
+  $('design').textContent = SCENE.design ?? cfg.design ?? 'sorter run';
+  const spray = cfg.spray ? `on, ${(SCENE.jets ?? []).length} jets` : 'off';
+  const rows = [
+    ['Mix', Object.entries(cfg.mix ?? {}).map(([k, v]) => `${k} ${v}`).join(', ') || '?'],
+    ['Stroke', strokeText(cfg.stroke)],
+    ['Duration', `${num(cfg.duration_s)} s, settle ${num(cfg.settle_s)} s, seed ${cfg.seed ?? '?'}`],
+    ['Spray', spray],
+    ['Sim / wall', `${fmt(res.sim_s, 2)} s sim in ${wallText(res.wall_s)} wall` +
+      (res.sim_s && res.wall_s ? ` (${fmt(res.sim_s / res.wall_s, 3)}x)` : '')],
+    ['Recording', `${nFrames} frames at ${fmt(META.fps ?? SCENE.fps, 1)} fps` + (META.step > 1 ? ` (every ${META.step}th kept)` : '') +
+      `, ${SCENE.bodies.length} bodies`],
+  ];
+  const pens = [[res.max_penetration_mm, 'on the tray'], [res.max_penetration_particles_mm, 'between particles']]
+    .filter(([v]) => Number.isFinite(v)).map(([v, where]) => `${fmt(v, 3)} mm ${where}`);
+  if (pens.length) rows.push(['Max overlap', pens.join(', ')]);
+  $('meta').innerHTML = rows.map(([k, v]) => `<dt>${k}</dt><dd></dd>`).join('');
+  $('meta').querySelectorAll('dd').forEach((dd, i) => (dd.textContent = rows[i][1]));
+}
+
+// ---------- renderer, camera, lights ----------
+const view = $('view');
+const renderer = new THREE.WebGLRenderer({ canvas: $('c'), antialias: true });
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+const world = new THREE.Scene();
+world.background = new THREE.Color('#eef1f5');
+const fovParam = Number(params.get('fov'));
+const camera = new THREE.PerspectiveCamera(params.has('fov') && fovParam >= 5 && fovParam <= 120 ? fovParam : 35, 1, 1, 10000);
+camera.up.set(0, 0, 1);
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+world.add(new THREE.HemisphereLight(0xffffff, 0x8f99a8, 2.0));
+const sun = new THREE.DirectionalLight(0xffffff, 1.6);
+sun.position.set(0.5, -0.8, 1.2);
+world.add(sun);
+
+// ---------- tray (lab frame position = tray_d) ----------
+const tray = new THREE.Group();
+world.add(tray);
+const wallMeshes = [];
+const edgeMat = new THREE.LineBasicMaterial({ color: 0x51627a, transparent: true, opacity: 0.35 });
+function geomMesh(g) {
+  let geo;
+  if (g.type === 'box') {
+    geo = new THREE.BoxGeometry(2 * g.size[0], 2 * g.size[1], 2 * g.size[2]);
+  } else if (g.type === 'capsule' || g.type === 'cylinder') {   // wires of a glued mesh; MuJoCo axis is local z
+    geo = g.type === 'capsule' ? new THREE.CapsuleGeometry(g.size[0], 2 * g.size[1], 3, 8)
+                               : new THREE.CylinderGeometry(g.size[0], g.size[0], 2 * g.size[1], g.size[0] > 2 ? 32 : 8);
+    geo.rotateX(Math.PI / 2);
+  } else if (g.type === 'mesh' && g.vertices && g.faces) {
+    const indexed = new THREE.BufferGeometry();
+    indexed.setAttribute('position', new THREE.Float32BufferAttribute(g.vertices.flat(), 3));
+    indexed.setIndex(g.faces.flat());
+    geo = indexed.toNonIndexed();      // flat shading for the convex solid
+    geo.computeVertexNormals();
+  } else {
+    console.warn('viewer: geom not drawn', g.type, g.role);
+    return null;
+  }
+  const st = ROLE_STYLE[g.role] ?? { color: srgb(g.rgba), opacity: g.rgba?.[3] ?? 1 };
+  const mat = new THREE.MeshLambertMaterial({ color: st.color, transparent: st.opacity < 1, opacity: st.opacity,
+    depthWrite: st.opacity >= 1, side: THREE.DoubleSide });
+  const mesh = new THREE.Mesh(geo, mat);
+  if (g.type !== 'mesh') {
+    mesh.position.copy(v3(g.pos));
+    mesh.quaternion.copy(qwxyz(g.quat));
+  }
+  if (g.type === 'box' || g.type === 'mesh') mesh.add(new THREE.LineSegments(new THREE.EdgesGeometry(geo, 25), edgeMat));
+  return mesh;
+}
+// seesaw runs: each level is its own group, turned about its pivot (scene levels[k], recorded level_q)
+const levelGroups = (SCENE.levels ?? []).map(() => { const grp = new THREE.Group(); tray.add(grp); return grp; });
+const levelPivots = (SCENE.levels ?? []).map((lv) => v3(lv.pivot));
+const levelOf = new Map();
+(SCENE.levels ?? []).forEach((lv, k) => (lv.geoms ?? []).forEach((i) => levelOf.set(i, k)));
+(SCENE.tray?.geoms ?? []).forEach((g, i) => {
+  if (g.role === 'lid') return;
+  const mesh = geomMesh(g);
+  if (!mesh) return;
+  (levelOf.has(i) ? levelGroups[levelOf.get(i)] : tray).add(mesh);
+  if (g.role === 'wall') wallMeshes.push(mesh);
+});
+const trayBox = new THREE.Box3().setFromObject(tray);
+
+// rig (viewer.py --rig): the bench tower round the tray, display only and fixed in the lab frame
+const rigGroup = new THREE.Group();
+world.add(rigGroup);
+for (const g of SCENE.rig?.geoms ?? []) {
+  const mesh = geomMesh(g);
+  if (mesh) rigGroup.add(mesh);
+}
+
+// zones: faint boxes with an outline and an HTML label at the front-bottom edge. Zone boxes are
+// often much taller than the tray, so they are drawn only over the tray's height.
+const zoneGroup = new THREE.Group();
+tray.add(zoneGroup);
+const labels = [];
+(SCENE.zones ?? []).forEach((z, i) => {
+  if (!z.box) return;
+  let [x0, x1, y0, y1, z0, z1] = z.box;
+  if (!trayBox.isEmpty() && Math.min(z1, trayBox.max.z) > Math.max(z0, trayBox.min.z)) {
+    z0 = Math.max(z0, trayBox.min.z);
+    z1 = Math.min(z1, trayBox.max.z);
+  }
+  const geo = new THREE.BoxGeometry(x1 - x0, y1 - y0, z1 - z0);
+  const color = new THREE.Color(zoneColor(i));
+  const mesh = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 0.06, depthWrite: false }));
+  mesh.position.set((x0 + x1) / 2, (y0 + y1) / 2, (z0 + z1) / 2);
+  mesh.add(new THREE.LineSegments(new THREE.EdgesGeometry(geo),
+    new THREE.LineBasicMaterial({ color, transparent: true, opacity: 0.55 })));
+  zoneGroup.add(mesh);
+  const el = document.createElement('div');
+  el.className = 'zlabel';
+  el.textContent = z.name;
+  el.style.borderLeftColor = zoneColor(i);
+  $('labels').appendChild(el);
+  labels.push({ el, text: z.name, color: zoneColor(i), anchor: new THREE.Vector3((x0 + x1) / 2, y0, z0) });
+});
+
+// jets: translucent cones fixed in the lab frame (not children of the tray)
+const jetGroup = new THREE.Group();
+world.add(jetGroup);
+const jetMat = new THREE.MeshBasicMaterial({ color: 0x3a8ee6, transparent: true, opacity: 0.12, depthWrite: false, side: THREE.DoubleSide });
+const nozzleMat = new THREE.MeshLambertMaterial({ color: 0x24364d });
+for (const j of SCENE.jets ?? []) {
+  const h = j.range_mm ?? 150, r = h * Math.tan(THREE.MathUtils.degToRad(j.half_angle_deg ?? 15));
+  const geo = new THREE.ConeGeometry(r, h, 32, 1, true);
+  geo.translate(0, -h / 2, 0);             // apex at the nozzle, opening along -y
+  const cone = new THREE.Mesh(geo, jetMat);
+  cone.position.copy(v3(j.pos_lab));
+  cone.quaternion.setFromUnitVectors(new THREE.Vector3(0, -1, 0), v3(j.dir).normalize());
+  cone.add(new THREE.Mesh(new THREE.SphereGeometry(Math.max(1, h / 80), 12, 8), nozzleMat));
+  jetGroup.add(cone);
+}
+
+// ---------- particles: one InstancedMesh per (shape, alpha) ----------
+const B = SCENE.bodies.length;
+const kinds = SCENE.kinds ?? [...new Set(SCENE.bodies.map((b) => b.kind))];
+const bodyKind = Int32Array.from(SCENE.bodies, (b) => Math.max(0, kinds.indexOf(b.kind)));
+const kindVisible = kinds.map(() => true);
+const kindColor = kinds.map((k) => {
+  const b = SCENE.bodies.find((x) => x.kind === k);
+  return '#' + srgb(b?.geoms?.[0]?.rgba).getHexString(THREE.SRGBColorSpace);
+});
+
+const GEOS = {
+  sphere: new THREE.SphereGeometry(1, 16, 10),
+  box: new THREE.BoxGeometry(2, 2, 2),
+  cyl: new THREE.CylinderGeometry(1, 1, 2, 16, 1).rotateX(Math.PI / 2),   // along local z, like MuJoCo
+};
+const groups = new Map();
+function addInstance(shape, rgba, body, m) {
+  const alpha = rgba?.[3] ?? 1;
+  const key = alpha < 0.99 ? `${shape}|${alpha.toFixed(2)}` : shape;
+  let g = groups.get(key);
+  if (!g) groups.set(key, (g = { shape, alpha, body: [], local: [], color: [] }));
+  const c = srgb(rgba);
+  g.body.push(body);
+  g.local.push(...m.elements);
+  g.color.push(c.r, c.g, c.b);
+}
+const warned = new Set();
+SCENE.bodies.forEach((body, b) => {
+  for (const geom of body.geoms ?? []) {
+    const s = geom.size ?? [1, 1, 1];
+    const gm = new THREE.Matrix4().compose(v3(geom.pos), qwxyz(geom.quat), new THREE.Vector3(1, 1, 1));
+    const scaled = (x, y, z) => gm.clone().multiply(new THREE.Matrix4().makeScale(x, y, z));
+    switch (geom.type) {
+      case 'sphere': addInstance('sphere', geom.rgba, b, scaled(s[0], s[0], s[0])); break;
+      case 'ellipsoid': addInstance('sphere', geom.rgba, b, scaled(s[0], s[1], s[2])); break;
+      case 'box': addInstance('box', geom.rgba, b, scaled(s[0], s[1], s[2])); break;
+      case 'cylinder': addInstance('cyl', geom.rgba, b, scaled(s[0], s[0], s[1])); break;
+      case 'capsule':                    // cylinder plus two end spheres
+        addInstance('cyl', geom.rgba, b, scaled(s[0], s[0], s[1]));
+        for (const z of [s[1], -s[1]]) {
+          addInstance('sphere', geom.rgba, b, gm.clone().multiply(new THREE.Matrix4().makeTranslation(0, 0, z))
+            .multiply(new THREE.Matrix4().makeScale(s[0], s[0], s[0])));
+        }
+        break;
+      default:
+        if (!warned.has(geom.type)) console.warn('viewer: particle geom type not drawn:', geom.type);
+        warned.add(geom.type);
+    }
+  }
+});
+for (const g of groups.values()) {
+  const opaque = g.alpha >= 0.99;
+  const mat = new THREE.MeshLambertMaterial({ transparent: !opaque, opacity: g.alpha, depthWrite: opaque });
+  g.mesh = new THREE.InstancedMesh(GEOS[g.shape], mat, g.body.length);
+  g.mesh.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
+  g.mesh.instanceColor = new THREE.InstancedBufferAttribute(new Float32Array(g.color), 3);
+  g.mesh.frustumCulled = false;            // instances move; the cached bounds would go stale
+  g.bodyIdx = Int32Array.from(g.body);
+  g.localArr = Float32Array.from(g.local);
+  g.baseColor = Float32Array.from(g.color);
+  delete g.body; delete g.local; delete g.color;
+  tray.add(g.mesh);
+}
+
+// ---------- trajectory ----------
+const loading = $('loading');
+let T, TRAY, TRAYQ, LEVELQ, POS, QUAT, ZC, WET;
+try {
+  [T, TRAY, TRAYQ, LEVELQ, POS, QUAT, ZC, WET] = await Promise.all(
+    ['t', 'tray_d', 'tray_q', 'level_q', 'pos', 'quat', 'zone_counts', 'wet'].map(decode));
+} catch (err) {
+  loading.textContent = 'Could not decode the recording: ' + err + '. This page needs a current Chrome, Edge or Firefox.';
+  throw err;
+}
+const N = META.arrays.t.shape[0];
+const NB = META.arrays.pos.shape[1];
+if (NB !== B) console.warn(`viewer: scene has ${B} bodies but traj has ${NB}`);
+const K = ZC ? META.arrays.zone_counts.shape[1] : 0, Z = ZC ? META.arrays.zone_counts.shape[2] : 0;
+const PS = META.pos_scale;
+const bodyMat = new Float32Array(16 * B);
+
+// pose of every body at frame i0 + a * (i1 - i0): lerp positions, nlerp quaternions
+function bodyPoses(i0, i1, a) {
+  for (let b = 0; b < Math.min(B, NB); b++) {
+    const p0 = (i0 * NB + b) * 3, p1 = (i1 * NB + b) * 3;
+    const px = (POS[p0] + (POS[p1] - POS[p0]) * a) * PS;
+    const py = (POS[p0 + 1] + (POS[p1 + 1] - POS[p0 + 1]) * a) * PS;
+    const pz = (POS[p0 + 2] + (POS[p1 + 2] - POS[p0 + 2]) * a) * PS;
+    const q0 = (i0 * NB + b) * 4, q1 = (i1 * NB + b) * 4;
+    const sgn = QUAT[q0] * QUAT[q1] + QUAT[q0 + 1] * QUAT[q1 + 1] + QUAT[q0 + 2] * QUAT[q1 + 2] + QUAT[q0 + 3] * QUAT[q1 + 3] < 0 ? -1 : 1;
+    let w = QUAT[q0] + (sgn * QUAT[q1] - QUAT[q0]) * a;
+    let x = QUAT[q0 + 1] + (sgn * QUAT[q1 + 1] - QUAT[q0 + 1]) * a;
+    let y = QUAT[q0 + 2] + (sgn * QUAT[q1 + 2] - QUAT[q0 + 2]) * a;
+    let z = QUAT[q0 + 3] + (sgn * QUAT[q1 + 3] - QUAT[q0 + 3]) * a;
+    const len = Math.hypot(w, x, y, z);
+    if (len > 0) { w /= len; x /= len; y /= len; z /= len; } else { w = 1; x = y = z = 0; }
+    const o = b * 16;
+    bodyMat[o] = 1 - 2 * (y * y + z * z); bodyMat[o + 1] = 2 * (x * y + w * z); bodyMat[o + 2] = 2 * (x * z - w * y); bodyMat[o + 3] = 0;
+    bodyMat[o + 4] = 2 * (x * y - w * z); bodyMat[o + 5] = 1 - 2 * (x * x + z * z); bodyMat[o + 6] = 2 * (y * z + w * x); bodyMat[o + 7] = 0;
+    bodyMat[o + 8] = 2 * (x * z + w * y); bodyMat[o + 9] = 2 * (y * z - w * x); bodyMat[o + 10] = 1 - 2 * (x * x + y * y); bodyMat[o + 11] = 0;
+    bodyMat[o + 12] = px; bodyMat[o + 13] = py; bodyMat[o + 14] = pz; bodyMat[o + 15] = 1;
+  }
+}
+
+// out = a * b for column-major affine 4x4 matrices
+function mulAffine(a, ao, b, bo, out, oo) {
+  for (let c = 0; c < 16; c += 4) {
+    const b0 = b[bo + c], b1 = b[bo + c + 1], b2 = b[bo + c + 2], b3 = b[bo + c + 3];
+    out[oo + c] = a[ao] * b0 + a[ao + 4] * b1 + a[ao + 8] * b2 + a[ao + 12] * b3;
+    out[oo + c + 1] = a[ao + 1] * b0 + a[ao + 5] * b1 + a[ao + 9] * b2 + a[ao + 13] * b3;
+    out[oo + c + 2] = a[ao + 2] * b0 + a[ao + 6] * b1 + a[ao + 10] * b2 + a[ao + 14] * b3;
+    out[oo + c + 3] = b3;
+  }
+}
+
+function updateInstances(wetFrame) {
+  for (const g of groups.values()) {
+    const m = g.mesh.instanceMatrix.array, n = g.bodyIdx.length;
+    for (let i = 0; i < n; i++) {
+      const b = g.bodyIdx[i];
+      if (b >= NB || !kindVisible[bodyKind[b]]) m.fill(0, i * 16, i * 16 + 16);
+      else mulAffine(bodyMat, b * 16, g.localArr, i * 16, m, i * 16);
+    }
+    g.mesh.instanceMatrix.needsUpdate = true;
+    if (WET) {
+      const c = g.mesh.instanceColor.array, base = g.baseColor;
+      for (let i = 0; i < n; i++) {
+        const b = g.bodyIdx[i];
+        const k = b < NB ? (WET[wetFrame * NB + b] / 255) * WET_TINT : 0;
+        c[3 * i] = base[3 * i] + (WET_BLUE.r - base[3 * i]) * k;
+        c[3 * i + 1] = base[3 * i + 1] + (WET_BLUE.g - base[3 * i + 1]) * k;
+        c[3 * i + 2] = base[3 * i + 2] + (WET_BLUE.b - base[3 * i + 2]) * k;
+      }
+      g.mesh.instanceColor.needsUpdate = true;
+    }
+  }
+}
+
+// ---------- playback state ----------
+const t0 = T[0], t1 = T[N - 1];
+let time = params.has('t') ? Math.min(t1, Math.max(t0, t0 + Number(params.get('t')))) : t0;
+let playing = params.has('t') ? params.has('play') : true;
+let speed = 1;
+let dirty = true;
+let shownFrame = -1;
+
+function locate(tm) {
+  if (N < 2 || tm <= T[0]) return [0, 0, 0];
+  if (tm >= T[N - 1]) return [N - 1, N - 1, 0];
+  let lo = 0, hi = N - 1;
+  while (hi - lo > 1) { const mid = (lo + hi) >> 1; if (T[mid] <= tm) lo = mid; else hi = mid; }
+  return [lo, hi, (tm - T[lo]) / (T[hi] - T[lo] || 1)];
+}
+
+const lastTray = new THREE.Vector3();
+// rocking runs: the tray frame turns about this point (tray frame, mm); a point x is drawn at d + p + R (x - p)
+const PIVOT = v3(SCENE.tray?.pivot);
+const qa = new THREE.Quaternion(), qb = new THREE.Quaternion();
+function apply() {
+  const [i0, i1, a] = locate(time);
+  bodyPoses(i0, i1, a);
+  updateInstances(a < 0.5 ? i0 : i1);
+  tray.position.set(TRAY[3 * i0] + (TRAY[3 * i1] - TRAY[3 * i0]) * a, TRAY[3 * i0 + 1] + (TRAY[3 * i1 + 1] - TRAY[3 * i0 + 1]) * a,
+    TRAY[3 * i0 + 2] + (TRAY[3 * i1 + 2] - TRAY[3 * i0 + 2]) * a);
+  if (TRAYQ) {
+    qa.set(TRAYQ[4 * i0 + 1], TRAYQ[4 * i0 + 2], TRAYQ[4 * i0 + 3], TRAYQ[4 * i0]);
+    qb.set(TRAYQ[4 * i1 + 1], TRAYQ[4 * i1 + 2], TRAYQ[4 * i1 + 3], TRAYQ[4 * i1]);
+    tray.quaternion.slerpQuaternions(qa, qb, a).normalize();
+    tray.position.add(PIVOT).sub(PIVOT.clone().applyQuaternion(tray.quaternion));
+  }
+  if (LEVELQ) {
+    const nl = levelGroups.length;
+    levelGroups.forEach((grp, k) => {
+      const o0 = 4 * (i0 * nl + k), o1 = 4 * (i1 * nl + k);
+      qa.set(LEVELQ[o0 + 1], LEVELQ[o0 + 2], LEVELQ[o0 + 3], LEVELQ[o0]);
+      qb.set(LEVELQ[o1 + 1], LEVELQ[o1 + 2], LEVELQ[o1 + 3], LEVELQ[o1]);
+      grp.quaternion.slerpQuaternions(qa, qb, a).normalize();
+      grp.position.copy(levelPivots[k]).sub(levelPivots[k].clone().applyQuaternion(grp.quaternion));
+    });
+  }
+  if ($('lock').checked) {             // carry the camera along with the tray
+    const d = tray.position.clone().sub(lastTray);
+    camera.position.add(d);
+    controls.target.add(d);
+  }
+  lastTray.copy(tray.position);
+  const f = a < 0.5 ? i0 : i1;
+  if (!scrubbing) $('scrub').value = time;
+  $('time').textContent = `t ${fmt(time - t0)} / ${fmt(t1 - t0)} s`;
+  $('frame').textContent = `frame ${f + 1} / ${N}`;
+  if (f !== shownFrame) { shownFrame = f; updateCounts(f); }
+  drawChart();
+}
+
+// ---------- panel ----------
+fillHeader(N);
+const playBtn = $('play');
+function setPlaying(p) { playing = p; playBtn.textContent = p ? 'Pause' : 'Play'; }
+setPlaying(playing);
+playBtn.onclick = () => setPlaying(!playing);
+for (const s of SPEEDS) {
+  const btn = document.createElement('button');
+  btn.textContent = `${s}x`;
+  btn.onclick = () => { speed = s; [...$('speeds').children].forEach((x) => x.classList.toggle('on', x === btn)); };
+  if (s === speed) btn.classList.add('on');
+  $('speeds').appendChild(btn);
+}
+const scrub = $('scrub');
+let scrubbing = false;
+scrub.min = t0; scrub.max = Math.max(t1, t0 + 1e-6); scrub.disabled = N < 2;
+scrub.addEventListener('pointerdown', () => (scrubbing = true));
+scrub.addEventListener('pointerup', () => (scrubbing = false));
+scrub.addEventListener('input', () => { time = Number(scrub.value); dirty = true; });
+$('show-zones').onchange = (e) => { zoneGroup.visible = e.target.checked; };
+$('show-jets').onchange = (e) => { jetGroup.visible = e.target.checked; };
+$('show-walls').onchange = (e) => wallMeshes.forEach((m) => (m.visible = e.target.checked));
+$('show-rig').onchange = (e) => { rigGroup.visible = e.target.checked; };
+// see-through frame: the uprights, rods, knobs and plate turn faint so they don't hide the trays
+$('rig-clear').onchange = (e) => {
+  rigGroup.traverse((o) => {
+    if (!o.material) return;
+    const m = o.material;
+    m.userData.orig ??= { transparent: m.transparent, opacity: m.opacity, depthWrite: m.depthWrite };
+    const clear = e.target.checked;
+    m.transparent = clear || m.userData.orig.transparent;
+    m.opacity = clear ? Math.min(m.userData.orig.opacity, 0.12) : m.userData.orig.opacity;
+    m.depthWrite = clear ? false : m.userData.orig.depthWrite;
+    m.needsUpdate = true;
+  });
+  dirty = true;
+};
+$('rig-row').hidden = !SCENE.rig;
+$('rig-clear-row').hidden = !SCENE.rig;
+if (params.has('lock')) $('lock').checked = true;
+// rig=0 hides the bench tower; rigclear=0/1 sets the see-through frame (default on); jets=0/1 sets the jet cones
+// (default: hidden when a tower is drawn and spray is off)
+for (const [key, box, def] of [['rig', 'show-rig', true], ['rigclear', 'rig-clear', true],
+                               ['jets', 'show-jets', !(SCENE.rig && !(SCENE.config ?? {}).spray)]]) {
+  $(box).checked = params.has(key) ? params.get(key) !== '0' : def;
+  $(box).onchange({ target: $(box) });
+}
+// clicked controls give focus back to the page, so Space always means play/pause
+document.addEventListener('click', (e) => { if (e.target.closest('button, input[type=checkbox]')) e.target.blur(); });
+document.addEventListener('change', (e) => { if (e.target.type === 'checkbox') e.target.blur(); });
+
+function stepFrame(d) {
+  const [i0, i1, a] = locate(time);
+  const f = Math.min(N - 1, Math.max(0, (d > 0 ? (a > 0 ? i1 : i0 + 1) : (a > 0 ? i0 : i0 - 1))));
+  time = T[f]; setPlaying(false); dirty = true;
+}
+addEventListener('keydown', (e) => {
+  if (e.target.tagName === 'SELECT') return;
+  if (e.code === 'Space') { e.preventDefault(); setPlaying(!playing); }
+  else if (e.code === 'ArrowRight' && e.target !== scrub) { e.preventDefault(); stepFrame(1); }
+  else if (e.code === 'ArrowLeft' && e.target !== scrub) { e.preventDefault(); stepFrame(-1); }
+});
+addEventListener('keyup', (e) => { if (e.code === 'Space') e.preventDefault(); });
+
+// zone counts table: kinds x zones at the current frame, plus final recovery
+const recovery = SCENE.results?.recovery ?? {};
+const idealZones = kinds.map((k) => new Set((SCENE.results?.particles ?? []).filter((p) => p.kind === k).map((p) => p.ideal_zone)));
+const nParticles = kinds.map((k, ki) => {
+  if (ZC) { let s = 0; for (let z = 0; z < Z; z++) s += ZC[ki * Z + z]; return s; }
+  return SCENE.bodies.filter((b) => b.kind === k && (b.particle == null || b.particle === b.name)).length;
+});
+const countCells = [];
+function buildTable() {
+  const head = '<tr><th>kind</th>' + zoneNames.map((z, i) => `<th><span class="dot" style="background:${zoneColor(i)}"></span>${z}</th>`).join('') +
+    '<th title="final fraction in the ideal zone">rec.</th></tr>';
+  $('counts').innerHTML = head + kinds.map(() => '<tr></tr>').join('');
+  const rows = $('counts').querySelectorAll('tr');
+  kinds.forEach((k, ki) => {
+    const tr = rows[ki + 1];
+    const td = document.createElement('td');
+    td.className = 'kind';
+    td.innerHTML = `<label><input type="checkbox" checked><span class="swatch" style="background:${kindColor[ki]}"></span><span></span><span class="n"></span></label>`;
+    td.querySelector('.swatch + span').textContent = k;
+    td.querySelector('.n').textContent = nParticles[ki];
+    td.querySelector('input').onchange = (e) => { kindVisible[ki] = e.target.checked; dirty = true; };
+    tr.appendChild(td);
+    countCells[ki] = zoneNames.map((z) => {
+      const c = document.createElement('td');
+      if (idealZones[ki].has(z)) c.classList.add('ideal');
+      tr.appendChild(c);
+      return c;
+    });
+    const rc = document.createElement('td');
+    rc.className = 'rec';
+    rc.textContent = Number.isFinite(recovery[k]) ? `${Math.round(100 * recovery[k])}%` : '-';
+    tr.appendChild(rc);
+  });
+  $('counts-note').textContent = (ZC ? 'Bold: the kind\'s ideal zone. ' : 'No zone counts in this recording. ') +
+    'Grey number: particles of that kind. Rec.: final fraction that ended in the ideal zone.';
+}
+function updateCounts(f) {
+  $('counts-sub').textContent = `at t ${fmt(T[f] - t0)} s`;
+  if (!ZC) return;
+  kinds.forEach((k, ki) => {
+    if (ki >= K) return;
+    countCells[ki].forEach((c, z) => {
+      const v = z < Z ? ZC[(f * K + ki) * Z + z] : 0;
+      c.textContent = v;
+      c.classList.toggle('zero', v === 0);
+    });
+  });
+}
+buildTable();
+
+// ---------- counts-over-time chart for one kind ----------
+const chart = $('chart'), tip = $('tip'), chartKind = $('chart-kind');
+kinds.forEach((k, i) => chartKind.add(new Option(k, i)));
+if (params.has('kind') && kinds.includes(params.get('kind'))) chartKind.value = kinds.indexOf(params.get('kind'));
+chartKind.onchange = () => { chartKind.blur(); drawChart(); };
+let hoverX = null;
+const PAD = { l: 30, r: 64, t: 8, b: 18 };
+function chartGeom() {
+  const w = chart.clientWidth, h = chart.clientHeight;
+  return { w, h, x: (tm) => PAD.l + ((tm - t0) / (t1 - t0 || 1)) * (w - PAD.l - PAD.r), tAt: (px) => t0 + ((px - PAD.l) / (w - PAD.l - PAD.r)) * (t1 - t0) };
+}
+function niceMax(v) {
+  if (v <= 0) return 1;
+  const p = 10 ** Math.floor(Math.log10(v));
+  return [1, 1.5, 2, 2.5, 3, 4, 5, 6, 8, 10].find((m) => m * p >= v) * p;
+}
+function drawChart() {
+  const ctx = chart.getContext('2d');
+  const dpr = window.devicePixelRatio || 1;
+  const { w, h, x } = chartGeom();
+  if (chart.width !== Math.round(w * dpr) || chart.height !== Math.round(h * dpr)) { chart.width = Math.round(w * dpr); chart.height = Math.round(h * dpr); }
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  ctx.clearRect(0, 0, w, h);
+  ctx.font = '10.5px system-ui, -apple-system, "Segoe UI", sans-serif';
+  const ki = Number(chartKind.value);
+  if (!ZC || N < 2 || ki >= K) {
+    ctx.fillStyle = '#898781';
+    ctx.fillText(ZC ? 'Needs at least two frames.' : 'No zone counts in this recording.', PAD.l, 20);
+    return;
+  }
+  const series = [];
+  let vmax = 0;
+  for (let z = 0; z < Z; z++) {
+    const v = new Float32Array(N);
+    for (let f = 0; f < N; f++) v[f] = ZC[(f * K + ki) * Z + z];
+    const m = Math.max(...v);
+    if (m > 0) series.push({ z, v });
+    vmax = Math.max(vmax, m);
+  }
+  const ym = niceMax(vmax);
+  const y = (val) => h - PAD.b - (val / ym) * (h - PAD.t - PAD.b);
+  // grid and axes
+  ctx.lineWidth = 1;
+  ctx.textBaseline = 'middle';
+  ctx.textAlign = 'right';
+  for (const gv of [0, ym / 2, ym]) {
+    ctx.strokeStyle = gv === 0 ? '#c3c2b7' : '#e1e0d9';
+    ctx.beginPath(); ctx.moveTo(PAD.l, Math.round(y(gv)) + 0.5); ctx.lineTo(w - PAD.r, Math.round(y(gv)) + 0.5); ctx.stroke();
+    ctx.fillStyle = '#898781';
+    ctx.fillText(String(gv), PAD.l - 5, y(gv));
+  }
+  ctx.textBaseline = 'alphabetic';
+  [[t0, 'left'], [(t0 + t1) / 2, 'center'], [t1, 'right']].forEach(([tv, align]) => {
+    ctx.textAlign = align;
+    ctx.fillText(`${fmt(tv - t0, 1)} s`, x(tv), h - 4);
+  });
+  // series lines
+  ctx.lineWidth = 2;
+  ctx.lineJoin = 'round';
+  for (const s of series) {
+    ctx.strokeStyle = zoneColor(s.z);
+    ctx.setLineDash(zoneNames[s.z] === 'lost' ? [4, 3] : []);
+    ctx.beginPath();
+    for (let f = 0; f < N; f++) { const px = x(T[f]), py = y(s.v[f]); f ? ctx.lineTo(px, py) : ctx.moveTo(px, py); }
+    ctx.stroke();
+  }
+  ctx.setLineDash([]);
+  // direct labels at the line ends, pushed apart so they don't collide
+  const ends = series.map((s) => ({ s, y: y(s.v[N - 1]) })).sort((a, b) => a.y - b.y);
+  for (let i = 1; i < ends.length; i++) ends[i].y = Math.max(ends[i].y, ends[i - 1].y + 11);
+  for (let i = ends.length - 1; i >= 0; i--) ends[i].y = Math.min(ends[i].y, i === ends.length - 1 ? h - PAD.b : ends[i + 1].y - 11);
+  ctx.textAlign = 'left';
+  ctx.textBaseline = 'middle';
+  for (const e of ends) {
+    ctx.fillStyle = zoneColor(e.s.z);
+    ctx.fillRect(w - PAD.r + 5, e.y - 1, 6, 2);
+    ctx.fillStyle = '#52514e';
+    ctx.fillText(zoneNames[e.s.z] ?? `zone ${e.s.z}`, w - PAD.r + 14, e.y);
+  }
+  // current time cursor
+  ctx.strokeStyle = '#0b0b0b';
+  ctx.lineWidth = 1;
+  const cx = Math.round(x(time)) + 0.5;
+  ctx.beginPath(); ctx.moveTo(cx, PAD.t); ctx.lineTo(cx, h - PAD.b); ctx.stroke();
+  // hover crosshair and tooltip
+  if (hoverX != null) {
+    const { tAt } = chartGeom();
+    const [i0, i1, a] = locate(tAt(hoverX));
+    const f = a < 0.5 ? i0 : i1, hx = Math.round(x(T[f])) + 0.5;
+    ctx.strokeStyle = '#898781';
+    ctx.setLineDash([2, 2]);
+    ctx.beginPath(); ctx.moveTo(hx, PAD.t); ctx.lineTo(hx, h - PAD.b); ctx.stroke();
+    ctx.setLineDash([]);
+    tip.innerHTML = `<div>t ${fmt(T[f] - t0)} s</div>` + series.map((s) =>
+      `<div><span class="dot" style="background:${zoneColor(s.z)}"></span>${zoneNames[s.z]} ${s.v[f]}</div>`).join('');
+    tip.style.display = 'block';
+    tip.style.left = `${Math.min(hx + 8, w - tip.offsetWidth)}px`;
+    tip.style.top = `${PAD.t}px`;
+  } else tip.style.display = 'none';
+}
+function seekFromChart(e) {
+  const { tAt } = chartGeom();
+  time = Math.min(t1, Math.max(t0, tAt(e.offsetX)));
+  dirty = true;
+}
+chart.addEventListener('pointermove', (e) => { hoverX = e.offsetX; if (e.buttons & 1) seekFromChart(e); else drawChart(); });
+chart.addEventListener('pointerleave', () => { hoverX = null; drawChart(); });
+chart.addEventListener('pointerdown', (e) => { chart.setPointerCapture(e.pointerId); seekFromChart(e); });
+
+// ---------- camera: fit or ?cam=, FOV, frame aspect, copy ----------
+const fitBox = trayBox.isEmpty() ? new THREE.Box3().setFromCenterAndSize(new THREE.Vector3(), new THREE.Vector3(100, 100, 50)) : trayBox;
+const sceneRadius = fitBox.getSize(new THREE.Vector3()).length() / 2;
+function clipPlanes() {             // near/far follow the orbit distance, so zooming or dollying never clips the tray
+  const dist = Math.max(1e-3, camera.position.distanceTo(controls.target));
+  camera.near = dist / 200;
+  camera.far = (dist + sceneRadius) * 20;
+  camera.updateProjectionMatrix();
+}
+function fitCamera() {
+  const center = fitBox.getCenter(new THREE.Vector3());
+  const cam = vecParam('cam');
+  if (cam) {
+    controls.target.copy(vecParam('target') ?? center);
+    camera.position.copy(cam);
+  } else {
+    const dist = (sceneRadius / Math.sin(THREE.MathUtils.degToRad(camera.fov / 2))) * 0.9;
+    controls.target.copy(center);
+    camera.position.copy(center).add(new THREE.Vector3(0.25, -1, 0.8).normalize().multiplyScalar(dist));
+  }
+  clipPlanes();
+  controls.update();
+}
+function setFov(f) {
+  f = Math.min(120, Math.max(5, f));
+  // dolly zoom: dist * tan(fov / 2) stays the same, so the target keeps its size and only the perspective changes
+  const k = Math.tan(THREE.MathUtils.degToRad(camera.fov / 2)) / Math.tan(THREE.MathUtils.degToRad(f / 2));
+  camera.position.sub(controls.target).multiplyScalar(k).add(controls.target);
+  camera.fov = f;
+  clipPlanes();
+  controls.update();
+  dirty = true;
+}
+
+const ASPECTS = ['fill', '16:9', '9:16', '4:3', '3:4', '1:1'];
+const aspectRatio = (s) => {
+  const m = /^(\d+(?:\.\d+)?):(\d+(?:\.\d+)?)$/.exec(s ?? '');
+  return m && +m[1] > 0 && +m[2] > 0 ? +m[1] / +m[2] : null;
+};
+let aspect = aspectRatio(params.get('aspect')) ? params.get('aspect') : 'fill';
+if (!ASPECTS.includes(aspect)) ASPECTS.push(aspect);      // e.g. ?aspect=1080:1920 from a phone clip
+for (const a of ASPECTS) $('aspect').add(new Option(a, a));
+$('aspect').value = aspect;
+$('aspect').onchange = (e) => { aspect = e.target.value; e.target.blur(); resize(); showCamera(); };
+
+const stage = $('stage');
+let fixedSize = null;                // [w, h] px, set by viewerExport.size() for frame export
+function resize() {
+  const vw = view.clientWidth, vh = view.clientHeight, r = aspectRatio(aspect);
+  let w = vw, h = vh;
+  if (fixedSize) [w, h] = fixedSize;
+  else if (r) { if (vw > vh * r) w = Math.round(vh * r); else h = Math.round(vw / r); }
+  Object.assign(stage.style, { left: `${Math.round((vw - w) / 2)}px`, top: `${Math.round((vh - h) / 2)}px`,
+    right: 'auto', bottom: 'auto', width: `${w}px`, height: `${h}px` });
+  renderer.setSize(w, h, false);
+  camera.aspect = w / Math.max(1, h);
+  camera.updateProjectionMatrix();
+  dirty = true;
+}
+new ResizeObserver(resize).observe(view);
+resize();
+fitCamera();
+
+// With "Lock camera to tray" on, the camera is written relative to the tray's origin and lock is kept, because
+// on load the lock carries the camera along by the tray's displacement.
+const r1 = (x) => String(+x.toFixed(1));
+function cameraQuery() {
+  const off = $('lock').checked ? tray.position : new THREE.Vector3();
+  const p = new URLSearchParams();
+  p.set('cam', camera.position.clone().sub(off).toArray().map(r1).join(','));
+  p.set('target', controls.target.clone().sub(off).toArray().map(r1).join(','));
+  p.set('fov', r1(camera.fov));
+  if (aspect !== 'fill') p.set('aspect', aspect);
+  if ($('lock').checked) p.set('lock', '1');
+  return p.toString().replaceAll('%2C', ',').replaceAll('%3A', ':');
+}
+const camText = $('cam-text'), fovInput = $('fov');
+function showCamera() {
+  camText.value = '?' + cameraQuery();
+  if (document.activeElement !== fovInput) fovInput.value = r1(camera.fov);
+}
+controls.addEventListener('change', () => { clipPlanes(); showCamera(); });
+fovInput.addEventListener('change', () => { if (Number.isFinite(fovInput.valueAsNumber)) setFov(fovInput.valueAsNumber); fovInput.blur(); showCamera(); });
+$('lock').addEventListener('change', showCamera);
+$('copy-cam').onclick = async () => {
+  const url = location.href.split(/[?#]/)[0] + '?' + cameraQuery();
+  try {
+    await navigator.clipboard.writeText(url);
+    $('copy-cam').textContent = 'Copied';
+  } catch {
+    camText.value = url;                // no clipboard access: leave the full URL selected for Ctrl+C
+    camText.select();
+    $('copy-cam').textContent = 'Press Ctrl+C';
+  }
+  setTimeout(() => { $('copy-cam').textContent = 'Copy camera'; }, 1500);
+};
+showCamera();
+
+const proj = new THREE.Vector3();
+function updateLabels() {
+  const w = stage.clientWidth, h = stage.clientHeight, show = zoneGroup.visible;
+  for (const L of labels) {
+    proj.copy(L.anchor).applyMatrix4(tray.matrixWorld).project(camera);
+    L.on = show && proj.z > -1 && proj.z < 1 && Math.abs(proj.x) < 1.05 && Math.abs(proj.y) < 1.05;
+    L.el.style.display = L.on ? '' : 'none';
+    if (L.on) { L.x = ((proj.x + 1) / 2) * w; L.y = ((1 - proj.y) / 2) * h; L.el.style.left = `${L.x}px`; L.el.style.top = `${L.y}px`; }
+  }
+}
+
+// ---------- record: play the run once, download a .webm ----------
+// Each rendered frame is copied onto a 2D canvas with the zone labels and the sim clock drawn on top (the
+// labels are HTML on screen, so captureStream of the WebGL canvas alone would lose them). Playback runs in
+// real time at the selected speed, which is what MediaRecorder timestamps against. VP8 comes first: it drops
+// fewer frames than VP9 when encoding live. (captureStream(0) + requestFrame() was worse: it dropped half the
+// frames and squeezed the timestamps.)
+const REC_FPS = 30;
+const recBtn = $('record'), recStatus = $('rec-status'), recBadge = $('rec-badge');
+let rec = null;      // { recorder, canvas, ctx, chunks, speed, state: arming | on | ending, wall0, wall1 }
+const FONT = 'system-ui, -apple-system, "Segoe UI", sans-serif';
+function composite(c, ctx, playSpeed) {
+  ctx.drawImage(renderer.domElement, 0, 0, c.width, c.height);
+  const px = c.width / Math.max(1, stage.clientWidth);     // CSS px -> video px, for positions
+  const s = px * uiScale;                                    // and for sizes
+  ctx.textBaseline = 'top';
+  if (zoneGroup.visible) {
+    ctx.font = `${11 * s}px ${FONT}`;
+    for (const L of labels) {
+      if (!L.on) continue;
+      const w = ctx.measureText(L.text).width + 9 * s, h = 16 * s, x = L.x * px - w / 2, y = L.y * px + 4 * s;
+      ctx.fillStyle = 'rgba(252, 252, 251, 0.85)'; ctx.fillRect(x, y, w, h);
+      ctx.fillStyle = L.color; ctx.fillRect(x, y, 3 * s, h);
+      ctx.fillStyle = '#0b0b0b'; ctx.fillText(L.text, x + 7 * s, y + 2 * s);
+    }
+  }
+  const clock = `t ${fmt(time - t0)} s` + (playSpeed !== 1 ? `  (${playSpeed}x)` : '');
+  ctx.font = `600 ${15 * s}px ${FONT}`;
+  const w = ctx.measureText(clock.replace(/\d/g, '0')).width + 14 * s;
+  ctx.fillStyle = 'rgba(252, 252, 251, 0.85)'; ctx.fillRect(10 * s, c.height - 36 * s, w, 26 * s);
+  ctx.fillStyle = '#0b0b0b'; ctx.fillText(clock, 17 * s, c.height - 31 * s);
+}
+function startRecording() {
+  const mime = ['video/webm;codecs=vp8', 'video/webm;codecs=vp9', 'video/webm'].find((m) => window.MediaRecorder?.isTypeSupported(m));
+  const src = renderer.domElement;
+  if (!mime || !src.captureStream) { recStatus.textContent = 'This browser cannot record WebM.'; return; }
+  const canvas = document.createElement('canvas');
+  canvas.width = Math.max(2, src.width & ~1);              // even sizes, for the H.264 encode downstream
+  canvas.height = Math.max(2, src.height & ~1);
+  const recorder = new MediaRecorder(canvas.captureStream(REC_FPS), { mimeType: mime, videoBitsPerSecond: 12e6 });
+  rec = { recorder, canvas, ctx: canvas.getContext('2d'), chunks: [], speed, state: 'arming' };
+  recorder.ondataavailable = (e) => { if (e.data.size) rec.chunks.push(e.data); };
+  recorder.onstop = () => saveRecording(rec);
+  time = t0; setPlaying(true); dirty = true;
+  recBtn.textContent = 'Stop'; recBtn.classList.add('on');
+  recStatus.textContent = `${canvas.width} x ${canvas.height}, ${mime.split('=')[1] ?? 'webm'}`;
+}
+function stopRecording() {
+  if (!rec || rec.state === 'ending') return;
+  if (rec.state === 'arming') {                             // stopped before the first frame: nothing to save
+    rec = null;
+    recBtn.textContent = 'Record'; recBtn.classList.remove('on');
+    recStatus.textContent = '';
+    return;
+  }
+  rec.state = 'ending';
+  rec.wall1 = performance.now();
+  setTimeout(() => rec.recorder.stop(), 250);              // hold the last frame so it makes it into the file
+}
+function saveRecording(r) {
+  rec = null;
+  recBtn.textContent = 'Record'; recBtn.classList.remove('on');
+  recBadge.style.display = 'none';
+  const blob = new Blob(r.chunks, { type: 'video/webm' });
+  const name = `${String(SCENE.design ?? 'sorter').replace(/[^A-Za-z0-9.-]+/g, '_')}_sim${r.speed !== 1 ? `_${r.speed}x` : ''}.webm`;
+  const a = Object.assign(document.createElement('a'), { href: URL.createObjectURL(blob), download: name });
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 60000);
+  const wall = (r.wall1 - r.wall0) / 1000, want = (t1 - t0) / r.speed;
+  recStatus.textContent = `Saved ${name}, ${(blob.size / 1e6).toFixed(1)} MB, ${wall.toFixed(1)} s` +
+    (Math.abs(wall - want) > 0.03 * want ? ` (the run is ${want.toFixed(1)} s at ${r.speed}x: stopped early or fell behind real time)` : '');
+}
+function recordFrame(now) {
+  composite(rec.canvas, rec.ctx, rec.speed);
+  if (rec.state === 'arming') { rec.recorder.start(1000); rec.state = 'on'; rec.wall0 = now; }
+  else if (rec.state === 'on' && time >= t1) stopRecording();
+  recBadge.style.display = 'block';
+  recBadge.textContent = `● REC ${fmt(time - t0, 1)} / ${fmt(t1 - t0, 1)} s`;
+}
+recBtn.onclick = () => (rec ? stopRecording() : startRecording());
+
+// Frame-exact export for sim/record_view.py, which drives this page headless: size() fixes the frame in px,
+// frame(ts) renders sim time ts (s from the start) with the labels and clock and returns it as a data: URL.
+let exportCanvas = null, uiScale = 1;     // uiScale: label and clock size in exported frames
+window.viewerExport = {
+  duration: t1 - t0,
+  size(w, h, scale = 1) { fixedSize = [w & ~1, h & ~1]; uiScale = scale; renderer.setPixelRatio(1); resize(); showCamera(); },
+  frame(ts, playSpeed = 1, type = 'image/jpeg', quality = 0.95) {
+    setPlaying(false);
+    time = Math.min(t1, Math.max(t0, t0 + ts));
+    apply();
+    controls.update();
+    renderer.render(world, camera);
+    updateLabels();
+    const src = renderer.domElement;
+    if (!exportCanvas || exportCanvas.width !== src.width || exportCanvas.height !== src.height) {
+      exportCanvas = Object.assign(document.createElement('canvas'), { width: src.width, height: src.height });
+    }
+    composite(exportCanvas, exportCanvas.getContext('2d'), playSpeed);
+    return exportCanvas.toDataURL(type, quality);
+  },
+};
+
+let last = performance.now();
+function tick(now) {
+  const dt = Math.min(0.1, (now - last) / 1000);
+  last = now;
+  if (playing && N > 1 && rec?.state !== 'arming') {
+    time += dt * speed;
+    if (time > t1) {
+      if (rec) { time = t1; setPlaying(false); }               // a recording plays the run once
+      else time = t0 + ((time - t1) % (t1 - t0));              // loop
+    }
+    dirty = true;
+  }
+  if (dirty) { apply(); dirty = false; }
+  controls.update();
+  renderer.render(world, camera);
+  updateLabels();
+  if (rec) recordFrame(now);
+  requestAnimationFrame(tick);
+}
+loading.remove();
+requestAnimationFrame(tick);
+</script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BioKEA · Modular Evidence Workcell</title>
+<style>
+:root{color-scheme:dark;--bg:#0a1018;--surface:#15202d;--surface2:#1c2d3c;--line:#385264;--fg:#ecf3fa;--sub:#a3b4c1;--mint:#6ee0bd;--orange:#f6c478;--red:#fd8c8c;--blue:#81bdec}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% -30%,#204354,#0a1018 52%);font:14px/1.55 Inter,system-ui,Arial,sans-serif;color:var(--fg)}
+a{color:var(--blue)}header{border-bottom:1px solid var(--line);padding:15px clamp(15px,4vw,65px);display:flex;justify-content:space-between;align-items:center;gap:15px}
+.logo{font-weight:800;letter-spacing:.09em;font-size:15px}.eyebrow{font-size:11px;color:var(--mint);letter-spacing:.14em;font-weight:700}.sub{color:var(--sub)}.tiny{font-size:11px;color:var(--sub)}.mono{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;word-break:break-all}
+.badge{border-radius:20px;border:1px solid #3d685f;padding:5px 10px;font-size:11px;color:var(--mint);white-space:nowrap}
+.warn{border-color:#93784c;color:var(--orange)}.fail{border-color:#a75654;color:var(--red)}
+.shell{max-width:1260px;margin:0 auto;padding:27px 19px 80px}h1{font-size:clamp(27px,3.6vw,43px);letter-spacing:-.045em;line-height:1.1;margin:8px 0 14px;max-width:840px}h2{font-size:18px;margin:0 0 10px}h3{font-size:14px;margin:0 0 8px}.intro{max-width:860px;color:var(--sub);font-size:14px}
+.panel{background:linear-gradient(145deg,#192b3b,#111c29);border:1px solid var(--line);border-radius:15px;padding:19px;min-width:0}
+.banner{margin:23px 0;display:flex;gap:14px;align-items:center;justify-content:space-between;background:#12332c;border:1px solid #408375;border-radius:11px;padding:13px 15px;flex-wrap:wrap}
+.banner.hold{background:#402424;border-color:#b35c5c}
+.layout{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(305px,1fr);gap:16px}
+.picture{width:100%;display:block;aspect-ratio:15/9;object-fit:contain;background:#faf7e4;border-radius:11px;margin-bottom:13px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.kpi{background:#0b1c28;border:1px solid #294251;border-radius:10px;padding:11px}.kpi strong{font-size:25px;display:block}.kpi span{color:var(--sub);font-size:11px}
+.stages{display:flex;gap:7px;margin:13px 0;flex-wrap:wrap}.stages button{flex:1;min-width:70px}
+button{background:#27413f;color:var(--fg);border:1px solid #4f7874;padding:9px 12px;border-radius:8px;font-weight:700;cursor:pointer}
+button.active{background:#246a5a;border-color:var(--mint)}button:focus-visible,select:focus-visible{outline:2px solid var(--mint)}
+.note{color:var(--orange);font-size:12px;border-left:2px solid var(--orange);padding-left:10px;margin-top:12px}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.pair{margin:7px 0 3px}.pair label{font-size:12px;color:var(--sub);display:block}
+select{width:100%;color:var(--fg);background:#0d1c28;border:1px solid #365569;border-radius:8px;padding:10px 7px;font-size:12px;margin-top:5px}
+.statustext{color:var(--mint);font-weight:700;font-size:12px}.check{color:var(--sub);display:flex;align-items:start;gap:7px;margin-top:6px;font-size:12px}
+.tick{font-size:12px;display:inline-flex;align-items:center;justify-content:center;min-width:18px;min-height:18px;border:1px solid var(--line);border-radius:4px}
+.section{margin-top:17px}
+.flow{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:9px;margin-top:15px}.flow>div{border:1px solid var(--line);border-radius:10px;padding:11px;background:#101f2c;min-height:106px}
+.flow strong{font-size:12px}.flow small{display:block;color:var(--sub);font-size:11px;margin-top:7px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}.row{display:flex;justify-content:space-between;gap:14px;align-items:start;border-bottom:1px solid #304657;padding:8px 0}.row:last-child{border:0}
+td,th{padding:9px 10px;text-align:left;border-bottom:1px solid #2b4051;vertical-align:top}th{color:var(--sub);font-size:11px;font-weight:600}table{border-collapse:collapse;width:100%;font-size:12px}
+.block{background:#0a1b27;border-radius:9px;padding:12px;overflow-wrap:anywhere}
+.sectionname{font-size:11px;color:var(--mint);text-transform:uppercase;letter-spacing:.13em;margin:17px 0 11px}
+@media(max-width:940px){.layout,.cols{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.flow{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:570px){.grid{grid-template-columns:1fr}.flow{grid-template-columns:repeat(2,1fr)}.kpis{grid-template-columns:1fr 1fr}.picture{aspect-ratio:4/3}}
+</style></head><body>
+<header><div><div class="logo">BIOKEA <span style="color:var(--mint)">/ BA E BUGS</span></div><div class="tiny">Workcell design · evidence and expert review</div></div><span class="badge warn" id="headerStatus">DESIGN ONLY</span></header>
+<main class="shell">
+<div class="eyebrow">TRACK A / SORTER → CAMERA → FRACTION → VOUCHER</div>
+<h1>A changeable aperture, without losing the insect or its evidence.</h1>
+<p class="intro">A single modular sieve cassette with three mechanically indexed nominal apertures. Each proposed configuration has a traceable source, material, sample-handling gate and experiment design. The interface does not command robots or infer that physical specimens survived.</p>
+<div class="banner" id="banner">
+ <div><strong id="watchState">CHECKING LOCAL INTEGRITY...</strong><div class="tiny" id="watchExplanation">Awaiting local receipt verifier.</div></div><div class="mono tiny" id="watchRoot">MMR root not loaded</div>
+</div>
+<div class="layout">
+ <section class="panel">
+  <div class="eyebrow">01 / CONFIGURABLE FILTER</div><h2>Indexed overlap-sieve cassette</h2>
+  <img class="picture" id="filterImg" src="output/variable_overview.png" alt="CAD of three provisional variable aperture cassette positions">
+  <div class="stages"><button data-stage="0">I · 3.6 mm</button><button data-stage="1" class="active">II · 2.4 mm</button><button data-stage="2">III · 1.2 mm</button></div>
+  <div class="kpis"><div class="kpi"><strong id="nominal">2.4</strong><span>mm nominal overlapping slot width</span></div>
+  <div class="kpi"><strong id="offset">1.2</strong><span>mm lateral offset, two metal layers</span></div>
+  <div class="kpi"><strong>0</strong><span>physical sample results executed</span></div></div>
+  <p class="note">To change the effective aperture, the overlapping slotted plates must be EMPTY, fluid must be OFF, both screens must be inspected, and the positive latch must be re-engaged. Current CAD does not prove a liquid seal or that appendages cannot lodge between plates. No live adjustment of loaded specimens is authorized.</p>
+  <div class="tiny">Source: <a href="variable_aperture_cassette.scad">parametric OpenSCAD</a> · <a href="output/variable_flat_base.dxf">base DXF</a> · <a href="output/variable_flat_slider.dxf">slider DXF</a> · <a href="output/variable_flat_retainer.dxf">carrier geometry</a></div>
+ </section>
+ <section class="panel">
+  <div class="eyebrow">02 / DECISION GATES</div><h2>Before an aperture transition</h2>
+  <div class="check"><span class="tick">A</span><span>Capture the preceding fraction and registered image occurrence</span></div>
+  <div class="check"><span class="tick">B</span><span>Verify no retained organisms or fragments inside sliding interface</span></div>
+  <div class="check"><span class="tick">C</span><span>Set fluid, actuator and physical tray motion to their safe states</span></div>
+  <div class="check"><span class="tick">D</span><span>Human approves empty, de-energized cassette adjustment</span></div>
+  <div class="check"><span class="tick">E</span><span>Confirm positive indexing, latch and gasket, then capture calibration photo</span></div>
+  <div class="check"><span class="tick">F</span><span>Only then admit another independently numbered sample batch</span></div>
+  <div class="row"><span class="sub">Current actual approval</span><strong style="color:var(--orange)">NOT_TESTED</strong></div>
+  <div class="row"><span class="sub">Wet seal qualification</span><strong style="color:var(--orange)">NOT_TESTED</strong></div>
+  <div class="row"><span class="sub">Clump/wing entrapment</span><strong style="color:var(--orange)">UNKNOWN</strong></div>
+  <div class="row"><span class="sub">Mechanical stop integrity</span><strong style="color:var(--orange)">NOT_TESTED</strong></div>
+  <p class="tiny">The fixed stainless carrier remains the preferred physical fallback; this variable cassette is a geometrically parameterized proof of concept.</p>
+ </section>
+</div>
+<div class="section sectionname">03 / MODULAR LAB WORKCELL</div>
+<section class="panel">
+<h2>Compare candidate instruments and processing options</h2>
+<p class="sub">Selections below are a planning workspace only. Changing them generates NO operating command and no simulated or measured scientific score.</p>
+<div class="grid" id="controls"></div>
+<div class="block" style="margin-top:13px"><div class="eyebrow">Selected configuration · source and risk</div><div id="selected" class="tiny"></div></div>
+</section>
+<div class="section sectionname">04 / SAMPLE INTEGRITY AND EXPERT VOUCHER</div>
+<section class="panel">
+<div class="flow">
+<div><strong>1 · Register bag</strong><small>Accession, contents, collection permits, sample source</small></div>
+<div><strong>2 · Camera record</strong><small>Raw bytes, calibration, specimen candidate masks</small></div>
+<div><strong>3 · Select filter</strong><small>Locked geometry ID, gasket, operator, size hypothesis</small></div>
+<div><strong>4 · Capture fractions</strong><small>Per-fraction image + residual edge inspection + uncertainty</small></div>
+<div><strong>5 · Expert review</strong><small>Taxon candidate, wing/leg/body integrity, independent labels</small></div>
+<div><strong>6 · Downstream branch</strong><small>Voucher retained, destructive DNA, or separate RNA-preservation lane</small></div>
+</div>
+<p class="note">A detector confidence score, a hash, or an expert ticket alone cannot confirm a novel insect species. Taxonomic novelty is a candidate claim until a qualified reviewer checks reference specimens, morphology and relevant molecular evidence.</p>
+</section>
+<div class="section sectionname">05 / LOMO × CRITICAL PERFORMANCE OUTCOMES</div>
+<div class="cols"><section class="panel"><h2>Factor-isolated comparisons</h2><p class="tiny">Planned contrasts between baseline and one substituted module; not laboratory trials.</p>
+<div id="lomoRows" style="max-height:360px;overflow:auto"></div>
+<div class="row"><span class="sub">Empirical Δpurity / Δcapture / Δdamage</span><strong>NOT_COMPUTED</strong></div>
+</section><section class="panel"><h2>Research and publication readiness</h2>
+<div class="row"><span class="sub">Before/after segmentation precision/recall</span><b>NOT_COMPUTED</b></div>
+<div class="row"><span class="sub">Expert-verified taxonomic identity</span><b>NOT_TESTED</b></div>
+<div class="row"><span class="sub">Whole-body DNA sequencing</span><b>NOT_TESTED</b></div>
+<div class="row"><span class="sub">RNA recovery and quality</span><b>NOT_TESTED</b></div>
+<div class="row"><span class="sub">Wing, leg and exoskeleton damage</span><b>NOT_COMPUTED</b></div>
+<div class="row"><span class="sub">Complete fraction recovery</span><b>NOT_TESTED</b></div>
+<div class="row"><span class="sub">Source-code commit + exact-byte hashes</span><b>IMPLEMENTED</b></div>
+<p class="tiny">Birnboim–Doly (1979) describes bacterial plasmid alkaline lysis, not a validated nondestructive insect whole-genome or RNA workflow. Reagents and thermal steps remain post-voucher research branches.</p>
+</section></div>
+<div class="section sectionname">06 / CUSTODY AND HUMAN HOLD</div>
+<div class="cols">
+<section class="panel"><h2>Current receipt state</h2>
+<div class="row"><span class="sub">Antigense-style workcell MMR</span><b id="rootCount">—</b></div>
+<div class="row"><span class="sub">First invalid event</span><b id="firstFault">—</b></div>
+<div class="row"><span class="sub">Camera stream</span><b>NOT_CONNECTED</b></div>
+<div class="row"><span class="sub">Robot controller</span><b>NOT_CONNECTED</b></div>
+<div class="row"><span class="sub">Remote notification</span><b>NOT_IMPLEMENTED</b></div>
+<div class="block mono tiny" id="mmrRoot">Root UNKNOWN</div>
+<p class="tiny">On magicPRObox the local server independently checks ordered event prefixes and frozen file hashes, and streams updated status every ~1 second. Static hosting cannot reach the local process automatically. Neither link proves a signed or physically verified chain.</p>
+</section>
+<section class="panel"><h2>VIP / publication-review queue</h2>
+<div class="row"><span class="sub">Lost model weights</span><a href="https://github.com/biobitworks/baebugs/issues/2">P1 · Issue #2</a></div>
+<div class="row"><span class="sub">Adjustable cassette interlayer bypass</span><b style="color:var(--orange)">OPEN DESIGN RISK</b></div>
+<div class="row"><span class="sub">Qualified taxonomy review</span><b>REQUIRED</b></div>
+<div class="row"><span class="sub">Fragment-residue audit</span><b>NOT_TESTED</b></div>
+<div class="row"><span class="sub">Expert sign-off and instrument clearance</span><b>NOT_GRANTED</b></div>
+<div class="tiny">A ticket is not a human approval. Chain integrity failures should HOLD admission, expose the first divergence and preserve the preceding root; physical E-stop is separate.</div>
+</section></div>
+<footer class="tiny" style="margin-top:20px">Baebugs · BioKEA Track A · OpenSCAD geometry model only · NO external actuator, reagent, temperature or biological testing took place in this release. Surface status is source-bound, not performance supported.</footer>
+</main>
+<script>
+let catalog=null,plan=null,selection={};let stage=1;
+const $=s=>document.querySelector(s);
+function stageDisplay(n){stage=n;const w=[3.6,2.4,1.2][n],delta=[0,1.2,2.4][n];$('#nominal').textContent=w.toFixed(1);$('#offset').textContent=delta.toFixed(1);
+ $('#filterImg').src='output/variable_stage'+n+'.png';document.querySelectorAll('[data-stage]').forEach(b=>b.classList.toggle('active',Number(b.dataset.stage)===n));}
+document.querySelectorAll('[data-stage]').forEach(b=>b.onclick=()=>stageDisplay(Number(b.dataset.stage)));
+function modules(){
+ const controls=$('#controls');
+ controls.innerHTML=Object.keys(catalog.modules).map(k=>'<div class="pair"><label>'+k.toUpperCase()+'</label><select id="choose_'+k+'">'+catalog.modules[k].map(v=>'<option value="'+v.id+'"'+(catalog.defaults[k]===v.id?' selected':'')+'>'+v.label+'</option>').join('')+'</select></div>').join('');
+ selection={...catalog.defaults};
+ controls.querySelectorAll('select').forEach(sel=>sel.addEventListener('change',()=>{selection[sel.id.slice(7)]=sel.value; renderChoices()}));
+ renderChoices();
+}
+function renderChoices(){const rows=Object.entries(selection).map(([key,id])=>{const x=catalog.modules[key].find(x=>x.id===id);return '<tr><td>'+key+'</td><td><b>'+x.label+'</b></td><td>'+x.state+'</td><td class="sub">'+x.source+' · risk: '+x.risk+'</td></tr>'}).join('');$('#selected').innerHTML='<table><thead><tr><th>Module</th><th>Selected option</th><th>Evidence state</th><th>Source and unresolved risk</th></tr></thead><tbody>'+rows+'</tbody></table>';showLomo();}
+function showLomo(){if(!plan)return;const dims=Object.keys(catalog.modules);const candidates=plan.rows.filter(x=>x.dimension===selection.highlight || x.dimension==='filter').slice(0,12);$('#lomoRows').innerHTML='<table><thead><tr><th>Factor</th><th>Planned substitution</th><th>Result</th></tr></thead><tbody>'+candidates.map(x=>'<tr><td>'+x.dimension+'</td><td>'+x.variant_id+'</td><td>NOT_TESTED</td></tr>').join('')+'</tbody></table><p class="tiny">'+plan.rows.length+' matched one-factor contrasts are preregistered as proposed comparisons; Δ values are null.</p>';}
+function statusDisplay(s,local){
+ const fail=s.status!=='PASS';$('#banner').classList.toggle('hold',fail);$('#watchState').textContent=fail?'HOLD · CUSTODY DIVERGENCE':'PASS · VERIFIED LOCAL BREAKPOINTS';
+ $('#watchExplanation').textContent=local?'Read-only local integrity monitor; not instrument telemetrics':'Static custody snapshot; local verifier connection unavailable';
+ $('#mmrRoot').textContent=s.cad_mmr_root||'NOT_COMPUTED';$('#watchRoot').textContent=(s.cad_mmr_root||'ROOT UNKNOWN').slice(0,22)+'…';$('#rootCount').textContent=(s.cad_mmr_count??'?')+' ordered leaves';$('#firstFault').textContent=s.faults?.length?JSON.stringify(s.faults[0]):'NONE';
+ $('#headerStatus').textContent=fail?'CHAIN BREAK · HOLD':local?'LOCAL LIVE · PASS':'SNAPSHOT · PASS';
+ $('#headerStatus').classList.toggle('fail',fail);}
+Promise.all([fetch('module_catalog.json').then(x=>x.json()),fetch('lomo_comparison_plan.json').then(x=>x.json())]).then(([a,b])=>{catalog=a;plan=b;modules()}).catch(e=>{$('#selected').textContent='MODULE_CATALOG_NOT_LOADED: '+e.message});
+let streamConnected=false;
+try{const evt=new EventSource('api/events');evt.addEventListener('integrity',e=>{streamConnected=true;statusDisplay(JSON.parse(e.data),true)});evt.onerror=()=>{evt.close();tryStatic()};}catch(e){tryStatic()}
+async function tryStatic(){if(streamConnected)return;try{const s=await fetch('evidence_snapshot.json').then(r=>r.json());statusDisplay(s,false)}catch(e){$('#watchState').textContent='INTEGRITY STATUS UNAVAILABLE';$('#watchExplanation').textContent='No verified monitoring receipt';$('#banner').classList.add('hold')}}
+</script></body></html>

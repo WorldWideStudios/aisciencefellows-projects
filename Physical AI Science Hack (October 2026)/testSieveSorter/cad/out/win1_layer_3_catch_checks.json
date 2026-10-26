@@ -1,0 +1,21 @@
+{
+  "valid_solid": true,
+  "single_solid": true,
+  "watertight_mesh": true,
+  "bbox_mm": [
+    131.4,
+    95.4,
+    28.0
+  ],
+  "fits_bed": true,
+  "volume_cm3": 30.81,
+  "z_in_box_mm": 3.0,
+  "outside_mm": [
+    131.4,
+    95.4,
+    6.0
+  ],
+  "tab_x_mm": 35.0,
+  "winner": 1,
+  "printability_flags": []
+}
