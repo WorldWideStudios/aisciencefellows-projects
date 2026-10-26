@@ -1,0 +1,213 @@
+<title>Protocol Board</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Atkinson+Hyperlegible:wght@400;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a specimen drawer. Cards are pinned labels in free-flowing columns; one pin colour, everything else quiet. */
+:root{
+  --bg:#edf1ef; --card:#ffffff; --ink:#16201b; --muted:#56635c; --line:#d3dbd6; --accent:#2643c4; --pin:#c2410c;
+  --ok:#1d7347; --warn:#9a5800; --bad:#b42318; --chip:#e3e9e5; --shade:rgba(22,32,27,.10);
+  --f-display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --f-body:"Atkinson Hyperlegible",ui-sans-serif,system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f1512; --card:#18201c; --ink:#e6ece8; --muted:#a2afa8; --line:#2c3732; --accent:#8da2ff; --pin:#f08a5d;
+  --ok:#5cc58f; --warn:#e3a54e; --bad:#f2817a; --chip:#222c27; --shade:rgba(0,0,0,.45); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1512; --card:#18201c; --ink:#e6ece8; --muted:#a2afa8; --line:#2c3732; --accent:#8da2ff; --pin:#f08a5d;
+  --ok:#5cc58f; --warn:#e3a54e; --bad:#f2817a; --chip:#222c27; --shade:rgba(0,0,0,.45); color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:16px/1.5 var(--f-body);margin:0;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 40px}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1280px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+header{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 24px}
+h1{font:800 clamp(2rem,5vw,3.4rem)/1 var(--f-display);letter-spacing:-.02em;margin:0;text-wrap:balance}
+h1 .dot{color:var(--pin)}
+h1{display:flex;align-items:center;gap:12px}
+.dm{display:none!important}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .dm{display:inline-flex!important}:root:not([data-theme="light"]) .lm{display:none!important}}
+:root[data-theme="dark"] .dm{display:inline-flex!important}:root[data-theme="dark"] .lm{display:none!important}
+:root[data-theme="light"] .lm{display:inline-flex!important}
+.logo{display:inline-flex;width:1.15em;height:1.15em;flex:none}.logo svg{width:100%;height:100%}
+.sub{color:var(--muted);max-width:60ch;margin:6px 0 0}
+.root{font:12px var(--f-mono);color:var(--muted);text-align:right}
+.root b{display:block;font:500 11px var(--f-mono);letter-spacing:.08em;text-transform:uppercase}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.bar input{flex:1 1 220px;min-width:0;font:inherit;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:9px 16px}
+.chip{font:500 14px var(--f-body);color:var(--ink);background:var(--chip);border:1px solid transparent;border-radius:999px;padding:7px 14px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.chip .n{font:12px var(--f-mono);opacity:.7;margin-left:4px}
+.ghost{background:transparent;border-color:var(--line)}
+.board{columns:260px;column-gap:16px}
+.card{break-inside:avoid;margin:0 0 16px;background:var(--card);border:1px solid var(--line);border-radius:6px;position:relative;
+  box-shadow:0 1px 0 var(--shade);transition:transform .18s ease,box-shadow .18s ease;overflow:hidden}
+.card:hover{transform:translateY(-3px);box-shadow:0 10px 24px var(--shade)}
+.card button.open{all:unset;display:block;cursor:pointer;width:100%}
+.card button.open:focus-visible{outline:3px solid var(--accent);outline-offset:-3px}
+.pinhead{position:absolute;top:10px;left:50%;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:var(--pin);
+  box-shadow:0 2px 0 rgba(0,0,0,.25);z-index:2}
+.img{display:block;width:100%;height:auto;max-width:100%;background:var(--chip)}
+.perf{height:110px;background-color:var(--chip);
+  background-image:radial-gradient(circle at center,var(--line) 0 3.2px,transparent 3.6px);background-size:12px 10.4px}
+.perf.protocol{background-image:radial-gradient(circle at center,color-mix(in srgb,var(--accent) 35%,transparent) 0 3.2px,transparent 3.6px)}
+.body{padding:14px 14px 12px;display:flex;flex-direction:column;gap:8px}
+.kind{font:500 11px var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between;gap:8px}
+.card h2{font:700 1.12rem/1.2 var(--f-display);margin:0;text-wrap:balance}
+.lede{margin:0;color:var(--muted);font-size:.93rem}
+.result{margin:0;font-size:.93rem}
+.tags{display:flex;flex-wrap:wrap;gap:4px}
+.tag{font:12px var(--f-mono);background:var(--chip);border-radius:4px;padding:1px 6px;color:var(--muted)}
+.foot{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:0 14px 12px}
+.addr{font:11px var(--f-mono);color:var(--muted)}
+.stamp{font:700 11px var(--f-mono);letter-spacing:.08em;border:1.5px solid currentColor;border-radius:3px;padding:1px 6px;transform:rotate(-2deg)}
+.s-ok{color:var(--ok)}.s-warn{color:var(--warn)}.s-bad{color:var(--bad)}.s-n{color:var(--muted)}
+.save{font:500 13px var(--f-body);color:var(--ink);background:var(--chip);border:1px solid var(--line);border-radius:999px;padding:4px 12px;cursor:pointer}
+.save[aria-pressed="true"]{background:var(--pin);border-color:var(--pin);color:var(--card)}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.empty{color:var(--muted);padding:24px 0}
+dialog{border:none;border-radius:10px;padding:0;max-width:min(720px,calc(100vw - 32px));width:100%;background:var(--card);color:var(--ink);box-shadow:0 30px 80px rgba(0,0,0,.4)}
+dialog::backdrop{background:rgba(10,16,13,.55)}
+.dlg{display:grid;grid-template-columns:minmax(0,1fr);max-height:min(86vh,900px);overflow:auto}
+.dlg .head{padding:20px 22px 0;display:flex;flex-direction:column;gap:8px}
+.dlg h3{font:800 1.6rem/1.15 var(--f-display);margin:0;text-wrap:balance}
+.dlg .meta{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:4px 12px;font-size:.92rem;padding:0 22px}
+.dlg .meta dt{color:var(--muted)}.dlg .meta dd{margin:0;min-width:0;overflow-wrap:anywhere}
+.run{padding:6px 22px 4px;display:flex;flex-direction:column;gap:10px}
+.prog{height:8px;background:var(--chip);border-radius:99px;overflow:hidden}
+.prog i{display:block;height:100%;width:0;background:var(--accent);transition:width .25s ease}
+.steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px;counter-reset:s}
+.steps li{display:flex;gap:10px;align-items:flex-start;padding:8px 10px;border:1px solid var(--line);border-radius:6px;counter-increment:s}
+.steps li.cur{border-color:var(--accent);box-shadow:inset 3px 0 0 var(--accent)}
+.steps li.done span{text-decoration:line-through;color:var(--muted)}
+.steps li::before{content:counter(s);font:12px var(--f-mono);color:var(--muted);min-width:1.4em;padding-top:3px}
+.steps input{margin-top:5px;accent-color:var(--accent)}
+.actions{display:flex;flex-wrap:wrap;gap:8px;padding:12px 22px 22px}
+.btn{font:700 14px var(--f-body);border-radius:999px;padding:9px 16px;border:1px solid var(--line);background:var(--chip);color:var(--ink);cursor:pointer;text-decoration:none}
+.btn.p{background:var(--accent);border-color:var(--accent);color:var(--card)}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);
+  padding:8px 16px;border-radius:999px;font-size:14px;opacity:0;transition:opacity .2s;pointer-events:none}
+.toast.on{opacity:1}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+<!--BODY-->
+<main class="wrap">
+  <header>
+    <div>
+      <h1><span class="logo lm" aria-hidden="true">/*__MARK__*/</span><span class="logo dm" aria-hidden="true">/*__MARKDARK__*/</span><span>Protocol Board<span class="dot">.</span></span></h1>
+      <p class="sub">Pin the protocols, prints and bench gear you want. Open a card to run it step by step, remix it, or contest it. Every card points at exact bytes by hash.</p>
+    </div>
+    <div class="root"><b>Graph root</b><span id="root"></span></div>
+  </header>
+  <div class="bar" role="toolbar" aria-label="Filter cards">
+    <label class="vh" for="q">Search cards</label>
+    <input id="q" type="search" placeholder="Search: trommel, 384, Hymenoptera, Greiner…" autocomplete="off">
+    <button type="button" class="chip" data-f="all" aria-pressed="true">All<span class="n" id="n-all"></span></button>
+    <button type="button" class="chip" data-f="protocol" aria-pressed="false">Protocols<span class="n" id="n-protocol"></span></button>
+    <button type="button" class="chip" data-f="print" aria-pressed="false">Prints<span class="n" id="n-print"></span></button>
+    <button type="button" class="chip" data-f="ladder" aria-pressed="false">Escalation<span class="n" id="n-ladder"></span></button>
+    <button type="button" class="chip" data-f="bench" aria-pressed="false">Bench<span class="n" id="n-bench"></span></button>
+    <button type="button" class="chip" data-f="saved" aria-pressed="false">Pinned<span class="n" id="n-saved"></span></button>
+    <button type="button" class="chip ghost" id="shuffle">Shuffle</button>
+  </div>
+  <section class="board" id="board" aria-label="Cards" aria-live="polite"></section>
+  <div class="toast" id="toast" role="status"></div>
+</main>
+<dialog id="dlg" aria-labelledby="d-title"><div class="dlg" id="dlg-body"></div></dialog>
+<script>
+(() => {
+'use strict';
+const DATA = /*__DATA__*/null;
+const REPO = '__REPO__';
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const KIND = { protocol: 'Protocol', print: 'Print', bench: 'Bench object', ladder: 'Escalation step' };
+const GOOD = ['SUPPORTED','USEFUL','READY','PRINTED','APPROVE','SPEC','DESIGN'], WARN = ['RETRY','HOLD','REWORK','RULER-PHOTO','PRINTED + DEPOWDERED (OBSERVED)'], BAD = ['BROKEN','FAILED (OBSERVED)','NULL'];
+const cls = (s) => { s = String(s || '').toUpperCase(); return GOOD.includes(s) ? 's-ok' : WARN.includes(s) || s.startsWith('PRINTED') ? 's-warn' : BAD.includes(s) || s.startsWith('FAILED') ? 's-bad' : 's-n'; };
+let saved = new Set(), runs = {}, filter = 'all', order = DATA.cards.map((_, i) => i);
+try { saved = new Set(JSON.parse(localStorage.getItem('pb-saved') || '[]')); runs = JSON.parse(localStorage.getItem('pb-runs') || '{}'); } catch (e) {}
+const persist = () => { try { localStorage.setItem('pb-saved', JSON.stringify([...saved])); localStorage.setItem('pb-runs', JSON.stringify(runs)); } catch (e) {} };
+const toast = (t) => { const el = $('#toast'); el.textContent = t; el.classList.add('on'); clearTimeout(toast.h); toast.h = setTimeout(() => el.classList.remove('on'), 1600); };
+$('#root').textContent = DATA.root.slice(0, 16) + '…';
+
+function counts() {
+  const c = { all: DATA.cards.length, saved: saved.size };
+  DATA.cards.forEach((x) => c[x.type] = (c[x.type] || 0) + 1);
+  for (const k of ['all', 'protocol', 'print', 'ladder', 'bench', 'saved']) $('#n-' + k).textContent = c[k] || 0;
+}
+function card(x) {
+  const pinned = saved.has(x.id);
+  const vis = x.img ? `<img class="img" src="${x.img}" alt="" loading="lazy">` : `<div class="perf ${x.type}" aria-hidden="true"></div>`;
+  const prog = x.steps && x.steps.length ? (runs[x.id] || []).length + '/' + x.steps.length + ' steps' : '';
+  return `<article class="card"><span class="pinhead" aria-hidden="true"></span>
+    <button type="button" class="open" data-id="${esc(x.id)}">${vis}
+      <div class="body"><div class="kind"><span>${KIND[x.type]}</span><span>${esc(prog)}</span></div>
+      <h2>${esc(x.title)}</h2>${x.lede ? `<p class="lede">${esc(x.lede)}</p>` : ''}${x.result ? `<p class="result">${esc(x.result)}</p>` : ''}
+      ${x.dims ? `<p class="result">${esc(x.dims)}</p>` : ''}
+      <div class="tags">${(x.tags || []).slice(0, 4).map((t) => `<span class="tag">${esc(t)}</span>`).join('')}</div></div></button>
+    <div class="foot"><span class="stamp ${cls(x.status)}">${esc(x.status)}</span>
+      <button type="button" class="save" data-save="${esc(x.id)}" aria-pressed="${pinned}">${pinned ? 'Pinned' : 'Pin'}</button></div></article>`;
+}
+function render() {
+  const q = $('#q').value.trim().toLowerCase();
+  const items = order.map((i) => DATA.cards[i]).filter((x) => (filter === 'all' || (filter === 'saved' ? saved.has(x.id) : x.type === filter))
+    && (!q || (x.title + ' ' + x.lede + ' ' + (x.result || '') + ' ' + (x.tags || []).join(' ') + ' ' + x.status).toLowerCase().includes(q)));
+  $('#board').innerHTML = items.length ? items.map(card).join('') :
+    `<p class="empty">${filter === 'saved' ? 'Nothing pinned yet. Press Pin on any card to keep it here.' : 'No cards match. Try a broader word.'}</p>`;
+  counts();
+}
+document.querySelectorAll('.chip[data-f]').forEach((b) => b.addEventListener('click', () => {
+  filter = b.dataset.f; document.querySelectorAll('.chip[data-f]').forEach((c) => c.setAttribute('aria-pressed', c === b)); render();
+}));
+$('#q').addEventListener('input', render);
+$('#shuffle').addEventListener('click', () => { for (let i = order.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [order[i], order[j]] = [order[j], order[i]]; } render(); toast('Shuffled'); });
+$('#board').addEventListener('click', (e) => {
+  const s = e.target.closest('[data-save]');
+  if (s) { const id = s.dataset.save; saved.has(id) ? saved.delete(id) : saved.add(id); persist(); render(); toast(saved.has(id) ? 'Pinned' : 'Unpinned'); return; }
+  const o = e.target.closest('.open'); if (o) openCard(o.dataset.id);
+});
+function openCard(id) {
+  const x = DATA.cards.find((c) => c.id === id); if (!x) return;
+  const done = new Set(runs[id] || []);
+  const total = (x.steps || []).length;
+  const pct = total ? Math.round(100 * done.size / total) : 0;
+  const issue = `${REPO}/issues/new?labels=contest&title=${encodeURIComponent('Contest ' + x.title)}&body=${encodeURIComponent('Card: ' + x.id + '\nHash: ' + (x.hash || '') + '\nGraph root: ' + DATA.root + '\n\nWhat is wrong:\n\nEvidence:\n')}`;
+  $('#dlg-body').innerHTML = `
+    ${x.img ? `<img class="img" src="${x.img}" alt="">` : ''}
+    <div class="head"><div class="kind"><span>${KIND[x.type]}</span><span class="stamp ${cls(x.status)}">${esc(x.status)}</span></div>
+      <h3 id="d-title">${esc(x.title)}</h3>${x.lede ? `<p class="lede">${esc(x.lede)}</p>` : ''}${x.result ? `<p class="result">${esc(x.result)}</p>` : ''}</div>
+    <dl class="meta">${x.dims ? `<dt>Size</dt><dd>${esc(x.dims)}</dd>` : ''}<dt>File</dt><dd><a href="${REPO}/blob/mvp-kg/${encodeURI(x.path || '')}">${esc(x.path || '')}</a></dd>
+      <dt>Hash</dt><dd class="addr">${esc(x.hash || '')}</dd>${x.more ? `<dt>Decision</dt><dd><a href="${REPO}/blob/mvp-kg/${encodeURI(x.more)}">${esc(x.more)}</a></dd>` : ''}</dl>
+    ${total ? `<section class="run" aria-label="Run this card"><div class="kind"><span>Run it</span><span id="r-n">${done.size}/${total} done</span></div>
+      <div class="prog" aria-hidden="true"><i id="r-bar" style="width:${pct}%"></i></div>
+      <ol class="steps" id="r-steps">${x.steps.map((s, i) => `<li class="${done.has(i) ? 'done' : ''}"><input type="checkbox" id="st-${i}" ${done.has(i) ? 'checked' : ''}><label for="st-${i}"><span>${esc(s.t)}</span></label></li>`).join('')}</ol></section>` : ''}
+    <div class="actions">${total ? `<button type="button" class="btn p" id="r-next">Next step</button><button type="button" class="btn" id="r-reset">Start over</button>` : ''}
+      <button type="button" class="btn" id="d-pin">${saved.has(id) ? 'Unpin' : 'Pin'}</button>
+      <button type="button" class="btn" id="d-copy">Copy hash</button>
+      <a class="btn" href="${REPO}/blob/mvp-kg/${encodeURI(x.path || '')}">Remix on GitHub</a>
+      <a class="btn" href="${issue}">Contest</a>
+      <button type="button" class="btn" id="d-close">Close</button></div>`;
+  const sync = () => {
+    const d = new Set(runs[id] || []);
+    document.querySelectorAll('#r-steps li').forEach((li, i) => { li.classList.toggle('done', d.has(i)); li.classList.toggle('cur', !d.has(i) && [...Array(i).keys()].every((k) => d.has(k))); li.querySelector('input').checked = d.has(i); });
+    if ($('#r-n')) { $('#r-n').textContent = `${d.size}/${total} done`; $('#r-bar').style.width = (total ? 100 * d.size / total : 0) + '%'; }
+    persist(); render();
+  };
+  $('#dlg-body').addEventListener('change', (e) => { const m = e.target.id.match(/^st-(\d+)$/); if (!m) return;
+    const d = new Set(runs[id] || []); e.target.checked ? d.add(+m[1]) : d.delete(+m[1]); runs[id] = [...d]; sync(); });
+  if (total) {
+    $('#r-next').onclick = () => { const d = new Set(runs[id] || []); const i = [...Array(total).keys()].find((k) => !d.has(k));
+      if (i === undefined) { toast('All steps done'); return; } d.add(i); runs[id] = [...d]; sync(); if (d.size === total) toast('Run complete'); };
+    $('#r-reset').onclick = () => { runs[id] = []; sync(); };
+  }
+  $('#d-pin').onclick = () => { saved.has(id) ? saved.delete(id) : saved.add(id); persist(); render(); $('#d-pin').textContent = saved.has(id) ? 'Unpin' : 'Pin'; };
+  $('#d-copy').onclick = async () => { try { await navigator.clipboard.writeText(x.hash || ''); toast('Hash copied'); } catch (e) { const r = document.createRange(); r.selectNodeContents(document.querySelector('.dlg .addr')); getSelection().removeAllRanges(); getSelection().addRange(r); toast('Hash selected, press Copy'); } };
+  $('#d-close').onclick = () => $('#dlg').close();
+  $('#dlg').showModal(); sync();
+}
+$('#dlg').addEventListener('click', (e) => { if (e.target.id === 'dlg') $('#dlg').close(); });
+render();
+})();
+</script>

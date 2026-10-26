@@ -1,0 +1,53 @@
+{
+  "id": "BB-WORKFLOW-20261025-01",
+  "parent_commit": "26ba0e978dc2a4805d67b68dccc44761c73972f0",
+  "project": "biobitworks/baebugs",
+  "lane": "lane/bug-workflow-20261025",
+  "implemented": [
+    "draft workflow builder",
+    "seven vision checkpoints",
+    "protocol JSON export"
+  ],
+  "executed": [
+    "JavaScript parse check",
+    "Node VM draft generation assertions",
+    "Python artifact hashing"
+  ],
+  "observed": [
+    "draft generation assertions PASS"
+  ],
+  "failures": [
+    "pytest unavailable: No module named pytest",
+    "Notion 404",
+    "DataONE metadata unavailable",
+    "live production URL inaccessible"
+  ],
+  "not_tested": [
+    "real browser interaction",
+    "live AI inference",
+    "hardware",
+    "Python regression tests"
+  ],
+  "proposed": [
+    "planner adapters",
+    "compatibility solver",
+    "persisted receipts"
+  ],
+  "mmr": "NOT_COMPUTED",
+  "signature": "NOT_SIGNED",
+  "files": [
+    {
+      "path": "site/workflow/index.html",
+      "sha256": "9652d6cd4eaea31c6f2526863a3238635d82214ac1b717b2ee7d9b22598d0d54"
+    },
+    {
+      "path": "docs/workflow/REVIEW_20261025.md",
+      "sha256": "e517acce5893ad955e68a23987382d0323a2217bbbd341abdc0ae97bd7d396ba"
+    },
+    {
+      "path": "docs/workflow/reproduce.ipynb",
+      "sha256": "d11cd8db3e2adef8c3ea6fd3924ee9ea95562055254b1fba15ec0639ef019760"
+    }
+  ],
+  "next_action": "Review lane; connect deterministic planner and actual CV evidence before production merge"
+}

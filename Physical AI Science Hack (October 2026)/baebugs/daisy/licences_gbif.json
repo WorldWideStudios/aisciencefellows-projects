@@ -1,0 +1,155 @@
+{
+ "gbif_ca_2": {
+  "records": 5884,
+  "licences": {
+   "zero/1.0": 5865,
+   "by/4.0": 19
+  },
+  "rights_holders": {
+   "University of California Santa Barbara Invertebrate Zoology Collection": 3218,
+   "San Diego Natural History Museum Entomology Department": 1958,
+   "San Diego Natural History Museum Terrestrial Invertebrate Collection (SDNHM-SDNHM)": 256,
+   "Department of Bioagricultural Sciences": 199,
+   "The Regents of the University of California; ROR: https://ror.org/02t274463": 189,
+   "University of Arizona Insect Collection": 27,
+   "NEON (National Ecological Observatory Network) Biorepository": 19,
+   "M. Andrew Johnston Research Collection": 8
+  },
+  "orders": {
+   "Hymenoptera": 3563,
+   "Diptera": 976,
+   "Coleoptera": 607,
+   "Lepidoptera": 454,
+   "Hemiptera": 164,
+   "Orthoptera": 48,
+   "Odonata": 27,
+   "Neuroptera": 11,
+   "Blattodea": 9,
+   "Dermaptera": 9,
+   "Siphonaptera": 8,
+   "Phasmida": 2
+  }
+ },
+ "gbif_az": {
+  "records": 2641,
+  "licences": {
+   "zero/1.0": 2637,
+   "by/4.0": 4
+  },
+  "rights_holders": {
+   "Northern Arizona University": 834,
+   "University of Arizona Insect Collection": 429,
+   "University of Arizona Insect Collection (UA-UA)": 419,
+   "Northern Arizona University - Agua Fria National Monument Collection": 378,
+   "Department of Bioagricultural Sciences": 257,
+   "Northern Arizona University - Walnut Canyon National Monument Collection (NAU-NAU)": 102,
+   "Northern Arizona University - Arthropod Collection (NAU-NAU)": 56,
+   "Walnut Canyon National Monument": 39
+  },
+  "orders": {
+   "Hymenoptera": 804,
+   "Coleoptera": 695,
+   "Hemiptera": 415,
+   "Diptera": 352,
+   "Lepidoptera": 265,
+   "Orthoptera": 44,
+   "Neuroptera": 25,
+   "unknown": 8,
+   "Psocodea": 6,
+   "Thysanoptera": 6,
+   "Blattodea": 5,
+   "Plecoptera": 3
+  }
+ },
+ "gbif_nv": {
+  "records": 1250,
+  "licences": {
+   "zero/1.0": 520,
+   "by/4.0": 730
+  },
+  "rights_holders": {
+   "Illinois Natural History Survey": 637,
+   "Florida State Collection of Arthropods": 126,
+   "USNM": 73,
+   "Yale Peabody Museum": 70,
+   "ETHZ": 64,
+   "San Diego Natural History Museum Terrestrial Invertebrate Collection (SDNHM-SDNHM)": 62,
+   "Department of Bioagricultural Sciences": 56,
+   "INHS": 27
+  },
+  "orders": {
+   "Hemiptera": 273,
+   "Hymenoptera": 261,
+   "Lepidoptera": 239,
+   "Diptera": 166,
+   "Coleoptera": 132,
+   "Odonata": 52,
+   "Orthoptera": 33,
+   "Psocodea": 32,
+   "Ephemeroptera": 20,
+   "Trichoptera": 18,
+   "Plecoptera": 11,
+   "Siphonaptera": 8
+  }
+ },
+ "gbif_or": {
+  "records": 2931,
+  "licences": {
+   "by/4.0": 258,
+   "zero/1.0": 2673
+  },
+  "rights_holders": {
+   "Field Museum of Natural History": 1370,
+   "Dept. of Entomology, Michigan State University": 249,
+   "San Diego Natural History Museum Terrestrial Invertebrate Collection (SDNHM-SDNHM)": 235,
+   "USNM": 222,
+   "Yale Peabody Museum": 192,
+   "Department of Bioagricultural Sciences": 114,
+   "MZH": 92,
+   "INHS": 81
+  },
+  "orders": {
+   "Siphonaptera": 1372,
+   "Lepidoptera": 866,
+   "Hymenoptera": 284,
+   "Coleoptera": 99,
+   "Hemiptera": 89,
+   "Diptera": 76,
+   "Psocodea": 48,
+   "Odonata": 24,
+   "Trichoptera": 24,
+   "Ephemeroptera": 22,
+   "Plecoptera": 20,
+   "Orthoptera": 6
+  }
+ },
+ "gbif_specimen_images": {
+  "records": 1911,
+  "licences": {
+   "zero/1.0": 1911
+  },
+  "rights_holders": {
+   "University of California Santa Barbara Invertebrate Zoology Collection": 1844,
+   "The Regents of the University of California; ROR: https://ror.org/02t274463": 29,
+   "Department of Bioagricultural Sciences": 23,
+   "Santa Barbara Museum of Natural History Entomology Collection (SBMNH-SBMNH)": 12,
+   "Sangmi Lee, 2025": 1,
+   "San Diego Natural History Museum Entomology Department": 1,
+   "Natural History Museum of Los Angeles County": 1
+  },
+  "orders": {
+   "Hymenoptera": 1071,
+   "Coleoptera": 357,
+   "Lepidoptera": 210,
+   "Hemiptera": 123,
+   "Diptera": 75,
+   "Odonata": 31,
+   "Orthoptera": 27,
+   "Blattodea": 6,
+   "unknown": 3,
+   "Phasmida": 2,
+   "Dermaptera": 2,
+   "Neuroptera": 2
+  }
+ }
+}

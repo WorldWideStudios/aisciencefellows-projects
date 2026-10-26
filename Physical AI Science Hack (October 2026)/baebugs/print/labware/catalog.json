@@ -1,0 +1,939 @@
+{
+ "generated": "2026-10-25",
+ "observed": [
+  {
+   "id": "obs-tipbox-1000-blue",
+   "name": "1000 µL tip box, blue insert",
+   "kind": "tip rack",
+   "vendor": "commercial (brand withheld)",
+   "photos": [
+    "46905",
+    "46906",
+    "46916"
+   ],
+   "dims": {
+    "x": 122,
+    "y": 82,
+    "z": 95,
+    "est": true,
+    "basis": "ruler, photo 46907; insert ~120x80"
+   },
+   "grid": {
+    "rows": 8,
+    "cols": 12,
+    "pitch": 9.0,
+    "hole_d": 7.6,
+    "est": true,
+    "basis": "SBS 96 pitch; hole from 1000 µL collar"
+   },
+   "material": "PP insert, clear PP hinged box",
+   "reuse": "tip refill rack, SBS insert donor",
+   "remix": "print-rack-96",
+   "mfg": {
+    "level": "med",
+    "notes": "Molded PP, ribbed walls, textured floor. Printed copies lose the ~0.1 mm tip-seat tolerance robots need."
+   },
+   "ip": {
+    "level": "high",
+    "notes": "Lid carries a vendor wordmark and product name; the spined insert and box form may carry design rights. Remix only the public SBS 96 grid."
+   }
+  },
+  {
+   "id": "obs-tipbox-200f-magenta",
+   "name": "200 µL filter tip box, magenta insert",
+   "kind": "tip rack",
+   "vendor": "commercial (brand withheld)",
+   "photos": [
+    "46901",
+    "46911",
+    "46914",
+    "46916",
+    "46917"
+   ],
+   "dims": {
+    "x": 124,
+    "y": 84,
+    "z": 70,
+    "est": true,
+    "basis": "insert spans ~127 mm on rule, photo 46917"
+   },
+   "grid": {
+    "rows": 8,
+    "cols": 12,
+    "pitch": 9.0,
+    "hole_d": 5.6,
+    "est": true,
+    "basis": "SBS 96 pitch; hole from 200 µL tip"
+   },
+   "material": "PP insert, clear PP box",
+   "reuse": "tip refill rack",
+   "remix": "print-rack-96",
+   "mfg": {
+    "level": "med",
+    "notes": "Filter-tip sterility ends when the box is opened; a refilled box is non-sterile unless autoclaved."
+   },
+   "ip": {
+    "level": "med",
+    "notes": "Vendor name on lid label only. Generic 96 grid."
+   }
+  },
+  {
+   "id": "obs-tipbox-purple-hinged",
+   "name": "Purple hinged tip box",
+   "kind": "tip rack",
+   "vendor": "commercial (brand withheld)",
+   "photos": [
+    "46901",
+    "46903",
+    "46904",
+    "46914"
+   ],
+   "dims": {
+    "x": 118,
+    "y": 82,
+    "z": 60,
+    "est": true,
+    "basis": "photo 46914 against SBS neighbors"
+   },
+   "grid": {
+    "rows": 8,
+    "cols": 12,
+    "pitch": 9.0,
+    "hole_d": 5.4,
+    "est": true,
+    "basis": "SBS 96 pitch"
+   },
+   "material": "PP, purple base + clear lid",
+   "reuse": "tip rack, small-parts case",
+   "remix": "print-rack-96",
+   "mfg": {
+    "level": "low",
+    "notes": "Simple box; useful as a dust case for printed parts."
+   },
+   "ip": {
+    "level": "med",
+    "notes": "Lid has an embossed vendor logo. Do not reproduce it."
+   }
+  },
+  {
+   "id": "obs-microtube-96-purple",
+   "name": "Purple 96-place microtube rack with base",
+   "kind": "tube rack",
+   "vendor": "unbranded / in-house",
+   "photos": [
+    "46908",
+    "46911",
+    "46914"
+   ],
+   "dims": {
+    "x": 125,
+    "y": 85,
+    "z": 55,
+    "est": true,
+    "basis": "photo 46914"
+   },
+   "grid": {
+    "rows": 8,
+    "cols": 12,
+    "pitch": 9.0,
+    "hole_d": 6.5,
+    "est": true,
+    "basis": "96 format"
+   },
+   "material": "PP",
+   "reuse": "PCR strip / 0.5 mL tube rack",
+   "remix": "print-rack-96",
+   "mfg": {
+    "level": "low",
+    "notes": "Generic; easy to print in PETG."
+   },
+   "ip": {
+    "level": "low",
+    "notes": "No visible branding."
+   }
+  },
+  {
+   "id": "obs-microtube-50-purple",
+   "name": "Purple 5x10 microtube rack",
+   "kind": "tube rack",
+   "vendor": "unbranded / in-house",
+   "photos": [
+    "46908",
+    "46910",
+    "46911",
+    "46915"
+   ],
+   "dims": {
+    "x": 250,
+    "y": 75,
+    "z": 40,
+    "est": true,
+    "basis": "~10 in on rule, photo 46908"
+   },
+   "grid": {
+    "rows": 5,
+    "cols": 10,
+    "pitch": 13.0,
+    "hole_d": 11.0,
+    "est": true,
+    "basis": "1.5/2 mL rack convention"
+   },
+   "material": "PP",
+   "reuse": "1.5/2 mL and cryotube holding",
+   "remix": "print-cryo-24",
+   "mfg": {
+    "level": "low",
+    "notes": "Longer than an SBS slot; the 4x6 remix fixes that."
+   },
+   "ip": {
+    "level": "low",
+    "notes": "No visible branding."
+   }
+  },
+  {
+   "id": "obs-cryobox-100",
+   "name": "100-place cryo box, 10x10 numbered",
+   "kind": "cryo box",
+   "vendor": "commercial (brand withheld)",
+   "photos": [
+    "46902",
+    "46907",
+    "46908",
+    "46910",
+    "46915"
+   ],
+   "dims": {
+    "x": 133,
+    "y": 133,
+    "z": 52,
+    "est": true,
+    "basis": "lid ~131 mm on rule, photo 46907; 2 in box convention"
+   },
+   "grid": {
+    "rows": 10,
+    "cols": 10,
+    "pitch": 13.0,
+    "hole_d": 12.8,
+    "est": true,
+    "basis": "numbered grid 1-100, photo 46902"
+   },
+   "material": "PC lid, PP grid insert",
+   "reuse": "cryotube storage, -80 C",
+   "remix": "print-cryo-100",
+   "mfg": {
+    "level": "high",
+    "notes": "Rated for -80 C / LN2 vapor. Printed PLA/PETG embrittle below ~-20 C; a printed copy is not a cryo box. 133 mm does not fit a deck slot."
+   },
+   "ip": {
+    "level": "high",
+    "notes": "Vendor wordmark printed on the lid. Numbered-cell layout is a common format; keep numbering, drop the mark."
+   }
+  },
+  {
+   "id": "obs-cryotube-2ml",
+   "name": "2 mL external-thread cryotube, sterile",
+   "kind": "consumable",
+   "vendor": "commercial (brand withheld)",
+   "photos": [
+    "46909",
+    "46910",
+    "46915"
+   ],
+   "dims": {
+    "x": 12.5,
+    "y": 12.5,
+    "z": 48.5,
+    "est": true,
+    "basis": "2 mL external-thread cryotube convention"
+   },
+   "grid": null,
+   "material": "PP, screw cap, round bottom, star foot, sterile",
+   "reuse": "sample unit; the 'bug' container",
+   "remix": null,
+   "mfg": {
+    "level": "high",
+    "notes": "Sterility and nuclease/pyrogen-free claims hold only for unopened bags. Never print substitutes. Track lot and expiry."
+   },
+   "ip": {
+    "level": "med",
+    "notes": "Product name and vendor are trademarks; the tube outline is a functional dimension used to size racks."
+   },
+   "lot": {
+    "lot": "E23093DQ",
+    "expiry": "2028-09-12",
+    "pack": "100 pcs/bag"
+   }
+  },
+  {
+   "id": "obs-conical-50",
+   "name": "50 mL conical tube, green cap",
+   "kind": "consumable",
+   "vendor": "commercial (brand withheld)",
+   "photos": [
+    "46911",
+    "46914",
+    "46916"
+   ],
+   "dims": {
+    "x": 29.0,
+    "y": 29.0,
+    "z": 115,
+    "est": true,
+    "basis": "50 mL conical convention"
+   },
+   "grid": null,
+   "material": "PP",
+   "reuse": "bulk media, specimen",
+   "remix": "print-conical-50",
+   "mfg": {
+    "level": "low",
+    "notes": "Standard consumable."
+   },
+   "ip": {
+    "level": "low",
+    "notes": "Label not legible in photos."
+   }
+  },
+  {
+   "id": "obs-rack-18-white",
+   "name": "White 3x6 two-tier tube rack",
+   "kind": "tube rack",
+   "vendor": "unbranded / in-house",
+   "photos": [
+    "46908",
+    "46910",
+    "46914",
+    "46915"
+   ],
+   "dims": {
+    "x": 150,
+    "y": 85,
+    "z": 60,
+    "est": true,
+    "basis": "~6 in on rule, photo 46915"
+   },
+   "grid": {
+    "rows": 3,
+    "cols": 6,
+    "pitch": 24.0,
+    "hole_d": 17.5,
+    "est": true,
+    "basis": "15 mL conical rack convention"
+   },
+   "material": "PP",
+   "reuse": "15 mL conicals",
+   "remix": "print-conical-15",
+   "mfg": {
+    "level": "low",
+    "notes": "Slightly longer than SBS; the 3x5 remix fits a slot."
+   },
+   "ip": {
+    "level": "low",
+    "notes": "Handwritten label only."
+   }
+  },
+  {
+   "id": "obs-rack-4way-orange",
+   "name": "Orange 4-way tube rack",
+   "kind": "tube rack",
+   "vendor": "unbranded / in-house",
+   "photos": [
+    "46911",
+    "46914"
+   ],
+   "dims": {
+    "x": 135,
+    "y": 95,
+    "z": 90,
+    "est": true,
+    "basis": "photo 46911 vs 50 mL tube"
+   },
+   "grid": {
+    "rows": 2,
+    "cols": 3,
+    "pitch": 32.0,
+    "hole_d": 30.0,
+    "est": true,
+    "basis": "50 mL face"
+   },
+   "material": "PP",
+   "reuse": "mixed 50/15/1.5 mL holding",
+   "remix": "print-conical-50",
+   "mfg": {
+    "level": "low",
+    "notes": "Each face is a different tube size; the remix splits faces into SBS plates."
+   },
+   "ip": {
+    "level": "med",
+    "notes": "Interlocking 4-way cube forms may carry design patents. Remix single faces, not the cube."
+   }
+  },
+  {
+   "id": "obs-freezer-rack-3bay",
+   "name": "Stainless chest-freezer rack, 3 bays",
+   "kind": "storage",
+   "vendor": "unbranded / in-house",
+   "photos": [
+    "46907",
+    "46908",
+    "46911",
+    "46912"
+   ],
+   "dims": {
+    "x": 430,
+    "y": 140,
+    "z": 150,
+    "est": true,
+    "basis": "~17 in on rule, photo 46907; bays fit 133 mm boxes"
+   },
+   "grid": {
+    "rows": 1,
+    "cols": 3,
+    "pitch": 140.0,
+    "hole_d": null,
+    "est": true,
+    "basis": "3 bays"
+   },
+   "material": "stainless (est.)",
+   "reuse": "holds 3 cryo boxes per tier",
+   "remix": null,
+   "mfg": {
+    "level": "low",
+    "notes": "Reuse as-is; container node in the twin."
+   },
+   "ip": {
+    "level": "low",
+    "notes": "Generic."
+   }
+  },
+  {
+   "id": "obs-tub-yellow",
+   "name": "Yellow polypropylene tub",
+   "kind": "storage",
+   "vendor": "unbranded / in-house",
+   "photos": [
+    "46902",
+    "46907",
+    "46908",
+    "46912"
+   ],
+   "dims": {
+    "x": 380,
+    "y": 300,
+    "z": 150,
+    "est": true,
+    "basis": "~15 in on rule, photo 46907"
+   },
+   "grid": null,
+   "material": "PP",
+   "reuse": "ice bath, wash tray, enclosure base",
+   "remix": null,
+   "mfg": {
+    "level": "low",
+    "notes": "Reuse as-is."
+   },
+   "ip": {
+    "level": "low",
+    "notes": "Generic."
+   }
+  },
+  {
+   "id": "obs-printed-frame-open",
+   "name": "3D-printed open frames (2, lipped)",
+   "kind": "printed frame",
+   "vendor": "unbranded / in-house",
+   "photos": [
+    "46912"
+   ],
+   "dims": {
+    "x": 127.76,
+    "y": 85.48,
+    "z": 12,
+    "est": true,
+    "basis": "photo 46912 proportions match SBS; set to SBS"
+   },
+   "grid": null,
+   "material": "PLA (est.)",
+   "reuse": "the 'folder' frame family; holds inserts",
+   "remix": "print-frame-sbs",
+   "mfg": {
+    "level": "med",
+    "notes": "PLA warps above ~55 C, no autoclave. Reprint in PETG/PP for wet use."
+   },
+   "ip": {
+    "level": "low",
+    "notes": "In-house design."
+   }
+  },
+  {
+   "id": "obs-printed-grid-mesh",
+   "name": "3D-printed 2x3 grid frame with mesh",
+   "kind": "printed frame",
+   "vendor": "unbranded / in-house",
+   "photos": [
+    "46912"
+   ],
+   "dims": {
+    "x": 127.76,
+    "y": 85.48,
+    "z": 8,
+    "est": true,
+    "basis": "photo 46912"
+   },
+   "grid": {
+    "rows": 2,
+    "cols": 3,
+    "pitch": 40.0,
+    "hole_d": null,
+    "est": true,
+    "basis": "6 windows"
+   },
+   "material": "PLA + fine mesh (est.)",
+   "reuse": "screened compartments for insects",
+   "remix": "print-grid-mesh",
+   "mfg": {
+    "level": "med",
+    "notes": "Mesh aperture sets which insects stay in."
+   },
+   "ip": {
+    "level": "low",
+    "notes": "In-house design."
+   }
+  },
+  {
+   "id": "obs-printed-honeycomb",
+   "name": "3D-printed honeycomb lattice",
+   "kind": "printed insert",
+   "vendor": "unbranded / in-house",
+   "photos": [
+    "46912"
+   ],
+   "dims": {
+    "x": 120,
+    "y": 60,
+    "z": 6,
+    "est": true,
+    "basis": "photo 46912"
+   },
+   "grid": {
+    "rows": 3,
+    "cols": 6,
+    "pitch": 16.0,
+    "hole_d": 14.0,
+    "est": true,
+    "basis": "hex cell across flats"
+   },
+   "material": "PLA (est.)",
+   "reuse": "nesting cells / partitions",
+   "remix": "print-honeycomb",
+   "mfg": {
+    "level": "low",
+    "notes": "Prints fast, no supports."
+   },
+   "ip": {
+    "level": "low",
+    "notes": "Hex lattice is public-domain geometry."
+   }
+  },
+  {
+   "id": "obs-perforated-sheet",
+   "name": "Perforated steel sheet",
+   "kind": "insert",
+   "vendor": "unbranded / in-house",
+   "photos": [
+    "46912"
+   ],
+   "dims": {
+    "x": 140,
+    "y": 100,
+    "z": 0.8,
+    "est": true,
+    "basis": "photo 46912"
+   },
+   "grid": {
+    "rows": null,
+    "cols": null,
+    "pitch": 3.0,
+    "hole_d": 2.0,
+    "est": true,
+    "basis": "staggered round holes"
+   },
+   "material": "steel (est.)",
+   "reuse": "floor screen for grid frame",
+   "remix": "print-grid-mesh",
+   "mfg": {
+    "level": "med",
+    "notes": "Sharp cut edges; deburr or edge-wrap."
+   },
+   "ip": {
+    "level": "low",
+    "notes": "Generic stock."
+   }
+  },
+  {
+   "id": "obs-minicentrifuge",
+   "name": "Mini centrifuge, teal lid",
+   "kind": "instrument",
+   "vendor": "unbranded / in-house",
+   "photos": [
+    "46901"
+   ],
+   "dims": {
+    "x": 150,
+    "y": 150,
+    "z": 110,
+    "est": true,
+    "basis": "photo 46901 vs tip box"
+   },
+   "grid": null,
+   "material": "ABS housing",
+   "reuse": "spin-down station node",
+   "remix": null,
+   "mfg": {
+    "level": "high",
+    "notes": "Never print rotors or spinning adapters."
+   },
+   "ip": {
+    "level": "low",
+    "notes": "Black-box node."
+   }
+  },
+  {
+   "id": "obs-vortexer",
+   "name": "Vortex mixer, dimpled cup head",
+   "kind": "instrument",
+   "vendor": "unbranded / in-house",
+   "photos": [
+    "46901"
+   ],
+   "dims": {
+    "x": 160,
+    "y": 130,
+    "z": 160,
+    "est": true,
+    "basis": "photo 46901"
+   },
+   "grid": null,
+   "material": "cast body, rubber head",
+   "reuse": "mixing station node",
+   "remix": null,
+   "mfg": {
+    "level": "med",
+    "notes": "Printed head adapters are common; keep mass low."
+   },
+   "ip": {
+    "level": "low",
+    "notes": "Black-box node."
+   }
+  },
+  {
+   "id": "obs-steel-rule-18in",
+   "name": "18 in / 46 cm steel rule",
+   "kind": "reference",
+   "vendor": "unbranded / in-house",
+   "photos": [
+    "46907",
+    "46908",
+    "46910",
+    "46915",
+    "46917"
+   ],
+   "dims": {
+    "x": 457,
+    "y": 25,
+    "z": 1,
+    "est": false,
+    "basis": "nominal 18 in"
+   },
+   "grid": null,
+   "material": "stainless",
+   "reuse": "scale reference for every estimate",
+   "remix": null,
+   "mfg": {
+    "level": "low",
+    "notes": "Scale reference only."
+   },
+   "ip": {
+    "level": "low",
+    "notes": "n/a"
+   }
+  }
+ ],
+ "prints": [
+  {
+   "id": "print-rack-96",
+   "name": "SBS 96 rack, 9 mm pitch",
+   "family": "sbs-plate",
+   "params": {
+    "rows": 8,
+    "cols": 12,
+    "pitch": 9.0,
+    "hole_d": 5.8,
+    "height": 20.0,
+    "a1_x": 14.38,
+    "a1_y": 11.24,
+    "footprint_x": 127.76,
+    "footprint_y": 85.48
+   },
+   "derived_from": [
+    "obs-tipbox-1000-blue",
+    "obs-tipbox-200f-magenta",
+    "obs-tipbox-purple-hinged",
+    "obs-microtube-96-purple"
+   ],
+   "ot": {
+    "well_depth": 18.0,
+    "well_vol": 200,
+    "display": "BaeBugs 96 microtube rack (printed)"
+   },
+   "material": "PETG",
+   "license": "MIT"
+  },
+  {
+   "id": "print-cryo-24",
+   "name": "SBS 4x6 rack, 2 mL cryotubes",
+   "family": "sbs-plate",
+   "params": {
+    "rows": 4,
+    "cols": 6,
+    "pitch": 19.3,
+    "hole_d": 13.2,
+    "height": 30.0,
+    "a1_x": 15.63,
+    "a1_y": 13.79,
+    "footprint_x": 127.76,
+    "footprint_y": 85.48
+   },
+   "derived_from": [
+    "obs-cryotube-2ml",
+    "obs-microtube-50-purple"
+   ],
+   "ot": {
+    "well_depth": 42.0,
+    "well_vol": 2000,
+    "display": "BaeBugs 24 rack, 2 mL cryotube (printed)"
+   },
+   "material": "PETG",
+   "license": "MIT"
+  },
+  {
+   "id": "print-conical-15",
+   "name": "SBS 3x5 rack, 15 mL conicals",
+   "family": "sbs-plate",
+   "params": {
+    "rows": 3,
+    "cols": 5,
+    "pitch": 25.0,
+    "hole_d": 17.5,
+    "height": 40.0,
+    "a1_x": 13.88,
+    "a1_y": 17.74,
+    "footprint_x": 127.76,
+    "footprint_y": 85.48
+   },
+   "derived_from": [
+    "obs-rack-18-white"
+   ],
+   "ot": {
+    "well_depth": 110.0,
+    "well_vol": 15000,
+    "display": "BaeBugs 15 rack, 15 mL conical (printed)"
+   },
+   "material": "PETG",
+   "license": "MIT"
+  },
+  {
+   "id": "print-conical-50",
+   "name": "SBS 2x3 rack, 50 mL conicals",
+   "family": "sbs-plate",
+   "params": {
+    "rows": 2,
+    "cols": 3,
+    "pitch": 35.0,
+    "hole_d": 29.5,
+    "height": 40.0,
+    "a1_x": 28.88,
+    "a1_y": 25.24,
+    "footprint_x": 127.76,
+    "footprint_y": 85.48
+   },
+   "derived_from": [
+    "obs-conical-50",
+    "obs-rack-4way-orange"
+   ],
+   "ot": {
+    "well_depth": 110.0,
+    "well_vol": 50000,
+    "display": "BaeBugs 6 rack, 50 mL conical (printed)"
+   },
+   "material": "PETG",
+   "license": "MIT"
+  },
+  {
+   "id": "print-cryo-100",
+   "name": "10x10 cryo grid insert, 133 mm",
+   "family": "grid-insert",
+   "params": {
+    "rows": 10,
+    "cols": 10,
+    "pitch": 13.0,
+    "hole_d": 12.6,
+    "height": 12.0,
+    "a1_x": 8.0,
+    "a1_y": 8.0,
+    "footprint_x": 133.0,
+    "footprint_y": 133.0
+   },
+   "derived_from": [
+    "obs-cryobox-100"
+   ],
+   "ot": null,
+   "material": "PP (filament)",
+   "license": "MIT"
+  },
+  {
+   "id": "print-frame-sbs",
+   "name": "SBS lipped frame ('folder')",
+   "family": "frame",
+   "params": {
+    "footprint_x": 127.76,
+    "footprint_y": 85.48,
+    "height": 12.0,
+    "wall": 5.0,
+    "lip": 2.0,
+    "lip_z": 2.0
+   },
+   "derived_from": [
+    "obs-printed-frame-open"
+   ],
+   "ot": null,
+   "material": "PETG",
+   "license": "MIT"
+  },
+  {
+   "id": "print-grid-mesh",
+   "name": "SBS 2x3 screened grid frame",
+   "family": "grid-frame",
+   "params": {
+    "footprint_x": 127.76,
+    "footprint_y": 85.48,
+    "height": 8.0,
+    "wall": 4.0,
+    "rows": 2,
+    "cols": 3,
+    "rib": 3.0,
+    "floor": 1.2,
+    "mesh_hole": 2.0,
+    "mesh_pitch": 3.0
+   },
+   "derived_from": [
+    "obs-printed-grid-mesh",
+    "obs-perforated-sheet"
+   ],
+   "ot": null,
+   "material": "PETG",
+   "license": "MIT"
+  },
+  {
+   "id": "print-honeycomb",
+   "name": "Honeycomb insert for SBS frame",
+   "family": "honeycomb",
+   "params": {
+    "footprint_x": 117.16,
+    "footprint_y": 74.88,
+    "height": 6.0,
+    "cell": 14.0,
+    "wall": 1.6
+   },
+   "derived_from": [
+    "obs-printed-honeycomb"
+   ],
+   "ot": null,
+   "material": "PLA",
+   "license": "MIT"
+  }
+ ],
+ "print_meta": {
+  "print-rack-96": {
+   "grams": 50.6,
+   "usd": 1.11,
+   "bbox": [
+    127.76,
+    85.48,
+    20.0
+   ],
+   "watertight": true
+  },
+  "print-cryo-24": {
+   "grams": 56.0,
+   "usd": 1.23,
+   "bbox": [
+    127.76,
+    85.48,
+    30.0
+   ],
+   "watertight": true
+  },
+  "print-conical-15": {
+   "grams": 62.8,
+   "usd": 1.38,
+   "bbox": [
+    127.76,
+    85.48,
+    40.0
+   ],
+   "watertight": true
+  },
+  "print-conical-50": {
+   "grams": 61.2,
+   "usd": 1.35,
+   "bbox": [
+    127.76,
+    85.48,
+    40.0
+   ],
+   "watertight": true
+  },
+  "print-cryo-100": {
+   "grams": 42.9,
+   "usd": 1.93,
+   "bbox": [
+    133.0,
+    133.0,
+    12.0
+   ],
+   "watertight": true
+  },
+  "print-frame-sbs": {
+   "grams": 24.6,
+   "usd": 0.54,
+   "bbox": [
+    127.76,
+    85.48,
+    12.0
+   ],
+   "watertight": true
+  },
+  "print-grid-mesh": {
+   "grams": 24.3,
+   "usd": 0.54,
+   "bbox": [
+    127.76,
+    85.48,
+    8.0
+   ],
+   "watertight": true
+  },
+  "print-honeycomb": {
+   "grams": 13.9,
+   "usd": 0.28,
+   "bbox": [
+    117.16,
+    74.88,
+    6.0
+   ],
+   "watertight": true
+  }
+ },
+ "lab_root": "d469e0e9b7f9395156a240f03ea1a4cf4249210ac2d4d7d0e6b91a458ea3aa6d"
+}

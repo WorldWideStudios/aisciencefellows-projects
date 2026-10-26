@@ -1,0 +1,865 @@
+{
+ "graph": {
+  "nodes": {
+   "module:bugsorter_trommel": "6da1c4c4d5df894bad566723b4e0cf9b47ea2938147ec005e6980d93f3c0571f",
+   "part:trommel_zone_2mm": "cf07b0fd8a8a32ceed7ba8c1ecd2f949decebb54f184bc40d7ce0babfc2b3d5e",
+   "part:trommel_zone_4mm": "bd67b2b875b79de37d12249457c99d84882991cd69ad9cd3b94030bf81e90e02",
+   "part:trommel_zone_7mm": "01fc906fa7e4a661d2922499e407b02d6371ec7e36547790bbfe914890d4b6b6",
+   "part:trommel_cap_inlet": "406b2927eb902b52cc3139696fcf89059be1d1bd0408bb5192d5bf8d00dfe80e",
+   "part:trommel_cap_outlet": "fef87f7f0cc0d822815cdb27b5899773f223eec0b21087c9ebb4598af9ff812a",
+   "part:trommel_stand_inlet": "8ed1ad9ffc2a8b98c18b7a5bca34718a094c5da46e417f8246634ab98567592a",
+   "part:trommel_stand_outlet": "238768d4c6e607568d55f9d4002c9797dfc3c0f3c3eeff1a1d915e9577f4e933",
+   "part:trommel_crank_hand": "427d857804dc8d455404298e6879d2824375d8a12853c5ccf391bdba6aa12f1d",
+   "part:trommel_crank_arm": "73a534bdfc183ae8f157022608c0794eb35a2702cb16c9d16d8b1bd54d6ae08e",
+   "part:trommel_bin": "3e9ad073d8315628bb5bedb54bf287929d340444e76d0af5b6ab1f30ff358665",
+   "part:trommel_bin_oversize": "0511940ac1cd44b56cc6cb45dbbf9fa6502259f8ed91173fcac78b46bc05ac01",
+   "upstream:BioKEA/BugSorter": "c198159ee363dfbf3a82c256653a1cef440e0e920db186b9cfacad7d66136047",
+   "upstream:zlite/entosieve": "c2bd92f825fb0dadd9035f3903dfec606a79146797344703f87e2a65606db03b",
+   "module:variable_aperture": "eeabdac6e4df7597701bffaf759dd2afc121e47dfbabcb5f8ae9b1c22bccd4cb",
+   "module:vortex_sieve_kit": "ae6d2261ba5ffc475facb4c5416b1cc9cec843d229dd105f07ef72926998edf8",
+   "part:vortex_puck_76": "eb9c9fbe49af0304317cf3ee6d391816acec2e8099e77bb34527e53d7c2502b2",
+   "part:vortex_mini_sieve_1.5mm": "bb102c6a9f6579f16cf31b465bb6c53aced3edcdd90dd4089782e98a5ef79a13",
+   "part:vortex_mini_sieve_3mm": "4a2cb3feeb31b0aead2a9323f47052baf34bbd74b96c180aaa71547be98f595f",
+   "part:vortex_mini_sieve_5mm": "9d6c24c7fd57e77bf2bf0f8aa8e1f8bc270c1f257a4f6d93d32b33a80fd063fd",
+   "part:vortex_mini_pan": "c77e6554b771895552d88d659728cae46cd20f77f137985910a4e8f66ce1a4fe",
+   "part:vortex_mini_lid": "af7dde03d618084770cdba8d9f7e55836de9ca7f5df465e3fc4c51ff649a829a",
+   "upstream:zlite/disperser": "85220c4c65b02218e9d74bad37ab29a2ccb083b3c50882efa9156a3e82cf5cef",
+   "module:centrifuge_strainer": "2b6548cd93336f696bc620e113a55b8d394f8b992f3a59abedbf60ceca229a51",
+   "part:centrifuge_tube_strainer_1.5mm": "f89a64d4aaf01140826e8a8b8f38defabcbc68e724e2de157cb831aabc71b754",
+   "part:centrifuge_tube_strainer_3mm": "c7c2ebee5975522d49dc03a710c90ff98a3bada2dd16e6660b1d153068b814ec",
+   "module:flex_sieve_adapter": "7a41349fca8f7c6c35cbe1cd8d84e1ee287f55b79177bfe3175de3fc7deb2989",
+   "part:ot_sieve_adapter": "e106a865349ddb0efed2fc908e7b80f116c6d8958ed7233c3be75f14cff371df",
+   "module:flex_mini_trommel": "b2613ff57ca50e38dcbb83845a7706c09e05751c1667eaf541c116ccd362abb5",
+   "part:ot_mini_trommel_base": "646029a31a25b3576adca0c58dc919c69f93382d287d10db45fcef57baf9ccf7",
+   "part:ot_mini_trommel_drum": "e7df82352cbb5451c96c7ef0a6b44e29547297de2b6ca396e406f113c895cfc2",
+   "module:vision_gate": "15a879dbe054ae4faa49df2ab001e5423763e204d5a9952558c0baadbe4137fe",
+   "upstream:BioKEA/BugPicker": "c71413564e2462a33f62c54962ea0fe3aa6efa7276d29e792e120e5acb45eac6",
+   "upstream:zlite/B601": "91eec38bd36ffb3bf3ccb3ced5abb3165403ea7f9a3ac5f50893356426d953b4",
+   "module:handoff_carrier": "17d38b73481f07d07693fea7e5025d99ddbec8fa0fc40cdfdc423da81d30a01a",
+   "part:ot_handoff_plate": "643cce3b18dbbf11b343047bf115e7c72fbf09a369d95415025ae1caab143b47",
+   "upstream:BioKEA/BugPicker-arm-demo": "0a0811d5a705457a547e06f63330bd3ba0c7c236780ff644fcbdb7374097d67e",
+   "module:bugpicker_suction": "3f3890a3d606e9c5085c5feb3d26bf5ce438472993669e6cdad5e5ebf89e17d5",
+   "module:flex_pipette_lysis": "e19b2856c027e3ea0f6338a603d80f50d8fbd5d68736ae28560646bda31215cb",
+   "upstream:zlite/liquid-handler-marlin": "cc599069b8ff22bfd2d4dd1df06a1d7355a546c9cb4f614a6ccfa8ccd9e8af39",
+   "module:bench_enzyme_dispenser": "59da46efcd7d4bf3908e368d3032bc9b72ce847a4904217a5add0b2419cc8766",
+   "upstream:zlite/liquid-handler": "98a2ed53c91cc9989d035676f2cee422386e0fe69b2de47271221c748ea9fff5",
+   "module:flex_heater_shaker_incubate": "bfaaf595a3a0af8978b35f8d03cdcc1a3ee80eed849ae00462b22ffb7540b729",
+   "module:turnstile_incubator": "c24cc4decf0c0a6e3f00ae0c2dfb0d0fc4ebf491097a8e1cddde25eef52112a5",
+   "module:edna_filter": "a20d567120322a43495757752e2c4abd538a1a72331c0e37864b154f51fa50b8",
+   "module:barcode_sequencing": "d2f6a7c6b5465554dbe9321f0ed26f936c1f9989713f0a434097d14148d59030",
+   "arm:seeed_b601_dm": "4f6607557cde471be579b35d9bbfcb5d294fa035cbb0de86f8860621d68388ec",
+   "arm:so101": "342099b154e8f30a2ec939cbf3c57b8314bc30fae33533f7b3e66316d0fb6af4",
+   "arm:bugpicker_gantry": "366d98cb7393b929e6aef0adab6d8b17008d77e37369b1c4541f0ceed3c7ff07",
+   "arm:opentrons_flex_gripper": "7b2ae2ae049c7f1fd59a7af26474f0676985a2cd6fbe36361eab5e33e6459cb8",
+   "arm:human": "f9f86d81a566c4f86062dda0cc77b4d88b16d80f7b8305d6db5bd86518bf706f",
+   "stage:bench:sort": "c628a82feafc7afb7ae659bc82e238f241a31df506160ad93cb68e4df53a2639",
+   "stage:bench:disperse": "8c4228086cc9228c590cb84d2e691e80adef4dc74c4015ccab7a2af209bc0745",
+   "stage:bench:image": "fdadf4f1f26c43ebfc2b82611d482bec9f38e83b26e58a7a68a24d33e95e01ab",
+   "stage:bench:pick": "67ba2f29b2ad638c5d4069faab30d589f7110151d1b535d62a53e87b32d6d09f",
+   "stage:bench:lyse": "b244db96a48fae2c861f595eba60f072d3ec8e1b3cbecdf7e2bf6f1e8f5db42f",
+   "stage:bench:incubate": "bf6965b4a4fc4a37f6c4de82f1f658b76438f67edd3f5c8460e609d9e05f6bfc",
+   "stage:bench:sequence": "6289b4f8a0c5bb5d8372b437eb4f583c7ccfd1a328468fdf04dcdb2c857191ab",
+   "stage:flex:sort": "eb153d001ac7663332a8bfddcfd72d7ee0601ac6b96cf9b0b58c759c78766232",
+   "stage:flex:disperse": "00babaf3a81471e2bf51738d98d7cced6f6465f037449dd3e2478f2ed1943068",
+   "stage:flex:image": "49e23e362219208b61138b8f3c4bdd43296d6c408e13e07a1c478a2155551d8c",
+   "stage:flex:pick": "6b8b2755455e17b043f7c2bd9454091270e8f7fbe00bf364a26826ac661ee9f1",
+   "stage:flex:lyse": "8907131a190309478d3f89374ce5d3fe7ea7b5fc3935f3fa4d8b20656bb6ca48",
+   "stage:flex:incubate": "ed0944bb414614854c6fa5fcdb743499efe307713f5cf09e5e24423d8c26e31b",
+   "stage:flex:sequence": "a8210341fb8e46fa8ded6f09ce6cacc4493698c51843b500c1834599f8565460"
+  },
+  "edges": [
+   [
+    "realized_by",
+    "module:bugsorter_trommel",
+    "part:trommel_zone_2mm"
+   ],
+   [
+    "realized_by",
+    "module:bugsorter_trommel",
+    "part:trommel_zone_4mm"
+   ],
+   [
+    "realized_by",
+    "module:bugsorter_trommel",
+    "part:trommel_zone_7mm"
+   ],
+   [
+    "realized_by",
+    "module:bugsorter_trommel",
+    "part:trommel_cap_inlet"
+   ],
+   [
+    "realized_by",
+    "module:bugsorter_trommel",
+    "part:trommel_cap_outlet"
+   ],
+   [
+    "realized_by",
+    "module:bugsorter_trommel",
+    "part:trommel_stand_inlet"
+   ],
+   [
+    "realized_by",
+    "module:bugsorter_trommel",
+    "part:trommel_stand_outlet"
+   ],
+   [
+    "realized_by",
+    "module:bugsorter_trommel",
+    "part:trommel_crank_hand"
+   ],
+   [
+    "realized_by",
+    "module:bugsorter_trommel",
+    "part:trommel_crank_arm"
+   ],
+   [
+    "realized_by",
+    "module:bugsorter_trommel",
+    "part:trommel_bin"
+   ],
+   [
+    "realized_by",
+    "module:bugsorter_trommel",
+    "part:trommel_bin_oversize"
+   ],
+   [
+    "derives_from",
+    "module:bugsorter_trommel",
+    "upstream:BioKEA/BugSorter"
+   ],
+   [
+    "derives_from",
+    "module:bugsorter_trommel",
+    "upstream:zlite/entosieve"
+   ],
+   [
+    "covers",
+    "module:bugsorter_trommel",
+    "stage:bench:sort"
+   ],
+   [
+    "derives_from",
+    "module:variable_aperture",
+    "upstream:BioKEA/BugSorter"
+   ],
+   [
+    "covers",
+    "module:variable_aperture",
+    "stage:bench:sort"
+   ],
+   [
+    "realized_by",
+    "module:vortex_sieve_kit",
+    "part:vortex_puck_76"
+   ],
+   [
+    "realized_by",
+    "module:vortex_sieve_kit",
+    "part:vortex_mini_sieve_1.5mm"
+   ],
+   [
+    "realized_by",
+    "module:vortex_sieve_kit",
+    "part:vortex_mini_sieve_3mm"
+   ],
+   [
+    "realized_by",
+    "module:vortex_sieve_kit",
+    "part:vortex_mini_sieve_5mm"
+   ],
+   [
+    "realized_by",
+    "module:vortex_sieve_kit",
+    "part:vortex_mini_pan"
+   ],
+   [
+    "realized_by",
+    "module:vortex_sieve_kit",
+    "part:vortex_mini_lid"
+   ],
+   [
+    "derives_from",
+    "module:vortex_sieve_kit",
+    "upstream:zlite/disperser"
+   ],
+   [
+    "covers",
+    "module:vortex_sieve_kit",
+    "stage:bench:sort"
+   ],
+   [
+    "covers",
+    "module:vortex_sieve_kit",
+    "stage:bench:disperse"
+   ],
+   [
+    "realized_by",
+    "module:centrifuge_strainer",
+    "part:centrifuge_tube_strainer_1.5mm"
+   ],
+   [
+    "realized_by",
+    "module:centrifuge_strainer",
+    "part:centrifuge_tube_strainer_3mm"
+   ],
+   [
+    "covers",
+    "module:centrifuge_strainer",
+    "stage:bench:sort"
+   ],
+   [
+    "realized_by",
+    "module:flex_sieve_adapter",
+    "part:ot_sieve_adapter"
+   ],
+   [
+    "derives_from",
+    "module:flex_sieve_adapter",
+    "upstream:zlite/disperser"
+   ],
+   [
+    "covers",
+    "module:flex_sieve_adapter",
+    "stage:flex:sort"
+   ],
+   [
+    "covers",
+    "module:flex_sieve_adapter",
+    "stage:flex:disperse"
+   ],
+   [
+    "realized_by",
+    "module:flex_mini_trommel",
+    "part:ot_mini_trommel_base"
+   ],
+   [
+    "realized_by",
+    "module:flex_mini_trommel",
+    "part:ot_mini_trommel_drum"
+   ],
+   [
+    "derives_from",
+    "module:flex_mini_trommel",
+    "upstream:BioKEA/BugSorter"
+   ],
+   [
+    "covers",
+    "module:flex_mini_trommel",
+    "stage:flex:sort"
+   ],
+   [
+    "derives_from",
+    "module:vision_gate",
+    "upstream:BioKEA/BugPicker"
+   ],
+   [
+    "derives_from",
+    "module:vision_gate",
+    "upstream:zlite/B601"
+   ],
+   [
+    "covers",
+    "module:vision_gate",
+    "stage:bench:image"
+   ],
+   [
+    "covers",
+    "module:vision_gate",
+    "stage:flex:image"
+   ],
+   [
+    "realized_by",
+    "module:handoff_carrier",
+    "part:ot_handoff_plate"
+   ],
+   [
+    "derives_from",
+    "module:handoff_carrier",
+    "upstream:BioKEA/BugPicker"
+   ],
+   [
+    "derives_from",
+    "module:handoff_carrier",
+    "upstream:BioKEA/BugPicker-arm-demo"
+   ],
+   [
+    "covers",
+    "module:handoff_carrier",
+    "stage:bench:pick"
+   ],
+   [
+    "covers",
+    "module:handoff_carrier",
+    "stage:flex:pick"
+   ],
+   [
+    "derives_from",
+    "module:bugpicker_suction",
+    "upstream:BioKEA/BugPicker"
+   ],
+   [
+    "covers",
+    "module:bugpicker_suction",
+    "stage:bench:pick"
+   ],
+   [
+    "derives_from",
+    "module:flex_pipette_lysis",
+    "upstream:zlite/liquid-handler-marlin"
+   ],
+   [
+    "covers",
+    "module:flex_pipette_lysis",
+    "stage:flex:lyse"
+   ],
+   [
+    "derives_from",
+    "module:bench_enzyme_dispenser",
+    "upstream:zlite/liquid-handler-marlin"
+   ],
+   [
+    "derives_from",
+    "module:bench_enzyme_dispenser",
+    "upstream:zlite/liquid-handler"
+   ],
+   [
+    "covers",
+    "module:bench_enzyme_dispenser",
+    "stage:bench:lyse"
+   ],
+   [
+    "covers",
+    "module:flex_heater_shaker_incubate",
+    "stage:flex:incubate"
+   ],
+   [
+    "covers",
+    "module:turnstile_incubator",
+    "stage:bench:incubate"
+   ],
+   [
+    "covers",
+    "module:edna_filter",
+    "stage:bench:sequence"
+   ],
+   [
+    "covers",
+    "module:edna_filter",
+    "stage:flex:sequence"
+   ],
+   [
+    "covers",
+    "module:barcode_sequencing",
+    "stage:bench:sequence"
+   ],
+   [
+    "covers",
+    "module:barcode_sequencing",
+    "stage:flex:sequence"
+   ],
+   [
+    "can_handle",
+    "arm:seeed_b601_dm",
+    "module:bugsorter_trommel"
+   ],
+   [
+    "can_handle",
+    "arm:seeed_b601_dm",
+    "module:variable_aperture"
+   ],
+   [
+    "can_handle",
+    "arm:seeed_b601_dm",
+    "module:vortex_sieve_kit"
+   ],
+   [
+    "can_handle",
+    "arm:seeed_b601_dm",
+    "module:centrifuge_strainer"
+   ],
+   [
+    "can_handle",
+    "arm:seeed_b601_dm",
+    "module:handoff_carrier"
+   ],
+   [
+    "can_handle",
+    "arm:seeed_b601_dm",
+    "module:bench_enzyme_dispenser"
+   ],
+   [
+    "can_handle",
+    "arm:seeed_b601_dm",
+    "module:turnstile_incubator"
+   ],
+   [
+    "can_handle",
+    "arm:so101",
+    "module:bugsorter_trommel"
+   ],
+   [
+    "can_handle",
+    "arm:so101",
+    "module:variable_aperture"
+   ],
+   [
+    "can_handle",
+    "arm:so101",
+    "module:vortex_sieve_kit"
+   ],
+   [
+    "can_handle",
+    "arm:so101",
+    "module:centrifuge_strainer"
+   ],
+   [
+    "can_handle",
+    "arm:so101",
+    "module:handoff_carrier"
+   ],
+   [
+    "can_handle",
+    "arm:so101",
+    "module:bench_enzyme_dispenser"
+   ],
+   [
+    "can_handle",
+    "arm:so101",
+    "module:turnstile_incubator"
+   ],
+   [
+    "can_handle",
+    "arm:bugpicker_gantry",
+    "module:handoff_carrier"
+   ],
+   [
+    "can_handle",
+    "arm:bugpicker_gantry",
+    "module:bugpicker_suction"
+   ],
+   [
+    "can_handle",
+    "arm:opentrons_flex_gripper",
+    "module:flex_sieve_adapter"
+   ],
+   [
+    "can_handle",
+    "arm:opentrons_flex_gripper",
+    "module:flex_mini_trommel"
+   ],
+   [
+    "can_handle",
+    "arm:opentrons_flex_gripper",
+    "module:handoff_carrier"
+   ],
+   [
+    "can_handle",
+    "arm:opentrons_flex_gripper",
+    "module:flex_pipette_lysis"
+   ],
+   [
+    "can_handle",
+    "arm:opentrons_flex_gripper",
+    "module:flex_heater_shaker_incubate"
+   ],
+   [
+    "can_handle",
+    "arm:human",
+    "module:bugsorter_trommel"
+   ],
+   [
+    "can_handle",
+    "arm:human",
+    "module:variable_aperture"
+   ],
+   [
+    "can_handle",
+    "arm:human",
+    "module:vortex_sieve_kit"
+   ],
+   [
+    "can_handle",
+    "arm:human",
+    "module:centrifuge_strainer"
+   ],
+   [
+    "can_handle",
+    "arm:human",
+    "module:flex_sieve_adapter"
+   ],
+   [
+    "can_handle",
+    "arm:human",
+    "module:flex_mini_trommel"
+   ],
+   [
+    "can_handle",
+    "arm:human",
+    "module:handoff_carrier"
+   ],
+   [
+    "can_handle",
+    "arm:human",
+    "module:bugpicker_suction"
+   ],
+   [
+    "can_handle",
+    "arm:human",
+    "module:flex_pipette_lysis"
+   ],
+   [
+    "can_handle",
+    "arm:human",
+    "module:bench_enzyme_dispenser"
+   ],
+   [
+    "can_handle",
+    "arm:human",
+    "module:flex_heater_shaker_incubate"
+   ],
+   [
+    "can_handle",
+    "arm:human",
+    "module:turnstile_incubator"
+   ]
+  ],
+  "root": "0db1aea43b35b4761f3400519773e6d432335319691d6cb0702644d10d492961",
+  "leave_out": null
+ },
+ "lomo": {
+  "root": "0db1aea43b35b4761f3400519773e6d432335319691d6cb0702644d10d492961",
+  "modules": {
+   "bugsorter_trommel": {
+    "stages_lost": [],
+    "route_breaks": {},
+    "root_without": "4cb4409ee01be405139074f91b55e9b1414cc90d4d9a8090b1cfb6915c4a6d8f",
+    "status": "CONCEPT"
+   },
+   "variable_aperture": {
+    "stages_lost": [],
+    "route_breaks": {},
+    "root_without": "d7089fbe1d16680871bd212f2ce10eb75695f00e6adb0736b9fc619609a22f8c",
+    "status": "SIMULATED"
+   },
+   "vortex_sieve_kit": {
+    "stages_lost": [
+     "bench:disperse"
+    ],
+    "route_breaks": {},
+    "root_without": "34dd986b66846233e65bfb1323a494e2aa3629d4936654a866a42fba5b6352f9",
+    "status": "CONCEPT"
+   },
+   "centrifuge_strainer": {
+    "stages_lost": [],
+    "route_breaks": {},
+    "root_without": "000521fea8cb98f797ebfe6b7f5be33efe09b77f7e1223252cbf2c1dfc0b8cbf",
+    "status": "CONCEPT"
+   },
+   "flex_sieve_adapter": {
+    "stages_lost": [
+     "flex:disperse"
+    ],
+    "route_breaks": {},
+    "root_without": "d89bd6ecf3bb65e1144648356d252ac7dfcc7fd1108004b4ea59d016ecc5fca9",
+    "status": "SIMULATED"
+   },
+   "flex_mini_trommel": {
+    "stages_lost": [],
+    "route_breaks": {},
+    "root_without": "2b2624ac6dd588cc0c4514d74d984b897c48bbec9dc7396766e21bf51c5d41c6",
+    "status": "SIMULATED"
+   },
+   "vision_gate": {
+    "stages_lost": [
+     "bench:image",
+     "flex:image"
+    ],
+    "route_breaks": {
+     "routine": [
+      "image"
+     ],
+     "vip": [
+      "image"
+     ],
+     "novel": [
+      "image"
+     ]
+    },
+    "root_without": "63751b4b03ad78cb3b7fd9a3e93979d6df4506854bc8a0ba9050c474354af665",
+    "status": "SIMULATED"
+   },
+   "handoff_carrier": {
+    "stages_lost": [
+     "flex:pick"
+    ],
+    "route_breaks": {
+     "routine": [
+      "platform switch without hand-off carrier"
+     ]
+    },
+    "root_without": "1baad22b801d60fd481ca996fb08ca70394c85fc96e1d915467286ad957b65fb",
+    "status": "SIMULATED"
+   },
+   "bugpicker_suction": {
+    "stages_lost": [],
+    "route_breaks": {},
+    "root_without": "405acacb5cf91482f89cda43ab24a326b98fbfd558faee3b7db35bafe9849e0b",
+    "status": "CONCEPT"
+   },
+   "flex_pipette_lysis": {
+    "stages_lost": [
+     "flex:lyse"
+    ],
+    "route_breaks": {},
+    "root_without": "24a10a0d86fd476262c8f1d66bc6800d6fcb6d787537ffc6087add46d545c25d",
+    "status": "SIMULATED"
+   },
+   "bench_enzyme_dispenser": {
+    "stages_lost": [
+     "bench:lyse"
+    ],
+    "route_breaks": {},
+    "root_without": "bd8b9927aafbe0f2b8ea083e69748d56d4a3a551300030273b448ba45043fd10",
+    "status": "CONCEPT"
+   },
+   "flex_heater_shaker_incubate": {
+    "stages_lost": [
+     "flex:incubate"
+    ],
+    "route_breaks": {},
+    "root_without": "23624f857b07161457b5664d94860e82d4dcc7884ca00ba549eba76c777c57b9",
+    "status": "SIMULATED"
+   },
+   "turnstile_incubator": {
+    "stages_lost": [
+     "bench:incubate"
+    ],
+    "route_breaks": {},
+    "root_without": "a52206f2635f26aa0bc3ae0688c2cd20d6435d65af0dcb82c6f8617713670a0c",
+    "status": "CONCEPT"
+   },
+   "edna_filter": {
+    "stages_lost": [],
+    "route_breaks": {},
+    "root_without": "1842e1ca134f49037e894b904e15796d12dde6f12d8cef1b444819e8f06c09b9",
+    "status": "CONCEPT"
+   },
+   "barcode_sequencing": {
+    "stages_lost": [],
+    "route_breaks": {},
+    "root_without": "c0f3fd1a999850b949910d7c564c1448dd144092264b53dff1d2fe5f5740b0c4",
+    "status": "CONCEPT"
+   }
+  }
+ },
+ "routes": {
+  "routine": {
+   "class": "routine",
+   "steps": [
+    {
+     "stage": "sort",
+     "platform": "flex",
+     "modules": [
+      "flex_mini_trommel",
+      "flex_sieve_adapter"
+     ]
+    },
+    {
+     "stage": "disperse",
+     "platform": "flex",
+     "modules": [
+      "flex_sieve_adapter"
+     ]
+    },
+    {
+     "stage": "image",
+     "platform": "flex",
+     "modules": [
+      "vision_gate"
+     ]
+    },
+    {
+     "stage": "pick",
+     "platform": "flex",
+     "modules": [
+      "handoff_carrier"
+     ]
+    },
+    {
+     "stage": "lyse",
+     "platform": "flex",
+     "modules": [
+      "flex_pipette_lysis"
+     ]
+    },
+    {
+     "stage": "incubate",
+     "platform": "flex",
+     "modules": [
+      "flex_heater_shaker_incubate"
+     ]
+    },
+    {
+     "stage": "sequence",
+     "platform": "flex",
+     "modules": [
+      "barcode_sequencing",
+      "edna_filter"
+     ]
+    }
+   ],
+   "platform_switches": 0,
+   "breaks": [],
+   "requires_expert": false,
+   "keep_intact": false
+  },
+  "vip": {
+   "class": "vip",
+   "steps": [
+    {
+     "stage": "sort",
+     "platform": "bench",
+     "modules": [
+      "bugsorter_trommel",
+      "centrifuge_strainer",
+      "variable_aperture",
+      "vortex_sieve_kit"
+     ]
+    },
+    {
+     "stage": "disperse",
+     "platform": "bench",
+     "modules": [
+      "vortex_sieve_kit"
+     ]
+    },
+    {
+     "stage": "image",
+     "platform": "bench",
+     "modules": [
+      "vision_gate"
+     ]
+    },
+    {
+     "stage": "pick",
+     "platform": "bench",
+     "modules": [
+      "bugpicker_suction",
+      "handoff_carrier"
+     ]
+    },
+    {
+     "stage": "lyse",
+     "platform": "bench",
+     "modules": [
+      "bench_enzyme_dispenser"
+     ]
+    },
+    {
+     "stage": "incubate",
+     "platform": "bench",
+     "modules": [
+      "turnstile_incubator"
+     ]
+    },
+    {
+     "stage": "sequence",
+     "platform": "bench",
+     "modules": [
+      "barcode_sequencing",
+      "edna_filter"
+     ]
+    }
+   ],
+   "platform_switches": 0,
+   "breaks": [],
+   "requires_expert": true,
+   "keep_intact": true
+  },
+  "novel": {
+   "class": "novel",
+   "steps": [
+    {
+     "stage": "sort",
+     "platform": "bench",
+     "modules": [
+      "bugsorter_trommel",
+      "centrifuge_strainer",
+      "variable_aperture",
+      "vortex_sieve_kit"
+     ]
+    },
+    {
+     "stage": "disperse",
+     "platform": "bench",
+     "modules": [
+      "vortex_sieve_kit"
+     ]
+    },
+    {
+     "stage": "image",
+     "platform": "bench",
+     "modules": [
+      "vision_gate"
+     ]
+    },
+    {
+     "stage": "pick",
+     "platform": "bench",
+     "modules": [
+      "bugpicker_suction",
+      "handoff_carrier"
+     ]
+    },
+    {
+     "stage": "lyse",
+     "platform": "bench",
+     "modules": [
+      "bench_enzyme_dispenser"
+     ]
+    },
+    {
+     "stage": "incubate",
+     "platform": "bench",
+     "modules": [
+      "turnstile_incubator"
+     ]
+    },
+    {
+     "stage": "sequence",
+     "platform": "bench",
+     "modules": [
+      "barcode_sequencing",
+      "edna_filter"
+     ]
+    }
+   ],
+   "platform_switches": 0,
+   "breaks": [],
+   "requires_expert": true,
+   "keep_intact": true
+  }
+ },
+ "materials": {
+  "PLA": "fit checks and dry demos only (creeps when warm, absorbs water)",
+  "PETG": "wet bench use, better chemical resistance than PLA",
+  "PA12 powder (Fuse 1+)": "wet use, fine holes >= 1.0 mm, durable; seal if porosity matters",
+  "tough resin (post-cured)": "fine detail; full post-cure + solvent/lysis-buffer check before contact",
+  "316L stainless insert": "wet-contact filter plates (laser cut / perforated / woven), see inserts.py"
+ },
+ "byo_arm_template": {
+  "interfaces": [
+   "parallel_jaw"
+  ],
+  "jaw_mm": [
+   0,
+   0
+  ],
+  "reach_mm": 0,
+  "platform": [
+   "bench"
+  ],
+  "note": "copy, fill in measured values, add with add_arm(name, spec)"
+ }
+}

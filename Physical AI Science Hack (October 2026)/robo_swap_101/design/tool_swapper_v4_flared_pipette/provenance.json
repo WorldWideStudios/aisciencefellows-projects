@@ -1,0 +1,11 @@
+{
+  "inputs/v2_female.step": {
+    "sha256": "127a52cccdf35146e8a4f31008c0b68252e57112502fa1474f2cc9569827b382"
+  },
+  "inputs/v2_male.step": {
+    "sha256": "e1edd79659165869930a655d2d4ba7d764b6009806ac052b4844c3d2f4b29084"
+  },
+  "inputs/pipette_collar_31mm_fitted.stl": {
+    "sha256": "575a8e448cad8190950c39a49da96cbb6366e1a2074a42827ac89008a52ec8f3"
+  }
+}

@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+data/
+build/
+dist/
+*.exe
+*.spec
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+runs/
+.env*

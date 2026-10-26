@@ -1,0 +1,58 @@
+{
+ "teacher": {
+  "n": 2617,
+  "median_rel_dev": 0.0164,
+  "p90_rel_dev": 0.1927,
+  "by_order": {
+   "Coleoptera": 0.018,
+   "Diptera": 0.0148,
+   "Hemiptera": 0.0218,
+   "Hymenoptera": 0.0171,
+   "Lepidoptera": 0.0109,
+   "Odonata": 0.106,
+   "Orthoptera": 0.0301
+  }
+ },
+ "student": {
+  "n": 2552,
+  "median_rel_dev": 0.0218,
+  "p90_rel_dev": 0.2105,
+  "by_order": {
+   "Coleoptera": 0.0257,
+   "Diptera": 0.0212,
+   "Hemiptera": 0.0246,
+   "Hymenoptera": 0.0218,
+   "Lepidoptera": 0.0128,
+   "Odonata": 0.0967,
+   "Orthoptera": 0.0417
+  }
+ },
+ "fastsam": {
+  "n": 2582,
+  "median_rel_dev": 0.0227,
+  "p90_rel_dev": 0.2274,
+  "by_order": {
+   "Coleoptera": 0.025,
+   "Diptera": 0.0198,
+   "Hemiptera": 0.0241,
+   "Hymenoptera": 0.0246,
+   "Lepidoptera": 0.0159,
+   "Odonata": 0.1156,
+   "Orthoptera": 0.0388
+  }
+ },
+ "skimage": {
+  "n": 2617,
+  "median_rel_dev": 0.3131,
+  "p90_rel_dev": 1.0,
+  "by_order": {
+   "Coleoptera": 0.2002,
+   "Diptera": 0.2936,
+   "Hemiptera": 0.3607,
+   "Hymenoptera": 0.3592,
+   "Lepidoptera": 0.3037,
+   "Odonata": 0.9951,
+   "Orthoptera": 1.0
+  }
+ }
+}

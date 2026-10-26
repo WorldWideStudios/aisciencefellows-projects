@@ -1,0 +1,39 @@
+{
+  "schema": "baebugs.aok.upstream.rights.v1",
+  "status": "READ_ONLY_SOURCE_AUDIT",
+  "source_repo_git": "3a1806000ec4ca38e25f2749712d54b82ef612af",
+  "sources": {
+    "bugpicker": {
+      "url": "https://github.com/BioKEA/BugPicker",
+      "commit": "1ef0b97e63998ef492adc2c122b7d2296be01ad2",
+      "license_file": "LICENSE",
+      "license_sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "declared_license": "GPL-3.0",
+      "status": "UPSTREAM_LICENSE_FILE"
+    },
+    "armdemo": {
+      "url": "https://github.com/BioKEA/BugPicker-arm-demo",
+      "commit": "bfd3be6ac8b5092f63824ccc656a3abb008a4f4a",
+      "license_file": "LICENSE",
+      "license_sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "declared_license": "GPL-3.0",
+      "status": "UPSTREAM_LICENSE_FILE"
+    },
+    "bugsorter": {
+      "url": "https://github.com/BioKEA/BugSorter",
+      "commit": "a2e3e1c7b151d5ea6db40dc1974f0c4159d7d634",
+      "license_file": null,
+      "license_sha256": null,
+      "declared_license": "UNKNOWN",
+      "status": "LICENSE_NOT_FOUND"
+    },
+    "entosieve": {
+      "url": "https://github.com/zlite/entosieve",
+      "commit": "a2e3e1c7b151d5ea6db40dc1974f0c4159d7d634",
+      "license_file": null,
+      "license_sha256": null,
+      "declared_license": "UNKNOWN",
+      "status": "LICENSE_NOT_FOUND"
+    }
+  }
+}

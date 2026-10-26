@@ -1,0 +1,40 @@
+# Capture/filter material inventory, from nets down to pores.
+# aperture_mm: nominal opening (verify with `calibrate_sieve`).
+# abrasion 0-1: edge roughness/stiffness against soft tissue (cut wire, printed
+#   layer lines and burrs are high; smooth monofilament nylon is low).
+# open_area: fraction open (drives flow/clog behaviour).
+# in_kit: true = on the Track A bench today; false = procurable suggestion.
+# Nominal values are typical catalogue figures - replace with your own measurements.
+materials:
+  - {id: PERF-5,      family: perforated_metal, aperture_mm: 5.0,   abrasion: 0.6, open_area: 0.40, rigid: true,  in_kit: true}
+  - {id: GRID-4,      family: printed_grid,     aperture_mm: 4.0,   abrasion: 0.7, open_area: 0.55, rigid: true,  in_kit: true}
+  - {id: HEX-2,       family: hex_wire,         aperture_mm: 2.2,   abrasion: 0.8, open_area: 0.70, rigid: false, in_kit: true}
+  - {id: SCREEN-1,    family: woven_screen,     aperture_mm: 1.2,   abrasion: 0.4, open_area: 0.60, rigid: false, in_kit: true}
+  - {id: TRAY,        family: solid_tray,       aperture_mm: 0.0,   abrasion: 0.0, open_area: 0.00, rigid: true,  in_kit: true}
+  - {id: NET-MOSQ,    family: insect_net,       aperture_mm: 1.0,   abrasion: 0.15, open_area: 0.55, rigid: false, in_kit: false}
+  - {id: NET-TULLE,   family: insect_net,       aperture_mm: 0.8,   abrasion: 0.15, open_area: 0.50, rigid: false, in_kit: false}
+  - {id: NYLON-500,   family: nylon_monofil,    aperture_mm: 0.50,  abrasion: 0.10, open_area: 0.45, rigid: false, in_kit: false}
+  - {id: NYLON-250,   family: nylon_monofil,    aperture_mm: 0.25,  abrasion: 0.10, open_area: 0.40, rigid: false, in_kit: false}
+  - {id: NYLON-100,   family: nylon_monofil,    aperture_mm: 0.10,  abrasion: 0.10, open_area: 0.35, rigid: false, in_kit: false}
+  - {id: NYLON-63,    family: nylon_monofil,    aperture_mm: 0.063, abrasion: 0.10, open_area: 0.30, rigid: false, in_kit: false}
+  - {id: SS-WOVEN-2,  family: stainless_woven,  aperture_mm: 2.0,   abrasion: 0.5, open_area: 0.55, rigid: true,  in_kit: false}
+  - {id: SS-WOVEN-07, family: stainless_woven,  aperture_mm: 0.71,  abrasion: 0.45, open_area: 0.50, rigid: true,  in_kit: false}
+  - {id: PERF-3,      family: perforated_metal, aperture_mm: 3.0,   abrasion: 0.55, open_area: 0.35, rigid: true,  in_kit: false}
+  - {id: PRINT-SMOOTH-3, family: printed_grid,  aperture_mm: 3.0,   abrasion: 0.35, open_area: 0.50, rigid: true,  in_kit: false,
+     note: "print with rounded/chamfered bars, sanded; rebuild of GRID for soft bodies"}
+
+# Specimen fragility by part (0 = robust, 1 = very fragile) and preservation state.
+# Placeholders to tune from runs; the preservation model multiplies these by
+# material abrasion, flow and agitation.
+specimen_profiles:
+  hard_bodied:    {examples: [beetles, weevils],          parts: {body: 0.1, legs: 0.3, antennae: 0.4}}
+  scaled_wings:   {examples: [moths, butterflies],        parts: {body: 0.3, wings: 0.95, legs: 0.6, antennae: 0.6}}
+  membrane_wings: {examples: [flies, wasps, bees],        parts: {body: 0.3, wings: 0.7, legs: 0.5, antennae: 0.5}}
+  long_appendage: {examples: [mosquitoes, crane flies],   parts: {body: 0.4, wings: 0.7, legs: 0.95, antennae: 0.7}}
+  soft_bodied:    {examples: [aphids, larvae, thrips],    parts: {body: 0.85, legs: 0.6}}
+preservation:
+  ethanol_70:       {brittleness: 0.4, note: "standard; tissue stays flexible while wet"}
+  ethanol_95:       {brittleness: 0.6, note: "DNA-friendly but stiffens appendages"}
+  propylene_glycol: {brittleness: 0.3, note: "softer specimens, viscous - lower flow"}
+  dry:              {brittleness: 0.9, note: "very brittle; avoid water sieving or rehydrate first"}
+  frozen_thawed:    {brittleness: 0.5, note: "soft tissue damage risk"}

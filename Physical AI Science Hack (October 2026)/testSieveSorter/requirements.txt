@@ -1,0 +1,4 @@
+mujoco==3.17.0
+numpy
+trimesh
+cadquery

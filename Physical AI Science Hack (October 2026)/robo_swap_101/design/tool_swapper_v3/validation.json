@@ -1,0 +1,86 @@
+{
+  "M3_shank_gauge_max_interference_mm3": 0.0,
+  "6mm_head_access_max_interference_mm3": 0.0,
+  "20mm_horn_gauge_interference_mm3": 0.0,
+  "insertion_max_interference_mm3": 0.0,
+  "twist_max_interference_mm3": 0.0,
+  "shaft_bore_interference_female_mm3": 0.0,
+  "shaft_bore_interference_male_max_mm3": 0.0,
+  "locked_axial_withdrawal_1mm_interference_mm3": 2.636701996583536,
+  "wrong_entry_45deg_interference_mm3": 26.39011446825238,
+  "male": {
+    "watertight": true,
+    "winding_consistent": true,
+    "solid_count": 1,
+    "bounds_mm": [
+      [
+        -18.0,
+        -18.0,
+        0.0
+      ],
+      [
+        18.0,
+        18.0,
+        14.0
+      ]
+    ],
+    "volume_mm3": 5412.257861164372
+  },
+  "female": {
+    "watertight": true,
+    "winding_consistent": true,
+    "solid_count": 1,
+    "bounds_mm": [
+      [
+        -17.0,
+        -19.649999618530273,
+        -27.149999618530273
+      ],
+      [
+        17.0,
+        19.649999618530273,
+        25.649999618530273
+      ]
+    ],
+    "volume_mm3": 15900.566222485106
+  },
+  "parameters": {
+    "hole_centers_xy_mm": [
+      [
+        -4.949747468305833,
+        -4.949747468305833
+      ],
+      [
+        -4.949747468305833,
+        4.949747468305833
+      ],
+      [
+        4.949747468305833,
+        -4.949747468305833
+      ],
+      [
+        4.949747468305833,
+        4.949747468305833
+      ]
+    ],
+    "bolt_circle_mm": 14,
+    "through_hole_diameter_mm": 3.2,
+    "head_access_diameter_mm": 6.2,
+    "horn_recess_diameter_mm": 20.4,
+    "horn_recess_depth_mm": 1,
+    "bearing_web_mm": 3,
+    "male_stem_removed_mm": 8,
+    "male_height_mm": 14,
+    "shaft_bore_mm": 31,
+    "turn_degrees": 45,
+    "track_z_bounds_mm": [
+      19.45,
+      23.85
+    ],
+    "retaining_lip_mm": 1.8,
+    "track_outer_radius_mm": 13.4,
+    "bore_cutter_diameter_mm": 31.002,
+    "core_radial_clearance_mm": 0.25,
+    "assembly_transform": "male rotate X 180 degrees, rotate Z 0..45 degrees, translate [0,0,29.65]"
+  }
+}

@@ -1,0 +1,2 @@
+lerobot[feetech,hardware]==0.6.1
+pygrabber

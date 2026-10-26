@@ -1,0 +1,50 @@
+[
+ {
+  "name": "breaker_o8_b1p6_d2p5_h12_p10_round",
+  "info": {
+   "spec": "breaker:open=8,bar=1.6,pin_d=2.5,pin_h=12,pitch=10,tip=round",
+   "grid_step_mm": 9.6,
+   "openings": [
+    12,
+    8
+   ],
+   "open_area_mm2": 6144,
+   "open_pct_of_box_bottom": 61.4,
+   "pins": 77,
+   "pin_every_nodes": 1,
+   "pin_pitch_mm": 9.6,
+   "pin_top_in_box_mm": 17.4,
+   "outside_mm": [
+    131.4,
+    95.4,
+    2.4
+   ],
+   "printability_flags": []
+  },
+  "checks_ok": true
+ },
+ {
+  "name": "breaker_o11p4_b2p3_d1p4_h6p8_p8_round",
+  "info": {
+   "spec": "breaker:open=11.4,bar=2.3,pin_d=1.4,pin_h=6.8,pitch=8,tip=round",
+   "grid_step_mm": 13.7,
+   "openings": [
+    8,
+    5
+   ],
+   "open_area_mm2": 5198,
+   "open_pct_of_box_bottom": 52.0,
+   "pins": 28,
+   "pin_every_nodes": 1,
+   "pin_pitch_mm": 13.7,
+   "pin_top_in_box_mm": 12.2,
+   "outside_mm": [
+    131.4,
+    95.4,
+    2.4
+   ],
+   "printability_flags": []
+  },
+  "checks_ok": true
+ }
+]

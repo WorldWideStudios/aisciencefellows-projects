@@ -1,0 +1,172 @@
+{
+  "arm_distinction": {
+    "Partabot": "described in Baebugs; controller package UNKNOWN",
+    "SO101": "optional LeRobot docs; exact workcell hardware UNKNOWN",
+    "xArm7": "different GPL BugPicker plate-shuttle code"
+  },
+  "partabot_controller_package": "NOT_FOUND_IN_SOURCE_CHECKOUT",
+  "purpose": "trace provenance of upstream software and robot controls",
+  "schema": "biokea.source-readonly-intake.v1",
+  "software_control": "NOT_CONNECTED",
+  "source_repositories": [
+    {
+      "files": [
+        {
+          "bytes": 959,
+          "path": "README.md",
+          "sha256": "f264631d4a06e4ef1ff8c9001c26cbbf6c83dc374857aefea9d554337777e394",
+          "status": "EXACT_BYTES_READ"
+        },
+        {
+          "bytes": 22995,
+          "path": "src/main.cpp",
+          "sha256": "bb14c045a29a96f5b7bfc1a99fafa6b299d293b69be22530cdc2fb3a0cd6b2d2",
+          "status": "EXACT_BYTES_READ"
+        },
+        {
+          "bytes": 561,
+          "path": "platformio.ini",
+          "sha256": "d121727b4a7f30078330b83ecad7567ad7ef9e5f3d9266c4f16b56e1e2a6f5c4",
+          "status": "EXACT_BYTES_READ"
+        }
+      ],
+      "head": "a2e3e1c7b151d5ea6db40dc1974f0c4159d7d634",
+      "is_installed_robot_driver": false,
+      "license_status": "UNKNOWN",
+      "relation": "SOURCE_REFERENCE_NOT_VENDORED",
+      "repo": "BioKEA/BugSorter"
+    },
+    {
+      "files": [
+        {
+          "bytes": 959,
+          "path": "README.md",
+          "sha256": "f264631d4a06e4ef1ff8c9001c26cbbf6c83dc374857aefea9d554337777e394",
+          "status": "EXACT_BYTES_READ"
+        },
+        {
+          "bytes": 22995,
+          "path": "src/main.cpp",
+          "sha256": "bb14c045a29a96f5b7bfc1a99fafa6b299d293b69be22530cdc2fb3a0cd6b2d2",
+          "status": "EXACT_BYTES_READ"
+        },
+        {
+          "bytes": 561,
+          "path": "platformio.ini",
+          "sha256": "d121727b4a7f30078330b83ecad7567ad7ef9e5f3d9266c4f16b56e1e2a6f5c4",
+          "status": "EXACT_BYTES_READ"
+        }
+      ],
+      "head": "a2e3e1c7b151d5ea6db40dc1974f0c4159d7d634",
+      "is_installed_robot_driver": false,
+      "license_status": "UNKNOWN",
+      "relation": "SOURCE_REFERENCE_NOT_VENDORED",
+      "repo": "zlite/entosieve"
+    },
+    {
+      "files": [
+        {
+          "bytes": 11085,
+          "path": "README.md",
+          "sha256": "92470c60f07992ac61d89c4a219d468dfa50aefb13f229fa46135b3ecb4358f3",
+          "status": "EXACT_BYTES_READ"
+        },
+        {
+          "bytes": 35149,
+          "path": "LICENSE",
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+          "status": "EXACT_BYTES_READ"
+        },
+        {
+          "bytes": 476068,
+          "path": "01_Scan_TopCamera_Rectangle.js",
+          "sha256": "fd29fac0a04bad2cc89d9483123f305b3a6e6ffb3738ec0e30a1625cf8b8036c",
+          "status": "EXACT_BYTES_READ"
+        },
+        {
+          "bytes": 35734,
+          "path": "03_QA_Inspect_Image.py",
+          "sha256": "5e1b093ea606a4886eb725cd9122a81e29b6abded18e82061a150af53e38e96d",
+          "status": "EXACT_BYTES_READ"
+        },
+        {
+          "bytes": 2484,
+          "path": "Designs/tray.stl",
+          "sha256": "a0866e073e635557e82e0d90f2b2b51fc89a528cae85e99ab119dfc0c0d135de",
+          "status": "EXACT_BYTES_READ"
+        },
+        {
+          "bytes": 4484,
+          "path": "Designs/screentray.stl",
+          "sha256": "854ba41667db29d9be7b53ca75eedf1c4a6b49386e59288ca976468febe010b3",
+          "status": "EXACT_BYTES_READ"
+        }
+      ],
+      "head": "1ef0b97e63998ef492adc2c122b7d2296be01ad2",
+      "is_installed_robot_driver": false,
+      "license_status": "GPL-3.0",
+      "relation": "SOURCE_REFERENCE_NOT_VENDORED",
+      "repo": "BioKEA/BugPicker"
+    },
+    {
+      "files": [
+        {
+          "bytes": 4767,
+          "path": "README.md",
+          "sha256": "d426207972a369608f10329916de6d23353d7260dfe214a9bc3689d784c55c6e",
+          "status": "EXACT_BYTES_READ"
+        },
+        {
+          "bytes": 35149,
+          "path": "LICENSE",
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+          "status": "EXACT_BYTES_READ"
+        },
+        {
+          "bytes": 4680,
+          "path": "arm_common.py",
+          "sha256": "8c0761bb3c9b47c0aa9fc168e4c7249431140d8b2768b34257e98e4b511e79f5",
+          "status": "EXACT_BYTES_READ"
+        },
+        {
+          "bytes": 10499,
+          "path": "Plate_shuttle_cycle.py",
+          "sha256": "af1b9908e546e1efe8727f2e7f4cb04c818db54325516aca30f81acf7d16b7f9",
+          "status": "EXACT_BYTES_READ"
+        }
+      ],
+      "head": "bfd3be6ac8b5092f63824ccc656a3abb008a4f4a",
+      "is_installed_robot_driver": false,
+      "license_status": "GPL-3.0",
+      "relation": "SOURCE_REFERENCE_NOT_VENDORED",
+      "repo": "BioKEA/BugPicker-arm-demo"
+    },
+    {
+      "files": [
+        {
+          "bytes": 29977,
+          "path": "LICENSE",
+          "sha256": "9e108af26a7ae92a6d2cb0273856a4a0a84da8819c2cffee8b2657cc4f905718",
+          "status": "EXACT_BYTES_READ"
+        },
+        {
+          "bytes": 25856,
+          "path": "pyproject.toml",
+          "sha256": "2185a08de3ba797857ca9669d235bfa62e3953ba5c31d57988e39713d6904e14",
+          "status": "EXACT_BYTES_READ"
+        },
+        {
+          "bytes": 14724,
+          "path": "docs/source/so101.mdx",
+          "sha256": "fc57e0ca334b3e7d9fa44266ff84a53f17df57440f71089b7018c9bb2a7af1fb",
+          "status": "EXACT_BYTES_READ"
+        }
+      ],
+      "head": "d3793b7e36522321c1c455f0dc4826db3793dceb",
+      "is_installed_robot_driver": false,
+      "license_status": "SEE_LICENSE",
+      "relation": "SOURCE_REFERENCE_NOT_VENDORED",
+      "repo": "huggingface/lerobot"
+    }
+  ]
+}

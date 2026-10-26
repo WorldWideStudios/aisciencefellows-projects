@@ -1,0 +1,73 @@
+{
+ "params": {
+  "drum_od": 76.0,
+  "zone_len": 119.6,
+  "hole_band": 85.0,
+  "axis_h": 62.5
+ },
+ "trays_mm": {
+  "tray": [
+   103.0,
+   140.0,
+   12.5
+  ],
+  "screentray": [
+   113.6,
+   149.7,
+   10.0
+  ]
+ },
+ "fuse1_build": {
+  "extent_mm": [
+   160.0,
+   160.0,
+   125.6
+  ],
+  "fits": true
+ },
+ "x1c_plate": {
+  "extent_mm": [
+   206.0,
+   156.0,
+   99.4
+  ],
+  "fits": true
+ },
+ "rod_mm": 471,
+ "files": [
+  {
+   "file": "fuse1_zones/trommel_zone_2mm.stl",
+   "sha256": "37f2e8ff9c8c6cb96a76fb1b226cf5ca09a5b92d67ebb446f13d2ce6192128a8"
+  },
+  {
+   "file": "fuse1_zones/trommel_zone_4mm.stl",
+   "sha256": "6717bc04768870ae9d6b10b54e20f94987d22c661086b1e12c3d131c1de92761"
+  },
+  {
+   "file": "fuse1_zones/trommel_zone_7mm.stl",
+   "sha256": "6f8e72ee2085d18d38ce3928b603e6d178b66adfd47e6fb70317baf95666a738"
+  },
+  {
+   "file": "x1c_rest/trommel_cap_inlet.stl",
+   "sha256": "5aabdafd3583e97377f78f6a56b83634e51b50222c810ad40250b8f34b0d3f9f"
+  },
+  {
+   "file": "x1c_rest/trommel_cap_outlet.stl",
+   "sha256": "a009d946c8f13c66b2cd3b2e86547e97d2af0f81a3aac00749771162e06a67bd"
+  },
+  {
+   "file": "x1c_rest/trommel_crank_hand.stl",
+   "sha256": "ea5f0e9963d6a2a61651ccbf2301340979cab69026ba0ee14044d327a384c144"
+  },
+  {
+   "file": "x1c_rest/trommel_stand_inlet.stl",
+   "sha256": "4b1c46ae316f2791f6f0a5be3149e51457699fb475f8150b2329f2fad11b38f8"
+  },
+  {
+   "file": "x1c_rest/trommel_stand_outlet.stl",
+   "sha256": "4ac2533a8db3bcb1159c2eee14dbf3fd7c8902099a0c913c01eb8785f02378b0"
+  }
+ ],
+ "merkle_root": "d230b0c03130e9086a26ba68005e2ed722966e4dc28c95b122381cf804daea84",
+ "why": "FDM attempt 1 (blue, photo fdm_trommel_attempt1): caps/crank/feet printed, perforated zones failed"
+}

@@ -1,0 +1,17 @@
+{
+ "id": "biobitworks/baebugs-daisy-bb-002",
+ "title": "baebugs DAISY-BB-002",
+ "code_file": "daisy_bb_002.ipynb",
+ "language": "python",
+ "kernel_type": "notebook",
+ "is_private": true,
+ "enable_gpu": true,
+ "enable_internet": true,
+ "dataset_sources": [
+  "biobitworks/baebugs-daisy-eval",
+  "biobitworks/baebugs-daisy-holdout",
+  "biobitworks/baebugs-daisy-train"
+ ],
+ "competition_sources": [],
+ "kernel_sources": []
+}

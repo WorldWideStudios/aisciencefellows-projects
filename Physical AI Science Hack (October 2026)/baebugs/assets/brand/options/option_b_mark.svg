@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="BaeBugs mark B"><path d="M53 30C48 19 42 14 33 14M67 30C72 19 78 14 87 14" stroke="#2A1F2D" stroke-width="4" fill="none" stroke-linecap="round"/><circle cx="32" cy="14" r="4.5" fill="#2A1F2D"/><circle cx="88" cy="14" r="4.5" fill="#2A1F2D"/><path d="M26 58L12 50M94 58L108 50" stroke="#2A1F2D" stroke-width="4.5" stroke-linecap="round"/><path d="M20 76L6 78M100 76L114 78" stroke="#2A1F2D" stroke-width="4.5" stroke-linecap="round"/><path d="M26 96L13 106M94 96L107 106" stroke="#2A1F2D" stroke-width="4.5" stroke-linecap="round"/>
+    <circle cx="60" cy="72" r="40" fill="#E8455B"/>
+    <path d="M60 46V110" stroke="#2A1F2D" stroke-width="3.5" stroke-linecap="round"/>
+    <path transform="translate(30 56) scale(0.17)" d="M50 86C22 68 4 52 4 32C4 17 15 6 29 6C38 6 45 11 50 19C55 11 62 6 71 6C85 6 96 17 96 32C96 52 78 68 50 86Z" fill="#2A1F2D"/><path transform="translate(73 56) scale(0.17)" d="M50 86C22 68 4 52 4 32C4 17 15 6 29 6C38 6 45 11 50 19C55 11 62 6 71 6C85 6 96 17 96 32C96 52 78 68 50 86Z" fill="#2A1F2D"/><path transform="translate(36 82) scale(0.14)" d="M50 86C22 68 4 52 4 32C4 17 15 6 29 6C38 6 45 11 50 19C55 11 62 6 71 6C85 6 96 17 96 32C96 52 78 68 50 86Z" fill="#2A1F2D"/><path transform="translate(70 82) scale(0.14)" d="M50 86C22 68 4 52 4 32C4 17 15 6 29 6C38 6 45 11 50 19C55 11 62 6 71 6C85 6 96 17 96 32C96 52 78 68 50 86Z" fill="#2A1F2D"/>
+    <circle cx="60" cy="36" r="16" fill="#2A1F2D"/>
+  <circle cx="53.28" cy="34.08" r="4.8" fill="#FFFFFF"/><circle cx="66.72" cy="34.08" r="4.8" fill="#FFFFFF"/>
+  <circle cx="54.08" cy="35.04" r="2.4" fill="#2A1F2D"/><circle cx="67.52" cy="35.04" r="2.4" fill="#2A1F2D"/>
+  <circle cx="54.88" cy="32.8" r="0.864" fill="#FFFFFF"/><circle cx="68.32" cy="32.8" r="0.864" fill="#FFFFFF"/>
+  <circle cx="49.12" cy="41.76" r="2.4" fill="#FF9AAB" opacity=".75"/><circle cx="70.88" cy="41.76" r="2.4" fill="#FF9AAB" opacity=".75"/>
+  <path d="M55.84 41.76Q60 45.92 64.16 41.76" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round"/></svg>

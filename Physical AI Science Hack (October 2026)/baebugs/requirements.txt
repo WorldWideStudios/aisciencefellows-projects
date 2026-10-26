@@ -1,0 +1,20 @@
+# core
+numpy
+opencv-contrib-python-headless>=4.8
+pyyaml
+pandas
+# geometry: toy insects, filter plates, passage + tower twins
+trimesh>=4
+manifold3d
+shapely>=2
+mapbox-earcut
+networkx  # trimesh scene graph (trommel_plate)
+pillow
+# agents: MCP server (baebugs.graph_mcp); FastMCP was renamed in mcp 2.x
+mcp>=1.2,<2
+# tests / notebooks
+pytest
+nbformat
+nbclient
+ipykernel
+# vision (optional, heavy): pip install -e ".[yolo]"

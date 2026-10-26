@@ -1,0 +1,46 @@
+# Wood tray tower + Partabot arm on a linear rail (BioKEA Track A bench, Oct 24 2026).
+# Build (photos): a central post with cantilevered plywood RAIL ARMS on two faces; each tray slides
+# in/out along a rail pair; the two faces' levels are staggered (half a pitch). The robot arm works
+# the tower from the linear rail. Values marked MEASURE are read off photos / guessed until measured.
+# Coordinates: x along the linear rail (mm), z height above the bench (mm).
+tower:
+  x_mm: 500.0                    # MEASURE: rail position of the post's centre line
+  post_mm: [38, 89]              # MEASURE: 2x4-style post section
+  levels_per_face: 4             # MEASURE: rail-arm levels on each face (photos show ~4)
+  level_pitch_mm: 100.0          # MEASURE
+  first_level_z_mm: 90.0         # MEASURE: lowest rail arm
+  stagger_mm: 50.0               # MEASURE: filter face levels offset from storage face
+  storage_face:                  # parked trays
+    side: A
+  filter_face:                   # active stack: water/sample in at the top, catch tray on the lowest level
+    side: B
+    active_tiers: 2              # "a couple active sieves"
+    catch_level: 0
+    pour_z_mm: 470.0             # MEASURE
+bench_rack:                      # overflow trays on the bench, reachable from the rail
+  x_mm: 850.0                    # MEASURE
+  slots: 6
+tray:
+  footprint_mm: [120.0, 90.0]    # MEASURE: printed 2x3 frame
+  handle: side_tab_with_hole     # the arm's fork engages the side handle
+  insert_depth_mm: 100.0         # MEASURE: slide distance along the rail arms
+arm:
+  model: Partabot servo arm on linear rail
+  reach_mm: 300.0                # MEASURE
+  min_z_mm: 20.0                 # MEASURE
+  max_z_mm: 500.0                # MEASURE
+  rail_length_mm: 1000.0         # MEASURE
+  rail_speed_mm_s: 80.0          # MEASURE
+  slide_speed_mm_s: 40.0         # MEASURE: pull/push a tray along the rail arms
+  joint_move_s: 1.5              # MEASURE: typical servo repositioning
+  face_turn_s: 2.5               # MEASURE: swing between tower faces
+camera_station:
+  x_mm: 150.0                    # MEASURE: USB camera (AmScope) imaging spot
+  z_mm: 80.0
+water:
+  rinse_l_per_tier: 0.25
+  pour_s: 20.0
+passage:
+  # likelihood a dead, rigid specimen reaches each orientation while shaken/flushed (assumption)
+  orientation_weight: {flat: 1.0, side: 0.6, end_on: 0.3}
+  height_over_width: 0.8         # body height / width when only the top view is known

@@ -1,0 +1,26 @@
+[project]
+name = "baebugs"
+version = "0.1.0"
+description = "USB-camera insect sizing (YOLO + classical consensus) -> sieve stack and water-flow plan for robot arms"
+requires-python = ">=3.10"
+dependencies = ["opencv-contrib-python-headless>=4.8", "numpy", "pyyaml", "pandas"]
+
+[project.optional-dependencies]
+yolo = ["ultralytics>=8.3", "clip @ git+https://github.com/ultralytics/CLIP.git"]
+claude = ["anthropic"]
+mcp = ["mcp>=1.2,<2"]  # graph_mcp uses FastMCP, renamed in mcp 2.x
+notebook = ["jupyter", "matplotlib"]
+dev = ["pytest", "nbclient", "nbformat", "ipykernel"]
+
+[project.scripts]
+baebugs = "baebugs.cli:main"
+baebugs-train = "baebugs.train:main"
+baebugs-pull = "baebugs.pull_data:main"
+baebugs-pipeline = "baebugs.run_pipeline:main"
+baebugs-graph = "baebugs.mvp:main"
+
+[tool.setuptools.packages.find]
+include = ["baebugs*"]
+
+[tool.setuptools.package-data]
+baebugs = ["config/*.yaml"]

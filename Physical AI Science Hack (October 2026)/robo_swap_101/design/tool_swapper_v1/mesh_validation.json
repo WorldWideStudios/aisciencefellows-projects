@@ -1,0 +1,22 @@
+{
+  "male": {
+    "watertight": true,
+    "winding_consistent": true,
+    "triangles": 11036
+  },
+  "female": {
+    "watertight": true,
+    "winding_consistent": true,
+    "triangles": 8288
+  },
+  "latch_yoke": {
+    "watertight": true,
+    "winding_consistent": true,
+    "triangles": 1936
+  },
+  "rack_concept": {
+    "watertight": true,
+    "winding_consistent": true,
+    "triangles": 2660
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "valid_solid": true,
+  "single_solid": true,
+  "watertight_mesh": true,
+  "bbox_mm": [
+    162.0,
+    52.01,
+    75.0
+  ],
+  "fits_bed": true,
+  "volume_cm3": 169.25,
+  "preview_only": true,
+  "levels_top_first": [
+    "gate_t3p5",
+    "gate_t1p6"
+  ],
+  "stacking": "holder boxes rim on rim, containers not flipped, catch pan under",
+  "winner": 3,
+  "printability_flags": []
+}

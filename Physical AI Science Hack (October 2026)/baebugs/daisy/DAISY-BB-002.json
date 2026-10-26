@@ -1,0 +1,190 @@
+{
+ "baebugs_commit": "bc461846613012960581e0775605e5976966d5e4",
+ "bundles": {
+  "baebugs-daisy-eval": [
+   "teacher_check",
+   "teacher_check2",
+   "toy_renders"
+  ],
+  "baebugs-daisy-holdout": [
+   "r3_ca",
+   "holdout_az",
+   "holdout_nv",
+   "holdout_or"
+  ],
+  "baebugs-daisy-train": [
+   "pseudo_specimens_r3_real",
+   "multires_mp_0.3",
+   "multires_mp_1",
+   "multires_mp_3",
+   "synth_1_30_r2",
+   "synth_1_30_r3_real",
+   "synth_seg"
+  ]
+ },
+ "datasets_root": "8f9e8b33f9ad54c3d6c051437dcd2c84ea1a7eb70d726d2631aa05cc170f45e8",
+ "gates": {
+  "G0": "protocol sha256 == embedded",
+  "G1": "custody: every file + member Merkle root == frozen",
+  "G2": "init weights sha256 == pinned",
+  "G3a": "environment recorded; pin mismatches flagged",
+  "G3b": "AMP used only if AMP and fp32 smoke losses are finite and agree within variance",
+  "G3c": "every epoch: all losses finite (first failure = break point, stops that run)",
+  "smoke_fraction": 0.05
+ },
+ "global_leakage": {
+  "note": "includes r3 (not used by any 002 run) vs holdouts",
+  "overlap_examples": [
+   "1317334061: train in ['multires_mp_0.3', 'multires_mp_1', 'multires_mp_3', 'pseudo_specimens_r3_real'], val in ['holdout_or']",
+   "1317671674: train in ['multires_mp_0.3', 'multires_mp_1', 'multires_mp_3', 'pseudo_specimens_r3_real'], val in ['holdout_or']",
+   "1319192920: train in ['multires_mp_0.3', 'multires_mp_1', 'multires_mp_3', 'pseudo_specimens_r3_real'], val in ['holdout_or']",
+   "1321915532: train in ['multires_mp_0.3', 'multires_mp_1', 'multires_mp_3', 'pseudo_specimens_r3_real'], val in ['holdout_or']",
+   "1932506537: train in ['multires_mp_0.3', 'multires_mp_1', 'multires_mp_3', 'pseudo_specimens_r3_real'], val in ['holdout_or']",
+   "1932510302: train in ['multires_mp_0.3', 'multires_mp_1', 'multires_mp_3', 'pseudo_specimens_r3_real'], val in ['holdout_or']",
+   "1932764354: train in ['multires_mp_0.3', 'multires_mp_1', 'multires_mp_3', 'pseudo_specimens_r3_real'], val in ['holdout_or']",
+   "1977822792: train in ['multires_mp_0.3', 'multires_mp_1', 'multires_mp_3', 'pseudo_specimens_r3_real'], val in ['holdout_or']"
+  ],
+  "train_ids": 2162,
+  "train_val_overlap": 134,
+  "val_ids": 534
+ },
+ "id": "DAISY-BB-002",
+ "predecessor": {
+  "protocol": "DAISY-BB-001b",
+  "sha256": "118a435405defef1d31780f943a128b0caec9e460c60ec73f671d93d187f85cf"
+ },
+ "preregistration": {
+  "amendment_1": {
+   "path": "daisy/DAISY-BB-002-prereg-amendment-1.md",
+   "sha256": "48e1b49442108d44268dae65b7097656b5619b86a520f0b12cc93dcc4f75794f"
+  },
+  "path": "daisy/DAISY-BB-002-prereg.md",
+  "sha256": "4f858b053f42d856daad79e110aef80b1d9e77b216aa1b17f5e558e348fbf5fc"
+ },
+ "roots": {
+  "holdout_az": "fada9c4fe98886fb0f49dc60af7d2b9131554c5159f2f2a5deed551f2b9b8b69",
+  "holdout_nv": "31fc7243534fdeb0ca2c158631d219a0b6fc23966ed34ebca8fab359c063150f",
+  "holdout_or": "5834dd0c4b075c5d5498bb476c11b6ed3b64efb4025e6c0e12a3d5ca2375af91",
+  "multires_mp_0.3": "3a6e4252bf7a05d3096632b560919969d5c79a78add7e7ecf3efe844c46a5086",
+  "multires_mp_1": "fb675accb1407c1486a170456095ea60da27ccf3f56a2f740885903a6cd241b0",
+  "multires_mp_3": "5315e394a516180618884f3f0513bc5f5129584c0068c17285b68fce751cbacb",
+  "pseudo_specimens_r3_real": "bd664a429df494323232b73aaa0312d0e4567e2064e457cb29e50236e9c2fd29",
+  "r3_ca": "d7e2716853d723df165e1d461b3dd10f6dcd46685ef4d2eb4cf7cc62fadad9ff",
+  "synth_1_30_r2": "fe8cf5e95f3e7dc91ecdeb8b7f69841f8640205b1abff1884add362db2b6af51",
+  "synth_1_30_r3_real": "7962a34d52350dabc33b6ffe816429ac4d69d139a0b445d5dba0ff172c605e3f",
+  "synth_seg": "a6f8baef46c478cbfdd89b3a5e086eed53b3388bef484b15ff814565599c3676",
+  "teacher_check": "aa3cf75a6c128faa389631ecd6238906a2f4c7888e809ca2b3dae785400198d3",
+  "teacher_check2": "5fc4d500bc9230714334d74c44d26be53cd340ef28bdd7e4a651862b995304ec",
+  "toy_renders": "9630bed9295ce2ade54c9e25bfa8c0d0df6b4b8dfc0f6c8d3a9fd51925187d8f"
+ },
+ "run_leakage": {
+  "CA_only": {
+   "overlap": 0,
+   "train_files": 3151,
+   "val_files": 772
+  },
+  "Synth_only": {
+   "overlap": 0,
+   "train_files": 1500,
+   "val_files": 772
+  }
+ },
+ "runs": [
+  {
+   "name": "CA_only",
+   "train": [
+    "synth_1_30_r2",
+    "synth_1_30_r3_real",
+    "synth_seg",
+    "r3_ca"
+   ],
+   "val": [
+    "synth_1_30_r2",
+    "synth_1_30_r3_real",
+    "synth_seg",
+    "r3_ca",
+    "holdout_az",
+    "holdout_nv",
+    "holdout_or"
+   ]
+  },
+  {
+   "name": "Synth_only",
+   "train": [
+    "synth_1_30_r2",
+    "synth_1_30_r3_real",
+    "synth_seg"
+   ],
+   "val": [
+    "synth_1_30_r2",
+    "synth_1_30_r3_real",
+    "synth_seg",
+    "r3_ca",
+    "holdout_az",
+    "holdout_nv",
+    "holdout_or"
+   ]
+  }
+ ],
+ "settings": {
+  "batch": 16,
+  "deterministic": false,
+  "epochs": 15,
+  "imgsz": 640,
+  "init_sha256": "55ed65c56c91713d23e8402371c6c49a6fd84f257f7dce452e8d70e41dcbe152",
+  "model": "yolo11n-seg.pt",
+  "pins": {
+   "ultralytics": "8.4.188"
+  },
+  "seed": 2026,
+  "ultralytics": "8.4.188",
+  "workers": 4
+ },
+ "split_report": {
+  "az": {
+   "train": 0,
+   "val": 70
+  },
+  "ca": {
+   "train": 1651,
+   "val": 316
+  },
+  "n_unresolved": 428,
+  "nv": {
+   "train": 0,
+   "val": 6
+  },
+  "or": {
+   "train": 0,
+   "val": 80
+  },
+  "unresolved": [
+   "train/3334167314.jpg",
+   "train/3334167327.jpg",
+   "train/3334173540.jpg",
+   "train/3334173541.jpg",
+   "train/3385518962.jpg",
+   "train/3385519797.jpg",
+   "train/3704092550.jpg",
+   "train/3704094174.jpg",
+   "train/3704094211.jpg",
+   "train/3704094212.jpg",
+   "train/3704096988.jpg",
+   "train/3704096997.jpg",
+   "train/3704097009.jpg",
+   "train/3704097010.jpg",
+   "train/3704097015.jpg",
+   "train/3704098093.jpg",
+   "train/3704098099.jpg",
+   "train/3704098100.jpg",
+   "train/3704098106.jpg",
+   "train/3704098108.jpg"
+  ]
+ },
+ "status": "PROPOSED",
+ "variance": {
+  "map_reproducibility_abs": 0.03,
+  "note": "deterministic=false: run-to-run variance accepted; decisions and steps are hashed as evidence",
+  "smoke_loss_rel": 0.25
+ }
+}

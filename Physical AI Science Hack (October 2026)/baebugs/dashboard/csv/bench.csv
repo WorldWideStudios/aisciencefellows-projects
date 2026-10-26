@@ -1,0 +1,13 @@
+run,stage,set,model,recall,median_len_err,median_wid_err,p90_wid_err,n_true
+r2_synth_1_30,before,synthetic,yolo,0.931,0.0236,0.0574,0.2197,2160
+r2_synth_1_30,before,synthetic,classical,0.594,0.0625,0.0935,0.4409,2160
+r2_synth_1_30,before,synthetic,consensus,0.369,0.0296,0.0345,0.1928,2160
+r2_synth_1_30,after,synthetic,yolo,1.0,0.025,0.0481,0.1785,2160
+r2_synth_1_30,after,synthetic,classical,0.594,0.0625,0.0935,0.4409,2160
+r2_synth_1_30,after,synthetic,consensus,0.352,0.0268,0.0333,0.125,2160
+r3_real,after,synthetic,yolo,0.996,0.0247,0.057,0.2019,2155
+r3_real,after,synthetic,classical,0.581,0.0758,0.108,0.4421,2155
+r3_real,after,synthetic,consensus,0.316,0.0278,0.0356,0.1161,2155
+r3_real,after,real_silver,yolo,0.864,0.011,0.0154,0.0622,413
+r3_real,after,real_silver,classical,0.356,0.0843,0.1252,0.9791,413
+r3_real,after,real_silver,consensus,0.196,0.0192,0.0222,0.0739,413

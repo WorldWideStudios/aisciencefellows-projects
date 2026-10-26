@@ -1,0 +1,149 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BaeBugs Logo Options</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Figtree:wght@400;600&family=JetBrains+Mono:wght@400&display=swap">
+<style>
+/* Layout: a specimen sheet. Each candidate mark gets one row: light tile, dark tile, lockup, favicon sizes. */
+:root{
+  --bg:#FBF7F9; --surface:#FFFFFF; --fg:#2A1F2D; --muted:#76687A; --line:#E9DFE6;
+  --heart:#E8455B; --leaf:#3FA37A;
+  --display:"Fredoka","Baloo 2","Nunito",system-ui,sans-serif;
+  --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#17121B; --surface:#211A26; --fg:#F4ECF1; --muted:#A797AA; --line:#352B3B; --heart:#F0566B; --leaf:#55BE91; color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#17121B; --surface:#211A26; --fg:#F4ECF1; --muted:#A797AA; --line:#352B3B; --heart:#F0566B; --leaf:#55BE91; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font:16px/1.55 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 64px}
+.wrap{max-width:1080px;margin:0 auto;display:grid;gap:28px}
+header{display:grid;gap:8px}
+h1{font:600 clamp(28px,5vw,40px)/1.1 var(--display);margin:0;text-wrap:balance}
+h1 span{color:var(--heart)}
+header p{margin:0;color:var(--muted);max-width:62ch}
+.opt{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:grid;gap:16px}
+.opt-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 14px}
+.letter{font:600 15px/1 var(--display);background:var(--heart);color:#fff;border-radius:999px;width:30px;height:30px;display:grid;place-items:center;flex:none}
+.opt h2{font:600 22px/1.2 var(--display);margin:0}
+.opt-head p{margin:0;color:var(--muted);flex-basis:100%;max-width:70ch}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.tile{border-radius:10px;display:grid;place-items:center;padding:18px;min-height:180px;min-width:0}
+.tile.light{background:#FBF7F9;border:1px solid #EFE6EC}
+.tile.dark{background:#17121B;border:1px solid #2E2533}
+.tile svg{width:132px;height:132px;max-width:100%}
+.tile.lock svg{width:100%;height:auto;max-width:260px}
+.fav{display:flex;align-items:end;gap:14px;flex-wrap:wrap}
+.fav figure{margin:0;display:grid;justify-items:center;gap:6px}
+.fav figcaption,.cap{font:400 11px/1 var(--mono);color:#8B7D8F;letter-spacing:.04em}
+.fav svg{display:block}
+.tools{display:flex;flex-wrap:wrap;gap:8px}
+button{font:600 13px/1 var(--body);color:var(--fg);background:transparent;border:1px solid var(--line);border-radius:8px;padding:9px 12px;cursor:pointer}
+button:hover{border-color:var(--heart);color:var(--heart)}
+button:focus-visible{outline:2px solid var(--heart);outline-offset:2px}
+.note{font-size:14px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}
+.note b{color:var(--fg)}
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Bae<span>Bugs</span> logo options</h1>
+    <p>Four first-pass marks, all built from one shape: a ladybug whose shell is a heart. Each row shows the mark on light and dark, a wordmark lockup, and favicon sizes. Comment on the PR with a letter (or "A, but with B's spots"). The current repo logo in ../ stays the default until a pick is made.</p>
+  </header>
+  <div id="opts" class="wrap" style="gap:20px"></div>
+  <p class="note"><b>Production notes.</b> Every mark is flat vector, at most four colors, no gradients, so it works as a favicon, a sticker, and a single-colour emboss on a printed tube rack (option D is the one-extrusion version). Wordmark text uses Fredoka; I'll convert it to outlines when we pick, so the SVG renders without the font.</p>
+</div>
+
+<script>
+const H="M50 86C22 68 4 52 4 32C4 17 15 6 29 6C38 6 45 11 50 19C55 11 62 6 71 6C85 6 96 17 96 32C96 52 78 68 50 86Z";
+const LIGHT={bg:"#FBF7F9",ink:"#2A1F2D",heart:"#E8455B",spot:"#2A1F2D",head:"#2A1F2D",eye:"#FFFFFF",blush:"#FF9AAB",leaf:"#3FA37A",word:"#2A1F2D"};
+const DARK ={bg:"#17121B",ink:"#F4ECF1",heart:"#F0566B",spot:"#2A1F2D",head:"#3A2A42",eye:"#FFFFFF",blush:"#FF9AAB",leaf:"#55BE91",word:"#F4ECF1"};
+const heart=(x,y,s,fill)=>`<path transform="translate(${x} ${y}) scale(${s})" d="${H}" fill="${fill}"/>`;
+
+function legs(c,ys){return ys.map(([x1,y1,x2,y2])=>`<path d="M${x1} ${y1}L${x2} ${y2}M${120-x1} ${y1}L${120-x2} ${y2}" stroke="${c.ink}" stroke-width="4.5" stroke-linecap="round"/>`).join("")}
+function face(c,cx,cy,r){
+  const e=r*.3, dx=r*.42;
+  return `<circle cx="${cx}" cy="${cy}" r="${r}" fill="${c.head}"/>
+  <circle cx="${cx-dx}" cy="${cy-r*.12}" r="${e}" fill="${c.eye}"/><circle cx="${cx+dx}" cy="${cy-r*.12}" r="${e}" fill="${c.eye}"/>
+  <circle cx="${cx-dx+.8}" cy="${cy-r*.06}" r="${e*.5}" fill="${c.spot}"/><circle cx="${cx+dx+.8}" cy="${cy-r*.06}" r="${e*.5}" fill="${c.spot}"/>
+  <circle cx="${cx-dx+1.6}" cy="${cy-r*.2}" r="${e*.18}" fill="${c.eye}"/><circle cx="${cx+dx+1.6}" cy="${cy-r*.2}" r="${e*.18}" fill="${c.eye}"/>
+  <circle cx="${cx-r*.68}" cy="${cy+r*.36}" r="${r*.15}" fill="${c.blush}" opacity=".75"/><circle cx="${cx+r*.68}" cy="${cy+r*.36}" r="${r*.15}" fill="${c.blush}" opacity=".75"/>
+  <path d="M${cx-r*.26} ${cy+r*.36}Q${cx} ${cy+r*.62} ${cx+r*.26} ${cy+r*.36}" stroke="${c.eye}" stroke-width="2" fill="none" stroke-linecap="round"/>`;
+}
+function antennae(c,tip){
+  return `<path d="M53 30C48 19 42 14 33 14M67 30C72 19 78 14 87 14" stroke="${c.ink}" stroke-width="4" fill="none" stroke-linecap="round"/>`
+   + (tip?heart(25,8,.15,c.heart)+heart(80,8,.15,c.heart):`<circle cx="32" cy="14" r="4.5" fill="${c.ink}"/><circle cx="88" cy="14" r="4.5" fill="${c.ink}"/>`);
+}
+
+const MARKS={
+  A:{name:"Heartbug",desc:"The heart is the whole shell. Big friendly face sits in the heart's notch; antennae end in tiny hearts. Most recognisable at a glance.",
+    svg:c=>`${antennae(c,true)}${legs(c,[[20,64,8,58],[14,80,3,82],[24,96,13,104]])}
+    ${heart(10,32,1,c.heart)}
+    <path d="M60 56V110" stroke="${c.spot}" stroke-opacity=".28" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="35" cy="64" r="7.5" fill="${c.spot}"/><circle cx="85" cy="64" r="7.5" fill="${c.spot}"/>
+    <circle cx="44" cy="90" r="5.5" fill="${c.spot}"/><circle cx="76" cy="90" r="5.5" fill="${c.spot}"/>
+    ${face(c,60,42,17)}`},
+  B:{name:"Heart-spot beetle",desc:"A round ladybug seen from above, with heart-shaped spots instead of dots. Reads as 'bug' first, 'heart' on a second look.",
+    svg:c=>`${antennae(c,false)}${legs(c,[[26,58,12,50],[20,76,6,78],[26,96,13,106]])}
+    <circle cx="60" cy="72" r="40" fill="${c.heart}"/>
+    <path d="M60 46V110" stroke="${c.spot}" stroke-width="3.5" stroke-linecap="round"/>
+    ${heart(30,56,.17,c.spot)}${heart(73,56,.17,c.spot)}${heart(36,82,.14,c.spot)}${heart(70,82,.14,c.spot)}
+    ${face(c,60,36,16)}`},
+  C:{name:"Specimen badge",desc:"The Heartbug inside a petri-dish ring with the platform line around the edge. Good for stickers, slide title cards and the Hugging Face avatar.",
+    svg:c=>`<defs><path id="ring${c===DARK?'d':'l'}" d="M60 60m-47 0a47 47 0 1 1 94 0a47 47 0 1 1 -94 0"/></defs>
+    <circle cx="60" cy="60" r="57" fill="none" stroke="${c.ink}" stroke-width="3"/>
+    <circle cx="60" cy="60" r="38" fill="${c.heart}" fill-opacity=".1" stroke="${c.ink}" stroke-opacity=".35" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <text font-family="Fredoka,Nunito,sans-serif" font-weight="600" font-size="10" letter-spacing="2.2" fill="${c.ink}"><textPath href="#ring${c===DARK?'d':'l'}" startOffset="2%">OPEN SCIENCE · VIRTUAL LAB · BAEBUGS ·</textPath></text>
+    <g transform="translate(31 30) scale(.48)">${MARKS.A.svg(c)}</g>`},
+  D:{name:"Monoline",desc:"One colour, strokes only. Made for laser-etching or a single-extrusion emboss on printed labware, and for places where colour isn't available.",
+    svg:c=>`<g fill="none" stroke="${c.ink}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M53 30C48 19 42 14 33 14M67 30C72 19 78 14 87 14"/>
+    <path d="M20 64L8 58M14 80L3 82M24 96L13 104M100 64L112 58M106 80L117 82M96 96L107 104"/>
+    <path transform="translate(10 32)" d="${H}"/><path d="M60 60V108"/></g>
+    <circle cx="33" cy="14" r="4.5" fill="${c.ink}"/><circle cx="87" cy="14" r="4.5" fill="${c.ink}"/>
+    <circle cx="36" cy="66" r="6.5" fill="${c.ink}"/><circle cx="84" cy="66" r="6.5" fill="${c.ink}"/>
+    <circle cx="45" cy="90" r="4.5" fill="${c.ink}"/><circle cx="75" cy="90" r="4.5" fill="${c.ink}"/>
+    <circle cx="60" cy="42" r="15" fill="${c.bg}" stroke="${c.ink}" stroke-width="5"/>
+    <circle cx="54" cy="41" r="2.8" fill="${c.ink}"/><circle cx="66" cy="41" r="2.8" fill="${c.ink}"/>
+    <path d="M56 47Q60 50.5 64 47" stroke="${c.ink}" stroke-width="2.6" fill="none" stroke-linecap="round"/>`}
+};
+
+/* Favicons: simplified so they hold up at 16px. */
+const FAV={
+  A:c=>`${heart(1,7,.3,c.heart)}<circle cx="16" cy="10" r="6" fill="${c.head}"/><circle cx="13.8" cy="9.6" r="1.6" fill="${c.eye}"/><circle cx="18.2" cy="9.6" r="1.6" fill="${c.eye}"/><circle cx="9" cy="17" r="2.2" fill="${c.spot}"/><circle cx="23" cy="17" r="2.2" fill="${c.spot}"/>`,
+  B:c=>`<circle cx="16" cy="19" r="12" fill="${c.heart}"/>${heart(8.5,15,.06,c.spot)}${heart(17.5,15,.06,c.spot)}<path d="M16 11V31" stroke="${c.spot}" stroke-width="1.6"/><circle cx="16" cy="8.5" r="5.5" fill="${c.head}"/><circle cx="14" cy="8" r="1.4" fill="${c.eye}"/><circle cx="18" cy="8" r="1.4" fill="${c.eye}"/>`,
+  C:c=>`<circle cx="16" cy="16" r="14.5" fill="none" stroke="${c.ink}" stroke-width="2"/><g transform="translate(5.5 5) scale(.7)">${FAV.A(c)}</g>`,
+  D:c=>`<path transform="translate(2.4 9) scale(.272)" d="${H}" fill="none" stroke="${c.ink}" stroke-width="9"/><circle cx="16" cy="11" r="5" fill="${c.bg}" stroke="${c.ink}" stroke-width="2.4"/><circle cx="14.3" cy="10.8" r="1" fill="${c.ink}"/><circle cx="17.7" cy="10.8" r="1" fill="${c.ink}"/>`
+};
+
+const svgMark=(k,c)=>`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="BaeBugs mark ${k}">${MARKS[k].svg(c)}</svg>`;
+const svgFav=(k,c,px)=>`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="${px}" height="${px}" style="width:${px}px;height:${px}px" aria-label="favicon ${k} at ${px}px">${FAV[k](c)}</svg>`;
+const svgLock=(k,c)=>`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 120" role="img" aria-label="BaeBugs wordmark ${k}">
+  <g>${MARKS[k].svg(c)}</g>
+  <text x="128" y="78" font-family="Fredoka,Nunito,sans-serif" font-weight="600" font-size="52" letter-spacing="-.5"><tspan fill="${c.word}">Bae</tspan><tspan fill="${k==='D'?c.word:c.heart}">Bugs</tspan></text>
+  <text x="131" y="100" font-family="Figtree,sans-serif" font-weight="600" font-size="10.5" letter-spacing="1.6" fill="${c.word}" fill-opacity=".6">OPEN-SCIENCE VIRTUAL LAB</text></svg>`;
+
+const root=document.getElementById("opts");
+for(const k of Object.keys(MARKS)){
+  const m=MARKS[k], el=document.createElement("section"); el.className="opt";
+  el.innerHTML=`<div class="opt-head"><span class="letter">${k}</span><h2>${m.name}</h2><p>${m.desc}</p></div>
+  <div class="row">
+    <div class="tile light">${svgMark(k,LIGHT)}</div>
+    <div class="tile dark">${svgMark(k,DARK)}</div>
+    <div class="tile light lock">${svgLock(k,LIGHT)}</div>
+    <div class="tile dark lock">${svgLock(k,DARK)}</div>
+  </div>
+  <div class="row">
+    <div class="tile light" style="min-height:0"><div class="fav">${[16,32,48].map(p=>`<figure>${svgFav(k,LIGHT,p)}<figcaption>${p}px</figcaption></figure>`).join("")}</div></div>
+    <div class="tile dark" style="min-height:0"><div class="fav">${[16,32,48].map(p=>`<figure>${svgFav(k,DARK,p)}<figcaption>${p}px</figcaption></figure>`).join("")}</div></div>
+  </div>
+  <div class="tools">
+    <button type="button" id="cp-${k}-mark">Copy mark SVG</button>
+    <button type="button" id="cp-${k}-lock">Copy wordmark SVG</button>
+    <button type="button" id="cp-${k}-fav">Copy favicon SVG</button>
+  </div>`;
+  root.appendChild(el);
+  const bind=(id,txt)=>{const b=document.getElementById(id), label=b.textContent;
+    b.addEventListener("click",()=>{navigator.clipboard.writeText(txt).then(()=>{b.textContent="Copied";setTimeout(()=>b.textContent=label,1400)}).catch(()=>{b.textContent="Copy blocked";setTimeout(()=>b.textContent=label,1400)})})};
+  bind(`cp-${k}-mark`,svgMark(k,LIGHT)); bind(`cp-${k}-lock`,svgLock(k,LIGHT)); bind(`cp-${k}-fav`,svgFav(k,LIGHT,32));
+}
+</script>

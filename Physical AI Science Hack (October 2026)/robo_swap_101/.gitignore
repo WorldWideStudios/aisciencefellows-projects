@@ -1,0 +1,25 @@
+# Local Python environments and caches
+.venv/
+.cad-venv/
+.diagnostics/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# macOS metadata
+.DS_Store
+
+# Local credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# VIAFLO locally built transport and packet transcripts
+tools/viaflo/bluetooth
+tools/viaflo/logs/
+
+# Local SO-101 sequence library (use browser Export for portable copies)
+data/sequences.json
+data/.sequences-*.json

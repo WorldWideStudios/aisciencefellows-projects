@@ -1,0 +1,15 @@
+{
+ "id": "biobitworks/baebugs-daisy-bb-004",
+ "title": "baebugs DAISY-BB-004",
+ "code_file": "daisy_bb_004.ipynb",
+ "language": "python",
+ "kernel_type": "notebook",
+ "is_private": true,
+ "enable_gpu": true,
+ "enable_internet": true,
+ "dataset_sources": [
+  "biobitworks/baebugs-daisy-taxon"
+ ],
+ "competition_sources": [],
+ "kernel_sources": []
+}

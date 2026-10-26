@@ -1,0 +1,10 @@
+{
+  "schema": "biokea.evidence-snapshot.v1",
+  "status": "PASS",
+  "faults": [],
+  "cad_mmr_count": 25,
+  "cad_mmr_root": "7064145a911c8a43aa16ad5382c5d45c12949e200256ee6708c95e2a181a8623",
+  "remote": false,
+  "checked": true,
+  "monitor_mode": "SNAPSHOT_NOT_LOCAL_LIVE"
+}

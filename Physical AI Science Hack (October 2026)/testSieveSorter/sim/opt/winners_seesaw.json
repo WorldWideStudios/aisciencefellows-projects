@@ -1,0 +1,504 @@
+{
+ "study": "seesaw",
+ "title": "Demo set on the rig's seesaw: each tray rocks about its middle (the ends tip), neighbours alternate, +/-5-15 deg (rocking.py)",
+ "exploratory": false,
+ "generated": "2026-10-25 13:44",
+ "rule": "ranked by the worst robust score over every check run on the design (full runs; stiff-contact rerun; printer undersize 0.05 / 0.25 mm; stroke reversal 0.005 / 0.02 s for the firmware stroke); stress_tested says whether the stress checks were run. A flagged design that `verify` reran with stiffer contacts (dt 0.125 ms, timeconst 0.25 ms) with no failed or flagged run counts as clean. Otherwise: top 3 by robust full-run score (mean - 1 sd over 3 friction sets x 2 seeds, 16 s) among working sorters (robust >= 0.5, no failed run, meeting today's print constraints) with no penetration-flagged run; if fewer than 3 qualify, the rest are the best working flagged ones, marked flagged (see opt/LOG.md for how this rule came about)",
+ "caveat": "sim ranking only; uncalibrated; openings simulated at nominal - 0.15 mm (ASSUMED undersize)",
+ "undersize_mm_assumed": 0.15,
+ "winners": [
+  {
+   "rank": 1,
+   "id": "P-3bbfc231",
+   "family": "plinko",
+   "sim_spec": "plinko",
+   "sim_inject": {
+    "plinko_layers.LAYERS": [
+     [
+      "layer_1_rods",
+      "rods",
+      4.55,
+      3.65,
+      3.2,
+      12.0,
+      0.0
+     ],
+     [
+      "layer_2_rods",
+      "rods",
+      1.35,
+      3.05,
+      2.2,
+      8.0,
+      -35.0
+     ],
+     [
+      "layer_3_catch",
+      "solid",
+      null,
+      null,
+      2.0,
+      6.0,
+      35.0
+     ]
+    ]
+   },
+   "stroke": {
+    "profile": "seesaw",
+    "deg": 14.0,
+    "period_s": 1.9,
+    "shape": "constant_speed",
+    "vib_mm": 0.35,
+    "vib_hz": 40.0
+   },
+   "stroke_human": "seesaw +/-14 deg (ends tip, neighbours alternate), 1.9 s per cycle, constant speed + 0.35 mm buzz at 40 Hz",
+   "params_nominal": {
+    "g1": 4.7,
+    "b1": 3.5,
+    "h1": 3.2,
+    "g2": 1.5,
+    "b2": 2.9,
+    "h2": 2.2,
+    "ss_deg": 14.0,
+    "ss_period": 1.9,
+    "ss_shape": "constant_speed",
+    "vib_mm": 0.35
+   },
+   "cad": {
+    "file": "cad/plinko_layers.py",
+    "LAYERS": [
+     [
+      "layer_1_rods_4p7",
+      "rods",
+      4.7,
+      3.5,
+      3.2,
+      12.0,
+      0.0
+     ],
+     [
+      "layer_2_rods_1p5",
+      "rods",
+      1.5,
+      2.9,
+      2.2,
+      8.0,
+      -35.0
+     ],
+     [
+      "layer_3_catch",
+      "solid",
+      null,
+      null,
+      2.0,
+      6.0,
+      35.0
+     ]
+    ],
+    "note": "rows are (name, floor, gap, rod top width, rod height, wall height, tab x); walls and tabs unchanged"
+   },
+   "score": {
+    "robust": 0.9977,
+    "mean": 0.9981,
+    "sd": 0.0004,
+    "worst_friction_set": 0.9978
+   },
+   "per_class": [
+    {
+     "class": "big (pasta, chickpea)",
+     "purity": 1.0,
+     "recovery": 1.0
+    },
+    {
+     "class": "rice",
+     "purity": 1.0,
+     "recovery": 1.0
+    },
+    {
+     "class": "quinoa",
+     "purity": 1.0,
+     "recovery": 1.0
+    }
+   ],
+   "count_matrix": {
+    "rows": [
+     "big (pasta, chickpea)",
+     "rice",
+     "quinoa"
+    ],
+    "cols": [
+     "layer_1_rods",
+     "layer_2_rods",
+     "layer_3_catch",
+     "between",
+     "lost"
+    ],
+    "counts_over_9_runs": [
+     [
+      96,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      180,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      180,
+      0,
+      0
+     ]
+    ]
+   },
+   "jammed_per_run": 0.0,
+   "lost_per_run": 0.0,
+   "t90_s": 0.6003,
+   "flagged": false,
+   "flagged_runs": 0,
+   "gate_clearance_mm": 0.26,
+   "max_gate_overlap_mm": 0.14478,
+   "verified_stiff": null,
+   "stress_tested": false,
+   "worst_case_robust": 0.9977,
+   "replay": "sim/out/opt/seesaw/replay/P-3bbfc231/view.html"
+  },
+  {
+   "rank": 2,
+   "id": "P-3b817251",
+   "family": "plinko",
+   "sim_spec": "plinko",
+   "sim_inject": {
+    "plinko_layers.LAYERS": [
+     [
+      "layer_1_rods",
+      "rods",
+      4.35,
+      2.4499999999999997,
+      2.8,
+      12.0,
+      0.0
+     ],
+     [
+      "layer_2_rods",
+      "rods",
+      1.25,
+      2.35,
+      2.6,
+      8.0,
+      -35.0
+     ],
+     [
+      "layer_3_catch",
+      "solid",
+      null,
+      null,
+      2.0,
+      6.0,
+      35.0
+     ]
+    ]
+   },
+   "stroke": {
+    "profile": "seesaw",
+    "deg": 10.5,
+    "period_s": 1.5,
+    "shape": "constant_speed",
+    "vib_mm": 0.2,
+    "vib_hz": 40.0
+   },
+   "stroke_human": "seesaw +/-10.5 deg (ends tip, neighbours alternate), 1.5 s per cycle, constant speed + 0.2 mm buzz at 40 Hz",
+   "params_nominal": {
+    "g1": 4.5,
+    "b1": 2.3,
+    "h1": 2.8,
+    "g2": 1.4,
+    "b2": 2.2,
+    "h2": 2.6,
+    "ss_deg": 10.5,
+    "ss_period": 1.5,
+    "ss_shape": "constant_speed",
+    "vib_mm": 0.2
+   },
+   "cad": {
+    "file": "cad/plinko_layers.py",
+    "LAYERS": [
+     [
+      "layer_1_rods_4p5",
+      "rods",
+      4.5,
+      2.3,
+      2.8,
+      12.0,
+      0.0
+     ],
+     [
+      "layer_2_rods_1p4",
+      "rods",
+      1.4,
+      2.2,
+      2.6,
+      8.0,
+      -35.0
+     ],
+     [
+      "layer_3_catch",
+      "solid",
+      null,
+      null,
+      2.0,
+      6.0,
+      35.0
+     ]
+    ],
+    "note": "rows are (name, floor, gap, rod top width, rod height, wall height, tab x); walls and tabs unchanged"
+   },
+   "score": {
+    "robust": 0.9966,
+    "mean": 0.9973,
+    "sd": 0.0007,
+    "worst_friction_set": 0.9969
+   },
+   "per_class": [
+    {
+     "class": "big (pasta, chickpea)",
+     "purity": 1.0,
+     "recovery": 1.0
+    },
+    {
+     "class": "rice",
+     "purity": 1.0,
+     "recovery": 1.0
+    },
+    {
+     "class": "quinoa",
+     "purity": 1.0,
+     "recovery": 1.0
+    }
+   ],
+   "count_matrix": {
+    "rows": [
+     "big (pasta, chickpea)",
+     "rice",
+     "quinoa"
+    ],
+    "cols": [
+     "layer_1_rods",
+     "layer_2_rods",
+     "layer_3_catch",
+     "between",
+     "lost"
+    ],
+    "counts_over_9_runs": [
+     [
+      96,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      180,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      180,
+      0,
+      0
+     ]
+    ]
+   },
+   "jammed_per_run": 0.0,
+   "lost_per_run": 0.0,
+   "t90_s": 0.8669666666666668,
+   "flagged": false,
+   "flagged_runs": 0,
+   "gate_clearance_mm": 0.16,
+   "max_gate_overlap_mm": 0.07446,
+   "verified_stiff": null,
+   "stress_tested": false,
+   "worst_case_robust": 0.9966,
+   "replay": "sim/out/opt/seesaw/replay/P-3b817251/view.html"
+  },
+  {
+   "rank": 3,
+   "id": "P-a822b277",
+   "family": "plinko",
+   "sim_spec": "plinko",
+   "sim_inject": {
+    "plinko_layers.LAYERS": [
+     [
+      "layer_1_rods",
+      "rods",
+      3.35,
+      3.65,
+      3.0,
+      12.0,
+      0.0
+     ],
+     [
+      "layer_2_rods",
+      "rods",
+      1.25,
+      2.65,
+      3.6,
+      8.0,
+      -35.0
+     ],
+     [
+      "layer_3_catch",
+      "solid",
+      null,
+      null,
+      2.0,
+      6.0,
+      35.0
+     ]
+    ]
+   },
+   "stroke": {
+    "profile": "seesaw",
+    "deg": 6.0,
+    "period_s": 4.3,
+    "shape": "constant_speed",
+    "vib_mm": 0.3,
+    "vib_hz": 40.0
+   },
+   "stroke_human": "seesaw +/-6 deg (ends tip, neighbours alternate), 4.3 s per cycle, constant speed + 0.3 mm buzz at 40 Hz",
+   "params_nominal": {
+    "g1": 3.5,
+    "b1": 3.5,
+    "h1": 3.0,
+    "g2": 1.4,
+    "b2": 2.5,
+    "h2": 3.6,
+    "ss_deg": 6.0,
+    "ss_period": 4.3,
+    "ss_shape": "constant_speed",
+    "vib_mm": 0.3
+   },
+   "cad": {
+    "file": "cad/plinko_layers.py",
+    "LAYERS": [
+     [
+      "layer_1_rods_3p5",
+      "rods",
+      3.5,
+      3.5,
+      3.0,
+      12.0,
+      0.0
+     ],
+     [
+      "layer_2_rods_1p4",
+      "rods",
+      1.4,
+      2.5,
+      3.6,
+      8.0,
+      -35.0
+     ],
+     [
+      "layer_3_catch",
+      "solid",
+      null,
+      null,
+      2.0,
+      6.0,
+      35.0
+     ]
+    ],
+    "note": "rows are (name, floor, gap, rod top width, rod height, wall height, tab x); walls and tabs unchanged"
+   },
+   "score": {
+    "robust": 0.9619,
+    "mean": 0.9865,
+    "sd": 0.0247,
+    "worst_friction_set": 0.9662
+   },
+   "per_class": [
+    {
+     "class": "big (pasta, chickpea)",
+     "purity": 0.9901960784313726,
+     "recovery": 1.0
+    },
+    {
+     "class": "rice",
+     "purity": 1.0,
+     "recovery": 0.9944444444444445
+    },
+    {
+     "class": "quinoa",
+     "purity": 1.0,
+     "recovery": 1.0
+    }
+   ],
+   "count_matrix": {
+    "rows": [
+     "big (pasta, chickpea)",
+     "rice",
+     "quinoa"
+    ],
+    "cols": [
+     "layer_1_rods",
+     "layer_2_rods",
+     "layer_3_catch",
+     "between",
+     "lost"
+    ],
+    "counts_over_9_runs": [
+     [
+      96,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      1,
+      179,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      180,
+      0,
+      0
+     ]
+    ]
+   },
+   "jammed_per_run": 0.0,
+   "lost_per_run": 0.0,
+   "t90_s": 1.1669500000000002,
+   "flagged": false,
+   "flagged_runs": 4,
+   "gate_clearance_mm": 0.16,
+   "max_gate_overlap_mm": 0.11603,
+   "verified_stiff": {
+    "clean": true,
+    "robust": 0.9474,
+    "flagged_runs": 0,
+    "max_gate_overlap_mm": 0.08178,
+    "clearance_mm": 0.16
+   },
+   "stress_tested": false,
+   "worst_case_robust": 0.9474,
+   "replay": "sim/out/opt/seesaw/replay/P-a822b277/view.html"
+  }
+ ],
+ "best_by_drive": {}
+}

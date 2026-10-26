@@ -1,0 +1,203 @@
+{
+  "time": "2026-10-24T21:27:15.305444-07:00",
+  "read_only": true,
+  "arms": {
+    "leader": {
+      "port": "/dev/cu.usbmodem5A680086601",
+      "passes": [
+        {
+          "1": null,
+          "2": null,
+          "3": 777,
+          "4": 777,
+          "5": 777,
+          "6": null
+        },
+        {
+          "1": null,
+          "2": null,
+          "3": 777,
+          "4": 777,
+          "5": 777,
+          "6": null
+        },
+        {
+          "1": null,
+          "2": null,
+          "3": 777,
+          "4": 777,
+          "5": 777,
+          "6": null
+        }
+      ],
+      "baud_scan": {
+        "1000000": {},
+        "4800": {},
+        "9600": {},
+        "14400": {},
+        "19200": {},
+        "38400": {},
+        "57600": {},
+        "115200": {},
+        "128000": {},
+        "250000": {},
+        "500000": {}
+      },
+      "registers": {
+        "3": {
+          "ID": 3,
+          "Baud_Rate": 0,
+          "Homing_Offset": -1160,
+          "Min_Position_Limit": 997,
+          "Max_Position_Limit": 3199,
+          "Torque_Enable": 0,
+          "Present_Voltage": 54,
+          "Present_Temperature": 30,
+          "Status": 0,
+          "Operating_Mode": 0
+        },
+        "4": {
+          "ID": 4,
+          "Baud_Rate": 0,
+          "Homing_Offset": -928,
+          "Min_Position_Limit": 363,
+          "Max_Position_Limit": 2831,
+          "Torque_Enable": 0,
+          "Present_Voltage": 55,
+          "Present_Temperature": 29,
+          "Status": 0,
+          "Operating_Mode": 0
+        },
+        "5": {
+          "ID": 5,
+          "Baud_Rate": 0,
+          "Homing_Offset": 1346,
+          "Min_Position_Limit": 0,
+          "Max_Position_Limit": 4095,
+          "Torque_Enable": 0,
+          "Present_Voltage": 55,
+          "Present_Temperature": 30,
+          "Status": 0,
+          "Operating_Mode": 0
+        }
+      },
+      "individual_scan": {
+        "1000000": {
+          "3": 777,
+          "4": 777,
+          "5": 777
+        },
+        "4800": {},
+        "9600": {},
+        "14400": {},
+        "19200": {},
+        "38400": {},
+        "57600": {},
+        "115200": {},
+        "128000": {},
+        "250000": {},
+        "500000": {}
+      }
+    },
+    "follower": {
+      "port": "/dev/cu.usbmodem5A7A0547771",
+      "passes": [
+        {
+          "1": null,
+          "2": 777,
+          "3": 777,
+          "4": 777,
+          "5": 777,
+          "6": null
+        },
+        {
+          "1": null,
+          "2": 777,
+          "3": 777,
+          "4": 777,
+          "5": 777,
+          "6": null
+        },
+        {
+          "1": null,
+          "2": 777,
+          "3": 777,
+          "4": 777,
+          "5": 777,
+          "6": null
+        }
+      ],
+      "baud_scan": {
+        "1000000": {}
+      },
+      "registers": {
+        "2": {
+          "ID": 2,
+          "Baud_Rate": 0,
+          "Homing_Offset": 787,
+          "Min_Position_Limit": 1055,
+          "Max_Position_Limit": 3360,
+          "Torque_Enable": 0,
+          "Present_Voltage": 125,
+          "Present_Temperature": 35,
+          "Status": 0,
+          "Operating_Mode": 0
+        },
+        "3": {
+          "ID": 3,
+          "Baud_Rate": 0,
+          "Homing_Offset": 152,
+          "Min_Position_Limit": 789,
+          "Max_Position_Limit": 2995,
+          "Torque_Enable": 0,
+          "Present_Voltage": 126,
+          "Present_Temperature": 35,
+          "Status": 0,
+          "Operating_Mode": 0
+        },
+        "4": {
+          "ID": 4,
+          "Baud_Rate": 0,
+          "Homing_Offset": 303,
+          "Min_Position_Limit": 706,
+          "Max_Position_Limit": 2791,
+          "Torque_Enable": 0,
+          "Present_Voltage": 126,
+          "Present_Temperature": 36,
+          "Status": 0,
+          "Operating_Mode": 0
+        },
+        "5": {
+          "ID": 5,
+          "Baud_Rate": 0,
+          "Homing_Offset": -883,
+          "Min_Position_Limit": 0,
+          "Max_Position_Limit": 4095,
+          "Torque_Enable": 0,
+          "Present_Voltage": 126,
+          "Present_Temperature": 35,
+          "Status": 0,
+          "Operating_Mode": 0
+        }
+      },
+      "individual_scan": {
+        "1000000": {
+          "2": 777,
+          "3": 777,
+          "4": 777,
+          "5": 777
+        },
+        "4800": {},
+        "9600": {},
+        "14400": {},
+        "19200": {},
+        "38400": {},
+        "57600": {},
+        "115200": {},
+        "128000": {},
+        "250000": {},
+        "500000": {}
+      }
+    }
+  }
+}

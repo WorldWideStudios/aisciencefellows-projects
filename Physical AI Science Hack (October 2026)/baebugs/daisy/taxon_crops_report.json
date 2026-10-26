@@ -1,0 +1,150 @@
+{
+ "crops": 2627,
+ "by_split": {
+  "train": 2015,
+  "val": 381,
+  "test": 231
+ },
+ "skipped": {},
+ "leakage_media_ids": 0,
+ "leak_examples": [],
+ "runs": {
+  "ORDER": {
+   "key": "order",
+   "classes": [
+    "Coleoptera",
+    "Diptera",
+    "Hemiptera",
+    "Hymenoptera",
+    "Lepidoptera",
+    "other"
+   ],
+   "pooled": [
+    "Blattodea",
+    "Dermaptera",
+    "Neuroptera",
+    "Odonata",
+    "Orthoptera"
+   ],
+   "counts": {
+    "train": {
+     "Hymenoptera": 887,
+     "Coleoptera": 332,
+     "Hemiptera": 133,
+     "other": 39,
+     "Lepidoptera": 135,
+     "Diptera": 489
+    },
+    "val": {
+     "Hymenoptera": 188,
+     "Hemiptera": 24,
+     "Diptera": 85,
+     "Coleoptera": 49,
+     "Lepidoptera": 23,
+     "other": 12
+    },
+    "test": {
+     "Coleoptera": 18,
+     "Hymenoptera": 87,
+     "Hemiptera": 2,
+     "other": 6,
+     "Lepidoptera": 118
+    }
+   }
+  },
+  "FAMILY_Hymenoptera": {
+   "key": "family",
+   "classes": [
+    "Andrenidae",
+    "Apidae",
+    "Formicidae",
+    "Halictidae",
+    "Megachilidae",
+    "Vespidae",
+    "other"
+   ],
+   "pooled": [
+    "Chrysididae",
+    "Colletidae",
+    "Crabronidae",
+    "Ichneumonidae",
+    "Melittidae",
+    "Mutillidae",
+    "Sphecidae"
+   ],
+   "counts": {
+    "train": {
+     "Apidae": 296,
+     "Halictidae": 253,
+     "other": 37,
+     "Megachilidae": 57,
+     "Formicidae": 22,
+     "Andrenidae": 130,
+     "Vespidae": 30
+    },
+    "val": {
+     "Apidae": 65,
+     "Halictidae": 55,
+     "Andrenidae": 28,
+     "Megachilidae": 8,
+     "Vespidae": 4,
+     "Formicidae": 4,
+     "other": 5
+    },
+    "test": {
+     "Megachilidae": 13,
+     "Apidae": 24,
+     "Halictidae": 11,
+     "Andrenidae": 27,
+     "Vespidae": 3,
+     "other": 7,
+     "Formicidae": 1
+    }
+   }
+  },
+  "FAMILY_Diptera": {
+   "key": "family",
+   "classes": [
+    "Bombyliidae",
+    "Syrphidae",
+    "Tachinidae",
+    "other"
+   ],
+   "pooled": [
+    "Asilidae",
+    "Calliphoridae",
+    "Chironomidae",
+    "Conopidae",
+    "Muscidae",
+    "Mythicomyiidae",
+    "Rhagionidae",
+    "Sarcophagidae",
+    "Stratiomyidae",
+    "Tabanidae",
+    "Therevidae",
+    "Tipulidae"
+   ],
+   "counts": {
+    "train": {
+     "other": 36,
+     "Bombyliidae": 278,
+     "Syrphidae": 81,
+     "Tachinidae": 44
+    },
+    "val": {
+     "other": 5,
+     "Syrphidae": 13,
+     "Bombyliidae": 48,
+     "Tachinidae": 8
+    },
+    "test": {}
+   }
+  }
+ },
+ "merkle_root": "4d5f2831ed5ba2850aab468b63dbaf1d69d766da09558de4f5d2421eca63459e",
+ "licences": {
+  "http://creativecommons.org/publicdomain/zero/1.0/legalcode": 2613,
+  "http://creativecommons.org/licenses/by/4.0/legalcode": 14
+ },
+ "min_train_per_class": 20
+}

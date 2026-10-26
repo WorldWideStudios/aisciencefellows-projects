@@ -1,0 +1,920 @@
+{
+ "assets": [
+  {
+   "category": "rack",
+   "count": 1,
+   "dims_mm": null,
+   "dims_source": "not measured",
+   "id": "tray_tower_orange",
+   "interfaces": [
+    "rail_tray",
+    "arm_reach"
+   ],
+   "leaf": "37c49c8be5fc6997ab2bdec1ba83e863c47a0f6a1bf8c31dbef0a680b3fd8f4d",
+   "name": "Printed tray tower (orange), 5 levels, two prongs per level",
+   "notes": "printed replacement for the wood tower; prong pitch and level pitch to measure (twin still uses wood-tower guesses)",
+   "photo_sha256": [
+    "03948e079041e2e4eb311a65815622ae676970b625997e6f4afc2c459d4581c5",
+    "46b3c75f068357555dc4dc943eb28ec5908cc3bbd0a758678c6ff5660853df67",
+    "89c1970d28c87a4ecbda5b5eb1ddd85eb421d75f1141ce7dcf0dc0c26eaae83e",
+    "e84db1219e98fa07e338e08fb2bbaa217999943d54ff96745ce7c3573e4e11cf"
+   ],
+   "photos": [
+    "tower_arm_side_1",
+    "tower_arm_side_2",
+    "tower_top",
+    "tower_arm_side_3"
+   ],
+   "role": "tray storage / filter face for the arm"
+  },
+  {
+   "category": "fixture",
+   "count": 1,
+   "dims_mm": null,
+   "dims_source": "not measured",
+   "id": "tray_tower_mount_orange",
+   "interfaces": [
+    "screw_m3_or_wood"
+   ],
+   "leaf": "7bfe7828a7157c6de24933c14eff51f172b6c552a8ef1962445ac3f09932ffd9",
+   "name": "Printed L-bracket / wall mount (orange, 2 screw holes)",
+   "photo_sha256": [
+    "03948e079041e2e4eb311a65815622ae676970b625997e6f4afc2c459d4581c5",
+    "46b3c75f068357555dc4dc943eb28ec5908cc3bbd0a758678c6ff5660853df67",
+    "89c1970d28c87a4ecbda5b5eb1ddd85eb421d75f1141ce7dcf0dc0c26eaae83e",
+    "e84db1219e98fa07e338e08fb2bbaa217999943d54ff96745ce7c3573e4e11cf"
+   ],
+   "photos": [
+    "tower_arm_side_1",
+    "tower_arm_side_2",
+    "tower_top",
+    "tower_arm_side_3"
+   ],
+   "role": "mount for the tray tower"
+  },
+  {
+   "category": "rack",
+   "count": 1,
+   "dims_mm": null,
+   "dims_source": "not measured",
+   "id": "wood_tray_tower",
+   "interfaces": [
+    "rail_tray"
+   ],
+   "leaf": "00b383c95fe88e41ba6f2d4da59de0606e9c59380e399ea6ca907e67523a3e6d",
+   "name": "Wood post tower with plywood rail arms",
+   "notes": "twin values are MEASURE estimates",
+   "photo_sha256": [
+    "46b3c75f068357555dc4dc943eb28ec5908cc3bbd0a758678c6ff5660853df67",
+    "89c1970d28c87a4ecbda5b5eb1ddd85eb421d75f1141ce7dcf0dc0c26eaae83e",
+    "e84db1219e98fa07e338e08fb2bbaa217999943d54ff96745ce7c3573e4e11cf"
+   ],
+   "photos": [
+    "tower_arm_side_1",
+    "tower_arm_side_2",
+    "tower_arm_side_3"
+   ],
+   "role": "first tray tower (bench twin config/tower.yaml)"
+  },
+  {
+   "category": "arm",
+   "count": 1,
+   "dims_mm": null,
+   "dims_source": "not measured",
+   "id": "partabot_arm",
+   "interfaces": [
+    "fork_or_gripper",
+    "clamp_mount"
+   ],
+   "leaf": "7fd6dc78d87aed73bbd6a62a45e9ec26532fd9e86b0a25feee0fbd018219cb5b",
+   "maker": "Partabot",
+   "name": "Partabot servo arm",
+   "notes": "clamped to the MDF bench board",
+   "photo_sha256": [
+    "03948e079041e2e4eb311a65815622ae676970b625997e6f4afc2c459d4581c5",
+    "46b3c75f068357555dc4dc943eb28ec5908cc3bbd0a758678c6ff5660853df67",
+    "89c1970d28c87a4ecbda5b5eb1ddd85eb421d75f1141ce7dcf0dc0c26eaae83e",
+    "e84db1219e98fa07e338e08fb2bbaa217999943d54ff96745ce7c3573e4e11cf"
+   ],
+   "photos": [
+    "tower_arm_side_1",
+    "tower_arm_side_2",
+    "tower_top",
+    "tower_arm_side_3"
+   ],
+   "role": "pick / tray handling"
+  },
+  {
+   "category": "instrument",
+   "count": 1,
+   "dims_mm": null,
+   "dims_source": "not measured",
+   "id": "vortexer",
+   "interfaces": [
+    "vortex_platform"
+   ],
+   "leaf": "9a8cc6f6a9e287fbef58ff7c5f6f99a31f4d56d8be57cf773b9530fe9b2da2e5",
+   "name": "Vortex mixer (blue)",
+   "photo_sha256": [
+    "46b3c75f068357555dc4dc943eb28ec5908cc3bbd0a758678c6ff5660853df67",
+    "e84db1219e98fa07e338e08fb2bbaa217999943d54ff96745ce7c3573e4e11cf"
+   ],
+   "photos": [
+    "tower_arm_side_1",
+    "tower_arm_side_3"
+   ],
+   "role": "vortex sieve kit platform (vortex_puck_76)"
+  },
+  {
+   "category": "tray",
+   "count": 1,
+   "dims_mm": [
+    103.0,
+    140.0,
+    12.5
+   ],
+   "dims_source": "design",
+   "id": "biokea_tray_frame_2x3_hex",
+   "interfaces": [
+    "rail_tray",
+    "side_tab_handle"
+   ],
+   "leaf": "4505201c2646c6bec74f577a42accc980be43d37223c167be5dcd1afbf3ac948",
+   "name": "BioKEA printed tray frame, 2x3 cells, hex mesh insert",
+   "notes": "matches BioKEA/BugPicker Designs/tray.stl (pinned upstream, measured not copied)",
+   "photo_sha256": [
+    "46b3c75f068357555dc4dc943eb28ec5908cc3bbd0a758678c6ff5660853df67",
+    "9e3b417fd967a1b84d13595b374dfc9a6fe5684b5526fefc205f9b36f5ebf5c5",
+    "e84db1219e98fa07e338e08fb2bbaa217999943d54ff96745ce7c3573e4e11cf"
+   ],
+   "photos": [
+    "biokea_frames_tub",
+    "tower_arm_side_1",
+    "tower_arm_side_3"
+   ],
+   "role": "sieve tray (HEX mesh)"
+  },
+  {
+   "category": "tray",
+   "count": 2,
+   "dims_mm": [
+    113.6,
+    149.7,
+    10.0
+   ],
+   "dims_source": "design",
+   "id": "biokea_tray_frame_plain",
+   "interfaces": [
+    "rail_tray",
+    "side_tab_handle",
+    "insert_pocket"
+   ],
+   "leaf": "cc689e70c5547fb54aa65cb94fc808d873c7afa6c5bf5d7e18b9004d5e5482e2",
+   "name": "BioKEA printed tray frame, open (insert holder), side tab",
+   "notes": "closest pinned design: screentray.stl; confirm with calipers",
+   "photo_sha256": [
+    "9e3b417fd967a1b84d13595b374dfc9a6fe5684b5526fefc205f9b36f5ebf5c5"
+   ],
+   "photos": [
+    "biokea_frames_tub"
+   ],
+   "role": "carrier for swappable inserts"
+  },
+  {
+   "category": "insert",
+   "count": 1,
+   "dims_mm": null,
+   "dims_source": "not measured",
+   "id": "hex_grid_insert",
+   "interfaces": [
+    "insert_pocket"
+   ],
+   "leaf": "28f10f4d07bd2cb25485801af4e6b870812a7111e42c90db9bf7dff62d8ceb6b",
+   "name": "Printed hex grid insert (coarse)",
+   "photo_sha256": [
+    "46b3c75f068357555dc4dc943eb28ec5908cc3bbd0a758678c6ff5660853df67",
+    "9e3b417fd967a1b84d13595b374dfc9a6fe5684b5526fefc205f9b36f5ebf5c5"
+   ],
+   "photos": [
+    "biokea_frames_tub",
+    "tower_arm_side_1"
+   ],
+   "role": "coarse sieve insert (GRID/HEX)"
+  },
+  {
+   "category": "insert",
+   "count": 1,
+   "dims_mm": null,
+   "dims_source": "not measured",
+   "id": "perforated_plate_ss",
+   "interfaces": [
+    "insert_pocket"
+   ],
+   "leaf": "fc3fa37692ecd262b0f2b164976f738ff9e4165f59864dcda6e01dccf4b11b20",
+   "name": "Stainless perforated plate (round holes)",
+   "notes": "hole size to measure (PERF-5 in config)",
+   "photo_sha256": [
+    "9e3b417fd967a1b84d13595b374dfc9a6fe5684b5526fefc205f9b36f5ebf5c5"
+   ],
+   "photos": [
+    "biokea_frames_tub"
+   ],
+   "role": "PERF sieve insert"
+  },
+  {
+   "category": "container",
+   "count": 1,
+   "dims_mm": null,
+   "dims_source": "not measured",
+   "id": "yellow_tub",
+   "interfaces": [],
+   "leaf": "10c59fa8f0aae6a69ff4ea936893dac6933453e11c21d3117b5a22bd144d0723",
+   "name": "Yellow plastic tub",
+   "photo_sha256": [
+    "11a54b15a8de8a5f35f1ac8b130e85ca67cd05dca101a7e1013e8e79fc0fc1ec",
+    "9e3b417fd967a1b84d13595b374dfc9a6fe5684b5526fefc205f9b36f5ebf5c5",
+    "a7a408bc79a87a1e2c7d707bf5cb998f7b626ef3ff8f0b80e6f11fbc8c669efc"
+   ],
+   "photos": [
+    "biokea_frames_tub",
+    "labware_overview_1",
+    "labware_overview_3"
+   ],
+   "role": "wash / catch basin"
+  },
+  {
+   "category": "rack",
+   "count": 1,
+   "dims_mm": null,
+   "dims_source": "not measured",
+   "id": "ss_frame_3bay",
+   "interfaces": [
+    "rail_tray?"
+   ],
+   "leaf": "d0d510ff7702c3a28ec7038b02a6e9fdedc9ca75d00c68564d741ba13f83bc19",
+   "name": "Stainless 3-bay frame with notched rail",
+   "photo_sha256": [
+    "11a54b15a8de8a5f35f1ac8b130e85ca67cd05dca101a7e1013e8e79fc0fc1ec",
+    "a40363d0f6a183a19f6ad8cbb8f0b266c817c3794e60d6aa92354b42cfc1d74c",
+    "a7a408bc79a87a1e2c7d707bf5cb998f7b626ef3ff8f0b80e6f11fbc8c669efc"
+   ],
+   "photos": [
+    "labware_overview_1",
+    "labware_overview_3",
+    "labware_angle"
+   ],
+   "role": "candidate tray rack over the tub"
+  },
+  {
+   "category": "electronics",
+   "count": 1,
+   "dims_mm": [
+    83,
+    55,
+    9
+   ],
+   "dims_source": "ruler-photo",
+   "id": "breadboard_half",
+   "interfaces": [],
+   "leaf": "f4cba16a440705dc42518c9467d3a518f04be4a2d046863b109c56429ad5e20c",
+   "name": "Solderless breadboard, half size (30 rows)",
+   "notes": "length read off the ruler ~8.3 cm; width/height typical for half-size boards",
+   "photo_sha256": [
+    "92734540f071fb5953fc11f5d2d5cefe9efa14ba06a65442a3b33a7b0d4e5710"
+   ],
+   "photos": [
+    "breadboard_ruler"
+   ],
+   "role": "sensor / camera trigger wiring"
+  },
+  {
+   "category": "instrument",
+   "count": 1,
+   "dims_mm": null,
+   "dims_source": "not measured",
+   "id": "opentrons_flex",
+   "interfaces": [
+    "flex_deck_slot",
+    "SBS"
+   ],
+   "leaf": "86c80661df614284758760c5a633ebc1699bdf09be90419108a3ad1968f45d74",
+   "maker": "Opentrons",
+   "name": "Opentrons Flex with 8-channel 1000 uL pipette",
+   "notes": "deck A1-D4; photo shows tip racks, deep-well plate, reservoir",
+   "photo_sha256": [
+    "813205c2f14b530ae9b84e1694db549cb2eb9774d9ea633a0ccb529a69b3c1cf"
+   ],
+   "photos": [
+    "opentrons_flex_deck"
+   ],
+   "role": "lyse / incubate / liquid handling (flex route)"
+  },
+  {
+   "category": "tip_box",
+   "count": 2,
+   "dims_mm": [
+    127.75,
+    85.75,
+    99.0
+   ],
+   "dims_source": "spec",
+   "id": "opentrons_flex_tiprack_50ul_filter",
+   "interfaces": [
+    "flex_deck_slot",
+    "SBS"
+   ],
+   "leaf": "8c132992d082b372a298272b2ec10b7a932221db8d201ef573b964379d290e0d",
+   "maker": "Opentrons",
+   "name": "Opentrons Flex 96 Filter Tip Rack 50 uL",
+   "photo_sha256": [
+    "c46f5cfc139d42a4ada67b13d08687a74480cd16ec9e451b8fee687ab56d1a21"
+   ],
+   "photos": [
+    "lift_columns"
+   ],
+   "role": "tips for the Flex 8-channel",
+   "spec_ref": "Opentrons shared-data labware definition opentrons_flex_96_filtertiprack_50ul (v1)"
+  },
+  {
+   "category": "stage",
+   "count": 3,
+   "dims_mm": null,
+   "dims_source": "not measured",
+   "id": "manual_lift_columns",
+   "interfaces": [
+    "T-slot_plate"
+   ],
+   "leaf": "974bea55f3368d4597c920cb51fb95b4cdf6272d76bff53a32b0246a1c4fb64d",
+   "name": "Aluminium manual lift columns with handwheels (x3)",
+   "photo_sha256": [
+    "c46f5cfc139d42a4ada67b13d08687a74480cd16ec9e451b8fee687ab56d1a21"
+   ],
+   "photos": [
+    "lift_columns"
+   ],
+   "role": "camera / tower height stage"
+  },
+  {
+   "category": "instrument",
+   "count": 1,
+   "dims_mm": [
+    165,
+    165,
+    300
+   ],
+   "dims_source": "spec",
+   "id": "formlabs_fuse",
+   "interfaces": [],
+   "leaf": "18bf10b74297e15d482ae872a1fcdcac2767a854e04188e8468e1a446aa72e99",
+   "maker": "Formlabs",
+   "name": "Formlabs Fuse 1+ printer and Fuse Sift",
+   "notes": "dims = Fuse 1+ build volume",
+   "photo_sha256": [
+    "ce67fe10b6acf2ba100b1af9176c5e10b7fa97668f6454e771e21fbb9a5720bd"
+   ],
+   "photos": [
+    "formlabs_fuse"
+   ],
+   "role": "PA12 powder prints (toy insects, parts)"
+  },
+  {
+   "category": "instrument",
+   "count": 1,
+   "dims_mm": null,
+   "dims_source": "not measured",
+   "id": "fuse_sift_drum",
+   "interfaces": [
+    "glove_box",
+    "perforated_floor"
+   ],
+   "leaf": "3fffe152a989378d75383ca31cb68a2de0ac7c01ce6cc2413e8db0c73f71704f",
+   "maker": "Formlabs",
+   "name": "Fuse Sift tumbler: rotating perforated steel drum with mat liner, glove box, air nozzle",
+   "notes": "videos show the PA12 toy insects tumbling; fines fall through the drum and the perforated floor",
+   "photo_sha256": [
+    "14ae23ecfac6ad13257fcbf57c12cc26fa185fe1d8cba22b8160257c48090a0a",
+    "212652e90f5c0d11ed942f111ec81012f058a0c9e7d8281eef722bfadd0919ea",
+    "3b97c17e9fc9aaa1c0ec93e220429879ec6c48a572dbe4ba2729f40f9f682f31",
+    "9c2b4182cc21c9a166f501e652c4d0d5764466e66c9a7b597930e49f4ffe3d0b",
+    "c4f845a92af92175eed9b8df04e78ca7426facc1a779ea41b43aa1620458bddd",
+    "ca15843d84b71e1500426680bac02f2c91d15970e572412774e524bb38ba041d",
+    "fa979e611b07c8cafac6b9ed13acac598a90613386a55780bf099723bee4fb07"
+   ],
+   "photos": [
+    "sift_floor_1",
+    "sift_floor_2",
+    "sift_gloves_overview",
+    "sift_floor_3",
+    "sift_drum_load",
+    "sift_tumble_1",
+    "sift_tumble_2"
+   ],
+   "role": "depowders PA12 prints; also a working example of a rotating perforated drum (prebuilt trommel analogue)"
+  },
+  {
+   "category": "printed_part",
+   "count": 1,
+   "dims_mm": null,
+   "dims_source": "design",
+   "id": "pa12_toy_insect_batch",
+   "interfaces": [],
+   "leaf": "b98cd410de4ff1c9682f12539d26e44c96a74e514bd304962914c5faff2e42f7",
+   "name": "Printed PA12 toy insects (print/fuse1 set), depowdering",
+   "notes": "geometry in print/fuse1 (91 STLs, Merkle-addressed). Box photo: wings, legs and antennae mostly intact; count and per-toy identity not yet checked against the manifest; a few blue FDM strings cling to some toys (cross-contamination to remove before imaging); one blue FDM part is in the box",
+   "photo_sha256": [
+    "14ae23ecfac6ad13257fcbf57c12cc26fa185fe1d8cba22b8160257c48090a0a",
+    "212652e90f5c0d11ed942f111ec81012f058a0c9e7d8281eef722bfadd0919ea",
+    "3b97c17e9fc9aaa1c0ec93e220429879ec6c48a572dbe4ba2729f40f9f682f31",
+    "402d9dbd542dad842503cebf0db2887763c4b295854ef9aed4e45b88b31958e3",
+    "c4f845a92af92175eed9b8df04e78ca7426facc1a779ea41b43aa1620458bddd",
+    "d3002ba152a96ef05f705c55f3b66875f50e42333f346c54512dfd1723579521"
+   ],
+   "photos": [
+    "sift_drum_load",
+    "sift_tumble_2",
+    "sift_floor_1",
+    "sift_floor_3",
+    "pa12_toys_box",
+    "pa12_toys_two_on_floor"
+   ],
+   "role": "physical size standards for the sieve and vision lanes",
+   "status": "PRINTED + DEPOWDERED (observed)"
+  },
+  {
+   "category": "printed_part",
+   "count": 1,
+   "dims_mm": null,
+   "dims_source": "not measured",
+   "id": "fdm_trommel_attempt_1",
+   "interfaces": [],
+   "leaf": "4152302aa2cf1230cd14473745ae815bd6b29bfd7aa07a212a8308a7022b8389",
+   "name": "FDM print attempt 1 of the trommel (blue translucent filament)",
+   "notes": "caps, crank and stand feet printed; the perforated drum zones failed (spaghetti / loose loops) and rings show heavy stringing",
+   "photo_sha256": [
+    "93a29cddfa4caf7ab57a1a11f03a36a847afdc557b909eed4a99570e11ab2225"
+   ],
+   "photos": [
+    "fdm_trommel_attempt1"
+   ],
+   "role": "trommel parts: caps with spokes, drum rings, crank, stand feet",
+   "status": "FAILED (observed)"
+  },
+  {
+   "category": "plate",
+   "count": 1,
+   "dims_mm": [
+    127.76,
+    85.48,
+    null
+   ],
+   "dims_source": "spec",
+   "id": "plate_384_black",
+   "interfaces": [
+    "SBS"
+   ],
+   "leaf": "d0910ade30e4614fe307ddb402b5f8a9c0abcdea2466257f1f729a11d3af1d3a",
+   "library_candidates": [
+    {
+     "library": "pylabrobot 0.2.2",
+     "resource": "Revvity_384_wellplate_28ul_Ub",
+     "size_mm": [
+      127.76,
+      85.48,
+      14.35
+     ],
+     "why_not_exact": "ProxiPlate-384 Plus is white; photographed plate is black (PerkinElmer = Revvity)"
+    },
+    {
+     "library": "pylabrobot 0.2.2",
+     "resource": "Greiner_384_wellplate_28ul_Fb",
+     "size_mm": [
+      127.76,
+      85.48,
+      14.4
+     ],
+     "why_not_exact": "different maker; same SBS 384 format"
+    }
+   ],
+   "maker": "PerkinElmer",
+   "name": "384-well plate, black",
+   "notes": "footprint is the SBS standard; height depends on the exact product",
+   "photo_sha256": [
+    "c7071955b0299d86a9a7a735f8fdbdb8ff4c06bc26eb71e995c5e46e27043b4b",
+    "d4f31b557ec67a50adc4cc5b752f2b2edbe2263b42c686bbe292c7b2eb000562"
+   ],
+   "photos": [
+    "plate384_ruler",
+    "plate384_top"
+   ],
+   "role": "imaging / assay plate"
+  },
+  {
+   "category": "tip_box",
+   "count": 1,
+   "dims_mm": null,
+   "dims_source": "not measured",
+   "id": "tipbox_vwr_purple",
+   "interfaces": [
+    "SBS?"
+   ],
+   "leaf": "0944c2e8c5a4865190fb80f39c885a2c8c354ce5cc97319ec195bf612f1b8040",
+   "maker": "VWR",
+   "name": "Tip box, purple, hinged lid",
+   "photo_sha256": [
+    "11a54b15a8de8a5f35f1ac8b130e85ca67cd05dca101a7e1013e8e79fc0fc1ec",
+    "292f60b545df9e820de13bc5cf87a158bcab3cc43c0508def5de4bdd5317f14e",
+    "a40363d0f6a183a19f6ad8cbb8f0b266c817c3794e60d6aa92354b42cfc1d74c",
+    "a7a408bc79a87a1e2c7d707bf5cb998f7b626ef3ff8f0b80e6f11fbc8c669efc"
+   ],
+   "photos": [
+    "labware_overview_1",
+    "labware_angle",
+    "labware_overview_2",
+    "labware_overview_3"
+   ],
+   "role": "tips"
+  },
+  {
+   "category": "tip_box",
+   "count": 1,
+   "dims_mm": null,
+   "dims_source": "not measured",
+   "id": "tipbox_kashi",
+   "interfaces": [
+    "SBS?"
+   ],
+   "leaf": "3b9dfd0b480bdc9e415b17c03d10df32a4cb5f43393a21d61a545ccc789c7571",
+   "maker": "KASHI",
+   "name": "Tip box, clear (96 tips)",
+   "photo_sha256": [
+    "11a54b15a8de8a5f35f1ac8b130e85ca67cd05dca101a7e1013e8e79fc0fc1ec",
+    "292f60b545df9e820de13bc5cf87a158bcab3cc43c0508def5de4bdd5317f14e",
+    "a40363d0f6a183a19f6ad8cbb8f0b266c817c3794e60d6aa92354b42cfc1d74c",
+    "a7a408bc79a87a1e2c7d707bf5cb998f7b626ef3ff8f0b80e6f11fbc8c669efc"
+   ],
+   "photos": [
+    "labware_overview_1",
+    "labware_angle",
+    "labware_overview_2",
+    "labware_overview_3"
+   ],
+   "role": "tips"
+  },
+  {
+   "category": "tip_box",
+   "count": 1,
+   "dims_mm": null,
+   "dims_source": "not measured",
+   "id": "tipbox_xtip4_1000",
+   "interfaces": [
+    "SBS?"
+   ],
+   "leaf": "e56e0a0b8fd6ba030ddcaf0b22ec5a5f32944477243c8bef32a9107ce49a49b0",
+   "maker": "Biotix",
+   "name": "xTIP4 1000 uL tip box with blue rack",
+   "photo_sha256": [
+    "09aa41a30bc187a992835dca4d4162f1b2522638931e044c0ad599e79ada0507",
+    "11a54b15a8de8a5f35f1ac8b130e85ca67cd05dca101a7e1013e8e79fc0fc1ec",
+    "292f60b545df9e820de13bc5cf87a158bcab3cc43c0508def5de4bdd5317f14e",
+    "683b61a6ee5c5efdbe5a106ed0aa424376082e18ff3ee39860b90f7594234271",
+    "a7a408bc79a87a1e2c7d707bf5cb998f7b626ef3ff8f0b80e6f11fbc8c669efc"
+   ],
+   "photos": [
+    "xtip4_box",
+    "rack_edge_ruler",
+    "labware_overview_1",
+    "labware_overview_2",
+    "labware_overview_3"
+   ],
+   "role": "tips"
+  },
+  {
+   "category": "rack",
+   "count": 1,
+   "dims_mm": null,
+   "dims_source": "ruler-photo",
+   "id": "rack_96_pink",
+   "interfaces": [
+    "SBS?"
+   ],
+   "leaf": "93d8b6e68f7e45d600505f6278f2c125365587fbc80018891f0b354a1892a4d7",
+   "name": "96-position rack, pink",
+   "notes": "length ~14 cm read off the ruler (rack_edge_ruler)",
+   "photo_sha256": [
+    "09aa41a30bc187a992835dca4d4162f1b2522638931e044c0ad599e79ada0507",
+    "11a54b15a8de8a5f35f1ac8b130e85ca67cd05dca101a7e1013e8e79fc0fc1ec",
+    "292f60b545df9e820de13bc5cf87a158bcab3cc43c0508def5de4bdd5317f14e",
+    "a40363d0f6a183a19f6ad8cbb8f0b266c817c3794e60d6aa92354b42cfc1d74c",
+    "a7a408bc79a87a1e2c7d707bf5cb998f7b626ef3ff8f0b80e6f11fbc8c669efc"
+   ],
+   "photos": [
+    "rack_edge_ruler",
+    "labware_overview_1",
+    "labware_angle",
+    "labware_overview_2",
+    "labware_overview_3"
+   ],
+   "role": "microtube rack"
+  },
+  {
+   "category": "rack",
+   "count": 1,
+   "dims_mm": null,
+   "dims_source": "not measured",
+   "id": "rack_96_purple",
+   "interfaces": [],
+   "leaf": "fe84fc6d67c6d4136ba0c901a28ffa7f3714ad93606ac4c5b624b5305cbd4d75",
+   "name": "96-position rack, purple (deep)",
+   "photo_sha256": [
+    "11a54b15a8de8a5f35f1ac8b130e85ca67cd05dca101a7e1013e8e79fc0fc1ec",
+    "292f60b545df9e820de13bc5cf87a158bcab3cc43c0508def5de4bdd5317f14e",
+    "a40363d0f6a183a19f6ad8cbb8f0b266c817c3794e60d6aa92354b42cfc1d74c",
+    "a7a408bc79a87a1e2c7d707bf5cb998f7b626ef3ff8f0b80e6f11fbc8c669efc"
+   ],
+   "photos": [
+    "labware_overview_1",
+    "labware_angle",
+    "labware_overview_2",
+    "labware_overview_3"
+   ],
+   "role": "microtube rack"
+  },
+  {
+   "category": "rack",
+   "count": 1,
+   "dims_mm": null,
+   "dims_source": "not measured",
+   "id": "rack_60_purple",
+   "interfaces": [],
+   "leaf": "6667fe011698e684911f4beecc2a643e6b73db6c601d913e56a466e3cc38e56b",
+   "name": "60-position tube rack, purple (5 x 12)",
+   "photo_sha256": [
+    "11a54b15a8de8a5f35f1ac8b130e85ca67cd05dca101a7e1013e8e79fc0fc1ec",
+    "292f60b545df9e820de13bc5cf87a158bcab3cc43c0508def5de4bdd5317f14e",
+    "3bbb75964176e29d75fe4c8b35c9e173c219a945c9b65980d21ee3693ca816e5",
+    "a34f359c175d021d3e4af0c8e2839637d7b5b78a60aa19b0ce2f059ea6013d74",
+    "a40363d0f6a183a19f6ad8cbb8f0b266c817c3794e60d6aa92354b42cfc1d74c",
+    "a7a408bc79a87a1e2c7d707bf5cb998f7b626ef3ff8f0b80e6f11fbc8c669efc"
+   ],
+   "photos": [
+    "labware_overview_1",
+    "labware_angle",
+    "racks_closeup_ruler",
+    "labware_overview_2",
+    "labware_overview_3",
+    "racks_diagonal_ruler"
+   ],
+   "role": "1.5-2 mL tube rack"
+  },
+  {
+   "category": "rack",
+   "count": 1,
+   "dims_mm": null,
+   "dims_source": "not measured",
+   "id": "rack_4way_orange",
+   "interfaces": [],
+   "leaf": "3c7d395b18bbce10b59944c7764a618e552fca1b449ae4ed6022fb42c5f01ce3",
+   "name": "4-way tube rack, orange (50 mL / 15 mL / micro)",
+   "photo_sha256": [
+    "292f60b545df9e820de13bc5cf87a158bcab3cc43c0508def5de4bdd5317f14e",
+    "a40363d0f6a183a19f6ad8cbb8f0b266c817c3794e60d6aa92354b42cfc1d74c",
+    "a7a408bc79a87a1e2c7d707bf5cb998f7b626ef3ff8f0b80e6f11fbc8c669efc"
+   ],
+   "photos": [
+    "labware_overview_1",
+    "labware_angle",
+    "labware_overview_2"
+   ],
+   "role": "conical tube rack"
+  },
+  {
+   "category": "rack",
+   "count": 1,
+   "dims_mm": null,
+   "dims_source": "not measured",
+   "id": "rack_18_white",
+   "interfaces": [],
+   "leaf": "e5fa4c18502dbf5e87e2a0381d353219f376efdce71cdc0015d946a120207c21",
+   "name": "18-hole rack, white (3 x 6)",
+   "photo_sha256": [
+    "11a54b15a8de8a5f35f1ac8b130e85ca67cd05dca101a7e1013e8e79fc0fc1ec",
+    "3bbb75964176e29d75fe4c8b35c9e173c219a945c9b65980d21ee3693ca816e5",
+    "a34f359c175d021d3e4af0c8e2839637d7b5b78a60aa19b0ce2f059ea6013d74",
+    "a40363d0f6a183a19f6ad8cbb8f0b266c817c3794e60d6aa92354b42cfc1d74c",
+    "a7a408bc79a87a1e2c7d707bf5cb998f7b626ef3ff8f0b80e6f11fbc8c669efc"
+   ],
+   "photos": [
+    "labware_overview_1",
+    "labware_angle",
+    "racks_closeup_ruler",
+    "racks_diagonal_ruler",
+    "labware_overview_3"
+   ],
+   "role": "15 mL tube rack"
+  },
+  {
+   "category": "rack",
+   "count": 1,
+   "dims_mm": null,
+   "dims_source": "not measured",
+   "id": "cryo_grid_81_blue",
+   "interfaces": [],
+   "leaf": "55dcc8847d3f7d2ad255ac6727e8e31e1dc86a10168d24fb8541fc40acb0b6e2",
+   "name": "81-cell cryobox grid, blue (9 x 9)",
+   "photo_sha256": [
+    "11a54b15a8de8a5f35f1ac8b130e85ca67cd05dca101a7e1013e8e79fc0fc1ec",
+    "3bbb75964176e29d75fe4c8b35c9e173c219a945c9b65980d21ee3693ca816e5",
+    "a34f359c175d021d3e4af0c8e2839637d7b5b78a60aa19b0ce2f059ea6013d74",
+    "a40363d0f6a183a19f6ad8cbb8f0b266c817c3794e60d6aa92354b42cfc1d74c",
+    "a7a408bc79a87a1e2c7d707bf5cb998f7b626ef3ff8f0b80e6f11fbc8c669efc"
+   ],
+   "photos": [
+    "labware_overview_1",
+    "labware_angle",
+    "racks_closeup_ruler",
+    "racks_diagonal_ruler",
+    "labware_overview_3"
+   ],
+   "role": "cryovial storage"
+  },
+  {
+   "category": "rack",
+   "count": 1,
+   "dims_mm": null,
+   "dims_source": "not measured",
+   "id": "cryo_rack_100_white",
+   "interfaces": [],
+   "leaf": "19e4fb8bd9b9785de689338804abbb9c36568e09eb743d9d6b984854fba277a0",
+   "name": "100-position numbered cryo rack, white",
+   "photo_sha256": [
+    "11a54b15a8de8a5f35f1ac8b130e85ca67cd05dca101a7e1013e8e79fc0fc1ec",
+    "292f60b545df9e820de13bc5cf87a158bcab3cc43c0508def5de4bdd5317f14e",
+    "3bbb75964176e29d75fe4c8b35c9e173c219a945c9b65980d21ee3693ca816e5",
+    "a34f359c175d021d3e4af0c8e2839637d7b5b78a60aa19b0ce2f059ea6013d74",
+    "a7a408bc79a87a1e2c7d707bf5cb998f7b626ef3ff8f0b80e6f11fbc8c669efc"
+   ],
+   "photos": [
+    "labware_overview_1",
+    "racks_closeup_ruler",
+    "racks_diagonal_ruler",
+    "labware_overview_2",
+    "labware_overview_3"
+   ],
+   "role": "cryovial storage (specimen-to-vial hand-off)"
+  },
+  {
+   "category": "container",
+   "count": 1,
+   "dims_mm": null,
+   "dims_source": "not measured",
+   "id": "cryo_box_biologix",
+   "interfaces": [],
+   "leaf": "822e04d3c2d7e06e688d2d5ef78bc15825ea879f201cd2bffe2b984774a90736",
+   "maker": "Biologix",
+   "name": "Clear cryo box",
+   "photo_sha256": [
+    "11a54b15a8de8a5f35f1ac8b130e85ca67cd05dca101a7e1013e8e79fc0fc1ec",
+    "292f60b545df9e820de13bc5cf87a158bcab3cc43c0508def5de4bdd5317f14e",
+    "3bbb75964176e29d75fe4c8b35c9e173c219a945c9b65980d21ee3693ca816e5",
+    "a34f359c175d021d3e4af0c8e2839637d7b5b78a60aa19b0ce2f059ea6013d74",
+    "a7a408bc79a87a1e2c7d707bf5cb998f7b626ef3ff8f0b80e6f11fbc8c669efc"
+   ],
+   "photos": [
+    "labware_overview_1",
+    "racks_closeup_ruler",
+    "racks_diagonal_ruler",
+    "labware_overview_2",
+    "labware_overview_3"
+   ],
+   "role": "vial box"
+  },
+  {
+   "category": "tube",
+   "count": 100,
+   "dims_mm": null,
+   "dims_source": "not measured",
+   "expiry": "2028-09-12",
+   "id": "cryovial_greiner_2ml",
+   "interfaces": [
+    "cryo_rack"
+   ],
+   "leaf": "7b6193d7483c6b740130a3a71e2d87ed16ee1714e8e6c560c01aa7b48b9d4db9",
+   "lot": "E23093DQ",
+   "maker": "Greiner Bio-One",
+   "name": "Cryo.s 2 mL PP cryovial, round bottom, external thread, starfoot, sterile",
+   "notes": "read from the bag label",
+   "photo_sha256": [
+    "3bbb75964176e29d75fe4c8b35c9e173c219a945c9b65980d21ee3693ca816e5",
+    "89037c3250261b3df7decd018177f07b3a3d1fca2e3e7ac29c36d945c2019a9d",
+    "a34f359c175d021d3e4af0c8e2839637d7b5b78a60aa19b0ce2f059ea6013d74"
+   ],
+   "photos": [
+    "greiner_cryos_bag",
+    "racks_closeup_ruler",
+    "racks_diagonal_ruler"
+   ],
+   "ref": "126263",
+   "role": "whole-body specimen storage for DNA/RNA"
+  },
+  {
+   "category": "tube",
+   "count": 1,
+   "dims_mm": null,
+   "dims_source": "not measured",
+   "id": "conical_50ml_vwr",
+   "interfaces": [
+    "rack_4way"
+   ],
+   "leaf": "6f82dd8e77fc76720618d21a7f0eb2a6a27f4d5ae0837d96478cb4b70b678068",
+   "library_candidates": [
+    {
+     "library": "pylabrobot 0.2.2",
+     "resource": "cor_falcon_tube_50mL_Vb",
+     "size_mm": [
+      30,
+      30,
+      115
+     ],
+     "why_not_exact": "Corning Falcon, not VWR; standard 50 mL conical format"
+    }
+   ],
+   "maker": "VWR",
+   "name": "50 mL conical tube, green cap",
+   "photo_sha256": [
+    "292f60b545df9e820de13bc5cf87a158bcab3cc43c0508def5de4bdd5317f14e",
+    "683b61a6ee5c5efdbe5a106ed0aa424376082e18ff3ee39860b90f7594234271",
+    "a40363d0f6a183a19f6ad8cbb8f0b266c817c3794e60d6aa92354b42cfc1d74c",
+    "a7a408bc79a87a1e2c7d707bf5cb998f7b626ef3ff8f0b80e6f11fbc8c669efc"
+   ],
+   "photos": [
+    "labware_overview_1",
+    "labware_angle",
+    "xtip4_box",
+    "labware_overview_2"
+   ],
+   "role": "bulk sample / ethanol"
+  },
+  {
+   "category": "tip",
+   "count": 1,
+   "dims_mm": null,
+   "dims_source": "not measured",
+   "id": "tip_1000ul",
+   "interfaces": [],
+   "leaf": "cbde7d4c9d0a6074b31bdcf28e965bff860d68976883169fd925681edd406fca",
+   "name": "1000 uL pipette tip (loose)",
+   "photo_sha256": [
+    "a34f359c175d021d3e4af0c8e2839637d7b5b78a60aa19b0ce2f059ea6013d74",
+    "a7a408bc79a87a1e2c7d707bf5cb998f7b626ef3ff8f0b80e6f11fbc8c669efc"
+   ],
+   "photos": [
+    "labware_overview_1",
+    "racks_diagonal_ruler"
+   ],
+   "role": "transfer"
+  },
+  {
+   "category": "reference",
+   "count": 1,
+   "dims_mm": [
+    460,
+    null,
+    null
+   ],
+   "dims_source": "spec",
+   "id": "ruler_helix_46cm",
+   "interfaces": [],
+   "leaf": "48be1d1c96cf23d45a9383b163979825bb6d2d810bf4c5c94f0ac1974e69166b",
+   "maker": "Helix",
+   "name": "Helix 46 cm steel ruler (scale reference in photos)",
+   "photo_sha256": [
+    "09aa41a30bc187a992835dca4d4162f1b2522638931e044c0ad599e79ada0507",
+    "3bbb75964176e29d75fe4c8b35c9e173c219a945c9b65980d21ee3693ca816e5",
+    "92734540f071fb5953fc11f5d2d5cefe9efa14ba06a65442a3b33a7b0d4e5710",
+    "a34f359c175d021d3e4af0c8e2839637d7b5b78a60aa19b0ce2f059ea6013d74",
+    "a7a408bc79a87a1e2c7d707bf5cb998f7b626ef3ff8f0b80e6f11fbc8c669efc",
+    "c7071955b0299d86a9a7a735f8fdbdb8ff4c06bc26eb71e995c5e46e27043b4b"
+   ],
+   "photos": [
+    "breadboard_ruler",
+    "plate384_ruler",
+    "rack_edge_ruler",
+    "racks_closeup_ruler",
+    "racks_diagonal_ruler",
+    "labware_overview_1"
+   ],
+   "role": "photo scale"
+  }
+ ],
+ "dims_by_source": {
+  "design": 3,
+  "not measured": 26,
+  "ruler-photo": 2,
+  "spec": 4
+ },
+ "n_assets": 35,
+ "n_photos": 31,
+ "photos_root": "7f093d2482162bd020ed488ce458d9fa8ab0a79ed22fc219fbd99f50bfd0c199",
+ "root": "e573b35c3edc913fed4d3d313f673aca2351282a285672894606519903b02190",
+ "type": "asset_db"
+}

@@ -1,0 +1,116 @@
+{
+ "ordering": [
+  [
+   "A1"
+  ],
+  [
+   "A2"
+  ],
+  [
+   "A3"
+  ],
+  [
+   "A4"
+  ]
+ ],
+ "brand": {
+  "brand": "baebugs",
+  "brandId": [
+   "baebugs_mini_trommel_4bin"
+  ]
+ },
+ "metadata": {
+  "displayName": "baebugs mini trommel (1.5/3/5 mm + oversize bins)",
+  "displayCategory": "other",
+  "displayVolumeUnits": "mL",
+  "tags": [
+   "baebugs",
+   "BioKEA"
+  ]
+ },
+ "dimensions": {
+  "xDimension": 127.76,
+  "yDimension": 85.48,
+  "zDimension": 57.0
+ },
+ "wells": {
+  "A1": {
+   "depth": 14.0,
+   "totalLiquidVolume": 21748,
+   "shape": "rectangular",
+   "xDimension": 28.0,
+   "yDimension": 55.48,
+   "x": 33.0,
+   "y": 42.74,
+   "z": 2
+  },
+  "A2": {
+   "depth": 14.0,
+   "totalLiquidVolume": 21748,
+   "shape": "rectangular",
+   "xDimension": 28.0,
+   "yDimension": 55.48,
+   "x": 63.0,
+   "y": 42.74,
+   "z": 2
+  },
+  "A3": {
+   "depth": 14.0,
+   "totalLiquidVolume": 21748,
+   "shape": "rectangular",
+   "xDimension": 28.0,
+   "yDimension": 55.48,
+   "x": 93.0,
+   "y": 42.74,
+   "z": 2
+  },
+  "A4": {
+   "depth": 14.0,
+   "totalLiquidVolume": 10687,
+   "shape": "rectangular",
+   "xDimension": 13.76,
+   "yDimension": 55.48,
+   "x": 115.88,
+   "y": 42.74,
+   "z": 2
+  }
+ },
+ "groups": [
+  {
+   "metadata": {
+    "wellBottomShape": "flat"
+   },
+   "wells": [
+    "A1",
+    "A2",
+    "A3",
+    "A4"
+   ]
+  }
+ ],
+ "parameters": {
+  "format": "irregular",
+  "quirks": [],
+  "isTiprack": false,
+  "isMagneticModuleCompatible": false,
+  "loadName": "baebugs_mini_trommel_4bin"
+ },
+ "namespace": "custom_beta",
+ "version": 1,
+ "schemaVersion": 2,
+ "cornerOffsetFromSlot": {
+  "x": 0,
+  "y": 0,
+  "z": 0
+ },
+ "gripperOffsets": {},
+ "gripForce": 15,
+ "gripHeightFromLabwareBottom": 8.0,
+ "stackingOffsetWithLabware": {
+  "opentrons_universal_flat_adapter": {
+   "x": 0,
+   "y": 0,
+   "z": 4.0
+  }
+ }
+}

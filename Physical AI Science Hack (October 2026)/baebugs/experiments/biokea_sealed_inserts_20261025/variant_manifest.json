@@ -1,0 +1,84 @@
+{
+  "schema": "biokea.replaceable_inserts.v1",
+  "source": "OpenSCAD on magicPRObox",
+  "geometry_status": "PHOTO_ESTIMATED_NOT_MEASURED",
+  "parent_baebugs_cad_mmr_root": "c2292e38a40e789256cc0e14ee0565d032795ae5171fa88bdda6b9a05720c23f",
+  "publication_status": "CAD_CONCEPT_ONLY",
+  "reference_tray_fit": "UNKNOWN",
+  "material": {
+    "insert": "316L_STAINLESS_PROPOSED",
+    "frame": "UNDECIDED",
+    "gasket": "SILICONE_CANDIDATE_NOT_QUALIFIED",
+    "metal_tabs": "316L_CANDIDATE",
+    "parafilm_primary_gasket": false
+  },
+  "dimensions_mm": {
+    "tray_outer": [
+      132,
+      104,
+      14
+    ],
+    "plate_flat": [
+      117.2,
+      89.2,
+      0.8
+    ],
+    "sealing_land": 4.3,
+    "gasket_free_height": 1.6
+  },
+  "assurance": {
+    "cad_export": "EXECUTED",
+    "physical_sieve": "NOT_TESTED",
+    "gripper_load": "NOT_TESTED",
+    "seal_compression": "NOT_COMPUTED",
+    "pressure": "UNKNOWN",
+    "inverted_recovery": "NOT_TESTED",
+    "manual_camera_import": "IMPLEMENTED",
+    "actual_camera_data": "NOT_INGESTED"
+  },
+  "patterns": [
+    {
+      "id": "SS-RND-3p2-CAD-V1",
+      "shape": "round",
+      "aperture_nominal_mm": 3.2,
+      "path": "output/plate_round_laser_concept.dxf",
+      "sha256": "a867ed82ef90c3378f3f9382f94d212e7d1411b22627552f4fa684eb1ecc90b7",
+      "bytes": 179259,
+      "fabricated": false,
+      "physical_verified": false
+    },
+    {
+      "id": "SS-SLT-2p4x11p4-CAD-V1",
+      "shape": "slot",
+      "aperture_nominal_mm": [
+        2.4,
+        11.4
+      ],
+      "path": "output/plate_slot_laser_concept.dxf",
+      "sha256": "4beeb8f63608966052c911abeb91aea78ff0ceb24aafaff65f3228a0905b1921",
+      "bytes": 49138,
+      "fabricated": false,
+      "physical_verified": false
+    },
+    {
+      "id": "SS-HEX-3p0-CAD-V1",
+      "shape": "hex",
+      "aperture_nominal_mm": 3.0,
+      "path": "output/plate_hex_laser_concept.dxf",
+      "sha256": "a373dcaf8ff4442bc34bbd27442179f448fa06d021a50e3ff7ebe52ea7b7e5d3",
+      "bytes": 34841,
+      "fabricated": false,
+      "physical_verified": false
+    },
+    {
+      "id": "SS-MESH-CARRIER-CAD-V1",
+      "shape": "woven_mesh_carrier",
+      "aperture_nominal_mm": null,
+      "path": "output/plate_carrier_laser_concept.dxf",
+      "sha256": "672c2cb57cbf6be205bd580cf0a1ad628a5712c75a722611a6c965780184b6c1",
+      "bytes": 821,
+      "fabricated": false,
+      "physical_verified": false
+    }
+  ]
+}

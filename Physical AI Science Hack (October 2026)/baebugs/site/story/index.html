@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BaeBugs · End-to-end lab</title>
+<meta name="description" content="The BaeBugs virtual lab, step by step: filters, sieve robot, vision, local models, toy prints, remixable parts, chain of custody. Every number is read from repo files.">
+<style>
+:root{
+  --bg:#0b1014;--bg2:#111a20;--card:#152129;--line:#24343e;--ink:#e8eef2;--mute:#93a6b2;
+  --accent:#f2b84b;--teal:#5fd0bd;--rose:#ef7f73;--violet:#a99cf4;--ok:#7bd88f;--warn:#f2b84b;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;overflow:hidden}
+a{color:var(--teal)}
+.glow{position:fixed;inset:-20%;pointer-events:none;transition:background 1.2s ease;z-index:0;filter:blur(40px);opacity:.55}
+header{position:fixed;top:0;left:0;right:0;display:flex;align-items:center;gap:14px;padding:14px 22px;z-index:5;background:linear-gradient(var(--bg),transparent)}
+.brand{font-weight:700;letter-spacing:.04em}
+.brand span{color:var(--accent)}
+.rail{flex:1;display:flex;gap:6px;max-width:640px;margin:0 auto}
+.rail button{flex:1;height:6px;border:0;border-radius:3px;background:var(--line);cursor:pointer;padding:0;transition:background .4s}
+.rail button.on{background:var(--accent)}
+.rail button.done{background:#7a6331}
+.ctl{display:flex;gap:8px}
+.btn{background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:7px 14px;font:inherit;font-size:14px;cursor:pointer}
+.btn:hover{border-color:var(--accent)}
+.btn[aria-pressed=true]{border-color:var(--teal);color:var(--teal)}
+main{position:relative;height:100%;z-index:1}
+section.step{position:absolute;inset:0;padding:78px 22px 92px;overflow-y:auto;opacity:0;transform:translateY(28px) scale(.985);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1);pointer-events:none}
+section.step.on{opacity:1;transform:none;pointer-events:auto}
+section.step.out{opacity:0;transform:translateY(-28px) scale(.985)}
+.wrap{max-width:1080px;margin:0 auto}
+.kicker{font:600 13px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+h1{font-size:clamp(30px,5vw,54px);line-height:1.08;margin:.2em 0 .3em;letter-spacing:-.01em}
+h2{font-size:clamp(24px,3.4vw,38px);line-height:1.15;margin:.15em 0 .35em}
+.lede{color:var(--mute);font-size:clamp(16px,1.6vw,19px);max-width:760px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-top:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.card h3{margin:0 0 6px;font-size:15px;color:var(--mute);font-weight:600}
+.big{font-size:34px;font-weight:700;line-height:1.1}
+.big small{font-size:14px;color:var(--mute);font-weight:500}
+.tag{display:inline-block;font:600 11px var(--mono);padding:2px 8px;border-radius:999px;border:1px solid currentColor;margin-right:6px;letter-spacing:.06em}
+.t-ok{color:var(--ok)}.t-warn{color:var(--warn)}.t-rose{color:var(--rose)}.t-teal{color:var(--teal)}.t-vio{color:var(--violet)}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line);white-space:nowrap}
+th{color:var(--mute);font-weight:600}
+.scroll{overflow-x:auto}
+.bar{height:8px;border-radius:4px;background:var(--line);overflow:hidden;display:flex}
+.bar i{display:block;height:100%}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--mute);margin:6px 0 10px}
+.legend b{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.src{margin-top:22px;font-size:12.5px;color:var(--mute)}
+.src summary{cursor:pointer;color:var(--ink)}
+.src code{font-family:var(--mono);font-size:12px}
+.src li{margin:3px 0;word-break:break-all}
+.hash{font-family:var(--mono);font-size:12px;color:var(--teal);word-break:break-all}
+.flow{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.flow button{background:var(--card);border:1px solid var(--line);color:var(--ink);border-radius:12px;padding:12px 14px;text-align:left;cursor:pointer;flex:1 1 180px;font:inherit}
+.flow button:hover{border-color:var(--accent);transform:translateY(-2px)}
+.flow button{transition:transform .25s,border-color .25s}
+.flow b{display:block;font-size:12px;color:var(--accent);font-family:var(--mono)}
+.two{display:grid;gap:18px;grid-template-columns:1.1fr .9fr;margin-top:18px}
+@media (max-width:820px){.two{grid-template-columns:1fr}}
+footer{position:fixed;bottom:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:14px 22px;z-index:5;background:linear-gradient(transparent,var(--bg) 40%)}
+.count{font:13px var(--mono);color:var(--mute)}
+.note{font-size:13px;color:var(--mute);margin-top:10px}
+svg text{font-family:inherit}
+@media (prefers-reduced-motion:reduce){section.step{transition:opacity .2s}}
+</style>
+</head>
+<body>
+<div class="glow" id="glow"></div>
+<header>
+  <div class="brand">Bae<span>Bugs</span></div>
+  <nav class="rail" id="rail" aria-label="Steps"></nav>
+  <div class="ctl"><button class="btn" id="music" aria-pressed="false" title="Generated ambient score, off by default">♪ Music off</button></div>
+</header>
+<main id="main"></main>
+<footer>
+  <button class="btn" id="prev">← Back</button>
+  <span class="count" id="count"></span>
+  <button class="btn" id="next">Next →</button>
+</footer>
+<script>
+const D = {"custody": {"breaks": 25, "leaves": 1182, "mmr": ["assets_mmr", "hybrids_mmr", "hypergraph_mmr", "impact_mmr", "labbox_mmr", "upstream_mmr", "watcher_mmr"], "photo_breaks": 16, "result_breaks": 8, "rule": "every hash the graph references must resolve to stored bytes; otherwise BREAK"}, "filters": {"by_realisation": {"bought": 4, "metal": 12, "punched": 16}, "n": 32, "passage": [{"d": 5.0, "end_on": 27, "flat": 19, "id": "PERF-5", "retained": 36, "shape": "circle", "tumbled": 9}, {"d": 4.0, "end_on": 19, "flat": 19, "id": "GRID-4", "retained": 46, "shape": "square", "tumbled": 7}, {"d": 2.2, "end_on": 8, "flat": 9, "id": "HEX-2", "retained": 70, "shape": "hexagon", "tumbled": 4}, {"d": 1.2, "end_on": 5, "flat": 2, "id": "SCREEN-1", "retained": 82, "shape": "square", "tumbled": 2}, {"d": 1.587, "end_on": 7, "flat": 4, "id": "RND-1/16", "retained": 78, "shape": "circle", "tumbled": 2}, {"d": 3.175, "end_on": 15, "flat": 15, "id": "RND-1/8", "retained": 59, "shape": "circle", "tumbled": 2}, {"d": 4.762, "end_on": 27, "flat": 18, "id": "RND-3/16", "retained": 38, "shape": "circle", "tumbled": 8}, {"d": 6.35, "end_on": 35, "flat": 24, "id": "RND-1/4", "retained": 20, "shape": "circle", "tumbled": 12}, {"d": 9.524, "end_on": 31, "flat": 40, "id": "RND-3/8", "retained": 4, "shape": "circle", "tumbled": 16}, {"d": 12.699, "end_on": 20, "flat": 54, "id": "RND-1/2", "retained": 1, "shape": "circle", "tumbled": 16}, {"d": 15.874, "end_on": 11, "flat": 62, "id": "RND-5/8", "retained": 0, "shape": "circle", "tumbled": 18}, {"d": 25.398, "end_on": 0, "flat": 83, "id": "RND-1", "retained": 0, "shape": "circle", "tumbled": 8}, {"d": 6.35, "end_on": 26, "flat": 31, "id": "SQ-1/4", "retained": 17, "shape": "square", "tumbled": 17}, {"d": 2.852, "end_on": 13, "flat": 13, "id": "STAR-1/4", "retained": 60, "shape": "star", "tumbled": 5}, {"d": 5.703, "end_on": 28, "flat": 25, "id": "STAR-1/2", "retained": 26, "shape": "star", "tumbled": 12}, {"d": 3.328, "end_on": 11, "flat": 18, "id": "HEART-1/4", "retained": 58, "shape": "heart", "tumbled": 4}, {"d": 6.656, "end_on": 25, "flat": 42, "id": "HEART-1/2", "retained": 19, "shape": "heart", "tumbled": 5}, {"d": 6.35, "end_on": 34, "flat": 28, "id": "HEX-1/4", "retained": 18, "shape": "hexagon", "tumbled": 11}, {"d": 3.175, "end_on": 4, "flat": 35, "id": "SLOT-1/8x1/2", "retained": 39, "shape": "slot", "tumbled": 13}, {"d": 4.762, "end_on": 3, "flat": 51, "id": "SLOT-3/16x5/8", "retained": 21, "shape": "slot", "tumbled": 16}, {"d": 2.729, "end_on": 13, "flat": 14, "id": "CANVAS-7", "retained": 60, "shape": "square", "tumbled": 4}, {"d": 1.64, "end_on": 6, "flat": 5, "id": "CANVAS-10", "retained": 76, "shape": "square", "tumbled": 4}, {"d": 0.914, "end_on": 7, "flat": 0, "id": "CANVAS-14", "retained": 84, "shape": "square", "tumbled": 0}, {"d": 1.2, "end_on": 6, "flat": 2, "id": "TULLE", "retained": 82, "shape": "hexagon", "tumbled": 1}, {"d": 1.6, "end_on": 7, "flat": 5, "id": "SS-PERF-1.6", "retained": 78, "shape": "circle", "tumbled": 1}, {"d": 2.4, "end_on": 8, "flat": 9, "id": "SS-PERF-2.4", "retained": 70, "shape": "circle", "tumbled": 4}, {"d": 3.2, "end_on": 15, "flat": 15, "id": "SS-PERF-3.2", "retained": 59, "shape": "circle", "tumbled": 2}, {"d": 4.8, "end_on": 27, "flat": 19, "id": "SS-PERF-4.8", "retained": 38, "shape": "circle", "tumbled": 7}, {"d": 6.4, "end_on": 35, "flat": 24, "id": "SS-PERF-6.4", "retained": 20, "shape": "circle", "tumbled": 12}, {"d": 9.499, "end_on": 31, "flat": 40, "id": "SS-PERF-9.5", "retained": 4, "shape": "circle", "tumbled": 16}, {"d": 1.6, "end_on": 0, "flat": 14, "id": "SS-SLOT-1.6x12.7", "retained": 68, "shape": "slot", "tumbled": 9}, {"d": 3.2, "end_on": 0, "flat": 37, "id": "SS-SLOT-3.2x19", "retained": 38, "shape": "slot", "tumbled": 16}, {"d": 4.8, "end_on": 0, "flat": 54, "id": "SS-SLOT-4.8x19", "retained": 21, "shape": "slot", "tumbled": 16}, {"d": 1.0, "end_on": 5, "flat": 0, "id": "SS-MESH-1.0", "retained": 84, "shape": "square", "tumbled": 2}, {"d": 2.0, "end_on": 8, "flat": 9, "id": "SS-MESH-2.0", "retained": 71, "shape": "square", "tumbled": 3}], "rows": [{"id": "RND-1/16", "inscribed_d_mm": 1.587, "material": "aluminium shim <= 0.3 mm (punched)", "open_area": 0.321, "printable": true, "realisation": "punched", "shape": "circle"}, {"id": "RND-1/8", "inscribed_d_mm": 3.175, "material": "aluminium shim <= 0.3 mm (punched)", "open_area": 0.491, "printable": true, "realisation": "punched", "shape": "circle"}, {"id": "RND-3/16", "inscribed_d_mm": 4.762, "material": "aluminium shim <= 0.3 mm (punched)", "open_area": 0.515, "printable": true, "realisation": "punched", "shape": "circle"}, {"id": "RND-1/4", "inscribed_d_mm": 6.35, "material": "aluminium shim <= 0.3 mm (punched)", "open_area": 0.54, "printable": true, "realisation": "punched", "shape": "circle"}, {"id": "RND-3/8", "inscribed_d_mm": 9.524, "material": "aluminium shim <= 0.3 mm (punched)", "open_area": 0.515, "printable": true, "realisation": "punched", "shape": "circle"}, {"id": "RND-1/2", "inscribed_d_mm": 12.699, "material": "aluminium shim <= 0.3 mm (punched)", "open_area": 0.523, "printable": true, "realisation": "punched", "shape": "circle"}, {"id": "RND-5/8", "inscribed_d_mm": 15.874, "material": "aluminium shim <= 0.3 mm (punched)", "open_area": 0.409, "printable": true, "realisation": "punched", "shape": "circle"}, {"id": "RND-1", "inscribed_d_mm": 25.398, "material": "aluminium shim <= 0.3 mm (punched)", "open_area": 0.262, "printable": true, "realisation": "punched", "shape": "circle"}, {"id": "SQ-1/4", "inscribed_d_mm": 6.35, "material": "aluminium shim <= 0.3 mm (punched)", "open_area": 0.687, "printable": true, "realisation": "punched", "shape": "square"}, {"id": "STAR-1/4", "inscribed_d_mm": 2.852, "material": "aluminium shim <= 0.3 mm (punched)", "open_area": 0.227, "printable": true, "realisation": "punched", "shape": "star"}, {"id": "STAR-1/2", "inscribed_d_mm": 5.703, "material": "aluminium shim <= 0.3 mm (punched)", "open_area": 0.22, "printable": true, "realisation": "punched", "shape": "star"}, {"id": "HEART-1/4", "inscribed_d_mm": 3.328, "material": "aluminium shim <= 0.3 mm (punched)", "open_area": 0.379, "printable": true, "realisation": "punched", "shape": "heart"}, {"id": "HEART-1/2", "inscribed_d_mm": 6.656, "material": "aluminium shim <= 0.3 mm (punched)", "open_area": 0.368, "printable": true, "realisation": "punched", "shape": "heart"}, {"id": "HEX-1/4", "inscribed_d_mm": 6.35, "material": "aluminium shim <= 0.3 mm (punched)", "open_area": 0.487, "printable": true, "realisation": "punched", "shape": "hexagon"}, {"id": "SLOT-1/8x1/2", "inscribed_d_mm": 3.175, "material": "aluminium shim <= 0.3 mm (punched)", "open_area": 0.493, "printable": true, "realisation": "punched", "shape": "slot"}, {"id": "SLOT-3/16x5/8", "inscribed_d_mm": 4.762, "material": "aluminium shim <= 0.3 mm (punched)", "open_area": 0.511, "printable": true, "realisation": "punched", "shape": "slot"}, {"id": "CANVAS-7", "inscribed_d_mm": 2.729, "material": "as sold (nylon / polyester)", "open_area": 0.554, "printable": true, "realisation": "bought", "shape": "square"}, {"id": "CANVAS-10", "inscribed_d_mm": 1.64, "material": "as sold (nylon / polyester)", "open_area": 0.401, "printable": true, "realisation": "bought", "shape": "square"}, {"id": "CANVAS-14", "inscribed_d_mm": 0.914, "material": "as sold (nylon / polyester)", "open_area": 0.228, "printable": false, "realisation": "bought", "shape": "square"}, {"id": "TULLE", "inscribed_d_mm": 1.2, "material": "as sold (nylon / polyester)", "open_area": 0.267, "printable": true, "realisation": "bought", "shape": "hexagon"}, {"id": "SS-PERF-1.6", "inscribed_d_mm": 1.6, "material": "stainless sheet or woven mesh (bought; laser-cut for custom shapes)", "open_area": 0.326, "printable": true, "realisation": "metal", "shape": "circle"}, {"id": "SS-PERF-2.4", "inscribed_d_mm": 2.4, "material": "stainless sheet or woven mesh (bought; laser-cut for custom shapes)", "open_area": 0.439, "printable": true, "realisation": "metal", "shape": "circle"}, {"id": "SS-PERF-3.2", "inscribed_d_mm": 3.2, "material": "stainless sheet or woven mesh (bought; laser-cut for custom shapes)", "open_area": 0.498, "printable": true, "realisation": "metal", "shape": "circle"}, {"id": "SS-PERF-4.8", "inscribed_d_mm": 4.8, "material": "stainless sheet or woven mesh (bought; laser-cut for custom shapes)", "open_area": 0.523, "printable": true, "realisation": "metal", "shape": "circle"}, {"id": "SS-PERF-6.4", "inscribed_d_mm": 6.4, "material": "stainless sheet or woven mesh (bought; laser-cut for custom shapes)", "open_area": 0.548, "printable": true, "realisation": "metal", "shape": "circle"}, {"id": "SS-PERF-9.5", "inscribed_d_mm": 9.499, "material": "stainless sheet or woven mesh (bought; laser-cut for custom shapes)", "open_area": 0.513, "printable": true, "realisation": "metal", "shape": "circle"}, {"id": "SS-SLOT-1.6x12.7", "inscribed_d_mm": 1.6, "material": "stainless sheet or woven mesh (bought; laser-cut for custom shapes)", "open_area": 0.439, "printable": true, "realisation": "metal", "shape": "slot"}, {"id": "SS-SLOT-3.2x19", "inscribed_d_mm": 3.2, "material": "stainless sheet or woven mesh (bought; laser-cut for custom shapes)", "open_area": 0.455, "printable": true, "realisation": "metal", "shape": "slot"}, {"id": "SS-SLOT-4.8x19", "inscribed_d_mm": 4.8, "material": "stainless sheet or woven mesh (bought; laser-cut for custom shapes)", "open_area": 0.491, "printable": true, "realisation": "metal", "shape": "slot"}, {"id": "SS-MESH-1.0", "inscribed_d_mm": 1.0, "material": "stainless sheet or woven mesh (bought; laser-cut for custom shapes)", "open_area": 0.25, "printable": true, "realisation": "metal", "shape": "square"}, {"id": "SS-MESH-2.0", "inscribed_d_mm": 2.0, "material": "stainless sheet or woven mesh (bought; laser-cut for custom shapes)", "open_area": 0.45, "printable": true, "realisation": "metal", "shape": "square"}, {"id": "SS-HEX-2.5AF", "inscribed_d_mm": 2.5, "material": "stainless sheet or woven mesh (bought; laser-cut for custom shapes)", "open_area": 0.431, "printable": true, "realisation": "metal", "shape": "hexagon"}], "scad": 32, "stl": 31, "toys_tested": 91}, "models": {"by_split": {"test": 231, "train": 2015, "val": 381}, "crops": 2627, "families": {"FAMILY_Diptera": {"test_f1": null, "val_f1": 0.9673, "verdict": null}, "FAMILY_Hymenoptera": {"test_f1": 0.1673, "val_f1": 0.8825, "verdict": "NULL"}}, "leakage": 0, "order": {"classes": ["Coleoptera", "Diptera", "Hemiptera", "Hymenoptera", "Lepidoptera", "other"], "test": {"macro_f1": 0.7004, "majority_macro_f1": 0.1352, "n": 231, "per_class_f1": {"Coleoptera": 0.8947, "Hemiptera": 0.0, "Hymenoptera": 0.9667, "Lepidoptera": 0.9739, "other": 0.6667}, "top1": 0.9481}, "val": {"macro_f1": 0.9189, "majority_macro_f1": 0.1101, "n": 381, "per_class_f1": {"Coleoptera": 0.9388, "Diptera": 0.948, "Hemiptera": 0.8846, "Hymenoptera": 0.9462, "Lepidoptera": 0.9778, "other": 0.8182}, "top1": 0.9396}, "verdict": "USEFUL", "weights_sha256": "8a9dcb7af1252a6346dcb151717e5c3cb55078e7d4737c64913c8d015eac8f02"}, "protocol_sha256": "31b1b0a655f187e5d564d7ca6c1ecd1a9ddaf8d98576bb21cfaa07ecddd8b283"}, "remix": {"grams": 336.3, "items": [{"bbox_mm": [127.76, 85.48, 20.0], "grams": 50.6, "id": "print-rack-96", "leaf": "92c27bd73a58928a5a14cbbde4b29dc5c931c79aa18b6f7b46d6aff6e8ea84f4", "licence": "MIT", "material": "PETG", "name": "SBS 96 rack, 9 mm pitch", "usd": 1.11}, {"bbox_mm": [127.76, 85.48, 30.0], "grams": 56.0, "id": "print-cryo-24", "leaf": "71398756409f5eafdc5d99797de0b36f8ec6834364e8b0f73cf3ce3e5c8674cf", "licence": "MIT", "material": "PETG", "name": "SBS 4x6 rack, 2 mL cryotubes", "usd": 1.23}, {"bbox_mm": [127.76, 85.48, 40.0], "grams": 62.8, "id": "print-conical-15", "leaf": "fd4bda7858db43763facd08c9f16fe09d7fcc3720415bc6adab8308629973f99", "licence": "MIT", "material": "PETG", "name": "SBS 3x5 rack, 15 mL conicals", "usd": 1.38}, {"bbox_mm": [127.76, 85.48, 40.0], "grams": 61.2, "id": "print-conical-50", "leaf": "2051e448210fb31d3d29bafcbe60f3b0a023ef254643f8515bc50683fb1c9d4e", "licence": "MIT", "material": "PETG", "name": "SBS 2x3 rack, 50 mL conicals", "usd": 1.35}, {"bbox_mm": [133.0, 133.0, 12.0], "grams": 42.9, "id": "print-cryo-100", "leaf": "c125e41c6dd68c158fa8eaa6394945728e1d3ab4df5b9de60a64429819dad54f", "licence": "MIT", "material": "PP (filament)", "name": "10x10 cryo grid insert, 133 mm", "usd": 1.93}, {"bbox_mm": [127.76, 85.48, 12.0], "grams": 24.6, "id": "print-frame-sbs", "leaf": "2a0f5b06e1a854bc8bdab083fc8ac71c55c4b7aa61a1a4e81e0a8853007c80b8", "licence": "MIT", "material": "PETG", "name": "SBS lipped frame ('folder')", "usd": 0.54}, {"bbox_mm": [127.76, 85.48, 8.0], "grams": 24.3, "id": "print-grid-mesh", "leaf": "7c5b54d53eb4ee14fc2ae6bc043de1af84287e0c54980ddbb0e8a17ea6274ced", "licence": "MIT", "material": "PETG", "name": "SBS 2x3 screened grid frame", "usd": 0.54}, {"bbox_mm": [117.16, 74.88, 6.0], "grams": 13.9, "id": "print-honeycomb", "leaf": "71cf01166e8ca8f51f9860f3159651748a395c143736a376168b3770f38f8cc6", "licence": "MIT", "material": "PLA", "name": "Honeycomb insert for SBS frame", "usd": 0.28}], "usd": 8.36}, "repo": "https://github.com/biobitworks/baebugs", "root": "7d63e9bab5e8f2c39a8808bc543427ced7ec176226e32f2618ba67f108775c44", "roots": {"aok": "92ae3e4df4d341050903a4869a27d829f67a1abb3ed6c5432e32e47f51435e0d", "assets": "e573b35c3edc913fed4d3d313f673aca2351282a285672894606519903b02190", "assets_mmr": "97d20c6b90e0385d7cbac87551f93381eba7eeb2e05cecb7ed9f352f349281b2", "hybrids_mmr": "d7e422523f408c84c478bdb5d4dad978621c58d2c535653817bf535a04bf9ea4", "hypergraph": "8cc197054b823ec77d6d536b6c0129a497d725458e07c67b88af099adfb3dcc7", "hypergraph_mmr": "c20a893a164051e5ba7c0225bf029b41c0cd748b38fda32975d5638e4920c4e5", "impact_mmr": "bbbf8f3daaac1f80cc418c20d1f096307195798f378383ab4807a69fd1dba359", "labbox_mmr": "ee4a72209e017678efc3caa998c89d95d5b559e71aa9b6c7a321f5151c09284d", "upstream_mmr": "38a4a379f5c6d0d5eb9b742eceb698f8cb4e72309bf1f2095cca9e7d87c85513", "watcher_mmr": "a10954cb064373be354c752db0d57b7fa84cec94de94cb5fe7446a44dd3acc9c"}, "sources": {"custody": [{"bytes": 524880, "path": "site/mvp/mvp.json", "sha256": "70a7ec1860dafab5f6728ffb7dc0c73d02f1ffbbb15220f17153bce0fa22dddb"}, {"bytes": 558193, "path": "kg/aok.json", "sha256": "0c44d2673f32911f4b13ea1e7ca3e9ce195f42baec36d022e35c127641e72959"}], "filters": [{"bytes": 22244, "path": "print/filters/filters.json", "sha256": "e80c67c61bb87aeec93266dab742227d9933d151b5372195fda284b7b8de565d"}, {"bytes": 23910, "path": "print/filters/passage/body_folded/summary.json", "sha256": "4eb7b434afafd109f4423777bb22b51e9fbc615fcfafc094ae3b3b27ac0123e0"}, {"bytes": 1586, "path": "print/filters/scad/filter_plate.scad", "sha256": "8d5c53425b37448a4562a30d7069ff9dc28d552d24a509cae8a0cbf3464bb9b8"}, {"bytes": 10919, "path": "baebugs/punch_filters.py", "sha256": "cf2a2f549a5fc662176ad795a80eb342019ba43e0c9ab0b246ea059912e3ffc8"}, {"bytes": 10993, "path": "baebugs/passage_twin.py", "sha256": "61de14937d1abd940b7a56be3a665d4f8e32a1b70bae12cc291bb81b8ef83d0f"}], "models": [{"bytes": 3761, "path": "daisy/results/DAISY-BB-004/v4/results.json", "sha256": "41beb0f25268b186b639e2069177ed9638f85a17442157eaf84202bd7f3019f8"}, {"bytes": 2641, "path": "daisy/taxon_crops_report.json", "sha256": "b39645ea735d2839866df06a1d989986fe25aceaddac74d16d2d541f51030d0c"}, {"bytes": 2182, "path": "daisy/DAISY-BB-004-prereg.md", "sha256": "5bf758d73c657d54158557e64da7da0cc00481a7b685683d6c78eb1501b814c4"}, {"bytes": 6103, "path": "baebugs/taxon_crops.py", "sha256": "11c0f764aa0dac78581a47cc46ef2438d27e1c35fc694d7ef2c38011d7d845cf"}, {"bytes": 13024, "path": "baebugs/train.py", "sha256": "caf7712993aa3af21081bf0ef1f6d00ff04e2277e42f584c9766e38d8fc10be6"}], "remix": [{"bytes": 4032, "path": "print/labware/README.md", "sha256": "f07eebef7bae0a62f9e5956563526e197653f4e46b3674aa94f0b78250087862"}, {"bytes": 4988, "path": "print/labware/scad/labware.scad", "sha256": "025cbfe59bfb2d32557e6a9d5cc7a1fbf1fc54a5ea617dbfabe5a0ebfc3ffba2"}, {"bytes": 18329, "path": "print/labware/merkle/lab_root.json", "sha256": "106893cbef42dc0532be44ff0781faf109230ea212c0ae1341f7cf344dd4124f"}], "robot": [{"bytes": 9613, "path": "baebugs/variable_aperture.py", "sha256": "db5e20883b7d33f16a368c304a2447ba17ca30b11c68d9dac808745b6ba312fe"}, {"bytes": 1060, "path": "print/filters/variable_aperture/slot_pair.scad", "sha256": "1f38ee46a9ed7b9cf57219c21d7131c8032da6e9aae31a511add644c475eae40"}, {"bytes": 2562, "path": "print/filters/variable_aperture/demo_run_slot.json", "sha256": "0b5fd9d05a231e9a7e138ad101171db0684794de407e334d9cdadf716e877ed5"}, {"bytes": 6514, "path": "filtration-robot/README.md", "sha256": "06162d918cfd77b138c15c4d67fa868516df228771e640a8dee682d6eaf4736b"}, {"bytes": 11756, "path": "filtration-robot/vision/filter_plan.py", "sha256": "0883b61ae3597c5dfd2ebd09da1fe9e41ed37b6559995e04c2dc22544f210c37"}, {"bytes": 2898, "path": "docs/workflow_video/README.md", "sha256": "a14e364faeb19b52b8bab844f42bf35639f8cb6958bea15bcca70a7d15c25d44"}, {"bytes": 1554474, "path": "docs/sieving_robot/sieving_demo.mp4", "sha256": "feab5ba13ba572bb8a872eac495997162da286646dea80fe52b6ae39ce56455a"}, {"bytes": 1784, "path": "docs/sieving_robot/README.md", "sha256": "1ecfb6e067e1a15242050f04d6ad64f65466ded16671f8ea191f9b4ed60130b1"}], "toys": [{"bytes": 32332, "path": "print/fuse1/manifest.csv", "sha256": "71051079563c4fa76e7838435e1eb338578a48da25081579e33b360a9fed1f3e"}, {"bytes": 4494, "path": "print/fuse1/README.md", "sha256": "122144e1f3d19e6fc1c94fe4dd4cde78c1c1bca5ef3ebcb96922215fca241d40"}, {"bytes": 5799, "path": "baebugs/scad_export.py", "sha256": "b6bd6c8bc4105b85a423a57ca041ee08083b36d98b8228d734a6617f0d35a22a"}], "vision": [{"bytes": 3197, "path": "docs/toy_photo_models/results.json", "sha256": "a631e70047f561ebfd63356e16f9973784aba08de29f1dd0f0d8dc88a15c6028"}, {"bytes": 638, "path": "baebugs/camera.py", "sha256": "a545b67cc618897c3adcc07179d7b64de0fe07974a563346796dfbb28e7334fc"}, {"bytes": 5321, "path": "baebugs/toy_photo_models.py", "sha256": "0cfb3259634966ef36204bc29b42823a1efb7846287df13cc02ad015c30cc3f5"}, {"bytes": 2932, "path": "baebugs/local_vlm.py", "sha256": "b6c3535a53094f1354e5f5dfe5402220e568ce2017f24d986b8143e9f93bccaf"}]}, "toys": {"len_max": 29.9, "len_min": 1.0, "n": 91, "orders": [["Hymenoptera", 35], ["Hemiptera", 17], ["Coleoptera", 16], ["Diptera", 10], ["Lepidoptera", 7], ["Odonata", 3], ["Thysanoptera", 3]], "plans": 13, "roles": {"edge_negative:below_database": 11, "edge_negative:family_stats_suspect": 18, "edge_negative:size_suspect": 4, "positive": 58}, "scad": 92}, "vision": {"models": {"order": {"file": "ORDER_best.pt", "sha256": "8a9dcb7af1252a6346dcb151717e5c3cb55078e7d4737c64913c8d015eac8f02"}, "owlv2": "google/owlv2-base-patch16-ensemble", "vlm": "qwen2.5vl:3b", "yoloe": "yoloe-11s-seg.pt"}, "photos": [{"frame_root": "5b066407149e4a66646fc156fc7f6df22a06ad764dbf98a1cd63f7f1e1596924", "owlv2": [{"conf": 0.307, "label": "toy insect", "order": {"conf": 0.568, "label": "Coleoptera"}}, {"conf": 0.278, "label": "insect", "order": {"conf": 0.943, "label": "Hemiptera"}}, {"conf": 0.267, "label": "insect", "order": {"conf": 0.886, "label": "Lepidoptera"}}, {"conf": 0.158, "label": "toy insect", "order": {"conf": 0.998, "label": "Lepidoptera"}}], "photo": "pa12_toys_two_on_floor.jpg", "sha256": "ce17c7f7fdd8c11d9b19c4301fab5a937b2105ca580ae0eded7cf54d00958187", "vlm_count": 2, "yoloe": 3}, {"frame_root": "a4594ab440f23178ef6dde650097ce8fcb464975ee06dec0f6fc4759a6157709", "owlv2": [{"conf": 0.16, "label": "toy insect", "order": {"conf": 0.445, "label": "Lepidoptera"}}], "photo": "pa12_toys_box.jpg", "sha256": "9d819a7ac5271eaa71b803d37fcf7f7911a4cfc986556debd0b19d110b1eca4e", "vlm_count": 10, "yoloe": 0}], "prompts": ["toy insect", "insect", "beetle", "fly", "bee"]}};
+const pct = x => (x*100).toFixed(1)+'%';
+const f2 = x => x==null?'n/a':(+x).toFixed(3);
+const short = h => h.slice(0,12)+'…';
+const esc = s => String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const gh = p => `${D.repo}/blob/main/${p}`;
+function sources(key, extra=''){
+  const rows = (D.sources[key]||[]).map(s=>`<li><a href="${gh(s.path)}" target="_blank" rel="noopener"><code>${esc(s.path)}</code></a> · <span class="hash">${s.sha256}</span></li>`).join('');
+  return `<details class="src"><summary>Sources read for this step (sha256 of the bytes in the repo)</summary><ul>${rows}${extra}</ul></details>`;
+}
+const F=D.filters, V=D.vision, M=D.models, T=D.toys, R=D.remix, C=D.custody;
+const metal=F.rows.filter(r=>r.realisation==='metal'), plastic=F.rows.filter(r=>r.realisation!=='metal');
+
+const STEPS = [
+ {k:'Overview', hue:'#f2b84b', html:`
+  <div class="kicker">End-to-end virtual lab</div>
+  <h1>From a jar of litter to a hashed, replayable record.</h1>
+  <p class="lede">Seven stations, each with the files that back it. Interchangeable filters and a metal sieve stage separate by size, cameras check every handoff, local models label the crops, printed toys and remixable labware stand in for specimens and kit, and every byte lands in one Merkle root.</p>
+  <div class="yt" id="yt-demo" style="margin:18px 0;max-width:760px"><button type="button" onclick="this.parentNode.innerHTML='<iframe width=&quot;100%&quot; style=&quot;aspect-ratio:16/9;border:0;border-radius:12px&quot; src=&quot;https://www.youtube-nocookie.com/embed/O4Gq-r018cI?autoplay=1&quot; title=&quot;BaeBugs demo&quot; allow=&quot;autoplay; encrypted-media; picture-in-picture&quot; allowfullscreen></iframe>'" style="width:100%;aspect-ratio:16/9;border:1px solid #24343e;border-radius:12px;background:#152129;color:#e8eef2;font:600 18px system-ui;cursor:pointer">▶ Play the demo video (loads from YouTube)</button><div style="font-size:13px;opacity:.75;margin-top:6px"><a href="https://youtu.be/O4Gq-r018cI" target="_blank" rel="noopener">Open on YouTube</a></div></div>
+  <div class="flow">${['Interchangeable filters','Plastic vs metal sieve robot','Computer vision at each step','Local models + Python preprocessing','Toy printing','Remixable objects, STL ↔ OpenSCAD','Chain of custody + cost'].map((t,i)=>`<button data-go="${i+1}"><b>0${i+1}</b>${t}</button>`).join('')}</div>
+  <div class="grid">
+   <div class="card"><h3>Graph root</h3><div class="hash">${D.root}</div></div>
+   <div class="card"><h3>Hashed leaves</h3><div class="big">${C.leaves.toLocaleString()}</div></div>
+   <div class="card"><h3>Recorded BREAKs</h3><div class="big">${C.breaks} <small>missing bytes, named, not hidden</small></div></div>
+   <div class="card"><h3>Printed remix set</h3><div class="big">$${R.usd.toFixed(2)} <small>${R.grams} g of filament</small></div></div>
+  </div>`},
+
+ {k:'Filters', hue:'#5fd0bd', html:`
+  <div class="kicker">01 · Interchangeable filters</div>
+  <h2>${F.n} hole types, one 50 mm plate format.</h2>
+  <p class="lede">Every filter is the same 50 × 50 mm plate, so they swap in and out of a stack. ${F.by_realisation.punched} are cut with craft punches into PET or acetate, ${F.by_realisation.bought} are bought (plastic canvas, tulle), ${F.by_realisation.metal} are stainless perforated sheet, mesh or slots. ${F.stl} printable STLs and ${F.scad} OpenSCAD files sit beside them.</p>
+  <div class="two">
+   <div class="card scroll"><h3>Library (first 14 of ${F.n})</h3>
+    <table><tr><th>ID</th><th>Shape</th><th>Inscribed Ø mm</th><th>Open area</th><th>Made as</th></tr>
+    ${F.rows.slice(0,14).map(r=>`<tr><td>${esc(r.id)}</td><td>${r.shape}</td><td>${r.inscribed_d_mm??'n/a'}</td><td>${r.open_area!=null?pct(r.open_area):'n/a'}</td><td><span class="tag ${r.realisation==='metal'?'t-vio':'t-teal'}">${r.realisation}</span></td></tr>`).join('')}
+    </table></div>
+   <div class="card"><h3>Passage twin: 91 toy insects tested per hole</h3>
+    <div class="legend"><span><b style="background:var(--ok)"></b>pass flat</span><span><b style="background:var(--teal)"></b>tumbled</span><span><b style="background:var(--warn)"></b>end-on only</span><span><b style="background:var(--rose)"></b>retained</span></div>
+    ${F.passage.slice(0,9).map(p=>{const t=p.flat+p.tumbled+p.end_on+p.retained;return `<div style="margin:9px 0"><div style="display:flex;justify-content:space-between;font-size:13px"><span>${esc(p.id)} · ${p.shape} ${p.d} mm</span><span class="count">${p.retained}/${t} kept</span></div><div class="bar"><i style="width:${p.flat/t*100}%;background:var(--ok)"></i><i style="width:${p.tumbled/t*100}%;background:var(--teal)"></i><i style="width:${p.end_on/t*100}%;background:var(--warn)"></i><i style="width:${p.retained/t*100}%;background:var(--rose)"></i></div></div>`}).join('')}
+    <p class="note">Finding from the twin: on round, square and hex holes a body lying flat passes only near 0.6 to 0.7 × the inscribed diameter, so most passage is end-on. Slots behave differently, so hole shape carries information.</p>
+   </div>
+  </div>
+  ${sources('filters')}`},
+
+ {k:'Sieve robot', hue:'#a99cf4', html:`
+  <div class="kicker">02 · Modified filtration system</div>
+  <h2>Plastic plates to explore, a stainless stage for the robot.</h2>
+  <p class="lede">Rule from <code>baebugs/labbox.py</code>: plastic is the frame and robot interface, metal is the aperture. One printed tray frame takes 100 × 100 mm inserts 0.3 to 0.8 mm thick, so the aperture belongs to the insert. FDM PLA and PETG failed on the perforated trommel drum, so drum sections moved to PA12 on the Fuse 1+. Cheap punched or printed plastic plates are for trying hole shapes. The robot stage is metal: two laser-cut 316L slot plates stacked, the top one driven across on a lead screw, so a single stage steps its opening down through size classes instead of swapping plates.</p>
+  <div class="grid">
+   <div class="card"><h3>Plastic lane</h3><div class="big">${plastic.length} <small>plates</small></div><p class="note">PET or acetate (punched), plastic canvas and tulle (bought), PA12 printed on a Fuse 1+. Swappable by hand or by an arm. Holes under 1 mm are not printable.</p></div>
+   <div class="card"><h3>Metal lane</h3><div class="big">${metal.length} <small>stainless options</small></div><p class="note">Perforated sheet ${metal.filter(r=>r.id.includes('PERF')).map(r=>r.inscribed_d_mm).join(', ')} mm, woven mesh, and slots. Thin, rigid, washable, and cut by laser for custom shapes.</p></div>
+   <div class="card"><h3>Variable-aperture stage</h3><div class="big">6 → 3 → 1.5 <small>mm schedule</small></div><p class="note">316L, 0.5 mm plates, 1.25 mm lead screw, 3200 steps/rev. Largest class flushed to its own tray first.</p></div>
+  </div>
+  <div class="two">
+   <div class="card"><h3>Gates at every width (each a Merkle leaf)</h3>
+    <p><span class="tag t-rose">G_empty</span>plates move only when the stage is drained, since sliding edges would cut legs and wings.</p>
+    <p><span class="tag t-teal">G_measured</span>the camera-measured opening must match the commanded width.</p>
+    <p><span class="tag t-ok">G_capture</span>every specimen retained at this width is accounted for in its tray.</p>
+    <p class="note">A failed gate is a BREAK in the run's MMR, not a silent retry. Proof of concept, uncalibrated.</p></div>
+   <div class="card"><h3>Arm that swaps filters <span class="tag t-teal">contributed, PR #24</span></h3>
+    <p class="note">A contributed SO-101 arm workflow: a camera sizes objects in a dish, a planner picks filters, and the arm moves them in a 3-slot vertical rig, reading a printed marker on each filter before every pick. Contributed under the repo's MIT licence and now in <code>filtration-robot/</code>; no run on real specimens is recorded yet.</p>
+    <p class="note">The teammates' 63 s simulation of the stacked-tray loop is <a href="${gh('docs/sieving_robot/sieving_demo.mp4')}" target="_blank" rel="noopener">docs/sieving_robot/sieving_demo.mp4</a> (illustrative purity, not measured). <code>docs/workflow_video/</code> (PR #23) holds an OpenSCAD-rendered animation of the BioKEA line with these additions; it is labelled illustrative, not hardware footage.</p></div>
+  </div>
+  ${sources('robot')}`},
+
+ {k:'Vision', hue:'#ef7f73', html:`
+  <div class="kicker">03 · Computer vision at each step</div>
+  <h2>Three detectors and a describer look at the same frame.</h2>
+  <p class="lede">A USB camera or microscope captures each handoff (<code>baebugs/camera.py</code>). On real photos of the printed PA12 toys, YOLOE and OWLv2 find toys from text prompts, the DAISY-004 order classifier labels each OWLv2 crop, and a local VLM (${esc(V.models.vlm)}) describes the whole frame. All outputs are tagged INFERRED and bound to the photo's frame root.</p>
+  <div class="grid">
+   ${V.photos.map(p=>`<div class="card"><h3>${esc(p.photo)}</h3>
+     <p><span class="tag t-teal">YOLOE</span>${p.yoloe} detections</p>
+     <p><span class="tag t-vio">OWLv2 → ORDER</span>${p.owlv2.length} crops</p>
+     <ul style="margin:4px 0 8px;padding-left:18px;font-size:13.5px">${p.owlv2.map(o=>`<li>${esc(o.label)} ${o.conf} → ${o.order?esc(o.order.label)+' '+o.order.conf:'n/a'}</li>`).join('')}</ul>
+     <p><span class="tag t-warn">VLM</span>counted ${p.vlm_count??'n/a'} toys</p>
+     <div class="note">frame root <span class="hash">${short(p.frame_root)}</span></div></div>`).join('')}
+   <div class="card"><h3>Where cameras check</h3><p class="note">Intake (scale ruler), each sieve width (G_measured), capture trays (G_capture), and label reading for museum specimens. The order model also labelled a patch of bare floor Lepidoptera at 0.998 in the two-toy photo, so a photo-versus-render check is the next fix. The detectors disagree on the box photo (YOLOE 0, OWLv2 1, VLM ${V.photos[1]?.vlm_count}), which is why each model's answer is kept separately rather than merged.</p></div>
+  </div>
+  ${sources('vision')}`},
+
+ {k:'Local models', hue:'#7bd88f', html:`
+  <div class="kicker">04 · Local training with Python preprocessing</div>
+  <h2>${M.crops.toLocaleString()} labelled crops, split by source photo.</h2>
+  <p class="lede">Preprocessing in Python: YOLOE pseudo-label polygons cut each specimen out of its photo, each crop inherits the photo's GBIF taxonomy and licence, and splits follow the source photo so no photo spans train and test (${M.leakage} leaked media ids). Training runs locally on Apple MPS with YOLO classifiers; Ollama serves the VLM offline.</p>
+  <div class="grid">
+   <div class="card"><h3>Split</h3><div class="big">${M.by_split.train} / ${M.by_split.val} / ${M.by_split.test}</div><p class="note">train / val / test crops</p></div>
+   <div class="card"><h3>ORDER classifier, test</h3><div class="big">${f2(M.order.test.macro_f1)} <small>macro-F1 vs ${f2(M.order.test.majority_macro_f1)} majority</small></div><p><span class="tag t-ok">${M.order.verdict}</span>top-1 ${pct(M.order.test.top1)}, n=${M.order.test.n}</p></div>
+   ${Object.entries(M.families).map(([k,v])=>`<div class="card"><h3>${esc(k.replace('_',' '))}</h3><div class="big">${f2(v.test_f1)} <small>test macro-F1</small></div><p><span class="tag ${v.verdict==='USEFUL'?'t-ok':'t-warn'}">${v.verdict||'UNDECIDED'}</span>val ${f2(v.val_f1)}</p></div>`).join('')}
+  </div>
+  <div class="card" style="margin-top:14px"><h3>ORDER per-class F1 on test</h3>
+   ${Object.entries(M.order.test.per_class_f1).map(([c,v])=>`<div style="display:flex;gap:10px;align-items:center;margin:6px 0"><span style="width:110px;font-size:13px">${c}</span><div class="bar" style="flex:1"><i style="width:${v*100}%;background:var(--ok)"></i></div><span class="count">${v.toFixed(2)}</span></div>`).join('')}
+   <p class="note">Hemiptera's 0 comes from 2 test crops, and there are no Diptera in the order-level test set. Weights <span class="hash">${short(M.order.weights_sha256)}</span>, frozen protocol <span class="hash">${short(M.protocol_sha256)}</span>.</p></div>
+  ${sources('models')}`},
+
+ {k:'Toy printing', hue:'#f2b84b', html:`
+  <div class="kicker">05 · Toy printing</div>
+  <h2>${T.n} printable toy insects, sized from data.</h2>
+  <p class="lede">Parametric stand-ins (ellipsoid body segments, 0.8 mm rod legs, flat plate wings) printed in PA12 on a Formlabs Fuse 1+. Lengths run ${T.len_min} to ${T.len_max} mm across ${T.plans} body plans. They exist to test sieves and the vision pipeline with known shapes. They are toys, not replicas, and every row says so.</p>
+  <div class="two">
+   <div class="card"><h3>By order</h3>${T.orders.map(([o,n])=>`<div style="display:flex;gap:10px;align-items:center;margin:6px 0"><span style="width:110px;font-size:13px">${o}</span><div class="bar" style="flex:1"><i style="width:${n/T.n*100}%;background:var(--accent)"></i></div><span class="count">${n}</span></div>`).join('')}</div>
+   <div class="card"><h3>What each toy carries</h3><p class="note">A Merkle insect hash on the STL, an editable OpenSCAD twin (${T.scad} .scad files), a size flag (database-derived, fill-in, or suspect), and a training role: ${Object.entries(T.roles).map(([k,v])=>`${v} ${k}`).join(', ')}.</p><p class="note">The same 91 toys are what the passage twin pushes through every filter in step 01, and what the cameras photographed in step 03.</p></div>
+  </div>
+  ${sources('toys')}`},
+
+ {k:'Remix + OpenSCAD', hue:'#5fd0bd', html:`
+  <div class="kicker">06 · Scientific objects for remixing</div>
+  <h2>STL to print, OpenSCAD to change.</h2>
+  <p class="lede">Every printable object ships twice: a watertight STL that carries the hash, and an OpenSCAD file you edit (change a number, press F6, export). Labware remixes share one library (<code>sbs_plate</code>, <code>grid_insert</code>, <code>frame</code>, <code>honeycomb</code>); filter plates use <code>filter_plate.scad</code> with shape, size, pitch, web, border and thickness as parameters. Racks also ship Opentrons labware definitions.</p>
+  <div class="card scroll" style="margin-top:18px"><h3>Remix set (MIT)</h3>
+   <table><tr><th>Part</th><th>Material</th><th>Box mm</th><th>g</th><th>USD</th><th>Leaf</th></tr>
+   ${R.items.map(r=>`<tr><td>${esc(r.name)}</td><td>${r.material}</td><td>${r.bbox_mm.map(x=>+x.toFixed(1)).join(' × ')}</td><td>${r.grams}</td><td>$${r.usd.toFixed(2)}</td><td class="hash">${short(r.leaf)}</td></tr>`).join('')}
+   <tr><th>Total</th><th></th><th></th><th>${R.grams}</th><th>$${R.usd.toFixed(2)}</th><th></th></tr></table></div>
+  <div class="grid">
+   <div class="card"><h3>Toy insects</h3><div class="big">${T.scad} <small>.scad</small></div></div>
+   <div class="card"><h3>Filter plates</h3><div class="big">${F.scad} <small>.scad</small></div></div>
+   <div class="card"><h3>Labware</h3><div class="big">${R.items.length+1} <small>.scad incl. library</small></div></div>
+  </div>
+  ${sources('remix')}`},
+
+ {k:'Custody + cost', hue:'#a99cf4', html:`
+  <div class="kicker">07 · Chain of custody and cost</div>
+  <h2>One root over everything, and the gaps are named.</h2>
+  <p class="lede">Rule: ${esc(C.rule)}. Results, crops, prints, filters and decisions are leaves; append-only logs (${C.mmr.length} MMRs) record what happened in order. Anything whose bytes are not stored is recorded as a BREAK instead of being dropped.</p>
+  <div class="grid">
+   <div class="card"><h3>Graph root</h3><div class="hash">${D.root}</div></div>
+   <div class="card"><h3>BREAKs</h3><div class="big">${C.breaks}</div><p class="note">${C.result_breaks} result files not stored, ${C.photo_breaks} withheld bench photos (rights unknown), and the rest listed in the graph.</p></div>
+   <div class="card"><h3>Append-only logs</h3><p class="note">${C.mmr.map(m=>`<span class="tag t-teal">${m}</span>`).join(' ')}</p></div>
+  </div>
+  <div class="two">
+   <div class="card"><h3>Cost of the printed kit</h3><div class="big">$${R.usd.toFixed(2)} <small>filament for the remix set</small></div><p class="note">The labware README adds a 1 kg PETG spool (~$22) and calipers (~$25) and keeps the kit under $200, assuming a printer you already have access to. Stainless plates and the arm are not costed here.</p></div>
+   <div class="card"><h3>Replay it</h3><p class="note">Rebuild this page: <code>python site/story/build_story.py</code>. Each step's sources list the file and sha256 it read, so anyone can check the number against the bytes.</p><p><a href="../mvp/index.html">Open the full MVP →</a></p></div>
+  </div>
+  ${sources('custody')}`},
+];
+
+const main=document.getElementById('main'), rail=document.getElementById('rail'), glow=document.getElementById('glow');
+STEPS.forEach((s,i)=>{
+  const el=document.createElement('section');el.className='step';el.innerHTML=`<div class="wrap">${s.html}</div>`;el.setAttribute('aria-label',s.k);el.inert=true;main.appendChild(el);
+  const b=document.createElement('button');b.title=s.k;b.setAttribute('aria-label',s.k);b.onclick=()=>go(i);rail.appendChild(b);
+});
+main.addEventListener('click',e=>{const g=e.target.closest('[data-go]');if(g)go(+g.dataset.go)});
+let cur=-1;
+function go(i){
+  i=Math.max(0,Math.min(STEPS.length-1,i)); if(i===cur)return;
+  const secs=main.children;
+  if(cur>=0){const o=secs[cur];o.classList.remove('on');o.classList.add('out');setTimeout(()=>o.classList.remove('out'),700)}
+  [...secs].forEach((x,j)=>{x.inert=j!==i});secs[i].classList.add('on');secs[i].scrollTop=0;cur=i;
+  [...rail.children].forEach((b,j)=>{b.className=j===i?'on':j<i?'done':''});
+  glow.style.background=`radial-gradient(40% 35% at ${20+i*9}% 15%, ${STEPS[i].hue}33, transparent 70%)`;
+  document.getElementById('count').textContent=`${String(i).padStart(2,'0')} / ${String(STEPS.length-1).padStart(2,'0')} · ${STEPS[i].k}`;
+  history.replaceState(null,'','#'+i); score.setStep(i);
+}
+document.getElementById('prev').onclick=()=>go(cur-1);
+document.getElementById('next').onclick=()=>go(cur+1);
+addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='PageDown')go(cur+1);if(e.key==='ArrowLeft'||e.key==='PageUp')go(cur-1)});
+
+// Music: an ambient pad synthesised live in the browser with Web Audio. No audio files are loaded;
+// the score is generated by this code (released CC0 with the page). Off until the visitor turns it on.
+const score=(()=>{
+  let ctx=null,master=null,voices=[],step=0;
+  const roots=[220,196,174.61,196,164.81,174.61,196,220]; // A3 G3 F3 G3 E3 F3 G3 A3, one per step
+  function chord(r){return [r,r*1.25,r*1.5,r*2,r*3]}
+  function play(){
+    voices.forEach(v=>{v.g.gain.setTargetAtTime(0,ctx.currentTime,1.2);v.o.stop(ctx.currentTime+6)});
+    voices=chord(roots[step%roots.length]).map((f,i)=>{
+      const o=ctx.createOscillator(),g=ctx.createGain(),p=ctx.createStereoPanner();
+      o.type=i%2?'sine':'triangle';o.frequency.value=f;o.detune.value=(i-2)*4;
+      p.pan.value=(i-2)/3;g.gain.value=0;g.gain.setTargetAtTime(.05/(i+1),ctx.currentTime,1.5);
+      o.connect(g).connect(p).connect(master);o.start();return {o,g};
+    });
+  }
+  return {
+    toggle(){
+      if(!ctx){ctx=new (window.AudioContext||window.webkitAudioContext)();master=ctx.createGain();const lp=ctx.createBiquadFilter();lp.type='lowpass';lp.frequency.value=1400;master.connect(lp).connect(ctx.destination);master.gain.value=0}
+      const on=master.gain.value<.01;
+      if(on){ctx.resume();master.gain.setTargetAtTime(.9,ctx.currentTime,.8);play()}else master.gain.setTargetAtTime(0,ctx.currentTime,.4);
+      return on;
+    },
+    setStep(i){step=i;if(ctx&&master.gain.value>.01)play()}
+  };
+})();
+const mb=document.getElementById('music');
+mb.onclick=()=>{const on=score.toggle();mb.setAttribute('aria-pressed',on);mb.textContent=on?'♪ Music on':'♪ Music off'};
+go(+(location.hash.slice(1))||0);
+</script>
+</body>
+</html>

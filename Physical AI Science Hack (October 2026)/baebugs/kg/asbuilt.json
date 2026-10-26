@@ -1,0 +1,738 @@
+{
+ "all_verified_root": "d0b8b92f9b6b0a2cb436c05bafa745174eeb84511b91e90205f70c52e0ce9dad",
+ "asbuilt_root": "17dd19dda6e6344d7b9f3dedb71d719a59358203c428ef12ef9368d74fa9e42d",
+ "assets_root": "e573b35c3edc913fed4d3d313f673aca2351282a285672894606519903b02190",
+ "break_points": [
+  "arm:bugpicker_gantry",
+  "arm:opentrons_flex_gripper",
+  "arm:seeed_b601_dm",
+  "arm:so101",
+  "extra:biokea_tray_frame_2x3_hex",
+  "extra:biokea_tray_frame_plain",
+  "extra:cryo_rack_100_white",
+  "extra:cryovial_greiner_2ml",
+  "extra:formlabs_fuse",
+  "extra:fuse_sift_drum",
+  "extra:hex_grid_insert",
+  "extra:pa12_toy_insect_batch",
+  "extra:partabot_arm",
+  "extra:perforated_plate_ss",
+  "extra:plate_384_black",
+  "extra:tray_tower_orange",
+  "module:barcode_sequencing",
+  "module:bench_enzyme_dispenser",
+  "module:bugpicker_suction",
+  "module:bugsorter_trommel",
+  "module:centrifuge_strainer",
+  "module:edna_filter",
+  "module:flex_heater_shaker_incubate",
+  "module:flex_mini_trommel",
+  "module:flex_pipette_lysis",
+  "module:flex_sieve_adapter",
+  "module:handoff_carrier",
+  "module:turnstile_incubator",
+  "module:variable_aperture",
+  "module:vision_gate",
+  "module:vortex_sieve_kit",
+  "part:centrifuge_tube_strainer_1.5mm",
+  "part:centrifuge_tube_strainer_3mm",
+  "part:ot_handoff_plate",
+  "part:ot_mini_trommel_base",
+  "part:ot_mini_trommel_drum",
+  "part:ot_sieve_adapter",
+  "part:trommel_bin",
+  "part:trommel_bin_oversize",
+  "part:trommel_cap_inlet",
+  "part:trommel_cap_outlet",
+  "part:trommel_crank_arm",
+  "part:trommel_crank_hand",
+  "part:trommel_stand_inlet",
+  "part:trommel_stand_outlet",
+  "part:trommel_zone_2mm",
+  "part:trommel_zone_4mm",
+  "part:trommel_zone_7mm",
+  "part:vortex_mini_lid",
+  "part:vortex_mini_pan",
+  "part:vortex_mini_sieve_1.5mm",
+  "part:vortex_mini_sieve_3mm",
+  "part:vortex_mini_sieve_5mm",
+  "part:vortex_puck_76"
+ ],
+ "extras": [
+  "extra:biokea_tray_frame_2x3_hex",
+  "extra:biokea_tray_frame_plain",
+  "extra:cryo_rack_100_white",
+  "extra:cryovial_greiner_2ml",
+  "extra:formlabs_fuse",
+  "extra:fuse_sift_drum",
+  "extra:hex_grid_insert",
+  "extra:pa12_toy_insect_batch",
+  "extra:partabot_arm",
+  "extra:perforated_plate_ss",
+  "extra:plate_384_black",
+  "extra:tray_tower_orange"
+ ],
+ "level_counts": {
+  "ATTEMPTED": 6,
+  "BUILT": 18,
+  "DESIGNED": 16,
+  "PLANNED": 9,
+  "SIMULATED": 5,
+  "VERIFIED": 1
+ },
+ "levels": [
+  "PLANNED",
+  "DESIGNED",
+  "SIMULATED",
+  "ATTEMPTED",
+  "BUILT",
+  "VERIFIED"
+ ],
+ "lomo_physical": {
+  "extra:biokea_tray_frame_2x3_hex": {
+   "single_point_of_failure": true,
+   "stages_lost": [
+    "bench:disperse"
+   ]
+  },
+  "extra:biokea_tray_frame_plain": {
+   "single_point_of_failure": false,
+   "stages_lost": []
+  },
+  "extra:cryo_rack_100_white": {
+   "single_point_of_failure": false,
+   "stages_lost": []
+  },
+  "extra:cryovial_greiner_2ml": {
+   "single_point_of_failure": false,
+   "stages_lost": []
+  },
+  "extra:hex_grid_insert": {
+   "single_point_of_failure": false,
+   "stages_lost": []
+  },
+  "extra:partabot_arm": {
+   "single_point_of_failure": true,
+   "stages_lost": [
+    "bench:pick"
+   ]
+  },
+  "extra:perforated_plate_ss": {
+   "single_point_of_failure": false,
+   "stages_lost": []
+  },
+  "extra:plate_384_black": {
+   "single_point_of_failure": false,
+   "stages_lost": []
+  },
+  "module:flex_pipette_lysis": {
+   "single_point_of_failure": false,
+   "stages_lost": []
+  },
+  "module:vision_gate": {
+   "single_point_of_failure": true,
+   "stages_lost": [
+    "bench:image",
+    "flex:image"
+   ]
+  }
+ },
+ "nodes": {
+  "arm:bugpicker_gantry": {
+   "evidence": [
+    "labbox:node"
+   ],
+   "leaf": "89739fb8ea02713d8836e322860ddcbe3c1733bdbcb8488282427283214ea6ec",
+   "level": "PLANNED"
+  },
+  "arm:human": {
+   "evidence": [
+    "labbox:node",
+    "asset:fuse_sift_drum (people did every physical step today (gloved hands in the Sift photos))"
+   ],
+   "leaf": "a05f7f94736dcb93708ceb713be1ca4354db67d998dd673b0a33666a2adabdef",
+   "level": "VERIFIED"
+  },
+  "arm:opentrons_flex_gripper": {
+   "evidence": [
+    "labbox:node",
+    "asset:opentrons_flex (Flex photographed; gripper not seen)"
+   ],
+   "leaf": "387b3997a62301b798dbd91d417bdc0bf90dae6fecfe4e73846f9dfcdfa402b1",
+   "level": "BUILT"
+  },
+  "arm:seeed_b601_dm": {
+   "evidence": [
+    "labbox:node"
+   ],
+   "leaf": "e02632cfee0e5b8a40d31c115b899dcab11b16118702f36fac2b9e03993299cc",
+   "level": "PLANNED"
+  },
+  "arm:so101": {
+   "evidence": [
+    "labbox:node"
+   ],
+   "leaf": "1316c3b213c30c2090bece5aaf0b908d4b8932411c64296f57e6546a1c024418",
+   "level": "PLANNED"
+  },
+  "extra:biokea_tray_frame_2x3_hex": {
+   "category": "tray",
+   "evidence": [
+    "asset:biokea_tray_frame_2x3_hex (BioKEA sieve trays exist; labbox has no tray-stack module)"
+   ],
+   "leaf": "194ca404ed4b6071a81b4acaad7fd2506929b1d2e5aaba951c554ddd9deb732a",
+   "level": "BUILT",
+   "platform": [
+    "bench"
+   ],
+   "stages": [
+    "sort",
+    "disperse"
+   ]
+  },
+  "extra:biokea_tray_frame_plain": {
+   "category": "tray",
+   "evidence": [
+    "asset:biokea_tray_frame_plain (insert carriers exist)"
+   ],
+   "leaf": "e41be9ef607e9a8b6b864d207235c6a579796de13dcbe3c91735a48005ac6d4e",
+   "level": "BUILT",
+   "platform": [
+    "bench"
+   ],
+   "stages": [
+    "sort"
+   ]
+  },
+  "extra:cryo_rack_100_white": {
+   "category": "rack",
+   "evidence": [
+    "asset:cryo_rack_100_white (vial rack for the specimen-to-vial hand-off)"
+   ],
+   "leaf": "59673d71b539c34e649c4f1e21a30438ef2985a68763ab4b0144a0c9cec399c2",
+   "level": "BUILT",
+   "platform": [
+    "bench"
+   ],
+   "stages": [
+    "sequence"
+   ]
+  },
+  "extra:cryovial_greiner_2ml": {
+   "category": "tube",
+   "evidence": [
+    "asset:cryovial_greiner_2ml (Cryo.s 2 mL vials for whole-body DNA/RNA storage; no storage node in the plan)"
+   ],
+   "leaf": "2a3aa10a607d8bbb57c3954072453c2c8e7fa142f3d957cfbe518fa996043b3e",
+   "level": "BUILT",
+   "platform": [
+    "bench",
+    "flex"
+   ],
+   "stages": [
+    "sequence"
+   ]
+  },
+  "extra:formlabs_fuse": {
+   "category": "instrument",
+   "evidence": [
+    "asset:formlabs_fuse (fabrication: prints the drum zones and toys)"
+   ],
+   "leaf": "44d81d52c9160d8b2ced658b456aa061a64df7fb0ee0d790ce81e1e423980216",
+   "level": "BUILT",
+   "platform": [
+    "bench"
+   ],
+   "stages": []
+  },
+  "extra:fuse_sift_drum": {
+   "category": "instrument",
+   "evidence": [
+    "asset:fuse_sift_drum (a working rotating perforated drum; fabrication tool, also a trommel analogue)"
+   ],
+   "leaf": "87b76ce31c7746403bab588d61aae32bdfeec502cd6ea63be226e425d8c0a266",
+   "level": "BUILT",
+   "platform": [
+    "bench"
+   ],
+   "stages": []
+  },
+  "extra:hex_grid_insert": {
+   "category": "insert",
+   "evidence": [
+    "asset:hex_grid_insert (printed hex insert exists)"
+   ],
+   "leaf": "446321fd1b1629a48e4bf579948013be2a0649e079b714205f70a4e2b0d65a63",
+   "level": "BUILT",
+   "platform": [
+    "bench"
+   ],
+   "stages": [
+    "sort"
+   ]
+  },
+  "extra:pa12_toy_insect_batch": {
+   "category": "printed_part",
+   "evidence": [
+    "asset:pa12_toy_insect_batch (physical test standards (TRUTH-001 toys))"
+   ],
+   "leaf": "7196b0887ff1fcb715ff5f6655533338ad3a31ce66e20bf5b8ea58edd20c2b1d",
+   "level": "BUILT",
+   "platform": [
+    "bench"
+   ],
+   "stages": []
+  },
+  "extra:partabot_arm": {
+   "category": "arm",
+   "evidence": [
+    "asset:partabot_arm (a real arm at the bench; labbox lists B601/SO-101/BugPicker gantry but not Partabot)"
+   ],
+   "leaf": "085705305e22eb58f38edf4f18f4a928b79d9ade5ee9981c47db1df122aa1876",
+   "level": "BUILT",
+   "platform": [
+    "bench"
+   ],
+   "stages": [
+    "pick"
+   ]
+  },
+  "extra:perforated_plate_ss": {
+   "category": "insert",
+   "evidence": [
+    "asset:perforated_plate_ss (stainless PERF insert exists)"
+   ],
+   "leaf": "1fc1b654000f996dad3ff2ff40c4cad610f1c9391ded19709e1c9214105c10a9",
+   "level": "BUILT",
+   "platform": [
+    "bench"
+   ],
+   "stages": [
+    "sort"
+   ]
+  },
+  "extra:plate_384_black": {
+   "category": "plate",
+   "evidence": [
+    "asset:plate_384_black (SBS 384 plate available)"
+   ],
+   "leaf": "125fa8565a279dc0ac713a6786230bfe790e70d6f6499c2ccb9aa81e7621e8b1",
+   "level": "BUILT",
+   "platform": [
+    "flex"
+   ],
+   "stages": [
+    "lyse",
+    "sequence"
+   ]
+  },
+  "extra:tray_tower_orange": {
+   "category": "rack",
+   "evidence": [
+    "asset:tray_tower_orange (printed tray tower the arm works; only the bench twin knows a (wood) tower)"
+   ],
+   "leaf": "f2fa933403f7bbd55de5e9d34dcf19862fb2c091819d1e2434fc59832fa52d92",
+   "level": "BUILT",
+   "platform": [
+    "bench"
+   ],
+   "stages": []
+  },
+  "module:barcode_sequencing": {
+   "evidence": [
+    "labbox:CONCEPT"
+   ],
+   "leaf": "2e32690c6fa675b8b8d4db604ed9db1dafd20ed8d701c7474c5d210ce0050e24",
+   "level": "PLANNED"
+  },
+  "module:bench_enzyme_dispenser": {
+   "evidence": [
+    "labbox:CONCEPT"
+   ],
+   "leaf": "add409de9242cd26e847084be3c0d6aab7152050c43c7d94b815cbb81718fa93",
+   "level": "PLANNED"
+  },
+  "module:bugpicker_suction": {
+   "evidence": [
+    "labbox:CONCEPT"
+   ],
+   "leaf": "c594bd4d8c6e5916529fb4409af011f525879adbf8fc72760e87d2ad7d934758",
+   "level": "PLANNED"
+  },
+  "module:bugsorter_trommel": {
+   "evidence": [
+    "labbox:CONCEPT",
+    "asset:fdm_trommel_attempt_1 (caps, crank, stand feet printed; perforated zones failed on FDM; split package moves zones to Fuse 1+)"
+   ],
+   "leaf": "b7ecad5f1ca162a635b0ff40658947bff1e2594da1533beb1969145ffbd2c42f",
+   "level": "ATTEMPTED"
+  },
+  "module:centrifuge_strainer": {
+   "evidence": [
+    "labbox:CONCEPT"
+   ],
+   "leaf": "81fa2b97238a18834aeafdae4d06681bcb3f7a599df006dcf29e0636c7a50cfb",
+   "level": "PLANNED"
+  },
+  "module:edna_filter": {
+   "evidence": [
+    "labbox:CONCEPT"
+   ],
+   "leaf": "f0603d9cc0b29a797d5f3ad4dab82e095bd753e4381023cce181a3fb9207728d",
+   "level": "PLANNED"
+  },
+  "module:flex_heater_shaker_incubate": {
+   "evidence": [
+    "labbox:SIMULATED",
+    "file:opentrons/protocols/baebugs_flex_line.sim.txt (Flex present; no heater-shaker seen in the photos)"
+   ],
+   "leaf": "02d14593b926ee3e94f1b4b25c4de965b750bfa3ee9c84d80326405c9c6fc600",
+   "level": "SIMULATED"
+  },
+  "module:flex_mini_trommel": {
+   "evidence": [
+    "labbox:SIMULATED"
+   ],
+   "leaf": "d1d8b2146178bfc931a492af9a11603f703b727fa60df53f042c7e83773a60a5",
+   "level": "SIMULATED"
+  },
+  "module:flex_pipette_lysis": {
+   "evidence": [
+    "labbox:SIMULATED",
+    "asset:opentrons_flex (Flex with 8-channel 1000 uL pipette photographed; lysis protocol simulated only)"
+   ],
+   "leaf": "0ea9af16577d6ff947fb3f4bba77e6f374105f89c3b0f7652c37c600001603e3",
+   "level": "BUILT"
+  },
+  "module:flex_sieve_adapter": {
+   "evidence": [
+    "labbox:SIMULATED"
+   ],
+   "leaf": "f42fe55f0fbba68bca778038502ab66328a34665737043188cbbd9e8f492f89c",
+   "level": "SIMULATED"
+  },
+  "module:handoff_carrier": {
+   "evidence": [
+    "labbox:SIMULATED"
+   ],
+   "leaf": "e6030dfdfc39277e4175ea997b2722f7593beb7bf80c0ed8ab265d021b1ef7f6",
+   "level": "SIMULATED"
+  },
+  "module:turnstile_incubator": {
+   "evidence": [
+    "labbox:CONCEPT"
+   ],
+   "leaf": "47dff69d1a80f2e3309b91aecd5a9391daebcd9dea4b133689f1078b810a2870",
+   "level": "PLANNED"
+  },
+  "module:variable_aperture": {
+   "evidence": [
+    "labbox:SIMULATED"
+   ],
+   "leaf": "99228ff11c3671896506b8df1d049d4ab3115d611a49bef58f78f56a0fbf904e",
+   "level": "SIMULATED"
+  },
+  "module:vision_gate": {
+   "evidence": [
+    "labbox:SIMULATED",
+    "file:daisy/results/DAISY-BB-004/v4/DECISION.md (trained models stored and resolving (ORDER router USEFUL); bench camera not photographed)"
+   ],
+   "leaf": "96a5b2d01a4242819a7164c11d9461c09d5d6d668aff2f521fc5f03e6fdca231",
+   "level": "BUILT"
+  },
+  "module:vortex_sieve_kit": {
+   "evidence": [
+    "labbox:CONCEPT",
+    "asset:vortexer (the vortexer (platform) exists; the printed sieve kit is not printed)"
+   ],
+   "leaf": "2cbd4fba35b716d7603abfe3be834a89903d00071af1d74efe4e08d675f6ea06",
+   "level": "DESIGNED"
+  },
+  "part:centrifuge_tube_strainer_1.5mm": {
+   "evidence": [
+    "labbox:node"
+   ],
+   "leaf": "e04a9218a9f20507648f0e117789ff8a501c0581d4e6cb9263ea8ef420f87c9d",
+   "level": "DESIGNED"
+  },
+  "part:centrifuge_tube_strainer_3mm": {
+   "evidence": [
+    "labbox:node"
+   ],
+   "leaf": "00b2c229b0487d8e8e2e1c21c208468f28f39beaace11599bd17437061c72c01",
+   "level": "DESIGNED"
+  },
+  "part:ot_handoff_plate": {
+   "evidence": [
+    "labbox:node"
+   ],
+   "leaf": "8096056cf33905fff128514703b620ca90771e1587cb089bc134c2da605078d1",
+   "level": "DESIGNED"
+  },
+  "part:ot_mini_trommel_base": {
+   "evidence": [
+    "labbox:node"
+   ],
+   "leaf": "d76712dff0d96b1534863be2f3dd407f15c29958461a7536b5323f2bdd8563c3",
+   "level": "DESIGNED"
+  },
+  "part:ot_mini_trommel_drum": {
+   "evidence": [
+    "labbox:node"
+   ],
+   "leaf": "be7a4ca2fa859049e41fbd0d3d4915a702be87f724c5b10c7f1b87ff990dd7e4",
+   "level": "DESIGNED"
+  },
+  "part:ot_sieve_adapter": {
+   "evidence": [
+    "labbox:node"
+   ],
+   "leaf": "082f244baa2a8d6b51c0d51064678c12bbd4ee864ed5d5e02f58812f7c639bc1",
+   "level": "DESIGNED"
+  },
+  "part:trommel_bin": {
+   "evidence": [
+    "labbox:node"
+   ],
+   "leaf": "2fb613e443c4dbbdfb35bcac40791068e1ed9bce639b19fb22b8b832b52c7b77",
+   "level": "DESIGNED"
+  },
+  "part:trommel_bin_oversize": {
+   "evidence": [
+    "labbox:node"
+   ],
+   "leaf": "f992e624c587e3042335d783fd11a2dea04b4fa369335fb97dab505b851244df",
+   "level": "DESIGNED"
+  },
+  "part:trommel_cap_inlet": {
+   "evidence": [
+    "labbox:node",
+    "asset:fdm_trommel_attempt_1 (printed (FDM, stringing), fit not checked)"
+   ],
+   "leaf": "309ebf19dc4055151c67c898501c2faa63fc0fe8f14d1e7de5e72362b2c15e80",
+   "level": "BUILT"
+  },
+  "part:trommel_cap_outlet": {
+   "evidence": [
+    "labbox:node",
+    "asset:fdm_trommel_attempt_1 (printed (FDM, stringing), fit not checked)"
+   ],
+   "leaf": "f39fac5881f5da68734633b31c538026ad138809cf20e0bae2e8fca4e7dfa7a0",
+   "level": "BUILT"
+  },
+  "part:trommel_crank_arm": {
+   "evidence": [
+    "labbox:node"
+   ],
+   "leaf": "70eb89e07c6710b0b998fc6e213414146891c35c5e338665e0a5ff8df543815c",
+   "level": "DESIGNED"
+  },
+  "part:trommel_crank_hand": {
+   "evidence": [
+    "labbox:node",
+    "asset:fdm_trommel_attempt_1 (printed (FDM))"
+   ],
+   "leaf": "3ab0f12190b1916875f16b766a3c0dc363aad423026ef7cce541687ad9a20b4f",
+   "level": "BUILT"
+  },
+  "part:trommel_stand_inlet": {
+   "evidence": [
+    "labbox:node",
+    "asset:fdm_trommel_attempt_1 (feet visible; full stand not seen)"
+   ],
+   "leaf": "f0dc7028dff2b1970314c6f1fd613c54c920f150eb4556edc26a859685941b6e",
+   "level": "ATTEMPTED"
+  },
+  "part:trommel_stand_outlet": {
+   "evidence": [
+    "labbox:node",
+    "asset:fdm_trommel_attempt_1 (feet visible; full stand not seen)"
+   ],
+   "leaf": "88d3502fc89aab5591fd26bef174c20c70c98148c72d732333c29046f0e04c1f",
+   "level": "ATTEMPTED"
+  },
+  "part:trommel_zone_2mm": {
+   "evidence": [
+    "labbox:node",
+    "asset:fdm_trommel_attempt_1 (failed (spaghetti))"
+   ],
+   "leaf": "4d69582f2ec78fcce535db2ffac8e7d0cbb06e74dab7d5229dfbdb65fb7cd62b",
+   "level": "ATTEMPTED"
+  },
+  "part:trommel_zone_4mm": {
+   "evidence": [
+    "labbox:node",
+    "asset:fdm_trommel_attempt_1 (failed (spaghetti))"
+   ],
+   "leaf": "591fc4cba8e1652843f487e30054099159288109d48598e570937ed9f758ac32",
+   "level": "ATTEMPTED"
+  },
+  "part:trommel_zone_7mm": {
+   "evidence": [
+    "labbox:node",
+    "asset:fdm_trommel_attempt_1 (failed (spaghetti))"
+   ],
+   "leaf": "86185a0dcafe739a41ec325377139b0dfab793e12c35fba5d028c1e940307305",
+   "level": "ATTEMPTED"
+  },
+  "part:vortex_mini_lid": {
+   "evidence": [
+    "labbox:node"
+   ],
+   "leaf": "1e19eabdef1f97e1022bb83ba4320e34462e141db4fb8d045a5e0960e97b5ee5",
+   "level": "DESIGNED"
+  },
+  "part:vortex_mini_pan": {
+   "evidence": [
+    "labbox:node"
+   ],
+   "leaf": "cd89353ab698b12c435dc88c945f86d28a31d1a2c486b301dc468fcbb584134f",
+   "level": "DESIGNED"
+  },
+  "part:vortex_mini_sieve_1.5mm": {
+   "evidence": [
+    "labbox:node"
+   ],
+   "leaf": "905fab2491e8906f3343f8f15fe53186f69a446dfbd86c8f5673560954f0481c",
+   "level": "DESIGNED"
+  },
+  "part:vortex_mini_sieve_3mm": {
+   "evidence": [
+    "labbox:node"
+   ],
+   "leaf": "f1bd0fd61172867493f3096fa8f18150d3e5ce7951b4cbff11796f413c2d8548",
+   "level": "DESIGNED"
+  },
+  "part:vortex_mini_sieve_5mm": {
+   "evidence": [
+    "labbox:node"
+   ],
+   "leaf": "73523b30564b4d935feda4e02d91005e8f0a13f66ac50b6cbf7545245a4e517b",
+   "level": "DESIGNED"
+  },
+  "part:vortex_puck_76": {
+   "evidence": [
+    "labbox:node"
+   ],
+   "leaf": "2b71230ff9ba9ced309f850e6e004c02cfffd52083303c2d9c0352b1117a39c6",
+   "level": "DESIGNED"
+  }
+ },
+ "planned_graph_root": "0db1aea43b35b4761f3400519773e6d432335319691d6cb0702644d10d492961",
+ "stage_grid": {
+  "bench:disperse": {
+   "physical": [
+    "extra:biokea_tray_frame_2x3_hex"
+   ],
+   "planned": [
+    "module:vortex_sieve_kit"
+   ]
+  },
+  "bench:image": {
+   "physical": [
+    "module:vision_gate"
+   ],
+   "planned": [
+    "module:vision_gate"
+   ]
+  },
+  "bench:incubate": {
+   "physical": [],
+   "planned": [
+    "module:turnstile_incubator"
+   ]
+  },
+  "bench:lyse": {
+   "physical": [],
+   "planned": [
+    "module:bench_enzyme_dispenser"
+   ]
+  },
+  "bench:pick": {
+   "physical": [
+    "extra:partabot_arm"
+   ],
+   "planned": [
+    "module:bugpicker_suction",
+    "module:handoff_carrier"
+   ]
+  },
+  "bench:sequence": {
+   "physical": [
+    "extra:cryo_rack_100_white",
+    "extra:cryovial_greiner_2ml"
+   ],
+   "planned": [
+    "module:barcode_sequencing",
+    "module:edna_filter"
+   ]
+  },
+  "bench:sort": {
+   "physical": [
+    "extra:biokea_tray_frame_2x3_hex",
+    "extra:biokea_tray_frame_plain",
+    "extra:hex_grid_insert",
+    "extra:perforated_plate_ss"
+   ],
+   "planned": [
+    "module:bugsorter_trommel",
+    "module:centrifuge_strainer",
+    "module:variable_aperture",
+    "module:vortex_sieve_kit"
+   ]
+  },
+  "flex:disperse": {
+   "physical": [],
+   "planned": [
+    "module:flex_sieve_adapter"
+   ]
+  },
+  "flex:image": {
+   "physical": [
+    "module:vision_gate"
+   ],
+   "planned": [
+    "module:vision_gate"
+   ]
+  },
+  "flex:incubate": {
+   "physical": [],
+   "planned": [
+    "module:flex_heater_shaker_incubate"
+   ]
+  },
+  "flex:lyse": {
+   "physical": [
+    "extra:plate_384_black",
+    "module:flex_pipette_lysis"
+   ],
+   "planned": [
+    "module:flex_pipette_lysis"
+   ]
+  },
+  "flex:pick": {
+   "physical": [],
+   "planned": [
+    "module:handoff_carrier"
+   ]
+  },
+  "flex:sequence": {
+   "physical": [
+    "extra:cryovial_greiner_2ml",
+    "extra:plate_384_black"
+   ],
+   "planned": [
+    "module:barcode_sequencing",
+    "module:edna_filter"
+   ]
+  },
+  "flex:sort": {
+   "physical": [],
+   "planned": [
+    "module:flex_mini_trommel",
+    "module:flex_sieve_adapter"
+   ]
+  }
+ },
+ "type": "asbuilt_vs_planned"
+}

@@ -11,6 +11,8 @@ link. The same project can appear in multiple weeks, showing how it evolved over
 > Looking for the Education track? See [Education Fellows](./Education%20Fellows) for their final demos.
 >
 > Looking for hackathon projects? See [Zeon Hack (July 2026)](./Zeon%20Hack%20(July%202026)) for the team builds on the Zeon robotics platform.
+>
+> Looking for the latest hack? See [Physical AI Science Hack (October 2026)](./Physical%20AI%20Science%20Hack%20(October%202026)) for the six team builds on insect sorting and Opentrons lab automation.
 
 ## Weeks
 

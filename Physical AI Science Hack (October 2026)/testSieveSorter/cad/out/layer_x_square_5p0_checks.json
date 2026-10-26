@@ -1,0 +1,18 @@
+{
+  "valid_solid": true,
+  "single_solid": true,
+  "watertight_mesh": true,
+  "bbox_mm": [
+    85.03,
+    85.0,
+    20.3
+  ],
+  "fits_bed": true,
+  "volume_cm3": 18.34,
+  "style": "square",
+  "gate_mm": 5.0,
+  "gates": 73,
+  "open_area_pct": 43.4,
+  "gate_bottom_mm": 5.56,
+  "headroom_mm": 15.27
+}

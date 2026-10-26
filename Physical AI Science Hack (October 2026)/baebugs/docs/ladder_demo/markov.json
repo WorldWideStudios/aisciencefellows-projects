@@ -1,0 +1,325 @@
+{
+ "transitions": [
+  {
+   "from": "image:APPROVE",
+   "context": [
+    "filter=HEX-2",
+    "protocol=P-image-v1",
+    "novelty_band=low"
+   ],
+   "to": "pick:APPROVE",
+   "n": 2,
+   "of": 2,
+   "p": 1.0,
+   "ci95": [
+    0.3424,
+    1.0
+   ]
+  },
+  {
+   "from": "image:HOLD",
+   "context": [
+    "filter=PERF-5",
+    "protocol=P-image-v1",
+    "novelty_band=low"
+   ],
+   "to": "END",
+   "n": 2,
+   "of": 2,
+   "p": 1.0,
+   "ci95": [
+    0.3424,
+    1.0
+   ]
+  },
+  {
+   "from": "pick:APPROVE",
+   "context": [
+    "filter=HEX-2",
+    "protocol=P-pick-v1",
+    "novelty_band=low"
+   ],
+   "to": "END",
+   "n": 2,
+   "of": 2,
+   "p": 1.0,
+   "ci95": [
+    0.3424,
+    1.0
+   ]
+  },
+  {
+   "from": "sort:APPROVE",
+   "context": [
+    "filter=HEX-2",
+    "protocol=P-sieve-v1",
+    "novelty_band=low"
+   ],
+   "to": "image:APPROVE",
+   "n": 2,
+   "of": 2,
+   "p": 1.0,
+   "ci95": [
+    0.3424,
+    1.0
+   ]
+  },
+  {
+   "from": "sort:APPROVE",
+   "context": [
+    "filter=PERF-5",
+    "protocol=P-sieve-v1",
+    "novelty_band=low"
+   ],
+   "to": "image:HOLD",
+   "n": 2,
+   "of": 2,
+   "p": 1.0,
+   "ci95": [
+    0.3424,
+    1.0
+   ]
+  },
+  {
+   "from": "sort:HOLD",
+   "context": [
+    "filter=GRID-4",
+    "protocol=P-sieve-v1",
+    "novelty_band=low"
+   ],
+   "to": "END",
+   "n": 1,
+   "of": 1,
+   "p": 1.0,
+   "ci95": [
+    0.2065,
+    1.0
+   ]
+  },
+  {
+   "from": "sort:HOLD",
+   "context": [
+    "filter=HEX-2",
+    "protocol=P-sieve-v1",
+    "novelty_band=low"
+   ],
+   "to": "END",
+   "n": 1,
+   "of": 1,
+   "p": 1.0,
+   "ci95": [
+    0.2065,
+    1.0
+   ]
+  },
+  {
+   "from": "sort:HOLD",
+   "context": [
+    "filter=PERF-5",
+    "protocol=P-sieve-v1",
+    "novelty_band=low"
+   ],
+   "to": "END",
+   "n": 2,
+   "of": 2,
+   "p": 1.0,
+   "ci95": [
+    0.3424,
+    1.0
+   ]
+  },
+  {
+   "from": "sort:HOLD",
+   "context": [
+    "filter=SCREEN-1",
+    "protocol=P-sieve-v1",
+    "novelty_band=high"
+   ],
+   "to": "END",
+   "n": 2,
+   "of": 2,
+   "p": 1.0,
+   "ci95": [
+    0.3424,
+    1.0
+   ]
+  },
+  {
+   "from": "sort:HOLD",
+   "context": [
+    "filter=SCREEN-1",
+    "protocol=P-sieve-v1",
+    "novelty_band=low"
+   ],
+   "to": "END",
+   "n": 1,
+   "of": 1,
+   "p": 1.0,
+   "ci95": [
+    0.2065,
+    1.0
+   ]
+  },
+  {
+   "from": "sort:HOLD",
+   "context": [
+    "filter=TRAY",
+    "protocol=P-sieve-v1",
+    "novelty_band=novel"
+   ],
+   "to": "END",
+   "n": 1,
+   "of": 1,
+   "p": 1.0,
+   "ci95": [
+    0.2065,
+    1.0
+   ]
+  }
+ ],
+ "decided_by": {
+  "Andrenidae": {
+   "local:qwen2.5vl:3b": 1
+  },
+  "Andrenidae (Andrena prunorum)": {
+   "taxon:ORDER": 1,
+   "local:qwen2.5vl:3b": 1
+  },
+  "Apidae (Xylocopa tabaniformis orpifex)": {
+   "local:qwen2.5vl:3b": 1
+  },
+  "Bombyliidae": {
+   "taxon:ORDER": 1,
+   "local:qwen2.5vl:3b": 1
+  },
+  "Coccinellidae": {
+   "taxon:ORDER": 2,
+   "check:frame-diff": 1
+  },
+  "Coenagrionidae": {
+   "local:qwen2.5vl:3b": 1
+  },
+  "Elachistidae": {
+   "local:qwen2.5vl:3b": 1
+  },
+  "Halictidae": {
+   "local:qwen2.5vl:3b": 1
+  },
+  "Largidae": {
+   "taxon:ORDER": 2,
+   "check:frame-diff": 1
+  },
+  "Meloidae": {
+   "local:qwen2.5vl:3b": 1
+  },
+  "aphid-like": {
+   "human": 1
+  },
+  "small beetle": {
+   "local:qwen2.5vl:3b": 1
+  }
+ },
+ "approval_by_step": [
+  {
+   "step": "image",
+   "filter": "HEX-2",
+   "protocol": "P-image-v1",
+   "APPROVE": 2,
+   "n": 2,
+   "p_approve": 1.0,
+   "ci95": [
+    0.3424,
+    1.0
+   ]
+  },
+  {
+   "step": "image",
+   "filter": "PERF-5",
+   "protocol": "P-image-v1",
+   "HOLD": 2,
+   "n": 2,
+   "p_approve": 0.0,
+   "ci95": [
+    0.0,
+    0.6576
+   ]
+  },
+  {
+   "step": "pick",
+   "filter": "HEX-2",
+   "protocol": "P-pick-v1",
+   "APPROVE": 2,
+   "n": 2,
+   "p_approve": 1.0,
+   "ci95": [
+    0.3424,
+    1.0
+   ]
+  },
+  {
+   "step": "sort",
+   "filter": "GRID-4",
+   "protocol": "P-sieve-v1",
+   "HOLD": 1,
+   "n": 1,
+   "p_approve": 0.0,
+   "ci95": [
+    0.0,
+    0.7935
+   ]
+  },
+  {
+   "step": "sort",
+   "filter": "HEX-2",
+   "protocol": "P-sieve-v1",
+   "APPROVE": 2,
+   "HOLD": 1,
+   "n": 3,
+   "p_approve": 0.6667,
+   "ci95": [
+    0.2077,
+    0.9385
+   ]
+  },
+  {
+   "step": "sort",
+   "filter": "PERF-5",
+   "protocol": "P-sieve-v1",
+   "APPROVE": 2,
+   "HOLD": 2,
+   "n": 4,
+   "p_approve": 0.5,
+   "ci95": [
+    0.15,
+    0.85
+   ]
+  },
+  {
+   "step": "sort",
+   "filter": "SCREEN-1",
+   "protocol": "P-sieve-v1",
+   "HOLD": 3,
+   "n": 3,
+   "p_approve": 0.0,
+   "ci95": [
+    0.0,
+    0.5615
+   ]
+  },
+  {
+   "step": "sort",
+   "filter": "TRAY",
+   "protocol": "P-sieve-v1",
+   "HOLD": 1,
+   "n": 1,
+   "p_approve": 0.0,
+   "ci95": [
+    0.0,
+    0.7935
+   ]
+  }
+ ],
+ "specimens": 12,
+ "records": 18,
+ "stats_sha256": "310a78543e99477e1caec509ab03b0cfd99b313d2096d7a9b2f3af323d100f80"
+}

@@ -1,0 +1,44 @@
+{
+  "twist_degrees": 45,
+  "draw_in_mm": 0.8,
+  "dowel_count": 3,
+  "dowel_circle_diameter_mm": 30,
+  "dowel_stem_diameter_mm": 3.6,
+  "dowel_head_diameter_mm": 6,
+  "dowel_projection_mm": 8,
+  "head_thickness_mm": 1.8,
+  "flare_start_mm": 5.2,
+  "head_start_mm": 6.2,
+  "central_vertical_key_mm": [
+    3,
+    10,
+    8
+  ],
+  "key_head_start_mm": 3.4,
+  "key_entry_y_mm": [
+    -4,
+    6
+  ],
+  "key_neck_diameter_mm": 3,
+  "key_clearance_entry_mm": 0.35,
+  "key_clearance_seated_mm": 0.06,
+  "entry_lip_depth_mm": 2.1,
+  "male_flange_mm": [
+    40,
+    7
+  ],
+  "female_body_mm": [
+    44,
+    44,
+    18
+  ],
+  "tool_blank_mm": [
+    24,
+    24,
+    18
+  ],
+  "mount_bolt_circle_mm": 14,
+  "mount_hole_mm": 3.2,
+  "clearance_per_side_mm": 0.25,
+  "pin_lock": false
+}

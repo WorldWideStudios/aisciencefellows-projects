@@ -1,0 +1,309 @@
+{
+  "schema": "biokea.digital-twin.module-catalog.v1",
+  "states": [
+    "PROPOSED",
+    "SOURCE_BOUND",
+    "IMPLEMENTED",
+    "EXECUTED",
+    "OBSERVED",
+    "SUPPORTED",
+    "NOT_TESTED",
+    "FAILED",
+    "UNKNOWN",
+    "NULL"
+  ],
+  "scope": "DESIGN_ONLY_NO_ROBOT_OR_LIVE_BIOLOGICAL_RESULTS",
+  "defaults": {
+    "arm": "READ_ONLY",
+    "filter": "VARIABLE_OVERLAY",
+    "tray": "SEALED_CASSETTE",
+    "camera": "USB_CAMERA",
+    "water": "GRAVITY_MANUAL",
+    "heat": "AMBIENT",
+    "reagent": "NONE",
+    "goal": "MORPHOLOGY_FIRST"
+  },
+  "modules": {
+    "arm": [
+      {
+        "id": "READ_ONLY",
+        "label": "No robot; expert-controlled",
+        "state": "PROPOSED",
+        "source": "internal",
+        "control": "NONE",
+        "risk": "LOW"
+      },
+      {
+        "id": "PARTABOT",
+        "label": "Partabot on linear rail",
+        "state": "SOURCE_BOUND",
+        "source": "baebugs/tower_twin.py",
+        "control": "NOT_CONNECTED",
+        "risk": "HIGH"
+      },
+      {
+        "id": "XARM7",
+        "label": "xArm 7 (BugPicker arm demo)",
+        "state": "SOURCE_BOUND",
+        "source": "BioKEA/BugPicker-arm-demo/arm_common.py",
+        "control": "NOT_CONNECTED",
+        "risk": "HIGH"
+      },
+      {
+        "id": "SO101",
+        "label": "LeRobot SO-101 reference",
+        "state": "SOURCE_BOUND",
+        "source": "huggingface/lerobot",
+        "control": "NOT_CONNECTED",
+        "risk": "HIGH"
+      }
+    ],
+    "filter": [
+      {
+        "id": "VARIABLE_OVERLAY",
+        "label": "Variable overlap slots · 3 locked states",
+        "state": "IMPLEMENTED",
+        "source": "variable_aperture_cassette.scad",
+        "sizes_mm": [
+          3.6,
+          2.4,
+          1.2
+        ],
+        "risk": "INTERPLATE_TRAP_AND_BYPASS"
+      },
+      {
+        "id": "ROUND",
+        "label": "Fixed round stainless",
+        "state": "IMPLEMENTED",
+        "source": "sealed_insert_cassette.scad",
+        "sizes_mm": [
+          3.2
+        ],
+        "risk": "UNKNOWN_SPECIMEN_RETENTION"
+      },
+      {
+        "id": "SLOT",
+        "label": "Fixed oblong stainless",
+        "state": "IMPLEMENTED",
+        "source": "sealed_insert_cassette.scad",
+        "sizes_mm": [
+          2.4
+        ],
+        "risk": "WING_ORIENTATION"
+      },
+      {
+        "id": "HEX",
+        "label": "Fixed hex stainless",
+        "state": "IMPLEMENTED",
+        "source": "sealed_insert_cassette.scad",
+        "sizes_mm": [
+          3
+        ],
+        "risk": "TOLERANCE_UNKNOWN"
+      },
+      {
+        "id": "WOVEN",
+        "label": "Captive woven stainless carrier",
+        "state": "PROPOSED",
+        "source": "sealed_insert_cassette.scad",
+        "sizes_mm": [
+          1,
+          2
+        ],
+        "risk": "MESH_EDGE_BYPASS"
+      }
+    ],
+    "tray": [
+      {
+        "id": "SEALED_CASSETTE",
+        "label": "Removable sealed cassette + grip tabs",
+        "state": "IMPLEMENTED",
+        "source": "sealed_insert_cassette.scad",
+        "risk": "SEAL_NOT_VALIDATED"
+      },
+      {
+        "id": "BIOKEA_SIX_CELL",
+        "label": "Six-cell 3D printed tray",
+        "state": "SOURCE_BOUND",
+        "source": "baebugs/config/sieves.yaml",
+        "risk": "DIMENSIONS_ESTIMATED"
+      },
+      {
+        "id": "BUGPICKER_STL",
+        "label": "BugPicker mesh tray, different geometry",
+        "state": "SOURCE_BOUND",
+        "source": "BioKEA/BugPicker/Designs/tray.stl",
+        "risk": "FIT_NOT_CONFIRMED"
+      }
+    ],
+    "camera": [
+      {
+        "id": "USB_CAMERA",
+        "label": "USB/AmScope camera + calibration",
+        "state": "SOURCE_BOUND",
+        "source": "baebugs/measure.py",
+        "risk": "CALIBRATION_REQUIRED"
+      },
+      {
+        "id": "BUGPICKER_TOP",
+        "label": "BugPicker top camera",
+        "state": "SOURCE_BOUND",
+        "source": "BioKEA/BugPicker/01_Scan_TopCamera_Rectangle.js",
+        "risk": "FRAME_SYNC_UNKNOWN"
+      }
+    ],
+    "water": [
+      {
+        "id": "NONE",
+        "label": "No added water",
+        "state": "PROPOSED",
+        "source": "internal",
+        "risk": "DRY_FRAGILITY"
+      },
+      {
+        "id": "GRAVITY_MANUAL",
+        "label": "Gravity-fed controlled rinse",
+        "state": "PROPOSED",
+        "source": "gravity filtration",
+        "risk": "FLOW_NOT_MEASURED"
+      },
+      {
+        "id": "METERED",
+        "label": "Metered flow from controller",
+        "state": "PROPOSED",
+        "source": "BioKEA/BugSorter",
+        "risk": "PRESSURE_NOT_VERIFIED"
+      }
+    ],
+    "heat": [
+      {
+        "id": "AMBIENT",
+        "label": "Ambient no heating",
+        "state": "PROPOSED",
+        "source": "internal",
+        "risk": "AMBIENT_LOG_REQUIRED"
+      },
+      {
+        "id": "COLD",
+        "label": "Cold preservation lane",
+        "state": "PROPOSED",
+        "source": "expert protocol",
+        "risk": "THERMAL_CONDENSATION"
+      },
+      {
+        "id": "HEATED",
+        "label": "Heating after sample aliquot decision",
+        "state": "PROPOSED",
+        "source": "expert protocol",
+        "risk": "MORPHOLOGY_AND_RNA_DAMAGE"
+      }
+    ],
+    "reagent": [
+      {
+        "id": "NONE",
+        "label": "No reagent before imaging",
+        "state": "PROPOSED",
+        "source": "internal",
+        "risk": "NONE"
+      },
+      {
+        "id": "PRESERVATIVE",
+        "label": "Registered compatible preservative",
+        "state": "PROPOSED",
+        "source": "expert protocol",
+        "risk": "MATERIAL_AND_MOLECULAR_COMPATIBILITY"
+      },
+      {
+        "id": "LYSIS",
+        "label": "Destructive DNA extraction AFTER voucher",
+        "state": "PROPOSED",
+        "source": "Birnboim and Doly 1979 bacterial plasmid alkaline lysis is not insect protocol",
+        "risk": "DESTROYS_MORPHOLOGY"
+      }
+    ],
+    "goal": [
+      {
+        "id": "MORPHOLOGY_FIRST",
+        "label": "Preserve wings, legs, exoskeleton",
+        "state": "PROPOSED",
+        "source": "expert review",
+        "risk": "THROUGHPUT_LIMIT"
+      },
+      {
+        "id": "DNA_AFTER_IMAGE",
+        "label": "Whole-body DNA after photographic voucher",
+        "state": "PROPOSED",
+        "source": "expert review",
+        "risk": "VOUCHER_CONSUMPTION"
+      },
+      {
+        "id": "RNA_PRESERVE",
+        "label": "RNA-first; handling/time controlled",
+        "state": "PROPOSED",
+        "source": "expert review",
+        "risk": "RNASE_AND_TIMING_UNKNOWN"
+      }
+    ]
+  },
+  "aperture": {
+    "mechanism": "TWO_SLIDING_REGISTERED_SLOTTED_STEEL_LAYERS",
+    "nominal_slot_width_mm": 3.6,
+    "shift_mm": [
+      0,
+      1.2,
+      2.4
+    ],
+    "open_width_mm": [
+      3.6,
+      2.4,
+      1.2
+    ],
+    "slot_pitch_mm": [
+      14.8,
+      10.5
+    ],
+    "revision": "CAD_CONCEPT_V1",
+    "bounds": "ONLY_EMPTY_AND_DRY_ADJUSTMENT",
+    "need": [
+      "RETAINED_SPECIMEN_COUNT_ZERO_CONFIRMED",
+      "FLUID_OFF",
+      "LATCH_OPEN_FOR_ADJUSTMENT",
+      "EXPERT_APPROVES_CONFIG",
+      "LATCH_CLOSED_BEFORE_RESTART",
+      "CAMERA_RECORD_NEW_APERTURE"
+    ],
+    "verification": "GEOMETRY_NOT_EXPERIMENT"
+  },
+  "vip_rules": [
+    "CHAIN_INVALID",
+    "STALE_CAMERA",
+    "APERTURE_POSITION_UNKNOWN",
+    "ADJUST_WITH_SAMPLE_PRESENT",
+    "FLUID_ON_DURING_ADJUST",
+    "SEAL_BYPASS",
+    "COUNT_MISMATCH",
+    "NOVEL_TAXON_CANDIDATE",
+    "MORPHOLOGY_DAMAGE",
+    "RNA_HANDLING_OUTSIDE_WINDOW",
+    "FRAGILE_APPENDAGES",
+    "UNVERIFIED_REAGENT_COMPATIBILITY"
+  ],
+  "publication_requirements": [
+    "IMAGE_EXACT_BYTES",
+    "CALIBRATION_FCO",
+    "SPECIMEN_OCCURRENCE_ID",
+    "FRAME_INSERT_SEAL_IDS",
+    "PRESERVATIVE_HISTORY",
+    "EXPERT_ID_AND_DECISION",
+    "IMAGE_LICENSE",
+    "PROCESSING_TIME",
+    "PROVENANCE_LINK_TO_FINAL_SAMPLE",
+    "RAW_DATA_AND_NOTEBOOKS"
+  ],
+  "scientific_interpretation": {
+    "novelty": "NOVELTY_CANDIDATE_UNTIL_EXPERT_AND_TAXONOMIC_EVIDENCE",
+    "preservation": "DO_NOT_CLAIM_NO_DAMAGE_WITHOUT_BEFORE_AFTER_MASKS",
+    "rna": "RNA_PASSAGE_NOT_ESTABLISHED",
+    "dna": "DNA_SEQUENCING_NOT_EXECUTED"
+  }
+}

@@ -1,0 +1,98 @@
+[
+ {
+  "ref": "photo:46901",
+  "sha256": "bf2add091eae09de201aff68aed6aea8516fb3ca1b51d0da60c0081b276b5528",
+  "status": "BREAK",
+  "reason": "photo bytes kept off-repo (show vendor marks)"
+ },
+ {
+  "ref": "photo:46902",
+  "sha256": "96fc3f4ad4dd9f26e7225261f17537e58e8b6d3f3354b2c4ddd219f4a60d7b15",
+  "status": "BREAK",
+  "reason": "photo bytes kept off-repo (show vendor marks)"
+ },
+ {
+  "ref": "photo:46903",
+  "sha256": "f6abbcdd00e69bf5f88daf52a9c0efe6a2bd52eb76aad523b48295ab9bae176b",
+  "status": "BREAK",
+  "reason": "photo bytes kept off-repo (show vendor marks)"
+ },
+ {
+  "ref": "photo:46904",
+  "sha256": "c46be60cd0b94647b22edb1fdba0966949e55e7c5c46ee23023c62e6ba0e9231",
+  "status": "BREAK",
+  "reason": "photo bytes kept off-repo (show vendor marks)"
+ },
+ {
+  "ref": "photo:46905",
+  "sha256": "21d41ff54de656f8c245e93f92fb8e031c50e831664a047e2542b367c2bb909f",
+  "status": "BREAK",
+  "reason": "photo bytes kept off-repo (show vendor marks)"
+ },
+ {
+  "ref": "photo:46906",
+  "sha256": "76712fa492d3284eed4dec3a1a558bcbdd61195b5634543b4d0f1b4c892384d1",
+  "status": "BREAK",
+  "reason": "photo bytes kept off-repo (show vendor marks)"
+ },
+ {
+  "ref": "photo:46907",
+  "sha256": "cdd431171cc9044ccf0a2ecbfbe6e1daf9c1139cc2fe957e273d8a3e88a610ec",
+  "status": "BREAK",
+  "reason": "photo bytes kept off-repo (show vendor marks)"
+ },
+ {
+  "ref": "photo:46908",
+  "sha256": "0d219e2da0b2f1c1294c2b1c6528263b63d480f0dd32eb1e11f7eda89b18870f",
+  "status": "BREAK",
+  "reason": "photo bytes kept off-repo (show vendor marks)"
+ },
+ {
+  "ref": "photo:46909",
+  "sha256": "194742f25f983868db0bff29ee2fae6931fd59a4742b9c5a1cd6151e00147881",
+  "status": "BREAK",
+  "reason": "photo bytes kept off-repo (show vendor marks)"
+ },
+ {
+  "ref": "photo:46910",
+  "sha256": "cad86112e86249bece0d208cee6a448089184e6c0e1831802c7edd388397e8ea",
+  "status": "BREAK",
+  "reason": "photo bytes kept off-repo (show vendor marks)"
+ },
+ {
+  "ref": "photo:46911",
+  "sha256": "6ee77b2174922ce7d0d04ccc4f001d5558cde72c72e3e2aca702e2c0bae2c011",
+  "status": "BREAK",
+  "reason": "photo bytes kept off-repo (show vendor marks)"
+ },
+ {
+  "ref": "photo:46912",
+  "sha256": "e4422ccd4ce160437d97b22d614c5cff61bf878759c5841523be9de2c05e601c",
+  "status": "BREAK",
+  "reason": "photo bytes kept off-repo (show vendor marks)"
+ },
+ {
+  "ref": "photo:46914",
+  "sha256": "c8f21843b4296a1bdee4121489b7b23dca3b72aa96624ecdc3c8ae473932fc54",
+  "status": "BREAK",
+  "reason": "photo bytes kept off-repo (show vendor marks)"
+ },
+ {
+  "ref": "photo:46915",
+  "sha256": "e10aa2155c6563f5b5b601c7147bdce865760a3016aef056ca2efcb8afe4a993",
+  "status": "BREAK",
+  "reason": "photo bytes kept off-repo (show vendor marks)"
+ },
+ {
+  "ref": "photo:46916",
+  "sha256": "6053dc9bab4f4a70354517eb22e5e479a59844fc541c71f2737a91e25c5eb73a",
+  "status": "BREAK",
+  "reason": "photo bytes kept off-repo (show vendor marks)"
+ },
+ {
+  "ref": "photo:46917",
+  "sha256": "d2506c29f6a5c73b7f9e1ae655b6f2555273a8e632ba52374896433d61a2977e",
+  "status": "BREAK",
+  "reason": "photo bytes kept off-repo (show vendor marks)"
+ }
+]

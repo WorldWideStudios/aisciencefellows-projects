@@ -1,0 +1,744 @@
+{
+ "schema": "baebugs.truth.v1",
+ "id": "5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+ "name": "TRUTH-001",
+ "statement": "held-out toy reconstructs to its frozen (plan, length)",
+ "sources": {
+  "toy_kg_collection_root": "ddbf08d2bf382a2dcf6fcb85afa259122e5ab1a20bb90707df68c5d4104371cc",
+  "toy_index_sha256": "b09b3f48e63447422789d4236c96c692063a631c0ed78e04db34d77490606ef8",
+  "daisy_datasets_root": "5a0d1661538f2a9c1338a274f90477cade19ed034bb09b607ee08ec82004bd86",
+  "daisy_protocol_sha256": "9449fd7c0724f0e3813be357800ac7e286d64b75926b5c8ce205f0a59ae8cb63",
+  "code_commit": "5f88331851bb459cf0d6df77cc35f58a446c313b"
+ },
+ "subjects": [
+  {
+   "toy": "Coccinellidae_mean-2SD_3.7mm",
+   "insect_hash": "ed9bfcff190b088c3e3536d63797ab229b9d07d934bc77eea59d1dc9ba37c356",
+   "plan": "beetle_dome",
+   "length_mm": 3.7,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Coccinellidae_mean-1SD_5.0mm",
+   "insect_hash": "f7d7dcee38793f2acab8921ec4e30903d823e0b7efaaddbfcca7c7f157f9c678",
+   "plan": "beetle_dome",
+   "length_mm": 5.0,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Coccinellidae_mean_6.3mm",
+   "insect_hash": "b8265df8edb0f2af7d2114e7ed831dd95fd24c4ec1b46a64d0891641bf8ae0d1",
+   "plan": "beetle_dome",
+   "length_mm": 6.3,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Coccinellidae_mean+1SD_7.6mm",
+   "insect_hash": "ce8e9e9cbbe2ed5d1a8d029cfd50bbea253d83a9e062336bfca244c7a2dda0fc",
+   "plan": "beetle_dome",
+   "length_mm": 7.6,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Coccinellidae_mean+2SD_8.9mm",
+   "insect_hash": "f51a5df79830cf459be427c3679f0bc12250e5c0f68416c9340d5d54c94f2357",
+   "plan": "beetle_dome",
+   "length_mm": 8.9,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Formicidae_mean-2SD_2.5mm",
+   "insect_hash": "5a48587762b63ae9663798cbe2e8592bb1a24981553a77ae345287b0011d830c",
+   "plan": "ant",
+   "length_mm": 2.5,
+   "training_role": "edge_negative:below_database",
+   "representation": "toy"
+  },
+  {
+   "toy": "Formicidae_mean-1SD_4.7mm",
+   "insect_hash": "e229cd580163236d83dd52c0358df19c225f5b6f30d82bf69bf842c0bb795a53",
+   "plan": "ant",
+   "length_mm": 4.7,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Formicidae_mean_6.9mm",
+   "insect_hash": "3f458b69f69ca96765cd9f29cafb5ccac0630c91f6d705b445cbe74b516005d5",
+   "plan": "ant",
+   "length_mm": 6.9,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Formicidae_mean+1SD_9.1mm",
+   "insect_hash": "a896db013496392560df62a1055e707b93d2f2fa6a2326e4a67a4003f49f2cbb",
+   "plan": "ant",
+   "length_mm": 9.1,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Formicidae_mean+2SD_11.3mm",
+   "insect_hash": "df03ff60bfab85f49411814fb855278741f160010aafb2fce4536efae5b4e500",
+   "plan": "ant",
+   "length_mm": 11.3,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Melittidae_mean-2SD_3.9mm",
+   "insect_hash": "2fed20c98b322b097aca53fc2afe5799db9f5638e640d8c5f28def56995c1dc9",
+   "plan": "bee",
+   "length_mm": 3.9,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Melittidae_mean-1SD_5.8mm",
+   "insect_hash": "5cd60fdc17f5e95e72513f84d11759e55fc5df7ca02fc1e17301d76e86b31bb7",
+   "plan": "bee",
+   "length_mm": 5.8,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Melittidae_mean_7.7mm",
+   "insect_hash": "903c15f82a26233e21c0df7d848355f490b9d2e4a1ab1d010f9bd2581da78a38",
+   "plan": "bee",
+   "length_mm": 7.7,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Melittidae_mean+1SD_9.6mm",
+   "insect_hash": "6fe6cf1000d22c70265a0281ac125a0191a57347a13b2614104ab4fa6bd52180",
+   "plan": "bee",
+   "length_mm": 9.6,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Melittidae_mean+2SD_11.5mm",
+   "insect_hash": "6a3787658ccb915ca428a8604178bcd03a5063c137ec7b9ee014c885fff79bcd",
+   "plan": "bee",
+   "length_mm": 11.5,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Andrenidae_mean-2SD_6.0mm",
+   "insect_hash": "96c1c5f565b367e5f34e2d9149c9176cff134456666d2ed10ac985aaa94c7330",
+   "plan": "bee",
+   "length_mm": 6.0,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Andrenidae_mean-1SD_7.9mm",
+   "insect_hash": "24e495175591ef6da2f90c64408fde8885ccf1dce3aa7a6155c7a01edb95e4f4",
+   "plan": "bee",
+   "length_mm": 7.9,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Andrenidae_mean_9.8mm",
+   "insect_hash": "1fc5ab1b00dd4e0c150b8e3f4bd4b300261fba810af0e184ce6c5487990c72ee",
+   "plan": "bee",
+   "length_mm": 9.8,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Andrenidae_mean+1SD_11.7mm",
+   "insect_hash": "c20e483d8db03656eddf94059df519fa1188a558727dcba298ec323b5e2a8ab0",
+   "plan": "bee",
+   "length_mm": 11.7,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Andrenidae_mean+2SD_13.6mm",
+   "insect_hash": "1e7bcf171c9cf4086b7b73b041fb77c696b950cea372a9d4ce845c3ba150e2db",
+   "plan": "bee",
+   "length_mm": 13.6,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Halictidae_mean-2SD_2.9mm",
+   "insect_hash": "268cbf7aa7df30cc5df280772354b78cc69e659df1e04cfce7a5800c6fc6100d",
+   "plan": "bee",
+   "length_mm": 2.9,
+   "training_role": "edge_negative:family_stats_suspect",
+   "representation": "toy"
+  },
+  {
+   "toy": "Halictidae_mean-1SD_6.4mm",
+   "insect_hash": "aef16df31c1717c42d46886a7830d047632ce99d479da4092314f62eb9ea9ddc",
+   "plan": "bee",
+   "length_mm": 6.4,
+   "training_role": "edge_negative:family_stats_suspect",
+   "representation": "toy"
+  },
+  {
+   "toy": "Halictidae_mean_9.9mm",
+   "insect_hash": "a3f83dc624d6a83244f5b1d2ac1705a1256ac2984f1eae8384dc64e46acd4502",
+   "plan": "bee",
+   "length_mm": 9.9,
+   "training_role": "edge_negative:family_stats_suspect",
+   "representation": "toy"
+  },
+  {
+   "toy": "Halictidae_mean+1SD_13.4mm",
+   "insect_hash": "126973096ef5c15bdde34d21b9b0eda2d227eeccc88c92bf0be80e719f32ddb2",
+   "plan": "bee",
+   "length_mm": 13.4,
+   "training_role": "edge_negative:family_stats_suspect",
+   "representation": "toy"
+  },
+  {
+   "toy": "Halictidae_mean+2SD_16.9mm",
+   "insect_hash": "feaff7bd1e4b902ab9a031656bf68639acaea1bfdafd5b9593a09c60f91b0ba4",
+   "plan": "bee",
+   "length_mm": 16.9,
+   "training_role": "edge_negative:family_stats_suspect",
+   "representation": "toy"
+  },
+  {
+   "toy": "Syrphidae_mean-2SD_5.1mm",
+   "insect_hash": "ea476ca06dde26b8c0fbbf58b4564aba511922e9720ff7f9d2cbd04a86a22619",
+   "plan": "fly",
+   "length_mm": 5.1,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Syrphidae_mean-1SD_7.9mm",
+   "insect_hash": "582b1778fbb725728656b36bfe488b2abfe9081f6a1760bdd567f25295116c64",
+   "plan": "fly",
+   "length_mm": 7.9,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Syrphidae_mean_10.7mm",
+   "insect_hash": "2b12671711b65d4da974e9f7d0041f5ac9999047a163fa05c2a8093c8ef89164",
+   "plan": "fly",
+   "length_mm": 10.7,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Syrphidae_mean+1SD_13.5mm",
+   "insect_hash": "b65db9afd6b84e02fce0d1930275ba208be7c872fe9cb549c485ae8d53134e2e",
+   "plan": "fly",
+   "length_mm": 13.5,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Syrphidae_mean+2SD_16.3mm",
+   "insect_hash": "7945c7959bfddd8f5efb0ca26ef150d4805ac5e4783c6fcd4dcceeed43f80bed",
+   "plan": "fly",
+   "length_mm": 16.3,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Meloidae_mean-2SD_6.2mm",
+   "insect_hash": "970f498e96d3793e8c0f30b92df98e63b0184d7990ff29f6ec144d370930bc69",
+   "plan": "beetle_long",
+   "length_mm": 6.2,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Meloidae_mean-1SD_8.8mm",
+   "insect_hash": "2194a5a08bb99a3b9d0f55f9f77789d662e762ad8e9dd88efe233197414b7eb8",
+   "plan": "beetle_long",
+   "length_mm": 8.8,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Meloidae_mean_11.4mm",
+   "insect_hash": "8c32fc8d986066040e070b357a3b580eedf928e293a15b3d22b5778109987cf3",
+   "plan": "beetle_long",
+   "length_mm": 11.4,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Meloidae_mean+1SD_14.0mm",
+   "insect_hash": "a87e482fe87bfddab3dc02b16b0309840e904c7d0c257dc58246cac595eff87a",
+   "plan": "beetle_long",
+   "length_mm": 14.0,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Meloidae_mean+2SD_16.6mm",
+   "insect_hash": "5bdb77bd9e92a426f17898b6f433751338c33bfa9faf4df56bcac88b28c8a95a",
+   "plan": "beetle_long",
+   "length_mm": 16.6,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Largidae_mean-2SD_7.6mm",
+   "insect_hash": "4edbc9adec453e4dfb8e3853e0be4b19917aca3e4b923dc334ed237fe01901e1",
+   "plan": "bug",
+   "length_mm": 7.6,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Largidae_mean-1SD_10.3mm",
+   "insect_hash": "66977b118b45ef1815eb6b01ffb805d23ea1d61ae4882c1f0e617a3cd28c48f6",
+   "plan": "bug",
+   "length_mm": 10.3,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Largidae_mean_13.0mm",
+   "insect_hash": "e5505afe56721831fdd4b0148e391991bd938953c0cdd0536dc49f65ed212969",
+   "plan": "bug",
+   "length_mm": 13.0,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Largidae_mean+1SD_15.7mm",
+   "insect_hash": "b2a6cc21b08b1dceca93cd29a103b1de5be06b7a10357141228ff6a5d27c6e70",
+   "plan": "bug",
+   "length_mm": 15.7,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Largidae_mean+2SD_18.4mm",
+   "insect_hash": "48ef829a86a6bc48ca6afcadf5cbdff37384c28b3b5b3c3c69c66a6a00af88be",
+   "plan": "bug",
+   "length_mm": 18.4,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Vespidae_mean-2SD_8.2mm",
+   "insect_hash": "906fdcf75843acb1796f716f73984dd3295655a06013a064ce3c3168acfcdb53",
+   "plan": "wasp",
+   "length_mm": 8.2,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Vespidae_mean-1SD_10.7mm",
+   "insect_hash": "7e807fb06973d2b1eaf3fb4b9f78a037e1c2df6c6d36a991d8067ff7718eb52e",
+   "plan": "wasp",
+   "length_mm": 10.7,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Vespidae_mean_13.2mm",
+   "insect_hash": "d6b8e52f450e1593641c79a8ccfd0a8e916bc79fe82a63e567d9313df5eb304e",
+   "plan": "wasp",
+   "length_mm": 13.2,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Vespidae_mean+1SD_15.7mm",
+   "insect_hash": "b165975a652ec8cf9adb32e8cfb54481b9e309968cb9a1b156ac405ebdb0f969",
+   "plan": "wasp",
+   "length_mm": 15.7,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Vespidae_mean+2SD_18.2mm",
+   "insect_hash": "7d4a1ca9659d8a219ed7092a3f59a84f2147849d5539fbf560a72b317314b837",
+   "plan": "wasp",
+   "length_mm": 18.2,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Apidae_mean-2SD_6.3mm",
+   "insect_hash": "32a925cc2bb13f81b090ec90d163d96f4c57e49779ea390eb820686e54794f59",
+   "plan": "bee",
+   "length_mm": 6.3,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Apidae_mean-1SD_9.9mm",
+   "insect_hash": "a3f83dc624d6a83244f5b1d2ac1705a1256ac2984f1eae8384dc64e46acd4502",
+   "plan": "bee",
+   "length_mm": 9.9,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Apidae_mean_13.5mm",
+   "insect_hash": "0528de3783363a35ab8eeba216f826b3761aa5d5aa9bb6371d3dc9c3819d4f39",
+   "plan": "bee",
+   "length_mm": 13.5,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Apidae_mean+1SD_17.1mm",
+   "insect_hash": "2305e454c93affba7ac61fe8d1887d8208879bcbfe1091dde1342be5f9b1ce17",
+   "plan": "bee",
+   "length_mm": 17.1,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Apidae_mean+2SD_20.7mm",
+   "insect_hash": "c65705125a9782c1b713607086dfd65daea33557232dd2abb32b90c93c42fe55",
+   "plan": "bee",
+   "length_mm": 20.7,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Bombyliidae_mean-2SD_8.6mm",
+   "insect_hash": "dae2144caa291a9a300871a754dce9fe8d9da79ca9e212c7deba99245c8867c2",
+   "plan": "fly",
+   "length_mm": 8.6,
+   "training_role": "edge_negative:family_stats_suspect",
+   "representation": "toy"
+  },
+  {
+   "toy": "Bombyliidae_mean-1SD_11.8mm",
+   "insect_hash": "47ad69544249fcc62ebd9318e2e141f88b68fe3ec1b55b2f86d7d46467926edf",
+   "plan": "fly",
+   "length_mm": 11.8,
+   "training_role": "edge_negative:family_stats_suspect",
+   "representation": "toy"
+  },
+  {
+   "toy": "Bombyliidae_mean_15.0mm",
+   "insect_hash": "ef5b57113939d082c2b25eb54c190b08233b9fc7b6e76da3d5b58e165097758e",
+   "plan": "fly",
+   "length_mm": 15.0,
+   "training_role": "edge_negative:family_stats_suspect",
+   "representation": "toy"
+  },
+  {
+   "toy": "Bombyliidae_mean+1SD_18.2mm",
+   "insect_hash": "ec0a90c167cbf5783c0c40a1381c705868fbed8cfc457efcc72893daddfe67c0",
+   "plan": "fly",
+   "length_mm": 18.2,
+   "training_role": "edge_negative:family_stats_suspect",
+   "representation": "toy"
+  },
+  {
+   "toy": "Bombyliidae_mean+2SD_21.4mm",
+   "insect_hash": "8a5b8ba6f751803b7884d39a50901a17685bd6d75cb37ab6226b49b7d075dc7b",
+   "plan": "fly",
+   "length_mm": 21.4,
+   "training_role": "edge_negative:family_stats_suspect",
+   "representation": "toy"
+  },
+  {
+   "toy": "Gerridae_mean-2SD_11.1mm",
+   "insect_hash": "222bc04c5f2e9c38a342727cc466148d4494dbcebd282832b1988141ebfa3a3f",
+   "plan": "strider",
+   "length_mm": 11.1,
+   "training_role": "edge_negative:family_stats_suspect",
+   "representation": "toy"
+  },
+  {
+   "toy": "Gerridae_mean-1SD_16.2mm",
+   "insect_hash": "dc4dcdc4eb7a38dfffa94875aca8cb00e2786dcbfd9868719ee8731bb6c6d4a9",
+   "plan": "strider",
+   "length_mm": 16.2,
+   "training_role": "edge_negative:family_stats_suspect",
+   "representation": "toy"
+  },
+  {
+   "toy": "Gerridae_mean_21.3mm",
+   "insect_hash": "20f36952256a59ee0586b83fc3220ab1538d236651aadf97a1ab602dc9715751",
+   "plan": "strider",
+   "length_mm": 21.3,
+   "training_role": "edge_negative:family_stats_suspect",
+   "representation": "toy"
+  },
+  {
+   "toy": "Gerridae_mean+1SD_26.4mm",
+   "insect_hash": "d40ad5b70e9992680fc7974d04eabcbc1a16deedb0610106e367845771a30555",
+   "plan": "strider",
+   "length_mm": 26.4,
+   "training_role": "edge_negative:family_stats_suspect",
+   "representation": "toy"
+  },
+  {
+   "toy": "Hesperiidae_mean-2SD_16.4mm",
+   "insect_hash": "4a2cd7abff7239bd1f5d989dd7b93230d134ee1cc5d2356fc037462f8bf21496",
+   "plan": "moth",
+   "length_mm": 16.4,
+   "training_role": "edge_negative:family_stats_suspect",
+   "representation": "toy"
+  },
+  {
+   "toy": "Hesperiidae_mean-1SD_20.4mm",
+   "insect_hash": "18bd7394a07ea9a236cf4c5a35ee5a931411713c842f0618a1ea37feb2766dfe",
+   "plan": "moth",
+   "length_mm": 20.4,
+   "training_role": "edge_negative:family_stats_suspect",
+   "representation": "toy"
+  },
+  {
+   "toy": "Hesperiidae_mean_24.4mm",
+   "insect_hash": "ec865592f977c0c166d4c90d3717221ee63804c447d4246462f371e91c2b6b53",
+   "plan": "moth",
+   "length_mm": 24.4,
+   "training_role": "edge_negative:family_stats_suspect",
+   "representation": "toy"
+  },
+  {
+   "toy": "Hesperiidae_mean+1SD_28.4mm",
+   "insect_hash": "40b3325b0d5edaa6e79cb636dad7696a158a411856f38f2d14da25f55ca3e1b0",
+   "plan": "moth",
+   "length_mm": 28.4,
+   "training_role": "edge_negative:family_stats_suspect",
+   "representation": "toy"
+  },
+  {
+   "toy": "Cicadidae_mean-2SD_18.9mm",
+   "insect_hash": "454a1f7113253cf359a492f0d3144535b600aeab8c91078eb21517bcf5b9a452",
+   "plan": "cicada",
+   "length_mm": 18.9,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Cicadidae_mean-1SD_22.2mm",
+   "insect_hash": "f2d25231ef9cfb50de4290a540126d879604a9f3376c8b1c59757c6b9e7a64d2",
+   "plan": "cicada",
+   "length_mm": 22.2,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Cicadidae_mean_25.5mm",
+   "insect_hash": "6af5172aad72d65db8320a93327ae2d54764eb6f6d9ae6b3fc81411215e3673d",
+   "plan": "cicada",
+   "length_mm": 25.5,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Cicadidae_mean+1SD_28.8mm",
+   "insect_hash": "6fa4f6df073106af7f53e432f5a9262e946f902b5b5b63d7c90340398d2ad805",
+   "plan": "cicada",
+   "length_mm": 28.8,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Coenagrionidae_novel_22.9mm",
+   "insect_hash": "1b566048e0df46e20fc1124d1bc396e8df46967eaa119070fe9b3029e9532e23",
+   "plan": "damselfly",
+   "length_mm": 22.9,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Coenagrionidae_novel_26.4mm",
+   "insect_hash": "d8d869d8ed6b7f3fb84834396415b5fcfc7f0813ee649d0f10ecf84fa0a2aed4",
+   "plan": "damselfly",
+   "length_mm": 26.4,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Coenagrionidae_novel_29.9mm",
+   "insect_hash": "b6012f571a0a68b31fb812e914c56cde16987928f3c7b168ef2e3c6850b0cfa7",
+   "plan": "damselfly",
+   "length_mm": 29.9,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Elachistidae_novel_6.7mm",
+   "insect_hash": "8d29b8b961c4c9da6d8e4ec4e40c93b85f3c09878e9d05ad77aed3fefe84d655",
+   "plan": "moth",
+   "length_mm": 6.7,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Elachistidae_novel_8.4mm",
+   "insect_hash": "f0caac72042765e71bc8bae5d34eb50cab1622a779b41feea98032737b95d4df",
+   "plan": "moth",
+   "length_mm": 8.4,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Elachistidae_novel_10.1mm",
+   "insect_hash": "feb4c5a7a2af45e35480a4fe421d730facdfcf8018cec83d268b1d0dce2d617c",
+   "plan": "moth",
+   "length_mm": 10.1,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Apidae_Xylocopa_tabaniformis_orpifex_novel_29.1mm",
+   "insect_hash": "f7627a51d0059d6cb52c83f9def1d367fb3175fdc7b63ea1c14052c30130f703",
+   "plan": "bee",
+   "length_mm": 29.1,
+   "training_role": "edge_negative:size_suspect",
+   "representation": "toy"
+  },
+  {
+   "toy": "Apidae_Bombus_mixtus_novel_28.2mm",
+   "insect_hash": "a154f42c452126fe3302f34d51457e45c51312f34bb5f1536635e559fdad06b4",
+   "plan": "bee",
+   "length_mm": 28.2,
+   "training_role": "edge_negative:size_suspect",
+   "representation": "toy"
+  },
+  {
+   "toy": "Andrenidae_Andrena_prunorum_novel_20.1mm",
+   "insect_hash": "54e99140bc306542dab8507e838df2945d1ff65365e0138f7c3103c5fba3615f",
+   "plan": "bee",
+   "length_mm": 20.1,
+   "training_role": "edge_negative:size_suspect",
+   "representation": "toy"
+  },
+  {
+   "toy": "Colletidae_Ptiloglossa_arizonensis_novel_16.2mm",
+   "insect_hash": "9e04bad1e677fd42633f79a8d2b5ecddce140e2d5c5380197269cda83688ebb0",
+   "plan": "bee",
+   "length_mm": 16.2,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "Meloidae_Epicauta_fortis_novel_2.1mm",
+   "insect_hash": "91f91d4919f68a5581f30d41eb76ca43275e4f33cf7d807bae9c74c7cf2d1d20",
+   "plan": "beetle_long",
+   "length_mm": 2.1,
+   "training_role": "edge_negative:size_suspect",
+   "representation": "toy"
+  },
+  {
+   "toy": "Andrenidae_Perdita_sp_novel_3.6mm",
+   "insect_hash": "317a03565e8cad08ad4d0d32f9ec7cbe5bc529db362935ebd33d77213e2af8f7",
+   "plan": "bee",
+   "length_mm": 3.6,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "thrips_like_fill_1.0mm",
+   "insect_hash": "ff0295603199078258e8effae0005d907bdd776f2e9a6468118f1ed8116c2bd9",
+   "plan": "thrips",
+   "length_mm": 1.0,
+   "training_role": "edge_negative:below_database",
+   "representation": "toy"
+  },
+  {
+   "toy": "thrips_like_fill_1.5mm",
+   "insect_hash": "4de0fdfd725229bce8353d0817ae03972cd7339eda5b77776c3d242abe756c72",
+   "plan": "thrips",
+   "length_mm": 1.5,
+   "training_role": "edge_negative:below_database",
+   "representation": "toy"
+  },
+  {
+   "toy": "thrips_like_fill_2.0mm",
+   "insect_hash": "7b923f9260174389ebfb08e8f957b3a96d7647a363553f5b0311ba120416c614",
+   "plan": "thrips",
+   "length_mm": 2.0,
+   "training_role": "edge_negative:below_database",
+   "representation": "toy"
+  },
+  {
+   "toy": "aphid_like_fill_1.5mm",
+   "insect_hash": "cbd508ddafb2db96fac1db1ca85982d47d8603b8a7d395a601b7eb6d763aaa04",
+   "plan": "aphid",
+   "length_mm": 1.5,
+   "training_role": "edge_negative:below_database",
+   "representation": "toy"
+  },
+  {
+   "toy": "aphid_like_fill_2.0mm",
+   "insect_hash": "c0893770ac53e07c336e33d212497887106ef8e39bba9d4a12bbc5ace9eaa64a",
+   "plan": "aphid",
+   "length_mm": 2.0,
+   "training_role": "edge_negative:below_database",
+   "representation": "toy"
+  },
+  {
+   "toy": "aphid_like_fill_2.5mm",
+   "insect_hash": "cfb1aa5138b16928db44807d06ad3ebc2d66c30b320936f5b040cf249fa51326",
+   "plan": "aphid",
+   "length_mm": 2.5,
+   "training_role": "edge_negative:below_database",
+   "representation": "toy"
+  },
+  {
+   "toy": "aphid_like_fill_3.0mm",
+   "insect_hash": "f144879311a70cf8d88d65926afbaf1d7847a5ad1f86d81a736bf4a12e1b8bf2",
+   "plan": "aphid",
+   "length_mm": 3.0,
+   "training_role": "positive",
+   "representation": "toy"
+  },
+  {
+   "toy": "small_beetle_fill_1.0mm",
+   "insect_hash": "49f890f5410538bfff9e26fe9947e46077eabd14973c080a725e6e9d42475fe4",
+   "plan": "beetle_dome",
+   "length_mm": 1.0,
+   "training_role": "edge_negative:below_database",
+   "representation": "toy"
+  },
+  {
+   "toy": "small_beetle_fill_1.5mm",
+   "insect_hash": "9e6313a27c47e66347cd910b879ac4a715c4315bc2fbfd4401a02f6fb9efc857",
+   "plan": "beetle_dome",
+   "length_mm": 1.5,
+   "training_role": "edge_negative:below_database",
+   "representation": "toy"
+  },
+  {
+   "toy": "small_beetle_fill_2.0mm",
+   "insect_hash": "7e7659b2d58597be558555de19b7671a31a77569dce334626989bb87756f4b0d",
+   "plan": "beetle_dome",
+   "length_mm": 2.0,
+   "training_role": "edge_negative:below_database",
+   "representation": "toy"
+  },
+  {
+   "toy": "small_beetle_fill_2.5mm",
+   "insect_hash": "e1aa655d90883b7fff57dd74dab4b4e3a4ea34bffa5db31b47e525cdf3b21fee",
+   "plan": "beetle_dome",
+   "length_mm": 2.5,
+   "training_role": "edge_negative:below_database",
+   "representation": "toy"
+  },
+  {
+   "toy": "small_beetle_fill_3.0mm",
+   "insect_hash": "6fe382aee32083add6a35c6cd3b0b2e84756fe1117b68bf47d27ae54d332e05f",
+   "plan": "beetle_dome",
+   "length_mm": 3.0,
+   "training_role": "positive",
+   "representation": "toy"
+  }
+ ],
+ "subjects_root": "9170f2b6984e328a339683a409d422585161cae46c92247375bfdc549d41fa0b"
+}

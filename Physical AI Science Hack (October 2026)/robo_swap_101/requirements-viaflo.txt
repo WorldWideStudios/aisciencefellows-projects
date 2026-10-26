@@ -1,0 +1,2 @@
+# Bluetooth uses the native macOS helper; this enables optional USB/serial.
+pyserial==3.5

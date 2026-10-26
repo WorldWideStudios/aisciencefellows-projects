@@ -1,0 +1,19 @@
+{
+  "conflict_resolution": "Take upstream predecessor then build new AoK and graph pack as successor on integrated source; do not hand-edit hash identities.",
+  "google_slides_submission_url": "UNKNOWN",
+  "intervening_main_commit": "944d682605dfa98c04e03c1ae5c5242aae77be01",
+  "merge_conflicts": [
+    "docs/CLAIMS.md",
+    "kg/aok.json",
+    "site/mvp/mvp.json"
+  ],
+  "new_mmr_commit": "NOT_COMPUTED",
+  "next_action": "Recompute integrated pack; full tests; PR; reviewed merge; exact-byte production check",
+  "parent_commit": "4eb9cf8da2455f4bc03d71a7fa8194428895a9c7",
+  "recorded_youtube_url": "https://youtu.be/O4Gq-r018cI",
+  "schema": "baebugs.PublicationSourceSuccessorFCO.v1",
+  "separate_pr34_status": "OPEN_HOLD_RIGHTS_REVIEW",
+  "signature": "NOT_SIGNED",
+  "source_youtube_verification": "REPORTED_IN_GITHUB_NOT_INDEPENDENTLY_FETCHED",
+  "upstream_pr": 35
+}

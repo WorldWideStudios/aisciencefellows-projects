@@ -1,0 +1,53 @@
+{
+ "type": "dedupe",
+ "base": "/Volumes/magicBLACKbox/baebugs",
+ "roots": [
+  "datasets",
+  "daisy",
+  "runs",
+  "compare_renders"
+ ],
+ "keep_prefixes": [
+  "datasets/gbif",
+  "datasets/pseudo_specimens_r3_real",
+  "datasets/_teacher",
+  "datasets/synth"
+ ],
+ "mode": "link",
+ "index_root": "439a9cfca1f33add42c7372024f3477c30683b375c3432dd20c79d176206c6ee",
+ "unique_contents": 29854,
+ "files": 63506,
+ "passes": [
+  {
+   "pass": 1,
+   "replaced": 9893,
+   "skipped": 0,
+   "planned_bytes": 1765478903,
+   "freed_kb": 307360,
+   "note": "copies hardlinked to other copies kept their old inode alive"
+  },
+  {
+   "pass": 2,
+   "replaced": 9371,
+   "skipped": 0,
+   "planned_bytes": 1430627640,
+   "freed_kb": 1398532,
+   "note": "planner relinks every path of a non-canonical inode"
+  }
+ ],
+ "recheck": {
+  "pointers": 0,
+  "bytes_saved": 0
+ },
+ "freed_bytes": 1746833408,
+ "ledger": {
+  "path": "dedupe_pointers.jsonl",
+  "lines": 19264,
+  "sha256": "615c8e58b5d8f737f1700c01be0f44ef0e36f38fc83355b0bb3f62b6573a18f9"
+ },
+ "deleted_content": false,
+ "leakage_check": {
+  "raw_gbif_internal_duplicates": 57,
+  "train_val_leaks": 0
+ }
+}

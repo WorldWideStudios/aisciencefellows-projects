@@ -1,0 +1,20 @@
+{
+  "valid_solid": true,
+  "single_solid": true,
+  "watertight_mesh": true,
+  "bbox_mm": [
+    82.07,
+    19.27,
+    2.07
+  ],
+  "fits_bed": true,
+  "volume_cm3": 2.28,
+  "length_mm": 82.07,
+  "height_mm": 19.27,
+  "groove_play_mm": 0.3,
+  "end_play_mm": 0.4,
+  "openings": 11,
+  "opening_w_mm": 5.0,
+  "opening_h_mm": 8.0,
+  "solid_end_inside_pool_mm": 2.23
+}

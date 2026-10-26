@@ -1,0 +1,57 @@
+{
+  "source_commit": "6332fa7f4139723cd01e18af724b8b2c7c4a8915",
+  "source_paths": {
+    "decision": "daisy/results/DAISY-BB-002a/v2/DECISION.md",
+    "result": "daisy/results/DAISY-BB-002a/v2/results.json",
+    "events": "daisy/results/DAISY-BB-002a/v2/events.jsonl",
+    "protocol": "daisy/DAISY-BB-002a.json"
+  },
+  "source_sha256": {
+    "decision": "648152ce6c4271c6fa86614be7a0ff5a445cce8685a9cbfde273998e85851b80",
+    "result": "9ca0af5f4b3dd80a6b994131ad3230dc2895397770ad05491b153b467d04932e",
+    "events": "53e9a0214efaea90f03091828d6b38f593980406186bc215d7069181ded091a5",
+    "protocol": "1539b8f8728072e2ffcb911e4997ff6e600c0467a3d3179ce7147e47cd8cbf51"
+  },
+  "protocol_sha256": "1539b8f8728072e2ffcb911e4997ff6e600c0467a3d3179ce7147e47cd8cbf51",
+  "events_root": "09b78c8ff6abbbb8a81738ac474807603463c54ee1f98f6825bd9edea176d9bc",
+  "event_count": 41,
+  "custody_members": 14,
+  "run_epoch_checks": {
+    "CA_only": 16,
+    "Synth_only": 16
+  },
+  "holdout_delta_map": {
+    "holdout_az": 0.6955,
+    "holdout_or": 0.5205,
+    "holdout_nv": 0.4977
+  },
+  "holdout_n": {
+    "AZ": 72,
+    "OR": 132,
+    "NV": 8
+  },
+  "toy_length_20ppm": {
+    "ca": 0.2267,
+    "synth": 0.0941
+  },
+  "weights": {
+    "CA_only": "316ce50545855c4076601d9c0f558f7aee4bb98313c97d9131df893a820a8b0a",
+    "Synth_only": "bd036ec7a5dab7e10fd16eb542f82969c8fc0d154775b6193b133e33da42064c"
+  },
+  "weights_bytes_available": "NOT_VERIFIED",
+  "model_admission": "VALIDATION_CANDIDATE",
+  "physical_recovery": "NOT_TESTED",
+  "teacher_check": {
+    "CA_only": 0.0,
+    "Synth_only": 0.0
+  },
+  "verification": {
+    "event_leaf_recomputed": true,
+    "events_root_recomputed": true,
+    "protocol_bytes_match": true,
+    "custody_metadata_member_roots_match": true,
+    "downloaded_training_member_bytes_directly_rehashed": false,
+    "independent_biological_labels": false
+  },
+  "claim_limit": "Pseudo-label agreement, not independent biological accuracy. CA_only includes synthetic data; photo domain holdouts are source partitions."
+}

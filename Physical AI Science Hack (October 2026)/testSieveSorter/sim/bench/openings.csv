@@ -1,0 +1,3 @@
+part,opening_type,nominal_mm,aperture_mm,aperture_sd_mm,bar_or_wire_mm,thickness_mm,n_measured,tool,note
+#example sieve_insert_2mm,printed_square,2.0,1.86,0.05,1.02,1.40,10,calipers inside jaws,
+#example mesh2,wire_mesh,2.0,1.95,0.04,0.30,,10,calipers,glued on top of the frame

@@ -1,0 +1,98 @@
+{
+  "_note": "Single-type photos that train pile_types.py. packed = the dish floor is full, so every square on it is that type; otherwise dish_sizer's segmentation splits squares into object and background. The sample has 7 types; names follow the team's . label_threshold: colour difference that counts as object when labelling (low for pale types, high for dark ones so reflections aren't learned). samples/webcam_set2_yellow_grain.webp is left out: the grain covers most of the floor but not all, so neither labelling mode works on it. The flat/curved pale pasta seen in early mixed photos is not part of the sample (only short tube macaroni), so it has no type. samples/webcam_set4_white_rice.webp is left out: it is hazy, and at any cutoff that finds the rice, reflections get labelled as rice too. samples/webcam_set5_white_rice.webp and webcam_set5_yellow_balls.webp are left out: on white paper under the side light, the brightness change across the dish is bigger than the difference between these pale objects and the floor, so they can't be labelled automatically. Fix: a fixed dish spot plus an empty-dish reference photo.",
+  "photos": [
+    {
+      "type": "tiny seed",
+      "file": "samples/webcam_set1_dark_seeds.webp",
+      "packed": false,
+      "label_threshold": 20
+    },
+    {
+      "type": "yellow balls",
+      "file": "samples/webcam_set1_couscous_packed.webp",
+      "packed": true
+    },
+    {
+      "type": "macaroni",
+      "file": "samples/webcam_set1_pasta_tubes.webp",
+      "packed": false,
+      "label_threshold": 10
+    },
+    {
+      "type": "white rice",
+      "file": "samples/webcam_set1_white_rice_packed.webp",
+      "packed": true
+    },
+    {
+      "type": "yellow rice",
+      "file": "samples/webcam_set1_oat_grains.webp",
+      "packed": false,
+      "label_threshold": 10
+    },
+    {
+      "type": "oval seed",
+      "file": "samples/webcam_set1_red_seeds.webp",
+      "packed": false,
+      "label_threshold": 20
+    },
+    {
+      "type": "tiny seed",
+      "file": "samples/webcam_set2_dark_seeds.webp",
+      "packed": false,
+      "label_threshold": 20
+    },
+    {
+      "type": "macaroni",
+      "file": "samples/webcam_set2_pasta_tubes.webp",
+      "packed": false,
+      "label_threshold": 10
+    },
+    {
+      "type": "white rice",
+      "file": "samples/webcam_set2_white_rice_packed.webp",
+      "packed": true
+    },
+    {
+      "type": "yellow rice",
+      "file": "samples/webcam_set2_oat_grains.webp",
+      "packed": false,
+      "label_threshold": 10
+    },
+    {
+      "type": "oval seed",
+      "file": "samples/webcam_set2_red_seeds.webp",
+      "packed": false,
+      "label_threshold": 20
+    },
+    {
+      "type": "long seed",
+      "file": "samples/webcam_set2_black_grains.webp",
+      "packed": false,
+      "label_threshold": 20
+    },
+    {
+      "type": "long seed",
+      "file": "samples/webcam_set3_black_grains.webp",
+      "packed": false,
+      "label_threshold": 20
+    },
+    {
+      "type": "yellow rice",
+      "file": "samples/webcam_set3_oat_grains.webp",
+      "packed": false,
+      "label_threshold": 10
+    },
+    {
+      "type": "oval seed",
+      "file": "samples/webcam_set3_red_seeds.webp",
+      "packed": false,
+      "label_threshold": 20
+    },
+    {
+      "type": "yellow rice",
+      "file": "samples/webcam_set4_yellow_rice.webp",
+      "packed": false,
+      "label_threshold": 10
+    }
+  ]
+}

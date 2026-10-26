@@ -1,0 +1,1223 @@
+{
+ "insect_hash": "20f36952256a59ee0586b83fc3220ab1538d236651aadf97a1ab602dc9715751",
+ "specimen_hash": "5faa49e999a58e29f7df4d53405f897c815f1fbee17e36b6b675ffc50e859f0f",
+ "nodes": [
+  {
+   "level": 0,
+   "kind": "ellipsoid",
+   "name": "head_body.head_body",
+   "bbox": [
+    [
+     -10.89,
+     -1.11,
+     -1.12
+    ],
+    [
+     -7.22,
+     1.11,
+     1.12
+    ]
+   ],
+   "volume_mm3": 9.5,
+   "children": [],
+   "checks": {
+    "fuse_minimum": true,
+    "watertight": true,
+    "bbox_within_spec": true
+   },
+   "spec": {
+    "center": [
+     -9.053,
+     0.0,
+     0.0
+    ],
+    "radii": [
+     1.837,
+     1.108,
+     1.122
+    ]
+   },
+   "part": "head_body",
+   "tagma": "head",
+   "hash": "a01e9e71b6fbb4f4d826c4332e2b8dc0ab53c6006e4595e58128c15bf64cd8e6",
+   "topo": "7d7ecc6c8cbf3f0f8fe9613705919f5384893617cf1706c777a6f2bccc568597",
+   "ok": true
+  },
+  {
+   "level": 0,
+   "kind": "ellipsoid",
+   "name": "thorax_body.thorax_body",
+   "bbox": [
+    [
+     -7.83,
+     -1.44,
+     -1.23
+    ],
+    [
+     0.37,
+     1.44,
+     1.23
+    ]
+   ],
+   "volume_mm3": 30.0,
+   "children": [],
+   "checks": {
+    "fuse_minimum": true,
+    "watertight": true,
+    "bbox_within_spec": true
+   },
+   "spec": {
+    "center": [
+     -3.728,
+     0.0,
+     0.0
+    ],
+    "radii": [
+     4.1,
+     1.438,
+     1.227
+    ]
+   },
+   "part": "thorax_body",
+   "tagma": "thorax",
+   "hash": "16a83e80fc059405ed68f065e77a20104330fa0a20291b674103a8c2ea60eca6",
+   "topo": "2e375dd235fd6df7fd474ccf5fcc027b94dcf9357c0b9b7f002fe493089be869",
+   "ok": true
+  },
+  {
+   "level": 0,
+   "kind": "ellipsoid",
+   "name": "abdomen_body.abdomen_body",
+   "bbox": [
+    [
+     -0.27,
+     -1.6,
+     -1.28
+    ],
+    [
+     10.92,
+     1.6,
+     1.28
+    ]
+   ],
+   "volume_mm3": 47.4,
+   "children": [],
+   "checks": {
+    "fuse_minimum": true,
+    "watertight": true,
+    "bbox_within_spec": true
+   },
+   "spec": {
+    "center": [
+     5.325,
+     0.0,
+     0.0
+    ],
+    "radii": [
+     5.591,
+     1.597,
+     1.278
+    ]
+   },
+   "part": "abdomen_body",
+   "tagma": "abdomen",
+   "hash": "2126f2232d9c323395021d1328c47422e76be3d1f5bfd1c9831d276b01236968",
+   "topo": "635b0c0daf8195805f91e0cc61fd1a110acbc7ed44e3ed9dbe018698855260e6",
+   "ok": true
+  },
+  {
+   "level": 0,
+   "kind": "rod",
+   "name": "leg_1L.femur",
+   "bbox": [
+    [
+     -7.96,
+     -4.97,
+     -0.66
+    ],
+    [
+     -5.56,
+     -0.4,
+     0.14
+    ]
+   ],
+   "volume_mm3": 2.2,
+   "children": [],
+   "checks": {
+    "fuse_minimum": true,
+    "watertight": true,
+    "bbox_within_spec": true
+   },
+   "spec": {
+    "a": [
+     -5.964,
+     -0.799,
+     -0.256
+    ],
+    "b": [
+     -7.562,
+     -4.569,
+     -0.256
+    ],
+    "d": 0.8
+   },
+   "part": "leg_1L",
+   "tagma": "thorax",
+   "hash": "f893436c3da6b9b0312d5569433bf31de729cbf19df74765d82cffdec2ec720f",
+   "topo": "21dc7713fcfff500812a4fa0c3f468cd3fffd6d5b46eaf1bcb668c56cb852c0e",
+   "ok": true
+  },
+  {
+   "level": 0,
+   "kind": "rod",
+   "name": "leg_1L.tibia",
+   "bbox": [
+    [
+     -9.88,
+     -8.71,
+     -1.55
+    ],
+    [
+     -7.16,
+     -4.17,
+     0.14
+    ]
+   ],
+   "volume_mm3": 2.3,
+   "children": [],
+   "checks": {
+    "fuse_minimum": true,
+    "watertight": true,
+    "bbox_within_spec": true
+   },
+   "spec": {
+    "a": [
+     -7.562,
+     -4.569,
+     -0.256
+    ],
+    "b": [
+     -9.479,
+     -8.307,
+     -1.15
+    ],
+    "d": 0.8
+   },
+   "part": "leg_1L",
+   "tagma": "thorax",
+   "hash": "23840c523d3fcb4c8bf9a8b888ab46ca87474dfec5c569782667809e9f5bdf80",
+   "topo": "0ab2e9610505f25dea006de49ace54b776a65bce3d59ca513d1a777e0a88ea6e",
+   "ok": true
+  },
+  {
+   "level": 0,
+   "kind": "rod",
+   "name": "leg_1R.femur",
+   "bbox": [
+    [
+     -7.96,
+     0.4,
+     -0.66
+    ],
+    [
+     -5.56,
+     4.97,
+     0.14
+    ]
+   ],
+   "volume_mm3": 2.2,
+   "children": [],
+   "checks": {
+    "fuse_minimum": true,
+    "watertight": true,
+    "bbox_within_spec": true
+   },
+   "spec": {
+    "a": [
+     -5.964,
+     0.799,
+     -0.256
+    ],
+    "b": [
+     -7.562,
+     4.569,
+     -0.256
+    ],
+    "d": 0.8
+   },
+   "part": "leg_1R",
+   "tagma": "thorax",
+   "hash": "bf7d247a90d5abede27ae3cf0957a14a89315de5ff9df45f49c07050e4980666",
+   "topo": "74a27e1649b665bad484fe4b26e9b9430275a0d43f1c95181a142c965b99af42",
+   "ok": true
+  },
+  {
+   "level": 0,
+   "kind": "rod",
+   "name": "leg_1R.tibia",
+   "bbox": [
+    [
+     -9.88,
+     4.17,
+     -1.55
+    ],
+    [
+     -7.16,
+     8.71,
+     0.14
+    ]
+   ],
+   "volume_mm3": 2.3,
+   "children": [],
+   "checks": {
+    "fuse_minimum": true,
+    "watertight": true,
+    "bbox_within_spec": true
+   },
+   "spec": {
+    "a": [
+     -7.562,
+     4.569,
+     -0.256
+    ],
+    "b": [
+     -9.479,
+     8.307,
+     -1.15
+    ],
+    "d": 0.8
+   },
+   "part": "leg_1R",
+   "tagma": "thorax",
+   "hash": "7ce1b16c033627891719a31aae677b9c6dfb1bbc5e5cb1542d8cabdb01517422",
+   "topo": "55a67dbc887b74ebb58e3cb606896cd65aab72c73b45a5d810a755ebee7f3327",
+   "ok": true
+  },
+  {
+   "level": 0,
+   "kind": "rod",
+   "name": "leg_2L.femur",
+   "bbox": [
+    [
+     -4.13,
+     -4.97,
+     -0.66
+    ],
+    [
+     -3.33,
+     -0.4,
+     0.14
+    ]
+   ],
+   "volume_mm3": 2.0,
+   "children": [],
+   "checks": {
+    "fuse_minimum": true,
+    "watertight": true,
+    "bbox_within_spec": true
+   },
+   "spec": {
+    "a": [
+     -3.728,
+     -0.799,
+     -0.256
+    ],
+    "b": [
+     -3.728,
+     -4.569,
+     -0.256
+    ],
+    "d": 0.8
+   },
+   "part": "leg_2L",
+   "tagma": "thorax",
+   "hash": "9bef06171d60759454b3fd5985d4b906099169c5c6816e57e12500ecee348a92",
+   "topo": "b508fb8c84067eabdb7626a8e20887da80f8302bbc14f01f5331c9ed3af52226",
+   "ok": true
+  },
+  {
+   "level": 0,
+   "kind": "rod",
+   "name": "leg_2L.tibia",
+   "bbox": [
+    [
+     -4.13,
+     -8.71,
+     -1.55
+    ],
+    [
+     -3.33,
+     -4.17,
+     0.14
+    ]
+   ],
+   "volume_mm3": 2.1,
+   "children": [],
+   "checks": {
+    "fuse_minimum": true,
+    "watertight": true,
+    "bbox_within_spec": true
+   },
+   "spec": {
+    "a": [
+     -3.728,
+     -4.569,
+     -0.256
+    ],
+    "b": [
+     -3.728,
+     -8.307,
+     -1.15
+    ],
+    "d": 0.8
+   },
+   "part": "leg_2L",
+   "tagma": "thorax",
+   "hash": "9224ad3ef0b2cf39c3f8b2da5bf1f9fced2b7b5b9d90332952f11eee8e96a16d",
+   "topo": "0c060d1a419320dd1280da9e36ed0e7b784d96357503cf904f6742cd6e3e3033",
+   "ok": true
+  },
+  {
+   "level": 0,
+   "kind": "rod",
+   "name": "leg_2R.femur",
+   "bbox": [
+    [
+     -4.13,
+     0.4,
+     -0.66
+    ],
+    [
+     -3.33,
+     4.97,
+     0.14
+    ]
+   ],
+   "volume_mm3": 2.0,
+   "children": [],
+   "checks": {
+    "fuse_minimum": true,
+    "watertight": true,
+    "bbox_within_spec": true
+   },
+   "spec": {
+    "a": [
+     -3.728,
+     0.799,
+     -0.256
+    ],
+    "b": [
+     -3.728,
+     4.569,
+     -0.256
+    ],
+    "d": 0.8
+   },
+   "part": "leg_2R",
+   "tagma": "thorax",
+   "hash": "68e8321c87351e06d8420a0f41016dcd19a1977565a51bef60240045a20a8d2a",
+   "topo": "2df3d43827a0786c696837ba328abf4200a56633f9c5e36e06728fed294214c2",
+   "ok": true
+  },
+  {
+   "level": 0,
+   "kind": "rod",
+   "name": "leg_2R.tibia",
+   "bbox": [
+    [
+     -4.13,
+     4.17,
+     -1.55
+    ],
+    [
+     -3.33,
+     8.71,
+     0.14
+    ]
+   ],
+   "volume_mm3": 2.1,
+   "children": [],
+   "checks": {
+    "fuse_minimum": true,
+    "watertight": true,
+    "bbox_within_spec": true
+   },
+   "spec": {
+    "a": [
+     -3.728,
+     4.569,
+     -0.256
+    ],
+    "b": [
+     -3.728,
+     8.307,
+     -1.15
+    ],
+    "d": 0.8
+   },
+   "part": "leg_2R",
+   "tagma": "thorax",
+   "hash": "2e5b62d3dd32bb51be52775b5cd710ab9e816f1b04d6b0ec99b636a082c22195",
+   "topo": "2bc7e24ef2e06bbdf6bc7d7cab1553ba1c0749ea56f081561f24c4761cbc0c92",
+   "ok": true
+  },
+  {
+   "level": 0,
+   "kind": "rod",
+   "name": "leg_3L.femur",
+   "bbox": [
+    [
+     -1.89,
+     -4.97,
+     -0.66
+    ],
+    [
+     0.51,
+     -0.4,
+     0.14
+    ]
+   ],
+   "volume_mm3": 2.2,
+   "children": [],
+   "checks": {
+    "fuse_minimum": true,
+    "watertight": true,
+    "bbox_within_spec": true
+   },
+   "spec": {
+    "a": [
+     -1.491,
+     -0.799,
+     -0.256
+    ],
+    "b": [
+     0.106,
+     -4.569,
+     -0.256
+    ],
+    "d": 0.8
+   },
+   "part": "leg_3L",
+   "tagma": "thorax",
+   "hash": "e1b56b08aefbb4264a1a495d58acad74a2d5935f2e538df950ba2c7a8a555cbd",
+   "topo": "09f48a6879ccbe66a35cf0aba70c659c0f0c3380c87e1671bf7dc40cc7ca3fd2",
+   "ok": true
+  },
+  {
+   "level": 0,
+   "kind": "rod",
+   "name": "leg_3L.tibia",
+   "bbox": [
+    [
+     -0.29,
+     -8.71,
+     -1.55
+    ],
+    [
+     5.62,
+     -4.17,
+     0.14
+    ]
+   ],
+   "volume_mm3": 3.3,
+   "children": [],
+   "checks": {
+    "fuse_minimum": true,
+    "watertight": true,
+    "bbox_within_spec": true
+   },
+   "spec": {
+    "a": [
+     0.106,
+     -4.569,
+     -0.256
+    ],
+    "b": [
+     5.218,
+     -8.307,
+     -1.15
+    ],
+    "d": 0.8
+   },
+   "part": "leg_3L",
+   "tagma": "thorax",
+   "hash": "f5423f344aff98d04ec17a5ee34c7349664c22f0b9403739ec02eb89701dd4eb",
+   "topo": "efaac38a158b42b45927c618d66ebe14c7c6a45dba9ac53b085d0b4062e08c42",
+   "ok": true
+  },
+  {
+   "level": 0,
+   "kind": "rod",
+   "name": "leg_3R.femur",
+   "bbox": [
+    [
+     -1.89,
+     0.4,
+     -0.66
+    ],
+    [
+     0.51,
+     4.97,
+     0.14
+    ]
+   ],
+   "volume_mm3": 2.2,
+   "children": [],
+   "checks": {
+    "fuse_minimum": true,
+    "watertight": true,
+    "bbox_within_spec": true
+   },
+   "spec": {
+    "a": [
+     -1.491,
+     0.799,
+     -0.256
+    ],
+    "b": [
+     0.106,
+     4.569,
+     -0.256
+    ],
+    "d": 0.8
+   },
+   "part": "leg_3R",
+   "tagma": "thorax",
+   "hash": "ec8177add1148422786e30e30159f52d785123b26dfcbcf75f003dce4d7faa0e",
+   "topo": "c6b1fa816efd7daa6d706215c8b89dcad1b1531667ccbb4ec7aa885530cc4488",
+   "ok": true
+  },
+  {
+   "level": 0,
+   "kind": "rod",
+   "name": "leg_3R.tibia",
+   "bbox": [
+    [
+     -0.29,
+     4.17,
+     -1.55
+    ],
+    [
+     5.62,
+     8.71,
+     0.14
+    ]
+   ],
+   "volume_mm3": 3.3,
+   "children": [],
+   "checks": {
+    "fuse_minimum": true,
+    "watertight": true,
+    "bbox_within_spec": true
+   },
+   "spec": {
+    "a": [
+     0.106,
+     4.569,
+     -0.256
+    ],
+    "b": [
+     5.218,
+     8.307,
+     -1.15
+    ],
+    "d": 0.8
+   },
+   "part": "leg_3R",
+   "tagma": "thorax",
+   "hash": "c1703f0fb833353f512692439e4cfa5b29c09baa66ef453d1db672365c68f6e2",
+   "topo": "48b8c2c128bb49eefa14a05654ea7bc1d9c89419e3c96c608eb190cc69ee5e2b",
+   "ok": true
+  },
+  {
+   "level": 0,
+   "kind": "rod",
+   "name": "antenna_L.antenna",
+   "bbox": [
+    [
+     -16.38,
+     -2.32,
+     -0.02
+    ],
+    [
+     -9.93,
+     0.4,
+     1.55
+    ]
+   ],
+   "volume_mm3": 3.1,
+   "children": [],
+   "checks": {
+    "fuse_minimum": true,
+    "watertight": true,
+    "bbox_within_spec": true
+   },
+   "spec": {
+    "a": [
+     -10.331,
+     0.0,
+     0.383
+    ],
+    "b": [
+     -15.975,
+     -1.917,
+     1.15
+    ],
+    "d": 0.8
+   },
+   "part": "antenna_L",
+   "tagma": "head",
+   "hash": "4ffe2f1733272b95335bd792c7704d2dd3ec0a9ce7467ee7cd6dc05e40215eba",
+   "topo": "23dc295a01ea20c53dd5e643cac724b9f0117abb37597742bb2e6023376cb1d7",
+   "ok": true
+  },
+  {
+   "level": 0,
+   "kind": "rod",
+   "name": "antenna_R.antenna",
+   "bbox": [
+    [
+     -16.38,
+     -0.4,
+     -0.02
+    ],
+    [
+     -9.93,
+     2.32,
+     1.55
+    ]
+   ],
+   "volume_mm3": 3.1,
+   "children": [],
+   "checks": {
+    "fuse_minimum": true,
+    "watertight": true,
+    "bbox_within_spec": true
+   },
+   "spec": {
+    "a": [
+     -10.331,
+     0.0,
+     0.383
+    ],
+    "b": [
+     -15.975,
+     1.917,
+     1.15
+    ],
+    "d": 0.8
+   },
+   "part": "antenna_R",
+   "tagma": "head",
+   "hash": "497c660867ef58baa6965f4f38fc00885c5cb59fa45749a769febd7aafe209cb",
+   "topo": "b7a7b9ce0625b492b728721a0c6242218f970ea68ee3c0b872a3bf012a997950",
+   "ok": true
+  },
+  {
+   "level": 1,
+   "kind": "part",
+   "name": "head_body",
+   "bbox": [
+    [
+     -10.89,
+     -1.11,
+     -1.12
+    ],
+    [
+     -7.22,
+     1.11,
+     1.12
+    ]
+   ],
+   "volume_mm3": 9.5,
+   "children": [
+    "a01e9e71b6fbb4f4d826c4332e2b8dc0ab53c6006e4595e58128c15bf64cd8e6"
+   ],
+   "checks": {
+    "children_contained": true,
+    "extents_monotone": true,
+    "union_volume_bounds": true
+   },
+   "tagma": "head",
+   "hash": "6dc08a362b677d64af4cdbbe1be82beff062c26eecb8c6a76abfecf703c5561f",
+   "topo": "1b5536a0ec10d9f9f9586571e61bb2234f5807eec8374c00705547a96dffa3e6",
+   "ok": true
+  },
+  {
+   "level": 1,
+   "kind": "part",
+   "name": "thorax_body",
+   "bbox": [
+    [
+     -7.83,
+     -1.44,
+     -1.23
+    ],
+    [
+     0.37,
+     1.44,
+     1.23
+    ]
+   ],
+   "volume_mm3": 30.0,
+   "children": [
+    "16a83e80fc059405ed68f065e77a20104330fa0a20291b674103a8c2ea60eca6"
+   ],
+   "checks": {
+    "children_contained": true,
+    "extents_monotone": true,
+    "union_volume_bounds": true
+   },
+   "tagma": "thorax",
+   "hash": "9b5c5645188246f913274f44036bfdae8753f112987b55c23394fdfe4e54a491",
+   "topo": "7ad3d3632ff9c926858593743645d2e4bd187babd0805d3003910446feb57376",
+   "ok": true
+  },
+  {
+   "level": 1,
+   "kind": "part",
+   "name": "abdomen_body",
+   "bbox": [
+    [
+     -0.27,
+     -1.6,
+     -1.28
+    ],
+    [
+     10.92,
+     1.6,
+     1.28
+    ]
+   ],
+   "volume_mm3": 47.4,
+   "children": [
+    "2126f2232d9c323395021d1328c47422e76be3d1f5bfd1c9831d276b01236968"
+   ],
+   "checks": {
+    "children_contained": true,
+    "extents_monotone": true,
+    "union_volume_bounds": true
+   },
+   "tagma": "abdomen",
+   "hash": "63bf2763e5f5ee5fa52c0b98d735f7284871df643e70e8a99c7aceadd070b225",
+   "topo": "e468275a268e6c1849a64a912eeb3e2c4180ebe751721df60b6586d944b3286c",
+   "ok": true
+  },
+  {
+   "level": 1,
+   "kind": "part",
+   "name": "leg_1L",
+   "bbox": [
+    [
+     -9.88,
+     -8.71,
+     -1.55
+    ],
+    [
+     -5.56,
+     -0.4,
+     0.14
+    ]
+   ],
+   "volume_mm3": 4.3,
+   "children": [
+    "f893436c3da6b9b0312d5569433bf31de729cbf19df74765d82cffdec2ec720f",
+    "23840c523d3fcb4c8bf9a8b888ab46ca87474dfec5c569782667809e9f5bdf80"
+   ],
+   "checks": {
+    "children_contained": true,
+    "extents_monotone": true,
+    "union_volume_bounds": true,
+    "joint_continuous": true
+   },
+   "tagma": "thorax",
+   "hash": "394b6832cc5fe7bd80335839fe5a7d0f66e0fcca0a12e97b88df8e74171b1545",
+   "topo": "573493bd9a306b7d49fc4abf33be25f84015c283326793b3f866347f44f7c95b",
+   "ok": true
+  },
+  {
+   "level": 1,
+   "kind": "part",
+   "name": "leg_1R",
+   "bbox": [
+    [
+     -9.88,
+     0.4,
+     -1.55
+    ],
+    [
+     -5.56,
+     8.71,
+     0.14
+    ]
+   ],
+   "volume_mm3": 4.3,
+   "children": [
+    "bf7d247a90d5abede27ae3cf0957a14a89315de5ff9df45f49c07050e4980666",
+    "7ce1b16c033627891719a31aae677b9c6dfb1bbc5e5cb1542d8cabdb01517422"
+   ],
+   "checks": {
+    "children_contained": true,
+    "extents_monotone": true,
+    "union_volume_bounds": true,
+    "joint_continuous": true
+   },
+   "tagma": "thorax",
+   "hash": "7d2aefb115a4afa041dec6d5597130921b338480ba1b7e3a243889e19188408f",
+   "topo": "9dc0dbea41ea7d6b0a4959f3cb5d5bb316bf20ecf4829155af4af7706acda687",
+   "ok": true
+  },
+  {
+   "level": 1,
+   "kind": "part",
+   "name": "leg_2L",
+   "bbox": [
+    [
+     -4.13,
+     -8.71,
+     -1.55
+    ],
+    [
+     -3.33,
+     -0.4,
+     0.14
+    ]
+   ],
+   "volume_mm3": 3.9,
+   "children": [
+    "9bef06171d60759454b3fd5985d4b906099169c5c6816e57e12500ecee348a92",
+    "9224ad3ef0b2cf39c3f8b2da5bf1f9fced2b7b5b9d90332952f11eee8e96a16d"
+   ],
+   "checks": {
+    "children_contained": true,
+    "extents_monotone": true,
+    "union_volume_bounds": true,
+    "joint_continuous": true
+   },
+   "tagma": "thorax",
+   "hash": "6ff6a5a9140c267b303f8f3a2f5267196ab140f33c31836999b6c834b670cc69",
+   "topo": "f88cc611e927253661258c459bdb36ccf2c278784dbc183efb5cfed6c97f8fab",
+   "ok": true
+  },
+  {
+   "level": 1,
+   "kind": "part",
+   "name": "leg_2R",
+   "bbox": [
+    [
+     -4.13,
+     0.4,
+     -1.55
+    ],
+    [
+     -3.33,
+     8.71,
+     0.14
+    ]
+   ],
+   "volume_mm3": 3.9,
+   "children": [
+    "68e8321c87351e06d8420a0f41016dcd19a1977565a51bef60240045a20a8d2a",
+    "2e5b62d3dd32bb51be52775b5cd710ab9e816f1b04d6b0ec99b636a082c22195"
+   ],
+   "checks": {
+    "children_contained": true,
+    "extents_monotone": true,
+    "union_volume_bounds": true,
+    "joint_continuous": true
+   },
+   "tagma": "thorax",
+   "hash": "6b5cc6bfe118dd31ccd899ae433cf78985a3a2bf6ad1cd57d2cb6273db701817",
+   "topo": "8977f9c0ad1acc2d0eadc92dd16b5ce60ad69b9972b219174d60e0bb528bc5b5",
+   "ok": true
+  },
+  {
+   "level": 1,
+   "kind": "part",
+   "name": "leg_3L",
+   "bbox": [
+    [
+     -1.89,
+     -8.71,
+     -1.55
+    ],
+    [
+     5.62,
+     -0.4,
+     0.14
+    ]
+   ],
+   "volume_mm3": 5.3,
+   "children": [
+    "e1b56b08aefbb4264a1a495d58acad74a2d5935f2e538df950ba2c7a8a555cbd",
+    "f5423f344aff98d04ec17a5ee34c7349664c22f0b9403739ec02eb89701dd4eb"
+   ],
+   "checks": {
+    "children_contained": true,
+    "extents_monotone": true,
+    "union_volume_bounds": true,
+    "joint_continuous": true
+   },
+   "tagma": "thorax",
+   "hash": "12afb5af48c85e298c5d339585be6f7014e5a554ea83eb8e57737a82f49183c9",
+   "topo": "57f5a49fd7794f559b3247a23b1d078a801dddf10881350462aecffd57456f3d",
+   "ok": true
+  },
+  {
+   "level": 1,
+   "kind": "part",
+   "name": "leg_3R",
+   "bbox": [
+    [
+     -1.89,
+     0.4,
+     -1.55
+    ],
+    [
+     5.62,
+     8.71,
+     0.14
+    ]
+   ],
+   "volume_mm3": 5.3,
+   "children": [
+    "ec8177add1148422786e30e30159f52d785123b26dfcbcf75f003dce4d7faa0e",
+    "c1703f0fb833353f512692439e4cfa5b29c09baa66ef453d1db672365c68f6e2"
+   ],
+   "checks": {
+    "children_contained": true,
+    "extents_monotone": true,
+    "union_volume_bounds": true,
+    "joint_continuous": true
+   },
+   "tagma": "thorax",
+   "hash": "63714d10e6b4b1a804872a6656367d41b3f45ca59fec4f9a2e3ddb4718fa4e8b",
+   "topo": "35ccd64760e3806749d76dfac60b88135955e77ee6791b6dcbd53b4101457974",
+   "ok": true
+  },
+  {
+   "level": 1,
+   "kind": "part",
+   "name": "antenna_L",
+   "bbox": [
+    [
+     -16.38,
+     -2.32,
+     -0.02
+    ],
+    [
+     -9.93,
+     0.4,
+     1.55
+    ]
+   ],
+   "volume_mm3": 3.1,
+   "children": [
+    "4ffe2f1733272b95335bd792c7704d2dd3ec0a9ce7467ee7cd6dc05e40215eba"
+   ],
+   "checks": {
+    "children_contained": true,
+    "extents_monotone": true,
+    "union_volume_bounds": true
+   },
+   "tagma": "head",
+   "hash": "1bb96bd5e14068aadc35584b46bfdb9ca03f17a1a5a44b598dc78ad360076d7c",
+   "topo": "1e064741e93a558a91200a425931d2b5f805771362bade737e4737b0bed11bbf",
+   "ok": true
+  },
+  {
+   "level": 1,
+   "kind": "part",
+   "name": "antenna_R",
+   "bbox": [
+    [
+     -16.38,
+     -0.4,
+     -0.02
+    ],
+    [
+     -9.93,
+     2.32,
+     1.55
+    ]
+   ],
+   "volume_mm3": 3.1,
+   "children": [
+    "497c660867ef58baa6965f4f38fc00885c5cb59fa45749a769febd7aafe209cb"
+   ],
+   "checks": {
+    "children_contained": true,
+    "extents_monotone": true,
+    "union_volume_bounds": true
+   },
+   "tagma": "head",
+   "hash": "2c2e7f54695e64d930dc965e885a7d8971a99598b29c2c0b7cac2c550b1f8da9",
+   "topo": "f2ae9e66ba792a9b19add76ffd8e1a8f0b587f3fd1379c883f61aa456dc82bc5",
+   "ok": true
+  },
+  {
+   "level": 2,
+   "kind": "tagma",
+   "name": "head",
+   "bbox": [
+    [
+     -16.38,
+     -2.32,
+     -1.12
+    ],
+    [
+     -7.22,
+     2.32,
+     1.55
+    ]
+   ],
+   "volume_mm3": 15.0,
+   "children": [
+    "6dc08a362b677d64af4cdbbe1be82beff062c26eecb8c6a76abfecf703c5561f",
+    "1bb96bd5e14068aadc35584b46bfdb9ca03f17a1a5a44b598dc78ad360076d7c",
+    "2c2e7f54695e64d930dc965e885a7d8971a99598b29c2c0b7cac2c550b1f8da9"
+   ],
+   "checks": {
+    "children_contained": true,
+    "extents_monotone": true,
+    "union_volume_bounds": true,
+    "appendages_attached": true,
+    "left_right_mirror": true
+   },
+   "hash": "74ae36951d5042b2488d82a0107a1d5ae00b945b80beb110ce66d34478539691",
+   "topo": "1e97085d95c4df984b856543de4a516f75892a0a16355714215028c8b0286c84",
+   "ok": true
+  },
+  {
+   "level": 2,
+   "kind": "tagma",
+   "name": "thorax",
+   "bbox": [
+    [
+     -9.88,
+     -8.71,
+     -1.55
+    ],
+    [
+     5.62,
+     8.71,
+     1.23
+    ]
+   ],
+   "volume_mm3": 55.0,
+   "children": [
+    "9b5c5645188246f913274f44036bfdae8753f112987b55c23394fdfe4e54a491",
+    "394b6832cc5fe7bd80335839fe5a7d0f66e0fcca0a12e97b88df8e74171b1545",
+    "7d2aefb115a4afa041dec6d5597130921b338480ba1b7e3a243889e19188408f",
+    "6ff6a5a9140c267b303f8f3a2f5267196ab140f33c31836999b6c834b670cc69",
+    "6b5cc6bfe118dd31ccd899ae433cf78985a3a2bf6ad1cd57d2cb6273db701817",
+    "12afb5af48c85e298c5d339585be6f7014e5a554ea83eb8e57737a82f49183c9",
+    "63714d10e6b4b1a804872a6656367d41b3f45ca59fec4f9a2e3ddb4718fa4e8b"
+   ],
+   "checks": {
+    "children_contained": true,
+    "extents_monotone": true,
+    "union_volume_bounds": true,
+    "appendages_attached": true,
+    "left_right_mirror": true
+   },
+   "hash": "f73ccbf422b573f1f049a17e49ce73af2649bf9ea6df8610393c5aad386ae63a",
+   "topo": "fd0feca4a5a6a0a8772fb8a013e32ded03ed3046bc2345baa8591e0b1ade0450",
+   "ok": true
+  },
+  {
+   "level": 2,
+   "kind": "tagma",
+   "name": "abdomen",
+   "bbox": [
+    [
+     -0.27,
+     -1.6,
+     -1.28
+    ],
+    [
+     10.92,
+     1.6,
+     1.28
+    ]
+   ],
+   "volume_mm3": 47.4,
+   "children": [
+    "63bf2763e5f5ee5fa52c0b98d735f7284871df643e70e8a99c7aceadd070b225"
+   ],
+   "checks": {
+    "children_contained": true,
+    "extents_monotone": true,
+    "union_volume_bounds": true,
+    "appendages_attached": true,
+    "left_right_mirror": true
+   },
+   "hash": "1b9cc3be5f5ae74fba43bf065cf7eea9e8e44d671082c748f99fb3b72a0c75dc",
+   "topo": "146b2273d71d3e2b3bc8c0305a59eaf31b6cec22c99329ab4aa2c0802acfec1a",
+   "ok": true
+  },
+  {
+   "level": 3,
+   "kind": "insect",
+   "name": "strider",
+   "bbox": [
+    [
+     -16.38,
+     -8.71,
+     -1.55
+    ],
+    [
+     10.92,
+     8.71,
+     1.55
+    ]
+   ],
+   "volume_mm3": 116.9,
+   "children": [
+    "74ae36951d5042b2488d82a0107a1d5ae00b945b80beb110ce66d34478539691",
+    "f73ccbf422b573f1f049a17e49ce73af2649bf9ea6df8610393c5aad386ae63a",
+    "1b9cc3be5f5ae74fba43bf065cf7eea9e8e44d671082c748f99fb3b72a0c75dc"
+   ],
+   "checks": {
+    "children_contained": true,
+    "extents_monotone": true,
+    "union_volume_bounds": true,
+    "tagma_order": true,
+    "body_span_matches_length": true,
+    "union_bbox_equals_children": true,
+    "watertight": true,
+    "appendage_counts": true,
+    "tray_from_width": true
+   },
+   "plan": "strider",
+   "length_mm": 21.3,
+   "body_width_mm": 3.19,
+   "kit_tray": "HEX-2",
+   "counts": {
+    "legs": 6,
+    "antennae": 2,
+    "wings": 0
+   },
+   "hash": "20f36952256a59ee0586b83fc3220ab1538d236651aadf97a1ab602dc9715751",
+   "topo": "bf994c24253b67f99c63784707b7507a29677fa90b21bfa33414c2f71605764c",
+   "ok": true
+  }
+ ],
+ "specimen": {
+  "level": "mean",
+  "kind": "specimen",
+  "name": "Gerridae_mean_21.3mm",
+  "insect_hash": "20f36952256a59ee0586b83fc3220ab1538d236651aadf97a1ab602dc9715751",
+  "representation": "toy",
+  "size_flag": "suspect: family mean likely includes legs",
+  "training_role": "edge_negative:family_stats_suspect",
+  "group": "california",
+  "order": "Hemiptera",
+  "family": "Gerridae",
+  "size_source": "CA museum specimens n=44: L 21.3\u00b15.1 mm",
+  "note": "",
+  "file": "california/Gerridae_mean_21.3mm.stl",
+  "stl_sha256": "425957d50038369200861872c512fad1a28ded41e1c45678cd4d90fec5d7124f",
+  "hash": "5faa49e999a58e29f7df4d53405f897c815f1fbee17e36b6b675ffc50e859f0f"
+ }
+}

@@ -1,0 +1,980 @@
+[
+ {
+  "id": "RND-1/16",
+  "category": "single hole punch",
+  "realisation": "punched",
+  "materials": [
+   "aluminium shim <= 0.3 mm (punched)",
+   "PET / acetate sheet (punched)"
+  ],
+  "shape": "circle",
+  "params_mm": {
+   "d": 1.587
+  },
+  "note": "1/16 in round punch",
+  "nominal": true,
+  "area_mm2": 1.979,
+  "inscribed_d_mm": 1.587,
+  "min_width_mm": 1.587,
+  "max_width_mm": 1.587,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "6556124813f75c62e3433179289438aa2b5b58b56b1e51aee5e1e921a5b860f8",
+  "holes_on_50mm_plate": 314,
+  "open_area": 0.321,
+  "stl": "stl/RND-1-16.stl",
+  "holes": 314,
+  "watertight": true
+ },
+ {
+  "id": "RND-1/8",
+  "category": "single hole punch",
+  "realisation": "punched",
+  "materials": [
+   "aluminium shim <= 0.3 mm (punched)",
+   "PET / acetate sheet (punched)"
+  ],
+  "shape": "circle",
+  "params_mm": {
+   "d": 3.175
+  },
+  "note": "1/8 in round punch",
+  "nominal": true,
+  "area_mm2": 7.917,
+  "inscribed_d_mm": 3.175,
+  "min_width_mm": 3.175,
+  "max_width_mm": 3.175,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "e573bdc95d2d6281a1da76db89756b884aedd009b89b9a6e0356178266ebac87",
+  "holes_on_50mm_plate": 120,
+  "open_area": 0.491,
+  "stl": "stl/RND-1-8.stl",
+  "holes": 120,
+  "watertight": true
+ },
+ {
+  "id": "RND-3/16",
+  "category": "single hole punch",
+  "realisation": "punched",
+  "materials": [
+   "aluminium shim <= 0.3 mm (punched)",
+   "PET / acetate sheet (punched)"
+  ],
+  "shape": "circle",
+  "params_mm": {
+   "d": 4.762
+  },
+  "note": "3/16 in round punch",
+  "nominal": true,
+  "area_mm2": 17.812,
+  "inscribed_d_mm": 4.762,
+  "min_width_mm": 4.762,
+  "max_width_mm": 4.762,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "f1a0d2095fcdb8655d354cc09e84c8f7e31ed1164a56ed263ff2a2de59719e80",
+  "holes_on_50mm_plate": 56,
+  "open_area": 0.515,
+  "stl": "stl/RND-3-16.stl",
+  "holes": 56,
+  "watertight": true
+ },
+ {
+  "id": "RND-1/4",
+  "category": "single hole punch",
+  "realisation": "punched",
+  "materials": [
+   "aluminium shim <= 0.3 mm (punched)",
+   "PET / acetate sheet (punched)"
+  ],
+  "shape": "circle",
+  "params_mm": {
+   "d": 6.35
+  },
+  "note": "1/4 in round (standard office/craft)",
+  "nominal": true,
+  "area_mm2": 31.666,
+  "inscribed_d_mm": 6.35,
+  "min_width_mm": 6.35,
+  "max_width_mm": 6.35,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "8a216a138fa90eca9e44d6f3d2418b838c42979dc08ffffaa4a2849f4460dce0",
+  "holes_on_50mm_plate": 33,
+  "open_area": 0.54,
+  "stl": "stl/RND-1-4.stl",
+  "holes": 33,
+  "watertight": true
+ },
+ {
+  "id": "RND-3/8",
+  "category": "shape punch",
+  "realisation": "punched",
+  "materials": [
+   "aluminium shim <= 0.3 mm (punched)",
+   "PET / acetate sheet (punched)"
+  ],
+  "shape": "circle",
+  "params_mm": {
+   "d": 9.525
+  },
+  "note": "3/8 in circle",
+  "nominal": true,
+  "area_mm2": 71.249,
+  "inscribed_d_mm": 9.524,
+  "min_width_mm": 9.524,
+  "max_width_mm": 9.524,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "fdc895f3f427888e8f850ffe61195e6b87413313355d19aa44071a619b0f7b83",
+  "holes_on_50mm_plate": 14,
+  "open_area": 0.515,
+  "stl": "stl/RND-3-8.stl",
+  "holes": 14,
+  "watertight": true
+ },
+ {
+  "id": "RND-1/2",
+  "category": "shape punch",
+  "realisation": "punched",
+  "materials": [
+   "aluminium shim <= 0.3 mm (punched)",
+   "PET / acetate sheet (punched)"
+  ],
+  "shape": "circle",
+  "params_mm": {
+   "d": 12.7
+  },
+  "note": "1/2 in circle",
+  "nominal": true,
+  "area_mm2": 126.664,
+  "inscribed_d_mm": 12.699,
+  "min_width_mm": 12.699,
+  "max_width_mm": 12.699,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "cefba0482f399e2afbaa9fd24313e0088a44bb7f79fadb7d7204b496cf9441cd",
+  "holes_on_50mm_plate": 8,
+  "open_area": 0.523,
+  "stl": "stl/RND-1-2.stl",
+  "holes": 8,
+  "watertight": true
+ },
+ {
+  "id": "RND-5/8",
+  "category": "shape punch",
+  "realisation": "punched",
+  "materials": [
+   "aluminium shim <= 0.3 mm (punched)",
+   "PET / acetate sheet (punched)"
+  ],
+  "shape": "circle",
+  "params_mm": {
+   "d": 15.875
+  },
+  "note": "5/8 in circle",
+  "nominal": true,
+  "area_mm2": 197.913,
+  "inscribed_d_mm": 15.874,
+  "min_width_mm": 15.874,
+  "max_width_mm": 15.874,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "b7daf445e477227430de9abecb004d4d7bea290e6bb1f60c5786dffc283450eb",
+  "holes_on_50mm_plate": 4,
+  "open_area": 0.409,
+  "stl": "stl/RND-5-8.stl",
+  "holes": 4,
+  "watertight": true
+ },
+ {
+  "id": "RND-1",
+  "category": "shape punch",
+  "realisation": "punched",
+  "materials": [
+   "aluminium shim <= 0.3 mm (punched)",
+   "PET / acetate sheet (punched)"
+  ],
+  "shape": "circle",
+  "params_mm": {
+   "d": 25.4
+  },
+  "note": "1 in circle",
+  "nominal": true,
+  "area_mm2": 506.657,
+  "inscribed_d_mm": 25.398,
+  "min_width_mm": 25.398,
+  "max_width_mm": 25.398,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "0ca6a887921b5b5b7f16dfcf4b63ade89da1237b649cc6efceec1974acdfc1c0",
+  "holes_on_50mm_plate": 1,
+  "open_area": 0.262,
+  "stl": "stl/RND-1.stl",
+  "holes": 1,
+  "watertight": true
+ },
+ {
+  "id": "SQ-1/4",
+  "category": "shape punch",
+  "realisation": "punched",
+  "materials": [
+   "aluminium shim <= 0.3 mm (punched)",
+   "PET / acetate sheet (punched)"
+  ],
+  "shape": "square",
+  "params_mm": {
+   "s": 6.35
+  },
+  "note": "1/4 in square",
+  "nominal": true,
+  "area_mm2": 40.322,
+  "inscribed_d_mm": 6.35,
+  "min_width_mm": 6.35,
+  "max_width_mm": 6.35,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "5a5cfab4be80c03f435c13dfef514638d6c1525251b853b1d1a6c54a70898c6c",
+  "holes_on_50mm_plate": 33,
+  "open_area": 0.687,
+  "stl": "stl/SQ-1-4.stl",
+  "holes": 33,
+  "watertight": true
+ },
+ {
+  "id": "STAR-1/4",
+  "category": "shape punch",
+  "realisation": "punched",
+  "materials": [
+   "aluminium shim <= 0.3 mm (punched)",
+   "PET / acetate sheet (punched)"
+  ],
+  "shape": "star",
+  "params_mm": {
+   "outer_d": 6.35
+  },
+  "note": "1/4 in star",
+  "nominal": true,
+  "area_mm2": 13.332,
+  "inscribed_d_mm": 2.852,
+  "min_width_mm": 5.744,
+  "max_width_mm": 6.039,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "98d7439d8fce7c2c4fa6244f3429d18432221acfc2e7833f3b539be1df3f3d79",
+  "holes_on_50mm_plate": 33,
+  "open_area": 0.227,
+  "stl": "stl/STAR-1-4.stl",
+  "holes": 33,
+  "watertight": true
+ },
+ {
+  "id": "STAR-1/2",
+  "category": "shape punch",
+  "realisation": "punched",
+  "materials": [
+   "aluminium shim <= 0.3 mm (punched)",
+   "PET / acetate sheet (punched)"
+  ],
+  "shape": "star",
+  "params_mm": {
+   "outer_d": 12.7
+  },
+  "note": "1/2 in star",
+  "nominal": true,
+  "area_mm2": 53.327,
+  "inscribed_d_mm": 5.703,
+  "min_width_mm": 11.487,
+  "max_width_mm": 12.078,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "ccf0825ecd47c79ee8653cc408c4da3e3ca0d69cc1868540a3b50727e92f66e0",
+  "holes_on_50mm_plate": 8,
+  "open_area": 0.22,
+  "stl": "stl/STAR-1-2.stl",
+  "holes": 8,
+  "watertight": true
+ },
+ {
+  "id": "HEART-1/4",
+  "category": "shape punch",
+  "realisation": "punched",
+  "materials": [
+   "aluminium shim <= 0.3 mm (punched)",
+   "PET / acetate sheet (punched)"
+  ],
+  "shape": "heart",
+  "params_mm": {
+   "width": 6.35
+  },
+  "note": "1/4 in heart",
+  "nominal": true,
+  "area_mm2": 22.246,
+  "inscribed_d_mm": 3.328,
+  "min_width_mm": 5.553,
+  "max_width_mm": 5.7,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "5c2bdb4eec136eb735301c1d5f49326d87e56d4cc05c178da6112074cf2ac56b",
+  "holes_on_50mm_plate": 33,
+  "open_area": 0.379,
+  "stl": "stl/HEART-1-4.stl",
+  "holes": 33,
+  "watertight": true
+ },
+ {
+  "id": "HEART-1/2",
+  "category": "shape punch",
+  "realisation": "punched",
+  "materials": [
+   "aluminium shim <= 0.3 mm (punched)",
+   "PET / acetate sheet (punched)"
+  ],
+  "shape": "heart",
+  "params_mm": {
+   "width": 12.7
+  },
+  "note": "1/2 in heart",
+  "nominal": true,
+  "area_mm2": 88.986,
+  "inscribed_d_mm": 6.656,
+  "min_width_mm": 11.106,
+  "max_width_mm": 11.401,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "22491ed836efd45f894c6c51c10466ca8c894445f37e493e3d28f656a159071f",
+  "holes_on_50mm_plate": 8,
+  "open_area": 0.368,
+  "stl": "stl/HEART-1-2.stl",
+  "holes": 8,
+  "watertight": true
+ },
+ {
+  "id": "HEX-1/4",
+  "category": "shape punch",
+  "realisation": "punched",
+  "materials": [
+   "aluminium shim <= 0.3 mm (punched)",
+   "PET / acetate sheet (punched)"
+  ],
+  "shape": "hexagon",
+  "params_mm": {
+   "across_flats": 6.35
+  },
+  "note": "1/4 in hexagon",
+  "nominal": true,
+  "area_mm2": 34.92,
+  "inscribed_d_mm": 6.35,
+  "min_width_mm": 6.35,
+  "max_width_mm": 7.332,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "7415b8889d72cd77e21c371fccd4439e65001469f9d8edb404ab94015f908b70",
+  "holes_on_50mm_plate": 27,
+  "open_area": 0.487,
+  "stl": "stl/HEX-1-4.stl",
+  "holes": 27,
+  "watertight": true
+ },
+ {
+  "id": "SLOT-1/8x1/2",
+  "category": "badge slot punch",
+  "realisation": "punched",
+  "materials": [
+   "aluminium shim <= 0.3 mm (punched)",
+   "PET / acetate sheet (punched)"
+  ],
+  "shape": "slot",
+  "params_mm": {
+   "w": 3.175,
+   "length": 12.7
+  },
+  "note": "ID-badge slot",
+  "nominal": true,
+  "area_mm2": 38.156,
+  "inscribed_d_mm": 3.175,
+  "min_width_mm": 3.175,
+  "max_width_mm": 12.7,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "ad156a16319f611fd9939906e1d1846296f585fb520f9465a45c406ef26932ed",
+  "holes_on_50mm_plate": 25,
+  "open_area": 0.493,
+  "stl": "stl/SLOT-1-8x1-2.stl",
+  "holes": 25,
+  "watertight": true
+ },
+ {
+  "id": "SLOT-3/16x5/8",
+  "category": "badge slot punch",
+  "realisation": "punched",
+  "materials": [
+   "aluminium shim <= 0.3 mm (punched)",
+   "PET / acetate sheet (punched)"
+  ],
+  "shape": "slot",
+  "params_mm": {
+   "w": 4.762,
+   "length": 15.875
+  },
+  "note": "wide slot",
+  "nominal": true,
+  "area_mm2": 70.73,
+  "inscribed_d_mm": 4.762,
+  "min_width_mm": 4.762,
+  "max_width_mm": 15.875,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "bbd970d7d8081db2b74f3e28cab4ede82ba5e06046efb15b807351f5d23b0404",
+  "holes_on_50mm_plate": 14,
+  "open_area": 0.511,
+  "stl": "stl/SLOT-3-16x5-8.stl",
+  "holes": 14,
+  "watertight": true
+ },
+ {
+  "id": "CANVAS-7",
+  "category": "plastic canvas",
+  "realisation": "bought",
+  "materials": [
+   "as sold (nylon / polyester)"
+  ],
+  "shape": "square",
+  "params_mm": {
+   "s": 2.729
+  },
+  "note": "7-count, bar ~0.9 mm (nominal)",
+  "nominal": true,
+  "area_mm2": 7.445,
+  "inscribed_d_mm": 2.729,
+  "min_width_mm": 2.729,
+  "max_width_mm": 2.729,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "c6432444325410f8be28499ec2746bb5ef0828c1afb1535f8517cf41d597a60c",
+  "holes_on_50mm_plate": 144,
+  "open_area": 0.554,
+  "stl": "stl/CANVAS-7.stl",
+  "holes": 144,
+  "watertight": true
+ },
+ {
+  "id": "CANVAS-10",
+  "category": "plastic canvas",
+  "realisation": "bought",
+  "materials": [
+   "as sold (nylon / polyester)"
+  ],
+  "shape": "square",
+  "params_mm": {
+   "s": 1.64
+  },
+  "note": "10-count, bar ~0.9 mm (nominal)",
+  "nominal": true,
+  "area_mm2": 2.69,
+  "inscribed_d_mm": 1.64,
+  "min_width_mm": 1.64,
+  "max_width_mm": 1.64,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "176f6ac5fb3655633336f8e973d29bf4a59d7bc9d0b36cbfb5a82488e86bab59",
+  "holes_on_50mm_plate": 289,
+  "open_area": 0.401,
+  "stl": "stl/CANVAS-10.stl",
+  "holes": 289,
+  "watertight": true
+ },
+ {
+  "id": "CANVAS-14",
+  "category": "plastic canvas",
+  "realisation": "bought",
+  "materials": [
+   "as sold (nylon / polyester)"
+  ],
+  "shape": "square",
+  "params_mm": {
+   "s": 0.914
+  },
+  "note": "14-count, bar ~0.9 mm (nominal)",
+  "nominal": true,
+  "area_mm2": 0.836,
+  "inscribed_d_mm": 0.914,
+  "min_width_mm": 0.914,
+  "max_width_mm": 0.914,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": false,
+  "hash": "37ea2100ee9d3f4b53790296482710e65b5fbd622f20ab3cc8fed7227b4b2db1",
+  "holes_on_50mm_plate": 529,
+  "open_area": 0.228
+ },
+ {
+  "id": "TULLE",
+  "category": "netting",
+  "realisation": "bought",
+  "materials": [
+   "as sold (nylon / polyester)"
+  ],
+  "shape": "hexagon",
+  "params_mm": {
+   "across_flats": 1.2
+  },
+  "note": "bridal tulle hex ~1.2 mm (nominal)",
+  "nominal": true,
+  "area_mm2": 1.247,
+  "inscribed_d_mm": 1.2,
+  "min_width_mm": 1.2,
+  "max_width_mm": 1.386,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "03d4ad1df0c4ff2ee9584f22266a7aacc1fb49fbaf33ca7208bd65ef9f062bc4",
+  "holes_on_50mm_plate": 414,
+  "open_area": 0.267,
+  "stl": "stl/TULLE.stl",
+  "holes": 414,
+  "watertight": true
+ },
+ {
+  "id": "SS-PERF-1.6",
+  "category": "metal perforated sheet",
+  "realisation": "metal",
+  "materials": [
+   "stainless sheet or woven mesh (bought; laser-cut for custom shapes)"
+  ],
+  "shape": "circle",
+  "params_mm": {
+   "d": 1.6
+  },
+  "note": "stainless perforated 1/16 in round",
+  "nominal": true,
+  "area_mm2": 2.01,
+  "inscribed_d_mm": 1.6,
+  "min_width_mm": 1.6,
+  "max_width_mm": 1.6,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "104b998c99ccf5f6cec9638d4726caf27070c77d92903b799592c14b2b782494",
+  "holes_on_50mm_plate": 314,
+  "open_area": 0.326,
+  "stl": "stl/SS-PERF-1.6.stl",
+  "holes": 314,
+  "watertight": true
+ },
+ {
+  "id": "SS-PERF-2.4",
+  "category": "metal perforated sheet",
+  "realisation": "metal",
+  "materials": [
+   "stainless sheet or woven mesh (bought; laser-cut for custom shapes)"
+  ],
+  "shape": "circle",
+  "params_mm": {
+   "d": 2.4
+  },
+  "note": "stainless perforated 3/32 in round",
+  "nominal": true,
+  "area_mm2": 4.523,
+  "inscribed_d_mm": 2.4,
+  "min_width_mm": 2.4,
+  "max_width_mm": 2.4,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "7887cf6625184e014b4badd41acc3232bc8c2f4b90969f43265b5c0ec6d1dea6",
+  "holes_on_50mm_plate": 188,
+  "open_area": 0.439,
+  "stl": "stl/SS-PERF-2.4.stl",
+  "holes": 188,
+  "watertight": true
+ },
+ {
+  "id": "SS-PERF-3.2",
+  "category": "metal perforated sheet",
+  "realisation": "metal",
+  "materials": [
+   "stainless sheet or woven mesh (bought; laser-cut for custom shapes)"
+  ],
+  "shape": "circle",
+  "params_mm": {
+   "d": 3.2
+  },
+  "note": "stainless perforated 1/8 in round",
+  "nominal": true,
+  "area_mm2": 8.042,
+  "inscribed_d_mm": 3.2,
+  "min_width_mm": 3.2,
+  "max_width_mm": 3.2,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "14f0da1b2132ccf0fad5efc9c52b7415a028a8509f0bfe495dd78d2d5420ee1d",
+  "holes_on_50mm_plate": 120,
+  "open_area": 0.498,
+  "stl": "stl/SS-PERF-3.2.stl",
+  "holes": 120,
+  "watertight": true
+ },
+ {
+  "id": "SS-PERF-4.8",
+  "category": "metal perforated sheet",
+  "realisation": "metal",
+  "materials": [
+   "stainless sheet or woven mesh (bought; laser-cut for custom shapes)"
+  ],
+  "shape": "circle",
+  "params_mm": {
+   "d": 4.8
+  },
+  "note": "stainless perforated 3/16 in round",
+  "nominal": true,
+  "area_mm2": 18.094,
+  "inscribed_d_mm": 4.8,
+  "min_width_mm": 4.8,
+  "max_width_mm": 4.8,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "3f16d06e70490ffe1eac07773a1a348b37aea079cc7c2dce499c69b18ea04834",
+  "holes_on_50mm_plate": 56,
+  "open_area": 0.523,
+  "stl": "stl/SS-PERF-4.8.stl",
+  "holes": 56,
+  "watertight": true
+ },
+ {
+  "id": "SS-PERF-6.4",
+  "category": "metal perforated sheet",
+  "realisation": "metal",
+  "materials": [
+   "stainless sheet or woven mesh (bought; laser-cut for custom shapes)"
+  ],
+  "shape": "circle",
+  "params_mm": {
+   "d": 6.4
+  },
+  "note": "stainless perforated 1/4 in round",
+  "nominal": true,
+  "area_mm2": 32.167,
+  "inscribed_d_mm": 6.4,
+  "min_width_mm": 6.4,
+  "max_width_mm": 6.4,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "4905e6e5a75f3c8d7081199d828549cccdef12c1f89b0a81484c4869012838e2",
+  "holes_on_50mm_plate": 33,
+  "open_area": 0.548,
+  "stl": "stl/SS-PERF-6.4.stl",
+  "holes": 33,
+  "watertight": true
+ },
+ {
+  "id": "SS-PERF-9.5",
+  "category": "metal perforated sheet",
+  "realisation": "metal",
+  "materials": [
+   "stainless sheet or woven mesh (bought; laser-cut for custom shapes)"
+  ],
+  "shape": "circle",
+  "params_mm": {
+   "d": 9.5
+  },
+  "note": "stainless perforated 3/8 in round",
+  "nominal": true,
+  "area_mm2": 70.875,
+  "inscribed_d_mm": 9.499,
+  "min_width_mm": 9.499,
+  "max_width_mm": 9.499,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "2fee5cb1e63ee9a22596331741e603d7c0915d9920b63e0e7b35eb41288bbe7b",
+  "holes_on_50mm_plate": 14,
+  "open_area": 0.513,
+  "stl": "stl/SS-PERF-9.5.stl",
+  "holes": 14,
+  "watertight": true
+ },
+ {
+  "id": "SS-SLOT-1.6x12.7",
+  "category": "metal slotted sheet",
+  "realisation": "metal",
+  "materials": [
+   "stainless sheet or woven mesh (bought; laser-cut for custom shapes)"
+  ],
+  "shape": "slot",
+  "params_mm": {
+   "w": 1.6,
+   "length": 12.7
+  },
+  "note": "slotted perforated 1/16 x 1/2 in",
+  "nominal": true,
+  "area_mm2": 19.77,
+  "inscribed_d_mm": 1.6,
+  "min_width_mm": 1.6,
+  "max_width_mm": 12.7,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "07d2c59f5e24746a13b0eb81070aa80f1913f9b407ab16014e49c82e68ec74e4",
+  "holes_on_50mm_plate": 43,
+  "open_area": 0.439,
+  "stl": "stl/SS-SLOT-1.6x12.7.stl",
+  "holes": 43,
+  "watertight": true
+ },
+ {
+  "id": "SS-SLOT-3.2x19",
+  "category": "metal slotted sheet",
+  "realisation": "metal",
+  "materials": [
+   "stainless sheet or woven mesh (bought; laser-cut for custom shapes)"
+  ],
+  "shape": "slot",
+  "params_mm": {
+   "w": 3.2,
+   "length": 19.05
+  },
+  "note": "slotted perforated 1/8 x 3/4 in",
+  "nominal": true,
+  "area_mm2": 58.759,
+  "inscribed_d_mm": 3.2,
+  "min_width_mm": 3.2,
+  "max_width_mm": 19.05,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "de04b0d9dcf736a307f801c6e394c9119f010a75ab20b62738d04dc96ba33f9e",
+  "holes_on_50mm_plate": 15,
+  "open_area": 0.455,
+  "stl": "stl/SS-SLOT-3.2x19.stl",
+  "holes": 15,
+  "watertight": true
+ },
+ {
+  "id": "SS-SLOT-4.8x19",
+  "category": "metal slotted sheet",
+  "realisation": "metal",
+  "materials": [
+   "stainless sheet or woven mesh (bought; laser-cut for custom shapes)"
+  ],
+  "shape": "slot",
+  "params_mm": {
+   "w": 4.8,
+   "length": 19.05
+  },
+  "note": "slotted perforated 3/16 x 3/4 in",
+  "nominal": true,
+  "area_mm2": 86.488,
+  "inscribed_d_mm": 4.8,
+  "min_width_mm": 4.8,
+  "max_width_mm": 19.05,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "1443914ecf0632e1e74e0e32c44d7add901cd1650efc786b4371272ffa7ea0f6",
+  "holes_on_50mm_plate": 11,
+  "open_area": 0.491,
+  "stl": "stl/SS-SLOT-4.8x19.stl",
+  "holes": 11,
+  "watertight": true
+ },
+ {
+  "id": "SS-MESH-1.0",
+  "category": "woven wire mesh",
+  "realisation": "metal",
+  "materials": [
+   "stainless sheet or woven mesh (bought; laser-cut for custom shapes)"
+  ],
+  "shape": "square",
+  "params_mm": {
+   "s": 1.0
+  },
+  "note": "woven stainless ~1.0 mm opening",
+  "nominal": true,
+  "area_mm2": 1.0,
+  "inscribed_d_mm": 1.0,
+  "min_width_mm": 1.0,
+  "max_width_mm": 1.0,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "88072fbf013e966383ea14b58bfabf0b8432864da2f25cae440cc242a610ac00",
+  "holes_on_50mm_plate": 484,
+  "open_area": 0.25,
+  "stl": "stl/SS-MESH-1.0.stl",
+  "holes": 484,
+  "watertight": true
+ },
+ {
+  "id": "SS-MESH-2.0",
+  "category": "woven wire mesh",
+  "realisation": "metal",
+  "materials": [
+   "stainless sheet or woven mesh (bought; laser-cut for custom shapes)"
+  ],
+  "shape": "square",
+  "params_mm": {
+   "s": 2.0
+  },
+  "note": "woven stainless ~2.0 mm opening",
+  "nominal": true,
+  "area_mm2": 4.0,
+  "inscribed_d_mm": 2.0,
+  "min_width_mm": 2.0,
+  "max_width_mm": 2.0,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "7e2581743c72b289235ebdc7afefa9ed7ec8cee72eb871cf659f6b392998c851",
+  "holes_on_50mm_plate": 218,
+  "open_area": 0.45,
+  "stl": "stl/SS-MESH-2.0.stl",
+  "holes": 218,
+  "watertight": true
+ },
+ {
+  "id": "SS-HEX-2.5AF",
+  "category": "laser-cut 316L insert (concept C)",
+  "realisation": "metal",
+  "materials": [
+   "stainless sheet or woven mesh (bought; laser-cut for custom shapes)"
+  ],
+  "shape": "hexagon",
+  "params_mm": {
+   "across_flats": 2.5
+  },
+  "note": "hexagonal 2.5 mm across flats; distinct orientation / open-area alternative (uncalibrated concept)",
+  "nominal": true,
+  "area_mm2": 5.413,
+  "inscribed_d_mm": 2.5,
+  "min_width_mm": 2.5,
+  "max_width_mm": 2.887,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "5a11f91b8cbcd1027f629587be26e76feac77c32087eec7740bb05154f8c9d37",
+  "holes_on_50mm_plate": 154,
+  "open_area": 0.431,
+  "stl": "stl/SS-HEX-2.5AF.stl",
+  "holes": 154,
+  "watertight": true
+ }
+]

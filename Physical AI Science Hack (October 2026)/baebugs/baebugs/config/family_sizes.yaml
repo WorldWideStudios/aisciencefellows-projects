@@ -1,0 +1,12 @@
+# Body WIDTH ranges (mm) per family, used to turn an Essig family composition into
+# an expected size-class mix. PLACEHOLDER rows - replace with the insect parameters
+# from the team or a trait database. Families missing here are ignored by the prior.
+families:
+  Carabidae:     {width_mm: [1.0, 8.0]}
+  Formicidae:    {width_mm: [0.4, 3.0]}
+  Chironomidae:  {width_mm: [0.2, 1.0]}
+  Culicidae:     {width_mm: [0.6, 1.5]}
+  Cicadellidae:  {width_mm: [0.8, 3.0]}
+  Staphylinidae: {width_mm: [0.4, 3.0]}
+  Apidae:        {width_mm: [1.5, 8.0]}
+  Syrphidae:     {width_mm: [2.0, 6.0]}

@@ -1,0 +1,5775 @@
+{
+ "obs-tipbox-1000-blue": {
+  "root": "b7bc9e8a1e18a80603dc8b476d3404265ddc86496e5245f60fbaa0664fcc4ede",
+  "fragments": [
+   {
+    "name": "dimensions",
+    "payload": {
+     "x": 122,
+     "y": 82,
+     "z": 95,
+     "est": true,
+     "basis": "ruler, photo 46907; insert ~120x80"
+    },
+    "leaf": "4e2e2049fdd5ee2f0307ac330f1d5c095f4cb3c6c64203d2304b2f6446f1ac6b",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "3ce38ecaff44dbf38aec68175a1a2de66abea2304608ae80f4970be9d0fb9e34"
+     },
+     {
+      "side": "R",
+      "hash": "ce1e3c0c385f0e93400fa4314264c80dabe96e8c9fbb6c7aabc71d3c097cb100"
+     },
+     {
+      "side": "R",
+      "hash": "3fbf81084b2d010af26629eebf353ec08c60b8742d44cd8a825aa5a3ae6fd7ed"
+     },
+     {
+      "side": "R",
+      "hash": "9c47c80c233284ade376da0be3cd8aa23737349063ded0e96f5397fcd0710fab"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46905",
+    "payload": {
+     "photo": "46905",
+     "sha256": "21d41ff54de656f8c245e93f92fb8e031c50e831664a047e2542b367c2bb909f",
+     "resolves": false
+    },
+    "leaf": "3ce38ecaff44dbf38aec68175a1a2de66abea2304608ae80f4970be9d0fb9e34",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "4e2e2049fdd5ee2f0307ac330f1d5c095f4cb3c6c64203d2304b2f6446f1ac6b"
+     },
+     {
+      "side": "R",
+      "hash": "ce1e3c0c385f0e93400fa4314264c80dabe96e8c9fbb6c7aabc71d3c097cb100"
+     },
+     {
+      "side": "R",
+      "hash": "3fbf81084b2d010af26629eebf353ec08c60b8742d44cd8a825aa5a3ae6fd7ed"
+     },
+     {
+      "side": "R",
+      "hash": "9c47c80c233284ade376da0be3cd8aa23737349063ded0e96f5397fcd0710fab"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46906",
+    "payload": {
+     "photo": "46906",
+     "sha256": "76712fa492d3284eed4dec3a1a558bcbdd61195b5634543b4d0f1b4c892384d1",
+     "resolves": false
+    },
+    "leaf": "96aff183690616489c763345dd5d0f785bba4bdf5a51a13e00b7a507272920f8",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "cef6f9b9af85e999a07a68d900c8aa77a089dfd68f8239976606bd5e4453663a"
+     },
+     {
+      "side": "L",
+      "hash": "5fc9eb953aa0edf7aee96b8f8602f912fe0703fb88e9f138391156c166c76b6b"
+     },
+     {
+      "side": "R",
+      "hash": "3fbf81084b2d010af26629eebf353ec08c60b8742d44cd8a825aa5a3ae6fd7ed"
+     },
+     {
+      "side": "R",
+      "hash": "9c47c80c233284ade376da0be3cd8aa23737349063ded0e96f5397fcd0710fab"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46916",
+    "payload": {
+     "photo": "46916",
+     "sha256": "6053dc9bab4f4a70354517eb22e5e479a59844fc541c71f2737a91e25c5eb73a",
+     "resolves": false
+    },
+    "leaf": "cef6f9b9af85e999a07a68d900c8aa77a089dfd68f8239976606bd5e4453663a",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "96aff183690616489c763345dd5d0f785bba4bdf5a51a13e00b7a507272920f8"
+     },
+     {
+      "side": "L",
+      "hash": "5fc9eb953aa0edf7aee96b8f8602f912fe0703fb88e9f138391156c166c76b6b"
+     },
+     {
+      "side": "R",
+      "hash": "3fbf81084b2d010af26629eebf353ec08c60b8742d44cd8a825aa5a3ae6fd7ed"
+     },
+     {
+      "side": "R",
+      "hash": "9c47c80c233284ade376da0be3cd8aa23737349063ded0e96f5397fcd0710fab"
+     }
+    ]
+   },
+   {
+    "name": "grid",
+    "payload": {
+     "rows": 8,
+     "cols": 12,
+     "pitch": 9.0,
+     "hole_d": 7.6,
+     "est": true,
+     "basis": "SBS 96 pitch; hole from 1000 µL collar"
+    },
+    "leaf": "19ea141ca818506f29490e5b4e3f84d877d9a6e87f29a8d51a94a635a84d5df8",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "8394d878d3e316f36cdac425d200709dc7ba4070d675b1699f9b119e249ae454"
+     },
+     {
+      "side": "R",
+      "hash": "3f91de5564d78f2446b4a202f3dfaf4e14bffa0fc55d11e39b86511b88603df0"
+     },
+     {
+      "side": "L",
+      "hash": "403c09062551214aad11759529accb4d42a201fc6ba427579c4b9479d8510b8b"
+     },
+     {
+      "side": "R",
+      "hash": "9c47c80c233284ade376da0be3cd8aa23737349063ded0e96f5397fcd0710fab"
+     }
+    ]
+   },
+   {
+    "name": "identity",
+    "payload": {
+     "id": "obs-tipbox-1000-blue",
+     "name": "1000 µL tip box, blue insert",
+     "kind": "tip rack",
+     "vendor": "commercial (brand withheld)"
+    },
+    "leaf": "8394d878d3e316f36cdac425d200709dc7ba4070d675b1699f9b119e249ae454",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "19ea141ca818506f29490e5b4e3f84d877d9a6e87f29a8d51a94a635a84d5df8"
+     },
+     {
+      "side": "R",
+      "hash": "3f91de5564d78f2446b4a202f3dfaf4e14bffa0fc55d11e39b86511b88603df0"
+     },
+     {
+      "side": "L",
+      "hash": "403c09062551214aad11759529accb4d42a201fc6ba427579c4b9479d8510b8b"
+     },
+     {
+      "side": "R",
+      "hash": "9c47c80c233284ade376da0be3cd8aa23737349063ded0e96f5397fcd0710fab"
+     }
+    ]
+   },
+   {
+    "name": "material",
+    "payload": {
+     "material": "PP insert, clear PP hinged box",
+     "reuse": "tip refill rack, SBS insert donor"
+    },
+    "leaf": "dca741be559a3ea231ed89ef5b9662aef6ac08d7ac19da9c33ad28d380a940a0",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "793b78a827abc602025036e63aa95aae0b73d94913cfb65f1c32c9dbd9496651"
+     },
+     {
+      "side": "L",
+      "hash": "5b6ba1e56ba10477afb9a4c46670be6b214eae555eb28a6c394ab3fe4fe33150"
+     },
+     {
+      "side": "L",
+      "hash": "403c09062551214aad11759529accb4d42a201fc6ba427579c4b9479d8510b8b"
+     },
+     {
+      "side": "R",
+      "hash": "9c47c80c233284ade376da0be3cd8aa23737349063ded0e96f5397fcd0710fab"
+     }
+    ]
+   },
+   {
+    "name": "risk.knowledge",
+    "payload": {
+     "level": "high",
+     "notes": "Lid carries a vendor wordmark and product name; the spined insert and box form may carry design rights. Remix only the public SBS 96 grid."
+    },
+    "leaf": "793b78a827abc602025036e63aa95aae0b73d94913cfb65f1c32c9dbd9496651",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "dca741be559a3ea231ed89ef5b9662aef6ac08d7ac19da9c33ad28d380a940a0"
+     },
+     {
+      "side": "L",
+      "hash": "5b6ba1e56ba10477afb9a4c46670be6b214eae555eb28a6c394ab3fe4fe33150"
+     },
+     {
+      "side": "L",
+      "hash": "403c09062551214aad11759529accb4d42a201fc6ba427579c4b9479d8510b8b"
+     },
+     {
+      "side": "R",
+      "hash": "9c47c80c233284ade376da0be3cd8aa23737349063ded0e96f5397fcd0710fab"
+     }
+    ]
+   },
+   {
+    "name": "risk.manufacturing",
+    "payload": {
+     "level": "med",
+     "notes": "Molded PP, ribbed walls, textured floor. Printed copies lose the ~0.1 mm tip-seat tolerance robots need."
+    },
+    "leaf": "9c47c80c233284ade376da0be3cd8aa23737349063ded0e96f5397fcd0710fab",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "85e61773cde370a1e1d97ddd9e14e4773edd9e7ba72038d493f9d1e487a442f4"
+     }
+    ]
+   }
+  ]
+ },
+ "obs-tipbox-200f-magenta": {
+  "root": "4a4fce589d9e1edefbccd1ee45d73c8471e9f4bd8fe323520be87542964f4241",
+  "fragments": [
+   {
+    "name": "dimensions",
+    "payload": {
+     "x": 124,
+     "y": 84,
+     "z": 70,
+     "est": true,
+     "basis": "insert spans ~127 mm on rule, photo 46917"
+    },
+    "leaf": "24ec96e699ade1a86ad2acf50fceeb165ed39e995d051c7dc3123a9590f9b97d",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "ae8a90ddd5960fdd336e814a619a8b45aedca1939d1bc91830fb733f391588db"
+     },
+     {
+      "side": "R",
+      "hash": "713e291ef15ff275e6932e36911df68216f660bfc884744304a3aea058abdc65"
+     },
+     {
+      "side": "R",
+      "hash": "e7938d661d4d807c18e9de0f71180aa72774c6422ad5bdf517b0852a8e8c10a6"
+     },
+     {
+      "side": "R",
+      "hash": "fc3dfec3d2af00fc92fc7ae3e7c001b82db472e38aa1cf8b0c9b966df71056fd"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46901",
+    "payload": {
+     "photo": "46901",
+     "sha256": "bf2add091eae09de201aff68aed6aea8516fb3ca1b51d0da60c0081b276b5528",
+     "resolves": false
+    },
+    "leaf": "ae8a90ddd5960fdd336e814a619a8b45aedca1939d1bc91830fb733f391588db",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "24ec96e699ade1a86ad2acf50fceeb165ed39e995d051c7dc3123a9590f9b97d"
+     },
+     {
+      "side": "R",
+      "hash": "713e291ef15ff275e6932e36911df68216f660bfc884744304a3aea058abdc65"
+     },
+     {
+      "side": "R",
+      "hash": "e7938d661d4d807c18e9de0f71180aa72774c6422ad5bdf517b0852a8e8c10a6"
+     },
+     {
+      "side": "R",
+      "hash": "fc3dfec3d2af00fc92fc7ae3e7c001b82db472e38aa1cf8b0c9b966df71056fd"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46911",
+    "payload": {
+     "photo": "46911",
+     "sha256": "6ee77b2174922ce7d0d04ccc4f001d5558cde72c72e3e2aca702e2c0bae2c011",
+     "resolves": false
+    },
+    "leaf": "9029cc28d6ea9bb1617f81dd54b09b80c3043c78c8fa0e9ced36ef7ad31d4347",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "0bae3d6d349b80182260a2631dc10181b09ab6964cccfdcbde65827825001399"
+     },
+     {
+      "side": "L",
+      "hash": "c635c5d0994959e3fc3ab2db2e35d72930a13928a23166d33c99b7d6e186a5ce"
+     },
+     {
+      "side": "R",
+      "hash": "e7938d661d4d807c18e9de0f71180aa72774c6422ad5bdf517b0852a8e8c10a6"
+     },
+     {
+      "side": "R",
+      "hash": "fc3dfec3d2af00fc92fc7ae3e7c001b82db472e38aa1cf8b0c9b966df71056fd"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46914",
+    "payload": {
+     "photo": "46914",
+     "sha256": "c8f21843b4296a1bdee4121489b7b23dca3b72aa96624ecdc3c8ae473932fc54",
+     "resolves": false
+    },
+    "leaf": "0bae3d6d349b80182260a2631dc10181b09ab6964cccfdcbde65827825001399",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "9029cc28d6ea9bb1617f81dd54b09b80c3043c78c8fa0e9ced36ef7ad31d4347"
+     },
+     {
+      "side": "L",
+      "hash": "c635c5d0994959e3fc3ab2db2e35d72930a13928a23166d33c99b7d6e186a5ce"
+     },
+     {
+      "side": "R",
+      "hash": "e7938d661d4d807c18e9de0f71180aa72774c6422ad5bdf517b0852a8e8c10a6"
+     },
+     {
+      "side": "R",
+      "hash": "fc3dfec3d2af00fc92fc7ae3e7c001b82db472e38aa1cf8b0c9b966df71056fd"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46916",
+    "payload": {
+     "photo": "46916",
+     "sha256": "6053dc9bab4f4a70354517eb22e5e479a59844fc541c71f2737a91e25c5eb73a",
+     "resolves": false
+    },
+    "leaf": "cef6f9b9af85e999a07a68d900c8aa77a089dfd68f8239976606bd5e4453663a",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "ebef0de3fa71c2c9e74426e30ddba7b243d35e93a8aa3c69cf51352bb4e60879"
+     },
+     {
+      "side": "R",
+      "hash": "f300dac008664fe0d70a643aabe32e668a4f84f6373054a0700bdc3cf53466a4"
+     },
+     {
+      "side": "L",
+      "hash": "87a848a59f7d5bc75aa7001341e991cd2eed9920da3edaa29894e4aca5bc1e9f"
+     },
+     {
+      "side": "R",
+      "hash": "fc3dfec3d2af00fc92fc7ae3e7c001b82db472e38aa1cf8b0c9b966df71056fd"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46917",
+    "payload": {
+     "photo": "46917",
+     "sha256": "d2506c29f6a5c73b7f9e1ae655b6f2555273a8e632ba52374896433d61a2977e",
+     "resolves": false
+    },
+    "leaf": "ebef0de3fa71c2c9e74426e30ddba7b243d35e93a8aa3c69cf51352bb4e60879",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "cef6f9b9af85e999a07a68d900c8aa77a089dfd68f8239976606bd5e4453663a"
+     },
+     {
+      "side": "R",
+      "hash": "f300dac008664fe0d70a643aabe32e668a4f84f6373054a0700bdc3cf53466a4"
+     },
+     {
+      "side": "L",
+      "hash": "87a848a59f7d5bc75aa7001341e991cd2eed9920da3edaa29894e4aca5bc1e9f"
+     },
+     {
+      "side": "R",
+      "hash": "fc3dfec3d2af00fc92fc7ae3e7c001b82db472e38aa1cf8b0c9b966df71056fd"
+     }
+    ]
+   },
+   {
+    "name": "grid",
+    "payload": {
+     "rows": 8,
+     "cols": 12,
+     "pitch": 9.0,
+     "hole_d": 5.6,
+     "est": true,
+     "basis": "SBS 96 pitch; hole from 200 µL tip"
+    },
+    "leaf": "d64eaf11f8fb3a0d7615fa185c64cdcc96443ae2ae9d5fe3bbcd1fc52ad20d30",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "002f9ab4431d5cb8f31d445b7e28783a6b934daf08ed31fb6bc3f1849eca1749"
+     },
+     {
+      "side": "L",
+      "hash": "f698c51bf464a9a7a372fdcfdc7cbd36fcd48f7609bd05c4ec6df974cae83df8"
+     },
+     {
+      "side": "L",
+      "hash": "87a848a59f7d5bc75aa7001341e991cd2eed9920da3edaa29894e4aca5bc1e9f"
+     },
+     {
+      "side": "R",
+      "hash": "fc3dfec3d2af00fc92fc7ae3e7c001b82db472e38aa1cf8b0c9b966df71056fd"
+     }
+    ]
+   },
+   {
+    "name": "identity",
+    "payload": {
+     "id": "obs-tipbox-200f-magenta",
+     "name": "200 µL filter tip box, magenta insert",
+     "kind": "tip rack",
+     "vendor": "commercial (brand withheld)"
+    },
+    "leaf": "002f9ab4431d5cb8f31d445b7e28783a6b934daf08ed31fb6bc3f1849eca1749",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "d64eaf11f8fb3a0d7615fa185c64cdcc96443ae2ae9d5fe3bbcd1fc52ad20d30"
+     },
+     {
+      "side": "L",
+      "hash": "f698c51bf464a9a7a372fdcfdc7cbd36fcd48f7609bd05c4ec6df974cae83df8"
+     },
+     {
+      "side": "L",
+      "hash": "87a848a59f7d5bc75aa7001341e991cd2eed9920da3edaa29894e4aca5bc1e9f"
+     },
+     {
+      "side": "R",
+      "hash": "fc3dfec3d2af00fc92fc7ae3e7c001b82db472e38aa1cf8b0c9b966df71056fd"
+     }
+    ]
+   },
+   {
+    "name": "material",
+    "payload": {
+     "material": "PP insert, clear PP box",
+     "reuse": "tip refill rack"
+    },
+    "leaf": "8135e613a0467a3a23c99b2e4e439ddff9bb352d893f97ae99cfba2e9a41a1d8",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "bc1a627b62517badfe9967024ed09be51a491d2e633889cb0ca3c3d488f54f5c"
+     },
+     {
+      "side": "R",
+      "hash": "0aeadf9970ed973af7459e3c6ddc7ec1a472098280f1d8b05fbfaeb9df5fd35c"
+     },
+     {
+      "side": "L",
+      "hash": "d0491dc6a5fe72098f988d2cdf7d12942a9370dfa337066bbf287a5f9de900ba"
+     }
+    ]
+   },
+   {
+    "name": "risk.knowledge",
+    "payload": {
+     "level": "med",
+     "notes": "Vendor name on lid label only. Generic 96 grid."
+    },
+    "leaf": "bc1a627b62517badfe9967024ed09be51a491d2e633889cb0ca3c3d488f54f5c",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "8135e613a0467a3a23c99b2e4e439ddff9bb352d893f97ae99cfba2e9a41a1d8"
+     },
+     {
+      "side": "R",
+      "hash": "0aeadf9970ed973af7459e3c6ddc7ec1a472098280f1d8b05fbfaeb9df5fd35c"
+     },
+     {
+      "side": "L",
+      "hash": "d0491dc6a5fe72098f988d2cdf7d12942a9370dfa337066bbf287a5f9de900ba"
+     }
+    ]
+   },
+   {
+    "name": "risk.manufacturing",
+    "payload": {
+     "level": "med",
+     "notes": "Filter-tip sterility ends when the box is opened; a refilled box is non-sterile unless autoclaved."
+    },
+    "leaf": "0aeadf9970ed973af7459e3c6ddc7ec1a472098280f1d8b05fbfaeb9df5fd35c",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "bbe6dc88184dbe80f15eea3ce6834834f4329cbd9325194392a02438d5bf922b"
+     },
+     {
+      "side": "L",
+      "hash": "d0491dc6a5fe72098f988d2cdf7d12942a9370dfa337066bbf287a5f9de900ba"
+     }
+    ]
+   }
+  ]
+ },
+ "obs-tipbox-purple-hinged": {
+  "root": "836b48b838e3551b612d51633294bd24a6504d57d951a35e95b47cddcb8d7f81",
+  "fragments": [
+   {
+    "name": "dimensions",
+    "payload": {
+     "x": 118,
+     "y": 82,
+     "z": 60,
+     "est": true,
+     "basis": "photo 46914 against SBS neighbors"
+    },
+    "leaf": "184e41dbf13d72f85b2cda9b3d6803afc3bd5d89c35201b8bafd6d62529f6f96",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "ae8a90ddd5960fdd336e814a619a8b45aedca1939d1bc91830fb733f391588db"
+     },
+     {
+      "side": "R",
+      "hash": "c505e11171ad16c7f40acfdefe9953aedddd9be7e9fd5a290c1cf00f282fda9b"
+     },
+     {
+      "side": "R",
+      "hash": "315d54b0b11be4e7ddec7ccb4e061dbc545b0816f21f8135d7a7dced33a6fd01"
+     },
+     {
+      "side": "R",
+      "hash": "4699c9be7bb3163c53d064fffe902f2c247479e3ebfcf40e9f9dc7d617273a8e"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46901",
+    "payload": {
+     "photo": "46901",
+     "sha256": "bf2add091eae09de201aff68aed6aea8516fb3ca1b51d0da60c0081b276b5528",
+     "resolves": false
+    },
+    "leaf": "ae8a90ddd5960fdd336e814a619a8b45aedca1939d1bc91830fb733f391588db",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "184e41dbf13d72f85b2cda9b3d6803afc3bd5d89c35201b8bafd6d62529f6f96"
+     },
+     {
+      "side": "R",
+      "hash": "c505e11171ad16c7f40acfdefe9953aedddd9be7e9fd5a290c1cf00f282fda9b"
+     },
+     {
+      "side": "R",
+      "hash": "315d54b0b11be4e7ddec7ccb4e061dbc545b0816f21f8135d7a7dced33a6fd01"
+     },
+     {
+      "side": "R",
+      "hash": "4699c9be7bb3163c53d064fffe902f2c247479e3ebfcf40e9f9dc7d617273a8e"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46903",
+    "payload": {
+     "photo": "46903",
+     "sha256": "f6abbcdd00e69bf5f88daf52a9c0efe6a2bd52eb76aad523b48295ab9bae176b",
+     "resolves": false
+    },
+    "leaf": "c85dc80754bf0d607827c274b5317d1856a9e9dbbeb4543eb66bc441e4581cf1",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "22f9a27ca7125889ee530aad5a9f884a0362c19343979c2ae5c69d620fd7a30a"
+     },
+     {
+      "side": "L",
+      "hash": "7e36264bcbb67dd2a5293ae77e7a6be75008da18965fae318e07ac14e1cd55ed"
+     },
+     {
+      "side": "R",
+      "hash": "315d54b0b11be4e7ddec7ccb4e061dbc545b0816f21f8135d7a7dced33a6fd01"
+     },
+     {
+      "side": "R",
+      "hash": "4699c9be7bb3163c53d064fffe902f2c247479e3ebfcf40e9f9dc7d617273a8e"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46904",
+    "payload": {
+     "photo": "46904",
+     "sha256": "c46be60cd0b94647b22edb1fdba0966949e55e7c5c46ee23023c62e6ba0e9231",
+     "resolves": false
+    },
+    "leaf": "22f9a27ca7125889ee530aad5a9f884a0362c19343979c2ae5c69d620fd7a30a",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "c85dc80754bf0d607827c274b5317d1856a9e9dbbeb4543eb66bc441e4581cf1"
+     },
+     {
+      "side": "L",
+      "hash": "7e36264bcbb67dd2a5293ae77e7a6be75008da18965fae318e07ac14e1cd55ed"
+     },
+     {
+      "side": "R",
+      "hash": "315d54b0b11be4e7ddec7ccb4e061dbc545b0816f21f8135d7a7dced33a6fd01"
+     },
+     {
+      "side": "R",
+      "hash": "4699c9be7bb3163c53d064fffe902f2c247479e3ebfcf40e9f9dc7d617273a8e"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46914",
+    "payload": {
+     "photo": "46914",
+     "sha256": "c8f21843b4296a1bdee4121489b7b23dca3b72aa96624ecdc3c8ae473932fc54",
+     "resolves": false
+    },
+    "leaf": "0bae3d6d349b80182260a2631dc10181b09ab6964cccfdcbde65827825001399",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "3eb6c223a52d985b636d6d52e7fafcee56dde993d3e6c89cbe0313268d195f43"
+     },
+     {
+      "side": "R",
+      "hash": "4c6f5cde3b7b7545101f76a9f91299ffd84bc03763ae8dc194462b88cea9a2f0"
+     },
+     {
+      "side": "L",
+      "hash": "a5fc583ddb7400b30c600691c468b8cf96d31c4100087752efd23a24f029eed6"
+     },
+     {
+      "side": "R",
+      "hash": "4699c9be7bb3163c53d064fffe902f2c247479e3ebfcf40e9f9dc7d617273a8e"
+     }
+    ]
+   },
+   {
+    "name": "grid",
+    "payload": {
+     "rows": 8,
+     "cols": 12,
+     "pitch": 9.0,
+     "hole_d": 5.4,
+     "est": true,
+     "basis": "SBS 96 pitch"
+    },
+    "leaf": "3eb6c223a52d985b636d6d52e7fafcee56dde993d3e6c89cbe0313268d195f43",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "0bae3d6d349b80182260a2631dc10181b09ab6964cccfdcbde65827825001399"
+     },
+     {
+      "side": "R",
+      "hash": "4c6f5cde3b7b7545101f76a9f91299ffd84bc03763ae8dc194462b88cea9a2f0"
+     },
+     {
+      "side": "L",
+      "hash": "a5fc583ddb7400b30c600691c468b8cf96d31c4100087752efd23a24f029eed6"
+     },
+     {
+      "side": "R",
+      "hash": "4699c9be7bb3163c53d064fffe902f2c247479e3ebfcf40e9f9dc7d617273a8e"
+     }
+    ]
+   },
+   {
+    "name": "identity",
+    "payload": {
+     "id": "obs-tipbox-purple-hinged",
+     "name": "Purple hinged tip box",
+     "kind": "tip rack",
+     "vendor": "commercial (brand withheld)"
+    },
+    "leaf": "c5d4480f3fdfa74133e656093b92a8689843e263d37af5199460163cc928b731",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "405519f4c964641d48eb609f5549f28dd83632209675867ff4c56ce9c5666f0b"
+     },
+     {
+      "side": "L",
+      "hash": "1951d9aeb4d9ba7f62eb52d628938d66ff3697baeb1ccf435847f0779e3a465b"
+     },
+     {
+      "side": "L",
+      "hash": "a5fc583ddb7400b30c600691c468b8cf96d31c4100087752efd23a24f029eed6"
+     },
+     {
+      "side": "R",
+      "hash": "4699c9be7bb3163c53d064fffe902f2c247479e3ebfcf40e9f9dc7d617273a8e"
+     }
+    ]
+   },
+   {
+    "name": "material",
+    "payload": {
+     "material": "PP, purple base + clear lid",
+     "reuse": "tip rack, small-parts case"
+    },
+    "leaf": "405519f4c964641d48eb609f5549f28dd83632209675867ff4c56ce9c5666f0b",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "c5d4480f3fdfa74133e656093b92a8689843e263d37af5199460163cc928b731"
+     },
+     {
+      "side": "L",
+      "hash": "1951d9aeb4d9ba7f62eb52d628938d66ff3697baeb1ccf435847f0779e3a465b"
+     },
+     {
+      "side": "L",
+      "hash": "a5fc583ddb7400b30c600691c468b8cf96d31c4100087752efd23a24f029eed6"
+     },
+     {
+      "side": "R",
+      "hash": "4699c9be7bb3163c53d064fffe902f2c247479e3ebfcf40e9f9dc7d617273a8e"
+     }
+    ]
+   },
+   {
+    "name": "risk.knowledge",
+    "payload": {
+     "level": "med",
+     "notes": "Lid has an embossed vendor logo. Do not reproduce it."
+    },
+    "leaf": "dcf07c581d77f18638b5fc168b08641ee71ec00b5a351ed3afa1575f209c3210",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "9b7f5a9bb89aa8e82c382634f419e493bcc35320cbb34d07ef7c2e247db11791"
+     },
+     {
+      "side": "L",
+      "hash": "f24d29344ad9fafa81feca5626928a3484e5885f00b655fcd3865a8989ac9f3a"
+     }
+    ]
+   },
+   {
+    "name": "risk.manufacturing",
+    "payload": {
+     "level": "low",
+     "notes": "Simple box; useful as a dust case for printed parts."
+    },
+    "leaf": "9b7f5a9bb89aa8e82c382634f419e493bcc35320cbb34d07ef7c2e247db11791",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "dcf07c581d77f18638b5fc168b08641ee71ec00b5a351ed3afa1575f209c3210"
+     },
+     {
+      "side": "L",
+      "hash": "f24d29344ad9fafa81feca5626928a3484e5885f00b655fcd3865a8989ac9f3a"
+     }
+    ]
+   }
+  ]
+ },
+ "obs-microtube-96-purple": {
+  "root": "077717b8fad2875d115a5f3bcc96ec27fabc3b989858955fb7f25fef434c0116",
+  "fragments": [
+   {
+    "name": "dimensions",
+    "payload": {
+     "x": 125,
+     "y": 85,
+     "z": 55,
+     "est": true,
+     "basis": "photo 46914"
+    },
+    "leaf": "00e20c81e0d5a7c8052e14b229108ca5ba2c11ffba92ca2924c9be82f6b448c2",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "c1e4366c10fc340e16d93ba00a061969465bc898e9eb8ca111b3731e6f1edc13"
+     },
+     {
+      "side": "R",
+      "hash": "713e291ef15ff275e6932e36911df68216f660bfc884744304a3aea058abdc65"
+     },
+     {
+      "side": "R",
+      "hash": "436481270703c714414bdf68b19ed5fd592c6a21bf5b4fdc9f3cd414d247b1a1"
+     },
+     {
+      "side": "R",
+      "hash": "84b7f79bbf6005db01f82a438a331e364431bd09520f65fba017469e68cc02eb"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46908",
+    "payload": {
+     "photo": "46908",
+     "sha256": "0d219e2da0b2f1c1294c2b1c6528263b63d480f0dd32eb1e11f7eda89b18870f",
+     "resolves": false
+    },
+    "leaf": "c1e4366c10fc340e16d93ba00a061969465bc898e9eb8ca111b3731e6f1edc13",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "00e20c81e0d5a7c8052e14b229108ca5ba2c11ffba92ca2924c9be82f6b448c2"
+     },
+     {
+      "side": "R",
+      "hash": "713e291ef15ff275e6932e36911df68216f660bfc884744304a3aea058abdc65"
+     },
+     {
+      "side": "R",
+      "hash": "436481270703c714414bdf68b19ed5fd592c6a21bf5b4fdc9f3cd414d247b1a1"
+     },
+     {
+      "side": "R",
+      "hash": "84b7f79bbf6005db01f82a438a331e364431bd09520f65fba017469e68cc02eb"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46911",
+    "payload": {
+     "photo": "46911",
+     "sha256": "6ee77b2174922ce7d0d04ccc4f001d5558cde72c72e3e2aca702e2c0bae2c011",
+     "resolves": false
+    },
+    "leaf": "9029cc28d6ea9bb1617f81dd54b09b80c3043c78c8fa0e9ced36ef7ad31d4347",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "0bae3d6d349b80182260a2631dc10181b09ab6964cccfdcbde65827825001399"
+     },
+     {
+      "side": "L",
+      "hash": "3e78d834ec00c912afa6838ee4cc2a358c6742a9e3131e07768127cb6365d740"
+     },
+     {
+      "side": "R",
+      "hash": "436481270703c714414bdf68b19ed5fd592c6a21bf5b4fdc9f3cd414d247b1a1"
+     },
+     {
+      "side": "R",
+      "hash": "84b7f79bbf6005db01f82a438a331e364431bd09520f65fba017469e68cc02eb"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46914",
+    "payload": {
+     "photo": "46914",
+     "sha256": "c8f21843b4296a1bdee4121489b7b23dca3b72aa96624ecdc3c8ae473932fc54",
+     "resolves": false
+    },
+    "leaf": "0bae3d6d349b80182260a2631dc10181b09ab6964cccfdcbde65827825001399",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "9029cc28d6ea9bb1617f81dd54b09b80c3043c78c8fa0e9ced36ef7ad31d4347"
+     },
+     {
+      "side": "L",
+      "hash": "3e78d834ec00c912afa6838ee4cc2a358c6742a9e3131e07768127cb6365d740"
+     },
+     {
+      "side": "R",
+      "hash": "436481270703c714414bdf68b19ed5fd592c6a21bf5b4fdc9f3cd414d247b1a1"
+     },
+     {
+      "side": "R",
+      "hash": "84b7f79bbf6005db01f82a438a331e364431bd09520f65fba017469e68cc02eb"
+     }
+    ]
+   },
+   {
+    "name": "grid",
+    "payload": {
+     "rows": 8,
+     "cols": 12,
+     "pitch": 9.0,
+     "hole_d": 6.5,
+     "est": true,
+     "basis": "96 format"
+    },
+    "leaf": "7bb25cb05d90eeb447f72b82b0b283d478a3f8e8a7991f079a4d728c19dadaad",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "d7873891050be9344d335ff2d2def33316e681e6dc645012da484d3bd6b16850"
+     },
+     {
+      "side": "R",
+      "hash": "0959521bdfb95541278762067f523acfe6985a36e1485e8ee2a4965023379ea6"
+     },
+     {
+      "side": "L",
+      "hash": "29ab784e16691d4edd2471a500e8774c757432eb8bfd69c30aa94bf59c78a629"
+     },
+     {
+      "side": "R",
+      "hash": "84b7f79bbf6005db01f82a438a331e364431bd09520f65fba017469e68cc02eb"
+     }
+    ]
+   },
+   {
+    "name": "identity",
+    "payload": {
+     "id": "obs-microtube-96-purple",
+     "name": "Purple 96-place microtube rack with base",
+     "kind": "tube rack",
+     "vendor": "unbranded / in-house"
+    },
+    "leaf": "d7873891050be9344d335ff2d2def33316e681e6dc645012da484d3bd6b16850",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "7bb25cb05d90eeb447f72b82b0b283d478a3f8e8a7991f079a4d728c19dadaad"
+     },
+     {
+      "side": "R",
+      "hash": "0959521bdfb95541278762067f523acfe6985a36e1485e8ee2a4965023379ea6"
+     },
+     {
+      "side": "L",
+      "hash": "29ab784e16691d4edd2471a500e8774c757432eb8bfd69c30aa94bf59c78a629"
+     },
+     {
+      "side": "R",
+      "hash": "84b7f79bbf6005db01f82a438a331e364431bd09520f65fba017469e68cc02eb"
+     }
+    ]
+   },
+   {
+    "name": "material",
+    "payload": {
+     "material": "PP",
+     "reuse": "PCR strip / 0.5 mL tube rack"
+    },
+    "leaf": "e19b500ac6c88a015b60c618fd6cddcc63fbb631f128dcaae9f2a901b2ca6fd1",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "adb751aa9f411876c27c1dcb80f40b12f55c122a14883c3bd572cb280ba77abd"
+     },
+     {
+      "side": "L",
+      "hash": "59bdf04599b511ebdc9c1c7290a96f26f7113076a4e4a4f71fed4d7b5c63061e"
+     },
+     {
+      "side": "L",
+      "hash": "29ab784e16691d4edd2471a500e8774c757432eb8bfd69c30aa94bf59c78a629"
+     },
+     {
+      "side": "R",
+      "hash": "84b7f79bbf6005db01f82a438a331e364431bd09520f65fba017469e68cc02eb"
+     }
+    ]
+   },
+   {
+    "name": "risk.knowledge",
+    "payload": {
+     "level": "low",
+     "notes": "No visible branding."
+    },
+    "leaf": "adb751aa9f411876c27c1dcb80f40b12f55c122a14883c3bd572cb280ba77abd",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "e19b500ac6c88a015b60c618fd6cddcc63fbb631f128dcaae9f2a901b2ca6fd1"
+     },
+     {
+      "side": "L",
+      "hash": "59bdf04599b511ebdc9c1c7290a96f26f7113076a4e4a4f71fed4d7b5c63061e"
+     },
+     {
+      "side": "L",
+      "hash": "29ab784e16691d4edd2471a500e8774c757432eb8bfd69c30aa94bf59c78a629"
+     },
+     {
+      "side": "R",
+      "hash": "84b7f79bbf6005db01f82a438a331e364431bd09520f65fba017469e68cc02eb"
+     }
+    ]
+   },
+   {
+    "name": "risk.manufacturing",
+    "payload": {
+     "level": "low",
+     "notes": "Generic; easy to print in PETG."
+    },
+    "leaf": "84b7f79bbf6005db01f82a438a331e364431bd09520f65fba017469e68cc02eb",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "47ff2ea51fe310004c7d0b4ca5cc6931f26e5ac0bee4db870b9bba1a96d6fbe5"
+     }
+    ]
+   }
+  ]
+ },
+ "obs-microtube-50-purple": {
+  "root": "594b053105fa6c1a2b5696ebccdeffa88d437267d9aca100836e2bb267142bc7",
+  "fragments": [
+   {
+    "name": "dimensions",
+    "payload": {
+     "x": 250,
+     "y": 75,
+     "z": 40,
+     "est": true,
+     "basis": "~10 in on rule, photo 46908"
+    },
+    "leaf": "50882b8c9926cd44b1b62f5f230fe57bdc989b96dbd675b9e114ee6a0bd00040",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "c1e4366c10fc340e16d93ba00a061969465bc898e9eb8ca111b3731e6f1edc13"
+     },
+     {
+      "side": "R",
+      "hash": "996c389b93ab0e931791f058f9fbda4a0c8812d3f3dc378efe63edd96ea9cf28"
+     },
+     {
+      "side": "R",
+      "hash": "1193203a147e49a89aa96f4d7256e04c36cb22f26cb734b82bf91b0a880f9433"
+     },
+     {
+      "side": "R",
+      "hash": "f2f240678095f3ee78e3076c3b76364e3888698a769a77777f2c2170efb47a22"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46908",
+    "payload": {
+     "photo": "46908",
+     "sha256": "0d219e2da0b2f1c1294c2b1c6528263b63d480f0dd32eb1e11f7eda89b18870f",
+     "resolves": false
+    },
+    "leaf": "c1e4366c10fc340e16d93ba00a061969465bc898e9eb8ca111b3731e6f1edc13",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "50882b8c9926cd44b1b62f5f230fe57bdc989b96dbd675b9e114ee6a0bd00040"
+     },
+     {
+      "side": "R",
+      "hash": "996c389b93ab0e931791f058f9fbda4a0c8812d3f3dc378efe63edd96ea9cf28"
+     },
+     {
+      "side": "R",
+      "hash": "1193203a147e49a89aa96f4d7256e04c36cb22f26cb734b82bf91b0a880f9433"
+     },
+     {
+      "side": "R",
+      "hash": "f2f240678095f3ee78e3076c3b76364e3888698a769a77777f2c2170efb47a22"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46910",
+    "payload": {
+     "photo": "46910",
+     "sha256": "cad86112e86249bece0d208cee6a448089184e6c0e1831802c7edd388397e8ea",
+     "resolves": false
+    },
+    "leaf": "dead72f852ae3eb3940aeaf0f5f585f42e843c52b7265031599a909a973ddb04",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "9029cc28d6ea9bb1617f81dd54b09b80c3043c78c8fa0e9ced36ef7ad31d4347"
+     },
+     {
+      "side": "L",
+      "hash": "6adfce2d8c4eb2cd5a916fdf131172e0d7f40453597b35bce680410ab230cd21"
+     },
+     {
+      "side": "R",
+      "hash": "1193203a147e49a89aa96f4d7256e04c36cb22f26cb734b82bf91b0a880f9433"
+     },
+     {
+      "side": "R",
+      "hash": "f2f240678095f3ee78e3076c3b76364e3888698a769a77777f2c2170efb47a22"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46911",
+    "payload": {
+     "photo": "46911",
+     "sha256": "6ee77b2174922ce7d0d04ccc4f001d5558cde72c72e3e2aca702e2c0bae2c011",
+     "resolves": false
+    },
+    "leaf": "9029cc28d6ea9bb1617f81dd54b09b80c3043c78c8fa0e9ced36ef7ad31d4347",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "dead72f852ae3eb3940aeaf0f5f585f42e843c52b7265031599a909a973ddb04"
+     },
+     {
+      "side": "L",
+      "hash": "6adfce2d8c4eb2cd5a916fdf131172e0d7f40453597b35bce680410ab230cd21"
+     },
+     {
+      "side": "R",
+      "hash": "1193203a147e49a89aa96f4d7256e04c36cb22f26cb734b82bf91b0a880f9433"
+     },
+     {
+      "side": "R",
+      "hash": "f2f240678095f3ee78e3076c3b76364e3888698a769a77777f2c2170efb47a22"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46915",
+    "payload": {
+     "photo": "46915",
+     "sha256": "e10aa2155c6563f5b5b601c7147bdce865760a3016aef056ca2efcb8afe4a993",
+     "resolves": false
+    },
+    "leaf": "cdbf84c8d380d4b162f6a7b70604d926c70379aa19bf882be7b958e8f28341d1",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "272c7ed9f0fb8522828f8da9d3332230e87e79f10b646814f4237682c3002e5e"
+     },
+     {
+      "side": "R",
+      "hash": "d336af2cc7ad5b2d72f396ac19ef41e4c1978daebb8f22bcf364f9c34d95447a"
+     },
+     {
+      "side": "L",
+      "hash": "be140f59c0365be9323b3f0f397bcd1d8ae715bc48f7e0bb1c83df9c1dbf76e5"
+     },
+     {
+      "side": "R",
+      "hash": "f2f240678095f3ee78e3076c3b76364e3888698a769a77777f2c2170efb47a22"
+     }
+    ]
+   },
+   {
+    "name": "grid",
+    "payload": {
+     "rows": 5,
+     "cols": 10,
+     "pitch": 13.0,
+     "hole_d": 11.0,
+     "est": true,
+     "basis": "1.5/2 mL rack convention"
+    },
+    "leaf": "272c7ed9f0fb8522828f8da9d3332230e87e79f10b646814f4237682c3002e5e",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "cdbf84c8d380d4b162f6a7b70604d926c70379aa19bf882be7b958e8f28341d1"
+     },
+     {
+      "side": "R",
+      "hash": "d336af2cc7ad5b2d72f396ac19ef41e4c1978daebb8f22bcf364f9c34d95447a"
+     },
+     {
+      "side": "L",
+      "hash": "be140f59c0365be9323b3f0f397bcd1d8ae715bc48f7e0bb1c83df9c1dbf76e5"
+     },
+     {
+      "side": "R",
+      "hash": "f2f240678095f3ee78e3076c3b76364e3888698a769a77777f2c2170efb47a22"
+     }
+    ]
+   },
+   {
+    "name": "identity",
+    "payload": {
+     "id": "obs-microtube-50-purple",
+     "name": "Purple 5x10 microtube rack",
+     "kind": "tube rack",
+     "vendor": "unbranded / in-house"
+    },
+    "leaf": "9e3a5573a267c93be86b8d806ca602946995e891723a886bbc361039c142337c",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "b813a6808c80efc19472f7bac3c62e5f8f799a3cf1382bc07fef58f18cc179d8"
+     },
+     {
+      "side": "L",
+      "hash": "d7f6844b792716f335b3d1488519101dc88e210813781c7bf5ddfe1e54182d58"
+     },
+     {
+      "side": "L",
+      "hash": "be140f59c0365be9323b3f0f397bcd1d8ae715bc48f7e0bb1c83df9c1dbf76e5"
+     },
+     {
+      "side": "R",
+      "hash": "f2f240678095f3ee78e3076c3b76364e3888698a769a77777f2c2170efb47a22"
+     }
+    ]
+   },
+   {
+    "name": "material",
+    "payload": {
+     "material": "PP",
+     "reuse": "1.5/2 mL and cryotube holding"
+    },
+    "leaf": "b813a6808c80efc19472f7bac3c62e5f8f799a3cf1382bc07fef58f18cc179d8",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "9e3a5573a267c93be86b8d806ca602946995e891723a886bbc361039c142337c"
+     },
+     {
+      "side": "L",
+      "hash": "d7f6844b792716f335b3d1488519101dc88e210813781c7bf5ddfe1e54182d58"
+     },
+     {
+      "side": "L",
+      "hash": "be140f59c0365be9323b3f0f397bcd1d8ae715bc48f7e0bb1c83df9c1dbf76e5"
+     },
+     {
+      "side": "R",
+      "hash": "f2f240678095f3ee78e3076c3b76364e3888698a769a77777f2c2170efb47a22"
+     }
+    ]
+   },
+   {
+    "name": "risk.knowledge",
+    "payload": {
+     "level": "low",
+     "notes": "No visible branding."
+    },
+    "leaf": "adb751aa9f411876c27c1dcb80f40b12f55c122a14883c3bd572cb280ba77abd",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "2408d8ce97c064289d184c2ffbb2a8b3d1d51574d3d2ede3a28ed1d206a4379e"
+     },
+     {
+      "side": "L",
+      "hash": "db6a13db90f0fe01b39fb2ee741996fc88c7df7fe2b35046d9dd3ea1921f6381"
+     }
+    ]
+   },
+   {
+    "name": "risk.manufacturing",
+    "payload": {
+     "level": "low",
+     "notes": "Longer than an SBS slot; the 4x6 remix fixes that."
+    },
+    "leaf": "2408d8ce97c064289d184c2ffbb2a8b3d1d51574d3d2ede3a28ed1d206a4379e",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "adb751aa9f411876c27c1dcb80f40b12f55c122a14883c3bd572cb280ba77abd"
+     },
+     {
+      "side": "L",
+      "hash": "db6a13db90f0fe01b39fb2ee741996fc88c7df7fe2b35046d9dd3ea1921f6381"
+     }
+    ]
+   }
+  ]
+ },
+ "obs-cryobox-100": {
+  "root": "f7b6437a3d893eda4094069ef3b56638a1aae5597581b1a69067094ac35c16e2",
+  "fragments": [
+   {
+    "name": "dimensions",
+    "payload": {
+     "x": 133,
+     "y": 133,
+     "z": 52,
+     "est": true,
+     "basis": "lid ~131 mm on rule, photo 46907; 2 in box convention"
+    },
+    "leaf": "75e75db11cb1a61a2ecbfed452aeb47ee55e61e9463722cda8c56fd93787b0ec",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "7be707dd77cc6e6b27edc1b84f92b88ca186ecf990f5fd0ce8a528f297d012e8"
+     },
+     {
+      "side": "R",
+      "hash": "525c72549c173d807e0bfacae0044171d14a1e0c24d0c8c02a83d3b6b1584560"
+     },
+     {
+      "side": "R",
+      "hash": "5212dc0cca9a23131c2fe2483aaebb208f27ef60bbc54fd4ebff55a1e3bedac3"
+     },
+     {
+      "side": "R",
+      "hash": "f84c79396c650be45cdaafe28412344b519ee01d25fb28f99d9c7a8ee72544bc"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46902",
+    "payload": {
+     "photo": "46902",
+     "sha256": "96fc3f4ad4dd9f26e7225261f17537e58e8b6d3f3354b2c4ddd219f4a60d7b15",
+     "resolves": false
+    },
+    "leaf": "7be707dd77cc6e6b27edc1b84f92b88ca186ecf990f5fd0ce8a528f297d012e8",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "75e75db11cb1a61a2ecbfed452aeb47ee55e61e9463722cda8c56fd93787b0ec"
+     },
+     {
+      "side": "R",
+      "hash": "525c72549c173d807e0bfacae0044171d14a1e0c24d0c8c02a83d3b6b1584560"
+     },
+     {
+      "side": "R",
+      "hash": "5212dc0cca9a23131c2fe2483aaebb208f27ef60bbc54fd4ebff55a1e3bedac3"
+     },
+     {
+      "side": "R",
+      "hash": "f84c79396c650be45cdaafe28412344b519ee01d25fb28f99d9c7a8ee72544bc"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46907",
+    "payload": {
+     "photo": "46907",
+     "sha256": "cdd431171cc9044ccf0a2ecbfbe6e1daf9c1139cc2fe957e273d8a3e88a610ec",
+     "resolves": false
+    },
+    "leaf": "118d6b6520e616c523fccc4e94e3b20f4ae18014fc99451fdfb5bd14aaf77726",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "c1e4366c10fc340e16d93ba00a061969465bc898e9eb8ca111b3731e6f1edc13"
+     },
+     {
+      "side": "L",
+      "hash": "58b28e98e1a77beeaca35c3356fb243ce2c3cf54076abdf2e8443ecc08e89b82"
+     },
+     {
+      "side": "R",
+      "hash": "5212dc0cca9a23131c2fe2483aaebb208f27ef60bbc54fd4ebff55a1e3bedac3"
+     },
+     {
+      "side": "R",
+      "hash": "f84c79396c650be45cdaafe28412344b519ee01d25fb28f99d9c7a8ee72544bc"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46908",
+    "payload": {
+     "photo": "46908",
+     "sha256": "0d219e2da0b2f1c1294c2b1c6528263b63d480f0dd32eb1e11f7eda89b18870f",
+     "resolves": false
+    },
+    "leaf": "c1e4366c10fc340e16d93ba00a061969465bc898e9eb8ca111b3731e6f1edc13",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "118d6b6520e616c523fccc4e94e3b20f4ae18014fc99451fdfb5bd14aaf77726"
+     },
+     {
+      "side": "L",
+      "hash": "58b28e98e1a77beeaca35c3356fb243ce2c3cf54076abdf2e8443ecc08e89b82"
+     },
+     {
+      "side": "R",
+      "hash": "5212dc0cca9a23131c2fe2483aaebb208f27ef60bbc54fd4ebff55a1e3bedac3"
+     },
+     {
+      "side": "R",
+      "hash": "f84c79396c650be45cdaafe28412344b519ee01d25fb28f99d9c7a8ee72544bc"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46910",
+    "payload": {
+     "photo": "46910",
+     "sha256": "cad86112e86249bece0d208cee6a448089184e6c0e1831802c7edd388397e8ea",
+     "resolves": false
+    },
+    "leaf": "dead72f852ae3eb3940aeaf0f5f585f42e843c52b7265031599a909a973ddb04",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "cdbf84c8d380d4b162f6a7b70604d926c70379aa19bf882be7b958e8f28341d1"
+     },
+     {
+      "side": "R",
+      "hash": "c6a519284ae0e386793bd31c8aebd6fac1978d595a7e6930bc49ec68b71d2212"
+     },
+     {
+      "side": "L",
+      "hash": "924c44ca834970e363e4597685badba9d215a3fc682c2d434dca6c76c5619074"
+     },
+     {
+      "side": "R",
+      "hash": "f84c79396c650be45cdaafe28412344b519ee01d25fb28f99d9c7a8ee72544bc"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46915",
+    "payload": {
+     "photo": "46915",
+     "sha256": "e10aa2155c6563f5b5b601c7147bdce865760a3016aef056ca2efcb8afe4a993",
+     "resolves": false
+    },
+    "leaf": "cdbf84c8d380d4b162f6a7b70604d926c70379aa19bf882be7b958e8f28341d1",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "dead72f852ae3eb3940aeaf0f5f585f42e843c52b7265031599a909a973ddb04"
+     },
+     {
+      "side": "R",
+      "hash": "c6a519284ae0e386793bd31c8aebd6fac1978d595a7e6930bc49ec68b71d2212"
+     },
+     {
+      "side": "L",
+      "hash": "924c44ca834970e363e4597685badba9d215a3fc682c2d434dca6c76c5619074"
+     },
+     {
+      "side": "R",
+      "hash": "f84c79396c650be45cdaafe28412344b519ee01d25fb28f99d9c7a8ee72544bc"
+     }
+    ]
+   },
+   {
+    "name": "grid",
+    "payload": {
+     "rows": 10,
+     "cols": 10,
+     "pitch": 13.0,
+     "hole_d": 12.8,
+     "est": true,
+     "basis": "numbered grid 1-100, photo 46902"
+    },
+    "leaf": "f3aace4a308824b18b34fa5abc7b7eda38ae4544f05f7a58d73fb69b7c9a12c9",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "8aea8139ede759e538f3cd1df2ec662bea5b53a2e0e027d2b45b4d8973cedc26"
+     },
+     {
+      "side": "L",
+      "hash": "edf9c43dcac51219ce2457f957f9ad4113a6047905ba62e77ade13708b3d1867"
+     },
+     {
+      "side": "L",
+      "hash": "924c44ca834970e363e4597685badba9d215a3fc682c2d434dca6c76c5619074"
+     },
+     {
+      "side": "R",
+      "hash": "f84c79396c650be45cdaafe28412344b519ee01d25fb28f99d9c7a8ee72544bc"
+     }
+    ]
+   },
+   {
+    "name": "identity",
+    "payload": {
+     "id": "obs-cryobox-100",
+     "name": "100-place cryo box, 10x10 numbered",
+     "kind": "cryo box",
+     "vendor": "commercial (brand withheld)"
+    },
+    "leaf": "8aea8139ede759e538f3cd1df2ec662bea5b53a2e0e027d2b45b4d8973cedc26",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "f3aace4a308824b18b34fa5abc7b7eda38ae4544f05f7a58d73fb69b7c9a12c9"
+     },
+     {
+      "side": "L",
+      "hash": "edf9c43dcac51219ce2457f957f9ad4113a6047905ba62e77ade13708b3d1867"
+     },
+     {
+      "side": "L",
+      "hash": "924c44ca834970e363e4597685badba9d215a3fc682c2d434dca6c76c5619074"
+     },
+     {
+      "side": "R",
+      "hash": "f84c79396c650be45cdaafe28412344b519ee01d25fb28f99d9c7a8ee72544bc"
+     }
+    ]
+   },
+   {
+    "name": "material",
+    "payload": {
+     "material": "PC lid, PP grid insert",
+     "reuse": "cryotube storage, -80 C"
+    },
+    "leaf": "c0ab1514b6d32372efe5da7b1ff12c040b768d7ad3169849c48f01b16c6c83cd",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "ff87c92791d79f8741122895e4f5d37dfba85d5030fb47100e0caaaa181b203b"
+     },
+     {
+      "side": "R",
+      "hash": "7df72fce45a566e3c2dbbc10abcddfb8b65fe24e3fb6e7aeeb85db6818321ab8"
+     },
+     {
+      "side": "L",
+      "hash": "4a143fa5d8c0263976c52ab3ed75b4bd454a37a49f37a7956aeb8e47c5cd2f89"
+     }
+    ]
+   },
+   {
+    "name": "risk.knowledge",
+    "payload": {
+     "level": "high",
+     "notes": "Vendor wordmark printed on the lid. Numbered-cell layout is a common format; keep numbering, drop the mark."
+    },
+    "leaf": "ff87c92791d79f8741122895e4f5d37dfba85d5030fb47100e0caaaa181b203b",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "c0ab1514b6d32372efe5da7b1ff12c040b768d7ad3169849c48f01b16c6c83cd"
+     },
+     {
+      "side": "R",
+      "hash": "7df72fce45a566e3c2dbbc10abcddfb8b65fe24e3fb6e7aeeb85db6818321ab8"
+     },
+     {
+      "side": "L",
+      "hash": "4a143fa5d8c0263976c52ab3ed75b4bd454a37a49f37a7956aeb8e47c5cd2f89"
+     }
+    ]
+   },
+   {
+    "name": "risk.manufacturing",
+    "payload": {
+     "level": "high",
+     "notes": "Rated for -80 C / LN2 vapor. Printed PLA/PETG embrittle below ~-20 C; a printed copy is not a cryo box. 133 mm does not fit a deck slot."
+    },
+    "leaf": "7df72fce45a566e3c2dbbc10abcddfb8b65fe24e3fb6e7aeeb85db6818321ab8",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "10c08f6ceaab476deb64a0bdb791244dad3113428cab0a9d2f9027c7f44933d8"
+     },
+     {
+      "side": "L",
+      "hash": "4a143fa5d8c0263976c52ab3ed75b4bd454a37a49f37a7956aeb8e47c5cd2f89"
+     }
+    ]
+   }
+  ]
+ },
+ "obs-cryotube-2ml": {
+  "root": "9ef010c792627133d4f35a9a7e9d0fd0a63a104ca30793361a22a931bfd6c4ad",
+  "fragments": [
+   {
+    "name": "dimensions",
+    "payload": {
+     "x": 12.5,
+     "y": 12.5,
+     "z": 48.5,
+     "est": true,
+     "basis": "2 mL external-thread cryotube convention"
+    },
+    "leaf": "57c91b9bad9e2cd984bc3cc1c2a2a857773ba1b58d8383d7f57a725d6713b58b",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "9d00f73ebc7b27b9a89def4e918a05eae740e65d6c4f237db0a0479e53ddff56"
+     },
+     {
+      "side": "R",
+      "hash": "edf9c43dcac51219ce2457f957f9ad4113a6047905ba62e77ade13708b3d1867"
+     },
+     {
+      "side": "R",
+      "hash": "cb187f67299ebefadd2c8e2018fa77e2f1fb4daa7dc2429c1d306bcea8691e33"
+     },
+     {
+      "side": "R",
+      "hash": "aa66adfa66e732edb7fb5b520759cbbe711828b07fcee6043dd65d3a27ca8f32"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46909",
+    "payload": {
+     "photo": "46909",
+     "sha256": "194742f25f983868db0bff29ee2fae6931fd59a4742b9c5a1cd6151e00147881",
+     "resolves": false
+    },
+    "leaf": "9d00f73ebc7b27b9a89def4e918a05eae740e65d6c4f237db0a0479e53ddff56",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "57c91b9bad9e2cd984bc3cc1c2a2a857773ba1b58d8383d7f57a725d6713b58b"
+     },
+     {
+      "side": "R",
+      "hash": "edf9c43dcac51219ce2457f957f9ad4113a6047905ba62e77ade13708b3d1867"
+     },
+     {
+      "side": "R",
+      "hash": "cb187f67299ebefadd2c8e2018fa77e2f1fb4daa7dc2429c1d306bcea8691e33"
+     },
+     {
+      "side": "R",
+      "hash": "aa66adfa66e732edb7fb5b520759cbbe711828b07fcee6043dd65d3a27ca8f32"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46910",
+    "payload": {
+     "photo": "46910",
+     "sha256": "cad86112e86249bece0d208cee6a448089184e6c0e1831802c7edd388397e8ea",
+     "resolves": false
+    },
+    "leaf": "dead72f852ae3eb3940aeaf0f5f585f42e843c52b7265031599a909a973ddb04",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "cdbf84c8d380d4b162f6a7b70604d926c70379aa19bf882be7b958e8f28341d1"
+     },
+     {
+      "side": "L",
+      "hash": "815147c8b41c617786128884978e2619287b0795468ae883644b8c466b0c389e"
+     },
+     {
+      "side": "R",
+      "hash": "cb187f67299ebefadd2c8e2018fa77e2f1fb4daa7dc2429c1d306bcea8691e33"
+     },
+     {
+      "side": "R",
+      "hash": "aa66adfa66e732edb7fb5b520759cbbe711828b07fcee6043dd65d3a27ca8f32"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46915",
+    "payload": {
+     "photo": "46915",
+     "sha256": "e10aa2155c6563f5b5b601c7147bdce865760a3016aef056ca2efcb8afe4a993",
+     "resolves": false
+    },
+    "leaf": "cdbf84c8d380d4b162f6a7b70604d926c70379aa19bf882be7b958e8f28341d1",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "dead72f852ae3eb3940aeaf0f5f585f42e843c52b7265031599a909a973ddb04"
+     },
+     {
+      "side": "L",
+      "hash": "815147c8b41c617786128884978e2619287b0795468ae883644b8c466b0c389e"
+     },
+     {
+      "side": "R",
+      "hash": "cb187f67299ebefadd2c8e2018fa77e2f1fb4daa7dc2429c1d306bcea8691e33"
+     },
+     {
+      "side": "R",
+      "hash": "aa66adfa66e732edb7fb5b520759cbbe711828b07fcee6043dd65d3a27ca8f32"
+     }
+    ]
+   },
+   {
+    "name": "grid",
+    "payload": null,
+    "leaf": "308e77c946cb7ae8d999af3706189d3bebf297b8667895f1c434342a3c5dc02d",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "892f8d90d5db9848e2c506dc21b0af5484eb1d55418eb10c06688e0550621b93"
+     },
+     {
+      "side": "R",
+      "hash": "8b3786173cb74218a9a618d19b72d0c98c886063abd1489cc09a074925d72137"
+     },
+     {
+      "side": "L",
+      "hash": "46f859a6d0f6682aa346fc3705a78f9e66a947c5428ea2deecb4b63edb2291bc"
+     },
+     {
+      "side": "R",
+      "hash": "aa66adfa66e732edb7fb5b520759cbbe711828b07fcee6043dd65d3a27ca8f32"
+     }
+    ]
+   },
+   {
+    "name": "identity",
+    "payload": {
+     "id": "obs-cryotube-2ml",
+     "name": "2 mL external-thread cryotube, sterile",
+     "kind": "consumable",
+     "vendor": "commercial (brand withheld)"
+    },
+    "leaf": "892f8d90d5db9848e2c506dc21b0af5484eb1d55418eb10c06688e0550621b93",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "308e77c946cb7ae8d999af3706189d3bebf297b8667895f1c434342a3c5dc02d"
+     },
+     {
+      "side": "R",
+      "hash": "8b3786173cb74218a9a618d19b72d0c98c886063abd1489cc09a074925d72137"
+     },
+     {
+      "side": "L",
+      "hash": "46f859a6d0f6682aa346fc3705a78f9e66a947c5428ea2deecb4b63edb2291bc"
+     },
+     {
+      "side": "R",
+      "hash": "aa66adfa66e732edb7fb5b520759cbbe711828b07fcee6043dd65d3a27ca8f32"
+     }
+    ]
+   },
+   {
+    "name": "lot",
+    "payload": {
+     "lot": "E23093DQ",
+     "expiry": "2028-09-12",
+     "pack": "100 pcs/bag"
+    },
+    "leaf": "6a4e71b932de17d848b173c19717300a08bc5cc57136ba81b10c01b93a82b11d",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "f8bde81601596b41d8b3f009e97c4239e043cb8faf90b13644ae8248416ad8d1"
+     },
+     {
+      "side": "L",
+      "hash": "b6528653e8c4ff4dd32820c4aa071d2f048d8ac13fe6751b442636d50110c2e4"
+     },
+     {
+      "side": "L",
+      "hash": "46f859a6d0f6682aa346fc3705a78f9e66a947c5428ea2deecb4b63edb2291bc"
+     },
+     {
+      "side": "R",
+      "hash": "aa66adfa66e732edb7fb5b520759cbbe711828b07fcee6043dd65d3a27ca8f32"
+     }
+    ]
+   },
+   {
+    "name": "material",
+    "payload": {
+     "material": "PP, screw cap, round bottom, star foot, sterile",
+     "reuse": "sample unit; the 'bug' container"
+    },
+    "leaf": "f8bde81601596b41d8b3f009e97c4239e043cb8faf90b13644ae8248416ad8d1",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "6a4e71b932de17d848b173c19717300a08bc5cc57136ba81b10c01b93a82b11d"
+     },
+     {
+      "side": "L",
+      "hash": "b6528653e8c4ff4dd32820c4aa071d2f048d8ac13fe6751b442636d50110c2e4"
+     },
+     {
+      "side": "L",
+      "hash": "46f859a6d0f6682aa346fc3705a78f9e66a947c5428ea2deecb4b63edb2291bc"
+     },
+     {
+      "side": "R",
+      "hash": "aa66adfa66e732edb7fb5b520759cbbe711828b07fcee6043dd65d3a27ca8f32"
+     }
+    ]
+   },
+   {
+    "name": "risk.knowledge",
+    "payload": {
+     "level": "med",
+     "notes": "Product name and vendor are trademarks; the tube outline is a functional dimension used to size racks."
+    },
+    "leaf": "31afe98c62bf3f427d9640f3ed95327e4ca633f1d88dfa1330f8b896c21da012",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "da4b248aa82dc3d9b4855a42282184c070b410884802b09b2fa55ec75b686f13"
+     },
+     {
+      "side": "L",
+      "hash": "3ab314c42cc15cc9fc53429517939e780090ffab65173c61ae3324bfedd83661"
+     }
+    ]
+   },
+   {
+    "name": "risk.manufacturing",
+    "payload": {
+     "level": "high",
+     "notes": "Sterility and nuclease/pyrogen-free claims hold only for unopened bags. Never print substitutes. Track lot and expiry."
+    },
+    "leaf": "da4b248aa82dc3d9b4855a42282184c070b410884802b09b2fa55ec75b686f13",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "31afe98c62bf3f427d9640f3ed95327e4ca633f1d88dfa1330f8b896c21da012"
+     },
+     {
+      "side": "L",
+      "hash": "3ab314c42cc15cc9fc53429517939e780090ffab65173c61ae3324bfedd83661"
+     }
+    ]
+   }
+  ]
+ },
+ "obs-conical-50": {
+  "root": "43fb3cf0dc7781b43abeaad1762db87c5bc28ec6b66893ddbeeaf00c4d437cef",
+  "fragments": [
+   {
+    "name": "dimensions",
+    "payload": {
+     "x": 29.0,
+     "y": 29.0,
+     "z": 115,
+     "est": true,
+     "basis": "50 mL conical convention"
+    },
+    "leaf": "93cb4816d7263235ab66800a8d1e77c7f658995bc8cd878137d9ac098b074392",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "9029cc28d6ea9bb1617f81dd54b09b80c3043c78c8fa0e9ced36ef7ad31d4347"
+     },
+     {
+      "side": "R",
+      "hash": "e4ccbdf2fc45ea84eca67ddfb991969f48ddda7b37cab17caa4d11bd041ce9b2"
+     },
+     {
+      "side": "R",
+      "hash": "5a28aceb3da09e008fed25ab5bcac52a0dfaad61041f66bff377a2f80961799a"
+     },
+     {
+      "side": "R",
+      "hash": "0f63dd956c42ad0ff4a39cb467940cc51d3f74064f18c6d54159c15c43de379e"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46911",
+    "payload": {
+     "photo": "46911",
+     "sha256": "6ee77b2174922ce7d0d04ccc4f001d5558cde72c72e3e2aca702e2c0bae2c011",
+     "resolves": false
+    },
+    "leaf": "9029cc28d6ea9bb1617f81dd54b09b80c3043c78c8fa0e9ced36ef7ad31d4347",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "93cb4816d7263235ab66800a8d1e77c7f658995bc8cd878137d9ac098b074392"
+     },
+     {
+      "side": "R",
+      "hash": "e4ccbdf2fc45ea84eca67ddfb991969f48ddda7b37cab17caa4d11bd041ce9b2"
+     },
+     {
+      "side": "R",
+      "hash": "5a28aceb3da09e008fed25ab5bcac52a0dfaad61041f66bff377a2f80961799a"
+     },
+     {
+      "side": "R",
+      "hash": "0f63dd956c42ad0ff4a39cb467940cc51d3f74064f18c6d54159c15c43de379e"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46914",
+    "payload": {
+     "photo": "46914",
+     "sha256": "c8f21843b4296a1bdee4121489b7b23dca3b72aa96624ecdc3c8ae473932fc54",
+     "resolves": false
+    },
+    "leaf": "0bae3d6d349b80182260a2631dc10181b09ab6964cccfdcbde65827825001399",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "cef6f9b9af85e999a07a68d900c8aa77a089dfd68f8239976606bd5e4453663a"
+     },
+     {
+      "side": "L",
+      "hash": "4c3e2ba29cc7854185d6e492bb52fef0695ac339019ac32440d03cd0c1ed75c8"
+     },
+     {
+      "side": "R",
+      "hash": "5a28aceb3da09e008fed25ab5bcac52a0dfaad61041f66bff377a2f80961799a"
+     },
+     {
+      "side": "R",
+      "hash": "0f63dd956c42ad0ff4a39cb467940cc51d3f74064f18c6d54159c15c43de379e"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46916",
+    "payload": {
+     "photo": "46916",
+     "sha256": "6053dc9bab4f4a70354517eb22e5e479a59844fc541c71f2737a91e25c5eb73a",
+     "resolves": false
+    },
+    "leaf": "cef6f9b9af85e999a07a68d900c8aa77a089dfd68f8239976606bd5e4453663a",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "0bae3d6d349b80182260a2631dc10181b09ab6964cccfdcbde65827825001399"
+     },
+     {
+      "side": "L",
+      "hash": "4c3e2ba29cc7854185d6e492bb52fef0695ac339019ac32440d03cd0c1ed75c8"
+     },
+     {
+      "side": "R",
+      "hash": "5a28aceb3da09e008fed25ab5bcac52a0dfaad61041f66bff377a2f80961799a"
+     },
+     {
+      "side": "R",
+      "hash": "0f63dd956c42ad0ff4a39cb467940cc51d3f74064f18c6d54159c15c43de379e"
+     }
+    ]
+   },
+   {
+    "name": "grid",
+    "payload": null,
+    "leaf": "308e77c946cb7ae8d999af3706189d3bebf297b8667895f1c434342a3c5dc02d",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "c01b0223f60c28b3eab2390a19fd0b053aca1bac0d77eab0d1a0873b5b5c180b"
+     },
+     {
+      "side": "R",
+      "hash": "403e502911843f0a185135fcda8133f6254f7f41a60b99336c717203f5ef82e5"
+     },
+     {
+      "side": "L",
+      "hash": "0413527d27cc9a69d985274996be5a0fcf77059ef9239ef1a8bad96037b10a74"
+     },
+     {
+      "side": "R",
+      "hash": "0f63dd956c42ad0ff4a39cb467940cc51d3f74064f18c6d54159c15c43de379e"
+     }
+    ]
+   },
+   {
+    "name": "identity",
+    "payload": {
+     "id": "obs-conical-50",
+     "name": "50 mL conical tube, green cap",
+     "kind": "consumable",
+     "vendor": "commercial (brand withheld)"
+    },
+    "leaf": "c01b0223f60c28b3eab2390a19fd0b053aca1bac0d77eab0d1a0873b5b5c180b",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "308e77c946cb7ae8d999af3706189d3bebf297b8667895f1c434342a3c5dc02d"
+     },
+     {
+      "side": "R",
+      "hash": "403e502911843f0a185135fcda8133f6254f7f41a60b99336c717203f5ef82e5"
+     },
+     {
+      "side": "L",
+      "hash": "0413527d27cc9a69d985274996be5a0fcf77059ef9239ef1a8bad96037b10a74"
+     },
+     {
+      "side": "R",
+      "hash": "0f63dd956c42ad0ff4a39cb467940cc51d3f74064f18c6d54159c15c43de379e"
+     }
+    ]
+   },
+   {
+    "name": "material",
+    "payload": {
+     "material": "PP",
+     "reuse": "bulk media, specimen"
+    },
+    "leaf": "cfb5559312ebb4fe51c8ed34f33004714531c2f591879ee34debeb39ef0fbee4",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "5896b7a938e50db84329d27c71febbb1cce32a3d817e85186669d505253951cc"
+     },
+     {
+      "side": "L",
+      "hash": "e6b9dfd7c8103da155da9804ce5811fff9d8fb8e4c9e19faedafa26af8e43c42"
+     },
+     {
+      "side": "L",
+      "hash": "0413527d27cc9a69d985274996be5a0fcf77059ef9239ef1a8bad96037b10a74"
+     },
+     {
+      "side": "R",
+      "hash": "0f63dd956c42ad0ff4a39cb467940cc51d3f74064f18c6d54159c15c43de379e"
+     }
+    ]
+   },
+   {
+    "name": "risk.knowledge",
+    "payload": {
+     "level": "low",
+     "notes": "Label not legible in photos."
+    },
+    "leaf": "5896b7a938e50db84329d27c71febbb1cce32a3d817e85186669d505253951cc",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "cfb5559312ebb4fe51c8ed34f33004714531c2f591879ee34debeb39ef0fbee4"
+     },
+     {
+      "side": "L",
+      "hash": "e6b9dfd7c8103da155da9804ce5811fff9d8fb8e4c9e19faedafa26af8e43c42"
+     },
+     {
+      "side": "L",
+      "hash": "0413527d27cc9a69d985274996be5a0fcf77059ef9239ef1a8bad96037b10a74"
+     },
+     {
+      "side": "R",
+      "hash": "0f63dd956c42ad0ff4a39cb467940cc51d3f74064f18c6d54159c15c43de379e"
+     }
+    ]
+   },
+   {
+    "name": "risk.manufacturing",
+    "payload": {
+     "level": "low",
+     "notes": "Standard consumable."
+    },
+    "leaf": "0f63dd956c42ad0ff4a39cb467940cc51d3f74064f18c6d54159c15c43de379e",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "f968fe10f6a6da7e4eb41156f41d3ad1d95fe4d905702bfc5a0005d1105780a2"
+     }
+    ]
+   }
+  ]
+ },
+ "obs-rack-18-white": {
+  "root": "2bdbce3f9cced1532271c5f42a180a51ac2558bbf0e5bb33049148bae1f1bd0e",
+  "fragments": [
+   {
+    "name": "dimensions",
+    "payload": {
+     "x": 150,
+     "y": 85,
+     "z": 60,
+     "est": true,
+     "basis": "~6 in on rule, photo 46915"
+    },
+    "leaf": "de127de81917fe2634becfc98959a43cc2169cdaf8ffb701e1e0e89ee9a584a6",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "c1e4366c10fc340e16d93ba00a061969465bc898e9eb8ca111b3731e6f1edc13"
+     },
+     {
+      "side": "R",
+      "hash": "8f5e34ed2289b0c232ab8badc92f738c4d7aa19f3952a07af5236fb816dd0972"
+     },
+     {
+      "side": "R",
+      "hash": "c4f845be565f03fa87d8f63baa746de84525a04e44df24213a78fa83b2f2c7ee"
+     },
+     {
+      "side": "R",
+      "hash": "c1df99073eec5143ccd897cdca5ffeb054e9ee950460873f613d8fe119fac865"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46908",
+    "payload": {
+     "photo": "46908",
+     "sha256": "0d219e2da0b2f1c1294c2b1c6528263b63d480f0dd32eb1e11f7eda89b18870f",
+     "resolves": false
+    },
+    "leaf": "c1e4366c10fc340e16d93ba00a061969465bc898e9eb8ca111b3731e6f1edc13",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "de127de81917fe2634becfc98959a43cc2169cdaf8ffb701e1e0e89ee9a584a6"
+     },
+     {
+      "side": "R",
+      "hash": "8f5e34ed2289b0c232ab8badc92f738c4d7aa19f3952a07af5236fb816dd0972"
+     },
+     {
+      "side": "R",
+      "hash": "c4f845be565f03fa87d8f63baa746de84525a04e44df24213a78fa83b2f2c7ee"
+     },
+     {
+      "side": "R",
+      "hash": "c1df99073eec5143ccd897cdca5ffeb054e9ee950460873f613d8fe119fac865"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46910",
+    "payload": {
+     "photo": "46910",
+     "sha256": "cad86112e86249bece0d208cee6a448089184e6c0e1831802c7edd388397e8ea",
+     "resolves": false
+    },
+    "leaf": "dead72f852ae3eb3940aeaf0f5f585f42e843c52b7265031599a909a973ddb04",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "0bae3d6d349b80182260a2631dc10181b09ab6964cccfdcbde65827825001399"
+     },
+     {
+      "side": "L",
+      "hash": "1e4c81127b1713947e9cb43cc87ad03d314f5edaffffcc77b77bba4a6bb3458a"
+     },
+     {
+      "side": "R",
+      "hash": "c4f845be565f03fa87d8f63baa746de84525a04e44df24213a78fa83b2f2c7ee"
+     },
+     {
+      "side": "R",
+      "hash": "c1df99073eec5143ccd897cdca5ffeb054e9ee950460873f613d8fe119fac865"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46914",
+    "payload": {
+     "photo": "46914",
+     "sha256": "c8f21843b4296a1bdee4121489b7b23dca3b72aa96624ecdc3c8ae473932fc54",
+     "resolves": false
+    },
+    "leaf": "0bae3d6d349b80182260a2631dc10181b09ab6964cccfdcbde65827825001399",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "dead72f852ae3eb3940aeaf0f5f585f42e843c52b7265031599a909a973ddb04"
+     },
+     {
+      "side": "L",
+      "hash": "1e4c81127b1713947e9cb43cc87ad03d314f5edaffffcc77b77bba4a6bb3458a"
+     },
+     {
+      "side": "R",
+      "hash": "c4f845be565f03fa87d8f63baa746de84525a04e44df24213a78fa83b2f2c7ee"
+     },
+     {
+      "side": "R",
+      "hash": "c1df99073eec5143ccd897cdca5ffeb054e9ee950460873f613d8fe119fac865"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46915",
+    "payload": {
+     "photo": "46915",
+     "sha256": "e10aa2155c6563f5b5b601c7147bdce865760a3016aef056ca2efcb8afe4a993",
+     "resolves": false
+    },
+    "leaf": "cdbf84c8d380d4b162f6a7b70604d926c70379aa19bf882be7b958e8f28341d1",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "567d0fd2093d2bc7dc1d0a3e9ae5d391dd5a5f4f61e62cedd3042ff09637ca24"
+     },
+     {
+      "side": "R",
+      "hash": "85a3b6e95f760e0a581b9909cf4ef5944cd8447adbea1fe022f2434320d94b12"
+     },
+     {
+      "side": "L",
+      "hash": "0fa4182af1eafadbcb10d283d4c5410365c7affdfa1104d941c18e2b32f5e540"
+     },
+     {
+      "side": "R",
+      "hash": "c1df99073eec5143ccd897cdca5ffeb054e9ee950460873f613d8fe119fac865"
+     }
+    ]
+   },
+   {
+    "name": "grid",
+    "payload": {
+     "rows": 3,
+     "cols": 6,
+     "pitch": 24.0,
+     "hole_d": 17.5,
+     "est": true,
+     "basis": "15 mL conical rack convention"
+    },
+    "leaf": "567d0fd2093d2bc7dc1d0a3e9ae5d391dd5a5f4f61e62cedd3042ff09637ca24",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "cdbf84c8d380d4b162f6a7b70604d926c70379aa19bf882be7b958e8f28341d1"
+     },
+     {
+      "side": "R",
+      "hash": "85a3b6e95f760e0a581b9909cf4ef5944cd8447adbea1fe022f2434320d94b12"
+     },
+     {
+      "side": "L",
+      "hash": "0fa4182af1eafadbcb10d283d4c5410365c7affdfa1104d941c18e2b32f5e540"
+     },
+     {
+      "side": "R",
+      "hash": "c1df99073eec5143ccd897cdca5ffeb054e9ee950460873f613d8fe119fac865"
+     }
+    ]
+   },
+   {
+    "name": "identity",
+    "payload": {
+     "id": "obs-rack-18-white",
+     "name": "White 3x6 two-tier tube rack",
+     "kind": "tube rack",
+     "vendor": "unbranded / in-house"
+    },
+    "leaf": "fa650a5a3cb45d62a59804eaa4571152016b8cb534661e3f6d184f1d944bdfff",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "38d0f6cd7ca003f1cac5e1d4e32a5086033cb59535c61455997a23dfc376089f"
+     },
+     {
+      "side": "L",
+      "hash": "af614a76733a5941d948c6779fc2be6314631ea3f4997ca4930b76a47f3e43c5"
+     },
+     {
+      "side": "L",
+      "hash": "0fa4182af1eafadbcb10d283d4c5410365c7affdfa1104d941c18e2b32f5e540"
+     },
+     {
+      "side": "R",
+      "hash": "c1df99073eec5143ccd897cdca5ffeb054e9ee950460873f613d8fe119fac865"
+     }
+    ]
+   },
+   {
+    "name": "material",
+    "payload": {
+     "material": "PP",
+     "reuse": "15 mL conicals"
+    },
+    "leaf": "38d0f6cd7ca003f1cac5e1d4e32a5086033cb59535c61455997a23dfc376089f",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "fa650a5a3cb45d62a59804eaa4571152016b8cb534661e3f6d184f1d944bdfff"
+     },
+     {
+      "side": "L",
+      "hash": "af614a76733a5941d948c6779fc2be6314631ea3f4997ca4930b76a47f3e43c5"
+     },
+     {
+      "side": "L",
+      "hash": "0fa4182af1eafadbcb10d283d4c5410365c7affdfa1104d941c18e2b32f5e540"
+     },
+     {
+      "side": "R",
+      "hash": "c1df99073eec5143ccd897cdca5ffeb054e9ee950460873f613d8fe119fac865"
+     }
+    ]
+   },
+   {
+    "name": "risk.knowledge",
+    "payload": {
+     "level": "low",
+     "notes": "Handwritten label only."
+    },
+    "leaf": "5146e2740c34befeb0ea0eeb2ae80d0fadba4168f6570c731adca54598bb6b98",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "60520fffd54186c342cec1cf73c60b83ccd589ebe927864d8ac53bd0ef1cb365"
+     },
+     {
+      "side": "L",
+      "hash": "ef35424be2208121b6f53b3513e57e3d8d9e7d9ab55a6328da1d6525b9a67fb1"
+     }
+    ]
+   },
+   {
+    "name": "risk.manufacturing",
+    "payload": {
+     "level": "low",
+     "notes": "Slightly longer than SBS; the 3x5 remix fits a slot."
+    },
+    "leaf": "60520fffd54186c342cec1cf73c60b83ccd589ebe927864d8ac53bd0ef1cb365",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "5146e2740c34befeb0ea0eeb2ae80d0fadba4168f6570c731adca54598bb6b98"
+     },
+     {
+      "side": "L",
+      "hash": "ef35424be2208121b6f53b3513e57e3d8d9e7d9ab55a6328da1d6525b9a67fb1"
+     }
+    ]
+   }
+  ]
+ },
+ "obs-rack-4way-orange": {
+  "root": "a70d29ab2e27ed1ee21b587695b804435444a396dffbe9fb85631399a7062802",
+  "fragments": [
+   {
+    "name": "dimensions",
+    "payload": {
+     "x": 135,
+     "y": 95,
+     "z": 90,
+     "est": true,
+     "basis": "photo 46911 vs 50 mL tube"
+    },
+    "leaf": "c56c98a6f45fef648e8e0f207c4492153ce9deaa5d6df77a73c5a17178bd793f",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "9029cc28d6ea9bb1617f81dd54b09b80c3043c78c8fa0e9ced36ef7ad31d4347"
+     },
+     {
+      "side": "R",
+      "hash": "c67d4b4477285e30a4649f0011884f8fe34497d159a7eee9e3d66d658350be55"
+     },
+     {
+      "side": "R",
+      "hash": "77836eacb24ad8c5f2de7a4099f5e5d2bfb2b312504e00e57f43645bb474f153"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46911",
+    "payload": {
+     "photo": "46911",
+     "sha256": "6ee77b2174922ce7d0d04ccc4f001d5558cde72c72e3e2aca702e2c0bae2c011",
+     "resolves": false
+    },
+    "leaf": "9029cc28d6ea9bb1617f81dd54b09b80c3043c78c8fa0e9ced36ef7ad31d4347",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "c56c98a6f45fef648e8e0f207c4492153ce9deaa5d6df77a73c5a17178bd793f"
+     },
+     {
+      "side": "R",
+      "hash": "c67d4b4477285e30a4649f0011884f8fe34497d159a7eee9e3d66d658350be55"
+     },
+     {
+      "side": "R",
+      "hash": "77836eacb24ad8c5f2de7a4099f5e5d2bfb2b312504e00e57f43645bb474f153"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46914",
+    "payload": {
+     "photo": "46914",
+     "sha256": "c8f21843b4296a1bdee4121489b7b23dca3b72aa96624ecdc3c8ae473932fc54",
+     "resolves": false
+    },
+    "leaf": "0bae3d6d349b80182260a2631dc10181b09ab6964cccfdcbde65827825001399",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "d4dc7a2899586c42af9675ce038019d7d56d4cb7e6ec2384df74f1c743818b89"
+     },
+     {
+      "side": "L",
+      "hash": "570c992082e525c0d06170340b737ac2c5fab428f55f241ea6aad744c56c1386"
+     },
+     {
+      "side": "R",
+      "hash": "77836eacb24ad8c5f2de7a4099f5e5d2bfb2b312504e00e57f43645bb474f153"
+     }
+    ]
+   },
+   {
+    "name": "grid",
+    "payload": {
+     "rows": 2,
+     "cols": 3,
+     "pitch": 32.0,
+     "hole_d": 30.0,
+     "est": true,
+     "basis": "50 mL face"
+    },
+    "leaf": "d4dc7a2899586c42af9675ce038019d7d56d4cb7e6ec2384df74f1c743818b89",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "0bae3d6d349b80182260a2631dc10181b09ab6964cccfdcbde65827825001399"
+     },
+     {
+      "side": "L",
+      "hash": "570c992082e525c0d06170340b737ac2c5fab428f55f241ea6aad744c56c1386"
+     },
+     {
+      "side": "R",
+      "hash": "77836eacb24ad8c5f2de7a4099f5e5d2bfb2b312504e00e57f43645bb474f153"
+     }
+    ]
+   },
+   {
+    "name": "identity",
+    "payload": {
+     "id": "obs-rack-4way-orange",
+     "name": "Orange 4-way tube rack",
+     "kind": "tube rack",
+     "vendor": "unbranded / in-house"
+    },
+    "leaf": "77ea9465da1326bb4a4b0712fdfb2f8ce883cd62dbcef78c2a038cb57f902a37",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "9ee36b5546db7b4b84dbb739daccc147dea92f933e9fa262a6574ace0f4a86a7"
+     },
+     {
+      "side": "R",
+      "hash": "943a8ed7a4f94e171ea43d6e316b191bfea3d65f7aa308a3c2efdf6b214c9ab1"
+     },
+     {
+      "side": "L",
+      "hash": "5e74a4eca5b0254112847e80fe8aecc5bf15c3c2545c407e227e8041595501fd"
+     }
+    ]
+   },
+   {
+    "name": "material",
+    "payload": {
+     "material": "PP",
+     "reuse": "mixed 50/15/1.5 mL holding"
+    },
+    "leaf": "9ee36b5546db7b4b84dbb739daccc147dea92f933e9fa262a6574ace0f4a86a7",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "77ea9465da1326bb4a4b0712fdfb2f8ce883cd62dbcef78c2a038cb57f902a37"
+     },
+     {
+      "side": "R",
+      "hash": "943a8ed7a4f94e171ea43d6e316b191bfea3d65f7aa308a3c2efdf6b214c9ab1"
+     },
+     {
+      "side": "L",
+      "hash": "5e74a4eca5b0254112847e80fe8aecc5bf15c3c2545c407e227e8041595501fd"
+     }
+    ]
+   },
+   {
+    "name": "risk.knowledge",
+    "payload": {
+     "level": "med",
+     "notes": "Interlocking 4-way cube forms may carry design patents. Remix single faces, not the cube."
+    },
+    "leaf": "8c5fd601aaf852e1598705975bb6c6730819750a06d1bd37c9a8e8df7055bee2",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "c091ccb0db02eea562b67135526429554034ede6817b5839ccc88d551d950455"
+     },
+     {
+      "side": "L",
+      "hash": "9b8466c9522658b99430247fdbe0cde2c8c05327bc711f4f18cdbfb3cfa0f033"
+     },
+     {
+      "side": "L",
+      "hash": "5e74a4eca5b0254112847e80fe8aecc5bf15c3c2545c407e227e8041595501fd"
+     }
+    ]
+   },
+   {
+    "name": "risk.manufacturing",
+    "payload": {
+     "level": "low",
+     "notes": "Each face is a different tube size; the remix splits faces into SBS plates."
+    },
+    "leaf": "c091ccb0db02eea562b67135526429554034ede6817b5839ccc88d551d950455",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "8c5fd601aaf852e1598705975bb6c6730819750a06d1bd37c9a8e8df7055bee2"
+     },
+     {
+      "side": "L",
+      "hash": "9b8466c9522658b99430247fdbe0cde2c8c05327bc711f4f18cdbfb3cfa0f033"
+     },
+     {
+      "side": "L",
+      "hash": "5e74a4eca5b0254112847e80fe8aecc5bf15c3c2545c407e227e8041595501fd"
+     }
+    ]
+   }
+  ]
+ },
+ "obs-freezer-rack-3bay": {
+  "root": "c98a715b05460d2abd0fcc9d373cbdcad75af088d619f81f74eb558b39f69f5f",
+  "fragments": [
+   {
+    "name": "dimensions",
+    "payload": {
+     "x": 430,
+     "y": 140,
+     "z": 150,
+     "est": true,
+     "basis": "~17 in on rule, photo 46907; bays fit 133 mm boxes"
+    },
+    "leaf": "bcfcc151fed9cbcb6b9ff2ebf53e9bd2ad9e8beee74fd167cfda202b6a5fabd0",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "118d6b6520e616c523fccc4e94e3b20f4ae18014fc99451fdfb5bd14aaf77726"
+     },
+     {
+      "side": "R",
+      "hash": "47eba5c7a1926040811dcc643466dec71f5f740fab5c137e67cbec2342cdf471"
+     },
+     {
+      "side": "R",
+      "hash": "96a57b4a3c0914daae6d7387256d07127396289b9630ffe313b3113f669447e9"
+     },
+     {
+      "side": "R",
+      "hash": "7598d0c89d4fcfda574db5fdf5029085ed4c4da7f7bb17398295ff274c21c53d"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46907",
+    "payload": {
+     "photo": "46907",
+     "sha256": "cdd431171cc9044ccf0a2ecbfbe6e1daf9c1139cc2fe957e273d8a3e88a610ec",
+     "resolves": false
+    },
+    "leaf": "118d6b6520e616c523fccc4e94e3b20f4ae18014fc99451fdfb5bd14aaf77726",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "bcfcc151fed9cbcb6b9ff2ebf53e9bd2ad9e8beee74fd167cfda202b6a5fabd0"
+     },
+     {
+      "side": "R",
+      "hash": "47eba5c7a1926040811dcc643466dec71f5f740fab5c137e67cbec2342cdf471"
+     },
+     {
+      "side": "R",
+      "hash": "96a57b4a3c0914daae6d7387256d07127396289b9630ffe313b3113f669447e9"
+     },
+     {
+      "side": "R",
+      "hash": "7598d0c89d4fcfda574db5fdf5029085ed4c4da7f7bb17398295ff274c21c53d"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46908",
+    "payload": {
+     "photo": "46908",
+     "sha256": "0d219e2da0b2f1c1294c2b1c6528263b63d480f0dd32eb1e11f7eda89b18870f",
+     "resolves": false
+    },
+    "leaf": "c1e4366c10fc340e16d93ba00a061969465bc898e9eb8ca111b3731e6f1edc13",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "9029cc28d6ea9bb1617f81dd54b09b80c3043c78c8fa0e9ced36ef7ad31d4347"
+     },
+     {
+      "side": "L",
+      "hash": "8c55ccbca8916b52ec0c622452c4a526a08b3bcd13d2667e8e5e0c708d013ca8"
+     },
+     {
+      "side": "R",
+      "hash": "96a57b4a3c0914daae6d7387256d07127396289b9630ffe313b3113f669447e9"
+     },
+     {
+      "side": "R",
+      "hash": "7598d0c89d4fcfda574db5fdf5029085ed4c4da7f7bb17398295ff274c21c53d"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46911",
+    "payload": {
+     "photo": "46911",
+     "sha256": "6ee77b2174922ce7d0d04ccc4f001d5558cde72c72e3e2aca702e2c0bae2c011",
+     "resolves": false
+    },
+    "leaf": "9029cc28d6ea9bb1617f81dd54b09b80c3043c78c8fa0e9ced36ef7ad31d4347",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "c1e4366c10fc340e16d93ba00a061969465bc898e9eb8ca111b3731e6f1edc13"
+     },
+     {
+      "side": "L",
+      "hash": "8c55ccbca8916b52ec0c622452c4a526a08b3bcd13d2667e8e5e0c708d013ca8"
+     },
+     {
+      "side": "R",
+      "hash": "96a57b4a3c0914daae6d7387256d07127396289b9630ffe313b3113f669447e9"
+     },
+     {
+      "side": "R",
+      "hash": "7598d0c89d4fcfda574db5fdf5029085ed4c4da7f7bb17398295ff274c21c53d"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46912",
+    "payload": {
+     "photo": "46912",
+     "sha256": "e4422ccd4ce160437d97b22d614c5cff61bf878759c5841523be9de2c05e601c",
+     "resolves": false
+    },
+    "leaf": "3998eb34680732e9e944468801ed1a7d6675175ce74ae36e995baa893ea6bed6",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "176d8ba84e308057765b0a636db5847691d44b7ba193ac9b6eaf00644eda0c6d"
+     },
+     {
+      "side": "R",
+      "hash": "ccadc91b7c1b89070952afdc42c2656133ebf0fd9d2966150fc1ba186b26435e"
+     },
+     {
+      "side": "L",
+      "hash": "6e0a7330ceb565e8a680845fb10ad50f8628e6f8911345c99e7f7e724eef12af"
+     },
+     {
+      "side": "R",
+      "hash": "7598d0c89d4fcfda574db5fdf5029085ed4c4da7f7bb17398295ff274c21c53d"
+     }
+    ]
+   },
+   {
+    "name": "grid",
+    "payload": {
+     "rows": 1,
+     "cols": 3,
+     "pitch": 140.0,
+     "hole_d": null,
+     "est": true,
+     "basis": "3 bays"
+    },
+    "leaf": "176d8ba84e308057765b0a636db5847691d44b7ba193ac9b6eaf00644eda0c6d",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "3998eb34680732e9e944468801ed1a7d6675175ce74ae36e995baa893ea6bed6"
+     },
+     {
+      "side": "R",
+      "hash": "ccadc91b7c1b89070952afdc42c2656133ebf0fd9d2966150fc1ba186b26435e"
+     },
+     {
+      "side": "L",
+      "hash": "6e0a7330ceb565e8a680845fb10ad50f8628e6f8911345c99e7f7e724eef12af"
+     },
+     {
+      "side": "R",
+      "hash": "7598d0c89d4fcfda574db5fdf5029085ed4c4da7f7bb17398295ff274c21c53d"
+     }
+    ]
+   },
+   {
+    "name": "identity",
+    "payload": {
+     "id": "obs-freezer-rack-3bay",
+     "name": "Stainless chest-freezer rack, 3 bays",
+     "kind": "storage",
+     "vendor": "unbranded / in-house"
+    },
+    "leaf": "7c1c6a63559121fbd98aa93f90b4e36b5a2e2c7828336fc0f698d28498cab360",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "2809178a69905e7f28a8d6b9b94172f5b15f3f25b5b6f480a966e647c7d094b9"
+     },
+     {
+      "side": "L",
+      "hash": "b85400efbd8b31c87661e38a69ac6b51ed62c4b8ef30b8595615ce0d162e3aac"
+     },
+     {
+      "side": "L",
+      "hash": "6e0a7330ceb565e8a680845fb10ad50f8628e6f8911345c99e7f7e724eef12af"
+     },
+     {
+      "side": "R",
+      "hash": "7598d0c89d4fcfda574db5fdf5029085ed4c4da7f7bb17398295ff274c21c53d"
+     }
+    ]
+   },
+   {
+    "name": "material",
+    "payload": {
+     "material": "stainless (est.)",
+     "reuse": "holds 3 cryo boxes per tier"
+    },
+    "leaf": "2809178a69905e7f28a8d6b9b94172f5b15f3f25b5b6f480a966e647c7d094b9",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "7c1c6a63559121fbd98aa93f90b4e36b5a2e2c7828336fc0f698d28498cab360"
+     },
+     {
+      "side": "L",
+      "hash": "b85400efbd8b31c87661e38a69ac6b51ed62c4b8ef30b8595615ce0d162e3aac"
+     },
+     {
+      "side": "L",
+      "hash": "6e0a7330ceb565e8a680845fb10ad50f8628e6f8911345c99e7f7e724eef12af"
+     },
+     {
+      "side": "R",
+      "hash": "7598d0c89d4fcfda574db5fdf5029085ed4c4da7f7bb17398295ff274c21c53d"
+     }
+    ]
+   },
+   {
+    "name": "risk.knowledge",
+    "payload": {
+     "level": "low",
+     "notes": "Generic."
+    },
+    "leaf": "bc156728f3be7d8be1c1e7e1065dcf7b27bc14a08381b0aa1e5f1e9e0f7753c2",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "130bf1ca94ff9f5f9b66cb637fbb2db9af473980c3b1755eda1fd37e1c2a58ab"
+     },
+     {
+      "side": "L",
+      "hash": "c71a431af913fe026aa89a153cf372163ed0a57401d415cbe257e83a67fc8db4"
+     }
+    ]
+   },
+   {
+    "name": "risk.manufacturing",
+    "payload": {
+     "level": "low",
+     "notes": "Reuse as-is; container node in the twin."
+    },
+    "leaf": "130bf1ca94ff9f5f9b66cb637fbb2db9af473980c3b1755eda1fd37e1c2a58ab",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "bc156728f3be7d8be1c1e7e1065dcf7b27bc14a08381b0aa1e5f1e9e0f7753c2"
+     },
+     {
+      "side": "L",
+      "hash": "c71a431af913fe026aa89a153cf372163ed0a57401d415cbe257e83a67fc8db4"
+     }
+    ]
+   }
+  ]
+ },
+ "obs-tub-yellow": {
+  "root": "e5d941eff52bddbf0c885e690b8703c2df8f4a6db761d4dd206c5e45bb93b142",
+  "fragments": [
+   {
+    "name": "dimensions",
+    "payload": {
+     "x": 380,
+     "y": 300,
+     "z": 150,
+     "est": true,
+     "basis": "~15 in on rule, photo 46907"
+    },
+    "leaf": "37857b385198747fae733a739663c7babf257a308fdf87252aa2554c89f0102f",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "7be707dd77cc6e6b27edc1b84f92b88ca186ecf990f5fd0ce8a528f297d012e8"
+     },
+     {
+      "side": "R",
+      "hash": "525c72549c173d807e0bfacae0044171d14a1e0c24d0c8c02a83d3b6b1584560"
+     },
+     {
+      "side": "R",
+      "hash": "11656ccf43c71d4dfe0505c7206dd95db38105a785a0300ffc1c1bec826727b2"
+     },
+     {
+      "side": "R",
+      "hash": "6ef9dbc33cec13819992077d787287b94fe30a3cfa110cef82639d40b99da193"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46902",
+    "payload": {
+     "photo": "46902",
+     "sha256": "96fc3f4ad4dd9f26e7225261f17537e58e8b6d3f3354b2c4ddd219f4a60d7b15",
+     "resolves": false
+    },
+    "leaf": "7be707dd77cc6e6b27edc1b84f92b88ca186ecf990f5fd0ce8a528f297d012e8",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "37857b385198747fae733a739663c7babf257a308fdf87252aa2554c89f0102f"
+     },
+     {
+      "side": "R",
+      "hash": "525c72549c173d807e0bfacae0044171d14a1e0c24d0c8c02a83d3b6b1584560"
+     },
+     {
+      "side": "R",
+      "hash": "11656ccf43c71d4dfe0505c7206dd95db38105a785a0300ffc1c1bec826727b2"
+     },
+     {
+      "side": "R",
+      "hash": "6ef9dbc33cec13819992077d787287b94fe30a3cfa110cef82639d40b99da193"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46907",
+    "payload": {
+     "photo": "46907",
+     "sha256": "cdd431171cc9044ccf0a2ecbfbe6e1daf9c1139cc2fe957e273d8a3e88a610ec",
+     "resolves": false
+    },
+    "leaf": "118d6b6520e616c523fccc4e94e3b20f4ae18014fc99451fdfb5bd14aaf77726",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "c1e4366c10fc340e16d93ba00a061969465bc898e9eb8ca111b3731e6f1edc13"
+     },
+     {
+      "side": "L",
+      "hash": "5fc7e098e04b1be80c3c47570bd44cc2f5d3e941e42b6b3f4fd37142753820e2"
+     },
+     {
+      "side": "R",
+      "hash": "11656ccf43c71d4dfe0505c7206dd95db38105a785a0300ffc1c1bec826727b2"
+     },
+     {
+      "side": "R",
+      "hash": "6ef9dbc33cec13819992077d787287b94fe30a3cfa110cef82639d40b99da193"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46908",
+    "payload": {
+     "photo": "46908",
+     "sha256": "0d219e2da0b2f1c1294c2b1c6528263b63d480f0dd32eb1e11f7eda89b18870f",
+     "resolves": false
+    },
+    "leaf": "c1e4366c10fc340e16d93ba00a061969465bc898e9eb8ca111b3731e6f1edc13",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "118d6b6520e616c523fccc4e94e3b20f4ae18014fc99451fdfb5bd14aaf77726"
+     },
+     {
+      "side": "L",
+      "hash": "5fc7e098e04b1be80c3c47570bd44cc2f5d3e941e42b6b3f4fd37142753820e2"
+     },
+     {
+      "side": "R",
+      "hash": "11656ccf43c71d4dfe0505c7206dd95db38105a785a0300ffc1c1bec826727b2"
+     },
+     {
+      "side": "R",
+      "hash": "6ef9dbc33cec13819992077d787287b94fe30a3cfa110cef82639d40b99da193"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46912",
+    "payload": {
+     "photo": "46912",
+     "sha256": "e4422ccd4ce160437d97b22d614c5cff61bf878759c5841523be9de2c05e601c",
+     "resolves": false
+    },
+    "leaf": "3998eb34680732e9e944468801ed1a7d6675175ce74ae36e995baa893ea6bed6",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "308e77c946cb7ae8d999af3706189d3bebf297b8667895f1c434342a3c5dc02d"
+     },
+     {
+      "side": "R",
+      "hash": "0d22dba59dd1673e35e9e1ad331cfb9f08cc53b1000be4bd98403a41d96b29cb"
+     },
+     {
+      "side": "L",
+      "hash": "95f73180d8d89c2d0eb15e3c0a40f212d2a25dda34e32f3f915c4d929db256ad"
+     },
+     {
+      "side": "R",
+      "hash": "6ef9dbc33cec13819992077d787287b94fe30a3cfa110cef82639d40b99da193"
+     }
+    ]
+   },
+   {
+    "name": "grid",
+    "payload": null,
+    "leaf": "308e77c946cb7ae8d999af3706189d3bebf297b8667895f1c434342a3c5dc02d",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "3998eb34680732e9e944468801ed1a7d6675175ce74ae36e995baa893ea6bed6"
+     },
+     {
+      "side": "R",
+      "hash": "0d22dba59dd1673e35e9e1ad331cfb9f08cc53b1000be4bd98403a41d96b29cb"
+     },
+     {
+      "side": "L",
+      "hash": "95f73180d8d89c2d0eb15e3c0a40f212d2a25dda34e32f3f915c4d929db256ad"
+     },
+     {
+      "side": "R",
+      "hash": "6ef9dbc33cec13819992077d787287b94fe30a3cfa110cef82639d40b99da193"
+     }
+    ]
+   },
+   {
+    "name": "identity",
+    "payload": {
+     "id": "obs-tub-yellow",
+     "name": "Yellow polypropylene tub",
+     "kind": "storage",
+     "vendor": "unbranded / in-house"
+    },
+    "leaf": "8bf1c7802c8bcfd1990abf9fe1e01fca6a62fe8f7f7e7214c7df04f33284b1b7",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "8c5726afb992de86e28778f90b2387200827fe24462ff3cf683a3ae7f5e58979"
+     },
+     {
+      "side": "L",
+      "hash": "a3c727197fc642e4b26351a11d2d0888078dfcd3394fd0590946df6218507c49"
+     },
+     {
+      "side": "L",
+      "hash": "95f73180d8d89c2d0eb15e3c0a40f212d2a25dda34e32f3f915c4d929db256ad"
+     },
+     {
+      "side": "R",
+      "hash": "6ef9dbc33cec13819992077d787287b94fe30a3cfa110cef82639d40b99da193"
+     }
+    ]
+   },
+   {
+    "name": "material",
+    "payload": {
+     "material": "PP",
+     "reuse": "ice bath, wash tray, enclosure base"
+    },
+    "leaf": "8c5726afb992de86e28778f90b2387200827fe24462ff3cf683a3ae7f5e58979",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "8bf1c7802c8bcfd1990abf9fe1e01fca6a62fe8f7f7e7214c7df04f33284b1b7"
+     },
+     {
+      "side": "L",
+      "hash": "a3c727197fc642e4b26351a11d2d0888078dfcd3394fd0590946df6218507c49"
+     },
+     {
+      "side": "L",
+      "hash": "95f73180d8d89c2d0eb15e3c0a40f212d2a25dda34e32f3f915c4d929db256ad"
+     },
+     {
+      "side": "R",
+      "hash": "6ef9dbc33cec13819992077d787287b94fe30a3cfa110cef82639d40b99da193"
+     }
+    ]
+   },
+   {
+    "name": "risk.knowledge",
+    "payload": {
+     "level": "low",
+     "notes": "Generic."
+    },
+    "leaf": "bc156728f3be7d8be1c1e7e1065dcf7b27bc14a08381b0aa1e5f1e9e0f7753c2",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "1ea467a56af79f14a14a37361bfc2a5104c5a59331a1c0d14d791c68897899c0"
+     },
+     {
+      "side": "L",
+      "hash": "8c059f880961e950e28eb1ff0aa84b0108ab86f074be94bf1f28d39787e8217c"
+     }
+    ]
+   },
+   {
+    "name": "risk.manufacturing",
+    "payload": {
+     "level": "low",
+     "notes": "Reuse as-is."
+    },
+    "leaf": "1ea467a56af79f14a14a37361bfc2a5104c5a59331a1c0d14d791c68897899c0",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "bc156728f3be7d8be1c1e7e1065dcf7b27bc14a08381b0aa1e5f1e9e0f7753c2"
+     },
+     {
+      "side": "L",
+      "hash": "8c059f880961e950e28eb1ff0aa84b0108ab86f074be94bf1f28d39787e8217c"
+     }
+    ]
+   }
+  ]
+ },
+ "obs-printed-frame-open": {
+  "root": "c767b9b5ee63d0f4e127363843945f02222be7075918b0e0079eac0359fdc563",
+  "fragments": [
+   {
+    "name": "dimensions",
+    "payload": {
+     "x": 127.76,
+     "y": 85.48,
+     "z": 12,
+     "est": true,
+     "basis": "photo 46912 proportions match SBS; set to SBS"
+    },
+    "leaf": "aad7d7f6d1411b4b804ac891aa9e08792afac32da076ccf2f795d56bbd59e911",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "3998eb34680732e9e944468801ed1a7d6675175ce74ae36e995baa893ea6bed6"
+     },
+     {
+      "side": "R",
+      "hash": "ff8691314c725be38bab61f76318d22fd9ff717c8369307e82b1f1b449e6a05c"
+     },
+     {
+      "side": "R",
+      "hash": "5a9de6f1b5cd3ed39d96f136cde41cb91445c37a5e821b09fd3a47ff25b1089e"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46912",
+    "payload": {
+     "photo": "46912",
+     "sha256": "e4422ccd4ce160437d97b22d614c5cff61bf878759c5841523be9de2c05e601c",
+     "resolves": false
+    },
+    "leaf": "3998eb34680732e9e944468801ed1a7d6675175ce74ae36e995baa893ea6bed6",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "aad7d7f6d1411b4b804ac891aa9e08792afac32da076ccf2f795d56bbd59e911"
+     },
+     {
+      "side": "R",
+      "hash": "ff8691314c725be38bab61f76318d22fd9ff717c8369307e82b1f1b449e6a05c"
+     },
+     {
+      "side": "R",
+      "hash": "5a9de6f1b5cd3ed39d96f136cde41cb91445c37a5e821b09fd3a47ff25b1089e"
+     }
+    ]
+   },
+   {
+    "name": "grid",
+    "payload": null,
+    "leaf": "308e77c946cb7ae8d999af3706189d3bebf297b8667895f1c434342a3c5dc02d",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "d29656dbea3a489acc47b5bdb50b67bed458d60392bb97972052483caaa8c1fb"
+     },
+     {
+      "side": "L",
+      "hash": "d652eaf48c2c4c1255e3d7a6742624b1d4c04bb9a7dd6ba1513444e7adf761bd"
+     },
+     {
+      "side": "R",
+      "hash": "5a9de6f1b5cd3ed39d96f136cde41cb91445c37a5e821b09fd3a47ff25b1089e"
+     }
+    ]
+   },
+   {
+    "name": "identity",
+    "payload": {
+     "id": "obs-printed-frame-open",
+     "name": "3D-printed open frames (2, lipped)",
+     "kind": "printed frame",
+     "vendor": "unbranded / in-house"
+    },
+    "leaf": "d29656dbea3a489acc47b5bdb50b67bed458d60392bb97972052483caaa8c1fb",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "308e77c946cb7ae8d999af3706189d3bebf297b8667895f1c434342a3c5dc02d"
+     },
+     {
+      "side": "L",
+      "hash": "d652eaf48c2c4c1255e3d7a6742624b1d4c04bb9a7dd6ba1513444e7adf761bd"
+     },
+     {
+      "side": "R",
+      "hash": "5a9de6f1b5cd3ed39d96f136cde41cb91445c37a5e821b09fd3a47ff25b1089e"
+     }
+    ]
+   },
+   {
+    "name": "material",
+    "payload": {
+     "material": "PLA (est.)",
+     "reuse": "the 'folder' frame family; holds inserts"
+    },
+    "leaf": "b593df514636e8e4e8a8537e55284ae5228edf751976558bff97fa5f521efb4f",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "e7582ce5988880124a79767615e11d6e3193df4a96aea4af52bdab2af6c8568f"
+     },
+     {
+      "side": "R",
+      "hash": "0687369cd36b99fb597be142168062ddc8247599f923d0d2e507e7bec2280a8b"
+     },
+     {
+      "side": "L",
+      "hash": "c2689ceac164f741517cd7e7d0ab9ea264708e31a83ceb573dca61ecd21e8294"
+     }
+    ]
+   },
+   {
+    "name": "risk.knowledge",
+    "payload": {
+     "level": "low",
+     "notes": "In-house design."
+    },
+    "leaf": "e7582ce5988880124a79767615e11d6e3193df4a96aea4af52bdab2af6c8568f",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "b593df514636e8e4e8a8537e55284ae5228edf751976558bff97fa5f521efb4f"
+     },
+     {
+      "side": "R",
+      "hash": "0687369cd36b99fb597be142168062ddc8247599f923d0d2e507e7bec2280a8b"
+     },
+     {
+      "side": "L",
+      "hash": "c2689ceac164f741517cd7e7d0ab9ea264708e31a83ceb573dca61ecd21e8294"
+     }
+    ]
+   },
+   {
+    "name": "risk.manufacturing",
+    "payload": {
+     "level": "med",
+     "notes": "PLA warps above ~55 C, no autoclave. Reprint in PETG/PP for wet use."
+    },
+    "leaf": "0687369cd36b99fb597be142168062ddc8247599f923d0d2e507e7bec2280a8b",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "237fba53bd63faddba7fd08e2b1f1ac90b0b5b3efd25e9373e254d7c092d1a48"
+     },
+     {
+      "side": "L",
+      "hash": "c2689ceac164f741517cd7e7d0ab9ea264708e31a83ceb573dca61ecd21e8294"
+     }
+    ]
+   }
+  ]
+ },
+ "obs-printed-grid-mesh": {
+  "root": "82f49f1d56d0ef16007fa608465a960b4f41fdec3430764f13651097b77f7049",
+  "fragments": [
+   {
+    "name": "dimensions",
+    "payload": {
+     "x": 127.76,
+     "y": 85.48,
+     "z": 8,
+     "est": true,
+     "basis": "photo 46912"
+    },
+    "leaf": "a8ab797dab084b48ec71df6d62a56b76716c9acb01e0053559bb467519bc0476",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "3998eb34680732e9e944468801ed1a7d6675175ce74ae36e995baa893ea6bed6"
+     },
+     {
+      "side": "R",
+      "hash": "296967b5fe4ff2e9df0a65274fdcfdd83290b4054a17b5d30ce7a207b8b446f9"
+     },
+     {
+      "side": "R",
+      "hash": "2b242945472abe11aa75ff1d5c8d5c0c80e36dfa84325805cde11f69fb64b652"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46912",
+    "payload": {
+     "photo": "46912",
+     "sha256": "e4422ccd4ce160437d97b22d614c5cff61bf878759c5841523be9de2c05e601c",
+     "resolves": false
+    },
+    "leaf": "3998eb34680732e9e944468801ed1a7d6675175ce74ae36e995baa893ea6bed6",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "a8ab797dab084b48ec71df6d62a56b76716c9acb01e0053559bb467519bc0476"
+     },
+     {
+      "side": "R",
+      "hash": "296967b5fe4ff2e9df0a65274fdcfdd83290b4054a17b5d30ce7a207b8b446f9"
+     },
+     {
+      "side": "R",
+      "hash": "2b242945472abe11aa75ff1d5c8d5c0c80e36dfa84325805cde11f69fb64b652"
+     }
+    ]
+   },
+   {
+    "name": "grid",
+    "payload": {
+     "rows": 2,
+     "cols": 3,
+     "pitch": 40.0,
+     "hole_d": null,
+     "est": true,
+     "basis": "6 windows"
+    },
+    "leaf": "ec4494c9927dbb931f70dd4bfaf99bcee73eb65ccf724a641c08535fdbab9bbd",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "b12db1552329ec05eebea15e8f237cff1e7cb2461e7d0c9832e7c27fa2249ff9"
+     },
+     {
+      "side": "L",
+      "hash": "4178d11ef5b7660d4dbe2b797cb75b87819dd7d47e84833cc80e55ca5cde4aac"
+     },
+     {
+      "side": "R",
+      "hash": "2b242945472abe11aa75ff1d5c8d5c0c80e36dfa84325805cde11f69fb64b652"
+     }
+    ]
+   },
+   {
+    "name": "identity",
+    "payload": {
+     "id": "obs-printed-grid-mesh",
+     "name": "3D-printed 2x3 grid frame with mesh",
+     "kind": "printed frame",
+     "vendor": "unbranded / in-house"
+    },
+    "leaf": "b12db1552329ec05eebea15e8f237cff1e7cb2461e7d0c9832e7c27fa2249ff9",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "ec4494c9927dbb931f70dd4bfaf99bcee73eb65ccf724a641c08535fdbab9bbd"
+     },
+     {
+      "side": "L",
+      "hash": "4178d11ef5b7660d4dbe2b797cb75b87819dd7d47e84833cc80e55ca5cde4aac"
+     },
+     {
+      "side": "R",
+      "hash": "2b242945472abe11aa75ff1d5c8d5c0c80e36dfa84325805cde11f69fb64b652"
+     }
+    ]
+   },
+   {
+    "name": "material",
+    "payload": {
+     "material": "PLA + fine mesh (est.)",
+     "reuse": "screened compartments for insects"
+    },
+    "leaf": "757673a7548ab15cf6f31d45f3087b42172f0d31945b15c0d6fd94bb6fee6064",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "e7582ce5988880124a79767615e11d6e3193df4a96aea4af52bdab2af6c8568f"
+     },
+     {
+      "side": "R",
+      "hash": "22bf21caac1ffc62e36dfc9e4223bbaa83d0fc027ff758d291875cffcf2552dc"
+     },
+     {
+      "side": "L",
+      "hash": "8a24d7d2b4d4f7257dbcc44ae253e36c8c009c44e9b12b8060b4f9c98b5e7ae3"
+     }
+    ]
+   },
+   {
+    "name": "risk.knowledge",
+    "payload": {
+     "level": "low",
+     "notes": "In-house design."
+    },
+    "leaf": "e7582ce5988880124a79767615e11d6e3193df4a96aea4af52bdab2af6c8568f",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "757673a7548ab15cf6f31d45f3087b42172f0d31945b15c0d6fd94bb6fee6064"
+     },
+     {
+      "side": "R",
+      "hash": "22bf21caac1ffc62e36dfc9e4223bbaa83d0fc027ff758d291875cffcf2552dc"
+     },
+     {
+      "side": "L",
+      "hash": "8a24d7d2b4d4f7257dbcc44ae253e36c8c009c44e9b12b8060b4f9c98b5e7ae3"
+     }
+    ]
+   },
+   {
+    "name": "risk.manufacturing",
+    "payload": {
+     "level": "med",
+     "notes": "Mesh aperture sets which insects stay in."
+    },
+    "leaf": "22bf21caac1ffc62e36dfc9e4223bbaa83d0fc027ff758d291875cffcf2552dc",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "b235ab5515be5765dd1aadee253bceeb34248ed92f72321206871559120adedd"
+     },
+     {
+      "side": "L",
+      "hash": "8a24d7d2b4d4f7257dbcc44ae253e36c8c009c44e9b12b8060b4f9c98b5e7ae3"
+     }
+    ]
+   }
+  ]
+ },
+ "obs-printed-honeycomb": {
+  "root": "674773f876d4ef2f6b02efb69ca45bfc00188d953190dab36f81a94b84c97213",
+  "fragments": [
+   {
+    "name": "dimensions",
+    "payload": {
+     "x": 120,
+     "y": 60,
+     "z": 6,
+     "est": true,
+     "basis": "photo 46912"
+    },
+    "leaf": "ad42329dc225b415c084c65d3c986b0fd6f2110dcfe0c3d6dd4644261a3e8481",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "3998eb34680732e9e944468801ed1a7d6675175ce74ae36e995baa893ea6bed6"
+     },
+     {
+      "side": "R",
+      "hash": "deb985a42019102739c7db5a36165aa1fac4249420846ce162881074e37f5434"
+     },
+     {
+      "side": "R",
+      "hash": "97a2b80022457dc33cbed7acec11a84f1c1ae4ec8b375171aaa23ed9c936961e"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46912",
+    "payload": {
+     "photo": "46912",
+     "sha256": "e4422ccd4ce160437d97b22d614c5cff61bf878759c5841523be9de2c05e601c",
+     "resolves": false
+    },
+    "leaf": "3998eb34680732e9e944468801ed1a7d6675175ce74ae36e995baa893ea6bed6",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "ad42329dc225b415c084c65d3c986b0fd6f2110dcfe0c3d6dd4644261a3e8481"
+     },
+     {
+      "side": "R",
+      "hash": "deb985a42019102739c7db5a36165aa1fac4249420846ce162881074e37f5434"
+     },
+     {
+      "side": "R",
+      "hash": "97a2b80022457dc33cbed7acec11a84f1c1ae4ec8b375171aaa23ed9c936961e"
+     }
+    ]
+   },
+   {
+    "name": "grid",
+    "payload": {
+     "rows": 3,
+     "cols": 6,
+     "pitch": 16.0,
+     "hole_d": 14.0,
+     "est": true,
+     "basis": "hex cell across flats"
+    },
+    "leaf": "1139b6e31eee886e5bd6ff5265cb711b08326191f4f8896482bf172b9f2ffba9",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "063bf3f0e185e376684f6758a55f189f2636290588c89959f43288cf54f2b8df"
+     },
+     {
+      "side": "L",
+      "hash": "69339cd81fb3cb0ceeb5dad5ba9f295f59a52a761223c53a9b3aa59a678e3f83"
+     },
+     {
+      "side": "R",
+      "hash": "97a2b80022457dc33cbed7acec11a84f1c1ae4ec8b375171aaa23ed9c936961e"
+     }
+    ]
+   },
+   {
+    "name": "identity",
+    "payload": {
+     "id": "obs-printed-honeycomb",
+     "name": "3D-printed honeycomb lattice",
+     "kind": "printed insert",
+     "vendor": "unbranded / in-house"
+    },
+    "leaf": "063bf3f0e185e376684f6758a55f189f2636290588c89959f43288cf54f2b8df",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "1139b6e31eee886e5bd6ff5265cb711b08326191f4f8896482bf172b9f2ffba9"
+     },
+     {
+      "side": "L",
+      "hash": "69339cd81fb3cb0ceeb5dad5ba9f295f59a52a761223c53a9b3aa59a678e3f83"
+     },
+     {
+      "side": "R",
+      "hash": "97a2b80022457dc33cbed7acec11a84f1c1ae4ec8b375171aaa23ed9c936961e"
+     }
+    ]
+   },
+   {
+    "name": "material",
+    "payload": {
+     "material": "PLA (est.)",
+     "reuse": "nesting cells / partitions"
+    },
+    "leaf": "93343e116807d53dd7622206a8d955e3c356f67eb958cc05cf41d62ab6187d95",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "0b0bf7723dac1312e6566a8d15e5cda497a04f1f923e0716e5ccbd2dfe3cd581"
+     },
+     {
+      "side": "R",
+      "hash": "c1533634d6c6092d97db6d3793a80154413347b4ee3b8f9e045596ab1382f902"
+     },
+     {
+      "side": "L",
+      "hash": "b69668262192a68e9617427cc8c1ad6822ec7543c0f62f430f4874765c1ba96b"
+     }
+    ]
+   },
+   {
+    "name": "risk.knowledge",
+    "payload": {
+     "level": "low",
+     "notes": "Hex lattice is public-domain geometry."
+    },
+    "leaf": "0b0bf7723dac1312e6566a8d15e5cda497a04f1f923e0716e5ccbd2dfe3cd581",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "93343e116807d53dd7622206a8d955e3c356f67eb958cc05cf41d62ab6187d95"
+     },
+     {
+      "side": "R",
+      "hash": "c1533634d6c6092d97db6d3793a80154413347b4ee3b8f9e045596ab1382f902"
+     },
+     {
+      "side": "L",
+      "hash": "b69668262192a68e9617427cc8c1ad6822ec7543c0f62f430f4874765c1ba96b"
+     }
+    ]
+   },
+   {
+    "name": "risk.manufacturing",
+    "payload": {
+     "level": "low",
+     "notes": "Prints fast, no supports."
+    },
+    "leaf": "c1533634d6c6092d97db6d3793a80154413347b4ee3b8f9e045596ab1382f902",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "e7e4936b9b3218869c1561840a3e25468aa458f5d7952ff8722fc4fabe30cc3f"
+     },
+     {
+      "side": "L",
+      "hash": "b69668262192a68e9617427cc8c1ad6822ec7543c0f62f430f4874765c1ba96b"
+     }
+    ]
+   }
+  ]
+ },
+ "obs-perforated-sheet": {
+  "root": "801f4140974661cef3f66f229805d55926f66ed8147a5f95a3e5a2c40927094d",
+  "fragments": [
+   {
+    "name": "dimensions",
+    "payload": {
+     "x": 140,
+     "y": 100,
+     "z": 0.8,
+     "est": true,
+     "basis": "photo 46912"
+    },
+    "leaf": "71b730dfc9366f5096c65f724b330c43dccfbdc84b5fe67623406c72516e0bb4",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "3998eb34680732e9e944468801ed1a7d6675175ce74ae36e995baa893ea6bed6"
+     },
+     {
+      "side": "R",
+      "hash": "6d27ffe30e00fbe576d627f7386675508ce42d5ad2c0cb0d87849b662ca3b4bd"
+     },
+     {
+      "side": "R",
+      "hash": "4595077b9a1589f1f536ce2f7021773ac0f2207344c4e485b796dce63b2b0b66"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46912",
+    "payload": {
+     "photo": "46912",
+     "sha256": "e4422ccd4ce160437d97b22d614c5cff61bf878759c5841523be9de2c05e601c",
+     "resolves": false
+    },
+    "leaf": "3998eb34680732e9e944468801ed1a7d6675175ce74ae36e995baa893ea6bed6",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "71b730dfc9366f5096c65f724b330c43dccfbdc84b5fe67623406c72516e0bb4"
+     },
+     {
+      "side": "R",
+      "hash": "6d27ffe30e00fbe576d627f7386675508ce42d5ad2c0cb0d87849b662ca3b4bd"
+     },
+     {
+      "side": "R",
+      "hash": "4595077b9a1589f1f536ce2f7021773ac0f2207344c4e485b796dce63b2b0b66"
+     }
+    ]
+   },
+   {
+    "name": "grid",
+    "payload": {
+     "rows": null,
+     "cols": null,
+     "pitch": 3.0,
+     "hole_d": 2.0,
+     "est": true,
+     "basis": "staggered round holes"
+    },
+    "leaf": "fa0418ef90a92e72831ba54929a3efd14b0eeec3188ebe45c5bdd48153e68d39",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "1e5540dd49b0fe3082a2156a686226cb455d48d8e948c6e17ffaaa6e50942f76"
+     },
+     {
+      "side": "L",
+      "hash": "08fd4f0ed6a7a89a82f5d3a5e302c9fd7ee795670f884bcd396ab92b08e88aab"
+     },
+     {
+      "side": "R",
+      "hash": "4595077b9a1589f1f536ce2f7021773ac0f2207344c4e485b796dce63b2b0b66"
+     }
+    ]
+   },
+   {
+    "name": "identity",
+    "payload": {
+     "id": "obs-perforated-sheet",
+     "name": "Perforated steel sheet",
+     "kind": "insert",
+     "vendor": "unbranded / in-house"
+    },
+    "leaf": "1e5540dd49b0fe3082a2156a686226cb455d48d8e948c6e17ffaaa6e50942f76",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "fa0418ef90a92e72831ba54929a3efd14b0eeec3188ebe45c5bdd48153e68d39"
+     },
+     {
+      "side": "L",
+      "hash": "08fd4f0ed6a7a89a82f5d3a5e302c9fd7ee795670f884bcd396ab92b08e88aab"
+     },
+     {
+      "side": "R",
+      "hash": "4595077b9a1589f1f536ce2f7021773ac0f2207344c4e485b796dce63b2b0b66"
+     }
+    ]
+   },
+   {
+    "name": "material",
+    "payload": {
+     "material": "steel (est.)",
+     "reuse": "floor screen for grid frame"
+    },
+    "leaf": "4ebe1e82ec09f923a50fdc59808dfe2cf972ac24a3dc9fb53e5d57a8751dab00",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "15e2b2d576eeb0537be5ede66f762c076618414405276d74d8834afc056eea82"
+     },
+     {
+      "side": "R",
+      "hash": "26c00b2aa1c77cccdd3616580e4976512e06d36a33fa28e7fa9d4db8ed09f023"
+     },
+     {
+      "side": "L",
+      "hash": "12a38a61e980453e74a3699e30ef0a44f19b90617feba6e2f216edb6ffd514b7"
+     }
+    ]
+   },
+   {
+    "name": "risk.knowledge",
+    "payload": {
+     "level": "low",
+     "notes": "Generic stock."
+    },
+    "leaf": "15e2b2d576eeb0537be5ede66f762c076618414405276d74d8834afc056eea82",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "4ebe1e82ec09f923a50fdc59808dfe2cf972ac24a3dc9fb53e5d57a8751dab00"
+     },
+     {
+      "side": "R",
+      "hash": "26c00b2aa1c77cccdd3616580e4976512e06d36a33fa28e7fa9d4db8ed09f023"
+     },
+     {
+      "side": "L",
+      "hash": "12a38a61e980453e74a3699e30ef0a44f19b90617feba6e2f216edb6ffd514b7"
+     }
+    ]
+   },
+   {
+    "name": "risk.manufacturing",
+    "payload": {
+     "level": "med",
+     "notes": "Sharp cut edges; deburr or edge-wrap."
+    },
+    "leaf": "26c00b2aa1c77cccdd3616580e4976512e06d36a33fa28e7fa9d4db8ed09f023",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "10d45b1f9c998b2ffc61e2c4d4a8d339ada186bf510ac514a28d7322c2666735"
+     },
+     {
+      "side": "L",
+      "hash": "12a38a61e980453e74a3699e30ef0a44f19b90617feba6e2f216edb6ffd514b7"
+     }
+    ]
+   }
+  ]
+ },
+ "obs-minicentrifuge": {
+  "root": "ff275cc572cca333d9fa4d878ff724e822a69f2d7cf5851fd49edb3880a9143b",
+  "fragments": [
+   {
+    "name": "dimensions",
+    "payload": {
+     "x": 150,
+     "y": 150,
+     "z": 110,
+     "est": true,
+     "basis": "photo 46901 vs tip box"
+    },
+    "leaf": "bb8f47b5dfb6e8b0c1bda815dcc4b9fe5c5fbe438a98037e249d5914115de35c",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "ae8a90ddd5960fdd336e814a619a8b45aedca1939d1bc91830fb733f391588db"
+     },
+     {
+      "side": "R",
+      "hash": "e001934fc58ab7d6a187492b90822e316c45953328fe50afdc6e481456efe7e9"
+     },
+     {
+      "side": "R",
+      "hash": "c60d8fe09c2d868fb1899d8f362fb86ffba3e2e01b4ef6e69ebde488a0c2887f"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46901",
+    "payload": {
+     "photo": "46901",
+     "sha256": "bf2add091eae09de201aff68aed6aea8516fb3ca1b51d0da60c0081b276b5528",
+     "resolves": false
+    },
+    "leaf": "ae8a90ddd5960fdd336e814a619a8b45aedca1939d1bc91830fb733f391588db",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "bb8f47b5dfb6e8b0c1bda815dcc4b9fe5c5fbe438a98037e249d5914115de35c"
+     },
+     {
+      "side": "R",
+      "hash": "e001934fc58ab7d6a187492b90822e316c45953328fe50afdc6e481456efe7e9"
+     },
+     {
+      "side": "R",
+      "hash": "c60d8fe09c2d868fb1899d8f362fb86ffba3e2e01b4ef6e69ebde488a0c2887f"
+     }
+    ]
+   },
+   {
+    "name": "grid",
+    "payload": null,
+    "leaf": "308e77c946cb7ae8d999af3706189d3bebf297b8667895f1c434342a3c5dc02d",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "0d556ecb1ce4366d34dd309b58dde6494ebbb052a099f0b6d76dcf1515ec44a7"
+     },
+     {
+      "side": "L",
+      "hash": "ad3cb7600fce0cca21cd13b97f9c4bf16db03c6c557ea327795f9fd3aad945b3"
+     },
+     {
+      "side": "R",
+      "hash": "c60d8fe09c2d868fb1899d8f362fb86ffba3e2e01b4ef6e69ebde488a0c2887f"
+     }
+    ]
+   },
+   {
+    "name": "identity",
+    "payload": {
+     "id": "obs-minicentrifuge",
+     "name": "Mini centrifuge, teal lid",
+     "kind": "instrument",
+     "vendor": "unbranded / in-house"
+    },
+    "leaf": "0d556ecb1ce4366d34dd309b58dde6494ebbb052a099f0b6d76dcf1515ec44a7",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "308e77c946cb7ae8d999af3706189d3bebf297b8667895f1c434342a3c5dc02d"
+     },
+     {
+      "side": "L",
+      "hash": "ad3cb7600fce0cca21cd13b97f9c4bf16db03c6c557ea327795f9fd3aad945b3"
+     },
+     {
+      "side": "R",
+      "hash": "c60d8fe09c2d868fb1899d8f362fb86ffba3e2e01b4ef6e69ebde488a0c2887f"
+     }
+    ]
+   },
+   {
+    "name": "material",
+    "payload": {
+     "material": "ABS housing",
+     "reuse": "spin-down station node"
+    },
+    "leaf": "0b2d3657f3558fc785e9ab33adc79a6abd1b6d94d088dff14609644dd886f60d",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "6b9ed250b9b887db12458a973f529281c740ec791f87c7a8a48af7ef7101d969"
+     },
+     {
+      "side": "R",
+      "hash": "37b0fccb31723b76af65ca061e312919b01c9a2bb29ff84b35c53fda4e70f378"
+     },
+     {
+      "side": "L",
+      "hash": "cf9255c84f6313a185e7065c5e0f16284583965aa755dca8151f11abe675f97b"
+     }
+    ]
+   },
+   {
+    "name": "risk.knowledge",
+    "payload": {
+     "level": "low",
+     "notes": "Black-box node."
+    },
+    "leaf": "6b9ed250b9b887db12458a973f529281c740ec791f87c7a8a48af7ef7101d969",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "0b2d3657f3558fc785e9ab33adc79a6abd1b6d94d088dff14609644dd886f60d"
+     },
+     {
+      "side": "R",
+      "hash": "37b0fccb31723b76af65ca061e312919b01c9a2bb29ff84b35c53fda4e70f378"
+     },
+     {
+      "side": "L",
+      "hash": "cf9255c84f6313a185e7065c5e0f16284583965aa755dca8151f11abe675f97b"
+     }
+    ]
+   },
+   {
+    "name": "risk.manufacturing",
+    "payload": {
+     "level": "high",
+     "notes": "Never print rotors or spinning adapters."
+    },
+    "leaf": "37b0fccb31723b76af65ca061e312919b01c9a2bb29ff84b35c53fda4e70f378",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "073d7e9c7eeac72a28da02f65677090685514882fd0b4e87f8fae9e05bff9c80"
+     },
+     {
+      "side": "L",
+      "hash": "cf9255c84f6313a185e7065c5e0f16284583965aa755dca8151f11abe675f97b"
+     }
+    ]
+   }
+  ]
+ },
+ "obs-vortexer": {
+  "root": "53eb3f46fba1070548861f567be48a9b32ad83fff40f4fa366c0f652479dda24",
+  "fragments": [
+   {
+    "name": "dimensions",
+    "payload": {
+     "x": 160,
+     "y": 130,
+     "z": 160,
+     "est": true,
+     "basis": "photo 46901"
+    },
+    "leaf": "07940b82c5739d3aedbcff7c04d662a9b7bf0c13cb4ddda02508e0a4d8ead36c",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "ae8a90ddd5960fdd336e814a619a8b45aedca1939d1bc91830fb733f391588db"
+     },
+     {
+      "side": "R",
+      "hash": "0fb4a4bd22ee538f8c3a35e4044cbd23256127c0c908cb2001f6f509f1090955"
+     },
+     {
+      "side": "R",
+      "hash": "eec148149fab73e47dc305de24215c6cdb000b56c75587f957f50b682c61284f"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46901",
+    "payload": {
+     "photo": "46901",
+     "sha256": "bf2add091eae09de201aff68aed6aea8516fb3ca1b51d0da60c0081b276b5528",
+     "resolves": false
+    },
+    "leaf": "ae8a90ddd5960fdd336e814a619a8b45aedca1939d1bc91830fb733f391588db",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "07940b82c5739d3aedbcff7c04d662a9b7bf0c13cb4ddda02508e0a4d8ead36c"
+     },
+     {
+      "side": "R",
+      "hash": "0fb4a4bd22ee538f8c3a35e4044cbd23256127c0c908cb2001f6f509f1090955"
+     },
+     {
+      "side": "R",
+      "hash": "eec148149fab73e47dc305de24215c6cdb000b56c75587f957f50b682c61284f"
+     }
+    ]
+   },
+   {
+    "name": "grid",
+    "payload": null,
+    "leaf": "308e77c946cb7ae8d999af3706189d3bebf297b8667895f1c434342a3c5dc02d",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "5414633e917404d431c0719a5a043196c0f125270cdedc60adce219a2d7e14cb"
+     },
+     {
+      "side": "L",
+      "hash": "f4d24f5a946dc478b39708c72b5140ad9060eb5f803d02b560cdb9e91001e9b8"
+     },
+     {
+      "side": "R",
+      "hash": "eec148149fab73e47dc305de24215c6cdb000b56c75587f957f50b682c61284f"
+     }
+    ]
+   },
+   {
+    "name": "identity",
+    "payload": {
+     "id": "obs-vortexer",
+     "name": "Vortex mixer, dimpled cup head",
+     "kind": "instrument",
+     "vendor": "unbranded / in-house"
+    },
+    "leaf": "5414633e917404d431c0719a5a043196c0f125270cdedc60adce219a2d7e14cb",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "308e77c946cb7ae8d999af3706189d3bebf297b8667895f1c434342a3c5dc02d"
+     },
+     {
+      "side": "L",
+      "hash": "f4d24f5a946dc478b39708c72b5140ad9060eb5f803d02b560cdb9e91001e9b8"
+     },
+     {
+      "side": "R",
+      "hash": "eec148149fab73e47dc305de24215c6cdb000b56c75587f957f50b682c61284f"
+     }
+    ]
+   },
+   {
+    "name": "material",
+    "payload": {
+     "material": "cast body, rubber head",
+     "reuse": "mixing station node"
+    },
+    "leaf": "4173210124e77dbf390ef844998b3d3d49418a7f28749069cf1435499ff1945b",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "6b9ed250b9b887db12458a973f529281c740ec791f87c7a8a48af7ef7101d969"
+     },
+     {
+      "side": "R",
+      "hash": "640d10223fcc3e8f2aa3ba04ec5a9e52f190cf8a0d82a7a0bd6696c2a007e120"
+     },
+     {
+      "side": "L",
+      "hash": "d6db2c405628c1a642d6071ed7b052d9b8fe53a42db62ea7c87b1b90ee6bcd89"
+     }
+    ]
+   },
+   {
+    "name": "risk.knowledge",
+    "payload": {
+     "level": "low",
+     "notes": "Black-box node."
+    },
+    "leaf": "6b9ed250b9b887db12458a973f529281c740ec791f87c7a8a48af7ef7101d969",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "4173210124e77dbf390ef844998b3d3d49418a7f28749069cf1435499ff1945b"
+     },
+     {
+      "side": "R",
+      "hash": "640d10223fcc3e8f2aa3ba04ec5a9e52f190cf8a0d82a7a0bd6696c2a007e120"
+     },
+     {
+      "side": "L",
+      "hash": "d6db2c405628c1a642d6071ed7b052d9b8fe53a42db62ea7c87b1b90ee6bcd89"
+     }
+    ]
+   },
+   {
+    "name": "risk.manufacturing",
+    "payload": {
+     "level": "med",
+     "notes": "Printed head adapters are common; keep mass low."
+    },
+    "leaf": "640d10223fcc3e8f2aa3ba04ec5a9e52f190cf8a0d82a7a0bd6696c2a007e120",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "5b6047327bc3ba46e087a228ef00ff89752699a295779dfd9bf4dff2d5465865"
+     },
+     {
+      "side": "L",
+      "hash": "d6db2c405628c1a642d6071ed7b052d9b8fe53a42db62ea7c87b1b90ee6bcd89"
+     }
+    ]
+   }
+  ]
+ },
+ "obs-steel-rule-18in": {
+  "root": "89a856f2e84bc6f3ff1d6ab99dff6338f95115361b89a527e99ef74942fad294",
+  "fragments": [
+   {
+    "name": "dimensions",
+    "payload": {
+     "x": 457,
+     "y": 25,
+     "z": 1,
+     "est": false,
+     "basis": "nominal 18 in"
+    },
+    "leaf": "af5ca70b684e897708e72fbf265694b196a8151269f63795d3aa5cc0cc1dc012",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "118d6b6520e616c523fccc4e94e3b20f4ae18014fc99451fdfb5bd14aaf77726"
+     },
+     {
+      "side": "R",
+      "hash": "2c6f4c866f9c193f6a69fd2ebc36ee133f8ac2dd2512b012bb6441b631753af7"
+     },
+     {
+      "side": "R",
+      "hash": "a55ebe8137fc8c641c6316a66b83fbb4c59edcfae1e84bc117225ef44c25ba18"
+     },
+     {
+      "side": "R",
+      "hash": "081be3c09f94ac667f14163878399db4c87dc650a7b3a62d05735a2713c85175"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46907",
+    "payload": {
+     "photo": "46907",
+     "sha256": "cdd431171cc9044ccf0a2ecbfbe6e1daf9c1139cc2fe957e273d8a3e88a610ec",
+     "resolves": false
+    },
+    "leaf": "118d6b6520e616c523fccc4e94e3b20f4ae18014fc99451fdfb5bd14aaf77726",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "af5ca70b684e897708e72fbf265694b196a8151269f63795d3aa5cc0cc1dc012"
+     },
+     {
+      "side": "R",
+      "hash": "2c6f4c866f9c193f6a69fd2ebc36ee133f8ac2dd2512b012bb6441b631753af7"
+     },
+     {
+      "side": "R",
+      "hash": "a55ebe8137fc8c641c6316a66b83fbb4c59edcfae1e84bc117225ef44c25ba18"
+     },
+     {
+      "side": "R",
+      "hash": "081be3c09f94ac667f14163878399db4c87dc650a7b3a62d05735a2713c85175"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46908",
+    "payload": {
+     "photo": "46908",
+     "sha256": "0d219e2da0b2f1c1294c2b1c6528263b63d480f0dd32eb1e11f7eda89b18870f",
+     "resolves": false
+    },
+    "leaf": "c1e4366c10fc340e16d93ba00a061969465bc898e9eb8ca111b3731e6f1edc13",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "dead72f852ae3eb3940aeaf0f5f585f42e843c52b7265031599a909a973ddb04"
+     },
+     {
+      "side": "L",
+      "hash": "afb99674b0581ceb2dc7bfb965c71d5972fdf935ad08d9087392765ab8d2b107"
+     },
+     {
+      "side": "R",
+      "hash": "a55ebe8137fc8c641c6316a66b83fbb4c59edcfae1e84bc117225ef44c25ba18"
+     },
+     {
+      "side": "R",
+      "hash": "081be3c09f94ac667f14163878399db4c87dc650a7b3a62d05735a2713c85175"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46910",
+    "payload": {
+     "photo": "46910",
+     "sha256": "cad86112e86249bece0d208cee6a448089184e6c0e1831802c7edd388397e8ea",
+     "resolves": false
+    },
+    "leaf": "dead72f852ae3eb3940aeaf0f5f585f42e843c52b7265031599a909a973ddb04",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "c1e4366c10fc340e16d93ba00a061969465bc898e9eb8ca111b3731e6f1edc13"
+     },
+     {
+      "side": "L",
+      "hash": "afb99674b0581ceb2dc7bfb965c71d5972fdf935ad08d9087392765ab8d2b107"
+     },
+     {
+      "side": "R",
+      "hash": "a55ebe8137fc8c641c6316a66b83fbb4c59edcfae1e84bc117225ef44c25ba18"
+     },
+     {
+      "side": "R",
+      "hash": "081be3c09f94ac667f14163878399db4c87dc650a7b3a62d05735a2713c85175"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46915",
+    "payload": {
+     "photo": "46915",
+     "sha256": "e10aa2155c6563f5b5b601c7147bdce865760a3016aef056ca2efcb8afe4a993",
+     "resolves": false
+    },
+    "leaf": "cdbf84c8d380d4b162f6a7b70604d926c70379aa19bf882be7b958e8f28341d1",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "ebef0de3fa71c2c9e74426e30ddba7b243d35e93a8aa3c69cf51352bb4e60879"
+     },
+     {
+      "side": "R",
+      "hash": "51576ef930481ce360f51dac3ea8bcf63fa2649959162b1e50e5e80db2905e65"
+     },
+     {
+      "side": "L",
+      "hash": "c37a47cd57a10357aed03d0c3a697af6af4c2d068ac6e3f3d000fc5a11ddae94"
+     },
+     {
+      "side": "R",
+      "hash": "081be3c09f94ac667f14163878399db4c87dc650a7b3a62d05735a2713c85175"
+     }
+    ]
+   },
+   {
+    "name": "evidence.photo.46917",
+    "payload": {
+     "photo": "46917",
+     "sha256": "d2506c29f6a5c73b7f9e1ae655b6f2555273a8e632ba52374896433d61a2977e",
+     "resolves": false
+    },
+    "leaf": "ebef0de3fa71c2c9e74426e30ddba7b243d35e93a8aa3c69cf51352bb4e60879",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "cdbf84c8d380d4b162f6a7b70604d926c70379aa19bf882be7b958e8f28341d1"
+     },
+     {
+      "side": "R",
+      "hash": "51576ef930481ce360f51dac3ea8bcf63fa2649959162b1e50e5e80db2905e65"
+     },
+     {
+      "side": "L",
+      "hash": "c37a47cd57a10357aed03d0c3a697af6af4c2d068ac6e3f3d000fc5a11ddae94"
+     },
+     {
+      "side": "R",
+      "hash": "081be3c09f94ac667f14163878399db4c87dc650a7b3a62d05735a2713c85175"
+     }
+    ]
+   },
+   {
+    "name": "grid",
+    "payload": null,
+    "leaf": "308e77c946cb7ae8d999af3706189d3bebf297b8667895f1c434342a3c5dc02d",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "0f66dfe2100d8efacd11aec30a9d37cc53f8df334e70f2634391892ced2ecec8"
+     },
+     {
+      "side": "L",
+      "hash": "890313965c3325741ce6bbbcad4ff760e5980d94c42cfee2d0a8e868f64cce32"
+     },
+     {
+      "side": "L",
+      "hash": "c37a47cd57a10357aed03d0c3a697af6af4c2d068ac6e3f3d000fc5a11ddae94"
+     },
+     {
+      "side": "R",
+      "hash": "081be3c09f94ac667f14163878399db4c87dc650a7b3a62d05735a2713c85175"
+     }
+    ]
+   },
+   {
+    "name": "identity",
+    "payload": {
+     "id": "obs-steel-rule-18in",
+     "name": "18 in / 46 cm steel rule",
+     "kind": "reference",
+     "vendor": "unbranded / in-house"
+    },
+    "leaf": "0f66dfe2100d8efacd11aec30a9d37cc53f8df334e70f2634391892ced2ecec8",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "308e77c946cb7ae8d999af3706189d3bebf297b8667895f1c434342a3c5dc02d"
+     },
+     {
+      "side": "L",
+      "hash": "890313965c3325741ce6bbbcad4ff760e5980d94c42cfee2d0a8e868f64cce32"
+     },
+     {
+      "side": "L",
+      "hash": "c37a47cd57a10357aed03d0c3a697af6af4c2d068ac6e3f3d000fc5a11ddae94"
+     },
+     {
+      "side": "R",
+      "hash": "081be3c09f94ac667f14163878399db4c87dc650a7b3a62d05735a2713c85175"
+     }
+    ]
+   },
+   {
+    "name": "material",
+    "payload": {
+     "material": "stainless",
+     "reuse": "scale reference for every estimate"
+    },
+    "leaf": "d7c6bcbf38daadd626addea3966b2a1fe3743dcb5b682b73a5e76e09236a66f6",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "ffb6f871685a18808ca0e712b089188ef7f994d3a8b7782b8ab512c2f06f1d79"
+     },
+     {
+      "side": "R",
+      "hash": "8d49e4bfcce267bb6d57bbfb5a4246a1fdd3caf105c35351690c4a38c3650261"
+     },
+     {
+      "side": "L",
+      "hash": "5babab9e35344907a9fd8504641d07a070306ee7e5bb8a8af7404d30a53005bc"
+     }
+    ]
+   },
+   {
+    "name": "risk.knowledge",
+    "payload": {
+     "level": "low",
+     "notes": "n/a"
+    },
+    "leaf": "ffb6f871685a18808ca0e712b089188ef7f994d3a8b7782b8ab512c2f06f1d79",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "d7c6bcbf38daadd626addea3966b2a1fe3743dcb5b682b73a5e76e09236a66f6"
+     },
+     {
+      "side": "R",
+      "hash": "8d49e4bfcce267bb6d57bbfb5a4246a1fdd3caf105c35351690c4a38c3650261"
+     },
+     {
+      "side": "L",
+      "hash": "5babab9e35344907a9fd8504641d07a070306ee7e5bb8a8af7404d30a53005bc"
+     }
+    ]
+   },
+   {
+    "name": "risk.manufacturing",
+    "payload": {
+     "level": "low",
+     "notes": "Scale reference only."
+    },
+    "leaf": "8d49e4bfcce267bb6d57bbfb5a4246a1fdd3caf105c35351690c4a38c3650261",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "55ed87b1d1ab9282e98b182e12009b74d92db745cef9765a4f4bc8d571042e1d"
+     },
+     {
+      "side": "L",
+      "hash": "5babab9e35344907a9fd8504641d07a070306ee7e5bb8a8af7404d30a53005bc"
+     }
+    ]
+   }
+  ]
+ },
+ "print-rack-96": {
+  "root": "5b1f987e37e815d2133bbfde7cb570dc8dffb83429bda5ed6df6a030fa5f6384",
+  "fragments": [
+   {
+    "name": "derivation",
+    "payload": {
+     "from": {
+      "obs-tipbox-1000-blue": "b7bc9e8a1e18a80603dc8b476d3404265ddc86496e5245f60fbaa0664fcc4ede",
+      "obs-tipbox-200f-magenta": "4a4fce589d9e1edefbccd1ee45d73c8471e9f4bd8fe323520be87542964f4241",
+      "obs-tipbox-purple-hinged": "836b48b838e3551b612d51633294bd24a6504d57d951a35e95b47cddcb8d7f81",
+      "obs-microtube-96-purple": "077717b8fad2875d115a5f3bcc96ec27fabc3b989858955fb7f25fef434c0116"
+     }
+    },
+    "leaf": "bb8a0d398e91179c900dfe13fc9cc137f7f23d624ca04d194e0f97db8c750ef3",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "a9adc4852eff2d079e0b5bba1dbde2eb229ea69eab316bf043d8c71cb84bac25"
+     },
+     {
+      "side": "R",
+      "hash": "d80dda26bbc4e3441d781a12d5baefe87492f614531713c004e1069889fcd1f5"
+     },
+     {
+      "side": "R",
+      "hash": "009833b1c853d01c4e2117ab30c875ba98b150a5f8fa0d9ae7b3a71e208544ea"
+     }
+    ]
+   },
+   {
+    "name": "identity",
+    "payload": {
+     "id": "print-rack-96",
+     "name": "SBS 96 rack, 9 mm pitch",
+     "family": "sbs-plate"
+    },
+    "leaf": "a9adc4852eff2d079e0b5bba1dbde2eb229ea69eab316bf043d8c71cb84bac25",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "bb8a0d398e91179c900dfe13fc9cc137f7f23d624ca04d194e0f97db8c750ef3"
+     },
+     {
+      "side": "R",
+      "hash": "d80dda26bbc4e3441d781a12d5baefe87492f614531713c004e1069889fcd1f5"
+     },
+     {
+      "side": "R",
+      "hash": "009833b1c853d01c4e2117ab30c875ba98b150a5f8fa0d9ae7b3a71e208544ea"
+     }
+    ]
+   },
+   {
+    "name": "license",
+    "payload": {
+     "spdx": "MIT"
+    },
+    "leaf": "ded1052edb3574761573e5000656be1390105ee561edfa1a08c5a6b0587c3eac",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "80aaac070c38965d1f1a9c05be3e129a7c5163736403e33128b8e9d47b43c7ba"
+     },
+     {
+      "side": "L",
+      "hash": "003c6896ba3409b72e734b5775a4127e74fa66f616867692e39bb055174e03d1"
+     },
+     {
+      "side": "R",
+      "hash": "009833b1c853d01c4e2117ab30c875ba98b150a5f8fa0d9ae7b3a71e208544ea"
+     }
+    ]
+   },
+   {
+    "name": "manufacturing",
+    "payload": {
+     "material": "PETG",
+     "grams_est": 50.6,
+     "filament_usd_est": 1.11,
+     "fill_factor": 0.75
+    },
+    "leaf": "80aaac070c38965d1f1a9c05be3e129a7c5163736403e33128b8e9d47b43c7ba",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "ded1052edb3574761573e5000656be1390105ee561edfa1a08c5a6b0587c3eac"
+     },
+     {
+      "side": "L",
+      "hash": "003c6896ba3409b72e734b5775a4127e74fa66f616867692e39bb055174e03d1"
+     },
+     {
+      "side": "R",
+      "hash": "009833b1c853d01c4e2117ab30c875ba98b150a5f8fa0d9ae7b3a71e208544ea"
+     }
+    ]
+   },
+   {
+    "name": "output.opentrons",
+    "payload": {
+     "file": "opentrons/baebugs_rack_96.json",
+     "loadName": "baebugs_rack_96",
+     "sha256": "a25cf21492b388b26e50a15873e5f05c8ce72f7505a0e24adc37eac6fed36dd4"
+    },
+    "leaf": "b7030375607037746e1f2b50c1ba86a481e2b34032da01384b15e1fb6d2867a5",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "5b9c7bc2be9184e48123b646f64448f4d7e3c165c8b30e9037cabae8472698ad"
+     },
+     {
+      "side": "R",
+      "hash": "2e11d7c9b5e886a7bf5f24ba5cd2dfbd0c12865a3783660ae6bff1e1c8447bdb"
+     },
+     {
+      "side": "L",
+      "hash": "1375254fa94b6212995d560574fc113c269b067765e71742a6df6b69f71eafee"
+     }
+    ]
+   },
+   {
+    "name": "output.stl",
+    "payload": {
+     "file": "stl/print-rack-96.stl",
+     "sha256": "b1861b9e41d83412761f6aacbc99396c36b5661b21fb1eecaf9b1d763681a13a",
+     "bbox_mm": [
+      127.76,
+      85.48,
+      20.0
+     ],
+     "watertight": true
+    },
+    "leaf": "5b9c7bc2be9184e48123b646f64448f4d7e3c165c8b30e9037cabae8472698ad",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "b7030375607037746e1f2b50c1ba86a481e2b34032da01384b15e1fb6d2867a5"
+     },
+     {
+      "side": "R",
+      "hash": "2e11d7c9b5e886a7bf5f24ba5cd2dfbd0c12865a3783660ae6bff1e1c8447bdb"
+     },
+     {
+      "side": "L",
+      "hash": "1375254fa94b6212995d560574fc113c269b067765e71742a6df6b69f71eafee"
+     }
+    ]
+   },
+   {
+    "name": "params",
+    "payload": {
+     "rows": 8,
+     "cols": 12,
+     "pitch": 9.0,
+     "hole_d": 5.8,
+     "height": 20.0,
+     "a1_x": 14.38,
+     "a1_y": 11.24,
+     "footprint_x": 127.76,
+     "footprint_y": 85.48
+    },
+    "leaf": "d63b0d5fd74225a572a36347a8458556e39a2e5705b8631669ccd5adca04cb6f",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "cbda27f7afe8f9a0ec0c7c2fb3e080d3a62b11f1d96afbe418d0fcc8256f1f51"
+     },
+     {
+      "side": "L",
+      "hash": "5f65d6e735bf606a7fb2ef2d2e040c7120de0df628475e30d2f7f8c9b0250ea9"
+     },
+     {
+      "side": "L",
+      "hash": "1375254fa94b6212995d560574fc113c269b067765e71742a6df6b69f71eafee"
+     }
+    ]
+   },
+   {
+    "name": "source.scad",
+    "payload": {
+     "file": "scad/print-rack-96.scad",
+     "sha256": "fa7fad026f3b2efb5a3a5eb6cbfb715590385c12a4393a073d2c148e33d3d74b",
+     "library_sha256": "025cbfe59bfb2d32557e6a9d5cc7a1fbf1fc54a5ea617dbfabe5a0ebfc3ffba2"
+    },
+    "leaf": "cbda27f7afe8f9a0ec0c7c2fb3e080d3a62b11f1d96afbe418d0fcc8256f1f51",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "d63b0d5fd74225a572a36347a8458556e39a2e5705b8631669ccd5adca04cb6f"
+     },
+     {
+      "side": "L",
+      "hash": "5f65d6e735bf606a7fb2ef2d2e040c7120de0df628475e30d2f7f8c9b0250ea9"
+     },
+     {
+      "side": "L",
+      "hash": "1375254fa94b6212995d560574fc113c269b067765e71742a6df6b69f71eafee"
+     }
+    ]
+   }
+  ]
+ },
+ "print-cryo-24": {
+  "root": "a76d3ec59ee66cb6e64297e2d3f72839d3a6bbdf8fabeb5e13d1229006ee4929",
+  "fragments": [
+   {
+    "name": "derivation",
+    "payload": {
+     "from": {
+      "obs-cryotube-2ml": "9ef010c792627133d4f35a9a7e9d0fd0a63a104ca30793361a22a931bfd6c4ad",
+      "obs-microtube-50-purple": "594b053105fa6c1a2b5696ebccdeffa88d437267d9aca100836e2bb267142bc7"
+     }
+    },
+    "leaf": "2df49ed5cf5d3b00a6631d0fc8f781b7efa3c8e3ab15abe738547e10ae8ac370",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "8ed48e145403ccce235a70de5628382a464137bbb6dd95c3c9e177b65b0c01cb"
+     },
+     {
+      "side": "R",
+      "hash": "54aee427c0e4aece33f743ade8725de67e87667b54837b90d420b004081101b3"
+     },
+     {
+      "side": "R",
+      "hash": "4c190f01d75ec7ec67c0e32d6cda14fb822ede5b42fe4fcda7c972b1f765bdd2"
+     }
+    ]
+   },
+   {
+    "name": "identity",
+    "payload": {
+     "id": "print-cryo-24",
+     "name": "SBS 4x6 rack, 2 mL cryotubes",
+     "family": "sbs-plate"
+    },
+    "leaf": "8ed48e145403ccce235a70de5628382a464137bbb6dd95c3c9e177b65b0c01cb",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "2df49ed5cf5d3b00a6631d0fc8f781b7efa3c8e3ab15abe738547e10ae8ac370"
+     },
+     {
+      "side": "R",
+      "hash": "54aee427c0e4aece33f743ade8725de67e87667b54837b90d420b004081101b3"
+     },
+     {
+      "side": "R",
+      "hash": "4c190f01d75ec7ec67c0e32d6cda14fb822ede5b42fe4fcda7c972b1f765bdd2"
+     }
+    ]
+   },
+   {
+    "name": "license",
+    "payload": {
+     "spdx": "MIT"
+    },
+    "leaf": "ded1052edb3574761573e5000656be1390105ee561edfa1a08c5a6b0587c3eac",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "1280651701e39961fbee27aa0c47be99764f6150a855083cbeb0e624f40c5873"
+     },
+     {
+      "side": "L",
+      "hash": "63bd4029e95a1876b46db9156efd57c9c0015588ca8d0e5858322d7309cf3c5a"
+     },
+     {
+      "side": "R",
+      "hash": "4c190f01d75ec7ec67c0e32d6cda14fb822ede5b42fe4fcda7c972b1f765bdd2"
+     }
+    ]
+   },
+   {
+    "name": "manufacturing",
+    "payload": {
+     "material": "PETG",
+     "grams_est": 56.0,
+     "filament_usd_est": 1.23,
+     "fill_factor": 0.75
+    },
+    "leaf": "1280651701e39961fbee27aa0c47be99764f6150a855083cbeb0e624f40c5873",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "ded1052edb3574761573e5000656be1390105ee561edfa1a08c5a6b0587c3eac"
+     },
+     {
+      "side": "L",
+      "hash": "63bd4029e95a1876b46db9156efd57c9c0015588ca8d0e5858322d7309cf3c5a"
+     },
+     {
+      "side": "R",
+      "hash": "4c190f01d75ec7ec67c0e32d6cda14fb822ede5b42fe4fcda7c972b1f765bdd2"
+     }
+    ]
+   },
+   {
+    "name": "output.opentrons",
+    "payload": {
+     "file": "opentrons/baebugs_cryo_24.json",
+     "loadName": "baebugs_cryo_24",
+     "sha256": "779922c2684fbbbaf042da3dbd46d5ead182b90ad1e601d57559e04aa2990371"
+    },
+    "leaf": "4572de35ea3b94e00dc8bb4700f2c5953fef334990b5fa8c919803c86881a60c",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "6d6ad99becdee5b1f9182b87f6ad6ac8c6d72ab9b0c31c5e0a131f7b8d49cbeb"
+     },
+     {
+      "side": "R",
+      "hash": "5f45dde203fb697b634e8e1ac09b197cbaf5df58818d31d9b25b9285ad179214"
+     },
+     {
+      "side": "L",
+      "hash": "7a8217f69f9bf97a568bd9488bcdab7b1c64e9ef9012ed4e4ee2800be125dc7f"
+     }
+    ]
+   },
+   {
+    "name": "output.stl",
+    "payload": {
+     "file": "stl/print-cryo-24.stl",
+     "sha256": "516a4154a6ce4be47219516496871e0fef78e1a289b7b780669efdc309749968",
+     "bbox_mm": [
+      127.76,
+      85.48,
+      30.0
+     ],
+     "watertight": true
+    },
+    "leaf": "6d6ad99becdee5b1f9182b87f6ad6ac8c6d72ab9b0c31c5e0a131f7b8d49cbeb",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "4572de35ea3b94e00dc8bb4700f2c5953fef334990b5fa8c919803c86881a60c"
+     },
+     {
+      "side": "R",
+      "hash": "5f45dde203fb697b634e8e1ac09b197cbaf5df58818d31d9b25b9285ad179214"
+     },
+     {
+      "side": "L",
+      "hash": "7a8217f69f9bf97a568bd9488bcdab7b1c64e9ef9012ed4e4ee2800be125dc7f"
+     }
+    ]
+   },
+   {
+    "name": "params",
+    "payload": {
+     "rows": 4,
+     "cols": 6,
+     "pitch": 19.3,
+     "hole_d": 13.2,
+     "height": 30.0,
+     "a1_x": 15.63,
+     "a1_y": 13.79,
+     "footprint_x": 127.76,
+     "footprint_y": 85.48
+    },
+    "leaf": "f6b3010937d713f38d3fc7f6d4bd4f4f7290b256c39581545b8a9652013a4490",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "6bcb88a7c3d05f50f58db02463c65274155af71963d249a17e8cc32d1ebd55f4"
+     },
+     {
+      "side": "L",
+      "hash": "bfa639836e474b2a9b0872d508fdfaf7cc91f2a76f7947d13d6762392acca262"
+     },
+     {
+      "side": "L",
+      "hash": "7a8217f69f9bf97a568bd9488bcdab7b1c64e9ef9012ed4e4ee2800be125dc7f"
+     }
+    ]
+   },
+   {
+    "name": "source.scad",
+    "payload": {
+     "file": "scad/print-cryo-24.scad",
+     "sha256": "c5a009a4881c9a640ea4f1995c66be6657e889b1ba49fdef591a400c7e5d565d",
+     "library_sha256": "025cbfe59bfb2d32557e6a9d5cc7a1fbf1fc54a5ea617dbfabe5a0ebfc3ffba2"
+    },
+    "leaf": "6bcb88a7c3d05f50f58db02463c65274155af71963d249a17e8cc32d1ebd55f4",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "f6b3010937d713f38d3fc7f6d4bd4f4f7290b256c39581545b8a9652013a4490"
+     },
+     {
+      "side": "L",
+      "hash": "bfa639836e474b2a9b0872d508fdfaf7cc91f2a76f7947d13d6762392acca262"
+     },
+     {
+      "side": "L",
+      "hash": "7a8217f69f9bf97a568bd9488bcdab7b1c64e9ef9012ed4e4ee2800be125dc7f"
+     }
+    ]
+   }
+  ]
+ },
+ "print-conical-15": {
+  "root": "dc7a2bd4bc503c393010ae840691bc6a85cc0646ba33f3e89c01c62e908e86a4",
+  "fragments": [
+   {
+    "name": "derivation",
+    "payload": {
+     "from": {
+      "obs-rack-18-white": "2bdbce3f9cced1532271c5f42a180a51ac2558bbf0e5bb33049148bae1f1bd0e"
+     }
+    },
+    "leaf": "cf30d9ca9628e6444d209da5e4c907cc48fd33b716ba6d5f6c32d748eb7340b9",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "e9e54e9812b66699834ffe16091dfd3b2be8a3b482e9603962de000a0e259a64"
+     },
+     {
+      "side": "R",
+      "hash": "25d6199febad58d39b443c87cdc4361b9c2fa0056d071e8e0512c2553bfd06f1"
+     },
+     {
+      "side": "R",
+      "hash": "648f6970500a53735ba3a5f2c739208d221f6722049db55d84ab173fbb250c60"
+     }
+    ]
+   },
+   {
+    "name": "identity",
+    "payload": {
+     "id": "print-conical-15",
+     "name": "SBS 3x5 rack, 15 mL conicals",
+     "family": "sbs-plate"
+    },
+    "leaf": "e9e54e9812b66699834ffe16091dfd3b2be8a3b482e9603962de000a0e259a64",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "cf30d9ca9628e6444d209da5e4c907cc48fd33b716ba6d5f6c32d748eb7340b9"
+     },
+     {
+      "side": "R",
+      "hash": "25d6199febad58d39b443c87cdc4361b9c2fa0056d071e8e0512c2553bfd06f1"
+     },
+     {
+      "side": "R",
+      "hash": "648f6970500a53735ba3a5f2c739208d221f6722049db55d84ab173fbb250c60"
+     }
+    ]
+   },
+   {
+    "name": "license",
+    "payload": {
+     "spdx": "MIT"
+    },
+    "leaf": "ded1052edb3574761573e5000656be1390105ee561edfa1a08c5a6b0587c3eac",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "9e4946cf004fcd58ae6d99bf66678c936d9f4df550da2cf8900fefdfd7de6638"
+     },
+     {
+      "side": "L",
+      "hash": "cafcb00b27bfdcb411f2574cd628665a53663249291cbe61bd7687f217661e2d"
+     },
+     {
+      "side": "R",
+      "hash": "648f6970500a53735ba3a5f2c739208d221f6722049db55d84ab173fbb250c60"
+     }
+    ]
+   },
+   {
+    "name": "manufacturing",
+    "payload": {
+     "material": "PETG",
+     "grams_est": 62.8,
+     "filament_usd_est": 1.38,
+     "fill_factor": 0.75
+    },
+    "leaf": "9e4946cf004fcd58ae6d99bf66678c936d9f4df550da2cf8900fefdfd7de6638",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "ded1052edb3574761573e5000656be1390105ee561edfa1a08c5a6b0587c3eac"
+     },
+     {
+      "side": "L",
+      "hash": "cafcb00b27bfdcb411f2574cd628665a53663249291cbe61bd7687f217661e2d"
+     },
+     {
+      "side": "R",
+      "hash": "648f6970500a53735ba3a5f2c739208d221f6722049db55d84ab173fbb250c60"
+     }
+    ]
+   },
+   {
+    "name": "output.opentrons",
+    "payload": {
+     "file": "opentrons/baebugs_conical_15.json",
+     "loadName": "baebugs_conical_15",
+     "sha256": "40484dff1a74d6291a9cd69b6627d0afe441ebdd56378e62b0e86a6a5e837378"
+    },
+    "leaf": "6bb109b9032af58f59590675d4aa6c57b876a82ca0423923a3fb260c732ce91f",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "7f46011a99f2feb955696bfc9da4c1c01bf097c7e97f41881d457c48533e0c9a"
+     },
+     {
+      "side": "R",
+      "hash": "1cdc51e20bb30399c886a55ca8617b105eb66ad96c53dddfc0d86b08f37f94ce"
+     },
+     {
+      "side": "L",
+      "hash": "d8e4c933176138f92de5b4f6f55b6172e4b40b58b8e52f659752672752a2cdd0"
+     }
+    ]
+   },
+   {
+    "name": "output.stl",
+    "payload": {
+     "file": "stl/print-conical-15.stl",
+     "sha256": "cfbed30d31be7e9ac67092cc2a7ce9949dc081e601f8992a7e23ea4d5c026352",
+     "bbox_mm": [
+      127.76,
+      85.48,
+      40.0
+     ],
+     "watertight": true
+    },
+    "leaf": "7f46011a99f2feb955696bfc9da4c1c01bf097c7e97f41881d457c48533e0c9a",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "6bb109b9032af58f59590675d4aa6c57b876a82ca0423923a3fb260c732ce91f"
+     },
+     {
+      "side": "R",
+      "hash": "1cdc51e20bb30399c886a55ca8617b105eb66ad96c53dddfc0d86b08f37f94ce"
+     },
+     {
+      "side": "L",
+      "hash": "d8e4c933176138f92de5b4f6f55b6172e4b40b58b8e52f659752672752a2cdd0"
+     }
+    ]
+   },
+   {
+    "name": "params",
+    "payload": {
+     "rows": 3,
+     "cols": 5,
+     "pitch": 25.0,
+     "hole_d": 17.5,
+     "height": 40.0,
+     "a1_x": 13.88,
+     "a1_y": 17.74,
+     "footprint_x": 127.76,
+     "footprint_y": 85.48
+    },
+    "leaf": "bce357e491165dcef5fb966c297cfd5313611c45ab6cf004e243117c59cd4f74",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "e30a82ec1b487ace10e853634acdbf01bb0f6e6aa9e452b9c4b572c5b0e2ed2e"
+     },
+     {
+      "side": "L",
+      "hash": "d41bfeb891953dac011a8d8b0f6debe024deb9610b38e288f0557eab71469700"
+     },
+     {
+      "side": "L",
+      "hash": "d8e4c933176138f92de5b4f6f55b6172e4b40b58b8e52f659752672752a2cdd0"
+     }
+    ]
+   },
+   {
+    "name": "source.scad",
+    "payload": {
+     "file": "scad/print-conical-15.scad",
+     "sha256": "4cbaa53338d2a0f04ffc1128b885e923994fcb63263425322ef352b4be6025d6",
+     "library_sha256": "025cbfe59bfb2d32557e6a9d5cc7a1fbf1fc54a5ea617dbfabe5a0ebfc3ffba2"
+    },
+    "leaf": "e30a82ec1b487ace10e853634acdbf01bb0f6e6aa9e452b9c4b572c5b0e2ed2e",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "bce357e491165dcef5fb966c297cfd5313611c45ab6cf004e243117c59cd4f74"
+     },
+     {
+      "side": "L",
+      "hash": "d41bfeb891953dac011a8d8b0f6debe024deb9610b38e288f0557eab71469700"
+     },
+     {
+      "side": "L",
+      "hash": "d8e4c933176138f92de5b4f6f55b6172e4b40b58b8e52f659752672752a2cdd0"
+     }
+    ]
+   }
+  ]
+ },
+ "print-conical-50": {
+  "root": "570734f1e6244089069f93209ac703bd6a535cb3a2e0093f3da39a20421646eb",
+  "fragments": [
+   {
+    "name": "derivation",
+    "payload": {
+     "from": {
+      "obs-conical-50": "43fb3cf0dc7781b43abeaad1762db87c5bc28ec6b66893ddbeeaf00c4d437cef",
+      "obs-rack-4way-orange": "a70d29ab2e27ed1ee21b587695b804435444a396dffbe9fb85631399a7062802"
+     }
+    },
+    "leaf": "fc58ea68e044ae465835a69ff7107ce2ea0a7a9b6ed50bc2317196729d81062c",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "0678abaf4f85775bd19a298bf5dbac5c1711a65ee782aa34b1cb409ca2ac2ce0"
+     },
+     {
+      "side": "R",
+      "hash": "25b426dac8741aa4716ff655cf71201da8e3c0a462da354b53568b2e3e3c5a2a"
+     },
+     {
+      "side": "R",
+      "hash": "6e63a495a622d23b671060aabbc9d86759cdb34ce4c52a0bdc3ac496bd360f01"
+     }
+    ]
+   },
+   {
+    "name": "identity",
+    "payload": {
+     "id": "print-conical-50",
+     "name": "SBS 2x3 rack, 50 mL conicals",
+     "family": "sbs-plate"
+    },
+    "leaf": "0678abaf4f85775bd19a298bf5dbac5c1711a65ee782aa34b1cb409ca2ac2ce0",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "fc58ea68e044ae465835a69ff7107ce2ea0a7a9b6ed50bc2317196729d81062c"
+     },
+     {
+      "side": "R",
+      "hash": "25b426dac8741aa4716ff655cf71201da8e3c0a462da354b53568b2e3e3c5a2a"
+     },
+     {
+      "side": "R",
+      "hash": "6e63a495a622d23b671060aabbc9d86759cdb34ce4c52a0bdc3ac496bd360f01"
+     }
+    ]
+   },
+   {
+    "name": "license",
+    "payload": {
+     "spdx": "MIT"
+    },
+    "leaf": "ded1052edb3574761573e5000656be1390105ee561edfa1a08c5a6b0587c3eac",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "0e48ab2c4419d6676fb8b93c0d8307ea005981da6ba4b06fc34d541e21356916"
+     },
+     {
+      "side": "L",
+      "hash": "a581081956e5d08cbb2e0caeae333e7a3080ddec92c5e7fc9ca6c9a2e290e921"
+     },
+     {
+      "side": "R",
+      "hash": "6e63a495a622d23b671060aabbc9d86759cdb34ce4c52a0bdc3ac496bd360f01"
+     }
+    ]
+   },
+   {
+    "name": "manufacturing",
+    "payload": {
+     "material": "PETG",
+     "grams_est": 61.2,
+     "filament_usd_est": 1.35,
+     "fill_factor": 0.75
+    },
+    "leaf": "0e48ab2c4419d6676fb8b93c0d8307ea005981da6ba4b06fc34d541e21356916",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "ded1052edb3574761573e5000656be1390105ee561edfa1a08c5a6b0587c3eac"
+     },
+     {
+      "side": "L",
+      "hash": "a581081956e5d08cbb2e0caeae333e7a3080ddec92c5e7fc9ca6c9a2e290e921"
+     },
+     {
+      "side": "R",
+      "hash": "6e63a495a622d23b671060aabbc9d86759cdb34ce4c52a0bdc3ac496bd360f01"
+     }
+    ]
+   },
+   {
+    "name": "output.opentrons",
+    "payload": {
+     "file": "opentrons/baebugs_conical_50.json",
+     "loadName": "baebugs_conical_50",
+     "sha256": "786220cc481155b90970005a91fad0018bdaed28b793fe52d869fbffd3a81fa9"
+    },
+    "leaf": "d7e7fdc18ccc03cb8255912f174d3da60ec6438f2da9e4d05a2b8b4fb44d90b1",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "4afb8559da574b63cfa3e7dca40e5220b86b0df09daf4043242db9e6a71134c4"
+     },
+     {
+      "side": "R",
+      "hash": "6929c9880e847220ed1400cb81a6591050652e5b5b438e3d345c748c7fbe7694"
+     },
+     {
+      "side": "L",
+      "hash": "d1afebc77bc9da04073d67f29c742dd0b072f0a93c5e86df3840a44a9e6f6ad8"
+     }
+    ]
+   },
+   {
+    "name": "output.stl",
+    "payload": {
+     "file": "stl/print-conical-50.stl",
+     "sha256": "e9e09bc1385705d75c8ba5bbb627f8ab27dcbdb9d9fcf8c13c1cd171ce13f944",
+     "bbox_mm": [
+      127.76,
+      85.48,
+      40.0
+     ],
+     "watertight": true
+    },
+    "leaf": "4afb8559da574b63cfa3e7dca40e5220b86b0df09daf4043242db9e6a71134c4",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "d7e7fdc18ccc03cb8255912f174d3da60ec6438f2da9e4d05a2b8b4fb44d90b1"
+     },
+     {
+      "side": "R",
+      "hash": "6929c9880e847220ed1400cb81a6591050652e5b5b438e3d345c748c7fbe7694"
+     },
+     {
+      "side": "L",
+      "hash": "d1afebc77bc9da04073d67f29c742dd0b072f0a93c5e86df3840a44a9e6f6ad8"
+     }
+    ]
+   },
+   {
+    "name": "params",
+    "payload": {
+     "rows": 2,
+     "cols": 3,
+     "pitch": 35.0,
+     "hole_d": 29.5,
+     "height": 40.0,
+     "a1_x": 28.88,
+     "a1_y": 25.24,
+     "footprint_x": 127.76,
+     "footprint_y": 85.48
+    },
+    "leaf": "5f3180155feb5903675b0cda7429406fd96187748d799fa7e272df0f74dfb793",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "4ccbce382aa258e1b4c46197b6c1f5676887cbc070a50b8e0678514a30961e6a"
+     },
+     {
+      "side": "L",
+      "hash": "dc646a264db180674cffc368fb0346302ababff0201563b778deabfa2e2bfa0f"
+     },
+     {
+      "side": "L",
+      "hash": "d1afebc77bc9da04073d67f29c742dd0b072f0a93c5e86df3840a44a9e6f6ad8"
+     }
+    ]
+   },
+   {
+    "name": "source.scad",
+    "payload": {
+     "file": "scad/print-conical-50.scad",
+     "sha256": "ea0f7e0638fe38b64ece178c3b8762a80cf92f9186ec85d26b7d21ce1adc6afb",
+     "library_sha256": "025cbfe59bfb2d32557e6a9d5cc7a1fbf1fc54a5ea617dbfabe5a0ebfc3ffba2"
+    },
+    "leaf": "4ccbce382aa258e1b4c46197b6c1f5676887cbc070a50b8e0678514a30961e6a",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "5f3180155feb5903675b0cda7429406fd96187748d799fa7e272df0f74dfb793"
+     },
+     {
+      "side": "L",
+      "hash": "dc646a264db180674cffc368fb0346302ababff0201563b778deabfa2e2bfa0f"
+     },
+     {
+      "side": "L",
+      "hash": "d1afebc77bc9da04073d67f29c742dd0b072f0a93c5e86df3840a44a9e6f6ad8"
+     }
+    ]
+   }
+  ]
+ },
+ "print-cryo-100": {
+  "root": "2b87a368d3d6ed192ad05857c265d917cd7a6ffdb3be686047c065ff046d3a24",
+  "fragments": [
+   {
+    "name": "derivation",
+    "payload": {
+     "from": {
+      "obs-cryobox-100": "f7b6437a3d893eda4094069ef3b56638a1aae5597581b1a69067094ac35c16e2"
+     }
+    },
+    "leaf": "d000bbbb92d1548d1388a01e625ccc45a89f67de292ea7cf488864933782b0d1",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "742193f89234ba08d8578178d6031f39743a3088e63ddb0b14c770e4283fa09f"
+     },
+     {
+      "side": "R",
+      "hash": "93554f43128ad8f01b5b35e8abd45bbde29140c7d39cfe41faf9af2e47c6b89e"
+     },
+     {
+      "side": "R",
+      "hash": "e45c3279ac2d0059acb4401e511396ffb92aafcdbe075065c9d542cbd3f070d2"
+     }
+    ]
+   },
+   {
+    "name": "identity",
+    "payload": {
+     "id": "print-cryo-100",
+     "name": "10x10 cryo grid insert, 133 mm",
+     "family": "grid-insert"
+    },
+    "leaf": "742193f89234ba08d8578178d6031f39743a3088e63ddb0b14c770e4283fa09f",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "d000bbbb92d1548d1388a01e625ccc45a89f67de292ea7cf488864933782b0d1"
+     },
+     {
+      "side": "R",
+      "hash": "93554f43128ad8f01b5b35e8abd45bbde29140c7d39cfe41faf9af2e47c6b89e"
+     },
+     {
+      "side": "R",
+      "hash": "e45c3279ac2d0059acb4401e511396ffb92aafcdbe075065c9d542cbd3f070d2"
+     }
+    ]
+   },
+   {
+    "name": "license",
+    "payload": {
+     "spdx": "MIT"
+    },
+    "leaf": "ded1052edb3574761573e5000656be1390105ee561edfa1a08c5a6b0587c3eac",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "e08a25516801e5e6c9a490179c52a1d0aa65e5b4e09a073767aeaf9ca0cc1ddd"
+     },
+     {
+      "side": "L",
+      "hash": "4f89b47c05bc9530142c33e525b76269780f0a13d9861e0a27cfa4ec4365097d"
+     },
+     {
+      "side": "R",
+      "hash": "e45c3279ac2d0059acb4401e511396ffb92aafcdbe075065c9d542cbd3f070d2"
+     }
+    ]
+   },
+   {
+    "name": "manufacturing",
+    "payload": {
+     "material": "PP (filament)",
+     "grams_est": 42.9,
+     "filament_usd_est": 1.93,
+     "fill_factor": 0.75
+    },
+    "leaf": "e08a25516801e5e6c9a490179c52a1d0aa65e5b4e09a073767aeaf9ca0cc1ddd",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "ded1052edb3574761573e5000656be1390105ee561edfa1a08c5a6b0587c3eac"
+     },
+     {
+      "side": "L",
+      "hash": "4f89b47c05bc9530142c33e525b76269780f0a13d9861e0a27cfa4ec4365097d"
+     },
+     {
+      "side": "R",
+      "hash": "e45c3279ac2d0059acb4401e511396ffb92aafcdbe075065c9d542cbd3f070d2"
+     }
+    ]
+   },
+   {
+    "name": "output.stl",
+    "payload": {
+     "file": "stl/print-cryo-100.stl",
+     "sha256": "913d4df36c3fdae1c9cf119b03173c44a2752be253006fbedc42accb9ffaba68",
+     "bbox_mm": [
+      133.0,
+      133.0,
+      12.0
+     ],
+     "watertight": true
+    },
+    "leaf": "ff3c11c38ee3845c30ed7de1f00ca38b1a07173bf4d38e7fbbf63d056749e1f4",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "0a23dd4b04610641ebd348e2093a8cd5fbd84025538b0621bbae749ed4453b5d"
+     },
+     {
+      "side": "R",
+      "hash": "b14cc352c370f72130c5bd9db6709b8a159bc74619f5e4aee422269ac6e34956"
+     },
+     {
+      "side": "L",
+      "hash": "5785daf57a96dfefa587a73577f2e20b9b84d31aba6afac019df197a151fb7c5"
+     }
+    ]
+   },
+   {
+    "name": "params",
+    "payload": {
+     "rows": 10,
+     "cols": 10,
+     "pitch": 13.0,
+     "hole_d": 12.6,
+     "height": 12.0,
+     "a1_x": 8.0,
+     "a1_y": 8.0,
+     "footprint_x": 133.0,
+     "footprint_y": 133.0
+    },
+    "leaf": "0a23dd4b04610641ebd348e2093a8cd5fbd84025538b0621bbae749ed4453b5d",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "ff3c11c38ee3845c30ed7de1f00ca38b1a07173bf4d38e7fbbf63d056749e1f4"
+     },
+     {
+      "side": "R",
+      "hash": "b14cc352c370f72130c5bd9db6709b8a159bc74619f5e4aee422269ac6e34956"
+     },
+     {
+      "side": "L",
+      "hash": "5785daf57a96dfefa587a73577f2e20b9b84d31aba6afac019df197a151fb7c5"
+     }
+    ]
+   },
+   {
+    "name": "source.scad",
+    "payload": {
+     "file": "scad/print-cryo-100.scad",
+     "sha256": "bc06e837c5a21673d7dcf4abfa971525295834dee55b8c0d82bd78c7dd9339d6",
+     "library_sha256": "025cbfe59bfb2d32557e6a9d5cc7a1fbf1fc54a5ea617dbfabe5a0ebfc3ffba2"
+    },
+    "leaf": "b14cc352c370f72130c5bd9db6709b8a159bc74619f5e4aee422269ac6e34956",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "aa240017c9a356b6735750e75366c979ed7dc405d0f32632c02f3ed2aa4addff"
+     },
+     {
+      "side": "L",
+      "hash": "5785daf57a96dfefa587a73577f2e20b9b84d31aba6afac019df197a151fb7c5"
+     }
+    ]
+   }
+  ]
+ },
+ "print-frame-sbs": {
+  "root": "afd97cb3a3f76c1d98a36dee31ffa856bfbd3ec25af4e0c908989905623aae95",
+  "fragments": [
+   {
+    "name": "derivation",
+    "payload": {
+     "from": {
+      "obs-printed-frame-open": "c767b9b5ee63d0f4e127363843945f02222be7075918b0e0079eac0359fdc563"
+     }
+    },
+    "leaf": "2f5570baae2c20f9e8d83f98fcf53ac23e1132e7861bbe6507289338e7e3dc4f",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "2f692e60e4bfbc42531620cbc7376e61fc205005ba9e2ac26a59b9cc99978c1e"
+     },
+     {
+      "side": "R",
+      "hash": "b9ee91f5cf005260738a232ab722f4fd3234d31024146ee47f3fe2e8a3983053"
+     },
+     {
+      "side": "R",
+      "hash": "3d325962c59eb08376cf282612b61e645b2aa49b2bc1d244d84d8aa1a041ceff"
+     }
+    ]
+   },
+   {
+    "name": "identity",
+    "payload": {
+     "id": "print-frame-sbs",
+     "name": "SBS lipped frame ('folder')",
+     "family": "frame"
+    },
+    "leaf": "2f692e60e4bfbc42531620cbc7376e61fc205005ba9e2ac26a59b9cc99978c1e",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "2f5570baae2c20f9e8d83f98fcf53ac23e1132e7861bbe6507289338e7e3dc4f"
+     },
+     {
+      "side": "R",
+      "hash": "b9ee91f5cf005260738a232ab722f4fd3234d31024146ee47f3fe2e8a3983053"
+     },
+     {
+      "side": "R",
+      "hash": "3d325962c59eb08376cf282612b61e645b2aa49b2bc1d244d84d8aa1a041ceff"
+     }
+    ]
+   },
+   {
+    "name": "license",
+    "payload": {
+     "spdx": "MIT"
+    },
+    "leaf": "ded1052edb3574761573e5000656be1390105ee561edfa1a08c5a6b0587c3eac",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "7d6e1c3b75b9236cbd4afbe5de08cd40970fcd05888bf25c84cc0637f47efefd"
+     },
+     {
+      "side": "L",
+      "hash": "64aff250912b91dcd908d695a312f8124afdf8ef93f8d8e2dc5d4ca664b164e8"
+     },
+     {
+      "side": "R",
+      "hash": "3d325962c59eb08376cf282612b61e645b2aa49b2bc1d244d84d8aa1a041ceff"
+     }
+    ]
+   },
+   {
+    "name": "manufacturing",
+    "payload": {
+     "material": "PETG",
+     "grams_est": 24.6,
+     "filament_usd_est": 0.54,
+     "fill_factor": 0.75
+    },
+    "leaf": "7d6e1c3b75b9236cbd4afbe5de08cd40970fcd05888bf25c84cc0637f47efefd",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "ded1052edb3574761573e5000656be1390105ee561edfa1a08c5a6b0587c3eac"
+     },
+     {
+      "side": "L",
+      "hash": "64aff250912b91dcd908d695a312f8124afdf8ef93f8d8e2dc5d4ca664b164e8"
+     },
+     {
+      "side": "R",
+      "hash": "3d325962c59eb08376cf282612b61e645b2aa49b2bc1d244d84d8aa1a041ceff"
+     }
+    ]
+   },
+   {
+    "name": "output.stl",
+    "payload": {
+     "file": "stl/print-frame-sbs.stl",
+     "sha256": "1e24cfd32cf512c37fc855c8e2d52b53629c7803a005b1f3a83d6834337a1aa0",
+     "bbox_mm": [
+      127.76,
+      85.48,
+      12.0
+     ],
+     "watertight": true
+    },
+    "leaf": "080cc69c20196ee17d9cde8731e90084ad84ee5f36e32215f0983edef09fde97",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "ce3002f62cbdee3476b3c20e9beb232beb17771d079f8d95856c18602b79c2ae"
+     },
+     {
+      "side": "R",
+      "hash": "34799c1f1ff72dc23d8b8e8d022051c5cd495d5dd0a0b942ef04c1f08760381a"
+     },
+     {
+      "side": "L",
+      "hash": "332b48ff8bb4b746f16b2292a161d33914dfa5085ccdf711b5d52159ab063198"
+     }
+    ]
+   },
+   {
+    "name": "params",
+    "payload": {
+     "footprint_x": 127.76,
+     "footprint_y": 85.48,
+     "height": 12.0,
+     "wall": 5.0,
+     "lip": 2.0,
+     "lip_z": 2.0
+    },
+    "leaf": "ce3002f62cbdee3476b3c20e9beb232beb17771d079f8d95856c18602b79c2ae",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "080cc69c20196ee17d9cde8731e90084ad84ee5f36e32215f0983edef09fde97"
+     },
+     {
+      "side": "R",
+      "hash": "34799c1f1ff72dc23d8b8e8d022051c5cd495d5dd0a0b942ef04c1f08760381a"
+     },
+     {
+      "side": "L",
+      "hash": "332b48ff8bb4b746f16b2292a161d33914dfa5085ccdf711b5d52159ab063198"
+     }
+    ]
+   },
+   {
+    "name": "source.scad",
+    "payload": {
+     "file": "scad/print-frame-sbs.scad",
+     "sha256": "c21663478fd101df879f3f1e8a3b28b37667ba1c7ba99a909efeab970bd7e380",
+     "library_sha256": "025cbfe59bfb2d32557e6a9d5cc7a1fbf1fc54a5ea617dbfabe5a0ebfc3ffba2"
+    },
+    "leaf": "34799c1f1ff72dc23d8b8e8d022051c5cd495d5dd0a0b942ef04c1f08760381a",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "c15d9d6d7252c17ba1b37154100904067d3550f94c1b77e6cbae95c99113e4fa"
+     },
+     {
+      "side": "L",
+      "hash": "332b48ff8bb4b746f16b2292a161d33914dfa5085ccdf711b5d52159ab063198"
+     }
+    ]
+   }
+  ]
+ },
+ "print-grid-mesh": {
+  "root": "0b84aa715965e3a95dbb0940b16b8bf20483feef8cefcb71c9f65c90d55621c6",
+  "fragments": [
+   {
+    "name": "derivation",
+    "payload": {
+     "from": {
+      "obs-printed-grid-mesh": "82f49f1d56d0ef16007fa608465a960b4f41fdec3430764f13651097b77f7049",
+      "obs-perforated-sheet": "801f4140974661cef3f66f229805d55926f66ed8147a5f95a3e5a2c40927094d"
+     }
+    },
+    "leaf": "d93a43e6d445b68e46de4336f1df5f3c29895a3a5df7a0bf2a17d347d9b41998",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "c6c4aa3c44d6391ffec14522d11d9b2f1b43cf5ae2646397da276816a0c4d05e"
+     },
+     {
+      "side": "R",
+      "hash": "f7893d75c406c009ef877bd9d71c03eeef0b2fe7ff6ebb1dff3c87561b168d4e"
+     },
+     {
+      "side": "R",
+      "hash": "098b2f43489b440971df2a3c4b3e3e5fdc355e96ce0d2fe722d12295d956a5dc"
+     }
+    ]
+   },
+   {
+    "name": "identity",
+    "payload": {
+     "id": "print-grid-mesh",
+     "name": "SBS 2x3 screened grid frame",
+     "family": "grid-frame"
+    },
+    "leaf": "c6c4aa3c44d6391ffec14522d11d9b2f1b43cf5ae2646397da276816a0c4d05e",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "d93a43e6d445b68e46de4336f1df5f3c29895a3a5df7a0bf2a17d347d9b41998"
+     },
+     {
+      "side": "R",
+      "hash": "f7893d75c406c009ef877bd9d71c03eeef0b2fe7ff6ebb1dff3c87561b168d4e"
+     },
+     {
+      "side": "R",
+      "hash": "098b2f43489b440971df2a3c4b3e3e5fdc355e96ce0d2fe722d12295d956a5dc"
+     }
+    ]
+   },
+   {
+    "name": "license",
+    "payload": {
+     "spdx": "MIT"
+    },
+    "leaf": "ded1052edb3574761573e5000656be1390105ee561edfa1a08c5a6b0587c3eac",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "fd2405462956589bc7770864f21f8879f755bd5fe6d34509c7332abaea3ea910"
+     },
+     {
+      "side": "L",
+      "hash": "0a6021ada79350a59c3d697e30f9cb51d9094c706d7a066f145b7181d58a34a1"
+     },
+     {
+      "side": "R",
+      "hash": "098b2f43489b440971df2a3c4b3e3e5fdc355e96ce0d2fe722d12295d956a5dc"
+     }
+    ]
+   },
+   {
+    "name": "manufacturing",
+    "payload": {
+     "material": "PETG",
+     "grams_est": 24.3,
+     "filament_usd_est": 0.54,
+     "fill_factor": 0.75
+    },
+    "leaf": "fd2405462956589bc7770864f21f8879f755bd5fe6d34509c7332abaea3ea910",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "ded1052edb3574761573e5000656be1390105ee561edfa1a08c5a6b0587c3eac"
+     },
+     {
+      "side": "L",
+      "hash": "0a6021ada79350a59c3d697e30f9cb51d9094c706d7a066f145b7181d58a34a1"
+     },
+     {
+      "side": "R",
+      "hash": "098b2f43489b440971df2a3c4b3e3e5fdc355e96ce0d2fe722d12295d956a5dc"
+     }
+    ]
+   },
+   {
+    "name": "output.stl",
+    "payload": {
+     "file": "stl/print-grid-mesh.stl",
+     "sha256": "cca6d5aef804b188f2721b26fbbfc03687ba955edb1145b081c903535212e523",
+     "bbox_mm": [
+      127.76,
+      85.48,
+      8.0
+     ],
+     "watertight": true
+    },
+    "leaf": "d621d5fc014d81589adec65cc6ad2ad462d18945e5312934eac2fb3d441b4431",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "85ee4e2d332bf84e725547786fdf3c4e6ff09ea01fa2d5a1dd5b9c03060ec464"
+     },
+     {
+      "side": "R",
+      "hash": "8f8f3a795a17262d5269781516392483bc9eb3a2dede2144323ecdab8be2b0ec"
+     },
+     {
+      "side": "L",
+      "hash": "948bf13ffc5bb2074f579a25202773c4a88339f1ea81c58fdaf9fff55620af3c"
+     }
+    ]
+   },
+   {
+    "name": "params",
+    "payload": {
+     "footprint_x": 127.76,
+     "footprint_y": 85.48,
+     "height": 8.0,
+     "wall": 4.0,
+     "rows": 2,
+     "cols": 3,
+     "rib": 3.0,
+     "floor": 1.2,
+     "mesh_hole": 2.0,
+     "mesh_pitch": 3.0
+    },
+    "leaf": "85ee4e2d332bf84e725547786fdf3c4e6ff09ea01fa2d5a1dd5b9c03060ec464",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "d621d5fc014d81589adec65cc6ad2ad462d18945e5312934eac2fb3d441b4431"
+     },
+     {
+      "side": "R",
+      "hash": "8f8f3a795a17262d5269781516392483bc9eb3a2dede2144323ecdab8be2b0ec"
+     },
+     {
+      "side": "L",
+      "hash": "948bf13ffc5bb2074f579a25202773c4a88339f1ea81c58fdaf9fff55620af3c"
+     }
+    ]
+   },
+   {
+    "name": "source.scad",
+    "payload": {
+     "file": "scad/print-grid-mesh.scad",
+     "sha256": "f922d5f1a2f729320c438aa2690c02ff810225cefcf1aeafb5556f66699bec2b",
+     "library_sha256": "025cbfe59bfb2d32557e6a9d5cc7a1fbf1fc54a5ea617dbfabe5a0ebfc3ffba2"
+    },
+    "leaf": "8f8f3a795a17262d5269781516392483bc9eb3a2dede2144323ecdab8be2b0ec",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "5884bd60a982c42b3a80272342037cc626e90409692453932016a22ab9a21177"
+     },
+     {
+      "side": "L",
+      "hash": "948bf13ffc5bb2074f579a25202773c4a88339f1ea81c58fdaf9fff55620af3c"
+     }
+    ]
+   }
+  ]
+ },
+ "print-honeycomb": {
+  "root": "6b864896a283f37582c86d2b0cf335fd34d613ad607f47e61c36dd51de6b991a",
+  "fragments": [
+   {
+    "name": "derivation",
+    "payload": {
+     "from": {
+      "obs-printed-honeycomb": "674773f876d4ef2f6b02efb69ca45bfc00188d953190dab36f81a94b84c97213"
+     }
+    },
+    "leaf": "7a7536fc42e4c8be291dbdfaf26813e6f9203be794099754d9907fff1ebe89a7",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "37dee8946f2d607f02e749b689bd0920d1d7fc8329f241a91d3428dc80378feb"
+     },
+     {
+      "side": "R",
+      "hash": "6464c8e3918632cf3f87165902464474cd37c96e7da9d6f89666035adcd3974d"
+     },
+     {
+      "side": "R",
+      "hash": "7b7c698e086d73f6169c2199cffea7bf47b4aa55bbb021d0b95088f008b0997b"
+     }
+    ]
+   },
+   {
+    "name": "identity",
+    "payload": {
+     "id": "print-honeycomb",
+     "name": "Honeycomb insert for SBS frame",
+     "family": "honeycomb"
+    },
+    "leaf": "37dee8946f2d607f02e749b689bd0920d1d7fc8329f241a91d3428dc80378feb",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "7a7536fc42e4c8be291dbdfaf26813e6f9203be794099754d9907fff1ebe89a7"
+     },
+     {
+      "side": "R",
+      "hash": "6464c8e3918632cf3f87165902464474cd37c96e7da9d6f89666035adcd3974d"
+     },
+     {
+      "side": "R",
+      "hash": "7b7c698e086d73f6169c2199cffea7bf47b4aa55bbb021d0b95088f008b0997b"
+     }
+    ]
+   },
+   {
+    "name": "license",
+    "payload": {
+     "spdx": "MIT"
+    },
+    "leaf": "ded1052edb3574761573e5000656be1390105ee561edfa1a08c5a6b0587c3eac",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "6a6b6a1c1121c6d4bf4bfd79c111cb7ad3e9d82cfefd77d17f0a97c1763ea1ad"
+     },
+     {
+      "side": "L",
+      "hash": "e6718a0650f8829527bb18fd5110fcc47ba6d03c23a68838d9b6653897973494"
+     },
+     {
+      "side": "R",
+      "hash": "7b7c698e086d73f6169c2199cffea7bf47b4aa55bbb021d0b95088f008b0997b"
+     }
+    ]
+   },
+   {
+    "name": "manufacturing",
+    "payload": {
+     "material": "PLA",
+     "grams_est": 13.9,
+     "filament_usd_est": 0.28,
+     "fill_factor": 0.75
+    },
+    "leaf": "6a6b6a1c1121c6d4bf4bfd79c111cb7ad3e9d82cfefd77d17f0a97c1763ea1ad",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "ded1052edb3574761573e5000656be1390105ee561edfa1a08c5a6b0587c3eac"
+     },
+     {
+      "side": "L",
+      "hash": "e6718a0650f8829527bb18fd5110fcc47ba6d03c23a68838d9b6653897973494"
+     },
+     {
+      "side": "R",
+      "hash": "7b7c698e086d73f6169c2199cffea7bf47b4aa55bbb021d0b95088f008b0997b"
+     }
+    ]
+   },
+   {
+    "name": "output.stl",
+    "payload": {
+     "file": "stl/print-honeycomb.stl",
+     "sha256": "6cdca6da9d22dce856d8fc66f7940f2b8176ae8cb017de72952eab73f8385a7b",
+     "bbox_mm": [
+      117.16,
+      74.88,
+      6.0
+     ],
+     "watertight": true
+    },
+    "leaf": "a8512f1ff927eaa4e3c159de33cd9aae4519c02d00d764ecd86911b4dc7bc221",
+    "proof": [
+     {
+      "side": "R",
+      "hash": "06dee33a96d959893bea7f310aaf2d6acf64f8dfb9584a6d8b551624c7120289"
+     },
+     {
+      "side": "R",
+      "hash": "f2391a6fb56d4c39274b5e4df41a1715870d76705936fd93aeaa6d0b90943579"
+     },
+     {
+      "side": "L",
+      "hash": "7070d65563e2e681de77c35b548bcd7434b73fbe740b542ac9270c6ab11738e1"
+     }
+    ]
+   },
+   {
+    "name": "params",
+    "payload": {
+     "footprint_x": 117.16,
+     "footprint_y": 74.88,
+     "height": 6.0,
+     "cell": 14.0,
+     "wall": 1.6
+    },
+    "leaf": "06dee33a96d959893bea7f310aaf2d6acf64f8dfb9584a6d8b551624c7120289",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "a8512f1ff927eaa4e3c159de33cd9aae4519c02d00d764ecd86911b4dc7bc221"
+     },
+     {
+      "side": "R",
+      "hash": "f2391a6fb56d4c39274b5e4df41a1715870d76705936fd93aeaa6d0b90943579"
+     },
+     {
+      "side": "L",
+      "hash": "7070d65563e2e681de77c35b548bcd7434b73fbe740b542ac9270c6ab11738e1"
+     }
+    ]
+   },
+   {
+    "name": "source.scad",
+    "payload": {
+     "file": "scad/print-honeycomb.scad",
+     "sha256": "e8f53158658fb9cd97145684f5a76f0f85f8a297341d60b2f1ec875a595e4a86",
+     "library_sha256": "025cbfe59bfb2d32557e6a9d5cc7a1fbf1fc54a5ea617dbfabe5a0ebfc3ffba2"
+    },
+    "leaf": "f2391a6fb56d4c39274b5e4df41a1715870d76705936fd93aeaa6d0b90943579",
+    "proof": [
+     {
+      "side": "L",
+      "hash": "6088993dd74e9ecafb078d35de2eab036ae745b204144547d355b348230e608a"
+     },
+     {
+      "side": "L",
+      "hash": "7070d65563e2e681de77c35b548bcd7434b73fbe740b542ac9270c6ab11738e1"
+     }
+    ]
+   }
+  ]
+ }
+}

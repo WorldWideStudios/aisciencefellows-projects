@@ -1,0 +1,92 @@
+[
+ {
+  "seq": 0,
+  "date": "2026-10-25",
+  "actor": "Byron",
+  "action": "captured",
+  "detail": "16 bench photos (bytes off-repo, recorded as BREAKs)",
+  "commits_to": {
+   "photos": {
+    "46901": "bf2add091eae09de201aff68aed6aea8516fb3ca1b51d0da60c0081b276b5528",
+    "46902": "96fc3f4ad4dd9f26e7225261f17537e58e8b6d3f3354b2c4ddd219f4a60d7b15",
+    "46903": "f6abbcdd00e69bf5f88daf52a9c0efe6a2bd52eb76aad523b48295ab9bae176b",
+    "46904": "c46be60cd0b94647b22edb1fdba0966949e55e7c5c46ee23023c62e6ba0e9231",
+    "46905": "21d41ff54de656f8c245e93f92fb8e031c50e831664a047e2542b367c2bb909f",
+    "46906": "76712fa492d3284eed4dec3a1a558bcbdd61195b5634543b4d0f1b4c892384d1",
+    "46907": "cdd431171cc9044ccf0a2ecbfbe6e1daf9c1139cc2fe957e273d8a3e88a610ec",
+    "46908": "0d219e2da0b2f1c1294c2b1c6528263b63d480f0dd32eb1e11f7eda89b18870f",
+    "46909": "194742f25f983868db0bff29ee2fae6931fd59a4742b9c5a1cd6151e00147881",
+    "46910": "cad86112e86249bece0d208cee6a448089184e6c0e1831802c7edd388397e8ea",
+    "46911": "6ee77b2174922ce7d0d04ccc4f001d5558cde72c72e3e2aca702e2c0bae2c011",
+    "46912": "e4422ccd4ce160437d97b22d614c5cff61bf878759c5841523be9de2c05e601c",
+    "46914": "c8f21843b4296a1bdee4121489b7b23dca3b72aa96624ecdc3c8ae473932fc54",
+    "46915": "e10aa2155c6563f5b5b601c7147bdce865760a3016aef056ca2efcb8afe4a993",
+    "46916": "6053dc9bab4f4a70354517eb22e5e479a59844fc541c71f2737a91e25c5eb73a",
+    "46917": "d2506c29f6a5c73b7f9e1ae655b6f2555273a8e632ba52374896433d61a2977e"
+   }
+  },
+  "prev": "0000000000000000000000000000000000000000000000000000000000000000",
+  "hash": "353f76fa68253ca7e7536fb9d93dd86dc5eac951b256493ffd364ca22a90d5a9"
+ },
+ {
+  "seq": 1,
+  "date": "2026-10-25",
+  "actor": "Claude (agent)",
+  "action": "cataloged",
+  "detail": "19 observed parts; dimensions are photo estimates against an 18 in rule",
+  "commits_to": {
+   "obs-tipbox-1000-blue": "b7bc9e8a1e18a80603dc8b476d3404265ddc86496e5245f60fbaa0664fcc4ede",
+   "obs-tipbox-200f-magenta": "4a4fce589d9e1edefbccd1ee45d73c8471e9f4bd8fe323520be87542964f4241",
+   "obs-tipbox-purple-hinged": "836b48b838e3551b612d51633294bd24a6504d57d951a35e95b47cddcb8d7f81",
+   "obs-microtube-96-purple": "077717b8fad2875d115a5f3bcc96ec27fabc3b989858955fb7f25fef434c0116",
+   "obs-microtube-50-purple": "594b053105fa6c1a2b5696ebccdeffa88d437267d9aca100836e2bb267142bc7",
+   "obs-cryobox-100": "f7b6437a3d893eda4094069ef3b56638a1aae5597581b1a69067094ac35c16e2",
+   "obs-cryotube-2ml": "9ef010c792627133d4f35a9a7e9d0fd0a63a104ca30793361a22a931bfd6c4ad",
+   "obs-conical-50": "43fb3cf0dc7781b43abeaad1762db87c5bc28ec6b66893ddbeeaf00c4d437cef",
+   "obs-rack-18-white": "2bdbce3f9cced1532271c5f42a180a51ac2558bbf0e5bb33049148bae1f1bd0e",
+   "obs-rack-4way-orange": "a70d29ab2e27ed1ee21b587695b804435444a396dffbe9fb85631399a7062802",
+   "obs-freezer-rack-3bay": "c98a715b05460d2abd0fcc9d373cbdcad75af088d619f81f74eb558b39f69f5f",
+   "obs-tub-yellow": "e5d941eff52bddbf0c885e690b8703c2df8f4a6db761d4dd206c5e45bb93b142",
+   "obs-printed-frame-open": "c767b9b5ee63d0f4e127363843945f02222be7075918b0e0079eac0359fdc563",
+   "obs-printed-grid-mesh": "82f49f1d56d0ef16007fa608465a960b4f41fdec3430764f13651097b77f7049",
+   "obs-printed-honeycomb": "674773f876d4ef2f6b02efb69ca45bfc00188d953190dab36f81a94b84c97213",
+   "obs-perforated-sheet": "801f4140974661cef3f66f229805d55926f66ed8147a5f95a3e5a2c40927094d",
+   "obs-minicentrifuge": "ff275cc572cca333d9fa4d878ff724e822a69f2d7cf5851fd49edb3880a9143b",
+   "obs-vortexer": "53eb3f46fba1070548861f567be48a9b32ad83fff40f4fa366c0f652479dda24",
+   "obs-steel-rule-18in": "89a856f2e84bc6f3ff1d6ab99dff6338f95115361b89a527e99ef74942fad294"
+  },
+  "prev": "353f76fa68253ca7e7536fb9d93dd86dc5eac951b256493ffd364ca22a90d5a9",
+  "hash": "66b253955c91a0976fc10803e30d59992fa28ff1296422fa79435a98d9f112d6"
+ },
+ {
+  "seq": 2,
+  "date": "2026-10-25",
+  "actor": "Claude (agent)",
+  "action": "modeled",
+  "detail": "8 parametric remixes rendered with OpenSCAD; Opentrons defs for SBS racks",
+  "commits_to": {
+   "print-rack-96": "5b1f987e37e815d2133bbfde7cb570dc8dffb83429bda5ed6df6a030fa5f6384",
+   "print-cryo-24": "a76d3ec59ee66cb6e64297e2d3f72839d3a6bbdf8fabeb5e13d1229006ee4929",
+   "print-conical-15": "dc7a2bd4bc503c393010ae840691bc6a85cc0646ba33f3e89c01c62e908e86a4",
+   "print-conical-50": "570734f1e6244089069f93209ac703bd6a535cb3a2e0093f3da39a20421646eb",
+   "print-cryo-100": "2b87a368d3d6ed192ad05857c265d917cd7a6ffdb3be686047c065ff046d3a24",
+   "print-frame-sbs": "afd97cb3a3f76c1d98a36dee31ffa856bfbd3ec25af4e0c908989905623aae95",
+   "print-grid-mesh": "0b84aa715965e3a95dbb0940b16b8bf20483feef8cefcb71c9f65c90d55621c6",
+   "print-honeycomb": "6b864896a283f37582c86d2b0cf335fd34d613ad607f47e61c36dd51de6b991a"
+  },
+  "prev": "66b253955c91a0976fc10803e30d59992fa28ff1296422fa79435a98d9f112d6",
+  "hash": "88682e02282e64f7f6c1a65c292b8e4538c943fd9ec8b6aa41f7c65bc5f63e6f"
+ },
+ {
+  "seq": 3,
+  "date": "2026-10-25",
+  "actor": "Claude (agent)",
+  "action": "sealed",
+  "detail": "lab Merkle root over all part roots",
+  "commits_to": {
+   "lab_root": "d469e0e9b7f9395156a240f03ea1a4cf4249210ac2d4d7d0e6b91a458ea3aa6d"
+  },
+  "prev": "88682e02282e64f7f6c1a65c292b8e4538c943fd9ec8b6aa41f7c65bc5f63e6f",
+  "hash": "00a4a6c85b321126695b3704c7d9cdcd50ce41d712447bfe07a75c0468561c99"
+ }
+]

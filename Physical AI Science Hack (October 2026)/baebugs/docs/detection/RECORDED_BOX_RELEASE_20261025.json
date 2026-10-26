@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "name": "source hash vs recorded source",
+      "state": "PASS"
+    },
+    {
+      "name": "model coordinates inside original images",
+      "state": "PASS"
+    },
+    {
+      "name": "source-free browser dynamics",
+      "reported_initial_visible_boxes": 7,
+      "state": "PASS"
+    },
+    {
+      "name": "YOLOE only layer selection",
+      "state": "PASS",
+      "visible_boxes": 3
+    },
+    {
+      "name": "confidence threshold 0.30",
+      "state": "PASS",
+      "visible_boxes": 2
+    },
+    {
+      "name": "second photo bounding boxes",
+      "state": "PASS",
+      "visible_boxes": 1
+    },
+    {
+      "name": "original source, derived public image and catalog browser SHA256",
+      "state": "PASS"
+    },
+    {
+      "name": "mobile svg/image geometry and no horizontal overflow",
+      "state": "PASS"
+    },
+    {
+      "name": "Jupyter 3 code cells executed",
+      "state": "PASS"
+    },
+    {
+      "expected_failure": 1,
+      "name": "full repository Python test suite",
+      "passed": 154,
+      "skipped": 1,
+      "state": "PASS",
+      "warnings": 6
+    }
+  ],
+  "claim_status": "RECORDED_INFERENCE",
+  "failed_predecessor": {
+    "failure": "Missing review route; fixed before release; no history erased",
+    "path": "docs/detection/RELEASE_TEST_PREDECESSOR_20261025.json"
+  },
+  "id": "BAEBUGS-PA12-BOUNDING-BOX-20261025-001",
+  "inference_executed_this_turn": "NO",
+  "live_camera_connected": "NO",
+  "mmr_commit": "NOT_COMPUTED",
+  "new_canonical_root": "SUCCESSOR_WILL_BE_COMPUTED_BY_BAEBUGS_MVP",
+  "next_action": "Commit, push, merge reviewed portal changes, pin deployed source SHA and independently verify production readback.",
+  "parent_catalog_root": "cfed9a54d6424f34a06b03f98395c3f4cd6e7a891169d018f7e62fbc72a37a2f",
+  "parent_source_commit": "a3abe90a188e281e959ddc7b3c1f5179ae49c248",
+  "real_specimen_recovery": "NOT_TESTED",
+  "recorded_model_boxes": {
+    "box_of_toys": {
+      "owlv2": 1,
+      "yoloe": 0
+    },
+    "two_toys": {
+      "owlv2": 4,
+      "yoloe": 3
+    }
+  },
+  "schema": "baebugs.RecordedDetectionReleaseReceipt.v1",
+  "scientific_ground_truth": "NOT_VERIFIED",
+  "signed": "NOT_SIGNED",
+  "source_license_context": "Repo atom declares OWN/MIT for source photos and detection JSON; executor declares OWN+TERMS / MIT + Ultralytics terms. Rights ownership is not independently adjudicated.",
+  "source_photo_dimensions_px": [
+    1659,
+    2212
+  ],
+  "sources": [
+    {
+      "path": "assets/photos/pa12_toys_two_on_floor.jpg",
+      "sha256": "ce17c7f7fdd8c11d9b19c4301fab5a937b2105ca580ae0eded7cf54d00958187"
+    },
+    {
+      "path": "assets/photos/pa12_toys_box.jpg",
+      "sha256": "9d819a7ac5271eaa71b803d37fcf7f7911a4cfc986556debd0b19d110b1eca4e"
+    },
+    {
+      "path": "docs/toy_photo_models/results.json",
+      "sha256": "a631e70047f561ebfd63356e16f9973784aba08de29f1dd0f0d8dc88a15c6028"
+    }
+  ]
+}

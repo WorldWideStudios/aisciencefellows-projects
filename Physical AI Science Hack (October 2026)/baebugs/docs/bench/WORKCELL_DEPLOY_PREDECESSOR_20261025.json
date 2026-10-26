@@ -1,0 +1,27 @@
+{
+  "approved_physical_operation": "NOT_TESTED",
+  "body_sha256": "51ee7efd9cd67cde7bf08c2b3a8cc1ee9383eaf8521f052cea81253a70513e36",
+  "browser_readback": {
+    "mobile_no_horizontal_overflow": true,
+    "modelled_twin_status_label": true,
+    "one_leaf_exact_sha256_verified": true,
+    "selected_default_twin": true,
+    "six_stages": true,
+    "webgl_canvas_present": true
+  },
+  "evidence_limitation": "Version 1 counted 16 prior withheld labware photos but did not include the user-supplied new bench photo; this successor explicitly adds its withheld-source gap.",
+  "exact_readback": {
+    "fail": 0,
+    "manifest_exact_match": true,
+    "pass": 38
+  },
+  "id": "BAEBUGS-WORKCELL-PROD-20261025-001",
+  "manifest_sha256": "95d92ffc8a5862df0bc4b9f0627d44f8dd12f6bd5d6ed73b1e8cdb2be1810b79",
+  "parent_branch_commit": "9de888eb61f20ac602d6f96fd500dd866c3380d4",
+  "production_url": "https://baebugs-lab-workcell-hf6k5q7om-biobitworks.vercel.app",
+  "root": "9a6598cb25025a8cc905472b95add1765e8541680969fea360d0c79af1a1b658",
+  "schema": "baebugs.deployment_predecessor_receipt.v1",
+  "signed": "NOT_SIGNED",
+  "status": "EXECUTED_AND_OBSERVED",
+  "vercel_deployment_id": "dpl_H55BBHK3kEuBfj7ztcGDMxRBmbvu"
+}

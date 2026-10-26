@@ -1,0 +1,87 @@
+# Sample spec for gatecalc.py (TOML). Copy to gate_runs/<sample>/spec.toml and edit.
+# Units mm. Every value marked ASSUMED is a placeholder until the bench measures it.
+# This copy is the pantry calibration set (rice, quinoa, chickpea, pasta) and runs as is:
+#   <venv python> .claude\skills\sieve-gate-design\scripts\gatecalc.py plan .claude\skills\sieve-gate-design\templates\sample-spec.toml
+
+[sample]
+name = "pantry-demo"
+condition = "dry"            # dry | wet (water) | ethanol. Measure dims in the same condition you sort in.
+notes = "Calibration set from sim/BENCH.md. Sizes are typical values, not caliper data."
+
+[print]
+undersize_mm = 0.15          # ASSUMED: nominal minus printed opening, XY plane. Replace with hole_gauge data.
+tolerance_mm = 0.10          # ASSUMED: +/- scatter of a printed opening; scored as worst case
+# gauge = [[1.0, 0.82], [1.5, 1.34], [2.0, 1.86], [3.0, 2.85]]   # [nominal, measured] from hole_gauge.py;
+#                                                                   overrides undersize_mm when present
+
+[rules]
+pass_clearance_mm = 0.15     # room a passer needs beyond its size (wedging guard)
+block_margin_mm = 0.10       # how far a kept item must exceed the opening
+p_roll = 0.5                 # ASSUMED: chance an item that only fits on edge rolls through. gatecalc sim estimates it.
+gate_menu = ["w", "t"]       # kinds the planner may pick: w, t (gated_container strips today); sq, slot, o
+samples = 4000               # draws per item
+# w_height_mm = 8.0  t_width_mm = 8.0  min_mm = 0.8  max_mm = 12.0  step_mm = 0.05  sim_max_particles = 80
+
+[well]
+plate = "std96_flat"         # std96_flat | std96_round | pcr96 | deep96_square_2ml | deep96_round_1ml
+require = "below_rim"        # below_rim | submerged (then set fill_ul)
+# fill_ul = 100
+accept_lean = true           # count items that only fit leaning against the wall as "fits"
+margin_mm = 0.3
+
+# One [[item]] per item type. Dimensions: L >= W >= T of the rigid body, any of
+#   [lo, hi]                     truncated normal, mean = middle, sd = (hi - lo) / 4, clipped to [lo, hi]
+#   {mean = 2.0, sd = 0.1}       normal, clipped at 3 sd
+#   measured = "../../sim/bench/grain_dims.csv"   bootstrap caliper rows (columns kind, length_mm, width_mm,
+#                                                 thickness_mm), path relative to this file; measured_kind = ".."
+#   source = "sim"               draw from the sim's own generator for sim_kind (sim/grains.py, sim/insects.py)
+# span = [lo, hi] (optional): largest extent with legs, antennae, wings, for the snag warning.
+# sim_kind: rice | quinoa | chickpea | pasta | insect_compact | insect_elongate | insect_longleg
+
+[[item]]
+name = "rice_long"
+sim_kind = "rice"
+count = 30
+length = [5.8, 7.2]
+width = [1.8, 2.2]
+thickness = [1.55, 1.85]
+
+[[item]]
+name = "quinoa"
+sim_kind = "quinoa"
+count = 30
+length = [1.8, 2.2]
+width = [1.8, 2.2]
+thickness = [0.95, 1.2]
+
+[[item]]
+name = "chickpea"
+sim_kind = "chickpea"
+count = 8
+length = [7.5, 9.5]
+width = [7.0, 9.0]
+thickness = [6.5, 8.5]
+
+[[item]]
+name = "pasta_ditalini"
+sim_kind = "pasta"
+count = 8
+length = [6.0, 7.2]          # tube: outer diameter 6.5, length 6.0, so L ~ W ~ OD and T ~ tube length
+width = [5.8, 7.0]
+thickness = [5.4, 6.6]
+fragile = false
+
+# Classes, TOP LEVEL FIRST; the last class is the catch under the bottom gate. An item sample joins the
+# first class it matches. Filters (all optional, combined with AND): items = [...], well = "fits" | "too_big",
+# min_/max_ length, width, thickness.
+[[class]]
+name = "too_big"
+items = ["chickpea", "pasta_ditalini"]
+
+[[class]]
+name = "thick_rice"
+items = ["rice_long"]
+
+[[class]]
+name = "flat_quinoa"
+items = ["quinoa"]

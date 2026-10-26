@@ -1,0 +1,12 @@
+{
+  "failed_test": "tests/test_detection_gallery.py::test_source_bound_publication_paths",
+  "model_inference_new": "NOT_EXECUTED",
+  "observed_failure": "Review page omitted link to detection viewer although index home link was generated.",
+  "parent_release_sha": "a3abe90a188e281e959ddc7b3c1f5179ae49c248",
+  "physical_recovery": "NOT_TESTED",
+  "repair": "Insert detection into review routing and lock SVG overlay aspect to image dimensions.",
+  "schema": "baebugs.DetectionGalleryTestPredecessor.v1",
+  "signature": "NOT_SIGNED",
+  "source_images_public_in_repo": true,
+  "status": "FAILED_THEN_REPAIRED"
+}

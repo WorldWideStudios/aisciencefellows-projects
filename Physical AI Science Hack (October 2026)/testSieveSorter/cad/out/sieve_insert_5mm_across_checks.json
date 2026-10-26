@@ -1,0 +1,47 @@
+{
+  "valid_solid": true,
+  "single_solid": true,
+  "watertight_mesh": true,
+  "bbox_mm": [
+    134.62,
+    95.99,
+    21.61
+  ],
+  "fits_bed": true,
+  "volume_cm3": 23.09,
+  "hole_mm": 5.0,
+  "bar_mm": 1.2,
+  "screen_t_mm": 1.6,
+  "holes": 216,
+  "open_pct_of_box_bottom": 54.0,
+  "outside_mm": [
+    131.4,
+    95.4
+  ],
+  "screen_mm": [
+    121.4,
+    81.4
+  ],
+  "border_ramp": {
+    "ends_mm": 5.0,
+    "sides_mm": 7.0,
+    "deg": 45,
+    "outer_flat_mm": 0.6
+  },
+  "ridges_along_y": {
+    "count": 2,
+    "w_mm": 3.0,
+    "h_mm": 1.5,
+    "deg": 45,
+    "x_mm": [
+      -20.73,
+      20.73
+    ]
+  },
+  "window_mm": [
+    38.47,
+    81.4
+  ],
+  "label": "5X on the +Y tab",
+  "solid_along_x": "none above the screen but the tabs"
+}

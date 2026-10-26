@@ -1,0 +1,11 @@
+{
+  "camera": "XWF-1080P",
+  "px_per_mm": 13.9,
+  "measured_from": "samples/webcam_calibration_ruler.webp",
+  "measured_with": "ruler_scale.py --along horizontal --strip 20 400 1032 1052 --strip 400 800 1032 1052 --strip 1040 1240 1032 1052",
+  "date": "2026-10-24",
+  "note": "Only valid while the webcam stays at the same height and angle. After moving it, photograph a mm ruler beside the dish and re-measure. A ruler at the top of the frame read 14.6 px/mm, so the camera is tilted slightly: expect up to ~5% scale error until it is levelled or calibrated with the ruler where the dish sits.",
+  "threshold": 10,
+  "floor_mm": 52,
+  "setup_note": "Dish on white printer paper, front-lit. Pale yellow objects differ from white paper by only ~11 colour units, hence threshold 10. Add dish_center_px [x, y] once the dish has a marked spot."
+}

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="BaeBugs mark D"><g fill="none" stroke="#F4ECF1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M53 30C48 19 42 14 33 14M67 30C72 19 78 14 87 14"/>
+    <path d="M20 64L8 58M14 80L3 82M24 96L13 104M100 64L112 58M106 80L117 82M96 96L107 104"/>
+    <path transform="translate(10 32)" d="M50 86C22 68 4 52 4 32C4 17 15 6 29 6C38 6 45 11 50 19C55 11 62 6 71 6C85 6 96 17 96 32C96 52 78 68 50 86Z"/><path d="M60 60V108"/></g>
+    <circle cx="33" cy="14" r="4.5" fill="#F4ECF1"/><circle cx="87" cy="14" r="4.5" fill="#F4ECF1"/>
+    <circle cx="36" cy="66" r="6.5" fill="#F4ECF1"/><circle cx="84" cy="66" r="6.5" fill="#F4ECF1"/>
+    <circle cx="45" cy="90" r="4.5" fill="#F4ECF1"/><circle cx="75" cy="90" r="4.5" fill="#F4ECF1"/>
+    <circle cx="60" cy="42" r="15" fill="#17121B" stroke="#F4ECF1" stroke-width="5"/>
+    <circle cx="54" cy="41" r="2.8" fill="#F4ECF1"/><circle cx="66" cy="41" r="2.8" fill="#F4ECF1"/>
+    <path d="M56 47Q60 50.5 64 47" stroke="#F4ECF1" stroke-width="2.6" fill="none" stroke-linecap="round"/></svg>

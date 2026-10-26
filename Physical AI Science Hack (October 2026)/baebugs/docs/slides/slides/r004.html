@@ -1,0 +1,29 @@
+<section id="r004" data-transition="fade" style="background:#F4F1E8;color:#16211C;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:24px;letter-spacing:3px;text-transform:uppercase;color:#9C5414">DAISY-BB-004 · preregistered</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:64px;font-weight:700;line-height:1.1">Per-taxon preprocessors route a bug to the model that knows it</h2>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px;background:#FBFAF5;border:1px solid #D9D4C4;border-radius:16px;padding:32px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:40px;font-weight:700">Data</h3>
+<p style="font-size:26px;line-height:1.4;color:#4A564F">2,627 specimen crops: 2,015 train (CA), 381 val (CA), 231 test (AZ, NV, OR). Media-id leakage: 0.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#FBFAF5;border:1px solid #D9D4C4;border-radius:16px;padding:32px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:40px;font-weight:700">Design</h3>
+<p style="font-size:26px;line-height:1.4;color:#4A564F">An ORDER router, then a FAMILY model inside Hymenoptera and Diptera. Small yolo11n-cls models.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#FBFAF5;border:1px solid #D9D4C4;border-radius:16px;padding:32px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:40px;font-weight:700">Rule</h3>
+<p style="font-size:26px;line-height:1.4;color:#4A564F">USEFUL only if test macro-F1 beats the majority baseline by more than 0.10.</p>
+</div>
+</div>
+<div style="display:flex;gap:48px;align-items:center;background:#14201B;color:#F4F1E8;border-radius:16px;padding:40px">
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:96px;font-weight:700;line-height:1;color:#E8A33D;white-space:nowrap">0.70</p>
+<div style="display:flex;flex-direction:column;gap:8px">
+<p style="font-size:30px;line-height:1.35"><b>ORDER router, out-of-state test macro-F1, vs 0.135 majority baseline: USEFUL.</b></p>
+<p style="font-size:26px;line-height:1.4;color:#B9C7BE">Final v4 result, test top-1 0.948 on 231 crops; full table on the next slide.</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B756E">BaeBugs · BioKEA Track A · 6 · exploratory, GBIF taxonomy as labels · daisy/DAISY-BB-004-prereg.md + amendments 1–4</p>
+<aside>The idea: each taxon gets a highly trained small model that preprocesses for lower or local models, so a local model only sees the taxa it is specialised for. Crops are cut from the teacher's polygons with 8 percent padding; labels are the GBIF order and family of the source photo; a photo's crops never span splits. Crop dataset Merkle root 4d5f2831…459e. Source for 0.70: daisy/results/DAISY-BB-004/v4/DECISION.md.</aside>
+</section>

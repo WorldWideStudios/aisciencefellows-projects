@@ -1,0 +1,101 @@
+{
+  "sha": "a758567c3978dfeefe282ede0500085a48fe8f78",
+  "node_id": "C_kwDOL59_OdoAKGE3NTg1NjdjMzk3OGRmZWVmZTI4MmVkZTA1MDAwODVhNDhmZThmNzg",
+  "commit": {
+    "author": {
+      "name": "Pepijn",
+      "email": "138571049+pkooij@users.noreply.github.com",
+      "date": "2026-10-06T07:26:52Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2026-10-06T07:26:52Z"
+    },
+    "message": "docs: list Seeed Studio and WowRobo first in kits section (#188)\n\nCo-authored-by: Claude Opus 5.5 <noreply@anthropic.com>",
+    "tree": {
+      "sha": "796dbf575f82ee588e2c665ebaab8cad28434761",
+      "url": "https://api.github.com/repos/TheRobotStudio/SO-ARM100/git/trees/796dbf575f82ee588e2c665ebaab8cad28434761"
+    },
+    "url": "https://api.github.com/repos/TheRobotStudio/SO-ARM100/git/commits/a758567c3978dfeefe282ede0500085a48fe8f78",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqxKK8CRC1aQ7uu5UhlAAAFC8QAEEUUmuU0Dma5bu/KF+eBZSd\ncUJhS8jFSa+0Az777d3ONB9JyQ6vlAhqjOP3iIhVWTjS8VcdUNYowX4wTdiGU5Xe\nFe8FB2HNOX+013OXGCB5xY3X3XgIHgjmo2ikkVYajhCEpNR3MnVWQGfnswsXm1+G\n/mGRCO8I7pvGwO8wyhhF1O3Hl9W6tEkxAKUofpp5W5Urdri5871e5RaG+X8/yDGI\nbycZ7fXvAvjRZdx21KDlSD/uUL/93TOZ2rZ97LUmflzXucVWaC6uRqbYRXLYIxiL\nHE0YtfeR95Pv+Ip62kVLYE9q75Uv5zLzamDVbDCoJaH2EJDd58He94OYsy283GUY\nl8WxveGlxKPnFqUXdetP/8MHpGA859pH/JNxeImSCua5Mg85yl4657QLHahtrjyC\n/LUuNh20z5oGtXkX1dh+2CCEhINyuG45WkWKqe8AsSjflW4Eg6O6CGx4vY4e4Qob\nWABpljlPu2cMORpJH3YCddFcgNYjTkQXgnb/rK1u5jy7cERTseveQJ6Us2ehgFW2\n8JdPKB41/GiGNLqNbfx19JDPe+W7CiaE8XRxt3r9a+AxTB5J3SJ0motgcLzZqbhS\n597jNBvCu6nXqI1wixjMgtqd9tkRqNLfp5tOr/qPLrnTZ6K+eGvkN9JRvLVDbLVR\n50r8rhEJK4hYNsUyBtiM\n=tjWU\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree 796dbf575f82ee588e2c665ebaab8cad28434761\nparent ec5b424fffb678b94518f97250b82b2665d37921\nauthor Pepijn <138571049+pkooij@users.noreply.github.com> 1791271612 +0200\ncommitter GitHub <noreply@github.com> 1791271612 +0200\n\ndocs: list Seeed Studio and WowRobo first in kits section (#188)\n\nCo-authored-by: Claude Opus 5.5 <noreply@anthropic.com>",
+      "verified_at": "2026-10-06T07:26:52Z"
+    }
+  },
+  "url": "https://api.github.com/repos/TheRobotStudio/SO-ARM100/commits/a758567c3978dfeefe282ede0500085a48fe8f78",
+  "html_url": "https://github.com/TheRobotStudio/SO-ARM100/commit/a758567c3978dfeefe282ede0500085a48fe8f78",
+  "comments_url": "https://api.github.com/repos/TheRobotStudio/SO-ARM100/commits/a758567c3978dfeefe282ede0500085a48fe8f78/comments",
+  "author": {
+    "login": "pkooij",
+    "id": 138571049,
+    "node_id": "U_kgDOCEJtKQ",
+    "avatar_url": "https://avatars.githubusercontent.com/u/138571049?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/pkooij",
+    "html_url": "https://github.com/pkooij",
+    "followers_url": "https://api.github.com/users/pkooij/followers",
+    "following_url": "https://api.github.com/users/pkooij/following{/other_user}",
+    "gists_url": "https://api.github.com/users/pkooij/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/pkooij/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/pkooij/subscriptions",
+    "organizations_url": "https://api.github.com/users/pkooij/orgs",
+    "repos_url": "https://api.github.com/users/pkooij/repos",
+    "events_url": "https://api.github.com/users/pkooij/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/pkooij/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "ec5b424fffb678b94518f97250b82b2665d37921",
+      "url": "https://api.github.com/repos/TheRobotStudio/SO-ARM100/commits/ec5b424fffb678b94518f97250b82b2665d37921",
+      "html_url": "https://github.com/TheRobotStudio/SO-ARM100/commit/ec5b424fffb678b94518f97250b82b2665d37921"
+    }
+  ],
+  "stats": {
+    "total": 4,
+    "additions": 2,
+    "deletions": 2
+  },
+  "files": [
+    {
+      "sha": "8a070568cf67908edc50a81b05346f87a26ea01b",
+      "filename": "README.md",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "blob_url": "https://github.com/TheRobotStudio/SO-ARM100/blob/a758567c3978dfeefe282ede0500085a48fe8f78/README.md",
+      "raw_url": "https://github.com/TheRobotStudio/SO-ARM100/raw/a758567c3978dfeefe282ede0500085a48fe8f78/README.md",
+      "contents_url": "https://api.github.com/repos/TheRobotStudio/SO-ARM100/contents/README.md?ref=a758567c3978dfeefe282ede0500085a48fe8f78",
+      "patch": "@@ -51,12 +51,12 @@ This repository also includes a range of optional hardware designs such as a rai\n \n You can find all optional for SO-100/SO-101 kits here:\n \n+- from Seeed studio :earth_africa: [International](https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit.html) or :cn: [China](https://item.taobao.com/item.htm?id=878010637397&skuId=5915703371829&spm=a213gs.v2success.0.0.4cbf4831mkqWLn) or :jp: [Akizuki Denshi](https://akizukidenshi.com/catalog/g/g131169/) or [Aliexpress](https://www.aliexpress.com/item/3256808696884714.html?gatewayAdapt=4itemAdapt) (They include **3d printed kits**)\n+- from WowRobo :earth_africa: [International](https://shop.wowrobo.com/products/so-arm101-diy-kit-assembled-version-1) or :cn: [China](https://item.taobao.com/item.htm?ft=t&id=860171734711) (They include **assembled** versions)\n - from RobotEd :switzerland: [Switzerland](https://roboted.ch/en/shop/so-101-robot-arm-kit) (They include **3d printed frame kits**, **electronics kits** and **complete arm kits**)\n - from Robonine :earth_africa: [International](https://robonine.com/shop/so-arm101-black-white-robotic-arm-kit/) (They include **parts** kits with a wrist camera and an ArUco cube)\n - from PartaBot :us: [US](https://partabot.com) (They include **assembled** versions, and also sell LeKiwi and Koch robots)\n - from ForgeMotion Labs :us: [US](https://forgemotionlabs.com/products) or [Amazon US](https://www.amazon.com/s?me=A3TE39P97BKL59) (They include **3d printed frame kits**, **electronics kits** and **complete arm kits**)\n-- from Seeed studio :earth_africa: [International](https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit.html) or :cn: [China](https://item.taobao.com/item.htm?id=878010637397&skuId=5915703371829&spm=a213gs.v2success.0.0.4cbf4831mkqWLn) or :jp: [Akizuki Denshi](https://akizukidenshi.com/catalog/g/g131169/) or [Aliexpress](https://www.aliexpress.com/item/3256808696884714.html?gatewayAdapt=4itemAdapt) (They include **3d printed kits**)\n-- from WowRobo :earth_africa: [International](https://shop.wowrobo.com/products/so-arm101-diy-kit-assembled-version-1) or :cn: [China](https://item.taobao.com/item.htm?ft=t&id=860171734711) (They include **assembled** versions)\n - from RoboSEasy :kr: [South Korea](https://smartstore.naver.com/roboseasy)\n - from NeoBot :cn: [China](https://item.taobao.com/item.htm?ft=t&id=957685951340)\n - from Autodiscovery :eu: [EU](https://autodiscovery.eu/en/products/so-101-kit??utm_source=hf&utm_medium=shop&utm_content=web)"
+    }
+  ]
+}

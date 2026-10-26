@@ -1,0 +1,23 @@
+<section id="custody" data-transition="fade" style="background:#14201B;color:#F4F1E8;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between">
+<div style="display:flex;flex-direction:column;gap:24px">
+<p style="font-family:'IBM Plex Mono', 'Courier New', monospace;font-size:24px;letter-spacing:3px;text-transform:uppercase;color:#E8A33D">Chain of custody</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:112px;font-weight:700;line-height:1.05;letter-spacing:-2px">24 breaks recorded,<br>not hidden.</h2>
+<p style="font-size:36px;line-height:1.35;color:#F4F1E8;max-width:1400px">The rule: every hash the graph references must resolve to stored bytes. If it does not, that is a BREAK, written into the ledger and shown on the page.</p>
+</div>
+<div style="display:flex;gap:24px">
+<div style="flex:1;display:flex;flex-direction:column;gap:8px;border-top:4px solid #E8A33D;padding:20px 0px 0px 0px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:36px;font-weight:700">What broke</h3>
+<p style="font-size:26px;line-height:1.4;color:#B9C7BE">8 results whose weights were never stored (001b v6, 002a v2), plus 16 bench photos pinned by hash but withheld.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px;border-top:4px solid #E8A33D;padding:20px 0px 0px 0px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:36px;font-weight:700">What it costs</h3>
+<p style="font-size:26px;line-height:1.4;color:#B9C7BE">The 8 results stay exploratory: numbers kept, never promoted to evidence.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px;border-top:4px solid #E8A33D;padding:20px 0px 0px 0px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:36px;font-weight:700">What changed</h3>
+<p style="font-size:26px;line-height:1.4;color:#B9C7BE">Weights hashed every epoch, copied and re-verified, fail-closed check before results are written.</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#B9C7BE">BaeBugs · 8 · 24 = 8 result + 16 withheld photo · impact_mmr.jsonl 96–103 · print/labware/merkle/breaks.json</p>
+<aside>Custody here is deterministic: Merkle break points per module, an MMR ledger, LOMO per factor. Variance between runs is fine as long as every step is hashed. The 16 photo breaks are the bench photos behind the labware twin: their sha256 values are pinned, but the bytes stay off the repo because they show vendor marks. The cause of the eight result breaks was a kernel bug: the FINISH step exported weights only for runs marked EXECUTED, but EVAL had already relabelled them OBSERVED_EXPLORATORY, so the weights were deleted before export. Their sha256 values are recorded, but no bytes exist, so the resolvability invariant turned each one into an explicit break. Frozen protocols were never edited; fixes went in as amendments.</aside>
+</section>

@@ -1,0 +1,5 @@
+{"bytes": 1793, "path": "runs/r4_multires/args.yaml", "sha256": "26822c6ae160f1d59044054e5cc2db51a1f014689017002b4409b009e5ece98a"}
+{"bytes": 120848, "path": "runs/r4_multires/labels.jpg", "sha256": "ad9748484d21de6d84eb6bf532f6dc9410057bfa32b2817765ec3a8145f04881"}
+{"bytes": 265904, "path": "runs/r4_multires/train_batch0.jpg", "sha256": "5cf604340da446acacb4abd6cf6d4977de8103145425d20d70282387a1dfcd42"}
+{"bytes": 322950, "path": "runs/r4_multires/train_batch1.jpg", "sha256": "e701e4a86b2dbe6293d93563b846696c8ec236ede004cffdaafe50c9c26e9efd"}
+{"bytes": 317900, "path": "runs/r4_multires/train_batch2.jpg", "sha256": "1d8dd8fc70355b074f0b7dd02927d6afc5fc2b2ef6fd558d0855d7caee35acb8"}

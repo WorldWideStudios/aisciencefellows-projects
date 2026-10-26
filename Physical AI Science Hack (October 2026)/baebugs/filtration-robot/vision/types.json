@@ -1,0 +1,52 @@
+{
+  "_note": "Reference size of each sample type, in mm, measured from webcam photos at 13.9 px/mm (about 5% scale uncertainty). width_mm (the narrow side) decides which filter catches it. Medians over the pieces found; 'rough' entries rest on few pieces or an indirect method. Re-measure with calipers when possible. Lengths don't affect sorting (grains can pass a hole end-first); width_mm does. Grain widths marked 'guess' are best estimates (photo widths run ~0.2-0.5 mm wide from edge blur; typical wild rice ~2 mm, long-grain rice ~1.8-2.2 mm); confirm with a sieve test on the real filters when possible.",
+  "types": {
+    "macaroni": {
+      "width_mm": 5.3,
+      "length_mm": 6.7,
+      "from": "samples/webcam_set1_pasta_tubes.webp"
+    },
+    "oval seed": {
+      "width_mm": 3.8,
+      "length_mm": 6.3,
+      "from": "samples/webcam_set1_red_seeds.webp"
+    },
+    "long seed": {
+      "width_mm": 2.0,
+      "length_mm": 12.7,
+      "from": "samples/webcam_redlight_01.webp",
+      "rough": true,
+      "length_from": "user, by hand, 2026-10-25 (long seed ~1/2 inch, rices ~1/4 inch)",
+      "photo_width_mm": 2.5,
+      "guess": true
+    },
+    "yellow rice": {
+      "width_mm": 2.1,
+      "length_mm": 6.4,
+      "from": "samples/webcam_set4_yellow_rice.webp, webcam_set3_oat_grains.webp",
+      "length_from": "user, by hand, 2026-10-25 (long seed ~1/2 inch, rices ~1/4 inch)",
+      "photo_width_mm": 2.3,
+      "guess": true
+    },
+    "white rice": {
+      "width_mm": 1.9,
+      "length_mm": 6.4,
+      "from": "samples/webcam_redlight_01.webp",
+      "rough": true,
+      "length_from": "user, by hand, 2026-10-25 (long seed ~1/2 inch, rices ~1/4 inch)",
+      "photo_width_mm": 2.1,
+      "guess": true
+    },
+    "tiny seed": {
+      "width_mm": 1.4,
+      "length_mm": 2.0,
+      "from": "samples/webcam_set1_dark_seeds.webp"
+    },
+    "yellow balls": {
+      "width_mm": 1.4,
+      "length_mm": 1.4,
+      "from": "spacing of neighbouring balls in the packed photos",
+      "rough": true
+    }
+  }
+}

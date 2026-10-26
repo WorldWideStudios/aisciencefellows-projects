@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b1820">
+<meta name="description" content="Addressable knowledge, prototype parts, licenses and reproducible evidence for BioKEA Track A.">
+<title>Baebugs | Evidence Lab</title>
+<link rel="stylesheet" href="style.css">
+</head><body>
+<a class="skip" href="#main">Skip to evidence</a>
+<header class="topbar">
+ <a href="./" class="brand" aria-label="Baebugs evidence lab home"><span class="brandmark">B<span class="green">.</span></span><span><b>baebugs</b><small>Evidence lab</small></span></a>
+ <nav aria-label="Main views" class="nav">
+  <button class="tab active" data-view="explore" aria-current="page">Explore</button>
+  <button class="tab" data-view="lab">Modular lab</button>
+  <button class="tab" data-view="rights">Licenses</button>
+  <button class="tab" data-view="challenge">Contest</button>
+  <button class="tab" data-view="agents">For agents</button>
+ </nav>
+ <a class="source-link" href="https://github.com/biobitworks/baebugs" target="_blank" rel="noreferrer">GitHub ↗</a>
+</header>
+<main id="main">
+ <div class="pageintro">
+  <div><div class="eyebrow">BIOKEA TRACK A  /  PUBLIC EVIDENCE</div>
+   <h1>From specimen to supported claim.</h1>
+   <p>Find a part, follow its source, inspect its license, and challenge any claim with your own evidence. The root proves inclusion of recorded bytes—not truth.</p></div>
+  <div class="receipt" aria-label="Canonical snapshot identity">
+   <div class="receipt-top"><span>AoK root · SHA-256</span><span id="rootState" class="status">VERIFYING</span></div>
+   <button class="root-value mono" id="rootCopy" title="Copy exact Merkle root" aria-label="Copy current Merkle root">Loading…</button>
+   <div class="receipt-bottom"><span id="snapshotCount">Loading snapshot</span><button id="verifyAll" class="linkbtn">Verify in browser ↗</button></div>
+  </div>
+ </div>
+ <div class="metrics" id="metrics" aria-label="Dataset overview">
+  <div class="metric"><b id="nodesCount">—</b><span>Addressable objects</span></div>
+  <div class="metric"><b id="edgesCount">—</b><span>Typed relationships</span></div>
+  <div class="metric"><b id="partCount">—</b><span>Physical part designs</span></div>
+  <div class="metric"><b id="caveatCount">—</b><span>Rights / validation warnings</span></div>
+ </div>
+ <div class="views">
+ <section class="view shown" id="view-explore" aria-label="Knowledge graph explorer">
+   <div class="workspace">
+    <aside class="searchpanel panel">
+      <h2>Knowledge</h2>
+      <label for="search">Search sources, parts, claims or hashes</label>
+      <input id="search" type="search" placeholder="e.g. stainless, BugPicker, 002a…" autocomplete="off">
+      <div class="twoinputs">
+       <div><label for="typeFilter">Type</label><select id="typeFilter"><option value="">All types</option></select></div>
+       <div><label for="rightsFilter">License</label><select id="rightsFilter"><option value="">All rights</option></select></div>
+      </div>
+      <div class="twoinputs">
+       <div><label for="stageFilter">Module</label><select id="stageFilter"><option value="">All modules</option></select></div>
+       <div><label for="statusFilter">Evidence status</label><select id="statusFilter"><option value="">All statuses</option></select></div>
+      </div>
+      <div id="resultsTotal" class="minor" role="status" aria-live="polite"></div>
+      <div id="searchResults" class="resultlist" aria-label="Search results"></div>
+    </aside>
+    <section class="networkpanel panel" aria-label="Selected evidence neighborhood">
+     <div class="sectionbar"><div><h2>Knowledge graph</h2><p>Click a node or choose an item. Each edge has its own inspectable Merkle leaf; declared links are not causal proof.</p></div><button id="centerGraph" class="quiet">Center</button></div>
+     <div class="graphlegend"><span><i class="dot source"></i> Source</span><span><i class="dot part"></i> Part</span><span><i class="dot module"></i> Module</span><span><i class="dot claim"></i> Claim</span><span><i class="dot unknown"></i> Other</span></div>
+     <svg id="graph" class="graph" viewBox="0 0 610 395" role="group" aria-label="One-hop knowledge graph around selected item. Each relationship is an independently addressable FCG leaf."></svg>
+     <div class="minor">One-hop neighborhood · <span id="graphSubtitle">Waiting for data</span> · Full graph in <a href="data/graph.json">JSON</a></div>
+    </section>
+    <aside class="detailpanel panel" aria-label="Evidence inspection">
+      <div class="sectionbar"><h2>Inspect object</h2><span id="detailStatus" class="status neutral">—</span></div>
+      <h3 id="detailTitle">Select an object</h3><p id="detailBody">Source, context and evidence will appear here.</p>
+      <div class="detailkv"><span>Type</span><strong id="detailType">—</strong></div>
+      <div class="detailkv"><span>License / rights</span><strong id="detailLicense">—</strong></div>
+      <div class="detailkv"><span>Source</span><strong id="detailSource">—</strong></div>
+      <details open><summary>Identity and inclusion</summary>
+       <div class="key">Content FCO identity</div><button id="fcoCopy" class="hash mono" aria-label="Copy content FCO id">—</button>
+       <div class="key">Occurrence / context identity</div><button id="occCopy" class="hash mono" aria-label="Copy occurrence id">—</button>
+       <div class="key">Ordered Merkle leaf</div><button id="leafCopy" class="hash mono" aria-label="Copy Merkle leaf hash">—</button>
+       <div id="inclusion" class="minor" role="status">NOT_TESTED</div>
+      </details>
+      <details><summary>Source and relationships</summary><div id="relationships" class="relationships"></div><div id="detailExtra" class="minor"></div></details>
+      <div class="detailactions"><a id="sourceURL" class="outline" href="#" target="_blank" rel="noopener">Open source ↗</a><button class="primary" id="contestButton">Contest this claim ↗</button></div>
+    </aside>
+   </div>
+ </section>
+ <section class="view" id="view-lab" aria-label="Modular lab">
+  <div class="sectionintro"><div><h2>Modular specimen workcell</h2><p>Navigate the planned five BioKEA stations and interface modules. Hardware actuation is disabled.</p></div><span class="status caution">DESIGN / OBSERVATION SEPARATED</span></div>
+  <div class="lab-layout">
+   <div class="panel lab-canvas">
+     <div class="labtools"><label for="labSelection">Inspect station</label><select id="labSelection"></select><button id="showConnected" class="quiet">See connected evidence ↗</button></div>
+     <svg id="labDrawing" viewBox="0 0 900 385" role="group" aria-label="Clickable schematic of sorter, disperser, picker, dispenser, incubator and auxiliary modules"></svg>
+     <div class="minor">Diagrammatic laboratory: not to scale, not a validated 3D motion planner.</div>
+   </div>
+   <div class="panel lab-detail"><h2 id="labTitle">BugSorter</h2><p id="labDesc"></p>
+    <div class="detailkv"><span>Operation</span><strong id="labState">—</strong></div>
+    <h3>Compatible concepts</h3><div id="labParts" class="labparts"></div>
+    <p class="minor">Compatibility is declared from source design intent. No physical fit, fluidic safety or biological recovery certification.</p>
+   </div>
+  </div>
+  <div class="visualrefs">
+   <div class="panel"><h3>Trommel and bench components</h3><img src="assets/parts-preview.png" alt="Actual multi-part preview generated in Baebugs: trommel, sieve and gripper components" loading="lazy"><a href="https://github.com/biobitworks/baebugs/blob/main/print/parts/trommel_assembly.glb">Source 3D assembly (.glb) ↗</a></div>
+   <div class="panel"><h3>Opentrons adapters</h3><img src="assets/opentrons-preview.png" alt="Actual printable Opentrons-shaped sieve, drum and handoff adapter overview" loading="lazy"><a href="https://github.com/biobitworks/baebugs/tree/main/opentrons">Source adapters and labware ↗</a></div>
+  </div>
+ </section>
+ <section class="view" id="view-rights" aria-label="Licensing and attribution">
+  <div class="sectionintro"><div><h2>What can we claim?</h2><p>License and authorship travel with each source occurrence. A repo license cannot erase an upstream license.</p></div><a class="outline" href="LICENSE_AUDIT.md">Full rights audit ↗</a></div>
+  <div class="panel"><div class="tablewrapper"><table><thead><tr><th>Origin</th><th>License</th><th>Evidence status</th><th>What it means</th><th>Inspect</th></tr></thead><tbody id="rightsTable"></tbody></table></div></div>
+  <div class="bottomcards">
+   <div class="panel"><h3>Claimed by this implementation</h3><p>Baebugs software, generated prototype geometry, independent reviews and recomputable custody snapshots—where independently supported by source hashes and valid contributor rights.</p></div>
+   <div class="panel"><h3>Not automatically owned or proved</h3><p>Original BioKEA/EntoSieve instrument IP, third-party dataset media, taxonomic novelty, patentability, physical specimen recovery and isolated source ownership.</p></div>
+  </div>
+ </section>
+ <section class="view" id="view-challenge" aria-label="Submit counterevidence">
+  <div class="sectionintro"><div><h2>Contest with your own evidence</h2><p>Create an independent candidate FCO and a proposed typed relationship. Nothing is accepted automatically.</p></div><span class="status neutral">HUMAN REVIEW REQUIRED</span></div>
+  <div class="challenge-layout"><form id="contestForm" class="panel" novalidate>
+   <label for="contestNode">Object / claim to contest</label><select id="contestNode" required></select>
+   <label for="counterClaim">Your correction or counterclaim</label><textarea id="counterClaim" rows="4" maxlength="2500" required placeholder="State what changes, what stays supported, and why…"></textarea>
+   <label for="counterEvidence">Primary evidence URL, DOI or source</label><input id="counterEvidence" type="url" required placeholder="https://doi.org/...">
+   <label for="counterLicense">Evidence license or permitted-use status</label><select id="counterLicense"><option>UNKNOWN</option><option>CC0-1.0</option><option>CC-BY-4.0</option><option>CC-BY-NC-4.0</option><option>MIT</option><option>GPL-3.0</option><option>PROPRIETARY_OR_RESTRICTED</option></select>
+   <label for="counterRelation">Proposed typed FCG edge</label><select id="counterRelation"><option>CHALLENGES</option><option>CONTRADICTS</option><option>REFINES</option><option>SUPPORTS</option><option>SUPERSEDES</option></select>
+   <div class="buttonrow"><button type="submit" class="primary">Create candidate FCO</button><button type="reset" class="quiet">Clear</button></div>
+  </form>
+  <div class="panel"><h3>Counterevidence package</h3><div class="minor">Content identity, context identity, referenced prior root and claimed relation are separate.</div>
+   <pre id="contestPreview" class="preview" tabindex="0">Fill in the form to create a candidate FCO and typed relationship.</pre>
+   <div id="contestButtons" class="buttonrow hidden"><button id="copyContest" class="quiet">Copy JSON</button><button id="downloadContest" class="quiet">Download JSON</button><a id="submitIssue" target="_blank" rel="noopener" class="primary" href="#">Open GitHub contest issue ↗</a></div>
+   <p class="minor">Submitting a GitHub issue does not modify this Merkle root. Admission needs human adjudication, source review, reproducibility and a successor breakpoint.</p>
+  </div></div>
+ </section>
+ <section class="view" id="view-agents" aria-label="Machine-readable interfaces">
+  <div class="sectionintro"><div><h2>One graph, multiple interfaces</h2><p>Public, static and independently verifiable. Bring your own tools or counterevidence.</p></div></div>
+  <div class="agentgrid">
+   <div class="panel"><h3>Direct JSON</h3><p>Use immutable snapshot files for graph traversal and leaf inclusion.</p><div class="linkstack"><a href="data/graph.json">Graph API JSON ↗</a><a href="data/root.json">Merkle leaves + proofs ↗</a><a href="data/manifest.json">Source-byte manifest ↗</a><a href="data/doctor.json">Doctor receipt (derived) ↗</a></div></div>
+   <div class="panel"><h3>Python CLI</h3><pre class="snippet">python3 tools/aok_build.py verify
+python3 tools/aok_build.py get part:trommel_zone_2mm
+python3 tools/aok_build.py proof claim:photo
+python3 tools/aok_build.py doctor</pre><a href="https://github.com/biobitworks/baebugs/tree/feature/aok-fcg-mvp-20261025/tools">Repository tooling ↗</a></div>
+   <div class="panel"><h3>Node CLI + package</h3><pre class="snippet">node packages/baebugs-aok/bin/baebugs-aok.mjs verify
+npm pack ./packages/baebugs-aok</pre><p class="minor">Repository-local package; NOT_PUBLISHED to npm.</p></div>
+   <div class="panel"><h3>Agent integrations</h3><div class="linkstack"><a href="https://github.com/biobitworks/baebugs/tree/feature/aok-fcg-mvp-20261025/skills/baebugs-aok">Claude/agent SKILL.md ↗</a><a href="https://github.com/biobitworks/baebugs/blob/feature/aok-fcg-mvp-20261025/tools/aok_mcp.py">Optional MCP server ↗</a><a href="https://github.com/biobitworks/baebugs/issues/new">Bring your own FCO/FCG challenge ↗</a></div><p class="minor">Local tools require a checkout; remote endpoint is JSON-only. No remote write API is enabled.</p></div>
+  </div>
+ </section>
+ </div>
+ <footer><span>Baebugs evidence explorer · Snapshot, not live robot telemetry.</span><span>Identity ≠ truth · FCG edges ≠ causality · NOT_SIGNED</span></footer>
+</main>
+<script src="app.js" defer></script>
+</body></html>

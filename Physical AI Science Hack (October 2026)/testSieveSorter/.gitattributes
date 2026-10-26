@@ -1,0 +1,12 @@
+# Text files are stored with LF in the repo; Git converts per platform on checkout.
+* text=auto
+*.py text eol=lf
+*.sh text eol=lf
+
+# Binary assets
+*.png binary
+*.jpg binary
+*.stl binary
+*.step binary
+*.3mf binary
+*.npz binary

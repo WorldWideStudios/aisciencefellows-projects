@@ -1,0 +1,13 @@
+{
+  "male_locked_display_only.stl": "36bd1726493ce8216efde221209f01bb3666344503a92e5cc289e0ab0e4dd2c7",
+  "fit_preview.png": "be476e42c691ebb3a4bf4a6b7d2418fc4e05897deb3f1d8faeea9fa4261651e5",
+  "render_design.py": "46d827ea220352dd09a3b0909f1d2bbebaab37934c6f49f8cd72f015892ccaf6",
+  "male_v3_SO101_fitted.stl": "849885212b5751c30198a6fda0509c16952ce545732b83a4aad1f12da2cef9ba",
+  "README.md": "153a7726b467727a9ee9e6a18b5bd93ce4c08429ca905f28942c960fac9797a1",
+  "validation.json": "4e2072c32eb72fc3a81df084d8f8582881450251e88b26e3806161cde305eb3e",
+  "pipette_collar_31mm_fitted.stl": "575a8e448cad8190950c39a49da96cbb6366e1a2074a42827ac89008a52ec8f3",
+  "wrist_reference_check.json": "9091f054b45dc7984859c890d4950fc4d70aa2400b74de53ac97b5e3328a9aff",
+  "build_design.py": "36f55762d3cb04af4c1385245daa95de8048ec7420a53729c8317689e8f3ce4a",
+  "inputs/male_v3.stl": "84ac4670d6bef2f6c241553112c00c71022538aae0a8cfdb5f89125d742a182f",
+  "inputs/pipette_collar_31mm.stl": "913243f3b45904ed930f370a91843b165dcf6b233e2ad7e9e8a53cedb46fb738"
+}

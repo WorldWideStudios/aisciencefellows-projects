@@ -1,0 +1,11 @@
+{
+ "study": "insects",
+ "title": "EXPLORATORY: generated insects in BugPicker's body-length classes",
+ "exploratory": true,
+ "generated": "2026-10-25 07:59",
+ "rule": "a flagged design that `verify` reran with stiffer contacts (dt 0.125 ms, timeconst 0.25 ms) with no failed or flagged run counts as clean, ranked by the lower of its two robust scores. Otherwise: top 3 by robust full-run score (mean - 1 sd over 3 friction sets x 3 seeds, 30 s) among working sorters (robust >= 0.5, no failed run, meeting today's print constraints) with no penetration-flagged run; if fewer than 3 qualify, the rest are the best working flagged ones, marked flagged (see opt/LOG.md for how this rule came about)",
+ "caveat": "sim ranking only; uncalibrated; openings simulated at nominal - 0.15 mm (ASSUMED undersize)",
+ "undersize_mm_assumed": 0.15,
+ "winners": [],
+ "best_by_drive": {}
+}

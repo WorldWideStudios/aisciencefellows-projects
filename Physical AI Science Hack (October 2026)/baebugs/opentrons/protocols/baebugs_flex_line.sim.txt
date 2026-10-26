@@ -1,0 +1,42 @@
+/root/.opentrons/robot_settings.json not found. Loading defaults
+Belt calibration not found.
+STEP 1 sort: load sample into the mini trommel feed (D2)
+Pausing robot operation: Run the trommel motor (external controller) until the drum is clear; confirm to continue
+Unlatching labware on Heater-Shaker
+Moving baebugs_sieve_adapter_50mm to opentrons_universal_flat_adapter with gripper
+Latching labware on Heater-Shaker
+Setting Heater-Shaker to Shake at 200 RPM and waiting until reached
+Delaying for 1 minutes and 0.0 seconds
+Deactivating Shaker
+Unlatching labware on Heater-Shaker
+Moving baebugs_sieve_adapter_50mm to slot C2 with gripper
+Pausing robot operation: STEP 2 image: camera images each ring; vision gate flags novel specimens for the entomologist
+Pausing robot operation: STEP 3 pick: external arm / suction places 8 specimens into column 1 of the deep-well plate (B1), using the hand-off carrier at B2 (baebugs_handoff_plate)
+Distributing 200.0 from A1 of NEST 12 Well Reservoir 15 mL on slot C1 to A1 of NEST 96 Deep Well Plate 2mL on slot B1
+	Transferring 200.0 from A1 of NEST 12 Well Reservoir 15 mL on slot C1 to A1 of NEST 96 Deep Well Plate 2mL on slot B1
+		Picking up tip from A1 of Opentrons Flex 96 Tip Rack 1000 µL on slot A2
+		Aspirating 805.0 uL from A1 of NEST 12 Well Reservoir 15 mL on slot C1 at 716.0 uL/sec
+		Dispensing 200.0 uL into A1 of NEST 96 Deep Well Plate 2mL on slot B1 at 716.0 uL/sec
+		Dispensing 200.0 uL into B1 of NEST 96 Deep Well Plate 2mL on slot B1 at 716.0 uL/sec
+		Dispensing 200.0 uL into C1 of NEST 96 Deep Well Plate 2mL on slot B1 at 716.0 uL/sec
+		Dispensing 200.0 uL into D1 of NEST 96 Deep Well Plate 2mL on slot B1 at 716.0 uL/sec
+		Blowing out into Trash Bin on slot A3 at 716.0 uL/sec
+		Aspirating 805.0 uL from A1 of NEST 12 Well Reservoir 15 mL on slot C1 at 716.0 uL/sec
+		Dispensing 200.0 uL into E1 of NEST 96 Deep Well Plate 2mL on slot B1 at 716.0 uL/sec
+		Dispensing 200.0 uL into F1 of NEST 96 Deep Well Plate 2mL on slot B1 at 716.0 uL/sec
+		Dispensing 200.0 uL into G1 of NEST 96 Deep Well Plate 2mL on slot B1 at 716.0 uL/sec
+		Dispensing 200.0 uL into H1 of NEST 96 Deep Well Plate 2mL on slot B1 at 716.0 uL/sec
+		Blowing out into Trash Bin on slot A3 at 716.0 uL/sec
+		Dropping tip into Trash Bin on slot A3
+Unlatching labware on Heater-Shaker
+Moving nest_96_wellplate_2ml_deep to opentrons_96_deep_well_adapter with gripper
+Latching labware on Heater-Shaker
+Setting Target Temperature of Heater-Shaker to 56 °C
+Waiting for Heater-Shaker to reach target temperature
+Setting Heater-Shaker to Shake at 300 RPM and waiting until reached
+Delaying for 60 minutes and 0.0 seconds
+Deactivating Shaker
+Deactivating Heater
+Unlatching labware on Heater-Shaker
+Moving nest_96_wellplate_2ml_deep to slot B1 with gripper
+Lysate -> DNA cleanup and barcoding; specimens (exoskeleton, wings, legs) kept as vouchers

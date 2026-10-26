@@ -1,0 +1,66 @@
+{
+  "branch": "feature/protocol-discovery-20261025",
+  "browser_interactions": {
+    "page_errors": 0,
+    "physical_workflow": "NOT_TESTED",
+    "state": "OBSERVED",
+    "tests": [
+      "nine cards",
+      "source leaf links",
+      "search",
+      "bookmarks",
+      "named collections",
+      "local remix provenance",
+      "file-safe BYO",
+      "script-markup escaped",
+      "local browser storage reload",
+      "exported self-reported review receipt",
+      "mobile no horizontal overflow"
+    ]
+  },
+  "current_run": {
+    "dependencies": {
+      "manifold3d": "3.5.4",
+      "pylabrobot": "0.2.2",
+      "pytest": "8.4.2",
+      "trimesh": "5.2.0"
+    },
+    "environment": "isolated virtualenv inheriting Anaconda packages",
+    "expected_failure": 1,
+    "failed": 0,
+    "passed": 104,
+    "skipped": 1,
+    "source_note": "All software checks only. No robot, wet chemistry, capture, sequencing or expert novelty test executed.",
+    "state": "OBSERVED",
+    "test_command": "PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 python -m pytest -q",
+    "warning_type": "shapely oriented_envelope divide-by-zero/invalid runtime warnings",
+    "warnings": 6
+  },
+  "focused_protocol_regression": {
+    "failed": 0,
+    "passed": 21,
+    "state": "OBSERVED"
+  },
+  "initial_attempts": [
+    {
+      "reason": "Repository-wide pytest collection failed because manifold3d was absent from base Anaconda Python.",
+      "state": "FAILED"
+    },
+    {
+      "reason": "Isolated Python environment had manifold3d but not trimesh.",
+      "state": "FAILED"
+    },
+    {
+      "reason": "Isolated environment had manifold3d and trimesh; 103 passed but the PyLabRobot bench_twin test could not import pylabrobot.",
+      "state": "FAILED"
+    }
+  ],
+  "mmr_committed": false,
+  "next_action": "Publish a source-pinned static successor and verify remote exact bytes",
+  "observed_utc": "2026-10-25T20:32:08.585688+00:00",
+  "parent_ref": "f0e4cf3105f8fb4e5fb6e88ab73d5050b0932963",
+  "project": "biobitworks/baebugs",
+  "schema": "baebugs.ProtocolDiscoveryTestFCO.v1",
+  "signature": "NOT_SIGNED",
+  "source_status": "EXECUTED"
+}

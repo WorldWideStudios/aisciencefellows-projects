@@ -1,0 +1,11 @@
+run,when,set,megapixels,recall,median_wid_err,p90_wid_err
+r4_multires,before,real,0.3,0.85,0.0229,0.0655
+r4_multires,before,real,1.0,0.85,0.0194,0.0693
+r4_multires,before,real,3.0,0.843,0.0167,0.0625
+r4_multires,before,real,5.0,0.843,0.0157,0.0611
+r4_multires,before,real,12.0,0.85,0.0165,0.0614
+r4_multires,before,synthetic,0.3,0.997,0.0556,0.21
+r4_multires,before,synthetic,1.0,0.996,0.0545,0.2045
+r4_multires,before,synthetic,3.0,0.996,0.0556,0.2038
+r4_multires,before,synthetic,5.0,0.996,0.0556,0.2021
+r4_multires,before,synthetic,12.0,0.996,0.0557,0.2045
